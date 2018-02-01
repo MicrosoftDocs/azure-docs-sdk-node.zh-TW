@@ -1,43 +1,40 @@
 ---
 title: "適用於 Node.js 的 Azure 服務對應模組"
 description: "適用於 Node.js 的 Azure 服務對應模組參考"
-keywords: "Azure,SDK,API,服務對應, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Map
-ms.openlocfilehash: 330cbceb07ba8bea65c1059a1edb3cd9c69653bc
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 3f858e52f7a97ff77959825a1be993ef52f96e57
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="99cc9-104">適用於 Node.js 的 Azure 服務對應模組</span><span class="sxs-lookup"><span data-stu-id="99cc9-104">Azure Service Map modules for Node.js</span></span>
+# <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="f0588-103">適用於 Node.js 的 Azure 服務對應模組</span><span class="sxs-lookup"><span data-stu-id="f0588-103">Azure Service Map modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="99cc9-105">概觀</span><span class="sxs-lookup"><span data-stu-id="99cc9-105">Overview</span></span>
+<span data-ttu-id="f0588-104">服務對應可自動探索 Windows 和 Linux 系統上的應用程式元件，並對應服務之間的通訊。</span><span class="sxs-lookup"><span data-stu-id="f0588-104">Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services.</span></span> <span data-ttu-id="f0588-105">不需要進行任何設定，只要安裝了代理程式，服務對應就會顯示橫跨任何 TCP 連線架構的伺服器、處理序和連接埠之間的連線。</span><span class="sxs-lookup"><span data-stu-id="f0588-105">Service Map shows connections between servers, processes, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.</span></span>
 
-<span data-ttu-id="99cc9-106">服務對應可自動探索 Windows 和 Linux 系統上的應用程式元件，並對應服務之間的通訊。</span><span class="sxs-lookup"><span data-stu-id="99cc9-106">Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services.</span></span> <span data-ttu-id="99cc9-107">不需要進行任何設定，只要安裝了代理程式，服務對應就會顯示橫跨任何 TCP 連線架構的伺服器、處理序和連接埠之間的連線。</span><span class="sxs-lookup"><span data-stu-id="99cc9-107">Service Map shows connections between servers, processes, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.</span></span>
+<span data-ttu-id="f0588-106">深入了解 [Azure 服務對應](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map)。</span><span class="sxs-lookup"><span data-stu-id="f0588-106">Learn more about [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span></span>
 
-<span data-ttu-id="99cc9-108">深入了解 [Azure 服務對應](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map)。</span><span class="sxs-lookup"><span data-stu-id="99cc9-108">Learn more about [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span></span>
+## <a name="management-package"></a><span data-ttu-id="f0588-107">管理封裝</span><span class="sxs-lookup"><span data-stu-id="f0588-107">Management package</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="99cc9-109">管理套件</span><span class="sxs-lookup"><span data-stu-id="99cc9-109">Management package</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="f0588-108">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="f0588-108">Install the npm module</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="99cc9-110">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="99cc9-110">Install the npm module</span></span>
-
-<span data-ttu-id="99cc9-111">安裝 Azure 服務對應 npm 模組</span><span class="sxs-lookup"><span data-stu-id="99cc9-111">Install the Azure Service Map npm module</span></span>
+<span data-ttu-id="f0588-109">安裝 Azure 服務對應 npm 模組</span><span class="sxs-lookup"><span data-stu-id="f0588-109">Install the Azure Service Map npm module</span></span>
 
 ```bash
 npm install azure-arm-servicemap
 ```
 
-### <a name="example"></a><span data-ttu-id="99cc9-112">範例</span><span class="sxs-lookup"><span data-stu-id="99cc9-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="f0588-110">範例</span><span class="sxs-lookup"><span data-stu-id="f0588-110">Example</span></span>
 
-<span data-ttu-id="99cc9-113">此範例會列出指定資源群組和工作區的所有服務對應。</span><span class="sxs-lookup"><span data-stu-id="99cc9-113">This example lists all service maps for the specified resource group and workspace.</span></span>
+<span data-ttu-id="f0588-111">此範例會列出指定資源群組和工作區的所有服務對應。</span><span class="sxs-lookup"><span data-stu-id="f0588-111">This example lists all service maps for the specified resource group and workspace.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +53,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="99cc9-114">範例</span><span class="sxs-lookup"><span data-stu-id="99cc9-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="f0588-112">範例</span><span class="sxs-lookup"><span data-stu-id="f0588-112">Samples</span></span>
 
-<span data-ttu-id="99cc9-115">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="99cc9-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="f0588-113">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="f0588-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
