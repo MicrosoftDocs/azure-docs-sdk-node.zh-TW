@@ -1,25 +1,22 @@
 ---
 title: "適用於 Node.js 的 Azure HDInsight 模組"
 description: "適用於 Node.js 的 Azure HDInsight 模組參考"
-keywords: Azure,SDK,API,HDInsight, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: HDInsight
-ms.openlocfilehash: 1df988e98def42dcf33e90b4c3debece8cbe85e3
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 897ef2e3d2316a1f6f5637027ac2a2211c556f7a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-hdinsight-modules-for-nodejs"></a>適用於 Node.js 的 Azure HDInsight 模組
-
-## <a name="overview"></a>概觀
 
 Azure HDInsight 是 Hortonworks Data Platform (HDP) 中 Hadoop 元件的雲端發佈。 Apache Hadoop 是原始的開放原始碼建構，用於分散式處理和分析電腦叢集上的巨量資料集。
 
@@ -33,7 +30,7 @@ HDInsight 透過下列方式讓 Hadoop 技術更容易使用︰
 
 Hadoop 技術堆疊包含相關的軟體和公用程式，其中包括 Apache Hive、HBase、Spark、Kafka 和其他許多軟體。 
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-npm-modules"></a>安裝 npm 模組
 

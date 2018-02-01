@@ -1,25 +1,23 @@
 ---
 title: "適用於 Node.js 的 Azure Data Lake Store 模組"
 description: "適用於 Node.js 的 Azure Data Lake Store 模組參考"
-keywords: Azure,SDK,API,Data Lake Store, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Store
-ms.openlocfilehash: 5885bf8f073e4f4f1ac2be88b8691b092e8a21d3
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: a108cc6d184b72d2d4227f9e60da6b7a535f92ae
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-data-lake-store-modules-for-nodejs"></a>適用於 Node.js 的 Azure Data Lake Store 模組
 
-## <a name="overview"></a>概觀
 Azure Data Lake Store 是容納巨量資料分析工作負載的企業級超大規模存放庫。 Azure Data Lake 可讓您在單一位置擷取任何大小、類型和擷取速度的資料，以便進行運作和探究分析。
 
 ## <a name="management-package"></a>管理套件

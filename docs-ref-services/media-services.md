@@ -1,25 +1,22 @@
 ---
 title: "適用於 Node.js 的 Azure 媒體服務模組"
 description: "適用於 Node.js 的 Azure 媒體服務模組參考"
-keywords: "Azure,SDK,API,媒體服務, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Media Services
-ms.openlocfilehash: 9b304ceb0c2d0580534ae1bee5a44d01fd4d8b33
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 77a6716d4ef0d566690325a86e85d66c5ac234d6
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-media-services-modules-for-nodejs"></a>適用於 Node.js 的 Azure 媒體服務模組
-
-## <a name="overview"></a>概觀
 
 Azure 媒體服務是一個可延伸的雲端型平台，供開發人員建置可擴充的媒體管理和傳遞應用程式。 媒體服務是以 REST API 為基礎，可讓您安全地上傳、儲存、編碼和封裝視訊或音訊內容，以用於隨選和即時資料流傳遞給各種用戶端 (例如電視、電腦和行動裝置)。
 

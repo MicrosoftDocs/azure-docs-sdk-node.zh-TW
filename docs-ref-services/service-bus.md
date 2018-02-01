@@ -1,31 +1,28 @@
 ---
 title: "適用於 Node.js 的 Azure 服務匯流排模組"
 description: "適用於 Node.js 的 Azure 服務匯流排模組參考"
-keywords: "Azure,SDK,API,服務匯流排, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Bus
-ms.openlocfilehash: 4d1bbe917512d2ad5383081bef2c28a33541f28c
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 792e51acf2577649432b26e4b840bc1d40b7abaf
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-service-bus-modules-for-nodejs"></a>適用於 Node.js 的 Azure 服務匯流排模組
-
-## <a name="overview"></a>概觀
 
 Azure 服務匯流排是非同步的訊息雲端平台，可讓您在彼此分離的系統之間傳送資料。
 
 深入了解 [Azure 服務匯流排](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)。
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 

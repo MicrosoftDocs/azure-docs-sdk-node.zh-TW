@@ -1,21 +1,20 @@
 ---
 title: "適用於 Node.js 的 Azure 授權模組"
 description: "適用於 Node.js 的 Azure 授權模組參考"
-keywords: "Azure,SDK,API,授權, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Authorization
-ms.openlocfilehash: de843bf1afed77afdb9bde035962a1c151d9c1bb
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 6fbaaeba28cac81d360e93c5066791adfa51bcd5
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-authorization-modules-for-nodejs"></a>適用於 Node.js 的 Azure 授權模組
 
@@ -23,7 +22,7 @@ ms.lasthandoff: 08/17/2017
 
 Azure App Service 驗證/授權是可讓應用程式接受使用者登入的一種功能，而不需要在應用程式後端變更程式碼。 授權提供簡單的方法來保護您的應用程式，以及使用每位使用者的資料。
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 使用 npm 來安裝適用於 Node.js 的 Azure 授權模組
 

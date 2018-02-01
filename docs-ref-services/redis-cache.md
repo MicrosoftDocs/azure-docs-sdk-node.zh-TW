@@ -1,25 +1,22 @@
 ---
 title: "適用於 Node.js 的 Azure 快取模組"
 description: "適用於 Node.js 的 Azure 快取模組參考"
-keywords: "Azure,SDK,API,Redis 快取, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Redis Cache
-ms.openlocfilehash: 8a10e522e39461697b740750b63fc82a6cc320ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 5d3a410fefcf6840181701763346fbfe08fe023b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-redis-cache-modules-for-nodejs"></a>適用於 Node.js 的 Azure 快取模組
-
-## <a name="overview"></a>概觀
 
 Azure Redis 快取是以常用的開放原始碼 Redis 專案作為基礎。 它可讓您從 Azure 應用程式存取由 Microsoft 管理的安全、專用 Redis 執行個體。
 
@@ -27,7 +24,7 @@ Redis 是一種進階的索引鍵值存放區，其中的索引鍵可以包含�
 
 深入了解 [Azure Redis 快取](https://docs.microsoft.com/azure/redis-cache/)。
 
-## <a name="client-package"></a>用戶端套件
+## <a name="client-package"></a>用戶端封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 
@@ -58,7 +55,7 @@ client.get('key1', (err, reply) => {
 });
 ```
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 

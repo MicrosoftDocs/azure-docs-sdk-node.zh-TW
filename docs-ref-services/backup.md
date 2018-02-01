@@ -1,21 +1,20 @@
 ---
 title: "適用於 Node.js 的 Azure 備份模組"
 description: "適用於 Node.js 的 Azure 備份模組參考"
-keywords: "Azure,SDK,API,備份, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
-ms.openlocfilehash: 3ff9bff16a520bca461198531fd4c02139d2b293
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 83ccd48d6f66c49ed6be837384a39cb32919b83c
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-backup-modules-for-nodejs"></a>適用於 Node.js 的 Azure 備份模組
 
@@ -23,7 +22,7 @@ ms.lasthandoff: 08/17/2017
 
 Azure 備份是您可用來備份 (或保護) 和還原 Microsoft Cloud 資料的 Azure 服務。 Azure 備份將以一個可靠、安全及具成本競爭力的雲端架構解決方案，取代您現有的內部部署或異地備份解決方案。 Azure 備份提供多個元件，您可以下載並部署在適當的電腦、伺服器或雲端中。 您部署的元件或代理程式，取決於您想要保護的項目。 所有 Azure 備份的元件 (無論您要保護的是內部部署或雲端資料) 都可以將資料備份至 Azure 中的復原服務保存庫。 
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-modules-with-npm"></a>使用 npm 安裝模組
 

@@ -1,30 +1,27 @@
 ---
 title: "適用於 Node.js 的 Azure 伺服器管理模組"
 description: "適用於 Node.js 的 Azure 伺服器管理模組參考"
-keywords: "Azure,SDK,API,伺服器管理, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Server Management
-ms.openlocfilehash: cc1f90fe334d572da369a2f93fb750ae12756cc8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: a3ac75c82df92c8ab5b8177da40d47c102311bb6
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a>適用於 Node.js 的 Azure 伺服器管理模組
-
-## <a name="overview"></a>概觀
 
 Azure 伺服器管理員可讓您管理節點、閘道、工作階段，以及 PowerShell 命令和工作階段。
 
 > [!WARNING]
-> 此 API 已被取代，改為使用 [Azure Resource Manager](/nodejs/api/overview/azure/resources)，但可能不適用於所有的服務。
+> 此 API 已被取代，改為使用 [Azure Resource Manager](/javascript/api/overview/azure/resources)，但可能不適用於所有的服務。
 
 ## <a name="install-the-module-with-npm"></a>使用 npm 安裝模組
 

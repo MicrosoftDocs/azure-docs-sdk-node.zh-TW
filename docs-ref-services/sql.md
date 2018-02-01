@@ -1,30 +1,27 @@
 ---
 title: "適用於 Node.js 的 Azure SQL 模組"
 description: "適用於 Node.js 的 Azure SQL 模組參考"
-keywords: Azure, Node, SDK, API, nodejs, javascript, sql
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: sql-database
-ms.openlocfilehash: 65ee90b4e6ca248b9d19a3685163211ca547cad4
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 8ebcfbcbf39def1774a702c9f18a4e3f5ab86931
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-sql-modules-for-nodejs"></a>適用於 Node.js 的 Azure SQL 模組
-
-## <a name="overview"></a>概觀
 
 從 Node.js 使用儲存在 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) 中的資料。
 管理程式庫提供的介面，可讓您輕鬆地管理 Microsoft Azure SQL 資料庫。
 
-## <a name="client-package"></a>用戶端套件
+## <a name="client-package"></a>用戶端封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 
@@ -71,7 +68,7 @@ const executeStatement = () => {
 };
 ```
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-npm-modules"></a>安裝 npm 模組
 

@@ -1,29 +1,26 @@
 ---
 title: "適用於 Node.js 的 Azure DevTest Labs 模組"
 description: "適用於 Node.js 的 Azure DevTest Labs 模組參考"
-keywords: Azure,SDK,API,DevTest Labs, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
-ms.openlocfilehash: 933ce8971e02c2898d296112282169b8c7dca1c7
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 7754280741c09d47e138518d33628c667944c651
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-devtest-labs-modules-for-nodejs"></a>適用於 Node.js 的 Azure DevTest Labs 模組
 
-## <a name="overview"></a>概觀
-
 Azure DevTest Labs 是一項服務，可協助開發人員和測試人員在 Azure 中建立快速環境，同時將浪費降至最低並控制成本。 您可以利用可重複使用的範本和構件快速佈建 Windows 和 Linux 環境，來測試最新版的應用程式。 將您的部署管線與研發/測試實驗室輕鬆整合，來佈建隨選環境。 藉由佈建多個測試代理程式來相應增加您的負載測試，並建立預先佈建的環境來進行訓練和示範。
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 

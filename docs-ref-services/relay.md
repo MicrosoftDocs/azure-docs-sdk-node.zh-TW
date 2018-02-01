@@ -1,31 +1,28 @@
 ---
 title: "適用於 Node.js 的 Azure Relay 模組"
 description: "適用於 Node.js 的 Azure Relay 模組參考"
-keywords: Azure,SDK,API,Relay, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Relay
-ms.openlocfilehash: 7e958433e0d3cc6b464bb5980d4f161323a18ab2
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 632e17f9169353ad9348b3b098b4a3e8d873238a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-relay-modules-for-nodejs"></a>適用於 Node.js 的 Azure Relay 模組
-
-## <a name="overview"></a>概觀
 
 Azure 轉送服務可建立混合式應用程式，方法是讓您以安全的方式向公用雲端公開位於企業網路內部的服務，而無需開啟防火牆連線或要求對企業網路基礎結構的進行侵入式變更。 轉送支援各種不同的傳輸通訊協定和 Web 服務標準。
 
 深入了解 [Azure 轉送](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it)。
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 

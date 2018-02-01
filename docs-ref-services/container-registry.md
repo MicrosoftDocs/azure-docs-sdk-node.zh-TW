@@ -1,27 +1,24 @@
 ---
 title: "適用於 Node.js 的 Azure Container Registry 模組"
 description: "適用於 Node.js 的 Azure Container Registry 模組參考"
-keywords: Azure,SDK,API,Container Registry, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
-ms.openlocfilehash: 6ded68c19971a8fe580f440862d0fe05a1def6a2
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: dda0e9bbfaa8a3e060f3b8f820d5bab315662629
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-container-registry-modules-for-nodejs"></a>適用於 Node.js 的 Azure Container Registry 模組
 
-## <a name="overview"></a>概觀
-
-Azure Container Registry 是受管理的 Docker 登錄服務，架構於開放原始碼的 Docker Registry 2.0。 建立及維護 Azure 容器登錄庫，以儲存和管理您的私人 Docker 容器映像。 使用 Azure 的容器登錄庫進行現有容器的開發與部署管線，並利用 Docker 社群的專業知識。
+Azure Container Registry 是受控 Docker 登錄服務，架構於開放原始碼的 Docker Registry 2.0。 建立及維護 Azure 容器登錄庫，以儲存和管理您的私人 Docker 容器映像。 使用 Azure 的容器登錄庫進行現有容器的開發與部署管線，並利用 Docker 社群的專業知識。
 
 ## <a name="management-package"></a>管理套件
 

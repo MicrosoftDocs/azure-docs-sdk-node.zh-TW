@@ -1,25 +1,22 @@
 ---
 title: "適用於 Node.js 的 Azure PowerBI Embedded 模組"
 description: "適用於 Node.js 的 Azure PowerBI Embedded 模組參考"
-keywords: Azure,SDK,API,PowerBI Embedded, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: PowerBI Embedded
-ms.openlocfilehash: 74e69421d372ff4ccaebf2b811152dd83b9b4e7b
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 5dbe134acb38787916f48277b2114e199601e128
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-powerbi-embedded-modules-for-nodejs"></a>適用於 Node.js 的 Azure PowerBI Embedded 模組
-
-## <a name="overview"></a>概觀
 
 運用 Power BI Embedded Azure 服務，您可以將 Power BI 報告整合至 Node 應用程式以建立或編輯圖表和報告。
 

@@ -1,31 +1,28 @@
 ---
 title: "適用於 Node.js 的 Azure PostgreSQL 模組"
 description: "適用於 Node.js 的 Azure PostgreSQL 模組參考"
-keywords: "Azure, Node, SDK, API, nodejs, javascript, 資料庫, PostgreSQL"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: postgresql
-ms.openlocfilehash: a5130c96b3ae922358b6898c15510282fbaa97f0
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: d8a2c7fe90746def7e50a7af3a0f470213eed197
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-postgresql-modules-for-nodejs"></a>適用於 Node.js 的 Azure PostgreSQL 模組
-
-## <a name="overview"></a>概觀
 
 用於存取 Azure Database for PostgreSQL 的建議用戶端程式庫是開放原始碼之 [Azure Database for PostgreSQL 的 Node.js 連線程式庫](https://www.npmjs.com/package/pg)。 此程式庫是適用於 Node.js 的非封鎖 PostgreSQL 用戶端，可支援純 JavaScript 和選擇性原生 libpq 繫結。
 
 深入了解 [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)
 
-## <a name="client-package"></a>用戶端套件
+## <a name="client-package"></a>用戶端封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 

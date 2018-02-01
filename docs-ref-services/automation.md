@@ -1,21 +1,20 @@
 ---
 title: "適用於 Node.js 的 Azure 自動化模組"
 description: "適用於 Node.js 的 Azure 自動化模組參考"
-keywords: "Azure,SDK,API,自動化, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Automation
-ms.openlocfilehash: 96861efce8eb95f567aa25f2304cb271d932d949
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 09e9d2675d49b29881d332e7bbf251a5031e3483
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-automation-modules-for-nodejs"></a>適用於 Node.js 的 Azure 自動化模組
 
@@ -23,7 +22,7 @@ ms.lasthandoff: 08/17/2017
 
 Azure 自動化可讓使用者將雲端和企業環境中執行的手動、長時間執行、易發生錯誤且重複性高的工作加以自動化。 自動化可以節省時間並提高日常管理工作的可靠性，甚至將它們排程為定期自動執行。 您可以使用 Runbook 自動執行程序，或使用「期望狀態設定」自動進行組態管理。
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-modules-with-npm"></a>使用 npm 安裝模組
 

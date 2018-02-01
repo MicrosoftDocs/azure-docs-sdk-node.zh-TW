@@ -1,31 +1,28 @@
 ---
 title: "適用於 Node.js 的 Azure Site Recovery 模組"
 description: "適用於 Node.js 的 Azure Site Recovery 模組參考"
-keywords: Azure,SDK,API,Site Recovery, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Site Recovery
-ms.openlocfilehash: 3537503118a6fbe181c8cc4b26da545a4bdbd764
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: a1f3e1c18be68dd7e68f38e353e0c2ba224fbaa1
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-site-recovery-modules-for-nodejs"></a>適用於 Node.js 的 Azure Site Recovery 模組
-
-## <a name="overview"></a>概觀
 
 Site Recovery 可讓您自動執行區域、內部部署虛擬機器和實體伺服器之間至 Azure 的 Azure VM 複寫，以及自動執行內部部署機器至次要資料中心的複寫。
 
 深入了解 [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)。
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 

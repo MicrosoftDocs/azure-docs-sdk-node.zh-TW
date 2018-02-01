@@ -1,21 +1,20 @@
 ---
 title: "Node.js 適用的 Azure Active Directory 模組"
 description: "Node.js 適用的 Azure Active Directory 模組參考"
-keywords: "Azure, Node, SDK, API, 儲存體, nodejs, javascript"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: active-directory
-ms.openlocfilehash: d0084faa78986bd5518526c6eb84b9c13fdb10bf
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 59ef5321db6e5e7f3ad0e3b63aaa6a107207d3c2
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-active-directory-modules-for-nodejs"></a>Node.js 適用的 Azure Active Directory 模組
 
@@ -23,7 +22,7 @@ ms.lasthandoff: 08/17/2017
 
 [適用於 Node.js 的 Azure Active Directory 驗證程式庫 (ADAL)](https://www.npmjs.com/package/adal-node) 可讓 Node.js 應用程式向 AAD 驗證，以便存取 AAD 保護的 Web 資源。
 
-## <a name="client-package"></a>用戶端套件
+## <a name="client-package"></a>用戶端封裝
 
 ### <a name="install-the-npm-modules"></a>安裝 npm 模組
 

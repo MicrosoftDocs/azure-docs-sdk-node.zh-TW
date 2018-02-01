@@ -1,25 +1,23 @@
 ---
 title: "適用於 Node.js 的 Azure Logic Apps 模組"
 description: "適用於 Node.js 的 Azure Logic Apps 模組參考"
-keywords: Azure,SDK,API,Logic Apps, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Logic Apps
-ms.openlocfilehash: 70380dbf1fd199ba4909975b05ade72efaa4e0ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 37e485bea316ebd7fb4a064e1919da5501d96eac
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-logic-apps-modules-for-nodejs"></a>適用於 Node.js 的 Azure Logic Apps 模組
 
-## <a name="overview"></a>概觀
 Logic Apps 提供簡化和實作雲端中可擴充整合和工作流程的途徑。 它提供視覺化設計工具，以一系列的步驟 (也稱為工作流程) 為您的程序建立模型並加以自動化。 雲端和內部部署中有 許多連接器可快速整合各項服務和通訊協定。 邏輯應用程式是以觸發程序為開端 (如「當帳戶新增至 Dynamics CRM 時」)，而在觸發後可以開始處理各種組合的動作、轉換和條件邏輯。
 
 使用 Logic Apps 的優點包括︰
@@ -30,9 +28,9 @@ Logic Apps 提供簡化和實作雲端中可擴充整合和工作流程的途徑
 - 連接並同步處理跨內部部署與雲端的不同系統
 - 利用頂級整合支援打造 BizTalk Server、API 管理、Azure Functions 和 Azure 服務匯流排
 
-Logic Apps 是完全受管理的 iPaaS (整合平台即服務)，可讓開發人員不必擔心建置裝載、延展性、可用性和管理。 邏輯應用程式會自動相應增加以滿足需求。
+Logic Apps 是完全受控的 iPaaS (整合平台即服務)，可讓開發人員不必擔心建置裝載、延展性、可用性和管理。 邏輯應用程式會自動相應增加以滿足需求。
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 

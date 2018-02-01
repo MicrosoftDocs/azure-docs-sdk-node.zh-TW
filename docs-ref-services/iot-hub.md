@@ -1,27 +1,24 @@
 ---
 title: "適用於 Node.js 的 Azure IoT 中樞模組"
 description: "適用於 Node.js 的 Azure IoT 中樞模組參考"
-keywords: "Azure,SDK,API,IoT 中樞, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
-ms.openlocfilehash: 44d01ceb833d2acbef6f9f22b32d4ad66b1fd5ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 66a0cad731d8e8dfd5cea64bdc910189a23fc6f0
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-iot-hub-modules-for-nodejs"></a>適用於 Node.js 的 Azure IoT 中樞模組
 
-## <a name="overview"></a>概觀
-
-Azure IoT 中樞是一項完全受管理的服務，可在數百萬個 IoT 裝置和一個解決方案後端之間啟用可靠且安全的雙向通訊。 Azure IoT 中樞：
+Azure IoT 中樞是一項完全受控的服務，可在數百萬個 IoT 裝置和一個解決方案後端之間啟用可靠且安全的雙向通訊。 Azure IoT 中樞：
 - 提供多個裝置到雲端和雲端到裝置通訊選項，包括單向傳訊、檔案傳輸，以及要求-回覆方法。
 - 向其他 Azure 服務提供內建宣告式訊息路由。
 - 針對裝置中繼資料與同步化狀態資訊提供可查詢存放區。
