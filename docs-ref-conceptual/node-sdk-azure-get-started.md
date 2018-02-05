@@ -1,26 +1,25 @@
 ---
 title: "開始使用適用於 Node.js 的 Azure 模組"
-description: "使用自有的 Azure 訂用帳戶，開始進行適用於 Node.js 的 Azure 模組基本使用。"
-keywords: "Azure, Node, SDK, API, 入門, node.js"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "以適用於 Node.js 的 Azure 模組開始驗證和資源管理"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>開始使用適用於 Node.js 的 Azure 模組
 
 本指南會逐步引導您安裝 Azure Node.js 模組、使用服務主體向 Azure 進行驗證，以及執行可在 Azure 訂用帳戶中建立資源並連線至 Azure 雲端服務的範例程式碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - 一個 Azure 帳戶。 如果您沒有帳戶，請[取得免費試用帳戶](https://azure.microsoft.com/free/)
 - [Node.js](https://nodejs.org)
@@ -264,7 +263,7 @@ az group delete --name myResourceGroup
 
 ## <a name="reference"></a>參考 
 
-我們針對所有套件提供了[參考資料](/nodejs/api/overview/azure/?view=azure-node-2.0.0)。
+我們針對所有套件提供了[參考資料](/javascript/api/overview/azure/)。
 
 ## <a name="get-help-and-give-feedback"></a>獲得協助及提供意見
 

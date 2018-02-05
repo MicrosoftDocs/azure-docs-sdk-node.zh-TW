@@ -1,22 +1,22 @@
 ---
-title: "使用 Azure 儲存體搭配 Node.js 的範例程式碼"
-description: "說明如何使用 Azure 儲存體搭配 Node.js 的範例程式碼。"
-author: tomarcher
-manager: douge
+title: "使用 Node.js 的 Azure 儲存體程式碼範例"
+description: "展示如何以 Node.js 來使用 Azure 儲存體的範例程式碼。"
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: b8bb35016f229b12326ad0667ebdbba63614cb4e
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 70a30d92dba7c18b7f85127ba7359d94711b570a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-storage-with-nodejs"></a>使用 Azure 儲存體搭配 Node.js 的範例程式碼
+# <a name="azure-storage-with-nodejs-code-samples"></a>使用 Node.js 的 Azure 儲存體程式碼範例
 
-下列範例程式碼說明如何使用 Azure 儲存體搭配 Node.js。
+下列範例程式碼會展示如何以 Node.js 來使用 Azure 儲存體。
 
 如果您需要其他工作的程式碼，您可以瀏覽 [Azure Node.js 範例](https://azure.microsoft.com/resources/samples/?term=nodejs)的完整清單。
 

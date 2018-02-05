@@ -1,21 +1,20 @@
 ---
 title: "適用於 Node.js 的 Azure Service Fabric 模組"
-description: "適用於 Node.js 的 Azure Service Fabric 模組參考"
-keywords: Azure,SDK,API,Service Fabric, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
-ms.date: 07/18/2017
+description: "供 Node.js 參照使用的 Azure Service Fabric 模組"
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
+ms.date: 11/12/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Fabric
-ms.openlocfilehash: d3de9af4e8ca834963cf2ac0275ed02b8021f29f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: c855e0003a4b6f4a4d75f37b4c8480721fe0a942
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-service-fabric-modules-for-nodejs"></a>適用於 Node.js 的 Azure Service Fabric 模組
 
@@ -25,7 +24,7 @@ Azure Service Fabric 是一個分散式系統平台，可讓您輕鬆封裝、�
 
 深入了解 [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)。
 
-## <a name="management-package"></a>管理套件
+## <a name="management-package"></a>管理封裝
 
 ### <a name="install-the-npm-module"></a>安裝 npm 模組
 
