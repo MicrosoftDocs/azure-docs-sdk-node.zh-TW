@@ -10,31 +10,34 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: active-directory
-ms.openlocfilehash: 59ef5321db6e5e7f3ad0e3b63aaa6a107207d3c2
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: c91b8396dbfeb766887b650541044f7ce2e7bde6
+ms.sourcegitcommit: 79213a25192d8913bf8ec16c19fbec6a8eb691f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="azure-active-directory-modules-for-nodejs"></a><span data-ttu-id="733cf-103">Node.js 適用的 Azure Active Directory 模組</span><span class="sxs-lookup"><span data-stu-id="733cf-103">Azure Active Directory modules for Node.js</span></span>
+# <a name="azure-active-directory-modules-for-nodejs"></a><span data-ttu-id="da7ce-103">Node.js 適用的 Azure Active Directory 模組</span><span class="sxs-lookup"><span data-stu-id="da7ce-103">Azure Active Directory modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="733cf-104">概觀</span><span class="sxs-lookup"><span data-stu-id="733cf-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="da7ce-104">概觀</span><span class="sxs-lookup"><span data-stu-id="da7ce-104">Overview</span></span>
 
-<span data-ttu-id="733cf-105">[適用於 Node.js 的 Azure Active Directory 驗證程式庫 (ADAL)](https://www.npmjs.com/package/adal-node) 可讓 Node.js 應用程式向 AAD 驗證，以便存取 AAD 保護的 Web 資源。</span><span class="sxs-lookup"><span data-stu-id="733cf-105">The [Azure Active Directory Authentication Library (ADAL) for Node.js](https://www.npmjs.com/package/adal-node) enables Node.js applications to authenticate to AAD in order to access AAD protected web resources.</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="da7ce-105">強烈建議您使用 [Microsoft Graph](https://graph.microsoft.io/) 取代 Azure AD Graph API 來存取 Azure Active Directory 資源。</span><span class="sxs-lookup"><span data-stu-id="da7ce-105">We strongly recommend that you use [Microsoft Graph](https://graph.microsoft.io/) instead of Azure AD Graph API to access Azure Active Directory resources.</span></span> <span data-ttu-id="da7ce-106">我們的開發工作現在是針對 Microsoft Graph，並沒有針對 Azure AD Graph API 規劃的進一步增強功能 。</span><span class="sxs-lookup"><span data-stu-id="da7ce-106">Our development efforts are now concentrated on Microsoft Graph and no further enhancements are planned for Azure AD Graph API.</span></span> <span data-ttu-id="da7ce-107">有極少數的案例可能仍適用 Azure AD Graph API；如需詳細資訊，請參閱 Office 開發人員中心的 [Microsoft Graph 或 Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) 部落格文章。</span><span class="sxs-lookup"><span data-stu-id="da7ce-107">There are a very limited number of scenarios for which Azure AD Graph API might still be appropriate; for more information, see the [Microsoft Graph or the Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) blog post in the Office Dev Center.</span></span>
 
-## <a name="client-package"></a><span data-ttu-id="733cf-106">用戶端封裝</span><span class="sxs-lookup"><span data-stu-id="733cf-106">Client package</span></span>
+<span data-ttu-id="da7ce-108">[適用於 Node.js 的 Azure Active Directory 驗證程式庫 (ADAL)](https://www.npmjs.com/package/adal-node) 可讓 Node.js 應用程式向 AAD 驗證，以便存取 AAD 保護的 Web 資源。</span><span class="sxs-lookup"><span data-stu-id="da7ce-108">The [Azure Active Directory Authentication Library (ADAL) for Node.js](https://www.npmjs.com/package/adal-node) enables Node.js applications to authenticate to AAD in order to access AAD protected web resources.</span></span>
 
-### <a name="install-the-npm-modules"></a><span data-ttu-id="733cf-107">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="733cf-107">Install the npm modules</span></span>
+## <a name="client-package"></a><span data-ttu-id="da7ce-109">用戶端封裝</span><span class="sxs-lookup"><span data-stu-id="da7ce-109">Client package</span></span>
 
-<span data-ttu-id="733cf-108">使用 npm 來安裝 Azure 儲存體用戶端或管理模組。</span><span class="sxs-lookup"><span data-stu-id="733cf-108">Use npm to install the Azure storage client or management modules.</span></span>
+### <a name="install-the-npm-modules"></a><span data-ttu-id="da7ce-110">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="da7ce-110">Install the npm modules</span></span>
+
+<span data-ttu-id="da7ce-111">使用 npm 來安裝 Azure 儲存體用戶端或管理模組。</span><span class="sxs-lookup"><span data-stu-id="da7ce-111">Use npm to install the Azure storage client or management modules.</span></span>
 
 ```bash
 npm install adal-node
 ```   
 
-### <a name="example"></a><span data-ttu-id="733cf-109">範例</span><span class="sxs-lookup"><span data-stu-id="733cf-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="da7ce-112">範例</span><span class="sxs-lookup"><span data-stu-id="da7ce-112">Example</span></span>
 
-<span data-ttu-id="733cf-110">來自[用戶端認證範例](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js)的這個範例說明如何透過用戶端認證進行伺服器對伺服器驗證。</span><span class="sxs-lookup"><span data-stu-id="733cf-110">This example from the [client credentials sample](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) illustrates server-to-server authentication via client credentials.</span></span>
+<span data-ttu-id="da7ce-113">來自[用戶端認證範例](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js)的這個範例說明如何透過用戶端認證進行伺服器對伺服器驗證。</span><span class="sxs-lookup"><span data-stu-id="da7ce-113">This example from the [client credentials sample](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) illustrates server-to-server authentication via client credentials.</span></span>
 
 ```javascript
 const adal = require('adal-node').AuthenticationContext;
@@ -62,8 +65,8 @@ context.acquireTokenWithClientCredentials(
 );
 ```
 
-## <a name="samples"></a><span data-ttu-id="733cf-111">範例</span><span class="sxs-lookup"><span data-stu-id="733cf-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="da7ce-114">範例</span><span class="sxs-lookup"><span data-stu-id="da7ce-114">Samples</span></span>
 
 [!INCLUDE [node-activedirectory-samples](../docs-ref-conceptual/includes/activedirectory-samples.md)]
 
-<span data-ttu-id="733cf-112">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="733cf-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="da7ce-115">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="da7ce-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
