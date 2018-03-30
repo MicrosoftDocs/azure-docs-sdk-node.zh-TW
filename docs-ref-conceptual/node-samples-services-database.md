@@ -1,18 +1,18 @@
 ---
-title: "使用 Node.js 的 Azure 資料庫程式碼範例"
-description: "展示如何以 Node.js 來使用 Azure 資料庫的範例程式碼。"
+title: 使用 Node.js 的 Azure 資料庫程式碼範例
+description: 展示如何以 Node.js 來使用 Azure 資料庫的範例程式碼。
 author: craigshoemaker
 manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
-ms.date: 06/17/2017
+ms.date: 03/20/2018
 ms.author: cshoe
-ms.openlocfilehash: f721bb1c4d8a84009b850c52cb26eeb0a16abca9
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 4fe35379c00bb321aa91cf36f8bf749d23120a2d
+ms.sourcegitcommit: 178734fbd3784ade4d8bdb5141be6d7ca7e017f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="azure-databases-with-nodejs-code-samples"></a>使用 Node.js 的 Azure 資料庫程式碼範例
 
@@ -24,10 +24,7 @@ ms.lasthandoff: 01/26/2018
 |---|---|
 | **Cosmos DB** ||
 | [使用 Azure Cosmos DB 和圖形 API](https://azure.microsoft.com/resources/samples/azure-cosmos-db-graph-nodejs-getting-started/) | 說明如何使用 Azure Cosmos DB 搭配圖形 API，從 Node.js 應用程式儲存和存取資料。 |
-| [使用 Azure Cosmos DB 和 Document DB API](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/) | 說明如何使用 Azure Cosmos DB 搭配 DocumentDB API，從 Node.js 應用程式儲存和存取資料。 |
-| **DocumentDB** ||
-| [使用 DocumentDB 透過 Node.js 與 Express 進行 Web 應用程式開發](https://azure.microsoft.com/resources/samples/documentdb-node-todo-app/) | 說明如何使用 Azure DocumentDB，從 Azure 上的 Node.js Express 應用程式儲存和存取資料。 |
-| [使用 DocumentDB 部署 Node.js 主控台應用程式](https://azure.microsoft.com/resources/samples/documentdb-node-getting-started/) | 此範例示範如何快速開始使用 Microsoft Azure DocumentDB 服務和 Node.js。 |
+| [使用 Azure Cosmos DB SQL API](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/) | 說明如何使用 Azure Cosmos DB 搭配 SQL API，從 Node.js 應用程式儲存和存取資料。 |
 | **MongoDB** ||
 | [Azure 中的 Node.js 和 MongoDB Web 應用程式](https://azure.microsoft.com/resources/samples/meanjs/) | 您可以遵循本教學課程用於[在 Azure 中建置 Node.js 和 MongoDB web 應用程式](http://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app?toc=/azure/node/toc.json&bc=/azure/node/toc.json)的範例應用程式。 |
 | **SQL Database** ||
