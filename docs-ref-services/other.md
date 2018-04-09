@@ -1,6 +1,6 @@
 ---
-title: "適用於 Node.js 的其他 Azure 模組"
-description: "適用於 Node.js 的其他 Azure 模組參考"
+title: 適用於 Node.js 的其他 Azure 模組
+description: 適用於 Node.js 的其他 Azure 模組參考
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -10,13 +10,13 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Other
-ms.openlocfilehash: 29a89faa57d295a3e157732efd612008b604fcdc
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: c3947dfa957596876f1b7a900867e43a497c0609
+ms.sourcegitcommit: c130d1e69ff1f4a7a857c0067e953309548b3dba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="azure-other-modules-for-nodejs"></a>適用於 Node.js 的其他 Azure 模組
+# <a name="other-modules-for-azure-nodejs"></a>適用於 Azure Node.js 的其他模組
 
 此模組在單一位置包含所有的個別 Azure Node.js 模組。
 
