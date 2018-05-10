@@ -1,6 +1,6 @@
 ---
-title: "適用於 Node.js 的虛擬機器模組 - Azure"
-description: "適用於 Node.js 的 Azure 虛擬機器模組參考指南"
+title: 適用於 Node.js 的虛擬機器模組 - Azure
+description: 適用於 Node.js 的 Azure 虛擬機器模組參考指南
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -10,31 +10,31 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: compute
-ms.openlocfilehash: 608a915499d7c32c2c8b04464f716fa4fd17243d
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 5ba40cb4c068b1af62aa8c654cbf2c3f66f83ff1
+ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="azure-virtual-machine-modules-for-nodejs"></a><span data-ttu-id="c59cb-103">適用於 Node.js 的 Azure 虛擬機器模組</span><span class="sxs-lookup"><span data-stu-id="c59cb-103">Azure Virtual Machine Modules for Node.js</span></span>
+# <a name="azure-virtual-machine-modules-for-nodejs"></a><span data-ttu-id="3dfa9-103">適用於 Node.js 的 Azure 虛擬機器模組</span><span class="sxs-lookup"><span data-stu-id="3dfa9-103">Azure Virtual Machine Modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="c59cb-104">概觀</span><span class="sxs-lookup"><span data-stu-id="c59cb-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="3dfa9-104">概觀</span><span class="sxs-lookup"><span data-stu-id="3dfa9-104">Overview</span></span>
 
-<span data-ttu-id="c59cb-105">透過適用於 Node.js 的 Azure 管理模組，從您的程式碼定義、設定及部署新的 Windows 和 Linux 虛擬機器和虛擬機器擴展集。</span><span class="sxs-lookup"><span data-stu-id="c59cb-105">Define, configure, and deploy new Windows and Linux virtual machines and virtual machine scale sets from your code with the Azure management modules for Node.js.</span></span> <span data-ttu-id="c59cb-106">這些模組可讓您啟動和停止現有的虛擬機器，以及對您 Azure 訂用帳戶中已停止的 VM 連結或卸離磁碟。</span><span class="sxs-lookup"><span data-stu-id="c59cb-106">The modules let you start and stop existing virtual machines and attach or detach disks to stopped VMs in your Azure subscription.</span></span>
+<span data-ttu-id="3dfa9-105">透過適用於 Node.js 的 Azure 管理模組，從您的程式碼定義、設定及部署新的 Windows 和 Linux 虛擬機器和虛擬機器擴展集。</span><span class="sxs-lookup"><span data-stu-id="3dfa9-105">Define, configure, and deploy new Windows and Linux virtual machines and virtual machine scale sets from your code with the Azure management modules for Node.js.</span></span> <span data-ttu-id="3dfa9-106">這些模組可讓您啟動和停止現有的虛擬機器，以及對您 Azure 訂用帳戶中已停止的 VM 連結或卸離磁碟。</span><span class="sxs-lookup"><span data-stu-id="3dfa9-106">The modules let you start and stop existing virtual machines and attach or detach disks to stopped VMs in your Azure subscription.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="c59cb-107">管理封裝</span><span class="sxs-lookup"><span data-stu-id="c59cb-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="3dfa9-107">管理封裝</span><span class="sxs-lookup"><span data-stu-id="3dfa9-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="c59cb-108">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="c59cb-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="3dfa9-108">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="3dfa9-108">Install the npm module</span></span>
 
-<span data-ttu-id="c59cb-109">安裝 Azure 計算 npm 模組</span><span class="sxs-lookup"><span data-stu-id="c59cb-109">Install the Azure Compute npm module</span></span>
+<span data-ttu-id="3dfa9-109">安裝 Azure 計算 npm 模組</span><span class="sxs-lookup"><span data-stu-id="3dfa9-109">Install the Azure Compute npm module</span></span>
 
 ```bash
 npm install azure-arm-compute
 ```   
 
-### <a name="example"></a><span data-ttu-id="c59cb-110">範例</span><span class="sxs-lookup"><span data-stu-id="c59cb-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3dfa9-110">範例</span><span class="sxs-lookup"><span data-stu-id="3dfa9-110">Example</span></span>
 
-<span data-ttu-id="c59cb-111">下列範例說明如何登入 Azure、建立管理用戶端，並列出所指定位置、發行者、供應項目和 SKU 的所有 VM 映像。</span><span class="sxs-lookup"><span data-stu-id="c59cb-111">The following example illustrates how to log in to Azure, create a management client, and list all VM images for the specified location, publisher, offer, and SKU.</span></span>
+<span data-ttu-id="3dfa9-111">下列範例說明如何登入 Azure、建立管理用戶端，並列出所指定位置、發行者、供應項目和 SKU 的所有 VM 映像。</span><span class="sxs-lookup"><span data-stu-id="3dfa9-111">The following example illustrates how to log in to Azure, create a management client, and list all VM images for the specified location, publisher, offer, and SKU.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,8 +56,8 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="c59cb-112">範例</span><span class="sxs-lookup"><span data-stu-id="c59cb-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="3dfa9-112">範例</span><span class="sxs-lookup"><span data-stu-id="3dfa9-112">Samples</span></span>
 
-[!INCLUDE [node-storage-samples](../docs-ref-conceptual/includes/virtualmachines-samples.md)]
+[!INCLUDE [node-virtualmachines-samples](../docs-ref-conceptual/includes/virtualmachines-samples.md)]
 
-<span data-ttu-id="c59cb-113">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="c59cb-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="3dfa9-113">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="3dfa9-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
