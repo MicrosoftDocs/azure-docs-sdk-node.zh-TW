@@ -1,3 +1,3 @@
 | | |
 |--|--|
-| [<span data-ttu-id="0c70d-101">使用 PostgreSQL 的 Node.js 程式碼片段</span><span class="sxs-lookup"><span data-stu-id="0c70d-101">Node.js code snippets using PostgreSQL</span></span>](https://www.npmjs.com/package/pg) | <span data-ttu-id="0c70d-102">了解如何建立集區、執行查詢、取得專屬用戶端，以及更多。</span><span class="sxs-lookup"><span data-stu-id="0c70d-102">Learn how to create a pool, execute a query, obtain an exclusive client, and more.</span></span>
+| [使用 PostgreSQL 的 Node.js 程式碼片段](https://www.npmjs.com/package/pg) | 了解如何建立集區、執行查詢、取得專屬用戶端，以及更多。

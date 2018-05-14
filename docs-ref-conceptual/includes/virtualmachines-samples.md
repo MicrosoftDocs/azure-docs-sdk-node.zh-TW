@@ -1,4 +1,4 @@
 | | |
 |---|---|
-| <span data-ttu-id="d14f6-101">**虛擬機器管理**</span><span class="sxs-lookup"><span data-stu-id="d14f6-101">**Virtual machine management**</span></span> ||
-| [<span data-ttu-id="d14f6-102">Node.js 的 Azure 虛擬機器管理範例</span><span class="sxs-lookup"><span data-stu-id="d14f6-102">Azure virtual machines management sample with Node.js</span></span>](https://github.com/Azure-Samples/compute-node-manage-vm) | <span data-ttu-id="d14f6-103">示範如何建立、列出、重新啟動及刪除虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="d14f6-103">Demonstrates how to create, list, restart, and delete virtual machines.</span></span> |
+| **虛擬機器管理** ||
+| [Node.js 的 Azure 虛擬機器管理範例](https://github.com/Azure-Samples/compute-node-manage-vm) | 示範如何建立、列出、重新啟動及刪除虛擬機器。 |
