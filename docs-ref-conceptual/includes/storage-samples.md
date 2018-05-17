@@ -1,5 +1,5 @@
 
-* [開始使用 Node.js 中的 Azure Blob 服務](https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/)
-* [開始使用 Node.js 中的 Azure 檔案服務](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/)
-* [開始使用 Node.js 中的 Azure 佇列服務](https://azure.microsoft.com/resources/samples/storage-queue-node-getting-started/)
-* [開始使用 Node.js 中的 Azure 資料表服務](https://azure.microsoft.com/resources/samples/storage-table-node-getting-started/)
+* [<span data-ttu-id="d48d3-101">開始使用 Node.js 中的 Azure Blob 服務</span><span class="sxs-lookup"><span data-stu-id="d48d3-101">Getting Started with Azure Blob Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/)
+* [<span data-ttu-id="d48d3-102">開始使用 Node.js 中的 Azure 檔案服務</span><span class="sxs-lookup"><span data-stu-id="d48d3-102">Getting Started with Azure File Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/)
+* [<span data-ttu-id="d48d3-103">開始使用 Node.js 中的 Azure 佇列服務</span><span class="sxs-lookup"><span data-stu-id="d48d3-103">Getting Started with Azure Queue Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-queue-node-getting-started/)
+* [<span data-ttu-id="d48d3-104">開始使用 Node.js 中的 Azure 資料表服務</span><span class="sxs-lookup"><span data-stu-id="d48d3-104">Getting Started with Azure Table Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-table-node-getting-started/)
