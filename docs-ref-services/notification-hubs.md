@@ -1,46 +1,46 @@
 ---
-title: "適用於 Node.js 的 Azure 通知中樞模組"
-description: "適用於 Node.js 的 Azure 通知中樞模組參考"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: 適用於 Node.js 的 Azure 通知中樞模組
+description: 適用於 Node.js 的 Azure 通知中樞模組參考
+author: rloutlaw
+ms.author: ROutlaw
+manager: angrobe
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
-ms.openlocfilehash: c353bdc0fff7784881b5cd4f1d3b4dda5268f1ea
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 30b8caa07111f9ceb5fa58f92649e4670aa6bee6
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="azure-notification-hubs-modules-for-nodejs"></a><span data-ttu-id="d6f9a-103">適用於 Node.js 的 Azure 通知中樞模組</span><span class="sxs-lookup"><span data-stu-id="d6f9a-103">Azure Notification Hubs modules for Node.js</span></span>
+# <a name="azure-notification-hubs-modules-for-nodejs"></a><span data-ttu-id="438c7-103">適用於 Node.js 的 Azure 通知中樞模組</span><span class="sxs-lookup"><span data-stu-id="438c7-103">Azure Notification Hubs modules for Node.js</span></span>
 
-<span data-ttu-id="d6f9a-104">Azure 通知中樞提供方便使用、多平台、可相應放大的推播引擎。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-104">Azure Notification Hubs provide an easy-to-use, multi-platform, scaled-out push engine.</span></span> <span data-ttu-id="d6f9a-105">利用單一的跨平台 API 呼叫，您就可以輕鬆地將鎖定目標且個人化的推播通知，從任何雲端或內部部署後端傳送到任何行動平台。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-105">With a single cross-platform API call, you can easily send targeted and personalized push notifications to any mobile platform from any cloud or on-premises backend.</span></span>
+<span data-ttu-id="438c7-104">Azure 通知中樞提供方便使用、多平台、可相應放大的推播引擎。</span><span class="sxs-lookup"><span data-stu-id="438c7-104">Azure Notification Hubs provide an easy-to-use, multi-platform, scaled-out push engine.</span></span> <span data-ttu-id="438c7-105">利用單一的跨平台 API 呼叫，您就可以輕鬆地將鎖定目標且個人化的推播通知，從任何雲端或內部部署後端傳送到任何行動平台。</span><span class="sxs-lookup"><span data-stu-id="438c7-105">With a single cross-platform API call, you can easily send targeted and personalized push notifications to any mobile platform from any cloud or on-premises backend.</span></span>
 
-<span data-ttu-id="d6f9a-106">通知中樞很適合企業和消費者案例。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-106">Notification Hubs works great for both enterprise and consumer scenarios.</span></span> <span data-ttu-id="d6f9a-107">以下是一些客戶使用通知中樞之用途的範例︰</span><span class="sxs-lookup"><span data-stu-id="d6f9a-107">Here are a few examples customers use Notification Hubs for:</span></span>
-- <span data-ttu-id="d6f9a-108">傳送即時新聞通知給數百萬人，且延遲時間很低。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-108">Send breaking news notifications to millions with low latency.</span></span>
-- <span data-ttu-id="d6f9a-109">將位置型折價券傳送給感興趣的使用者區段。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-109">Send location-based coupons to interested user segments.</span></span>
-- <span data-ttu-id="d6f9a-110">將事件相關通知傳送給媒體/運動/財金/遊戲應用程式的使用者或群組。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-110">Send event-related notifications to users or groups for media/sports/finance/gaming applications.</span></span>
-- <span data-ttu-id="d6f9a-111">將促銷內容推播到應用程式來吸引客戶並進行銷售。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-111">Push promotional contents to apps to engage and market to customers.</span></span>
-- <span data-ttu-id="d6f9a-112">對使用者發送企業事件通知，例如新訊息和工作項目。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-112">Notify users of enterprise events like new messages and work items.</span></span>
-- <span data-ttu-id="d6f9a-113">傳送 Multi-Factor Authentication 的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-113">Send codes for multi-factor authentication.</span></span>
+<span data-ttu-id="438c7-106">通知中樞很適合企業和消費者案例。</span><span class="sxs-lookup"><span data-stu-id="438c7-106">Notification Hubs works great for both enterprise and consumer scenarios.</span></span> <span data-ttu-id="438c7-107">以下是一些客戶使用通知中樞之用途的範例︰</span><span class="sxs-lookup"><span data-stu-id="438c7-107">Here are a few examples customers use Notification Hubs for:</span></span>
+- <span data-ttu-id="438c7-108">傳送即時新聞通知給數百萬人，且延遲時間很低。</span><span class="sxs-lookup"><span data-stu-id="438c7-108">Send breaking news notifications to millions with low latency.</span></span>
+- <span data-ttu-id="438c7-109">將位置型折價券傳送給感興趣的使用者區段。</span><span class="sxs-lookup"><span data-stu-id="438c7-109">Send location-based coupons to interested user segments.</span></span>
+- <span data-ttu-id="438c7-110">將事件相關通知傳送給媒體/運動/財金/遊戲應用程式的使用者或群組。</span><span class="sxs-lookup"><span data-stu-id="438c7-110">Send event-related notifications to users or groups for media/sports/finance/gaming applications.</span></span>
+- <span data-ttu-id="438c7-111">將促銷內容推播到應用程式來吸引客戶並進行銷售。</span><span class="sxs-lookup"><span data-stu-id="438c7-111">Push promotional contents to apps to engage and market to customers.</span></span>
+- <span data-ttu-id="438c7-112">對使用者發送企業事件通知，例如新訊息和工作項目。</span><span class="sxs-lookup"><span data-stu-id="438c7-112">Notify users of enterprise events like new messages and work items.</span></span>
+- <span data-ttu-id="438c7-113">傳送 Multi-Factor Authentication 的程式碼。</span><span class="sxs-lookup"><span data-stu-id="438c7-113">Send codes for multi-factor authentication.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="d6f9a-114">管理套件</span><span class="sxs-lookup"><span data-stu-id="d6f9a-114">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="438c7-114">管理套件</span><span class="sxs-lookup"><span data-stu-id="438c7-114">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="d6f9a-115">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="d6f9a-115">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="438c7-115">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="438c7-115">Install the npm module</span></span>
 
-<span data-ttu-id="d6f9a-116">安裝 Azure 通知中樞模組</span><span class="sxs-lookup"><span data-stu-id="d6f9a-116">Install the Azure Notification Hubs module</span></span> 
+<span data-ttu-id="438c7-116">安裝 Azure 通知中樞模組</span><span class="sxs-lookup"><span data-stu-id="438c7-116">Install the Azure Notification Hubs module</span></span> 
 
 ```bash
 npm install azure-arm-notificationhubs
 ```
 
-### <a name="example"></a><span data-ttu-id="d6f9a-117">範例</span><span class="sxs-lookup"><span data-stu-id="d6f9a-117">Example</span></span>
+### <a name="example"></a><span data-ttu-id="438c7-117">範例</span><span class="sxs-lookup"><span data-stu-id="438c7-117">Example</span></span>
 
-<span data-ttu-id="d6f9a-118">此範例會列出所有的通知中樞。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-118">This example lists all notification hubs.</span></span>
+<span data-ttu-id="438c7-118">此範例會列出所有的通知中樞。</span><span class="sxs-lookup"><span data-stu-id="438c7-118">This example lists all notification hubs.</span></span>
 
  ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -59,9 +59,9 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="d6f9a-119">範例</span><span class="sxs-lookup"><span data-stu-id="d6f9a-119">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="438c7-119">範例</span><span class="sxs-lookup"><span data-stu-id="438c7-119">Samples</span></span>
 
-* [<span data-ttu-id="d6f9a-120">適用於 Node.js 後端的 App Service Mobile 快速入門</span><span class="sxs-lookup"><span data-stu-id="d6f9a-120">App Service Mobile completed quickstart for Node.js backend</span></span>](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
-* [<span data-ttu-id="d6f9a-121">Azure IoT 服務在來自執行 Node.js 之 Intel Edison 的資料上偵測到的資料推文震動異常</span><span class="sxs-lookup"><span data-stu-id="d6f9a-121">Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js</span></span>](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)
+* [<span data-ttu-id="438c7-120">適用於 Node.js 後端的 App Service Mobile 快速入門</span><span class="sxs-lookup"><span data-stu-id="438c7-120">App Service Mobile completed quickstart for Node.js backend</span></span>](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
+* [<span data-ttu-id="438c7-121">Azure IoT 服務在來自執行 Node.js 之 Intel Edison 的資料上偵測到的資料推文震動異常</span><span class="sxs-lookup"><span data-stu-id="438c7-121">Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js</span></span>](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)
 
-<span data-ttu-id="d6f9a-122">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="d6f9a-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="438c7-122">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="438c7-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
