@@ -1,20 +1,20 @@
 ---
-title: "適用於 Node.js 的 Azure Service Fabric 模組"
-description: "供 Node.js 參照使用的 Azure Service Fabric 模組"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: 適用於 Node.js 的 Azure Service Fabric 模組
+description: 供 Node.js 參照使用的 Azure Service Fabric 模組
+author: rwike77
+ms.author: ryanwi
+manager: timlt
 ms.date: 11/12/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Fabric
-ms.openlocfilehash: c855e0003a4b6f4a4d75f37b4c8480721fe0a942
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 12fcc4af4a78cc01370355cba0b4c642f202a30c
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-service-fabric-modules-for-nodejs"></a>適用於 Node.js 的 Azure Service Fabric 模組
 
