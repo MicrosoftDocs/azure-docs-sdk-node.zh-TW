@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220680"
 ---
 # <a name="sample-code-for-using-azure-messaging-and-iot-with-nodejs"></a><span data-ttu-id="0a768-103">使用 Azure 傳訊和 IoT 搭配 Node.js 的範例程式碼</span><span class="sxs-lookup"><span data-stu-id="0a768-103">Sample code for using Azure messaging and IoT with Node.js</span></span>
 

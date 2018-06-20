@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264641"
 ---
 # <a name="azure-backup-modules-for-nodejs"></a><span data-ttu-id="f354d-103">適用於 Node.js 的 Azure 備份模組</span><span class="sxs-lookup"><span data-stu-id="f354d-103">Azure Backup Modules for Node.js</span></span>
 

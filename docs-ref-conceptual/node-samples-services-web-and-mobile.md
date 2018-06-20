@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220630"
 ---
 # <a name="azure-web-and-mobile-apps-with-nodejs-code-samples"></a><span data-ttu-id="88b8f-103">使用 Node.js 的 Azure Web 和行動裝置應用程式程式碼範例</span><span class="sxs-lookup"><span data-stu-id="88b8f-103">Azure web and mobile apps with Node.js code samples</span></span>
 

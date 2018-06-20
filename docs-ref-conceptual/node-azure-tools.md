@@ -15,6 +15,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220730"
 ---
 # <a name="azure-tools-for-nodejs-developers"></a><span data-ttu-id="0317a-103">適用於 Node.js 開發人員的 Azure 工具</span><span class="sxs-lookup"><span data-stu-id="0317a-103">Azure tools for Node.js developers</span></span>
 <span data-ttu-id="0317a-104">建議使用下列工具，在 Node.js 上開發 Azure。</span><span class="sxs-lookup"><span data-stu-id="0317a-104">The following tools are recommended for developing with Azure on Node.js.</span></span>

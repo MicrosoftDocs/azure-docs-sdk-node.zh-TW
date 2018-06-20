@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260781"
 ---
 # <a name="azure-relay-modules-for-nodejs"></a><span data-ttu-id="8433b-103">適用於 Node.js 的 Azure Relay 模組</span><span class="sxs-lookup"><span data-stu-id="8433b-103">Azure Relay modules for Node.js</span></span>
 

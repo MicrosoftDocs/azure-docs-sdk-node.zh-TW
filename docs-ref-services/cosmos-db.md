@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260754"
 ---
 # <a name="azure-cosmos-db-modules-for-nodejs"></a><span data-ttu-id="bfa83-103">適用於 Node.js 的 Azure Cosmos DB 模組</span><span class="sxs-lookup"><span data-stu-id="bfa83-103">Azure Cosmos DB Modules for Node.js</span></span>
 

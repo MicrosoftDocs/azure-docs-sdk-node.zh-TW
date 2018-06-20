@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220580"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a><span data-ttu-id="e3c07-103">開始使用適用於 Node.js 的 Azure 模組</span><span class="sxs-lookup"><span data-stu-id="e3c07-103">Get started with the Azure modules for Node.js</span></span>
 

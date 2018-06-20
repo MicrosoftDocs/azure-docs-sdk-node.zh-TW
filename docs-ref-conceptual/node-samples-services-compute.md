@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220550"
 ---
 # <a name="azure-compute-with-nodejs-code-samples"></a><span data-ttu-id="4d4f9-103">使用 Node.js 的 Azure 計算程式碼範例</span><span class="sxs-lookup"><span data-stu-id="4d4f9-103">Azure Compute with Node.js code samples</span></span>
 

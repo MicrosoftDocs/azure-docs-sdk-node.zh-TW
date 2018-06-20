@@ -1,6 +1,6 @@
 ---
-title: "使用 Visual Studio Code 和 Azure 進行 Node.js 開發"
-description: "完整的端對端教學課程說明如何建立 Node.js 應用程式、將其 Docker 化及部署到 Azure"
+title: 使用 Visual Studio Code 和 Azure 進行 Node.js 開發
+description: 完整的端對端教學課程說明如何建立 Node.js 應用程式、將其 Docker 化及部署到 Azure
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908138"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a><span data-ttu-id="a49b9-103">使用 Visual Studio Code 和 Azure 進行 Node.js 開發</span><span class="sxs-lookup"><span data-stu-id="a49b9-103">Node.js development with Visual Studio Code and Azure</span></span>
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 08/17/2017
 
 1. <span data-ttu-id="a49b9-141">輸入 `.js`，以顯示專案中的所有 JavaScript/JSON 檔案，以及每個檔案的上層目錄</span><span class="sxs-lookup"><span data-stu-id="a49b9-141">Enter `.js` to display all the JavaScript/JSON files in the project along with each file's parent directory</span></span> 
 
-    ![顯示所有 .js* 檔案](./media/node-howto-e2e/git-output.png)
+    ![顯示所有 .js\* 檔案](./media/node-howto-e2e/git-output.png)
 
 1. <span data-ttu-id="a49b9-143">選取 `server.js`，這是應用程式的啟動指令碼。</span><span class="sxs-lookup"><span data-stu-id="a49b9-143">Select `server.js`, which is the startup script for the app.</span></span> 
 

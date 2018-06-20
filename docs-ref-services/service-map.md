@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265979"
 ---
 # <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="cc056-103">適用於 Node.js 的 Azure 服務對應模組</span><span class="sxs-lookup"><span data-stu-id="cc056-103">Azure Service Map modules for Node.js</span></span>
 
