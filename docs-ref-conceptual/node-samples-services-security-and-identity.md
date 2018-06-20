@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220520"
 ---
 # <a name="azure-security-and-identity-with-nodejs-code-samples"></a>使用 Node.js 的 Azure 安全性和身分識別程式碼範例
 

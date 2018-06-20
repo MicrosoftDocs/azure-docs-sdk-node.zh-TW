@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220660"
 ---
 # <a name="nodejs-code-samples-for-azure-app-service-management-modules"></a>適用於 Azure App Service 管理模組的 Node.js 程式碼範例
 

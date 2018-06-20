@@ -15,6 +15,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220730"
 ---
 # <a name="azure-tools-for-nodejs-developers"></a>適用於 Node.js 開發人員的 Azure 工具
 建議使用下列工具，在 Node.js 上開發 Azure。

@@ -16,6 +16,7 @@ ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33849951"
 ---
 # <a name="azure-event-grid-libraries-for-nodejs"></a>適用於 Node.js 的 Azure Event Grid 程式庫
 

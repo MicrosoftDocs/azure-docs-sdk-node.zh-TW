@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220750"
 ---
 # <a name="azure-messaging-and-internet-of-things-iot-with-nodejs-tutorials"></a>使用 Node.js 的 Azure 傳訊和物聯網 (IoT) 教學課程
 

@@ -1,6 +1,6 @@
 ---
-title: "適用於 Node.js 的 Azure 計費程式碼範例"
-description: "展示如何以 Node.js 新增 Azure 計費功能的範例程式碼。"
+title: 適用於 Node.js 的 Azure 計費程式碼範例
+description: 展示如何以 Node.js 新增 Azure 計費功能的範例程式碼。
 author: ityer
 manager: limorl
 ms.devlang: nodejs
@@ -13,6 +13,7 @@ ms.sourcegitcommit: 37edf026ed6d21abd1cf45a65b3b0329a8bdf18d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29781774"
 ---
 # <a name="azure-billing-with-nodejs-code-samples"></a>使用 Node.js 的 Azure 計費程式碼範例
 

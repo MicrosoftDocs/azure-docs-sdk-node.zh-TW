@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34266649"
 ---
 # <a name="azure-advisor-modules-for-nodejs"></a>適用於 Node.js 的 Azure Advisor 模組
 

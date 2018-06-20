@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220720"
 ---
 # <a name="tutorials-for-using-azure-enterprise-services-with-nodejs"></a>使用 Azure 企業服務搭配 Node.js 的教學課程
 
