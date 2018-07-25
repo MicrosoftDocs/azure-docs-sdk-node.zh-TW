@@ -216,7 +216,7 @@ mongoose.connection.on("error", () => { console.log("DB connection error"); });
 
 請注意，Visual Studio Code 能夠偵測到應用程式的啟動指令碼為 `server.js`。 
 
-開啟 `launch.json` 檔案後，選取 [新增組態] (右下方)，然後選取 [Chrome：使用 userDataDir 啟動]。
+開啟 `launch.json` 檔案後，選取 [新增組態] \(右下方)，然後選取 [Chrome：使用 userDataDir 啟動]。
 
 ![將 Chrome 組態新增至 Visual Studio Code](./media/node-howto-e2e/add-chrome-config.png)
 
@@ -248,7 +248,7 @@ mongoose.connection.on("error", () => { console.log("DB connection error"); });
 ]
 ```
 
-在 **compounds.configurations** 陣列中指定的字串值是指 **configurations** 清單中個別項目的 **name**。 如果您已修改這些名稱，您必須在陣列中進行適當的變更。 若要查看實際作業情形，切換至 [偵錯] 索引標籤，將所選取的組態變更為 [完整堆疊] (複合組態的名稱)，然後按 **&lt;F5>** 加以執行。
+在 **compounds.configurations** 陣列中指定的字串值是指 **configurations** 清單中個別項目的 **name**。 如果您已修改這些名稱，您必須在陣列中進行適當的變更。 若要查看實際作業情形，切換至 [偵錯] 索引標籤，將所選取的組態變更為 [完整堆疊] \(複合組態的名稱)，然後按 **&lt;F5>** 加以執行。
 
 ![在 Visual Studio Code 中執行組態](./media/node-howto-e2e/full-stack-profile.png)
 
