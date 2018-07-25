@@ -124,7 +124,7 @@ MongoDB 連接字串已硬式編碼在 **database.localUrl** 的宣告中。 在
 
 自動完成功能有作用，因為 Visual Studio Code 在幕後使用 TypeScript (即使針對 JavaScript) 來提供類型資訊，而該資訊可接著在您輸入資料時用於告知完成清單。 Visual Studio Code 能夠偵測這是 Node.js 專案，因此會從 [NPM](https://www.npmjs.com/package/@types/node) 自動下載 Node.js 的 TypeScript typings 檔案。 typings 檔案可讓您取得其他 Node.js globals (例如 **Buffer** 和 **setTimeout**) 的自動完成功能，以及所有內建的模組 (例如 **fs** 和 **http**)。
 
-除了內建 Node.js API 以外，此自動取得的 typings 也適用於超過 2,000 個第 3 方模組，例如 React、Underscore 和 Express.。 例如，當 Mongoose 無法連線到已設定的 MongoDB 資料庫執行個體時，若要讓它免於損毀範例應用程式，請在第 13 行插入下列程式碼：
+除了內建 Node.js API 以外，此自動取得的 typings 也適用於超過 2,000 個第 3 方模組，例如 React、Underscore 和 Express。 例如，當 Mongoose 無法連線到已設定的 MongoDB 資料庫執行個體時，若要讓它免於損毀範例應用程式，請在第 13 行插入下列程式碼：
 
 ```javascript
 mongoose.connection.on("error", () => { console.log("DB connection error"); });
