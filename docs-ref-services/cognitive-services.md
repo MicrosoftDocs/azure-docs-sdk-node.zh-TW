@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7941d3850ef6c3518ff0ab13fe1b1ea239ab1828
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259967"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39188994"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>JavaScript Azure 認知服務模組
 
@@ -29,7 +29,7 @@ ms.locfileid: "34259967"
 - 套用成人/猥瑣設定，以啟用自動限制成人內容。
 - 識別圖片中的影像類型及色彩配置。
 
-在您的瀏覽器中免費[試用電腦視覺](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/)。
+在您的瀏覽器中免費[試用電腦視覺](https://azure.microsoft.com/services/cognitive-services/computer-vision/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 取得 JavaScript 模組：
 
@@ -55,7 +55,7 @@ npm install azure-cognitiveservices-contentmoderator
 
 偵測、識別、分析、組織和標記相片中的臉孔。 
 
-在瀏覽器中[試用臉部 API](https://azure.microsoft.com/en-us/services/cognitive-services/face/)。
+在瀏覽器中[試用臉部 API](https://azure.microsoft.com/services/cognitive-services/face/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 取得 JavaScript 模組：
 
@@ -71,7 +71,7 @@ npm install azure-cognitiveservices-face
 
 擷取由 Bing 網路搜尋 API 編製索引的網路文件，並透過結果類型、新鮮度等等，縮小結果範圍。 
 
-在瀏覽器中[試用 Web 搜尋 API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/)。
+在瀏覽器中[試用 Web 搜尋 API](https://azure.microsoft.com/services/cognitive-services/bing-web-search-api/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 取得 JavaScript 模組：
 
@@ -85,7 +85,7 @@ npm install azure-cognitiveservices-websearch
 
 搜尋影像並在結果中取得縮圖、完整的影像 URL、影像中繼資料等資訊。
 
-在瀏覽器中[試用影像搜尋 API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/)。
+在瀏覽器中[試用影像搜尋 API](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 取得 JavaScript 模組：
 
@@ -162,7 +162,7 @@ npm install azure-cognitiveservices-newssearch
 - 關鍵片語擷取
 - 語言偵測
 
-在瀏覽器中[試用文字分析 API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/)。
+在瀏覽器中[試用文字分析 API](https://azure.microsoft.com/services/cognitive-services/text-analytics/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 取得 JavaScript 模組：
 
@@ -177,7 +177,7 @@ npm install azure-cognitiveservices-textanalytics
 
 透過 Bing 拼字檢查 API 執行內容相關的文法與拼字檢查。
 
-在瀏覽器中[試用拼字檢查 API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/)。
+在瀏覽器中[試用拼字檢查 API](https://azure.microsoft.com/services/cognitive-services/spell-check/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 取得 JavaScript 模組：
 
