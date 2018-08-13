@@ -1,0 +1,403 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 93c9390372163dce12b8539afbad4c7434f676d1
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40051823"
+items:
+- uid: ms-rest.ServiceClient
+  id: ms-rest.ServiceClient
+  name: ServiceClient
+  summary: <span data-ttu-id="4282e-101">初始化 ServiceClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="4282e-101">Initializes a new instance of the ServiceClient class.</span></span>
+  fullName: ms-rest.ServiceClient
+  type: Class
+  children:
+  - ms-rest.ServiceClient.#ctor
+  - ms-rest.ServiceClient#addFilter
+  - ms-rest.ServiceClient#sendRequest
+  - ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  - ms-rest.ServiceClient#addUserAgentInfo
+  - ms-rest.ServiceClient#getPackageJsonInfo
+  langs:
+  - js
+- id: ms-rest.ServiceClient.#ctor
+  uid: ms-rest.ServiceClient.#ctor
+  parent: ms-rest.ServiceClient
+  name: ServiceClient(credentials, options)
+  fullName: ms-rest.ServiceClient.ServiceClient(credentials, options)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - object
+      description: <span data-ttu-id="4282e-102">用於驗證的 BasicAuthenticationCredentials 或 TokenCredentials 物件。</span><span class="sxs-lookup"><span data-stu-id="4282e-102">BasicAuthenticationCredentials or TokenCredentials object used for authentication.</span></span>
+      optional: true
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="4282e-103">參數選項</span><span class="sxs-lookup"><span data-stu-id="4282e-103">The parameter options</span></span>
+      optional: true
+    - id: options.filters
+      type:
+      - Array
+      description: <span data-ttu-id="4282e-104">要加入至要求管線的篩選器</span><span class="sxs-lookup"><span data-stu-id="4282e-104">Filters to be added to the request pipeline</span></span>
+      optional: true
+    - id: options.requestOptions
+      type:
+      - object
+      description: <span data-ttu-id="4282e-105">要求物件選項[選項文件](https://github.com/request/request#requestoptions-callback)</span><span class="sxs-lookup"><span data-stu-id="4282e-105">Options for the request object [Options doc](https://github.com/request/request#requestoptions-callback)</span></span>
+      optional: true
+    - id: options.noRetryPolicy
+      type:
+      - undefinedbool
+      description: <span data-ttu-id="4282e-106">如果設為 true，關閉 預設重試原則</span><span class="sxs-lookup"><span data-stu-id="4282e-106">If set to true, turn off default retry policy</span></span>
+      optional: true
+    - id: options.rpRegistrationRetryTimeout
+      type:
+      - number
+      description: <span data-ttu-id="4282e-107">以秒為單位的 AutomaticRPRegistration 重試逾時。</span><span class="sxs-lookup"><span data-stu-id="4282e-107">The retry timeout in seconds for AutomaticRPRegistration.</span></span> <span data-ttu-id="4282e-108">預設值為 30。</span><span class="sxs-lookup"><span data-stu-id="4282e-108">Default value is 30.</span></span>
+      optional: true
+    content: new ServiceClient(credentials, options)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#addFilter
+  id: ms-rest.ServiceClient#addFilter
+  parent: ms-rest.ServiceClient
+  name: addFilter(filter)
+  summary: >-
+    <span data-ttu-id="4282e-109">關聯這個 ServiceClient 篩選作業。</span><span class="sxs-lookup"><span data-stu-id="4282e-109">Associate a filtering operation with this ServiceClient.</span></span> <span data-ttu-id="4282e-110">篩選作業可包括記錄、自動重試等等。篩選作業可讓您為函式簽章：</span><span class="sxs-lookup"><span data-stu-id="4282e-110">Filtering operations can include logging, automatically retrying, etc. Filter operations are functions the signature:</span></span>
+
+        "function (requestOptions, next, callback)".
+
+    <span data-ttu-id="4282e-111">之後進行前處理的要求選項上，此方法需要呼叫"next"並傳遞目前的選項，並具有下列簽章的回呼：</span><span class="sxs-lookup"><span data-stu-id="4282e-111">After doing its preprocessing on the request options, the method needs to call "next" passing the current options and a callback with the following signature:</span></span>
+
+        "function (error, result, response, body)"
+
+    <span data-ttu-id="4282e-112">在此回呼中，以及處理結果或回應之後，回呼需要叫用回呼以繼續處理其他篩選器中傳遞原始及完成服務叫用。</span><span class="sxs-lookup"><span data-stu-id="4282e-112">In this callback, and after processing the result or response, the callback needs invoke the original passed in callback to continue processing other filters and finish up the service invocation.</span></span>
+  fullName: ms-rest.ServiceClient.addFilter(filter)
+  type: Function
+  syntax:
+    parameters:
+    - id: filter
+      type:
+      - function
+      description: <span data-ttu-id="4282e-113">新的篩選物件。</span><span class="sxs-lookup"><span data-stu-id="4282e-113">The new filter object.</span></span>
+    return:
+      type:
+      - ms-rest.QueueService
+      description: <span data-ttu-id="4282e-114">新服務的用戶端中套用篩選條件。</span><span class="sxs-lookup"><span data-stu-id="4282e-114">A new service client with the filter applied.</span></span>
+    content: function addFilter(filter)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#sendRequest
+  id: ms-rest.ServiceClient#sendRequest
+  parent: ms-rest.ServiceClient
+  name: sendRequest(options, optionalCallback)
+  summary: <span data-ttu-id="4282e-115">傳送要求，並傳回回應。</span><span class="sxs-lookup"><span data-stu-id="4282e-115">Sends the request and returns the response.</span></span>
+  fullName: ms-rest.ServiceClient.sendRequest(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{result} - The parsed (JSON.parse()) responseBody.'
+    value: '{result} - The parsed (JSON.parse()) responseBody.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error}  - The error object.'
+    value: '{Error}  - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      - ms-rest.WebResource
+      description: <span data-ttu-id="4282e-116">應該提供給已成功傳送要求的要求選項。</span><span class="sxs-lookup"><span data-stu-id="4282e-116">The request options that should be provided to send a request successfully.</span></span> <span data-ttu-id="4282e-117">它可以是要與所有必要的屬性設定為提出的要求選項物件 （簡單的 json 物件） 或 WebResource 物件。</span><span class="sxs-lookup"><span data-stu-id="4282e-117">It can either be an options object (a simple json object) or the WebResource object with all the required properties set to make a request.</span></span>
+    - id: options.method
+      type:
+      - string
+      description: <span data-ttu-id="4282e-118">HTTP 要求方法。</span><span class="sxs-lookup"><span data-stu-id="4282e-118">The HTTP request method.</span></span> <span data-ttu-id="4282e-119">有效值為 'GET'、 'PUT'、 'HEAD'、 'DELETE'、 'OPTIONS'、 'POST'、 'PATCH'。</span><span class="sxs-lookup"><span data-stu-id="4282e-119">Valid values are 'GET', 'PUT', 'HEAD', 'DELETE', 'OPTIONS', 'POST', 'PATCH'.</span></span>
+    - id: options.url
+      type:
+      - string
+      description: <span data-ttu-id="4282e-120">要求 url。</span><span class="sxs-lookup"><span data-stu-id="4282e-120">The request url.</span></span> <span data-ttu-id="4282e-121">它可能會或可能不需要在它的查詢參數。</span><span class="sxs-lookup"><span data-stu-id="4282e-121">It may or may not have query parameters in it.</span></span> <span data-ttu-id="4282e-122">請提供 [url] 中，或提供 'pathTemplate' 中的選項物件。</span><span class="sxs-lookup"><span data-stu-id="4282e-122">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="4282e-123">這兩個選項是互斥的。</span><span class="sxs-lookup"><span data-stu-id="4282e-123">Both the options are mutually exclusive.</span></span>
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"4282e-124\">要附加至 url，其中 'key' 是 '查詢-參數-name' 和 'value' 的查詢參數的字典是' 查詢-參數-value'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-124\">A dictionary of query parameters to be appended to the url, where the 'key' is the 'query-parameter-name' and the 'value' is the 'query-parameter-value'.</span></span> <span data-ttu-id=\"4282e-125\">'查詢參數的值' 可以屬於類型 'string' 或它可以是類型 'object'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-125\">The 'query-parameter-value' can be of type 'string' or it can be of type 'object'.</span></span> <span data-ttu-id=\"4282e-126\">當您想要跳過 url 編碼，則應該使用 'object' 格式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-126\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"4282e-127\">在使用物件格式時，物件必須具有一個名為值，提供 ' 查詢-參數-value' 屬性。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-127\">While using the object format, the object must have a property named value which provides the 'query-parameter-value'.</span></span>\n<span data-ttu-id=\"4282e-128\">範例：</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-128\">Example:</span></span> \n   - <span data-ttu-id=\"4282e-129\">查詢-參數-值 'object' 的格式: {' 查詢的參數名稱的 ': {值: ' 查詢-參數-value'，skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-129\">query-parameter-value in 'object' format: { 'query-parameter-name': { value: 'query-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"4282e-130\">查詢-參數-值 'string' 格式: {' 查詢的參數名稱的 ': ' 查詢-參數-value'}。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-130\">query-parameter-value in 'string' format: { 'query-parameter-name': 'query-parameter-value'}.</span></span>\n<span data-ttu-id=\"4282e-131\">注意: ' 如果 options.url 已經有一些查詢的參數，則 options.queryParameters 中提供的值將會附加至 url。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-131\">Note: 'If options.url already has some query parameters, then the value provided in options.queryParameters will be appended to the url.</span></span>"
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="4282e-132">路徑範本要求的 url。</span><span class="sxs-lookup"><span data-stu-id="4282e-132">The path template of the request url.</span></span> <span data-ttu-id="4282e-133">請提供 [url] 中，或提供 'pathTemplate' 中的選項物件。</span><span class="sxs-lookup"><span data-stu-id="4282e-133">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="4282e-134">這兩個選項是互斥的。</span><span class="sxs-lookup"><span data-stu-id="4282e-134">Both the options are mutually exclusive.</span></span>
+
+        <span data-ttu-id="4282e-135">範例: ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span><span class="sxs-lookup"><span data-stu-id="4282e-135">Example: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span></span>
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "<span data-ttu-id=\"4282e-136\">要求的基底 url。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-136\">The base url of the request.</span></span> <span data-ttu-id=\"4282e-137\">預設值是: 'https://management.azure.com'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-137\">Default value is: 'https://management.azure.com'.</span></span> <span data-ttu-id=\"4282e-138\">這是只能搭配 options.pathTemplate 適用。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-138\">This is applicable only with options.pathTemplate.</span></span> <span data-ttu-id=\"4282e-139\">如果您要提供 options.url 它會預期您提供的完整 url。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-139\">If you are providing options.url then it is expected that you provide the complete url.</span></span>"
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"4282e-140\">要取代 pathTemplate 中實際值的路徑參數的字典。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-140\">A dictionary of path parameters that need to be replaced with actual values in the pathTemplate.</span></span>\n<span data-ttu-id=\"4282e-141\">這裡的重點是 '路徑的參數名稱' 和值必須是 ' 路徑-參數-值 '。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-141\">Here the key is the 'path-parameter-name' and the value is the 'path-parameter-value'.</span></span> <span data-ttu-id=\"4282e-142\">'Path-參數-值' 可以屬於類型 'string' 或它可以是類型 'object'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-142\">The 'path-parameter-value' can be of type 'string'  or it can be of type 'object'.</span></span>\n<span data-ttu-id=\"4282e-143\">當您想要跳過 url 編碼，則應該使用 'object' 格式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-143\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"4282e-144\">在使用物件格式時，物件必須具有一個名為值，提供 ' 路徑-參數-value' 屬性。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-144\">While using the object format, the object must have a property named value which provides the 'path-parameter-value'.</span></span>\n<span data-ttu-id=\"4282e-145\">範例：</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-145\">Example:</span></span> \n   - <span data-ttu-id=\"4282e-146\">路徑-參數-值 'object' 的格式: {' 路徑的參數名稱的 ': {值: ' 路徑-參數-value'，skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-146\">path-parameter-value in 'object' format: { 'path-parameter-name': { value: 'path-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"4282e-147\">路徑-參數-值 'string' 格式: {' 路徑的參數名稱的 ': ' 路徑-參數-value'}。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-147\">path-parameter-value in 'string' format: { 'path-parameter-name': 'path-parameter-value' }.</span></span>"
+      optional: true
+    - id: options.formData
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="4282e-148">FormData 物件的索引鍵 / 值組的字典。</span><span class="sxs-lookup"><span data-stu-id="4282e-148">A dictionary of key-value pairs for the formData object.</span></span>
+
+        <span data-ttu-id="4282e-149">如果預期 'Content-type' 設為 'application/x-www-表單-urlencoded' 然後請它之物件中設定 options.headers else' Content-type '標頭將會設定為' multipart/表單資料的 '。</span><span class="sxs-lookup"><span data-stu-id="4282e-149">If the expected 'Content-Type' to be set is 'application/x-www-form-urlencoded' then please set it in the options.headers object else the 'Content-Type' header will be set to 'multipart/form-data'.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="4282e-150">要套用到要求的要求標頭的字典。</span><span class="sxs-lookup"><span data-stu-id="4282e-150">A dictionary of request headers that need to be applied to the request.</span></span>
+
+        <span data-ttu-id="4282e-151">這裡的重點是 '標頭-name' 和值是' 標頭值 '。</span><span class="sxs-lookup"><span data-stu-id="4282e-151">Here the key is the 'header-name' and the value is the 'header-value'.</span></span> <span data-ttu-id="4282e-152">標頭值必須是字串類型。</span><span class="sxs-lookup"><span data-stu-id="4282e-152">The header-value MUST be of type string.</span></span>
+         - <span data-ttu-id="4282e-153">ContentType 必須為 'Content-type' 提供的索引鍵名稱。</span><span class="sxs-lookup"><span data-stu-id="4282e-153">ContentType must be provided with the key name as 'Content-Type'.</span></span> <span data-ttu-id="4282e-154">預設值 ' application/json;charset = utf-8 '。</span><span class="sxs-lookup"><span data-stu-id="4282e-154">Default value 'application/json; charset=utf-8'.</span></span>
+         - <span data-ttu-id="4282e-155">'Transfer-encoding' 設為預設的 ' 區塊' 如果 'options.bodyIsStream' 設為 true。</span><span class="sxs-lookup"><span data-stu-id="4282e-155">'Transfer-Encoding' is set to 'chunked' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="4282e-156">'Content-type' 預設情況下設為 'application/octet-stream' 如果 'options.bodyIsStream' 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="4282e-156">'Content-Type' is set to 'application/octet-stream' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="4282e-157">「 接受-語言 」 預設設定為 ' EN-US '</span><span class="sxs-lookup"><span data-stu-id="4282e-157">'accept-language' by default is set to 'en-US'</span></span>
+         - <span data-ttu-id="4282e-158">'x ms-用戶端的要求識別碼' 預設是設定為新的 Guid。</span><span class="sxs-lookup"><span data-stu-id="4282e-158">'x-ms-client-request-id' by default is set to a new Guid.</span></span> <span data-ttu-id="4282e-159">若要產生要求的 guid，請設定 options.disableClientRequestId 」 為 true</span><span class="sxs-lookup"><span data-stu-id="4282e-159">To not generate a guid for the request, please set options.disableClientRequestId to true</span></span>
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: <span data-ttu-id="4282e-160">何時設定為 true，指示用戶端未設定新的 Guid() 'x ms-用戶端的要求識別碼' 標頭。</span><span class="sxs-lookup"><span data-stu-id="4282e-160">When set to true, instructs the client to not set 'x-ms-client-request-id' header to a new Guid().</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="4282e-161">要求本文。</span><span class="sxs-lookup"><span data-stu-id="4282e-161">The request body.</span></span> <span data-ttu-id="4282e-162">它可以是任何類型。</span><span class="sxs-lookup"><span data-stu-id="4282e-162">It can be of any type.</span></span> <span data-ttu-id="4282e-163">這個方法會 json.stringify （） 的要求主體。</span><span class="sxs-lookup"><span data-stu-id="4282e-163">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="4282e-164">提供如何序列化要求主體的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="4282e-164">Provides information on how to serialize the request body.</span></span>
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="4282e-165">提供有關如何還原序列化回應主體的資訊。</span><span class="sxs-lookup"><span data-stu-id="4282e-165">Provides information on how to deserialize the response body.</span></span>
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: '<span data-ttu-id="4282e-166">當設為 true，這個方法將不會套用`JSON.stringify()`至要求主體。</span><span class="sxs-lookup"><span data-stu-id="4282e-166">When set to true, this method will not apply `JSON.stringify()` to the request body.</span></span> <span data-ttu-id="4282e-167">預設值： false。</span><span class="sxs-lookup"><span data-stu-id="4282e-167">Default value: false.</span></span>'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: <span data-ttu-id="4282e-168">指出是否要求本文是資料流 （適用於檔案上傳案例）。</span><span class="sxs-lookup"><span data-stu-id="4282e-168">Indicates whether the request body is a stream (useful for file upload scenarios).</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="4282e-169">選擇性的回呼。</span><span class="sxs-lookup"><span data-stu-id="4282e-169">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        <span data-ttu-id="4282e-170">如果回呼傳遞做為最後一個參數會傳回其他回呼傳回承諾。</span><span class="sxs-lookup"><span data-stu-id="4282e-170">If a callback was passed as the last parameter then it returns the callback else returns a Promise.</span></span>
+
+            {function} optionalCallback(err, result, request, response)
+
+                         {Error}  err      - The Error object if an error occurred, null otherwise.
+
+                         {object} result   - The parsed (JSON.parse()) responseBody
+
+                         {object} request  - The HTTP Request object.
+
+                         {stream} response - The raw HTTP Response stream.
+
+            {Promise} A promise is returned.
+    content: function sendRequest(options, optionalCallback)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  id: ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  parent: ms-rest.ServiceClient
+  name: sendRequestWithHttpOperationResponse(options, optionalCallback)
+  summary: <span data-ttu-id="4282e-171">傳送要求，並傳回回應。</span><span class="sxs-lookup"><span data-stu-id="4282e-171">Sends the request and returns the response.</span></span>
+  fullName: ms-rest.ServiceClient.sendRequestWithHttpOperationResponse(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<T>} - The HttpOperationResponse which contains the raw request, response and the parsed (JSON.parse) response body'
+    value: '{HttpOperationResponse<T>} - The HttpOperationResponse which contains the raw request, response and the parsed (JSON.parse) response body'
+  - originalTitle: reject
+    title: reject
+    text: '{Error}  - The error object.'
+    value: '{Error}  - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      - ms-rest.WebResource
+      description: <span data-ttu-id="4282e-172">應該提供給已成功傳送要求的要求選項。</span><span class="sxs-lookup"><span data-stu-id="4282e-172">The request options that should be provided to send a request successfully.</span></span> <span data-ttu-id="4282e-173">它可以是要與所有必要的屬性設定為提出的要求選項物件 （簡單的 json 物件） 或 WebResource 物件。</span><span class="sxs-lookup"><span data-stu-id="4282e-173">It can either be an options object (a simple json object) or the WebResource object with all the required properties set to make a request.</span></span>
+    - id: options.method
+      type:
+      - string
+      description: <span data-ttu-id="4282e-174">HTTP 要求方法。</span><span class="sxs-lookup"><span data-stu-id="4282e-174">The HTTP request method.</span></span> <span data-ttu-id="4282e-175">有效值為 'GET'、 'PUT'、 'HEAD'、 'DELETE'、 'OPTIONS'、 'POST'、 'PATCH'。</span><span class="sxs-lookup"><span data-stu-id="4282e-175">Valid values are 'GET', 'PUT', 'HEAD', 'DELETE', 'OPTIONS', 'POST', 'PATCH'.</span></span>
+    - id: options.url
+      type:
+      - string
+      description: <span data-ttu-id="4282e-176">要求 url。</span><span class="sxs-lookup"><span data-stu-id="4282e-176">The request url.</span></span> <span data-ttu-id="4282e-177">它可能會或可能不需要在它的查詢參數。</span><span class="sxs-lookup"><span data-stu-id="4282e-177">It may or may not have query parameters in it.</span></span> <span data-ttu-id="4282e-178">請提供 [url] 中，或提供 'pathTemplate' 中的選項物件。</span><span class="sxs-lookup"><span data-stu-id="4282e-178">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="4282e-179">這兩個選項是互斥的。</span><span class="sxs-lookup"><span data-stu-id="4282e-179">Both the options are mutually exclusive.</span></span>
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"4282e-180\">要附加至 url，其中 'key' 是 '查詢-參數-name' 和 'value' 的查詢參數的字典是' 查詢-參數-value'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-180\">A dictionary of query parameters to be appended to the url, where the 'key' is the 'query-parameter-name' and the 'value' is the 'query-parameter-value'.</span></span> <span data-ttu-id=\"4282e-181\">'查詢參數的值' 可以屬於類型 'string' 或它可以是類型 'object'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-181\">The 'query-parameter-value' can be of type 'string' or it can be of type 'object'.</span></span> <span data-ttu-id=\"4282e-182\">當您想要跳過 url 編碼，則應該使用 'object' 格式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-182\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"4282e-183\">在使用物件格式時，物件必須具有一個名為值，提供 ' 查詢-參數-value' 屬性。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-183\">While using the object format, the object must have a property named value which provides the 'query-parameter-value'.</span></span>\n<span data-ttu-id=\"4282e-184\">範例：</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-184\">Example:</span></span> \n   - <span data-ttu-id=\"4282e-185\">查詢-參數-值 'object' 的格式: {' 查詢的參數名稱的 ': {值: ' 查詢-參數-value'，skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-185\">query-parameter-value in 'object' format: { 'query-parameter-name': { value: 'query-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"4282e-186\">查詢-參數-值 'string' 格式: {' 查詢的參數名稱的 ': ' 查詢-參數-value'}。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-186\">query-parameter-value in 'string' format: { 'query-parameter-name': 'query-parameter-value'}.</span></span>\n<span data-ttu-id=\"4282e-187\">注意: ' 如果 options.url 已經有一些查詢的參數，則 options.queryParameters 中提供的值將會附加至 url。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-187\">Note: 'If options.url already has some query parameters, then the value provided in options.queryParameters will be appended to the url.</span></span>"
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="4282e-188">路徑範本要求的 url。</span><span class="sxs-lookup"><span data-stu-id="4282e-188">The path template of the request url.</span></span> <span data-ttu-id="4282e-189">請提供 [url] 中，或提供 'pathTemplate' 中的選項物件。</span><span class="sxs-lookup"><span data-stu-id="4282e-189">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="4282e-190">這兩個選項是互斥的。</span><span class="sxs-lookup"><span data-stu-id="4282e-190">Both the options are mutually exclusive.</span></span>
+
+        <span data-ttu-id="4282e-191">範例: ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span><span class="sxs-lookup"><span data-stu-id="4282e-191">Example: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span></span>
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "<span data-ttu-id=\"4282e-192\">要求的基底 url。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-192\">The base url of the request.</span></span> <span data-ttu-id=\"4282e-193\">預設值是: 'https://management.azure.com'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-193\">Default value is: 'https://management.azure.com'.</span></span> <span data-ttu-id=\"4282e-194\">這是只能搭配 options.pathTemplate 適用。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-194\">This is applicable only with options.pathTemplate.</span></span> <span data-ttu-id=\"4282e-195\">如果您要提供 options.url 它會預期您提供的完整 url。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-195\">If you are providing options.url then it is expected that you provide the complete url.</span></span>"
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"4282e-196\">要取代 pathTemplate 中實際值的路徑參數的字典。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-196\">A dictionary of path parameters that need to be replaced with actual values in the pathTemplate.</span></span>\n<span data-ttu-id=\"4282e-197\">這裡的重點是 '路徑的參數名稱' 和值必須是 ' 路徑-參數-值 '。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-197\">Here the key is the 'path-parameter-name' and the value is the 'path-parameter-value'.</span></span> <span data-ttu-id=\"4282e-198\">'Path-參數-值' 可以屬於類型 'string' 或它可以是類型 'object'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-198\">The 'path-parameter-value' can be of type 'string'  or it can be of type 'object'.</span></span>\n<span data-ttu-id=\"4282e-199\">當您想要跳過 url 編碼，則應該使用 'object' 格式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-199\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"4282e-200\">在使用物件格式時，物件必須具有一個名為值，提供 ' 路徑-參數-value' 屬性。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-200\">While using the object format, the object must have a property named value which provides the 'path-parameter-value'.</span></span>\n<span data-ttu-id=\"4282e-201\">範例：</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-201\">Example:</span></span> \n   - <span data-ttu-id=\"4282e-202\">路徑-參數-值 'object' 的格式: {' 路徑的參數名稱的 ': {值: ' 路徑-參數-value'，skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-202\">path-parameter-value in 'object' format: { 'path-parameter-name': { value: 'path-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"4282e-203\">路徑-參數-值 'string' 格式: {' 路徑的參數名稱的 ': ' 路徑-參數-value'}。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4282e-203\">path-parameter-value in 'string' format: { 'path-parameter-name': 'path-parameter-value' }.</span></span>"
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="4282e-204">要套用到要求的要求標頭的字典。</span><span class="sxs-lookup"><span data-stu-id="4282e-204">A dictionary of request headers that need to be applied to the request.</span></span>
+
+        <span data-ttu-id="4282e-205">這裡的重點是 '標頭-name' 和值是' 標頭值 '。</span><span class="sxs-lookup"><span data-stu-id="4282e-205">Here the key is the 'header-name' and the value is the 'header-value'.</span></span> <span data-ttu-id="4282e-206">標頭值必須是字串類型。</span><span class="sxs-lookup"><span data-stu-id="4282e-206">The header-value MUST be of type string.</span></span>
+         - <span data-ttu-id="4282e-207">ContentType 必須為 'Content-type' 提供的索引鍵名稱。</span><span class="sxs-lookup"><span data-stu-id="4282e-207">ContentType must be provided with the key name as 'Content-Type'.</span></span> <span data-ttu-id="4282e-208">預設值 ' application/json;charset = utf-8 '。</span><span class="sxs-lookup"><span data-stu-id="4282e-208">Default value 'application/json; charset=utf-8'.</span></span>
+         - <span data-ttu-id="4282e-209">'Transfer-encoding' 設為預設的 ' 區塊' 如果 'options.bodyIsStream' 設為 true。</span><span class="sxs-lookup"><span data-stu-id="4282e-209">'Transfer-Encoding' is set to 'chunked' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="4282e-210">'Content-type' 預設情況下設為 'application/octet-stream' 如果 'options.bodyIsStream' 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="4282e-210">'Content-Type' is set to 'application/octet-stream' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="4282e-211">「 接受-語言 」 預設設定為 ' EN-US '</span><span class="sxs-lookup"><span data-stu-id="4282e-211">'accept-language' by default is set to 'en-US'</span></span>
+         - <span data-ttu-id="4282e-212">'x ms-用戶端的要求識別碼' 預設是設定為新的 Guid。</span><span class="sxs-lookup"><span data-stu-id="4282e-212">'x-ms-client-request-id' by default is set to a new Guid.</span></span> <span data-ttu-id="4282e-213">若要產生要求的 guid，請設定 options.disableClientRequestId 」 為 true</span><span class="sxs-lookup"><span data-stu-id="4282e-213">To not generate a guid for the request, please set options.disableClientRequestId to true</span></span>
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: <span data-ttu-id="4282e-214">何時設定為 true，指示用戶端未設定新的 Guid() 'x ms-用戶端的要求識別碼' 標頭。</span><span class="sxs-lookup"><span data-stu-id="4282e-214">When set to true, instructs the client to not set 'x-ms-client-request-id' header to a new Guid().</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="4282e-215">要求本文。</span><span class="sxs-lookup"><span data-stu-id="4282e-215">The request body.</span></span> <span data-ttu-id="4282e-216">它可以是任何類型。</span><span class="sxs-lookup"><span data-stu-id="4282e-216">It can be of any type.</span></span> <span data-ttu-id="4282e-217">這個方法會 json.stringify （） 的要求主體。</span><span class="sxs-lookup"><span data-stu-id="4282e-217">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="4282e-218">要求本文。</span><span class="sxs-lookup"><span data-stu-id="4282e-218">The request body.</span></span> <span data-ttu-id="4282e-219">它可以是任何類型。</span><span class="sxs-lookup"><span data-stu-id="4282e-219">It can be of any type.</span></span> <span data-ttu-id="4282e-220">這個方法會 json.stringify （） 的要求主體。</span><span class="sxs-lookup"><span data-stu-id="4282e-220">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="4282e-221">提供如何序列化要求主體的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="4282e-221">Provides information on how to serialize the request body.</span></span>
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="4282e-222">提供有關如何還原序列化回應主體的資訊。</span><span class="sxs-lookup"><span data-stu-id="4282e-222">Provides information on how to deserialize the response body.</span></span>
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: '<span data-ttu-id="4282e-223">當設為 true，這個方法將不會套用`JSON.stringify()`至要求主體。</span><span class="sxs-lookup"><span data-stu-id="4282e-223">When set to true, this method will not apply `JSON.stringify()` to the request body.</span></span> <span data-ttu-id="4282e-224">預設值： false。</span><span class="sxs-lookup"><span data-stu-id="4282e-224">Default value: false.</span></span>'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: <span data-ttu-id="4282e-225">指出是否要求本文是資料流 （適用於檔案上傳案例）。</span><span class="sxs-lookup"><span data-stu-id="4282e-225">Indicates whether the request body is a stream (useful for file upload scenarios).</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="4282e-226">選擇性的回呼。</span><span class="sxs-lookup"><span data-stu-id="4282e-226">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise
+      description: <span data-ttu-id="4282e-227">傳回承諾。</span><span class="sxs-lookup"><span data-stu-id="4282e-227">A promise is returned.</span></span>
+    content: function sendRequestWithHttpOperationResponse(options, optionalCallback)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#addUserAgentInfo
+  id: ms-rest.ServiceClient#addUserAgentInfo
+  parent: ms-rest.ServiceClient
+  name: addUserAgentInfo(additionalUserAgentInfo)
+  summary: <span data-ttu-id="4282e-228">將自訂資訊新增至使用者代理標頭</span><span class="sxs-lookup"><span data-stu-id="4282e-228">Adds custom information to user agent header</span></span>
+  fullName: ms-rest.ServiceClient.addUserAgentInfo(additionalUserAgentInfo)
+  type: Function
+  syntax:
+    parameters:
+    - id: additionalUserAgentInfo
+      type:
+      - ms-rest.any
+      description: <span data-ttu-id="4282e-229">要加入至使用者代理標頭，為字串的資訊。</span><span class="sxs-lookup"><span data-stu-id="4282e-229">information to be added to user agent header, as string.</span></span>
+    content: function addUserAgentInfo(additionalUserAgentInfo)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#getPackageJsonInfo
+  id: ms-rest.ServiceClient#getPackageJsonInfo
+  parent: ms-rest.ServiceClient
+  name: getPackageJsonInfo(managementClientDir)
+  summary: >-
+    <span data-ttu-id="4282e-230">嘗試尋找給定 azure nodejs 封裝 package.json。</span><span class="sxs-lookup"><span data-stu-id="4282e-230">Attempts to find package.json for the given azure nodejs package.</span></span>
+
+    <span data-ttu-id="4282e-231">如果找到，傳回的名稱和版本的封裝，請閱讀 package.json 如果找不到 package.json，會傳回預設值。</span><span class="sxs-lookup"><span data-stu-id="4282e-231">If found, returns the name and version of the package by reading the package.json If package.json is not found, returns a default value.</span></span>
+  fullName: ms-rest.ServiceClient.getPackageJsonInfo(managementClientDir)
+  type: Function
+  syntax:
+    parameters:
+    - id: managementClientDir
+      type:
+      - string
+      description: <span data-ttu-id="4282e-232">傳遞特定的 azure 管理用戶端的目錄。</span><span class="sxs-lookup"><span data-stu-id="4282e-232">pass the directory of the specific azure management client.</span></span>
+    return:
+      type:
+      - object
+      description: <span data-ttu-id="4282e-233">packageJsonInfo-「 名稱 」 和 「 版本 」 所需的套件。</span><span class="sxs-lookup"><span data-stu-id="4282e-233">packageJsonInfo - "name" and "version" of the desired package.</span></span>
+    content: function getPackageJsonInfo(managementClientDir)
+  langs:
+  - js
+references:
+- uid: ms-rest.WebResource
+  name: WebResource
+  fullName: ms-rest.WebResource
+  isExternal: false

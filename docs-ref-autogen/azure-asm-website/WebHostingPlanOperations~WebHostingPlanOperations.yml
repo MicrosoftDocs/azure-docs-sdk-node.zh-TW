@@ -1,0 +1,297 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b1b639bf4cfb4408fcf6bcf53c7cc5cf81a00250
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40051819"
+items:
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations
+  summary: >-
+    <span data-ttu-id="da0cf-101">用於管理虛擬主機方案，您的訂用帳戶下的作業。</span><span class="sxs-lookup"><span data-stu-id="da0cf-101">Operations for managing web hosting plans beneath your subscription.</span></span>
+
+    <span data-ttu-id="da0cf-102">__附註__： 此類別的執行個體自動建立之執行個體的 [WebSiteManagementClient] {@link WebSiteManagementClient ~ WebSiteManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="da0cf-102">__NOTE__: An instance of this class is automatically created for an instance of the [WebSiteManagementClient] {@link WebSiteManagementClient~WebSiteManagementClient}.</span></span>
+
+    <span data-ttu-id="da0cf-103">請參閱 [webHostingPlans] {@link WebSiteManagementClient ~ WebSiteManagementClient #webHostingPlans}。</span><span class="sxs-lookup"><span data-stu-id="da0cf-103">See [webHostingPlans] {@link WebSiteManagementClient~WebSiteManagementClient#webHostingPlans}.</span></span>
+
+    <span data-ttu-id="da0cf-104">初始化 WebHostingPlanOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="da0cf-104">Initializes a new instance of the WebHostingPlanOperations class.</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations
+  type: Class
+  children:
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  langs:
+  - js
+- id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations(client)
+  fullName: azure-asm-website.WebHostingPlanOperations.WebHostingPlanOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedWebSiteManagementClient
+      description: <span data-ttu-id="da0cf-105">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="da0cf-105">Reference to the service client.</span></span>
+    content: new WebHostingPlanOperations(client)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: create(webSpaceName, parameters, callback)
+  summary: <span data-ttu-id="da0cf-106">建立新 Web 主控方案。</span><span class="sxs-lookup"><span data-stu-id="da0cf-106">Creates a new Web Hosting Plan.</span></span>  <span data-ttu-id="da0cf-107">(請參閱http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="da0cf-107">(see http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.create(webSpaceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-108">網路空間的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-108">The name of the web space.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanCreateParameters
+      description: <span data-ttu-id="da0cf-109">Web 裝載方案的參數。</span><span class="sxs-lookup"><span data-stu-id="da0cf-109">Web Hosting Plan Parameters.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-110">虛擬主機方案的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-110">Name of the Web hosting plan.</span></span>
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: <span data-ttu-id="da0cf-111">要求的背景工作角色數目。</span><span class="sxs-lookup"><span data-stu-id="da0cf-111">The requested number of workers.</span></span>
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: <span data-ttu-id="da0cf-112">虛擬主機方案的 SKU。</span><span class="sxs-lookup"><span data-stu-id="da0cf-112">SKU of the Web hosting plan.</span></span>
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        <span data-ttu-id="da0cf-113">背景工作角色大小。</span><span class="sxs-lookup"><span data-stu-id="da0cf-113">The worker size.</span></span>
+
+        <span data-ttu-id="da0cf-114">可能的值為小型、 中型和大型。</span><span class="sxs-lookup"><span data-stu-id="da0cf-114">Possible values are Small, Medium, and Large.</span></span> <span data-ttu-id="da0cf-115">For JSON，對等項目都是 0 = 小型、 1 = 中、 2 = 大型。</span><span class="sxs-lookup"><span data-stu-id="da0cf-115">For JSON, the equivalents are 0 = Small, 1 = Medium, and 2 = Large.</span></span>
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-116">管理網站。</span><span class="sxs-lookup"><span data-stu-id="da0cf-116">The admin site.</span></span> <span data-ttu-id="da0cf-117">管理員網站用來部署網站擴充功能或方案中的所有站台共用的內容。</span><span class="sxs-lookup"><span data-stu-id="da0cf-117">The admin site is used to deploy site extensions or contents shared by all site in the plan.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="da0cf-118">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="da0cf-118">The response stream.</span></span>
+    content: function create(webSpaceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: deleteMethod(webSpaceName, webHostingPlanName, callback)
+  summary: <span data-ttu-id="da0cf-119">刪除 Web 主控方案 (請參閱http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="da0cf-119">Deletes a Web Hosting Plan  (see http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.deleteMethod(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-120">網路空間的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-120">The name of the web space.</span></span>
+    - id: webHostingPlanName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-121">虛擬主機方案的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-121">The name of the web hosting plan.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="da0cf-122">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="da0cf-122">The response stream.</span></span>
+    content: function deleteMethod(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: get(webSpaceName, webHostingPlanName, callback)
+  summary: <span data-ttu-id="da0cf-123">取得現有 Web 裝載方案的詳細資料 (請參閱http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="da0cf-123">Gets details of an existing Web Hosting Plan  (see http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.get(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-124">網路空間的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-124">The name of the web space.</span></span>
+    - id: webHostingPlanName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-125">虛擬主機方案的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-125">The name of the web hosting plan.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="da0cf-126">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="da0cf-126">The response stream.</span></span>
+    content: function get(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: <span data-ttu-id="da0cf-127">您可以透過發出 HTTP GET 要求來擷取站台的歷史使用量計量。</span><span class="sxs-lookup"><span data-stu-id="da0cf-127">You can retrieve historical usage metrics for a site by issuing an HTTP GET request.</span></span>  <span data-ttu-id="da0cf-128">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="da0cf-128">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-129">網路空間的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-129">The name of the web space.</span></span>
+    - id: webHostingPlanName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-130">虛擬主機方案的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-130">The name of the web hosting plan.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanGetHistoricalUsageMetricsParameters
+      description: <span data-ttu-id="da0cf-131">若要取得歷程記錄使用量度量 Web 主控方案作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="da0cf-131">Parameters supplied to the Get Historical Usage Metrics Web hosting plan operation.</span></span>
+    - id: parameters.metricNames
+      type:
+      - array
+      description: <span data-ttu-id="da0cf-132">指定要傳回的度量名稱的逗號分隔清單。</span><span class="sxs-lookup"><span data-stu-id="da0cf-132">Specifies a comma-separated list of the names of the metrics to return.</span></span> <span data-ttu-id="da0cf-133">如果未指定名稱參數，則會傳回所有可用的度量。</span><span class="sxs-lookup"><span data-stu-id="da0cf-133">If the names parameter is not specified, then all available metrics are returned.</span></span>
+      optional: true
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="da0cf-134">傳回度量開始時間。</span><span class="sxs-lookup"><span data-stu-id="da0cf-134">The starting time of the metrics to return.</span></span> <span data-ttu-id="da0cf-135">如果未指定此參數，則會使用目前的小時開頭。</span><span class="sxs-lookup"><span data-stu-id="da0cf-135">If this parameter is not specified, the beginning of the current hour is used.</span></span>
+      optional: true
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="da0cf-136">傳回度量的結束時間。</span><span class="sxs-lookup"><span data-stu-id="da0cf-136">The ending time of the metrics to return.</span></span> <span data-ttu-id="da0cf-137">如果未指定此參數，則會使用目前的時間。</span><span class="sxs-lookup"><span data-stu-id="da0cf-137">If this parameter is not specified, the current time is used.</span></span>
+      optional: true
+    - id: parameters.timeGrain
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-138">度量都會傳回的資料粒度。</span><span class="sxs-lookup"><span data-stu-id="da0cf-138">The grain at which the metrics are returned.</span></span> <span data-ttu-id="da0cf-139">支援的值是 PT1M （分鐘），PT1H （小時），P1D （天）。</span><span class="sxs-lookup"><span data-stu-id="da0cf-139">Supported values are PT1M (minute), PT1H (hour), P1D (day).</span></span>
+      optional: true
+    - id: parameters.includeInstanceBreakdown
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="da0cf-140">旗標，指定是否應該包含每個機器執行個體的度量。</span><span class="sxs-lookup"><span data-stu-id="da0cf-140">Flag which specifies if the metrics for each machine instance should be included.</span></span>
+
+        <span data-ttu-id="da0cf-141">在多部電腦上執行的網站這可能是適用於識別不正確的電腦。</span><span class="sxs-lookup"><span data-stu-id="da0cf-141">For sites that run on more than one machine this could be useful to identify a bad machine.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="da0cf-142">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="da0cf-142">The response stream.</span></span>
+    content: function getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: list(webSpaceName, callback)
+  summary: <span data-ttu-id="da0cf-143">您可以藉由發出 GET 要求來列出目前訂用帳戶下的 web 空間。</span><span class="sxs-lookup"><span data-stu-id="da0cf-143">You can list the web spaces under the current subscription by issuing a GET request.</span></span>  <span data-ttu-id="da0cf-144">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn166961.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="da0cf-144">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn166961.aspx for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.list(webSpaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-145">網路空間的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-145">The name of the web space.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="da0cf-146">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="da0cf-146">The response stream.</span></span>
+    content: function list(webSpaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: update(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: <span data-ttu-id="da0cf-147">更新現有虛擬主機方案。</span><span class="sxs-lookup"><span data-stu-id="da0cf-147">Updates an existing Web Hosting Plan.</span></span>  <span data-ttu-id="da0cf-148">(請參閱http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="da0cf-148">(see http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.update(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-149">網路空間的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-149">The name of the web space.</span></span>
+    - id: webHostingPlanName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-150">虛擬主機方案的名稱。</span><span class="sxs-lookup"><span data-stu-id="da0cf-150">The name of the web hosting plan.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanUpdateParameters
+      description: <span data-ttu-id="da0cf-151">提供給 Web 裝載方案的更新作業的參數。</span><span class="sxs-lookup"><span data-stu-id="da0cf-151">Parameters supplied to the Update Web Hosting Plan operation.</span></span>
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: <span data-ttu-id="da0cf-152">要求的背景工作角色數目。</span><span class="sxs-lookup"><span data-stu-id="da0cf-152">The requested number of workers.</span></span>
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: <span data-ttu-id="da0cf-153">虛擬主機方案的 SKU。</span><span class="sxs-lookup"><span data-stu-id="da0cf-153">SKU of the Web hosting plan.</span></span>
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        <span data-ttu-id="da0cf-154">背景工作角色大小。</span><span class="sxs-lookup"><span data-stu-id="da0cf-154">The worker size.</span></span>
+
+        <span data-ttu-id="da0cf-155">可能的值為小型、 中型和大型。</span><span class="sxs-lookup"><span data-stu-id="da0cf-155">Possible values are Small, Medium, and Large.</span></span> <span data-ttu-id="da0cf-156">For JSON，對等項目都是 0 = 小型、 1 = 中、 2 = 大型。</span><span class="sxs-lookup"><span data-stu-id="da0cf-156">For JSON, the equivalents are 0 = Small, 1 = Medium, and 2 = Large.</span></span>
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: <span data-ttu-id="da0cf-157">管理網站。</span><span class="sxs-lookup"><span data-stu-id="da0cf-157">The admin site.</span></span> <span data-ttu-id="da0cf-158">管理員網站用來部署網站擴充功能或方案中的所有站台共用的內容。</span><span class="sxs-lookup"><span data-stu-id="da0cf-158">The admin site is used to deploy site extensions or contents shared by all site in the plan.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="da0cf-159">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="da0cf-159">The response stream.</span></span>
+    content: function update(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js
