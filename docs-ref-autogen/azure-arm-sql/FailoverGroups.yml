@@ -1,0 +1,1868 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 366c814dfbb4450a1f60935f29ce719e013f5d09
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40053580"
+items:
+- uid: azure-arm-sql.FailoverGroups
+  name: FailoverGroups
+  fullName: FailoverGroups
+  children:
+  - azure-arm-sql.FailoverGroups.beginCreateOrUpdate
+  - azure-arm-sql.FailoverGroups.beginCreateOrUpdate_1
+  - azure-arm-sql.FailoverGroups.beginCreateOrUpdate_2
+  - azure-arm-sql.FailoverGroups.beginCreateOrUpdateWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.beginDeleteMethod
+  - azure-arm-sql.FailoverGroups.beginDeleteMethod_2
+  - azure-arm-sql.FailoverGroups.beginDeleteMethod_1
+  - azure-arm-sql.FailoverGroups.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.beginFailover
+  - azure-arm-sql.FailoverGroups.beginFailover_1
+  - azure-arm-sql.FailoverGroups.beginFailover_2
+  - azure-arm-sql.FailoverGroups.beginFailoverWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.beginForceFailoverAllowDataLoss_1
+  - azure-arm-sql.FailoverGroups.beginForceFailoverAllowDataLoss
+  - azure-arm-sql.FailoverGroups.beginForceFailoverAllowDataLoss_2
+  - azure-arm-sql.FailoverGroups.beginForceFailoverAllowDataLossWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.beginUpdate
+  - azure-arm-sql.FailoverGroups.beginUpdate_1
+  - azure-arm-sql.FailoverGroups.beginUpdate_2
+  - azure-arm-sql.FailoverGroups.beginUpdateWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.createOrUpdate
+  - azure-arm-sql.FailoverGroups.createOrUpdate_1
+  - azure-arm-sql.FailoverGroups.createOrUpdate_2
+  - azure-arm-sql.FailoverGroups.createOrUpdateWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.deleteMethod
+  - azure-arm-sql.FailoverGroups.deleteMethod_1
+  - azure-arm-sql.FailoverGroups.deleteMethod_2
+  - azure-arm-sql.FailoverGroups.deleteMethodWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.failover
+  - azure-arm-sql.FailoverGroups.failover_2
+  - azure-arm-sql.FailoverGroups.failover_1
+  - azure-arm-sql.FailoverGroups.failoverWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.forceFailoverAllowDataLoss
+  - azure-arm-sql.FailoverGroups.forceFailoverAllowDataLoss_1
+  - azure-arm-sql.FailoverGroups.forceFailoverAllowDataLoss_2
+  - azure-arm-sql.FailoverGroups.forceFailoverAllowDataLossWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.get
+  - azure-arm-sql.FailoverGroups.get_1
+  - azure-arm-sql.FailoverGroups.get_2
+  - azure-arm-sql.FailoverGroups.getWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.listByServer
+  - azure-arm-sql.FailoverGroups.listByServer_2
+  - azure-arm-sql.FailoverGroups.listByServer_1
+  - azure-arm-sql.FailoverGroups.listByServerNext
+  - azure-arm-sql.FailoverGroups.listByServerNext_1
+  - azure-arm-sql.FailoverGroups.listByServerNext_2
+  - azure-arm-sql.FailoverGroups.listByServerNextWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.listByServerWithHttpOperationResponse
+  - azure-arm-sql.FailoverGroups.update
+  - azure-arm-sql.FailoverGroups.update_1
+  - azure-arm-sql.FailoverGroups.update_2
+  - azure-arm-sql.FailoverGroups.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginCreateOrUpdate
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-101">建立或更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-101">Creates or updates a failover group.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroup, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-102">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-102">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-103">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-103">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-104">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-104">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-105">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-105">The name of the failover group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroup
+      description: >
+        <span data-ttu-id="11039-106">容錯移轉群組的參數。</span><span class="sxs-lookup"><span data-stu-id="11039-106">The failover group parameters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginCreateOrUpdate_1
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-107">建立或更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-107">Creates or updates a failover group.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroup, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroup
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginCreateOrUpdate_2
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-108">建立或更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-108">Creates or updates a failover group.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroup, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroup
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-109">建立或更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-109">Creates or updates a failover group.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroup, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-110">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-110">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-111">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-111">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-112">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-112">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-113">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-113">The name of the failover group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroup
+      description: >
+        <span data-ttu-id="11039-114">容錯移轉群組的參數。</span><span class="sxs-lookup"><span data-stu-id="11039-114">The failover group parameters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginDeleteMethod
+  name: beginDeleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-115">刪除容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-115">Deletes a failover group.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-116">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-116">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-117">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-117">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-118">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-118">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-119">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-119">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginDeleteMethod_2
+  name: beginDeleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-120">刪除容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-120">Deletes a failover group.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, failoverGroupName: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginDeleteMethod_1
+  name: beginDeleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-121">刪除容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-121">Deletes a failover group.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, failoverGroupName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-122">刪除容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-122">Deletes a failover group.</span></span>
+  syntax:
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-123">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-123">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-124">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-124">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-125">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-125">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-126">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-126">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginFailover
+  name: beginFailover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-127">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-127">Fails over from the current primary server to this server.</span></span>
+  syntax:
+    content: 'function beginFailover(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-128">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-128">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-129">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-129">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-130">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-130">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-131">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-131">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginFailover_1
+  name: beginFailover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-132">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-132">Fails over from the current primary server to this server.</span></span>
+  syntax:
+    content: 'function beginFailover(resourceGroupName: string, serverName: string, failoverGroupName: string, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginFailover_2
+  name: beginFailover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-133">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-133">Fails over from the current primary server to this server.</span></span>
+  syntax:
+    content: 'function beginFailover(resourceGroupName: string, serverName: string, failoverGroupName: string, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginFailoverWithHttpOperationResponse
+  name: beginFailoverWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-134">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-134">Fails over from the current primary server to this server.</span></span>
+  syntax:
+    content: 'function beginFailoverWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-135">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-135">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-136">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-136">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-137">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-137">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-138">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-138">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginForceFailoverAllowDataLoss_1
+  name: beginForceFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-139">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-139">Fails over from the current primary server to this server.</span></span> <span data-ttu-id="11039-140">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="11039-140">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function beginForceFailoverAllowDataLoss(resourceGroupName: string, serverName: string, failoverGroupName: string, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginForceFailoverAllowDataLoss
+  name: beginForceFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-141">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-141">Fails over from the current primary server to this server.</span></span> <span data-ttu-id="11039-142">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="11039-142">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function beginForceFailoverAllowDataLoss(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-143">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-143">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-144">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-144">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-145">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-145">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-146">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-146">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginForceFailoverAllowDataLoss_2
+  name: beginForceFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-147">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-147">Fails over from the current primary server to this server.</span></span> <span data-ttu-id="11039-148">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="11039-148">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function beginForceFailoverAllowDataLoss(resourceGroupName: string, serverName: string, failoverGroupName: string, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginForceFailoverAllowDataLossWithHttpOperationResponse
+  name: beginForceFailoverAllowDataLossWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-149">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-149">Fails over from the current primary server to this server.</span></span> <span data-ttu-id="11039-150">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="11039-150">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function beginForceFailoverAllowDataLossWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-151">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-151">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-152">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-152">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-153">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-153">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-154">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-154">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginUpdate
+  name: beginUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-155">更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-155">Updates a failover group.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroupUpdate, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-156">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-156">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-157">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-157">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-158">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-158">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-159">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-159">The name of the failover group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroupUpdate
+      description: >
+        <span data-ttu-id="11039-160">容錯移轉群組的參數。</span><span class="sxs-lookup"><span data-stu-id="11039-160">The failover group parameters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginUpdate_1
+  name: beginUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-161">更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-161">Updates a failover group.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroupUpdate, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroupUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginUpdate_2
+  name: beginUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-162">更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-162">Updates a failover group.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroupUpdate, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroupUpdate
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.beginUpdateWithHttpOperationResponse
+  name: beginUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-163">更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-163">Updates a failover group.</span></span>
+  syntax:
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroupUpdate, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-164">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-164">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-165">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-165">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-166">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-166">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-167">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-167">The name of the failover group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroupUpdate
+      description: >
+        <span data-ttu-id="11039-168">容錯移轉群組的參數。</span><span class="sxs-lookup"><span data-stu-id="11039-168">The failover group parameters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.createOrUpdate
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-169">建立或更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-169">Creates or updates a failover group.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroup, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-170">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-170">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-171">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-171">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-172">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-172">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-173">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-173">The name of the failover group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroup
+      description: >
+        <span data-ttu-id="11039-174">容錯移轉群組的參數。</span><span class="sxs-lookup"><span data-stu-id="11039-174">The failover group parameters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.createOrUpdate_1
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-175">建立或更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-175">Creates or updates a failover group.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroup, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroup
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.createOrUpdate_2
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-176">建立或更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-176">Creates or updates a failover group.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroup, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroup
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-177">建立或更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-177">Creates or updates a failover group.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroup, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-178">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-178">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-179">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-179">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-180">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-180">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-181">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-181">The name of the failover group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroup
+      description: >
+        <span data-ttu-id="11039-182">容錯移轉群組的參數。</span><span class="sxs-lookup"><span data-stu-id="11039-182">The failover group parameters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-183">刪除容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-183">Deletes a failover group.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-184">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-184">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-185">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-185">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-186">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-186">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-187">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-187">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-188">刪除容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-188">Deletes a failover group.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serverName: string, failoverGroupName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-189">刪除容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-189">Deletes a failover group.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serverName: string, failoverGroupName: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-190">刪除容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-190">Deletes a failover group.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-191">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-191">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-192">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-192">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-193">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-193">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-194">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-194">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.failover
+  name: failover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-195">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-195">Fails over from the current primary server to this server.</span></span>
+  syntax:
+    content: 'function failover(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-196">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-196">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-197">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-197">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-198">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-198">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-199">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-199">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.failover_2
+  name: failover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-200">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-200">Fails over from the current primary server to this server.</span></span>
+  syntax:
+    content: 'function failover(resourceGroupName: string, serverName: string, failoverGroupName: string, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.failover_1
+  name: failover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-201">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-201">Fails over from the current primary server to this server.</span></span>
+  syntax:
+    content: 'function failover(resourceGroupName: string, serverName: string, failoverGroupName: string, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.failoverWithHttpOperationResponse
+  name: failoverWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-202">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-202">Fails over from the current primary server to this server.</span></span>
+  syntax:
+    content: 'function failoverWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-203">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-203">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-204">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-204">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-205">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-205">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-206">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-206">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.forceFailoverAllowDataLoss
+  name: forceFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-207">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-207">Fails over from the current primary server to this server.</span></span> <span data-ttu-id="11039-208">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="11039-208">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function forceFailoverAllowDataLoss(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-209">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-209">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-210">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-210">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-211">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-211">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-212">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-212">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.forceFailoverAllowDataLoss_1
+  name: forceFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-213">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-213">Fails over from the current primary server to this server.</span></span> <span data-ttu-id="11039-214">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="11039-214">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function forceFailoverAllowDataLoss(resourceGroupName: string, serverName: string, failoverGroupName: string, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.forceFailoverAllowDataLoss_2
+  name: forceFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-215">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-215">Fails over from the current primary server to this server.</span></span> <span data-ttu-id="11039-216">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="11039-216">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function forceFailoverAllowDataLoss(resourceGroupName: string, serverName: string, failoverGroupName: string, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.forceFailoverAllowDataLossWithHttpOperationResponse
+  name: forceFailoverAllowDataLossWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-217">從目前主要伺服器容錯移轉到此伺服器。</span><span class="sxs-lookup"><span data-stu-id="11039-217">Fails over from the current primary server to this server.</span></span> <span data-ttu-id="11039-218">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="11039-218">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function forceFailoverAllowDataLossWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-219">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-219">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-220">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-220">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-221">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-221">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-222">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-222">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-223">取得容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-223">Gets a failover group.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-224">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-224">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-225">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-225">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-226">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-226">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-227">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-227">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-228">取得容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-228">Gets a failover group.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, failoverGroupName: string, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-229">取得容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-229">Gets a failover group.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, failoverGroupName: string, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-230">取得容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-230">Gets a failover group.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-231">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-231">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-232">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-232">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-233">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-233">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-234">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-234">The name of the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.listByServer
+  name: listByServer
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-235">列出伺服器中的容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-235">Lists the failover groups in a server.</span></span>
+  syntax:
+    content: 'function listByServer(resourceGroupName: string, serverName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-236">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-236">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-237">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-237">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-238">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-238">The name of the server containing the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroupListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.listByServer_2
+  name: listByServer
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-239">列出伺服器中的容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-239">Lists the failover groups in a server.</span></span>
+  syntax:
+    content: 'function listByServer(resourceGroupName: string, serverName: string, options: function, callback: ServiceCallback<FailoverGroupListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroupListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroupListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.listByServer_1
+  name: listByServer
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-240">列出伺服器中的容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-240">Lists the failover groups in a server.</span></span>
+  syntax:
+    content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<FailoverGroupListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroupListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroupListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.listByServerNext
+  name: listByServerNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-241">列出伺服器中的容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-241">Lists the failover groups in a server.</span></span>
+  syntax:
+    content: 'function listByServerNext(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-242">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="11039-242">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroupListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.listByServerNext_1
+  name: listByServerNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-243">列出伺服器中的容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-243">Lists the failover groups in a server.</span></span>
+  syntax:
+    content: 'function listByServerNext(nextPageLink: string, callback: ServiceCallback<FailoverGroupListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroupListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroupListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.listByServerNext_2
+  name: listByServerNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-244">列出伺服器中的容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-244">Lists the failover groups in a server.</span></span>
+  syntax:
+    content: 'function listByServerNext(nextPageLink: string, options: function, callback: ServiceCallback<FailoverGroupListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroupListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroupListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.listByServerNextWithHttpOperationResponse
+  name: listByServerNextWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-245">列出伺服器中的容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-245">Lists the failover groups in a server.</span></span>
+  syntax:
+    content: 'function listByServerNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-246">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="11039-246">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroupListResult>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.listByServerWithHttpOperationResponse
+  name: listByServerWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-247">列出伺服器中的容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-247">Lists the failover groups in a server.</span></span>
+  syntax:
+    content: 'function listByServerWithHttpOperationResponse(resourceGroupName: string, serverName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-248">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-248">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-249">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-249">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-250">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-250">The name of the server containing the failover group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroupListResult>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-251">更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-251">Updates a failover group.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroupUpdate, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-252">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-252">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-253">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-253">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-254">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-254">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-255">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-255">The name of the failover group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroupUpdate
+      description: >
+        <span data-ttu-id="11039-256">容錯移轉群組的參數。</span><span class="sxs-lookup"><span data-stu-id="11039-256">The failover group parameters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.update_1
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-257">更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-257">Updates a failover group.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroupUpdate, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroupUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.update_2
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-258">更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-258">Updates a failover group.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroupUpdate, options: function, callback: ServiceCallback<FailoverGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: failoverGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroupUpdate
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.FailoverGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.FailoverGroup>
+  package: azure-arm-sql
+- uid: azure-arm-sql.FailoverGroups.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11039-259">更新容錯移轉群組。</span><span class="sxs-lookup"><span data-stu-id="11039-259">Updates a failover group.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, serverName: string, failoverGroupName: string, parameters: FailoverGroupUpdate, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-260">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-260">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="11039-261">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="11039-261">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-262">包含容錯移轉群組的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-262">The name of the server containing the failover group.</span></span>
+    - id: failoverGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="11039-263">容錯移轉群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="11039-263">The name of the failover group.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-sql.FailoverGroupUpdate
+      description: >
+        <span data-ttu-id="11039-264">容錯移轉群組的參數。</span><span class="sxs-lookup"><span data-stu-id="11039-264">The failover group parameters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  package: azure-arm-sql
+references:
+- uid: azure-arm-sql.FailoverGroup
+  spec.typeScript:
+  - name: FailoverGroup
+    fullName: FailoverGroup
+    uid: azure-arm-sql.FailoverGroup
+- uid: Promise<azure-arm-sql.FailoverGroup>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: FailoverGroup
+    fullName: FailoverGroup
+    uid: azure-arm-sql.FailoverGroup
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-sql.FailoverGroup>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: FailoverGroup
+    fullName: FailoverGroup
+    uid: azure-arm-sql.FailoverGroup
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-sql.FailoverGroup>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: FailoverGroup
+    fullName: FailoverGroup
+    uid: azure-arm-sql.FailoverGroup
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-sql.FailoverGroupUpdate
+  spec.typeScript:
+  - name: FailoverGroupUpdate
+    fullName: FailoverGroupUpdate
+    uid: azure-arm-sql.FailoverGroupUpdate
+- uid: Promise<azure-arm-sql.FailoverGroupListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: FailoverGroupListResult
+    fullName: FailoverGroupListResult
+    uid: azure-arm-sql.FailoverGroupListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-sql.FailoverGroupListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: FailoverGroupListResult
+    fullName: FailoverGroupListResult
+    uid: azure-arm-sql.FailoverGroupListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-sql.FailoverGroupListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: FailoverGroupListResult
+    fullName: FailoverGroupListResult
+    uid: azure-arm-sql.FailoverGroupListResult
+  - name: '>>'
+    fullName: '>>'

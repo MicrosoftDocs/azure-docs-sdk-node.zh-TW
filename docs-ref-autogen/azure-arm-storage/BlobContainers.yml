@@ -1,0 +1,1910 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f6278ec3e2f1f1451d80e1327f91eed10a0fc78d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40053005"
+items:
+- uid: azure-arm-storage.BlobContainers
+  name: BlobContainers
+  fullName: BlobContainers
+  children:
+  - azure-arm-storage.BlobContainers.clearLegalHold
+  - azure-arm-storage.BlobContainers.clearLegalHold_1
+  - azure-arm-storage.BlobContainers.clearLegalHold_2
+  - azure-arm-storage.BlobContainers.clearLegalHoldWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.create
+  - azure-arm-storage.BlobContainers.create_2
+  - azure-arm-storage.BlobContainers.create_1
+  - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy
+  - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_1
+  - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_2
+  - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicyWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.createWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_1
+  - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy
+  - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_2
+  - azure-arm-storage.BlobContainers.deleteImmutabilityPolicyWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.deleteMethod
+  - azure-arm-storage.BlobContainers.deleteMethod_1
+  - azure-arm-storage.BlobContainers.deleteMethod_2
+  - azure-arm-storage.BlobContainers.deleteMethodWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.extendImmutabilityPolicy
+  - azure-arm-storage.BlobContainers.extendImmutabilityPolicy_1
+  - azure-arm-storage.BlobContainers.extendImmutabilityPolicy_2
+  - azure-arm-storage.BlobContainers.extendImmutabilityPolicyWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.get
+  - azure-arm-storage.BlobContainers.get_1
+  - azure-arm-storage.BlobContainers.get_2
+  - azure-arm-storage.BlobContainers.getImmutabilityPolicy
+  - azure-arm-storage.BlobContainers.getImmutabilityPolicy_2
+  - azure-arm-storage.BlobContainers.getImmutabilityPolicy_1
+  - azure-arm-storage.BlobContainers.getImmutabilityPolicyWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.getWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.list
+  - azure-arm-storage.BlobContainers.list_1
+  - azure-arm-storage.BlobContainers.list_2
+  - azure-arm-storage.BlobContainers.listWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.lockImmutabilityPolicy
+  - azure-arm-storage.BlobContainers.lockImmutabilityPolicy_1
+  - azure-arm-storage.BlobContainers.lockImmutabilityPolicy_2
+  - azure-arm-storage.BlobContainers.lockImmutabilityPolicyWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.setLegalHold
+  - azure-arm-storage.BlobContainers.setLegalHold_1
+  - azure-arm-storage.BlobContainers.setLegalHold_2
+  - azure-arm-storage.BlobContainers.setLegalHoldWithHttpOperationResponse
+  - azure-arm-storage.BlobContainers.update
+  - azure-arm-storage.BlobContainers.update_1
+  - azure-arm-storage.BlobContainers.update_2
+  - azure-arm-storage.BlobContainers.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.clearLegalHold
+  name: clearLegalHold
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-101">清除法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-101">Clears legal hold tags.</span></span> <span data-ttu-id="7cb6c-102">清除相同或不存在的標記會導致等冪作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-102">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="7cb6c-103">ClearLegalHold 清除只在要求中指定標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-103">ClearLegalHold clears out only the specified tags in the request.</span></span>
+  syntax:
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-104">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-104">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-105">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-105">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-106">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-106">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-107">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-107">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-108">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-108">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-109">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-109">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-110">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-110">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: tags
+      type:
+      - string[]
+      description: >
+        <span data-ttu-id="7cb6c-111">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-111">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.LegalHold>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.clearLegalHold_1
+  name: clearLegalHold
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-112">清除法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-112">Clears legal hold tags.</span></span> <span data-ttu-id="7cb6c-113">清除相同或不存在的標記會導致等冪作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-113">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="7cb6c-114">ClearLegalHold 清除只在要求中指定標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-114">ClearLegalHold clears out only the specified tags in the request.</span></span>
+  syntax:
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], callback: ServiceCallback<LegalHold>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: tags
+      type:
+      - string[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.LegalHold>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.LegalHold>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.clearLegalHold_2
+  name: clearLegalHold
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-115">清除法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-115">Clears legal hold tags.</span></span> <span data-ttu-id="7cb6c-116">清除相同或不存在的標記會導致等冪作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-116">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="7cb6c-117">ClearLegalHold 清除只在要求中指定標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-117">ClearLegalHold clears out only the specified tags in the request.</span></span>
+  syntax:
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: function, callback: ServiceCallback<LegalHold>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: tags
+      type:
+      - string[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.LegalHold>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.LegalHold>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.clearLegalHoldWithHttpOperationResponse
+  name: clearLegalHoldWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-118">清除法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-118">Clears legal hold tags.</span></span> <span data-ttu-id="7cb6c-119">清除相同或不存在的標記會導致等冪作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-119">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="7cb6c-120">ClearLegalHold 清除只在要求中指定標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-120">ClearLegalHold clears out only the specified tags in the request.</span></span>
+  syntax:
+    content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-121">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-121">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-122">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-122">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-123">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-123">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-124">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-124">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-125">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-125">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-126">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-126">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-127">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-127">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: tags
+      type:
+      - string[]
+      description: >
+        <span data-ttu-id="7cb6c-128">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-128">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-129">要求本文所述，請建立新的容器，指定帳戶下。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-129">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="7cb6c-130">容器資源包含中繼資料和容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-130">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="7cb6c-131">它不包含容器的 blob 清單。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-131">It does not include a list of the blobs contained by the container.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-132">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-132">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-133">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-133">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-134">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-134">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-135">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-135">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-136">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-136">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-137">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-137">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-138">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-138">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.create_2
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-139">要求本文所述，請建立新的容器，指定帳戶下。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-139">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="7cb6c-140">容器資源包含中繼資料和容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-140">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="7cb6c-141">它不包含容器的 blob 清單。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-141">It does not include a list of the blobs contained by the container.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.BlobContainer>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.create_1
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-142">要求本文所述，請建立新的容器，指定帳戶下。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-142">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="7cb6c-143">容器資源包含中繼資料和容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-143">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="7cb6c-144">它不包含容器的 blob 清單。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-144">It does not include a list of the blobs contained by the container.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.BlobContainer>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy
+  name: createOrUpdateImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-145">建立或更新的解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-145">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="7cb6c-146">如果指定，但不是需要這項作業，會接受 ETag 的 If-match。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-146">ETag in If-Match is honored if given but not required for this operation.</span></span>
+  syntax:
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-147">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-147">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-148">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-148">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-149">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-149">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-150">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-150">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-151">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-151">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-152">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-152">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-153">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-153">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: immutabilityPeriodSinceCreationInDays
+      type:
+      - number
+      description: >
+        <span data-ttu-id="7cb6c-154">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-154">The immutability period for the blobs in the container since the policy creation, in days.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_1
+  name: createOrUpdateImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-155">建立或更新的解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-155">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="7cb6c-156">如果指定，但不是需要這項作業，會接受 ETag 的 If-match。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-156">ETag in If-Match is honored if given but not required for this operation.</span></span>
+  syntax:
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: immutabilityPeriodSinceCreationInDays
+      type:
+      - number
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_2
+  name: createOrUpdateImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-157">建立或更新的解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-157">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="7cb6c-158">如果指定，但不是需要這項作業，會接受 ETag 的 If-match。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-158">ETag in If-Match is honored if given but not required for this operation.</span></span>
+  syntax:
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: immutabilityPeriodSinceCreationInDays
+      type:
+      - number
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicyWithHttpOperationResponse
+  name: createOrUpdateImmutabilityPolicyWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-159">建立或更新的解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-159">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="7cb6c-160">如果指定，但不是需要這項作業，會接受 ETag 的 If-match。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-160">ETag in If-Match is honored if given but not required for this operation.</span></span>
+  syntax:
+    content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-161">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-162">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-162">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-163">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-163">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-164">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-164">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-165">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-165">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-166">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-166">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-167">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-167">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: immutabilityPeriodSinceCreationInDays
+      type:
+      - number
+      description: >
+        <span data-ttu-id="7cb6c-168">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-168">The immutability period for the blobs in the container since the policy creation, in days.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.createWithHttpOperationResponse
+  name: createWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-169">要求本文所述，請建立新的容器，指定帳戶下。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-169">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="7cb6c-170">容器資源包含中繼資料和容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-170">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="7cb6c-171">它不包含容器的 blob 清單。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-171">It does not include a list of the blobs contained by the container.</span></span>
+  syntax:
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-172">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-172">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-173">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-173">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-174">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-174">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-175">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-175">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-176">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-176">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-177">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-177">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-178">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-178">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_1
+  name: deleteImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-179">中止解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-179">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="7cb6c-180">刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-180">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="7cb6c-181">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-181">ETag in If-Match is required for this operation.</span></span> <span data-ttu-id="7cb6c-182">刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-182">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>
+  syntax:
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy
+  name: deleteImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-183">中止解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-183">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="7cb6c-184">刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-184">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="7cb6c-185">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-185">ETag in If-Match is required for this operation.</span></span> <span data-ttu-id="7cb6c-186">刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-186">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>
+  syntax:
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-187">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-187">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-188">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-188">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-189">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-189">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-190">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-190">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-191">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-191">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-192">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-192">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-193">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-193">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: ifMatch
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-194">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-194">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7cb6c-195">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-195">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7cb6c-196">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-196">If omitted, this operation will always be applied.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_2
+  name: deleteImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-197">中止解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-197">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="7cb6c-198">刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-198">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="7cb6c-199">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-199">ETag in If-Match is required for this operation.</span></span> <span data-ttu-id="7cb6c-200">刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-200">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>
+  syntax:
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicyWithHttpOperationResponse
+  name: deleteImmutabilityPolicyWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-201">中止解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-201">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="7cb6c-202">刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-202">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="7cb6c-203">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-203">ETag in If-Match is required for this operation.</span></span> <span data-ttu-id="7cb6c-204">刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-204">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>
+  syntax:
+    content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-205">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-205">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-206">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-206">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-207">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-207">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-208">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-208">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-209">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-209">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-210">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-210">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-211">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-211">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: ifMatch
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-212">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-212">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7cb6c-213">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-213">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7cb6c-214">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-214">If omitted, this operation will always be applied.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-215">刪除指定的容器，其帳戶下。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-215">Deletes specified container under its account.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-216">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-216">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-217">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-217">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-218">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-218">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-219">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-219">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-220">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-220">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-221">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-221">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-222">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-222">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-223">刪除指定的容器，其帳戶下。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-223">Deletes specified container under its account.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-224">刪除指定的容器，其帳戶下。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-224">Deletes specified container under its account.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-225">刪除指定的容器，其帳戶下。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-225">Deletes specified container under its account.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-226">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-226">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-227">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-227">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-228">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-228">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-229">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-229">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-230">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-230">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-231">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-231">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-232">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-232">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy
+  name: extendImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-233">延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-233">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="7cb6c-234">唯一允許的鎖定原則的動作將會此動作。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-234">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="7cb6c-235">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-235">ETag in If-Match is required for this operation.</span></span>
+  syntax:
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-236">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-236">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-237">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-237">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-238">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-238">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-239">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-239">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-240">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-240">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-241">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-241">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-242">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-242">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: ifMatch
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-243">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-243">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7cb6c-244">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-244">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7cb6c-245">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-245">If omitted, this operation will always be applied.</span></span>
+    - id: immutabilityPeriodSinceCreationInDays
+      type:
+      - number
+      description: >
+        <span data-ttu-id="7cb6c-246">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-246">The immutability period for the blobs in the container since the policy creation, in days.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy_1
+  name: extendImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-247">延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-247">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="7cb6c-248">唯一允許的鎖定原則的動作將會此動作。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-248">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="7cb6c-249">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-249">ETag in If-Match is required for this operation.</span></span>
+  syntax:
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: immutabilityPeriodSinceCreationInDays
+      type:
+      - number
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy_2
+  name: extendImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-250">延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-250">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="7cb6c-251">唯一允許的鎖定原則的動作將會此動作。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-251">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="7cb6c-252">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-252">ETag in If-Match is required for this operation.</span></span>
+  syntax:
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: immutabilityPeriodSinceCreationInDays
+      type:
+      - number
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicyWithHttpOperationResponse
+  name: extendImmutabilityPolicyWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-253">延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-253">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="7cb6c-254">唯一允許的鎖定原則的動作將會此動作。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-254">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="7cb6c-255">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-255">ETag in If-Match is required for this operation.</span></span>
+  syntax:
+    content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-256">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-256">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-257">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-257">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-258">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-258">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-259">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-259">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-260">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-260">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-261">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-261">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-262">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-262">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: ifMatch
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-263">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-263">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7cb6c-264">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-264">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7cb6c-265">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-265">If omitted, this operation will always be applied.</span></span>
+    - id: immutabilityPeriodSinceCreationInDays
+      type:
+      - number
+      description: >
+        <span data-ttu-id="7cb6c-266">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-266">The immutability period for the blobs in the container since the policy creation, in days.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-267">取得指定容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-267">Gets properties of a specified container.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-268">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-268">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-269">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-269">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-270">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-270">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-271">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-271">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-272">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-272">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-273">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-273">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-274">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-274">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-275">取得指定容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-275">Gets properties of a specified container.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.BlobContainer>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-276">取得指定容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-276">Gets properties of a specified container.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.BlobContainer>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy
+  name: getImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-277">取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-277">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>
+  syntax:
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-278">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-278">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-279">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-279">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-280">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-280">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-281">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-281">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-282">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-282">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-283">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-283">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-284">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-284">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy_2
+  name: getImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-285">取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-285">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>
+  syntax:
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy_1
+  name: getImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-286">取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-286">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>
+  syntax:
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.getImmutabilityPolicyWithHttpOperationResponse
+  name: getImmutabilityPolicyWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-287">取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-287">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>
+  syntax:
+    content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-288">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-288">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-289">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-289">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-290">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-290">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-291">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-291">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-292">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-292">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-293">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-293">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-294">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-294">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-295">取得指定容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-295">Gets properties of a specified container.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-296">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-296">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-297">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-297">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-298">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-298">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-299">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-299">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-300">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-300">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-301">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-301">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-302">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-302">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.list
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-303">列出所有容器，並不支援的前置詞，例如資料平面。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-303">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="7cb6c-304">也 SRP 今天不會傳回接續 token。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-304">Also SRP today does not return continuation token.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-305">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-305">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-306">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-306">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-307">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-307">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-308">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-308">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.ListContainerItems>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.list_1
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-309">列出所有容器，並不支援的前置詞，例如資料平面。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-309">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="7cb6c-310">也 SRP 今天不會傳回接續 token。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-310">Also SRP today does not return continuation token.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListContainerItems>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ListContainerItems>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ListContainerItems>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.list_2
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-311">列出所有容器，並不支援的前置詞，例如資料平面。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-311">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="7cb6c-312">也 SRP 今天不會傳回接續 token。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-312">Also SRP today does not return continuation token.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<ListContainerItems>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ListContainerItems>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ListContainerItems>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-313">列出所有容器，並不支援的前置詞，例如資料平面。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-313">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="7cb6c-314">也 SRP 今天不會傳回接續 token。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-314">Also SRP today does not return continuation token.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-315">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-315">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-316">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-316">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-317">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-317">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-318">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-318">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.ListContainerItems>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy
+  name: lockImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-319">將不變性原則設定已鎖定狀態。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-319">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="7cb6c-320">唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-320">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="7cb6c-321">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-321">ETag in If-Match is required for this operation.</span></span>
+  syntax:
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-322">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-322">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-323">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-323">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-324">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-324">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-325">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-325">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-326">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-326">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-327">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-327">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-328">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-328">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: ifMatch
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-329">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-329">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7cb6c-330">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-330">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7cb6c-331">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-331">If omitted, this operation will always be applied.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy_1
+  name: lockImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-332">將不變性原則設定已鎖定狀態。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-332">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="7cb6c-333">唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-333">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="7cb6c-334">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-334">ETag in If-Match is required for this operation.</span></span>
+  syntax:
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy_2
+  name: lockImmutabilityPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-335">將不變性原則設定已鎖定狀態。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-335">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="7cb6c-336">唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-336">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="7cb6c-337">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-337">ETag in If-Match is required for this operation.</span></span>
+  syntax:
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.ImmutabilityPolicy>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicyWithHttpOperationResponse
+  name: lockImmutabilityPolicyWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-338">將不變性原則設定已鎖定狀態。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-338">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="7cb6c-339">唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-339">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="7cb6c-340">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-340">ETag in If-Match is required for this operation.</span></span>
+  syntax:
+    content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-341">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-341">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-342">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-342">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-343">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-343">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-344">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-344">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-345">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-345">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-346">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-346">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-347">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-347">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: ifMatch
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-348">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-348">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7cb6c-349">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-349">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7cb6c-350">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-350">If omitted, this operation will always be applied.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.setLegalHold
+  name: setLegalHold
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-351">集的法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-351">Sets legal hold tags.</span></span> <span data-ttu-id="7cb6c-352">等冪作業中設定相同的標記結果。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-352">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="7cb6c-353">SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-353">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+  syntax:
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-354">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-354">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-355">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-355">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-356">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-356">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-357">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-357">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-358">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-358">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-359">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-359">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-360">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-360">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: tags
+      type:
+      - string[]
+      description: >
+        <span data-ttu-id="7cb6c-361">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-361">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.LegalHold>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.setLegalHold_1
+  name: setLegalHold
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-362">集的法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-362">Sets legal hold tags.</span></span> <span data-ttu-id="7cb6c-363">等冪作業中設定相同的標記結果。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-363">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="7cb6c-364">SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-364">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+  syntax:
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], callback: ServiceCallback<LegalHold>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: tags
+      type:
+      - string[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.LegalHold>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.LegalHold>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.setLegalHold_2
+  name: setLegalHold
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-365">集的法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-365">Sets legal hold tags.</span></span> <span data-ttu-id="7cb6c-366">等冪作業中設定相同的標記結果。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-366">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="7cb6c-367">SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-367">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+  syntax:
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: function, callback: ServiceCallback<LegalHold>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: tags
+      type:
+      - string[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.LegalHold>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.LegalHold>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.setLegalHoldWithHttpOperationResponse
+  name: setLegalHoldWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-368">集的法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-368">Sets legal hold tags.</span></span> <span data-ttu-id="7cb6c-369">等冪作業中設定相同的標記結果。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-369">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="7cb6c-370">SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-370">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+  syntax:
+    content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-371">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-371">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-372">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-372">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-373">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-373">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-374">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-374">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-375">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-375">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-376">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-376">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-377">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-377">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: tags
+      type:
+      - string[]
+      description: >
+        <span data-ttu-id="7cb6c-378">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-378">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-379">要求本文中所指定的更新容器屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-379">Updates container properties as specified in request body.</span></span> <span data-ttu-id="7cb6c-380">在要求中未提及的屬性將會維持不變。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-380">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="7cb6c-381">如果指定的容器不存在，更新將會失敗。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-381">Update fails if the specified container doesn't already exist.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-382">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-382">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-383">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-383">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-384">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-384">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-385">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-385">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-386">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-386">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-387">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-387">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-388">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-388">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.update_1
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-389">要求本文中所指定的更新容器屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-389">Updates container properties as specified in request body.</span></span> <span data-ttu-id="7cb6c-390">在要求中未提及的屬性將會維持不變。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-390">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="7cb6c-391">如果指定的容器不存在，更新將會失敗。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-391">Update fails if the specified container doesn't already exist.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.BlobContainer>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.update_2
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-392">要求本文中所指定的更新容器屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-392">Updates container properties as specified in request body.</span></span> <span data-ttu-id="7cb6c-393">在要求中未提及的屬性將會維持不變。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-393">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="7cb6c-394">如果指定的容器不存在，更新將會失敗。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-394">Update fails if the specified container doesn't already exist.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-storage.BlobContainer>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-storage.BlobContainer>
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobContainers.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7cb6c-395">要求本文中所指定的更新容器屬性。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-395">Updates container properties as specified in request body.</span></span> <span data-ttu-id="7cb6c-396">在要求中未提及的屬性將會維持不變。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-396">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="7cb6c-397">如果指定的容器不存在，更新將會失敗。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-397">Update fails if the specified container doesn't already exist.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-398">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-398">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7cb6c-399">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-399">The name is case insensitive.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-400">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-400">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7cb6c-401">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-401">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="7cb6c-402">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-402">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7cb6c-403">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-403">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+
+        <span data-ttu-id="7cb6c-404">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="7cb6c-404">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+  package: azure-arm-storage
+references:
+- uid: Promise<azure-arm-storage.LegalHold>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: LegalHold
+    fullName: LegalHold
+    uid: azure-arm-storage.LegalHold
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-storage.LegalHold>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: LegalHold
+    fullName: LegalHold
+    uid: azure-arm-storage.LegalHold
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: LegalHold
+    fullName: LegalHold
+    uid: azure-arm-storage.LegalHold
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-storage.BlobContainer>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BlobContainer
+    fullName: BlobContainer
+    uid: azure-arm-storage.BlobContainer
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-storage.BlobContainer>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: BlobContainer
+    fullName: BlobContainer
+    uid: azure-arm-storage.BlobContainer
+  - name: '>'
+    fullName: '>'
+- uid: Promise<azure-arm-storage.ImmutabilityPolicy>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ImmutabilityPolicy
+    fullName: ImmutabilityPolicy
+    uid: azure-arm-storage.ImmutabilityPolicy
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ImmutabilityPolicy
+    fullName: ImmutabilityPolicy
+    uid: azure-arm-storage.ImmutabilityPolicy
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ImmutabilityPolicy
+    fullName: ImmutabilityPolicy
+    uid: azure-arm-storage.ImmutabilityPolicy
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: BlobContainer
+    fullName: BlobContainer
+    uid: azure-arm-storage.BlobContainer
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-storage.ListContainerItems>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ListContainerItems
+    fullName: ListContainerItems
+    uid: azure-arm-storage.ListContainerItems
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-storage.ListContainerItems>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ListContainerItems
+    fullName: ListContainerItems
+    uid: azure-arm-storage.ListContainerItems
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-storage.ListContainerItems>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ListContainerItems
+    fullName: ListContainerItems
+    uid: azure-arm-storage.ListContainerItems
+  - name: '>>'
+    fullName: '>>'

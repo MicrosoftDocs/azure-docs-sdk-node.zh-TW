@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 70f7fdced044f28d0c42ea199dc464034747e39c
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061389"
+items:
+- uid: azure-iot-device.ModuleClient
+  name: ModuleClient
+  fullName: ModuleClient
+  children:
+  - azure-iot-device.ModuleClient.close
+  - azure-iot-device.ModuleClient.fromAuthenticationProvider
+  - azure-iot-device.ModuleClient.fromConnectionString
+  - azure-iot-device.ModuleClient.fromEnvironment
+  - azure-iot-device.ModuleClient.fromSharedAccessSignature
+  - azure-iot-device.ModuleClient.invokeMethod
+  - azure-iot-device.ModuleClient.invokeMethod_1
+  - azure-iot-device.ModuleClient.onMethod
+  - azure-iot-device.ModuleClient.sendOutputEvent
+  - azure-iot-device.ModuleClient.sendOutputEventBatch
+  - azure-iot-device.ModuleClient.setOptions
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="8c4c7-101">用來連接裝置與 Azure IoT 中樞的 IoT 中樞裝置用戶端。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-101">IoT Hub device client used to connect a device with an Azure IoT hub.</span></span>
+
+    <span data-ttu-id="8c4c7-102">SDK 的使用者應該呼叫 factory 方法，其中[fromConnectionString](xref:azure-iot-device.Client.fromConnectionString)或是[fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature)建立 IoT 中樞裝置用戶端。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-102">Users of the SDK should call one of the factory methods, [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString) or [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) to create an IoT Hub device client.</span></span>
+  extends:
+    name: InternalClient
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="8c4c7-103">關閉傳輸連接，並終結的用戶端的資源。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-103">Closes the transport connection and destroys the client resources.</span></span>
+
+    <span data-ttu-id="8c4c7-104">*注意： ModuleClient 呼叫這個方法之後不能重複使用物件。*</span><span class="sxs-lookup"><span data-stu-id="8c4c7-104">*Note: After calling this method the ModuleClient object cannot be reused.*</span></span>
+  syntax:
+    content: 'function close(closeCallback?: (err?: Error, result?: Disconnected) => void)'
+    parameters:
+    - id: closeCallback
+      type:
+      - '(err?: Error, result?: Disconnected) => void'
+      description: >
+        <span data-ttu-id="8c4c7-105">函式呼叫之後傳輸已中斷連接和用戶端已關閉。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-105">Function to call once the transport is disconnected and the client closed.</span></span>
+      optional: true
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromAuthenticationProvider
+  name: fromAuthenticationProvider
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-106">建立 IoT 中樞模組的用戶端從指定的驗證方法，並使用指定的傳輸類型。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-106">Creates an IoT Hub module client from the given authentication method and using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromAuthenticationProvider(authenticationProvider: AuthenticationProvider, transportCtor: any)'
+    parameters:
+    - id: authenticationProvider
+      type:
+      - AuthenticationProvider
+      description: <span data-ttu-id="8c4c7-107">用來取得 IoT 中樞的驗證參數的物件。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-107">Object used to obtain the authentication parameters for the IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: >
+        <span data-ttu-id="8c4c7-108">傳輸通訊協定用來連線到 IoT 中樞。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-108">Transport protocol used to connect to IoT hub.</span></span>
+    return:
+      type:
+      - any
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-109">使用指定的傳輸類型與指定的連接字串建立的 IoT 中樞裝置用戶端。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-109">Creates an IoT Hub device client from the given connection string using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromConnectionString(connStr: string, transportCtor: any)'
+    parameters:
+    - id: connStr
+      type:
+      - string
+      description: <span data-ttu-id="8c4c7-110">封裝 「 裝置連線 」 的權限的 IoT 中樞連接字串。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-110">A connection string which encapsulates "device connect" permissions on an IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: >
+        <span data-ttu-id="8c4c7-111">傳輸的建構函式。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-111">A transport constructor.</span></span>
+    return:
+      type:
+      - azure-iot-device.ModuleClient
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromEnvironment
+  name: fromEnvironment
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="8c4c7-112">使用來自環境的組態資訊，以建立 IoT 中樞模組的用戶端。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-112">Creates an IoT Hub module client by using configuration information from the environment.</span></span>
+
+    <span data-ttu-id="8c4c7-113">如果環境變數呼叫`EdgeHubConnectionString`或是`IotHubConnectionString`存在，則會使用該值和行為等同於呼叫`fromConnectionString`傳遞中。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-113">If an environment variable called `EdgeHubConnectionString` or `IotHubConnectionString` exists, then that value is used and behavior is identical to calling `fromConnectionString` passing that in.</span></span> <span data-ttu-id="8c4c7-114">如果這些環境變數不存在，則必須定義下列變數：</span><span class="sxs-lookup"><span data-stu-id="8c4c7-114">If those environment variables do not exist then the following variables MUST be defined:</span></span>
+
+        - <span data-ttu-id="8c4c7-115">IOTEDGE_WORKLOADURI iotedged 的工作負載 API 的 URI</span><span class="sxs-lookup"><span data-stu-id="8c4c7-115">IOTEDGE_WORKLOADURI          URI for iotedged's workload API</span></span>
+        - <span data-ttu-id="8c4c7-116">IOTEDGE_DEVICEID 裝置識別碼</span><span class="sxs-lookup"><span data-stu-id="8c4c7-116">IOTEDGE_DEVICEID             Device identifier</span></span>
+        - <span data-ttu-id="8c4c7-117">IOTEDGE_MODULEID 模組識別項</span><span class="sxs-lookup"><span data-stu-id="8c4c7-117">IOTEDGE_MODULEID             Module identifier</span></span>
+        - <span data-ttu-id="8c4c7-118">IOTEDGE_MODULEGENERATIONID 模組產生的識別項</span><span class="sxs-lookup"><span data-stu-id="8c4c7-118">IOTEDGE_MODULEGENERATIONID   Module generation identifier</span></span>
+        - <span data-ttu-id="8c4c7-119">IOTEDGE_IOTHUBHOSTNAME IoT 中樞主機名稱</span><span class="sxs-lookup"><span data-stu-id="8c4c7-119">IOTEDGE_IOTHUBHOSTNAME       IoT Hub host name</span></span>
+        - <span data-ttu-id="8c4c7-120">用於; IOTEDGE_AUTHSCHEME 驗證配置必須是 「 sasToken"</span><span class="sxs-lookup"><span data-stu-id="8c4c7-120">IOTEDGE_AUTHSCHEME           Authentication scheme to use; must be "sasToken"</span></span>
+  syntax:
+    content: 'static function fromEnvironment(transportCtor: any, callback: (err?: Error, client?: ModuleClient) => void)'
+    parameters:
+    - id: transportCtor
+      type:
+      - any
+      description: <span data-ttu-id="8c4c7-121">傳輸通訊協定用來連線到 IoT 中樞。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-121">Transport protocol used to connect to IoT hub.</span></span>
+    - id: callback
+      type:
+      - '(err?: Error, client?: ModuleClient) => void'
+      description: >
+        <span data-ttu-id="8c4c7-122">當 ModuleClient constructured 或建立用戶端時，發生錯誤時叫用的回呼。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-122">Callback to invoke when the ModuleClient has been constructured or if an error occurs while creating the client.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-123">建立 IoT 中樞模組的用戶端從指定的共用的存取簽章使用指定的傳輸類型。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-123">Creates an IoT Hub module client from the given shared access signature using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string, transportCtor: any)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: <span data-ttu-id="8c4c7-124">共用的存取簽章會封裝在 IoT 中樞上的 「 裝置連線 」 權限。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-124">A shared access signature which encapsulates "device connect" permissions on an IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - any
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.invokeMethod
+  name: invokeMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-125">叫用下游的裝置上或在相同的 Edge 裝置上的另一個模組上的方法。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-125">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="8c4c7-126">請注意，這項功能僅適用於當模組正在執行的 Edge 裝置的一部分。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-126">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
+  syntax:
+    content: 'function invokeMethod(deviceId: string, methodParams: MethodParams, callback: MethodCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: <span data-ttu-id="8c4c7-127">目標裝置識別碼</span><span class="sxs-lookup"><span data-stu-id="8c4c7-127">target device identifier</span></span>
+    - id: methodParams
+      type:
+      - azure-iot-device.MethodParams
+      description: <span data-ttu-id="8c4c7-128">直接方法呼叫的參數</span><span class="sxs-lookup"><span data-stu-id="8c4c7-128">parameters of the direct method call</span></span>
+    - id: callback
+      type:
+      - azure-iot-device.MethodCallback
+      description: >
+        <span data-ttu-id="8c4c7-129">使用錯誤物件或方法呼叫的結果將會叫用的回呼。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-129">callback that will be invoked either with an Error object or the result of the method call.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.invokeMethod_1
+  name: invokeMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-130">叫用下游的裝置上或在相同的 Edge 裝置上的另一個模組上的方法。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-130">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="8c4c7-131">請注意，這項功能僅適用於當模組正在執行的 Edge 裝置的一部分。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-131">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
+  syntax:
+    content: 'function invokeMethod(deviceId: string, moduleId: string, methodParams: MethodParams, callback: MethodCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ''
+    - id: moduleId
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iot-device.MethodParams
+      description: ''
+    - id: callback
+      type:
+      - azure-iot-device.MethodCallback
+      description: ''
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.onMethod
+  name: onMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-132">註冊的回呼方法，名為`methodName`。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-132">Registers a callback for a method named `methodName`.</span></span>
+  syntax:
+    content: 'function onMethod(methodName: string, callback: (request: DeviceMethodRequest, response: DeviceMethodResponse) => void)'
+    parameters:
+    - id: methodName
+      type:
+      - string
+      description: <span data-ttu-id="8c4c7-133">將處理的回呼方法的名稱</span><span class="sxs-lookup"><span data-stu-id="8c4c7-133">Name of the method that will be handled by the callback</span></span>
+    - id: callback
+      type:
+      - '(request: DeviceMethodRequest, response: DeviceMethodResponse) => void'
+      description: >
+        <span data-ttu-id="8c4c7-134">應該會在每次呼叫方法的方法要求時呼叫的函式`methodName`收到。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-134">Function that shall be called whenever a method request for the method called `methodName` is received.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.sendOutputEvent
+  name: sendOutputEvent
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-135">將事件傳送至指定的模組的輸出</span><span class="sxs-lookup"><span data-stu-id="8c4c7-135">Sends an event to the given module output</span></span>
+  syntax:
+    content: 'function sendOutputEvent(outputName: string, message: Message, callback: (err?: Error, result?: MessageEnqueued) => void)'
+    parameters:
+    - id: outputName
+      type:
+      - string
+      description: <span data-ttu-id="8c4c7-136">若要傳送至事件的輸出名稱</span><span class="sxs-lookup"><span data-stu-id="8c4c7-136">Name of the output to send the event to</span></span>
+    - id: message
+      type:
+      - Message
+      description: <span data-ttu-id="8c4c7-137">要傳送至指定的輸出訊息</span><span class="sxs-lookup"><span data-stu-id="8c4c7-137">Message to send to the given output</span></span>
+    - id: callback
+      type:
+      - '(err?: Error, result?: MessageEnqueued) => void'
+      description: >
+        <span data-ttu-id="8c4c7-138">已排入佇列的作業時要呼叫的函式。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-138">Function to call when the operation has been queued.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.sendOutputEventBatch
+  name: sendOutputEventBatch
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-139">將事件的陣列傳送至指定的模組輸出</span><span class="sxs-lookup"><span data-stu-id="8c4c7-139">Sends an array of events to the given module output</span></span>
+  syntax:
+    content: 'function sendOutputEventBatch(outputName: string, messages: Message[], callback: (err?: Error, result?: MessageEnqueued) => void)'
+    parameters:
+    - id: outputName
+      type:
+      - string
+      description: <span data-ttu-id="8c4c7-140">若要傳送至事件的輸出名稱</span><span class="sxs-lookup"><span data-stu-id="8c4c7-140">Name of the output to send the events to</span></span>
+    - id: messages
+      type:
+      - Message[]
+      description: ''
+    - id: callback
+      type:
+      - '(err?: Error, result?: MessageEnqueued) => void'
+      description: >
+        <span data-ttu-id="8c4c7-141">當作業都排時要呼叫的函式。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-141">Function to call when the operations have been queued.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.setOptions
+  name: setOptions
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8c4c7-142">傳遞選項`ModuleClient`可用來設定傳輸的物件。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-142">Passes options to the `ModuleClient` object that can be used to configure the transport.</span></span>
+  syntax:
+    content: 'function setOptions(options: DeviceClientOptions, done?: (err?: Error, result?: TransportConfigured) => void)'
+    parameters:
+    - id: options
+      type:
+      - azure-iot-device.DeviceClientOptions
+      description: <span data-ttu-id="8c4c7-143">A<xref:DeviceClientOptions>物件。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-143">A <xref:DeviceClientOptions> object.</span></span>
+    - id: done
+      type:
+      - '(err?: Error, result?: TransportConfigured) => void'
+      description: >
+        <span data-ttu-id="8c4c7-144">要呼叫後已設定選項的回呼。</span><span class="sxs-lookup"><span data-stu-id="8c4c7-144">The callback to call once the options have been set.</span></span>
+      optional: true
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.MethodParams
+  spec.typeScript:
+  - name: MethodParams
+    fullName: MethodParams
+    uid: azure-iot-device.MethodParams
+- uid: azure-iot-device.MethodCallback
+  spec.typeScript:
+  - name: MethodCallback
+    fullName: MethodCallback
+    uid: azure-iot-device.MethodCallback
+- uid: azure-iot-device.DeviceClientOptions
+  spec.typeScript:
+  - name: DeviceClientOptions
+    fullName: DeviceClientOptions
+    uid: azure-iot-device.DeviceClientOptions
+- uid: azure-iot-device.ModuleClient
+  spec.typeScript:
+  - name: ModuleClient
+    fullName: ModuleClient
+    uid: azure-iot-device.ModuleClient

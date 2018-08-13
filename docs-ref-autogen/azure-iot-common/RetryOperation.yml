@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c243adc0c4629aeae4e673c28644ca2761fd80f2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40053333"
+items:
+- uid: azure-iot-common.RetryOperation
+  name: RetryOperation
+  fullName: RetryOperation
+  children:
+  - azure-iot-common.RetryOperation.retry
+  - azure-iot-common.RetryOperation.constructor
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="7357e-101">實作重試作業，例如連接、 接收 C2D 訊息、 傳送遙測資料、 對應項更新日等規定的必要邏輯。</span><span class="sxs-lookup"><span data-stu-id="7357e-101">Implements the necessary logic to retry operations such as connecting, receiving C2D messages, sending telemetry, twin updates, etc.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.RetryOperation.retry
+  name: retry
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7357e-102">執行作業，如果它失敗且重試原則允許重試。</span><span class="sxs-lookup"><span data-stu-id="7357e-102">Executes an operation and retries if it fails and the retry policy allows it.</span></span>
+  syntax:
+    content: 'function retry(operation: (opCallback: (err?: Error, result?: any, response?: any) => void) => void, finalCallback: (err?: Error, result?: any, response?: any) => void)'
+    parameters:
+    - id: operation
+      type:
+      - '(opCallback: (err?: Error, result?: any, response?: any) => void) => void'
+      description: <span data-ttu-id="7357e-103">要執行的作業。</span><span class="sxs-lookup"><span data-stu-id="7357e-103">The operation to execute.</span></span>
+    - id: finalCallback
+      type:
+      - '(err?: Error, result?: any, response?: any) => void'
+      description: >
+        <span data-ttu-id="7357e-104">如有必要重試後呼叫的最後一個錯誤或結果，與回呼。</span><span class="sxs-lookup"><span data-stu-id="7357e-104">The callback to call with the final error or result, after retries if necessary.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.RetryOperation.constructor
+  name: RetryOperation
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7357e-105">建立執行的個體 <xref:azure-iot-common.RetryOperation.></span><span class="sxs-lookup"><span data-stu-id="7357e-105">Creates an instance of <xref:azure-iot-common.RetryOperation.></span></span>
+  syntax:
+    content: 'new RetryOperation(policy: RetryPolicy, maxTimeout: number)'
+    parameters:
+    - id: policy
+      type:
+      - azure-iot-common.RetryPolicy
+      description: <span data-ttu-id="7357e-106">要用於這項作業，這會決定哪些錯誤為 「 可重試 」 且速度重試的重試原則。</span><span class="sxs-lookup"><span data-stu-id="7357e-106">The retry policy to be used for this operation, which determines what error is "retryable" or not and how fast to retry.</span></span>
+    - id: maxTimeout
+      type:
+      - number
+      description: >
+        <span data-ttu-id="7357e-107">這項作業，不能重試將會嘗試之後，最大逾時。</span><span class="sxs-lookup"><span data-stu-id="7357e-107">The maximum timeout for this operation, after which no retry will be attempted.</span></span>
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.RetryPolicy
+  spec.typeScript:
+  - name: RetryPolicy
+    fullName: RetryPolicy
+    uid: azure-iot-common.RetryPolicy

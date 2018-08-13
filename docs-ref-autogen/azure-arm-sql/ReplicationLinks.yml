@@ -1,0 +1,1132 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 09a392ec51ab8ec603efce6565086d64908e4298
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061714"
+items:
+- uid: azure-arm-sql.ReplicationLinks
+  name: ReplicationLinks
+  fullName: ReplicationLinks
+  children:
+  - azure-arm-sql.ReplicationLinks.beginFailover
+  - azure-arm-sql.ReplicationLinks.beginFailover_1
+  - azure-arm-sql.ReplicationLinks.beginFailover_2
+  - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_1
+  - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_2
+  - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss
+  - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLossWithHttpOperationResponse
+  - azure-arm-sql.ReplicationLinks.beginFailoverWithHttpOperationResponse
+  - azure-arm-sql.ReplicationLinks.deleteMethod
+  - azure-arm-sql.ReplicationLinks.deleteMethod_1
+  - azure-arm-sql.ReplicationLinks.deleteMethod_2
+  - azure-arm-sql.ReplicationLinks.deleteMethodWithHttpOperationResponse
+  - azure-arm-sql.ReplicationLinks.failover
+  - azure-arm-sql.ReplicationLinks.failover_1
+  - azure-arm-sql.ReplicationLinks.failover_2
+  - azure-arm-sql.ReplicationLinks.failoverAllowDataLoss
+  - azure-arm-sql.ReplicationLinks.failoverAllowDataLoss_2
+  - azure-arm-sql.ReplicationLinks.failoverAllowDataLoss_1
+  - azure-arm-sql.ReplicationLinks.failoverAllowDataLossWithHttpOperationResponse
+  - azure-arm-sql.ReplicationLinks.failoverWithHttpOperationResponse
+  - azure-arm-sql.ReplicationLinks.get
+  - azure-arm-sql.ReplicationLinks.get_1
+  - azure-arm-sql.ReplicationLinks.get_2
+  - azure-arm-sql.ReplicationLinks.getWithHttpOperationResponse
+  - azure-arm-sql.ReplicationLinks.listByDatabase
+  - azure-arm-sql.ReplicationLinks.listByDatabase_1
+  - azure-arm-sql.ReplicationLinks.listByDatabase_2
+  - azure-arm-sql.ReplicationLinks.listByDatabaseWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailover
+  name: beginFailover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-101">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-101">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+  syntax:
+    content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-102">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-102">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-103">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-103">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-104">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-104">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-105">已容錯移轉的複寫連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-105">The name of the database that has the replication link to be failed over.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-106">容錯移轉複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-106">The ID of the replication link to be failed over.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailover_1
+  name: beginFailover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-107">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-107">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+  syntax:
+    content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailover_2
+  name: beginFailover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-108">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-108">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+  syntax:
+    content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_1
+  name: beginFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-109">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-109">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="49616-110">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="49616-110">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_2
+  name: beginFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-111">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-111">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="49616-112">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="49616-112">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss
+  name: beginFailoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-113">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-113">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="49616-114">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="49616-114">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-115">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-115">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-116">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-116">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-117">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-117">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-118">已容錯移轉的複寫連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-118">The name of the database that has the replication link to be failed over.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-119">容錯移轉複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-119">The ID of the replication link to be failed over.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLossWithHttpOperationResponse
+  name: beginFailoverAllowDataLossWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-120">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-120">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="49616-121">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="49616-121">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function beginFailoverAllowDataLossWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-122">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-122">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-123">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-123">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-124">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-124">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-125">已容錯移轉的複寫連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-125">The name of the database that has the replication link to be failed over.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-126">容錯移轉複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-126">The ID of the replication link to be failed over.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailoverWithHttpOperationResponse
+  name: beginFailoverWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-127">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-127">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+  syntax:
+    content: 'function beginFailoverWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-128">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-128">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-129">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-129">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-130">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-130">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-131">已容錯移轉的複寫連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-131">The name of the database that has the replication link to be failed over.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-132">容錯移轉複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-132">The ID of the replication link to be failed over.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-133">刪除資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-133">Deletes a database replication link.</span></span> <span data-ttu-id="49616-134">無法在容錯移轉期間進行。</span><span class="sxs-lookup"><span data-stu-id="49616-134">Cannot be done during failover.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-135">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-135">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-136">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-136">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-137">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-137">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-138">具有複寫連結，是要卸除資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-138">The name of the database that has the replication link to be dropped.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-139">要刪除複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-139">The ID of the replication link to be deleted.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-140">刪除資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-140">Deletes a database replication link.</span></span> <span data-ttu-id="49616-141">無法在容錯移轉期間進行。</span><span class="sxs-lookup"><span data-stu-id="49616-141">Cannot be done during failover.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-142">刪除資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-142">Deletes a database replication link.</span></span> <span data-ttu-id="49616-143">無法在容錯移轉期間進行。</span><span class="sxs-lookup"><span data-stu-id="49616-143">Cannot be done during failover.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-144">刪除資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-144">Deletes a database replication link.</span></span> <span data-ttu-id="49616-145">無法在容錯移轉期間進行。</span><span class="sxs-lookup"><span data-stu-id="49616-145">Cannot be done during failover.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-146">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-146">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-147">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-147">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-148">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-148">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-149">具有複寫連結，是要卸除資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-149">The name of the database that has the replication link to be dropped.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-150">要刪除複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-150">The ID of the replication link to be deleted.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failover
+  name: failover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-151">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-151">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+  syntax:
+    content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-152">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-152">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-153">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-153">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-154">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-154">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-155">已容錯移轉的複寫連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-155">The name of the database that has the replication link to be failed over.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-156">容錯移轉複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-156">The ID of the replication link to be failed over.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failover_1
+  name: failover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-157">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-157">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+  syntax:
+    content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failover_2
+  name: failover
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-158">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-158">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+  syntax:
+    content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failoverAllowDataLoss
+  name: failoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-159">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-159">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="49616-160">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="49616-160">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function failoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-161">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-161">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-162">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-162">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-163">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-163">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-164">已容錯移轉的複寫連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-164">The name of the database that has the replication link to be failed over.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-165">容錯移轉複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-165">The ID of the replication link to be failed over.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failoverAllowDataLoss_2
+  name: failoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-166">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-166">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="49616-167">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="49616-167">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function failoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failoverAllowDataLoss_1
+  name: failoverAllowDataLoss
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-168">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-168">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="49616-169">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="49616-169">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function failoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failoverAllowDataLossWithHttpOperationResponse
+  name: failoverAllowDataLossWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-170">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-170">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="49616-171">這項作業可能會導致資料遺失。</span><span class="sxs-lookup"><span data-stu-id="49616-171">This operation might result in data loss.</span></span>
+  syntax:
+    content: 'function failoverAllowDataLossWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-172">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-172">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-173">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-173">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-174">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-174">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-175">已容錯移轉的複寫連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-175">The name of the database that has the replication link to be failed over.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-176">容錯移轉複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-176">The ID of the replication link to be failed over.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failoverWithHttpOperationResponse
+  name: failoverWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-177">從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。</span><span class="sxs-lookup"><span data-stu-id="49616-177">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+  syntax:
+    content: 'function failoverWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-178">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-178">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-179">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-179">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-180">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-180">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-181">已容錯移轉的複寫連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-181">The name of the database that has the replication link to be failed over.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-182">容錯移轉複寫連結的識別碼。</span><span class="sxs-lookup"><span data-stu-id="49616-182">The ID of the replication link to be failed over.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-183">取得資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-183">Gets a database replication link.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-184">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-184">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-185">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-185">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-186">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-186">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-187">要取得的連結之資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-187">The name of the database to get the link for.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-188">要擷取複寫連結 ID。</span><span class="sxs-lookup"><span data-stu-id="49616-188">The replication link ID to be retrieved.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.ReplicationLink>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-189">取得資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-189">Gets a database replication link.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<ReplicationLink>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.ReplicationLink>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.ReplicationLink>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-190">取得資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-190">Gets a database replication link.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: function, callback: ServiceCallback<ReplicationLink>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.ReplicationLink>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.ReplicationLink>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-191">取得資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-191">Gets a database replication link.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-192">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-192">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-193">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-193">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-194">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-194">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-195">要取得的連結之資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-195">The name of the database to get the link for.</span></span>
+    - id: linkId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-196">要擷取複寫連結 ID。</span><span class="sxs-lookup"><span data-stu-id="49616-196">The replication link ID to be retrieved.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.ReplicationLink>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.listByDatabase
+  name: listByDatabase
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-197">列出的資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-197">Lists a database's replication links.</span></span>
+  syntax:
+    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-198">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-198">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-199">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-199">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-200">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-200">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-201">要擷取之連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-201">The name of the database to retrieve links for.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.ReplicationLinkListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.listByDatabase_1
+  name: listByDatabase
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-202">列出的資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-202">Lists a database's replication links.</span></span>
+  syntax:
+    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ReplicationLinkListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.ReplicationLinkListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.ReplicationLinkListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.listByDatabase_2
+  name: listByDatabase
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-203">列出的資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-203">Lists a database's replication links.</span></span>
+  syntax:
+    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options: function, callback: ServiceCallback<ReplicationLinkListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.ReplicationLinkListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.ReplicationLinkListResult>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.listByDatabaseWithHttpOperationResponse
+  name: listByDatabaseWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49616-204">列出的資料庫複寫連結。</span><span class="sxs-lookup"><span data-stu-id="49616-204">Lists a database's replication links.</span></span>
+  syntax:
+    content: 'function listByDatabaseWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-205">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-205">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="49616-206">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="49616-206">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: serverName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-207">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-207">The name of the server.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="49616-208">要擷取之連結的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="49616-208">The name of the database to retrieve links for.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.ReplicationLinkListResult>>
+  package: azure-arm-sql
+references:
+- uid: Promise<azure-arm-sql.ReplicationLink>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ReplicationLink
+    fullName: ReplicationLink
+    uid: azure-arm-sql.ReplicationLink
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-sql.ReplicationLink>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ReplicationLink
+    fullName: ReplicationLink
+    uid: azure-arm-sql.ReplicationLink
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-sql.ReplicationLink>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ReplicationLink
+    fullName: ReplicationLink
+    uid: azure-arm-sql.ReplicationLink
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-sql.ReplicationLinkListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ReplicationLinkListResult
+    fullName: ReplicationLinkListResult
+    uid: azure-arm-sql.ReplicationLinkListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-sql.ReplicationLinkListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ReplicationLinkListResult
+    fullName: ReplicationLinkListResult
+    uid: azure-arm-sql.ReplicationLinkListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-sql.ReplicationLinkListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ReplicationLinkListResult
+    fullName: ReplicationLinkListResult
+    uid: azure-arm-sql.ReplicationLinkListResult
+  - name: '>>'
+    fullName: '>>'

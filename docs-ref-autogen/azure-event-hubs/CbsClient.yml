@@ -1,0 +1,176 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5f058b840b3b1f49eafc564821547d9ba4ef7fcf
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061443"
+items:
+- uid: azure-event-hubs.CbsClient
+  name: CbsClient
+  fullName: CbsClient
+  children:
+  - azure-event-hubs.CbsClient.constructor
+  - azure-event-hubs.CbsClient.cbsLock
+  - azure-event-hubs.CbsClient.close
+  - azure-event-hubs.CbsClient.connection
+  - azure-event-hubs.CbsClient.connectionLock
+  - azure-event-hubs.CbsClient.endpoint
+  - azure-event-hubs.CbsClient.init
+  - azure-event-hubs.CbsClient.negotiateClaim
+  - azure-event-hubs.CbsClient.replyTo
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.constructor
+  name: CbsClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new CbsClient(connection: Connection, connectionLock: string)'
+    parameters:
+    - id: connection
+      type:
+      - azure-event-hubs.Connection
+      description: ''
+    - id: connectionLock
+      type:
+      - string
+      description: ''
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.cbsLock
+  name: cbsLock
+  fullName: cbsLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'cbsLock: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6ffec-101">關閉這個用戶端，並傳回一項承諾完成中斷連線時，會解決 EventHub/服務匯流排的 AMQP cbs 工作階段。</span><span class="sxs-lookup"><span data-stu-id="6ffec-101">Closes the AMQP cbs session to the EventHub/ServiceBus for this client, returning a promise that will be resolved when disconnection is completed.</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.connection
+  name: connection
+  fullName: connection
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'connection: Connection'
+    return:
+      type:
+      - azure-event-hubs.Connection
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.connectionLock
+  name: connectionLock
+  fullName: connectionLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'connectionLock: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.endpoint
+  name: endpoint
+  fullName: endpoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'endpoint: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.init
+  name: init
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6ffec-102">如果尚未初始化先前指定的連接上，請建立 CBS 工作階段的單一執行個體。</span><span class="sxs-lookup"><span data-stu-id="6ffec-102">Creates a singleton instance of the CBS session if it hasn't been initialized previously on the given connection.</span></span>
+  syntax:
+    content: function init()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.negotiateClaim
+  name: negotiateClaim
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6ffec-103">交涉 CBS 宣告與服務匯流排事件中樞/服務。</span><span class="sxs-lookup"><span data-stu-id="6ffec-103">Negotiates the CBS claim with the EventHub/ServiceBus Service.</span></span>
+  syntax:
+    content: 'function negotiateClaim(audience: string, tokenObject: TokenInfo)'
+    parameters:
+    - id: audience
+      type:
+      - string
+      description: <span data-ttu-id="6ffec-104">要求權杖對象。</span><span class="sxs-lookup"><span data-stu-id="6ffec-104">The audience for which the token is requested.</span></span>
+    - id: tokenObject
+      type:
+      - azure-event-hubs.TokenInfo
+      description: <span data-ttu-id="6ffec-105">需要在語彙基元的 put 要求中傳送的權杖物件。</span><span class="sxs-lookup"><span data-stu-id="6ffec-105">The token object that needs to be sent in the put-token request.</span></span>
+    return:
+      type:
+      - Promise<any>
+  package: azure-event-hubs
+- uid: azure-event-hubs.CbsClient.replyTo
+  name: replyTo
+  fullName: replyTo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'replyTo: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.Connection
+  spec.typeScript:
+  - name: Connection
+    fullName: Connection
+    uid: azure-event-hubs.Connection
+- uid: azure-event-hubs.TokenInfo
+  spec.typeScript:
+  - name: TokenInfo
+    fullName: TokenInfo
+    uid: azure-event-hubs.TokenInfo

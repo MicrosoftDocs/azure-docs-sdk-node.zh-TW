@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2bb39336cac3fe404366a95799522d14d6109f14
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40053244"
+items:
+- uid: azure-event-hubs.EventPosition
+  name: EventPosition
+  fullName: EventPosition
+  children:
+  - azure-event-hubs.EventPosition.customFilter
+  - azure-event-hubs.EventPosition.endOfStream
+  - azure-event-hubs.EventPosition.enqueuedTime
+  - azure-event-hubs.EventPosition.constructor
+  - azure-event-hubs.EventPosition.fromEnd
+  - azure-event-hubs.EventPosition.fromEnqueuedTime
+  - azure-event-hubs.EventPosition.fromOffset
+  - azure-event-hubs.EventPosition.fromSequenceNumber
+  - azure-event-hubs.EventPosition.fromStart
+  - azure-event-hubs.EventPosition.getExpression
+  - azure-event-hubs.EventPosition.isInclusive
+  - azure-event-hubs.EventPosition.offset
+  - azure-event-hubs.EventPosition.sequenceNumber
+  - azure-event-hubs.EventPosition.startOfStream
+  - azure-event-hubs.EventPosition.withCustomFilter
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    <span data-ttu-id="24ccd-101">事件中樞接收器的建立期間，可以設定代表選項。</span><span class="sxs-lookup"><span data-stu-id="24ccd-101">Represents options can be set during the creation of a event hub receiver.</span></span>
+
+    <span data-ttu-id="24ccd-102">定義位置@link~ EventData 事件中樞資料分割中的。</span><span class="sxs-lookup"><span data-stu-id="24ccd-102">Defines a position of an @link~EventData in the event hub partition.</span></span>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.customFilter
+  name: customFilter
+  fullName: customFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'customFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.endOfStream
+  name: endOfStream
+  fullName: endOfStream
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'static endOfStream: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.enqueuedTime
+  name: enqueuedTime
+  fullName: enqueuedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'enqueuedTime?: Date | number'
+    return:
+      type:
+      - Date | number
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.constructor
+  name: EventPosition
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new EventPosition(options?: EventPositionOptions)'
+    parameters:
+    - id: options
+      type:
+      - azure-event-hubs.EventPositionOptions
+      description: ''
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromEnd
+  name: fromEnd
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="24ccd-103">傳回資料流結尾的位置。</span><span class="sxs-lookup"><span data-stu-id="24ccd-103">Returns the position for the end of a stream.</span></span> <span data-ttu-id="24ccd-104">會提供此位置中開始建立接收者後，接收從資料分割中下一個可用的事件接收器的建立。</span><span class="sxs-lookup"><span data-stu-id="24ccd-104">Provide this position in receiver creation to start receiving from the next available event in the partition after the receiver is created.</span></span>
+  syntax:
+    content: static function fromEnd()
+    parameters: []
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromEnqueuedTime
+  name: fromEnqueuedTime
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="24ccd-105">建立位置在指定的加入佇列時間。</span><span class="sxs-lookup"><span data-stu-id="24ccd-105">Creates a position at the given enqueued time.</span></span>
+  syntax:
+    content: 'static function fromEnqueuedTime(enqueuedTime: Date | number)'
+    parameters:
+    - id: enqueuedTime
+      type:
+      - Date | number
+      description: <span data-ttu-id="24ccd-106">加入佇列的時間。</span><span class="sxs-lookup"><span data-stu-id="24ccd-106">The enqueue time.</span></span> <span data-ttu-id="24ccd-107">這個值表示佇列訊息的實際時間。</span><span class="sxs-lookup"><span data-stu-id="24ccd-107">This value represents the actual time of enqueuing the message.</span></span>
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromOffset
+  name: fromOffset
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="24ccd-108">建立指定的位移的位置。</span><span class="sxs-lookup"><span data-stu-id="24ccd-108">Creates a position at the given offset.</span></span>
+  syntax:
+    content: 'static function fromOffset(offset: string, isInclusive?: boolean)'
+    parameters:
+    - id: offset
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="24ccd-109">相對於事件中樞資料分割串流的資料位移。</span><span class="sxs-lookup"><span data-stu-id="24ccd-109">The offset of the data relative to the Event Hub partition stream.</span></span>
+
+        <span data-ttu-id="24ccd-110">此位移是事件中樞串流中事件的標記或識別碼。</span><span class="sxs-lookup"><span data-stu-id="24ccd-110">The offset is a marker or identifier for an event within the Event Hubs stream.</span></span>
+
+        <span data-ttu-id="24ccd-111">此識別碼在事件中樞串流的資料分割內是唯一的。</span><span class="sxs-lookup"><span data-stu-id="24ccd-111">The identifier is unique within a partition of the Event Hubs stream.</span></span>
+    - id: isInclusive
+      type:
+      - boolean
+      description: '<span data-ttu-id="24ccd-112">如果為 true，指定的事件包含在內。否則會傳回下一個事件。</span><span class="sxs-lookup"><span data-stu-id="24ccd-112">If true, the specified event is included; otherwise the next event is returned.</span></span> <span data-ttu-id="24ccd-113">預設：false。</span><span class="sxs-lookup"><span data-stu-id="24ccd-113">Default: false.</span></span>'
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromSequenceNumber
+  name: fromSequenceNumber
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="24ccd-114">建立位置在指定的序號。</span><span class="sxs-lookup"><span data-stu-id="24ccd-114">Creates a position at the given sequence number.</span></span>
+  syntax:
+    content: 'static function fromSequenceNumber(sequenceNumber: number, isInclusive?: boolean)'
+    parameters:
+    - id: sequenceNumber
+      type:
+      - number
+      description: <span data-ttu-id="24ccd-115">事件中樞的資料分割資料流中事件邏輯的序號。</span><span class="sxs-lookup"><span data-stu-id="24ccd-115">The logical sequence number of the event within the partition stream of the Event Hub.</span></span>
+    - id: isInclusive
+      type:
+      - boolean
+      description: <span data-ttu-id="24ccd-116">如果為 true，指定的事件包含在內。否則會傳回下一個事件。</span><span class="sxs-lookup"><span data-stu-id="24ccd-116">If true, the specified event is included; otherwise the next event is returned.</span></span> <span data-ttu-id="24ccd-117">預設為 false。</span><span class="sxs-lookup"><span data-stu-id="24ccd-117">Default false.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromStart
+  name: fromStart
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="24ccd-118">傳回資料流開頭的位置。</span><span class="sxs-lookup"><span data-stu-id="24ccd-118">Returns the position for the start of a stream.</span></span> <span data-ttu-id="24ccd-119">會提供此位置中要開始接收來自分割區中的第一個可用的事件接收器的建立。</span><span class="sxs-lookup"><span data-stu-id="24ccd-119">Provide this position in receiver creation to start receiving from the first available event in the partition.</span></span>
+  syntax:
+    content: static function fromStart()
+    parameters: []
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.getExpression
+  name: getExpression
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="24ccd-120">取得必須在來源上設定的運算式 （filter 子句）。</span><span class="sxs-lookup"><span data-stu-id="24ccd-120">Gets the expression (filter clause) that needs to be set on the source.</span></span>
+  syntax:
+    content: function getExpression()
+    parameters: []
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.isInclusive
+  name: isInclusive
+  fullName: isInclusive
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'isInclusive: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.offset
+  name: offset
+  fullName: offset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'offset?: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'sequenceNumber?: number'
+    return:
+      type:
+      - number
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.startOfStream
+  name: startOfStream
+  fullName: startOfStream
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'static startOfStream: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.withCustomFilter
+  name: withCustomFilter
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="24ccd-121">建立根據指定的自訂篩選條件的位置。</span><span class="sxs-lookup"><span data-stu-id="24ccd-121">Creates a position based on the given custom filter.</span></span>
+  syntax:
+    content: 'static function withCustomFilter(customFilter: string)'
+    parameters:
+    - id: customFilter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="24ccd-122">必須在接收者上套用 cutom 篩選運算式。</span><span class="sxs-lookup"><span data-stu-id="24ccd-122">The cutom filter expression that needs to be applied on the receiver.</span></span> <span data-ttu-id="24ccd-123">這應該只有時才能使用一種其他方法`fromOffset()`， `fromSequenceNumber()`，`fromEnqueuedTime()`並不適用於您的案例。</span><span class="sxs-lookup"><span data-stu-id="24ccd-123">This should be used only when one of the other methods `fromOffset()`, `fromSequenceNumber()`, `fromEnqueuedTime()` is not applicable for your scenario.</span></span>
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.EventPositionOptions
+  spec.typeScript:
+  - name: EventPositionOptions
+    fullName: EventPositionOptions
+    uid: azure-event-hubs.EventPositionOptions
+- uid: azure-event-hubs.EventPosition
+  spec.typeScript:
+  - name: EventPosition
+    fullName: EventPosition
+    uid: azure-event-hubs.EventPosition
