@@ -1,0 +1,457 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 234c7d4787f94e746b51b21ae9c34f399226b55e
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051381"
+items:
+- uid: azure-asm-sb.TopicOperations~TopicOperations
+  id: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations
+  summary: >-
+    服務匯流排管理 API 包含管理服務匯流排主題中的命名空間的作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}。
+
+    請參閱 [topics] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #topics}。
+
+    初始化 TopicOperations 類別的新執行個體。
+  fullName: azure-asm-sb.TopicOperations
+  type: Class
+  children:
+  - azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  - azure-asm-sb.TopicOperations~TopicOperations#create
+  - azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  - azure-asm-sb.TopicOperations~TopicOperations#get
+  - azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  - azure-asm-sb.TopicOperations~TopicOperations#list
+  - azure-asm-sb.TopicOperations~TopicOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  uid: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations(client)
+  fullName: azure-asm-sb.TopicOperations.TopicOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: 服務用戶端的參考。
+    content: new TopicOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#create
+  id: azure-asm-sb.TopicOperations~TopicOperations#create
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: create(namespaceName, topic, callback)
+  summary: 建立新的主題。 一旦建立，這個主題資源資訊清單是不可變的。 這項作業不具有等冪性。 已成功，建立具有相同名稱的主題之後，重複執行建立呼叫，會導致 「 409 衝突錯誤訊息。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/hh780728.aspx如需詳細資訊)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.create(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空間名稱。
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: 服務匯流排主題。
+    - id: topic.name
+      type:
+      - string
+      description: 本主題的名稱。
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        判斷訊息位於相關聯的訂用帳戶。 訂用帳戶從主題繼承 TTL，除非它們以較小的 TTL 明確建立。
+
+        根據是否啟用無效信件處理，TTL 已到期的訊息將會移至的訂用帳戶相關聯的 DeadLtterQueue，或將會永久刪除。 在主題建立期間會設定下列值: * 範圍： 1 秒-TimeSpan.MaxValue* 預設： TimeSpan.MaxValue
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: '指定主題大小上限以 mb 為單位。 任何嘗試加入佇列的訊息，會導致主題超過此值將會失敗。 會儲存在主題或任何其訂用帳戶計入此值的所有訊息。 多個訊息的複本位於當成單一訊息的一或多個訂用帳戶計數。 比方說，如果訂用帳戶 s1 中，兩次相同的訂用帳戶 s2，一次有訊息 m，m 就會計算為單一訊息。 您只可以設定此參數在主題建立期間，使用下列值: * 範圍： 1-5*1024 MB*預設： 1 * 1024'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 如果啟用，主題會偵測 DuplicateDetectionHistoryTimeWindow 屬性所指定的時間範圍內的重複訊息。 只能在主題建立時間預設值進行設定： false
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 指定的期間，服務匯流排會偵測訊息 duplication.* 範圍的時間範圍： 1 秒-7 天 * 預設： 10 分鐘
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: 啟用或停用服務端，執行特定佇列的作業時，批次行為。 啟用時，服務匯流排會收集/批次處理至後端，以使連線更有效率的多個作業。 如果使用者想要降低作業延遲，則它們可以停用此功能。
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: 會反映至訊息主題中的目前佔用主題配額的實際位元組數。 （唯讀） * 範圍： 0 MaxTopicSizeinMegaBytes
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: 取得或設定是否應該在發行之前篩選訊息。
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: 取得是否允許匿名存取。
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: 取得描述授權規則。
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: 取得或設定主題 （啟用或停用） 的目前狀態。 停用主題時，該主題無法傳送或接收訊息。
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: 在建立佇列的時間。
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: 佇列上次更新時間。
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: 佇列上次存取時間。
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: 取得或設定是否可以排序的主題。
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: 目前佇列的統計資料。
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: 目前的作用中訊息數目。
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: 信件的目前數目。
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: 目前的已排程的訊息數目。
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: 目前傳送出的信件的數目。
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: 目前的傳輸的訊息數目。
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: 目前的訂用帳戶的主題數目。
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: 實作。
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: 本主題的目前的可用性狀態。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 回應資料流。
+    content: function create(namespaceName, topic, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  id: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: deleteMethod(namespaceName, topicName, callback)
+  summary: 刪除現有的主題。 這項作業也會移除所有相關聯的狀態，包括相關聯的訂用帳戶。  (請參閱http://msdn.microsoft.com/en-us/library/hh780721.aspx如需詳細資訊)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.deleteMethod(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空間名稱。
+    - id: topicName
+      type:
+      - string
+      description: 本主題中。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 回應資料流。
+    content: function deleteMethod(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#get
+  id: azure-asm-sb.TopicOperations~TopicOperations#get
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: get(namespaceName, topicName, callback)
+  summary: 主題描述會定義主題所需的語意的 XML AtomPub 文件。 主題描述包含下列屬性。 如需詳細資訊，請參閱 TopicDescription Properties 主題。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/hh780749.aspx如需詳細資訊)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.get(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空間名稱。
+    - id: topicName
+      type:
+      - string
+      description: 本主題中。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 回應資料流。
+    content: function get(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  id: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: getConnectionDetails(namespaceName, topicName, callback)
+  summary: 取得主題的一組連接字串。
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.getConnectionDetails(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空間名稱。
+    - id: topicName
+      type:
+      - string
+      description: 本主題中。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 回應資料流。
+    content: function getConnectionDetails(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#list
+  id: azure-asm-sb.TopicOperations~TopicOperations#list
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: list(namespaceName, callback)
+  summary: 列舉服務命名空間中的主題。 如果沒有任何主題位於服務命名空間，則會傳回空的摘要。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/hh780744.aspx如需詳細資訊)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空間名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 回應資料流。
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#update
+  id: azure-asm-sb.TopicOperations~TopicOperations#update
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: update(namespaceName, topic, callback)
+  summary: 更新主題。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/jj839740.aspx如需詳細資訊)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.update(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空間名稱。
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: 服務匯流排主題。
+    - id: topic.name
+      type:
+      - string
+      description: 本主題的名稱。
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        判斷訊息位於相關聯的訂用帳戶。 訂用帳戶從主題繼承 TTL，除非它們以較小的 TTL 明確建立。
+
+        根據是否啟用無效信件處理，TTL 已到期的訊息將會移至的訂用帳戶相關聯的 DeadLtterQueue，或將會永久刪除。 在主題建立期間會設定下列值: * 範圍： 1 秒-TimeSpan.MaxValue* 預設： TimeSpan.MaxValue
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: '指定主題大小上限以 mb 為單位。 任何嘗試加入佇列的訊息，會導致主題超過此值將會失敗。 會儲存在主題或任何其訂用帳戶計入此值的所有訊息。 多個訊息的複本位於當成單一訊息的一或多個訂用帳戶計數。 比方說，如果訂用帳戶 s1 中，兩次相同的訂用帳戶 s2，一次有訊息 m，m 就會計算為單一訊息。 您只可以設定此參數在主題建立期間，使用下列值: * 範圍： 1-5*1024 MB*預設： 1 * 1024'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 如果啟用，主題會偵測 DuplicateDetectionHistoryTimeWindow 屬性所指定的時間範圍內的重複訊息。 只能在主題建立時間預設值進行設定： false
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 指定的期間，服務匯流排會偵測訊息 duplication.* 範圍的時間範圍： 1 秒-7 天 * 預設： 10 分鐘
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: 啟用或停用服務端，執行特定佇列的作業時，批次行為。 啟用時，服務匯流排會收集/批次處理至後端，以使連線更有效率的多個作業。 如果使用者想要降低作業延遲，則它們可以停用此功能。
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: 會反映至訊息主題中的目前佔用主題配額的實際位元組數。 （唯讀） * 範圍： 0 MaxTopicSizeinMegaBytes
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: 取得或設定是否應該在發行之前篩選訊息。
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: 取得是否允許匿名存取。
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: 取得描述授權規則。
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: 取得或設定主題 （啟用或停用） 的目前狀態。 停用主題時，該主題無法傳送或接收訊息。
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: 在建立佇列的時間。
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: 佇列上次更新時間。
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: 佇列上次存取時間。
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: 取得或設定是否可以排序的主題。
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: 目前佇列的統計資料。
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: 目前的作用中訊息數目。
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: 信件的目前數目。
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: 目前的已排程的訊息數目。
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: 目前傳送出的信件的數目。
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: 目前的傳輸的訊息數目。
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: 目前的訂用帳戶的主題數目。
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: 實作。
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: 本主題的目前的可用性狀態。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 回應資料流。
+    content: function update(namespaceName, topic, callback)
+  langs:
+  - js

@@ -1,0 +1,347 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: baf17532e911689324ff3b6a43fc6937bdf430d8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051373"
+items:
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations
+  summary: >-
+    計算管理 API 包含管理訂用帳戶的負載平衡器的作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。
+
+    請參閱 [負載平衡器] {@link ComputeManagementClient ~ ComputeManagementClient #loadBalancers}。
+
+    初始化 LoadBalancerOperations 類別的新執行個體。
+  fullName: azure-asm-compute.LoadBalancerOperations
+  type: Class
+  children:
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations(client)
+  fullName: azure-asm-compute.LoadBalancerOperations.LoadBalancerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: 服務用戶端的參考。
+    content: new LoadBalancerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginCreating(serviceName, deploymentName, parameters, callback)
+  summary: 新增內部負載平衡器，以現有的部署。 時使用的輸入端點，內部負載平衡器會提供可用於負載平衡，到此部署中角色的其他私用 VIP。
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginCreating(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服務的名稱。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名稱。
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: 建立負載平衡器的作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 負載平衡器的名稱。
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: 提供的虛擬 IP 位址 (VIP) 此負載平衡器的組態。
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: 提供此負載平衡器 VIP 的型別。 目前，只有 'Private' 支援。 這會建立負載平衡服務。 私用 VIP 上。
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: 如果部署有虛擬網路內，就必須指定該虛擬網路的子網路的負載平衡器。 管理負載平衡器的 VIP，接著將會超出此子網路的 IP 位址。 如果部署存在於之外的虛擬網路中，您可以指定任何子網路和私人 VIP 將會從一般的私人位址集區的 IP 位址。
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: 如果部署有虛擬網路內，就可以指定負載平衡器子網路中的特定位址。 負載平衡器 VIP 會被此特定的 IP 位址。 如果提供的靜態虛擬網路的 IP 位址，則必須也指定負載平衡器的 SubnetName 項目。 如果部署存在於之外的虛擬網路，就可以不指定任何的靜態虛擬網路 IP 位址。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function beginCreating(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  summary: 從部署刪除內部負載平衡器。
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服務的名稱。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名稱。
+    - id: loadBalancerName
+      type:
+      - string
+      description: 負載平衡器的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: 更新現有的部署相關聯的內部負載平衡器。
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服務的名稱。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名稱。
+    - id: loadBalancerName
+      type:
+      - string
+      description: 負載平衡器名稱。
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: 提供給更新負載平衡器作業的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 負載平衡器的名稱。
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: 提供的虛擬 IP 位址 (VIP) 此負載平衡器的組態。
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: 提供此負載平衡器 VIP 的型別。 目前，只有 'Private' 支援。 這會建立負載平衡服務。 私用 VIP 上。
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: 如果部署有虛擬網路內，就必須指定該虛擬網路的子網路的負載平衡器。 管理負載平衡器的 VIP，接著將會超出此子網路的 IP 位址。 如果部署存在於之外的虛擬網路中，您可以指定任何子網路和私人 VIP 將會從一般的私人位址集區的 IP 位址。
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: 如果部署有虛擬網路內，就可以指定負載平衡器子網路中的特定位址。 負載平衡器 VIP 會被此特定的 IP 位址。 如果提供的靜態虛擬網路的 IP 位址，則必須也指定負載平衡器的 SubnetName 項目。 如果部署存在於之外的虛擬網路，就可以不指定任何的靜態虛擬網路 IP 位址。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: create(serviceName, deploymentName, parameters, callback)
+  summary: 新增內部負載平衡器，以現有的部署。 時使用的輸入端點，內部負載平衡器會提供可用於負載平衡，到此部署中角色的其他私用 VIP。
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.create(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服務的名稱。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名稱。
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: 建立負載平衡器的作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 負載平衡器的名稱。
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: 提供的虛擬 IP 位址 (VIP) 此負載平衡器的組態。
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: 提供此負載平衡器 VIP 的型別。 目前，只有 'Private' 支援。 這會建立負載平衡服務。 私用 VIP 上。
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: 如果部署有虛擬網路內，就必須指定該虛擬網路的子網路的負載平衡器。 管理負載平衡器的 VIP，接著將會超出此子網路的 IP 位址。 如果部署存在於之外的虛擬網路中，您可以指定任何子網路和私人 VIP 將會從一般的私人位址集區的 IP 位址。
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: 如果部署有虛擬網路內，就可以指定負載平衡器子網路中的特定位址。 負載平衡器 VIP 會被此特定的 IP 位址。 如果提供的靜態虛擬網路的 IP 位址，則必須也指定負載平衡器的 SubnetName 項目。 如果部署存在於之外的虛擬網路，就可以不指定任何的靜態虛擬網路 IP 位址。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function create(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  summary: 從部署刪除內部負載平衡器。
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服務的名稱。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名稱。
+    - id: loadBalancerName
+      type:
+      - string
+      description: 負載平衡器的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: 更新現有的部署相關聯的內部負載平衡器。
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服務的名稱。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名稱。
+    - id: loadBalancerName
+      type:
+      - string
+      description: 負載平衡器名稱。
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: 提供給更新負載平衡器作業的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 負載平衡器的名稱。
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: 提供的虛擬 IP 位址 (VIP) 此負載平衡器的組態。
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: 提供此負載平衡器 VIP 的型別。 目前，只有 'Private' 支援。 這會建立負載平衡服務。 私用 VIP 上。
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: 如果部署有虛擬網路內，就必須指定該虛擬網路的子網路的負載平衡器。 管理負載平衡器的 VIP，接著將會超出此子網路的 IP 位址。 如果部署存在於之外的虛擬網路中，您可以指定任何子網路和私人 VIP 將會從一般的私人位址集區的 IP 位址。
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: 如果部署有虛擬網路內，就可以指定負載平衡器子網路中的特定位址。 負載平衡器 VIP 會被此特定的 IP 位址。 如果提供的靜態虛擬網路的 IP 位址，則必須也指定負載平衡器的 SubnetName 項目。 如果部署存在於之外的虛擬網路，就可以不指定任何的靜態虛擬網路 IP 位址。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js

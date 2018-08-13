@@ -1,0 +1,929 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac1e20f410103a7d8236e85e78387bc84acda4ef
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051393"
+items:
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations
+  summary: >-
+    服務管理 API 包含用於管理服務和虛擬機器延伸模組映像，在發行者訂用帳戶中的作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。
+
+    請參閱 [extensionImages] {@link ComputeManagementClient ~ ComputeManagementClient #extensionImages}。
+
+    初始化 ExtensionImageOperations 類別的新執行個體。
+  fullName: azure-asm-compute.ExtensionImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations(client)
+  fullName: azure-asm-compute.ExtensionImageOperations.ExtensionImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: 服務用戶端的參考。
+    content: new ExtensionImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginRegistering(parameters, callback)
+  summary: 註冊新的延伸模組。 延伸模組會識別其 ProviderNamespace 和型別 （區分大小寫的字串） 的組合。 它不允許註冊具有相同識別 （也就是 ProviderNamespace 和類型的組合） 的已註冊的延伸模組的延伸模組。 若要註冊的現有擴充功能的新版本，應該使用更新延伸模組 API。
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginRegistering(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: 提供給註冊的虛擬機器延伸模組映像作業的參數。
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: 必要。 延伸的提供者命名空間。
+    - id: parameters.type
+      type:
+      - string
+      description: 必要。 延伸的型別。
+    - id: parameters.version
+      type:
+      - string
+      description: 必要。 延伸模組的版本。
+    - id: parameters.label
+      type:
+      - string
+      description: 必要。 延伸模組的同一行標籤。
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        必要。 支援的裝載資源。 它必須包含 'W' 及 （或） 'WorkerRole'。 例如
+
+        ' WebRole |WorkerRole' 或 ' WebRole |WorkerRole |VmRole'。
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: 必要。 URI 字串，指向 延伸模組的 ZIP 套件。 ZIP 套件必須包含可執行檔的擴充功能和其他支援的檔案，以及 PluginManifest.xml 資訊清單。 MediaLink 值必須指向 Azure blob 儲存體中的 URL （Http 或 Https），且可以下載。 Windows Azure 將會複製從這個來源位置的延伸模組套件，並將它複寫到所有區域。 一般的時間才能完成複寫是 20 分鐘的時間。
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: 選用。 參數的憑證來加密私用組態資料。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: 所需的憑證宣告。 如有需要，請安裝加密憑證，Windows 憑證存放區位置。 其值必須是 'LocalMachine'，如果有的話。
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: 選用。 如有需要，請安裝加密憑證，Windows 憑證存放區名稱。 其值必須為 'My' 如果存在。
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        選用。
+
+        是否需要加密的憑證指紋。
+
+        其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: 選用。 加密，如有必要的憑證指紋演算法。 其值必須是 'sha1'，如果有的話。
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: 選用。 宣告自動加入這個延伸模組，以新增每個部署的端點。
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: 選用。 此延伸模組所需的輸入端點的清單。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個輸入的端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        選用。
+
+        此延伸模組所需的內部端點的清單。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個內部端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        選用。 此延伸模組所需的執行個體輸入端點的清單。
+
+        支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個執行個體輸入的端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: 選用。 公用組態資料的 XSD 結構描述。
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: 選用。 私用組態資料的 XSD 結構描述。
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: 必要。 擴充功能的詳細的描述。
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: 選用。 發行者名稱的文字。
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: 發行者可以將它設定為任何任意的日期，這是僅供顯示之用。 如果未指定 「 發行者 」，Azure 會自動指派延伸模組要求已收到時的 UTC 時間。
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: 宣告由延伸使用客體虛擬機器的本機資源。 選用。
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: 選用。 其值必須為 'true' false' （區分大小寫） 設為 'true'，角色啟動會封鎖，直到擴充功能安裝完成時。 應為 'true' 時，角色無法啟動所安裝的延伸模組沒有設定這個旗標。 如果設定為 'false' （預設值），角色會啟動而不需等到擴充功能安裝完成。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 的延伸模組看不公開使用，也就是從 API 清單傳回。 您可以藉由參考 ProviderNamespace、 類型和版本組合仍存取。 因此內部延伸模組僅供測試用途。 其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: 選用。 擴充功能範例組態。 您可以下載的使用者，和使用者可以使用自訂的輸入參數來取代。 範例設定應該夠註解。 如果設定資料的 XML 格式，則 XML 文件層級項目必須是 'Configuration'，和選擇性的公用組態資料對應到子元素的 'PublicConfig'，而選擇性的私用組態資料對應的子系'PrivateConfig' 項目。 範例組態資料應該在由 「 發行者 」 的公用和私用組態結構描述驗證。
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: 指出是否此版本的延伸模組已複寫到所有區域與否。 如果為 true，則指定的擴充功能版本可用在建立或更新部署。 否則，給定延伸模組版本可能會造成失敗建立或更新部署。 一般的時間是新註冊或新更新的擴充功能，才能複寫完全由 Azure 的 20 分鐘。
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: 選用。 這個版本的延伸模組的 EULA （使用者授權合約） 所指向的 URL 字串。 這是選擇性地指定第三方發佈的延伸模組，而不是 Windows Azure。 如果軟體需要任何額外的 Eula，應提供使用者授權合約的連結。
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        選用。 隱私權文件的延伸版本所指向的 URL 字串。 這是選擇性地指定第三方發佈而不是 Azure 延伸模組。
+
+        如果軟體會收集任何資料和傳輸到客體虛擬機器時，可能會需要額外的隱私權文件。
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: 選用。 指向此版本的延伸模組的首頁的 URL 字串。 這是選擇性地指定第三方發佈而不是 Azure 延伸模組。 在首頁上應有使用量資訊和客戶支援連絡資訊。
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 擴充功能應該要接收 JSON 型組態。 如果這設定為 'false' 擴充功能應該會收到 XML 為基礎的組態。 其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 的延伸模組版本無法升級至與其他作用中的部署中的主要版本。 如果值為 'false' 或也存在，延伸模組版本可以升級至從任何其他版本。 不支援降級。 值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: 指出延伸模組支援 OS 的字串屬性。 目前的值為 'Windows' 或 'Linux'。
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: 包含公司/組織發行延伸模組名稱的字串屬性。
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: 包含所需的配量的區域名稱的字串屬性。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function beginRegistering(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUnregistering(providerNamespace, type, version, callback)
+  summary: >-
+    取消註冊先前註冊使用註冊的擴充功能或更新延伸模組 Api 延伸模組的版本。 延伸模組版本識別其 ProviderNamespace、 類型和版本註冊擴充功能時指定的組合。
+
+    取消註冊只允許用於內部延伸模組，也就是擴充功能的 IsInternalExtension 欄位設定為 'true' 或更新期間註冊。 每個訂用帳戶註冊的延伸模組的數目沒有配額 (15)。 如果您的訂用帳戶用盡配額，您將會排除需要取消註冊部分內部延伸模組，或連絡 Azure （成為發行者所使用的相同電子郵件） 增加配額。
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUnregistering(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: 若要取消註冊的延伸模組映像提供者命名空間。
+    - id: type
+      type:
+      - string
+      description: 若要取消註冊延伸模組映像的類型。
+    - id: version
+      type:
+      - string
+      description: 若要取消註冊的延伸模組映像的版本。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function beginUnregistering(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUpdating(parameters, callback)
+  summary: 更新新的延伸模組。 它允許更新延伸模組，必須使用相同的身分識別 （也就是 ProviderNamespace 和類型的組合），但使用不同的版本已經註冊。 如果要更新的延伸模組有尚未註冊之前, 的身分識別，它將會失敗，或已經有相同的身分識別與相同版本的延伸模組。
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUpdating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: 更新虛擬機器延伸模組映像作業提供的參數。
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: 必要。 延伸的提供者命名空間。
+    - id: parameters.type
+      type:
+      - string
+      description: 必要。 延伸的型別。
+    - id: parameters.version
+      type:
+      - string
+      description: 必要。 延伸模組的版本。
+    - id: parameters.label
+      type:
+      - string
+      description: 必要。 延伸模組的同一行標籤。
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        必要。 支援的裝載資源。 它必須包含 'W' 及 （或） 'WorkerRole'。 例如
+
+        ' WebRole |WorkerRole' 或 ' WebRole |WorkerRole |VmRole'。
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: 必要。 URI 字串，指向 延伸模組的 ZIP 套件。 ZIP 套件必須包含可執行檔的擴充功能和其他支援的檔案，以及 PluginManifest.xml 資訊清單。 MediaLink 值必須指向 Azure blob 儲存體中的 URL （Http 或 Https），且可以下載。 Windows Azure 將會複製從這個來源位置的延伸模組套件，並將它複寫到所有區域。 一般的時間才能完成複寫是 20 分鐘的時間。
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: 選用。 參數的憑證來加密私用組態資料。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: 所需的憑證宣告。 如有需要，請安裝加密憑證，Windows 憑證存放區位置。 其值必須是 'LocalMachine'，如果有的話。
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: 選用。 如有需要，請安裝加密憑證，Windows 憑證存放區名稱。 其值必須為 'My' 如果存在。
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        選用。
+
+        是否需要加密的憑證指紋。
+
+        其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: 選用。 加密，如有必要的憑證指紋演算法。 其值必須是 'sha1'，如果有的話。
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: 選用。 宣告自動加入這個延伸模組，以新增每個部署的端點。
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: 選用。 此延伸模組所需的輸入端點的清單。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個輸入的端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        選用。
+
+        此延伸模組所需的內部端點的清單。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個內部端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        選用。 此延伸模組所需的執行個體輸入端點的清單。
+
+        支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個執行個體輸入的端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: 選用。 公用組態資料的 XSD 結構描述。
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: 選用。 私用組態資料的 XSD 結構描述。
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: 必要。 擴充功能的詳細的描述。
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: 選用。 發行者名稱的文字。
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: 發行者可以將它設定為任何任意的日期，這是僅供顯示之用。 如果未指定 「 發行者 」，Azure 會自動指派延伸模組要求已收到時的 UTC 時間。
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: 宣告由延伸使用客體虛擬機器的本機資源。 選用。
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: 選用。 其值必須為 'true' false' （區分大小寫） 設為 'true'，角色啟動會封鎖，直到擴充功能安裝完成時。 應為 'true' 時，角色無法啟動所安裝的延伸模組沒有設定這個旗標。 如果設定為 'false' （預設值），角色會啟動而不需等到擴充功能安裝完成。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 的延伸模組看不公開使用，也就是從 API 清單傳回。 您可以藉由參考 ProviderNamespace、 類型和版本組合仍存取。 因此內部延伸模組僅供測試用途。 其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: 選用。 擴充功能範例組態。 您可以下載的使用者，和使用者可以使用自訂的輸入參數來取代。 範例設定應該夠註解。 如果設定資料的 XML 格式，則 XML 文件層級項目必須是 'Configuration'，和選擇性的公用組態資料對應到子元素的 'PublicConfig'，而選擇性的私用組態資料對應的子系'PrivateConfig' 項目。 範例組態資料應該在由 「 發行者 」 的公用和私用組態結構描述驗證。
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: 指出是否此版本的延伸模組已複寫到所有區域與否。 如果為 true，則指定的擴充功能版本可用在建立或更新部署。 否則，給定延伸模組版本可能會造成失敗建立或更新部署。 一般的時間是新註冊或新更新的擴充功能，才能複寫完全由 Azure 的 20 分鐘。
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: 選用。 這個版本的延伸模組的 EULA （使用者授權合約） 所指向的 URL 字串。 這是選擇性地指定第三方發佈的延伸模組，而不是 Windows Azure。 如果軟體需要任何額外的 Eula，應提供使用者授權合約的連結。
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        選用。 隱私權文件的延伸版本所指向的 URL 字串。 這是選擇性地指定第三方發佈而不是 Azure 延伸模組。
+
+        如果軟體會收集任何資料和傳輸到客體虛擬機器時，可能會需要額外的隱私權文件。
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: 選用。 指向此版本的延伸模組的首頁的 URL 字串。 這是選擇性地指定第三方發佈而不是 Azure 延伸模組。 在首頁上應有使用量資訊和客戶支援連絡資訊。
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 擴充功能應該要接收 JSON 型組態。 如果這設定為 'false' 擴充功能應該會收到 XML 為基礎的組態。 其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 的延伸模組版本無法升級至與其他作用中的部署中的主要版本。 如果值為 'false' 或也存在，延伸模組版本可以升級至從任何其他版本。 不支援降級。 值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: 指出延伸模組支援 OS 的字串屬性。 目前的值為 'Windows' 或 'Linux'。
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: 包含公司/組織發行延伸模組名稱的字串屬性。
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: 包含所需的配量的區域名稱的字串屬性。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function beginUpdating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: register(parameters, callback)
+  summary: 註冊新的延伸模組。 延伸模組會識別其 ProviderNamespace 和型別 （區分大小寫的字串） 的組合。 它不允許註冊具有相同識別 （也就是 ProviderNamespace 和類型的組合） 的已註冊的延伸模組的延伸模組。 若要註冊的現有擴充功能的新版本，應該使用更新延伸模組 API。
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.register(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: 提供給註冊的虛擬機器延伸模組映像作業的參數。
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: 必要。 延伸的提供者命名空間。
+    - id: parameters.type
+      type:
+      - string
+      description: 必要。 延伸的型別。
+    - id: parameters.version
+      type:
+      - string
+      description: 必要。 延伸模組的版本。
+    - id: parameters.label
+      type:
+      - string
+      description: 必要。 延伸模組的同一行標籤。
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        必要。 支援的裝載資源。 它必須包含 'W' 及 （或） 'WorkerRole'。 例如
+
+        ' WebRole |WorkerRole' 或 ' WebRole |WorkerRole |VmRole'。
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: 必要。 URI 字串，指向 延伸模組的 ZIP 套件。 ZIP 套件必須包含可執行檔的擴充功能和其他支援的檔案，以及 PluginManifest.xml 資訊清單。 MediaLink 值必須指向 Azure blob 儲存體中的 URL （Http 或 Https），且可以下載。 Windows Azure 將會複製從這個來源位置的延伸模組套件，並將它複寫到所有區域。 一般的時間才能完成複寫是 20 分鐘的時間。
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: 選用。 參數的憑證來加密私用組態資料。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: 所需的憑證宣告。 如有需要，請安裝加密憑證，Windows 憑證存放區位置。 其值必須是 'LocalMachine'，如果有的話。
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: 選用。 如有需要，請安裝加密憑證，Windows 憑證存放區名稱。 其值必須為 'My' 如果存在。
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        選用。
+
+        是否需要加密的憑證指紋。
+
+        其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: 選用。 加密，如有必要的憑證指紋演算法。 其值必須是 'sha1'，如果有的話。
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: 選用。 宣告自動加入這個延伸模組，以新增每個部署的端點。
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: 選用。 此延伸模組所需的輸入端點的清單。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個輸入的端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        選用。
+
+        此延伸模組所需的內部端點的清單。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個內部端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        選用。 此延伸模組所需的執行個體輸入端點的清單。
+
+        支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個執行個體輸入的端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: 選用。 公用組態資料的 XSD 結構描述。
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: 選用。 私用組態資料的 XSD 結構描述。
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: 必要。 擴充功能的詳細的描述。
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: 選用。 發行者名稱的文字。
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: 發行者可以將它設定為任何任意的日期，這是僅供顯示之用。 如果未指定 「 發行者 」，Azure 會自動指派延伸模組要求已收到時的 UTC 時間。
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: 宣告由延伸使用客體虛擬機器的本機資源。 選用。
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: 選用。 其值必須為 'true' false' （區分大小寫） 設為 'true'，角色啟動會封鎖，直到擴充功能安裝完成時。 應為 'true' 時，角色無法啟動所安裝的延伸模組沒有設定這個旗標。 如果設定為 'false' （預設值），角色會啟動而不需等到擴充功能安裝完成。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 的延伸模組看不公開使用，也就是從 API 清單傳回。 您可以藉由參考 ProviderNamespace、 類型和版本組合仍存取。 因此內部延伸模組僅供測試用途。 其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: 選用。 擴充功能範例組態。 您可以下載的使用者，和使用者可以使用自訂的輸入參數來取代。 範例設定應該夠註解。 如果設定資料的 XML 格式，則 XML 文件層級項目必須是 'Configuration'，和選擇性的公用組態資料對應到子元素的 'PublicConfig'，而選擇性的私用組態資料對應的子系'PrivateConfig' 項目。 範例組態資料應該在由 「 發行者 」 的公用和私用組態結構描述驗證。
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: 指出是否此版本的延伸模組已複寫到所有區域與否。 如果為 true，則指定的擴充功能版本可用在建立或更新部署。 否則，給定延伸模組版本可能會造成失敗建立或更新部署。 一般的時間是新註冊或新更新的擴充功能，才能複寫完全由 Azure 的 20 分鐘。
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: 選用。 這個版本的延伸模組的 EULA （使用者授權合約） 所指向的 URL 字串。 這是選擇性地指定第三方發佈的延伸模組，而不是 Windows Azure。 如果軟體需要任何額外的 Eula，應提供使用者授權合約的連結。
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        選用。 隱私權文件的延伸版本所指向的 URL 字串。 這是選擇性地指定第三方發佈而不是 Azure 延伸模組。
+
+        如果軟體會收集任何資料和傳輸到客體虛擬機器時，可能會需要額外的隱私權文件。
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: 選用。 指向此版本的延伸模組的首頁的 URL 字串。 這是選擇性地指定第三方發佈而不是 Azure 延伸模組。 在首頁上應有使用量資訊和客戶支援連絡資訊。
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 擴充功能應該要接收 JSON 型組態。 如果這設定為 'false' 擴充功能應該會收到 XML 為基礎的組態。 其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 的延伸模組版本無法升級至與其他作用中的部署中的主要版本。 如果值為 'false' 或也存在，延伸模組版本可以升級至從任何其他版本。 不支援降級。 值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: 指出延伸模組支援 OS 的字串屬性。 目前的值為 'Windows' 或 'Linux'。
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: 包含公司/組織發行延伸模組名稱的字串屬性。
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: 包含所需的配量的區域名稱的字串屬性。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function register(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: unregister(providerNamespace, type, version, callback)
+  summary: >-
+    取消註冊先前註冊使用註冊的擴充功能或更新延伸模組 Api 延伸模組的版本。 延伸模組版本識別其 ProviderNamespace、 類型和版本註冊擴充功能時指定的組合。
+
+    取消註冊只允許用於內部延伸模組，也就是擴充功能的 IsInternalExtension 欄位設定為 'true' 或更新期間註冊。 每個訂用帳戶註冊的延伸模組的數目沒有配額 (15)。 如果您的訂用帳戶用盡配額，您將會排除需要取消註冊部分內部延伸模組，或連絡 Azure （成為發行者所使用的相同電子郵件） 增加配額。
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.unregister(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: 若要取消註冊的延伸模組映像提供者命名空間。
+    - id: type
+      type:
+      - string
+      description: 若要取消註冊延伸模組映像的類型。
+    - id: version
+      type:
+      - string
+      description: 若要取消註冊的延伸模組映像的版本。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function unregister(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: update(parameters, callback)
+  summary: 更新新的延伸模組。 它允許更新延伸模組，必須使用相同的身分識別 （也就是 ProviderNamespace 和類型的組合），但使用不同的版本已經註冊。 如果要更新的延伸模組有尚未註冊之前, 的身分識別，它將會失敗，或已經有相同的身分識別與相同版本的延伸模組。
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.update(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: 更新虛擬機器延伸模組映像作業提供的參數。
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: 必要。 延伸的提供者命名空間。
+    - id: parameters.type
+      type:
+      - string
+      description: 必要。 延伸的型別。
+    - id: parameters.version
+      type:
+      - string
+      description: 必要。 延伸模組的版本。
+    - id: parameters.label
+      type:
+      - string
+      description: 必要。 延伸模組的同一行標籤。
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        必要。 支援的裝載資源。 它必須包含 'W' 及 （或） 'WorkerRole'。 例如
+
+        ' WebRole |WorkerRole' 或 ' WebRole |WorkerRole |VmRole'。
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: 必要。 URI 字串，指向 延伸模組的 ZIP 套件。 ZIP 套件必須包含可執行檔的擴充功能和其他支援的檔案，以及 PluginManifest.xml 資訊清單。 MediaLink 值必須指向 Azure blob 儲存體中的 URL （Http 或 Https），且可以下載。 Windows Azure 將會複製從這個來源位置的延伸模組套件，並將它複寫到所有區域。 一般的時間才能完成複寫是 20 分鐘的時間。
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: 選用。 參數的憑證來加密私用組態資料。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: 所需的憑證宣告。 如有需要，請安裝加密憑證，Windows 憑證存放區位置。 其值必須是 'LocalMachine'，如果有的話。
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: 選用。 如有需要，請安裝加密憑證，Windows 憑證存放區名稱。 其值必須為 'My' 如果存在。
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        選用。
+
+        是否需要加密的憑證指紋。
+
+        其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: 選用。 加密，如有必要的憑證指紋演算法。 其值必須是 'sha1'，如果有的話。
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: 選用。 宣告自動加入這個延伸模組，以新增每個部署的端點。
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: 選用。 此延伸模組所需的輸入端點的清單。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個輸入的端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        選用。
+
+        此延伸模組所需的內部端點的清單。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個內部端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        選用。 此延伸模組所需的執行個體輸入端點的清單。
+
+        支援的 WebRole 或 WorkerRole，但忽略在 VmRole。 每個執行個體輸入的端點會自動新增至服務定義，使用此延伸模組的部署。
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: 選用。 公用組態資料的 XSD 結構描述。
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: 選用。 私用組態資料的 XSD 結構描述。
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: 必要。 擴充功能的詳細的描述。
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: 選用。 發行者名稱的文字。
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: 發行者可以將它設定為任何任意的日期，這是僅供顯示之用。 如果未指定 「 發行者 」，Azure 會自動指派延伸模組要求已收到時的 UTC 時間。
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: 宣告由延伸使用客體虛擬機器的本機資源。 選用。
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: 選用。 其值必須為 'true' false' （區分大小寫） 設為 'true'，角色啟動會封鎖，直到擴充功能安裝完成時。 應為 'true' 時，角色無法啟動所安裝的延伸模組沒有設定這個旗標。 如果設定為 'false' （預設值），角色會啟動而不需等到擴充功能安裝完成。 支援的 WebRole 或 WorkerRole，但忽略在 VmRole。
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 的延伸模組看不公開使用，也就是從 API 清單傳回。 您可以藉由參考 ProviderNamespace、 類型和版本組合仍存取。 因此內部延伸模組僅供測試用途。 其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: 選用。 擴充功能範例組態。 您可以下載的使用者，和使用者可以使用自訂的輸入參數來取代。 範例設定應該夠註解。 如果設定資料的 XML 格式，則 XML 文件層級項目必須是 'Configuration'，和選擇性的公用組態資料對應到子元素的 'PublicConfig'，而選擇性的私用組態資料對應的子系'PrivateConfig' 項目。 範例組態資料應該在由 「 發行者 」 的公用和私用組態結構描述驗證。
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: 指出是否此版本的延伸模組已複寫到所有區域與否。 如果為 true，則指定的擴充功能版本可用在建立或更新部署。 否則，給定延伸模組版本可能會造成失敗建立或更新部署。 一般的時間是新註冊或新更新的擴充功能，才能複寫完全由 Azure 的 20 分鐘。
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: 選用。 這個版本的延伸模組的 EULA （使用者授權合約） 所指向的 URL 字串。 這是選擇性地指定第三方發佈的延伸模組，而不是 Windows Azure。 如果軟體需要任何額外的 Eula，應提供使用者授權合約的連結。
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        選用。 隱私權文件的延伸版本所指向的 URL 字串。 這是選擇性地指定第三方發佈而不是 Azure 延伸模組。
+
+        如果軟體會收集任何資料和傳輸到客體虛擬機器時，可能會需要額外的隱私權文件。
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: 選用。 指向此版本的延伸模組的首頁的 URL 字串。 這是選擇性地指定第三方發佈而不是 Azure 延伸模組。 在首頁上應有使用量資訊和客戶支援連絡資訊。
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 擴充功能應該要接收 JSON 型組態。 如果這設定為 'false' 擴充功能應該會收到 XML 為基礎的組態。 其值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: 選用。 如果這設定為 'true' 的延伸模組版本無法升級至與其他作用中的部署中的主要版本。 如果值為 'false' 或也存在，延伸模組版本可以升級至從任何其他版本。 不支援降級。 值必須是 'true' false' （區分大小寫） 是否存在。
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: 指出延伸模組支援 OS 的字串屬性。 目前的值為 'Windows' 或 'Linux'。
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: 包含公司/組織發行延伸模組名稱的字串屬性。
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: 包含所需的配量的區域名稱的字串屬性。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 回應資料流。
+    content: function update(parameters, callback)
+  langs:
+  - js

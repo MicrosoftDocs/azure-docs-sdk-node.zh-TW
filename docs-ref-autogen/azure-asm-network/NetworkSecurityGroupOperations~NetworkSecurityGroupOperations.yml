@@ -1,0 +1,1152 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 42550b3f75a96f50d384b41ec4fd67f92fa68929
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051385"
+items:
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: NetworkSecurityGroupOperations
+  summary: >-
+    網路管理 API 包含管理網路安全性群組，您的訂用帳戶的作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [NetworkManagementClient] {@link NetworkManagementClient ~ NetworkManagementClient}。
+
+    請參閱 [networkSecurityGroups] {@link NetworkManagementClient ~ NetworkManagementClient #networkSecurityGroups}。
+
+    初始化 NetworkSecurityGroupOperations 類別的新執行個體。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations
+  type: Class
+  children:
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.#ctor
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#abortMigration
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToNetworkInterface
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToRole
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToSubnet
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAbortMigration
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCommitMigration
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginPrepareMigration
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#commitMigration
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#create
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteMethod
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteRule
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#prepareMigration
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromNetworkInterface
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromRole
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromSubnet
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#setRule
+  - azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#validateMigration
+  langs:
+  - js
+- id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.#ctor
+  uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.#ctor
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: NetworkSecurityGroupOperations(client)
+  fullName: azure-asm-network.NetworkSecurityGroupOperations.NetworkSecurityGroupOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedNetworkManagementClient
+      description: 服務用戶端的參考。
+    content: new NetworkSecurityGroupOperations(client)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#abortMigration
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#abortMigration
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: abortMigration(networkSecurityGroupName, callback)
+  summary: 中止 resservedIP 移轉 api 驗證，並與 ARM 的移轉，以將 IaaS Classic 中止指定的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.abortMigration(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要移轉的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function abortMigration(networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToNetworkInterface
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToNetworkInterface
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: addToNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, parameters, callback)
+  summary: 將網路安全性群組新增至網路介面。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.addToNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: networkInterfaceName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecurityGroupAddAssociationParameters
+      description: 要新增網路安全性群組的網路介面的作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定此訂用帳戶的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function addToNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToRole
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToRole
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: addToRole(serviceName, deploymentName, roleName, parameters, callback)
+  summary: 將網路安全性群組新增至角色。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.addToRole(serviceName, deploymentName, roleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecurityGroupAddAssociationParameters
+      description: 若要將網路安全性群組新增至角色 」 作業所提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定此訂用帳戶的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function addToRole(serviceName, deploymentName, roleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToSubnet
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#addToSubnet
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: addToSubnet(virtualNetworkName, subnetName, parameters, callback)
+  summary: 將網路安全性群組新增至子網路。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.addToSubnet(virtualNetworkName, subnetName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: virtualNetworkName
+      type:
+      - string
+      description: ''
+    - id: subnetName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecurityGroupAddAssociationParameters
+      description: 若要將網路安全性群組新增至子網路的作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定此訂用帳戶的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function addToSubnet(virtualNetworkName, subnetName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAbortMigration
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAbortMigration
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginAbortMigration(networkSecurityGroupName, callback)
+  summary: 中止 resservedIP 移轉 api 驗證，並與 ARM 的移轉，以將 IaaS Classic 中止指定的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginAbortMigration(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要移轉的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginAbortMigration(networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToNetworkInterface
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginAddingToNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, parameters, callback)
+  summary: 將網路安全性群組新增至網路介面。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginAddingToNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: networkInterfaceName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecurityGroupAddAssociationParameters
+      description: 要新增網路安全性群組的網路介面的作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定此訂用帳戶的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginAddingToNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToRole
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginAddingToRole(serviceName, deploymentName, roleName, parameters, callback)
+  summary: 將網路安全性群組新增至角色。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginAddingToRole(serviceName, deploymentName, roleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecurityGroupAddAssociationParameters
+      description: 若要將網路安全性群組新增至角色 」 作業所提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定此訂用帳戶的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginAddingToRole(serviceName, deploymentName, roleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginAddingToSubnet
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginAddingToSubnet(virtualNetworkName, subnetName, parameters, callback)
+  summary: 將網路安全性群組新增至子網路。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginAddingToSubnet(virtualNetworkName, subnetName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: virtualNetworkName
+      type:
+      - string
+      description: ''
+    - id: subnetName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecurityGroupAddAssociationParameters
+      description: 若要將網路安全性群組新增至子網路的作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定此訂用帳戶的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginAddingToSubnet(virtualNetworkName, subnetName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCommitMigration
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCommitMigration
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginCommitMigration(networkSecurityGroupName, callback)
+  summary: 認可 resservedIP 移轉 api 會驗證和認可 ARM 移轉以將 IaaS Classic 指定的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginCommitMigration(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要移轉的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginCommitMigration(networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginCreating
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginCreating(parameters, callback)
+  summary: 建立新的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecurityGroupCreateParameters
+      description: 建立網路安全性群組的作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定網路安全性群組，都是唯一的訂用帳戶的名稱。
+    - id: parameters.label
+      type:
+      - string
+      description: 取得或設定網路安全性群組的描述。 描述可以有最多 1024 個字元的長度。
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: 取得或設定將會在當中建立網路安全性群組的資料中心位置。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeleting
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginDeleting(networkSecurityGroupName, callback)
+  summary: 從您的訂用帳戶中刪除 pecified 的網路安全性群組。如果仍然與一些 VM/角色/子網路相關聯的網路安全性群組，則刪除將會失敗。 若要成功刪除網路安全性，它必須不能使用。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginDeleting(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要刪除網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginDeleting(networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginDeletingRule
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginDeletingRule(networkSecurityGroupName, ruleName, callback)
+  summary: 從指定的網路安全性群組中刪除規則。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginDeletingRule(networkSecurityGroupName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 網路安全性群組的名稱。
+    - id: ruleName
+      type:
+      - string
+      description: 若要刪除規則的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginDeletingRule(networkSecurityGroupName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginPrepareMigration
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginPrepareMigration
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginPrepareMigration(networkSecurityGroupName, callback)
+  summary: 準備 resservedIP 移轉 api 會驗證並準備 ARM 移轉以將 IaaS Classic 指定的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginPrepareMigration(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要移轉的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginPrepareMigration(networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromNetworkInterface
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginRemovingFromNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, networkSecurityGroupName, callback)
+  summary: 從網路介面移除網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginRemovingFromNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: networkInterfaceName
+      type:
+      - string
+      description: ''
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginRemovingFromNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromRole
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginRemovingFromRole(serviceName, deploymentName, roleName, networkSecurityGroupName, callback)
+  summary: 從角色移除網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginRemovingFromRole(serviceName, deploymentName, roleName, networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginRemovingFromRole(serviceName, deploymentName, roleName, networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginRemovingFromSubnet
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginRemovingFromSubnet(virtualNetworkName, subnetName, networkSecurityGroupName, callback)
+  summary: 移除網路安全性群組與子網路。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginRemovingFromSubnet(virtualNetworkName, subnetName, networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: virtualNetworkName
+      type:
+      - string
+      description: ''
+    - id: subnetName
+      type:
+      - string
+      description: ''
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginRemovingFromSubnet(virtualNetworkName, subnetName, networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#beginSettingRule
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: beginSettingRule(networkSecurityGroupName, ruleName, parameters, callback)
+  summary: 將新的網路安全性規則，設定現有的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.beginSettingRule(networkSecurityGroupName, ruleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: ruleName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecuritySetRuleParameters
+      description: 設定網路安全性規則作業提供的參數。
+    - id: parameters.type
+      type:
+      - string
+      description: 取得或設定類型的規則。 可能的值： 輸入 （要比對輸入流量）、 （要比對輸出流量） 的輸出。
+    - id: parameters.priority
+      type:
+      - number
+      description: 取得或設定優先權。 值從 100 – 4096。
+    - id: parameters.action
+      type:
+      - string
+      description: 取得或設定動作。 允許/拒絕。 是否要允許或拒絕流量。
+    - id: parameters.sourceAddressPrefix
+      type:
+      - string
+      description: 取得或設定 SourceAddressPrefix。 來源流量的來源 IP CIDR 值。 您可以指定星號 （*） 將所有流量或其中一個預先定義的標記
+    - id: parameters.sourcePortRange
+      type:
+      - string
+      description: 取得或設定來源連接埠 （單一連接埠） 或來源的連接埠範圍 (以分隔的"-") 或星號 （*） 的所有連接埠。 所有數字都包含在內。 範例： 80，80 80、 80 81，*
+    - id: parameters.destinationAddressPrefix
+      type:
+      - string
+      description: 取得或設定 DestinationAddressPrefix。 來源流量的目的地 IP CIDR 值。 您可以指定星號 （*） 將所有流量或其中一個預先定義的標記。
+    - id: parameters.destinationPortRange
+      type:
+      - string
+      description: 取得或設定目的地連接埠 （單一連接埠） 或目的地連接埠範圍 (以分隔的"-") 或星號 （*） 的所有連接埠。 所有數字都包含在內。 範例： 80，80 80、 80 81，*
+    - id: parameters.protocol
+      type:
+      - string
+      description: 取得或設定通訊協定。 TCP、 UDP *。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function beginSettingRule(networkSecurityGroupName, ruleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#commitMigration
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#commitMigration
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: commitMigration(networkSecurityGroupName, callback)
+  summary: 認可 resservedIP 移轉 api 會驗證和認可 ARM 移轉以將 IaaS Classic 指定的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.commitMigration(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要移轉的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function commitMigration(networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#create
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#create
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: create(parameters, callback)
+  summary: 建立新的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecurityGroupCreateParameters
+      description: 建立網路安全性群組的作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定網路安全性群組，都是唯一的訂用帳戶的名稱。
+    - id: parameters.label
+      type:
+      - string
+      description: 取得或設定網路安全性群組的描述。 描述可以有最多 1024 個字元的長度。
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: 取得或設定將會在當中建立網路安全性群組的資料中心位置。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteMethod
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteMethod
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: deleteMethod(networkSecurityGroupName, callback)
+  summary: 刪除網路安全性群組 」 作業會移除您訂用帳戶中的 thespecified 網路安全性群組。如果仍然與一些 VM/角色/子網路相關聯的網路安全性群組，則刪除將會失敗。 若要成功刪除網路安全性，它必須不能使用。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.deleteMethod(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要刪除網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function deleteMethod(networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteRule
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#deleteRule
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: deleteRule(networkSecurityGroupName, ruleName, callback)
+  summary: 刪除網路安全性規則的作業會移除指定的網路安全性群組中的規則。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.deleteRule(networkSecurityGroupName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 網路安全性群組的名稱。
+    - id: ruleName
+      type:
+      - string
+      description: 若要刪除規則的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function deleteRule(networkSecurityGroupName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#get
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: get(networkSecurityGroupName, detailLevel, callback)
+  summary: 取得訂用帳戶中的指定網路安全性群組的詳細資料。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.get(networkSecurityGroupName, detailLevel, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 網路安全性群組，若要擷取的名稱。
+    - id: detailLevel
+      type:
+      - string
+      description: 您可以使用 'Full'，列出規則。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function get(networkSecurityGroupName, detailLevel, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForNetworkInterface
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: getForNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, callback)
+  summary: 取得網路安全性群組套用至特定網路介面。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.getForNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: networkInterfaceName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function getForNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForRole
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: getForRole(serviceName, deploymentName, roleName, callback)
+  summary: 取得網路安全性群組套用至特定的角色。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.getForRole(serviceName, deploymentName, roleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function getForRole(serviceName, deploymentName, roleName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#getForSubnet
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: getForSubnet(virtualNetworkName, subnetName, callback)
+  summary: 取得網路安全性群組套用至特定子網路。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.getForSubnet(virtualNetworkName, subnetName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: virtualNetworkName
+      type:
+      - string
+      description: ''
+    - id: subnetName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function getForSubnet(virtualNetworkName, subnetName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#list
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: list(callback)
+  summary: 列出所有的網路安全性群組，訂用帳戶。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#prepareMigration
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#prepareMigration
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: prepareMigration(networkSecurityGroupName, callback)
+  summary: 準備 resservedIP 移轉 api 會驗證並準備 ARM 移轉以將 IaaS Classic 指定的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.prepareMigration(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要移轉的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function prepareMigration(networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromNetworkInterface
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromNetworkInterface
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: removeFromNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, networkSecurityGroupName, callback)
+  summary: 從網路介面移除網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.removeFromNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: networkInterfaceName
+      type:
+      - string
+      description: ''
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function removeFromNetworkInterface(serviceName, deploymentName, roleName, networkInterfaceName, networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromRole
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromRole
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: removeFromRole(serviceName, deploymentName, roleName, networkSecurityGroupName, callback)
+  summary: 從角色移除網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.removeFromRole(serviceName, deploymentName, roleName, networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: roleName
+      type:
+      - string
+      description: ''
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function removeFromRole(serviceName, deploymentName, roleName, networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromSubnet
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#removeFromSubnet
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: removeFromSubnet(virtualNetworkName, subnetName, networkSecurityGroupName, callback)
+  summary: 移除網路安全性群組與子網路。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.removeFromSubnet(virtualNetworkName, subnetName, networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: virtualNetworkName
+      type:
+      - string
+      description: ''
+    - id: subnetName
+      type:
+      - string
+      description: ''
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function removeFromSubnet(virtualNetworkName, subnetName, networkSecurityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#setRule
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#setRule
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: setRule(networkSecurityGroupName, ruleName, parameters, callback)
+  summary: 將新的網路安全性規則新增至現有的網路安全性群組。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.setRule(networkSecurityGroupName, ruleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: ruleName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkSecuritySetRuleParameters
+      description: 設定網路安全性規則作業提供的參數。
+    - id: parameters.type
+      type:
+      - string
+      description: 取得或設定類型的規則。 可能的值： 輸入 （要比對輸入流量）、 （要比對輸出流量） 的輸出。
+    - id: parameters.priority
+      type:
+      - number
+      description: 取得或設定優先權。 值從 100 – 4096。
+    - id: parameters.action
+      type:
+      - string
+      description: 取得或設定動作。 允許/拒絕。 是否要允許或拒絕流量。
+    - id: parameters.sourceAddressPrefix
+      type:
+      - string
+      description: 取得或設定 SourceAddressPrefix。 來源流量的來源 IP CIDR 值。 您可以指定星號 （*） 將所有流量或其中一個預先定義的標記
+    - id: parameters.sourcePortRange
+      type:
+      - string
+      description: 取得或設定來源連接埠 （單一連接埠） 或來源的連接埠範圍 (以分隔的"-") 或星號 （*） 的所有連接埠。 所有數字都包含在內。 範例： 80，80 80、 80 81，*
+    - id: parameters.destinationAddressPrefix
+      type:
+      - string
+      description: 取得或設定 DestinationAddressPrefix。 來源流量的目的地 IP CIDR 值。 您可以指定星號 （*） 將所有流量或其中一個預先定義的標記。
+    - id: parameters.destinationPortRange
+      type:
+      - string
+      description: 取得或設定目的地連接埠 （單一連接埠） 或目的地連接埠範圍 (以分隔的"-") 或星號 （*） 的所有連接埠。 所有數字都包含在內。 範例： 80，80 80、 80 81，*
+    - id: parameters.protocol
+      type:
+      - string
+      description: 取得或設定通訊協定。 TCP、 UDP *。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function setRule(networkSecurityGroupName, ruleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#validateMigration
+  id: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations#validateMigration
+  parent: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations
+  name: validateMigration(networkSecurityGroupName, callback)
+  summary: 驗證網路安全性群組移轉 api 以將 IaaS Classic 驗證指定的網路安全性群組與 ARM 的移轉。
+  fullName: azure-asm-network.NetworkSecurityGroupOperations~NetworkSecurityGroupOperations.validateMigration(networkSecurityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkSecurityGroupName
+      type:
+      - string
+      description: 若要移轉的網路安全性群組的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: 回應資料流。
+    content: function validateMigration(networkSecurityGroupName, callback)
+  langs:
+  - js

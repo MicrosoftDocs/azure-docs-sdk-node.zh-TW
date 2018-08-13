@@ -1,0 +1,442 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 94474b9236dc6e17df2e02d3d799841deb9f8621
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051539"
+items:
+- uid: azure-sb.ApnsService
+  id: azure-sb.ApnsService
+  name: ApnsService
+  summary: >-
+    ApnsService 類別用來使用 Apple Push Notification Service (APNS) 傳送通知。
+
+    這項服務用來與 iOS 裝置進行通訊。
+  fullName: azure-sb.ApnsService
+  type: Class
+  children:
+  - azure-sb.ApnsService.#ctor
+  - azure-sb.ApnsService#send
+  - azure-sb.ApnsService#createNativeRegistration
+  - azure-sb.ApnsService#createOrUpdateNativeRegistration
+  - azure-sb.ApnsService#createTemplateRegistration
+  - azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  - azure-sb.ApnsService#updateTemplateRegistration
+  - azure-sb.ApnsService#listRegistrationsByToken
+  langs:
+  - js
+- id: azure-sb.ApnsService.#ctor
+  uid: azure-sb.ApnsService.#ctor
+  parent: azure-sb.ApnsService
+  name: ApnsService(notificationHubService)
+  fullName: azure-sb.ApnsService.ApnsService(notificationHubService)
+  summary: >-
+    建立新的 ApnsService 物件，使用指定<xref:azure-sb.NotificationHubService>物件。
+
+
+
+    __附註__： 此物件的執行個體時，自動建立<xref:azure-sb.NotificationHubService>建立物件。 請參閱 <xref:azure-sb.NotificationHubService%23apns>。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: 通知中樞服務。
+    content: new ApnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#send
+  id: azure-sb.ApnsService#send
+  parent: azure-sb.ApnsService
+  name: send(tags, payload, optionsOrCallback, callback)
+  summary: 傳送 APNS 通知。
+  fullName: azure-sb.ApnsService.send(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        單一標記或標記運算式中。
+
+        如果是 null 會廣播到此中樞內的所有註冊
+    - id: payload
+      type:
+      - object
+      - string
+      description: >-
+        訊息的 JSON 承載所述的下方。
+
+        如果裝載為字串時，請遵循與 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: payload.expiry
+      type:
+      - date
+      description: 到期日。 (在 W3C DTF，YYYY-MM-DDThh:mmTZD (例如 1997年-07-16T19:20 + 01:00))
+      optional: true
+    - id: payload.aps
+      type:
+      - object
+      description: 如果提供 'ap' 成員，則物件會傳遞到為 APNS-已處理到期之後。 物件被假設會跟在 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: payload.badge
+      type:
+      - number
+      description: 如果 'ap' 成員未提供，要在應用程式圖示上顯示的數字。
+      optional: true
+    - id: payload.alert
+      type:
+      - string
+      description: 如果 'ap' 成員未提供，警示的文字。
+      optional: true
+    - id: payload.sound
+      type:
+      - string
+      description: 如果未提供 'ap' 成員，音效檔案名稱。
+      optional: true
+    - id: payload.payload
+      type:
+      - object
+      description: 如果 'ap' 成員未提供，包含通知文字的裝載物件。
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: 要求選項或回呼函式。
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Apns 標頭中。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。'
+    content: function send(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createNativeRegistration
+  id: azure-sb.ApnsService#createNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createNativeRegistration(token, tags, options, callback)
+  summary: 建立原生註冊。
+  fullName: azure-sb.ApnsService.createNativeRegistration(token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: 裝置權杖。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 標記 （逗號分隔清單，不含空格）。
+    - id: options
+      type:
+      - object
+      description: 要求選項
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。'
+    content: function createNativeRegistration(token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  id: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  summary: 建立或更新原生註冊。
+  fullName: azure-sb.ApnsService.createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 註冊識別碼。
+    - id: token
+      type:
+      - string
+      description: 裝置權杖。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 標記 （逗號分隔清單，不含空格）。
+    - id: options
+      type:
+      - object
+      description: 要求選項
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。'
+    content: function createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createTemplateRegistration
+  id: azure-sb.ApnsService#createTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  summary: 建立範本註冊。
+  fullName: azure-sb.ApnsService.createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: 裝置權杖。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 標記。
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        訊息的 JSON 承載所述的下方。
+
+        如果裝載為字串時，請遵循與 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: 到期日。
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: 如果提供 'ap' 成員，則註冊會傳遞到為 NotifcationHub-已處理到期之後。 物件被假設會跟在 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: 如果 'ap' 成員未提供，要在應用程式圖示上顯示的數字。
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: 如果 'ap' 成員未提供，警示的文字。
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: 如果未提供 'ap' 成員，音效檔案名稱。
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: 如果 'ap' 成員未提供，包含通知文字的裝載物件。
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: 要求選項或回呼函式。
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: 要納入 apns 標頭。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。'
+    content: function createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  id: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  summary: 建立或更新範本註冊。
+  fullName: azure-sb.ApnsService.createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 註冊識別碼。
+    - id: token
+      type:
+      - string
+      description: 裝置權杖。
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        訊息的 JSON 承載所述的下方。
+
+        如果裝載為字串時，請遵循與 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: 到期日。
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: 如果提供 'ap' 成員，則註冊會傳遞到為 NotifcationHub-已處理到期之後。 物件被假設會跟在 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: 如果 'ap' 成員未提供，要在應用程式圖示上顯示的數字。
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: 如果 'ap' 成員未提供，警示的文字。
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: 如果未提供 'ap' 成員，音效檔案名稱。
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: 如果 'ap' 成員未提供，包含通知文字的裝載物件。
+      optional: true
+    - id: options
+      type:
+      - object
+      description: 要求選項。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: 要納入 apns 標頭。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。'
+    content: function createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#updateTemplateRegistration
+  id: azure-sb.ApnsService#updateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  summary: 更新範本註冊。
+  fullName: azure-sb.ApnsService.updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 註冊識別碼。
+    - id: token
+      type:
+      - string
+      description: 裝置權杖。
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        訊息的 JSON 承載所述的下方。
+
+        如果裝載為字串時，請遵循與 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: 到期日。
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: 如果提供 'ap' 成員，則註冊會傳遞到為 NotifcationHub-已處理到期之後。 物件被假設會跟在 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: 如果 'ap' 成員未提供，要在應用程式圖示上顯示的數字。
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: 如果 'ap' 成員未提供，警示的文字。
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: 如果未提供 'ap' 成員，音效檔案名稱。
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: 如果 'ap' 成員未提供，包含通知文字的裝載物件。
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: 要求選項或回呼函式。
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: 要納入 apns 標頭。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。'
+    content: function updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#listRegistrationsByToken
+  id: azure-sb.ApnsService#listRegistrationsByToken
+  parent: azure-sb.ApnsService
+  name: listRegistrationsByToken(token, options, callback)
+  summary: 依裝置權杖擷取註冊。
+  fullName: azure-sb.ApnsService.listRegistrationsByToken(token, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: 裝置權杖。
+    - id: options
+      type:
+      - object
+      description: 要求選項。 其他屬性會傳入作為標頭。
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: 指定在呼叫中取得註冊的最大數目。
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: 指定要略過的呼叫中的註冊數目。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。'
+    content: function listRegistrationsByToken(token, options, callback)
+  langs:
+  - js

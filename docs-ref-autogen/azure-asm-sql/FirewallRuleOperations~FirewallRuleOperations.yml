@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5c821692ec408af0a872de276d63a516edf2f3ac
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051471"
+items:
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations
+  summary: >-
+    Azure SQL Database 管理 API 包含用於 Azure SQL Database 伺服器的管理伺服器層級防火牆規則的作業。 您無法管理使用 Azure SQL Database 管理 API; 的資料庫層級防火牆規則它們只能針對 master 或個別的使用者資料庫執行 TRANSACT-SQL 陳述式來進行管理。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。
+
+    請參閱 [firewallRules] {@link SqlManagementClient ~ SqlManagementClient #firewallRules}。
+
+    初始化 FirewallRuleOperations 類別的新執行個體。
+  fullName: azure-asm-sql.FirewallRuleOperations
+  type: Class
+  children:
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations(client)
+  fullName: azure-asm-sql.FirewallRuleOperations.FirewallRuleOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: 服務用戶端的參考。
+    content: new FirewallRuleOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: create(serverName, parameters, callback)
+  summary: Azure SQL Database 伺服器中加入新的伺服器層級防火牆規則。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 此規則將套用的 Azure SQL Database 伺服器名稱。
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleCreateParameters
+      description: 建立防火牆規則的作業參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定新的防火牆規則的名稱。
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: 取得或設定新的防火牆規則的起始 IP 位址。
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: 取得或設定新的防火牆規則的結束 IP 位址。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: deleteMethod(serverName, ruleName, callback)
+  summary: 從 Azure SQL Database 伺服器中刪除伺服器層級防火牆規則。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.deleteMethod(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL Database 伺服器，必須將從中移除防火牆其規則的名稱。
+    - id: ruleName
+      type:
+      - string
+      description: 若要刪除防火牆規則的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function deleteMethod(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: get(serverName, ruleName, callback)
+  summary: 傳回具有相符名稱的 Azure SQL Database 伺服器防火牆規則。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.get(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 防火牆規則來查詢 Azure SQL Database 伺服器名稱。
+    - id: ruleName
+      type:
+      - string
+      description: 若要擷取規則的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function get(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: list(serverName, callback)
+  summary: Azure SQL Database 伺服器會傳回伺服器層級防火牆規則的清單。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL Database 伺服器，從用來列出防火牆規則的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: update(serverName, ruleName, parameters, callback)
+  summary: Azure SQL Database 伺服器會更新現有的伺服器層級防火牆規則。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.update(serverName, ruleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL Database 伺服器具有更新防火牆規則的名稱。
+    - id: ruleName
+      type:
+      - string
+      description: 若要更新之防火牆規則的名稱。
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleUpdateParameters
+      description: 更新防火牆規則的作業參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定防火牆規則的新名稱。
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: 取得或設定新的起始 IP 位址，此防火牆規則。
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: 取得或設定新的結束 IP 位址，此防火牆規則。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function update(serverName, ruleName, parameters, callback)
+  langs:
+  - js

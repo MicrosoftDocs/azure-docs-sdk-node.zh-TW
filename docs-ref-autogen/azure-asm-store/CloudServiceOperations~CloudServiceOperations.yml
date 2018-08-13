@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bf1c325c64e97b2d6f8ada4ccdc0c04854f9504a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051465"
+items:
+- uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  id: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: CloudServiceOperations
+  summary: >-
+    提供用於從 Windows Azure 存放區服務的雲端服務的 REST 作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [StoreManagementClient] {@link StoreManagementClient ~ StoreManagementClient}。
+
+    請參閱 [cloudServices] {@link StoreManagementClient ~ StoreManagementClient #cloudServices}。
+
+    初始化 CloudServiceOperations 類別的新執行個體。
+  fullName: azure-asm-store.CloudServiceOperations
+  type: Class
+  children:
+  - azure-asm-store.CloudServiceOperations~CloudServiceOperations.#ctor
+  - azure-asm-store.CloudServiceOperations~CloudServiceOperations#beginCreating
+  - azure-asm-store.CloudServiceOperations~CloudServiceOperations#create
+  - azure-asm-store.CloudServiceOperations~CloudServiceOperations#list
+  langs:
+  - js
+- id: azure-asm-store.CloudServiceOperations~CloudServiceOperations.#ctor
+  uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations.#ctor
+  parent: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: CloudServiceOperations(client)
+  fullName: azure-asm-store.CloudServiceOperations.CloudServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStoreManagementClient
+      description: 服務用戶端的參考。
+    content: new CloudServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations#beginCreating
+  id: azure-asm-store.CloudServiceOperations~CloudServiceOperations#beginCreating
+  parent: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: beginCreating(parameters, callback)
+  summary: 建立雲端服務作業會在 Windows Azure 訂用帳戶中建立 Windows Azure 雲端服務。
+  fullName: azure-asm-store.CloudServiceOperations~CloudServiceOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-store.CloudServiceCreateParameters
+      description: 用來指定建立程序的運作方式的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 若要建立雲端服務的名稱。
+    - id: parameters.label
+      type:
+      - string
+      description: 若要建立雲端服務的標籤。
+    - id: parameters.description
+      type:
+      - string
+      description: 建立雲端服務的描述。
+    - id: parameters.geoRegion
+      type:
+      - string
+      description: 要建立雲端服務中的地理區域。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations#create
+  id: azure-asm-store.CloudServiceOperations~CloudServiceOperations#create
+  parent: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: create(parameters, callback)
+  summary: 建立雲端服務作業會在 Windows Azure 訂用帳戶中建立 Windows Azure 雲端服務。
+  fullName: azure-asm-store.CloudServiceOperations~CloudServiceOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-store.CloudServiceCreateParameters
+      description: 用來指定建立程序的運作方式的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 若要建立雲端服務的名稱。
+    - id: parameters.label
+      type:
+      - string
+      description: 若要建立雲端服務的標籤。
+    - id: parameters.description
+      type:
+      - string
+      description: 建立雲端服務的描述。
+    - id: parameters.geoRegion
+      type:
+      - string
+      description: 要建立雲端服務中的地理區域。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.CloudServiceOperations~CloudServiceOperations#list
+  id: azure-asm-store.CloudServiceOperations~CloudServiceOperations#list
+  parent: azure-asm-store.CloudServiceOperations~CloudServiceOperations
+  name: list(callback)
+  summary: 列出雲端服務作業會列舉針對訂閱佈建的 Microsoft Azure 市集項目。
+  fullName: azure-asm-store.CloudServiceOperations~CloudServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function list(callback)
+  langs:
+  - js

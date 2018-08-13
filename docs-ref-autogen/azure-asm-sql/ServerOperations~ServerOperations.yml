@@ -1,0 +1,162 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 96b0b3e923a59f735d4c4f065748b06273fff3cb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051467"
+items:
+- uid: azure-asm-sql.ServerOperations~ServerOperations
+  id: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations
+  summary: >-
+    包含方法，可讓 Azure SQL Database 伺服器上的各種作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。
+
+    請參閱 [伺服器] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23servers>。
+
+    初始化 ServerOperations 類別的新執行個體。
+  fullName: azure-asm-sql.ServerOperations
+  type: Class
+  children:
+  - azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  - azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  - azure-asm-sql.ServerOperations~ServerOperations#create
+  - azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  - azure-asm-sql.ServerOperations~ServerOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  uid: azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations(client)
+  fullName: azure-asm-sql.ServerOperations.ServerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: 服務用戶端的參考。
+    content: new ServerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  id: azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: changeAdministratorPassword(serverName, parameters, callback)
+  summary: 變更現有 Azure SQL Database 伺服器指定的訂用帳戶的系統管理密碼。
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.changeAdministratorPassword(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 將會有系統管理員密碼已變更 Azure SQL Database 伺服器名稱。
+    - id: parameters
+      type:
+      - azure-asm-sql.ServerChangeAdministratorPasswordParameters
+      description: 修改伺服器的系統管理員密碼的必要的參數。
+    - id: parameters.newPassword
+      type:
+      - string
+      description: 取得或設定系統管理員的新密碼。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function changeAdministratorPassword(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#create
+  id: azure-asm-sql.ServerOperations~ServerOperations#create
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: create(parameters, callback)
+  summary: 佈建在訂用帳戶中的新 SQL Database 伺服器。
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-sql.ServerCreateParameters
+      description: 若要佈建伺服器所需的參數。
+    - id: parameters.administratorUserName
+      type:
+      - string
+      description: 取得或設定要用於新的伺服器系統管理員使用者名稱。
+    - id: parameters.administratorPassword
+      type:
+      - string
+      description: 取得或設定新伺服器的系統管理員密碼。
+    - id: parameters.location
+      type:
+      - string
+      description: 取得或設定將在其中建立此伺服器的區域。  請參閱http://azure.microsoft.com/en-us/regions/#services取得一份所有可用的區域。
+    - id: parameters.version
+      type:
+      - string
+      description: 取得或設定要建立伺服器的版本。  有效值為： 1.0、 2.0。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  id: azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: deleteMethod(serverName, callback)
+  summary: 從訂用帳戶中刪除指定的 Azure SQL Database 伺服器。
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.deleteMethod(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 要刪除的 Azure SQL Database 伺服器名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function deleteMethod(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#list
+  id: azure-asm-sql.ServerOperations~ServerOperations#list
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: list(callback)
+  summary: 傳回所有訂用帳戶佈建的 SQL Database 伺服器。
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function list(callback)
+  langs:
+  - js

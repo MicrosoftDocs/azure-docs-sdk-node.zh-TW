@@ -1,0 +1,286 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 10ec832091f323e528abe455cf35dd220c726912
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051475"
+items:
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations
+  summary: >-
+    表示操作 Azure SQL Database 上的所有作業。
+
+    包含作業： 建立、 擷取、 更新和刪除資料庫，和也包含要取得資料庫事件記錄檔的能力。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。
+
+    請參閱 [資料庫] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23databases>。
+
+    初始化 DatabaseOperations 類別的新執行個體。
+  fullName: azure-asm-sql.DatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  uid: azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations(client)
+  fullName: azure-asm-sql.DatabaseOperations.DatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: 服務用戶端的參考。
+    content: new DatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: create(serverName, parameters, callback)
+  summary: Azure SQL Database 伺服器中建立的資料庫。
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL Database 伺服器會建立此資料庫的名稱。
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCreateParameters
+      description: 建立資料庫作業的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定新資料庫的名稱。
+    - id: parameters.edition
+      type:
+      - string
+      description: 取得或設定新的資料庫版本。  DatabaseEditions 列舉型別包含這個屬性的有效值。
+      optional: true
+    - id: parameters.maximumDatabaseSizeInGB
+      type:
+      - number
+      description: 取得或設定以 gb 為單位來表示此資料庫的大小上限。  如果這用來搭配 MaximumDatabaseSizeInBytes 這些規格必須一致。
+      optional: true
+    - id: parameters.collationName
+      type:
+      - string
+      description: 取得或設定新的資料庫定序名稱。
+      optional: true
+    - id: parameters.maximumDatabaseSizeInBytes
+      type:
+      - number
+      description: 取得或設定以位元組為單位來表示此資料庫的大小上限。  如果這用來搭配 MaximumDatabaseSizeInGB 這些規格必須一致。
+      optional: true
+    - id: parameters.serviceObjectiveId
+      type:
+      - string
+      description: 取得或設定要套用至資料庫的服務目標識別碼。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: deleteMethod(serverName, databaseName, callback)
+  summary: 從 Azure SQL Database 伺服器中卸除資料庫。
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.deleteMethod(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 資料庫裝載所在的 Azure SQL Database 伺服器名稱。
+    - id: databaseName
+      type:
+      - string
+      description: 要刪除 Azure SQL Database 的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function deleteMethod(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: get(serverName, databaseName, callback)
+  summary: 傳回 Azure SQL Database 的相關資訊。
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.get(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 資料庫裝載所在的 Azure SQL Database 伺服器名稱。
+    - id: databaseName
+      type:
+      - string
+      description: 要擷取的 Azure SQL Database 的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function get(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: getEventLogs(serverName, databaseName, parameters, callback)
+  summary: 傳回 Azure SQL Database 事件記錄檔的相關資訊。
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.getEventLogs(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 資料庫裝載所在的 Azure SQL Database 伺服器名稱。
+    - id: databaseName
+      type:
+      - string
+      description: 要擷取的 Azure SQL Database 的名稱。
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseGetEventLogsParameters
+      description: 取得資料庫事件記錄檔作業參數。
+    - id: parameters.startDate
+      type:
+      - date
+      description: 取得或設定事件記錄檔的開始日期。
+    - id: parameters.intervalSizeInMinutes
+      type:
+      - number
+      description: 取得或設定以分鐘為單位的間隔大小。
+    - id: parameters.eventTypes
+      type:
+      - string
+      description: 取得或設定要擷取的事件類型。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function getEventLogs(serverName, databaseName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: list(serverName, callback)
+  summary: 傳回 Azure SQL Database 的集合。
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL Database 伺服器，用來擷取資料庫名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: update(serverName, databaseName, parameters, callback)
+  summary: 更新 Azure SQL Database 的屬性。
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.update(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 資料庫所在的 Azure SQL Database 伺服器名稱。
+    - id: databaseName
+      type:
+      - string
+      description: 更新 Azure SQL Database 的名稱。
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseUpdateParameters
+      description: 更新資料庫作業的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得或設定資料庫的新名稱。
+      optional: true
+    - id: parameters.edition
+      type:
+      - string
+      description: 取得或設定資料庫的新版本。
+    - id: parameters.maximumDatabaseSizeInGB
+      type:
+      - number
+      description: 取得或設定以 gb 為單位來表示此資料庫的大小上限。  如果這搭配 MaximumDatabaseSizeInBytes 這些規格必須一致。
+      optional: true
+    - id: parameters.maximumDatabaseSizeInBytes
+      type:
+      - number
+      description: 取得或設定以位元組為單位來表示此資料庫的大小上限。  如果這搭配 MaximumDatabaseSizeInGB 這些規格必須一致。
+      optional: true
+    - id: parameters.serviceObjectiveId
+      type:
+      - string
+      description: 取得或設定要套用至資料庫的服務目標的唯一識別碼。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function update(serverName, databaseName, parameters, callback)
+  langs:
+  - js

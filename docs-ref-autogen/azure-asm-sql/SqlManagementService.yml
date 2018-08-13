@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 77aef5d0743a622fd3d80f0c573f3b211f9e89f8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051476"
+items:
+- uid: azure-asm-sql.SqlManagementService
+  id: azure-asm-sql.SqlManagementService
+  name: SqlManagementService
+  summary: SqlManagementService 物件可讓您在 Microsoft Azure SQL Database 伺服器上執行管理作業。
+  fullName: azure-asm-sql.SqlManagementService
+  type: Class
+  children:
+  - azure-asm-sql.SqlManagementService.#ctor
+  - azure-asm-sql.SqlManagementService#listServers
+  - azure-asm-sql.SqlManagementService#deleteServer
+  - azure-asm-sql.SqlManagementService#createServer
+  - azure-asm-sql.SqlManagementService#listServerFirewallRules
+  - azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createServerFirewallRule
+  - azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createDatabase
+  langs:
+  - js
+- id: azure-asm-sql.SqlManagementService.#ctor
+  uid: azure-asm-sql.SqlManagementService.#ctor
+  parent: azure-asm-sql.SqlManagementService
+  name: SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-sql.SqlManagementService.SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  summary: 建立新的 SqlManagementService 物件
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: 組態中，訂用帳戶 ID 的帳戶或連接字串
+    - id: authentication
+      type:
+      - object
+      description: >-
+        用戶端驗證物件。
+
+        您必須使用金鑰檔/certfile 或 keyvalue/certvalue 提供管理憑證來驗證服務要求。
+    - id: authentication.keyfile
+      type:
+      - string
+      description: 包含 PEM 檔案的路徑編碼金鑰
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: 包含 PEM 檔案的路徑編碼的憑證
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: 字串，包含 PEM 編碼的金鑰
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: 字串，包含 PEM 編碼的憑證
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: 要覆寫預設值的主機選項。
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: 管理端點。
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: 若要使用 API 版本。
+      optional: true
+    content: new SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServers
+  id: azure-asm-sql.SqlManagementService#listServers
+  parent: azure-asm-sql.SqlManagementService
+  name: listServers(callback)
+  summary: 列出可用的 SQL Database 伺服器。
+  fullName: azure-asm-sql.SqlManagementService.listServers(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 發生錯誤時，會包含資訊否則`results`將會包含可用的 SQL 資料庫伺服器資訊的清單。
+                                                               `response` 將包含這項作業的相關資訊。
+    content: function listServers(callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServer
+  id: azure-asm-sql.SqlManagementService#deleteServer
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServer(name, callback)
+  summary: 刪除 SQL Database 伺服器。
+  fullName: azure-asm-sql.SqlManagementService.deleteServer(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: SQL Server 名稱。
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則`response`會包含這項作業的相關資訊。'
+    content: function deleteServer(name, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServer
+  id: azure-asm-sql.SqlManagementService#createServer
+  parent: azure-asm-sql.SqlManagementService
+  name: createServer(administratorLogin, administratorLoginPassword, location, callback)
+  summary: 建立 SQL Database 伺服器。
+  fullName: azure-asm-sql.SqlManagementService.createServer(administratorLogin, administratorLoginPassword, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: administratorLogin
+      type:
+      - string
+      description: 系統管理員的登入。
+    - id: administratorLoginPassword
+      type:
+      - string
+      description: 系統管理員的密碼。
+    - id: location
+      type:
+      - string
+      description: 伺服器的位置。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 發生錯誤時，會包含資訊否則`server`將包含新的伺服器資訊。
+                                                                   `response` 將包含這項作業的相關資訊。
+    content: function createServer(administratorLogin, administratorLoginPassword, location, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  id: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  parent: azure-asm-sql.SqlManagementService
+  name: listServerFirewallRules(serverName, callback)
+  summary: 列出 SQL Database 伺服器防火牆規則。
+  fullName: azure-asm-sql.SqlManagementService.listServerFirewallRules(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 伺服器名稱。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 發生錯誤時，會包含資訊否則`results`將包含防火牆規則。
+                                                                  `response` 將包含這項作業的相關資訊。
+    content: function listServerFirewallRules(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServerFirewallRule(serverName, ruleName, callback)
+  summary: 刪除 SQL Database 伺服器防火牆規則。
+  fullName: azure-asm-sql.SqlManagementService.deleteServerFirewallRule(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 伺服器名稱。
+    - id: ruleName
+      type:
+      - string
+      description: 規則名稱。
+    - id: callback
+      type:
+      - function
+      description: '`error` 發生錯誤時，會包含資訊否則`response`會包含這項作業的相關資訊。'
+    content: function deleteServerFirewallRule(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: 建立 SQL Database 伺服器防火牆規則。
+  fullName: azure-asm-sql.SqlManagementService.createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 伺服器名稱。
+    - id: ruleName
+      type:
+      - string
+      description: 規則名稱。
+    - id: startIPAddress
+      type:
+      - string
+      description: 規則的起始 IP 位址。
+    - id: endIPAddress
+      type:
+      - string
+      description: 結尾 IP 位址規則。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 發生錯誤時，會包含資訊否則`rule`會包含新的規則資訊。
+                                                               `response` 將包含這項作業的相關資訊。
+    content: function createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: 更新 SQL Database 伺服器防火牆規則。
+  fullName: azure-asm-sql.SqlManagementService.updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 伺服器名稱。
+    - id: ruleName
+      type:
+      - string
+      description: 規則名稱。
+    - id: startIPAddress
+      type:
+      - string
+      description: 規則的起始 IP 位址。
+    - id: endIPAddress
+      type:
+      - string
+      description: 結尾 IP 位址規則。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 發生錯誤時，會包含資訊否則`rule`會包含已更新的規則資訊。
+                                                               `response` 將包含這項作業的相關資訊。
+    content: function updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createDatabase
+  id: azure-asm-sql.SqlManagementService#createDatabase
+  parent: azure-asm-sql.SqlManagementService
+  name: createDatabase(serverName, databaseName, options, callback)
+  summary: 建立新的資料庫。
+  fullName: azure-asm-sql.SqlManagementService.createDatabase(serverName, databaseName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 伺服器名稱
+    - id: databaseName
+      type:
+      - string
+      description: 若要建立的資料庫名稱
+    - id: options
+      type:
+      - object
+      description: 建立選項。
+      optional: true
+    - id: options.edition
+      type:
+      - string
+      description: "'Web' 或者 'Business'。"
+      optional: true
+    - id: options.maxsize
+      type:
+      - number
+      description: 以 gb 為單位的最大資料庫大小預設為適用於 web 的 1、 10 商務、 特定的值是有效
+      optional: true
+    - id: options.collation
+      type:
+      - string
+      description: sql 定序名稱
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 發生錯誤時，會包含資訊否則`createResult`會包含新的資料庫資訊。
+                                                                                       `response` 將包含這項作業的相關資訊。
+    content: function createDatabase(serverName, databaseName, options, callback)
+  langs:
+  - js

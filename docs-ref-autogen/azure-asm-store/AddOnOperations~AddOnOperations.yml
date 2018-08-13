@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4aa36e85e5813f72e46523bfff4befffc8ec2bc6
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051473"
+items:
+- uid: azure-asm-store.AddOnOperations~AddOnOperations
+  id: azure-asm-store.AddOnOperations~AddOnOperations
+  name: AddOnOperations
+  summary: >-
+    提供用於市集增益集從 Windows Azure 存放區服務的 REST 作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [StoreManagementClient] {@link StoreManagementClient ~ StoreManagementClient}。
+
+    請參閱 [附加元件] <xref:azure-asm-store.StoreManagementClient~StoreManagementClient%23addOns>。
+
+    初始化 AddOnOperations 類別的新執行個體。
+  fullName: azure-asm-store.AddOnOperations
+  type: Class
+  children:
+  - azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  - azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  - azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  - azure-asm-store.AddOnOperations~AddOnOperations#create
+  - azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  - azure-asm-store.AddOnOperations~AddOnOperations#update
+  langs:
+  - js
+- id: azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  uid: azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: AddOnOperations(client)
+  fullName: azure-asm-store.AddOnOperations.AddOnOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStoreManagementClient
+      description: 服務用戶端的參考。
+    content: new AddOnOperations(client)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  id: azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: 建立市集項目作業會在 Windows Azure 訂用帳戶中建立 Windows Azure 存放區項目。
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 此存放區項目指派給雲端服務的名稱。
+    - id: resourceName
+      type:
+      - string
+      description: 這項資源的名稱。
+    - id: addOnName
+      type:
+      - string
+      description: 在名稱上新增。
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnCreateParameters
+      description: 用來指定建立程序的運作方式的參數。
+    - id: parameters.type
+      type:
+      - string
+      description: 若要建立的存放區項目的型別。
+    - id: parameters.plan
+      type:
+      - string
+      description: 此存放區附加元件選取的方案。
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: 此存放區附加元件的促銷代碼。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  id: azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  summary: 刪除存放區項目作業會刪除重新佈建訂用帳戶的 Microsoft Azure 市集項目。
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 此存放區項目指派給雲端服務的名稱。
+    - id: resourceProviderNamespace
+      type:
+      - string
+      description: 此存放區項目所在的命名空間。
+    - id: resourceProviderType
+      type:
+      - string
+      description: 要刪除的存放區項目的型別。
+    - id: resourceProviderName
+      type:
+      - string
+      description: 此資源提供者的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#create
+  id: azure-asm-store.AddOnOperations~AddOnOperations#create
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: 建立市集項目作業會在 Windows Azure 訂用帳戶中建立 Windows Azure 存放區項目。
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 此存放區項目指派給雲端服務的名稱。
+    - id: resourceName
+      type:
+      - string
+      description: 這項資源的名稱。
+    - id: addOnName
+      type:
+      - string
+      description: 在名稱上新增。
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnCreateParameters
+      description: 用來指定建立程序的運作方式的參數。
+    - id: parameters.type
+      type:
+      - string
+      description: 若要建立的存放區項目的型別。
+    - id: parameters.plan
+      type:
+      - string
+      description: 此存放區附加元件選取的方案。
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: 此存放區附加元件的促銷代碼。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  id: azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  summary: 刪除存放區項目作業會刪除訂用帳戶佈建的 Windows Azure Storeentries。
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 此存放區項目指派給雲端服務的名稱。
+    - id: resourceProviderNamespace
+      type:
+      - string
+      description: 此存放區項目所在的命名空間。
+    - id: resourceProviderType
+      type:
+      - string
+      description: 要刪除的存放區項目的型別。
+    - id: resourceProviderName
+      type:
+      - string
+      description: 此資源提供者的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#update
+  id: azure-asm-store.AddOnOperations~AddOnOperations#update
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: 更新市集項目作業會在 Windows Azure 訂用帳戶中建立 Windows Azure 存放區項目。
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 此存放區項目指派給雲端服務的名稱。
+    - id: resourceName
+      type:
+      - string
+      description: 這項資源的名稱。
+    - id: addOnName
+      type:
+      - string
+      description: 附加元件名稱。
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnUpdateParameters
+      description: 用來指定建立程序的運作方式的參數。
+    - id: parameters.type
+      type:
+      - string
+      description: 若要建立的存放區項目的型別。
+    - id: parameters.plan
+      type:
+      - string
+      description: 此存放區附加元件選取的方案。
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: 此存放區附加元件的促銷代碼。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js

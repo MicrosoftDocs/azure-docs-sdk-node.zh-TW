@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 206ea465fcf79f45867e775391f443f5bdec86d4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051633"
+items:
+- uid: documentdb.QueryIterator
+  id: documentdb.QueryIterator
+  name: QueryIterator
+  summary: 代表 QueryIterator 物件 implmenetation 的摘要或查詢的回應，可讓您周遊及逐一查看 Azure Cosmos DB 資料庫服務中的回應。
+  fullName: documentdb.QueryIterator
+  type: Class
+  children:
+  - documentdb.QueryIterator.#ctor
+  - documentdb.QueryIterator#forEach
+  - documentdb.QueryIterator#nextItem
+  - documentdb.QueryIterator#current
+  - documentdb.QueryIterator#hasMoreResults
+  - documentdb.QueryIterator#toArray
+  - documentdb.QueryIterator#executeNext
+  - documentdb.QueryIterator#reset
+  langs:
+  - js
+- id: documentdb.QueryIterator.#ctor
+  uid: documentdb.QueryIterator.#ctor
+  parent: documentdb.QueryIterator
+  name: QueryIterator(documentclient, query, options, fetchFunctions, resourceLink)
+  fullName: documentdb.QueryIterator.QueryIterator(documentclient, query, options, fetchFunctions, resourceLink)
+  summary: 代表 QueryIterator 物件 implmenetation 的摘要或查詢的回應，可讓您周遊及逐一查看 Azure Cosmos DB 資料庫服務中的回應。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: documentclient
+      type:
+      - object
+      description: Documentclient 物件中。
+    - id: query
+      type:
+      - undefinedSqlQuerySpec
+      - string
+      description: SQL 查詢。
+    - id: options
+      type:
+      - undefinedFeedOptions
+      description: 表示摘要的選項。
+    - id: fetchFunctions
+      type:
+      - undefinedcallback
+      - undefinedArray.<callback>
+      description: 擷取每個資料頁函式。 陣列的函式可用來查詢多個資料分割。
+    - id: resourceLink
+      type:
+      - string
+      description: 選擇性參數表示的 Resourcepartitionkey （將使用 orderby/top/平行查詢中）
+      optional: true
+    content: new QueryIterator(documentclient, query, options, fetchFunctions, resourceLink)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#forEach
+  id: documentdb.QueryIterator#forEach
+  parent: documentdb.QueryIterator
+  name: forEach(callback)
+  summary: 執行提供的函式，一次每個摘要項目。
+  fullName: documentdb.QueryIterator.forEach(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: >-
+        每個項目執行函式。 函式會採用兩個參數錯誤，項目。
+
+        注意： 最後一個元素會呼叫回呼會是未定義。
+
+        如果明確回呼傳回 false，則取得停止迴圈。
+    content: function forEach(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#nextItem
+  id: documentdb.QueryIterator#nextItem
+  parent: documentdb.QueryIterator
+  name: nextItem(callback)
+  summary: QueryIterator 中下一個項目上執行提供的函式。
+  fullName: documentdb.QueryIterator.nextItem(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: 每個項目執行函式。 函式會採用兩個參數錯誤，項目。
+    content: function nextItem(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#current
+  id: documentdb.QueryIterator#current
+  parent: documentdb.QueryIterator
+  name: current(callback)
+  summary: 擷取目前的項目上 QueryIterator。
+  fullName: documentdb.QueryIterator.current(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: 執行目前項目的函式。 函式會採用兩個參數錯誤，項目。
+    content: function current(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#hasMoreResults
+  id: documentdb.QueryIterator#hasMoreResults
+  parent: documentdb.QueryIterator
+  name: hasMoreResults()
+  summary: ''
+  fullName: documentdb.QueryIterator.hasMoreResults()
+  type: Function
+  syntax:
+    return:
+      type:
+      - Boolean
+      description: 如果沒有其他 QueryIterator 中要處理的項目為 true。
+    content: function hasMoreResults()
+  langs:
+  - js
+- uid: documentdb.QueryIterator#toArray
+  id: documentdb.QueryIterator#toArray
+  parent: documentdb.QueryIterator
+  name: toArray(callback)
+  summary: 擷取摘要的所有項目，並將它們做為陣列傳遞至函式
+  fullName: documentdb.QueryIterator.toArray(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: 函式摘要的回應上執行，會採用兩個參數錯誤，resourcesList
+    content: function toArray(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#executeNext
+  id: documentdb.QueryIterator#executeNext
+  parent: documentdb.QueryIterator
+  name: executeNext(callback)
+  summary: 擷取下一個批次的摘要，並將它們做為陣列傳遞至函式
+  fullName: documentdb.QueryIterator.executeNext(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: 函式摘要的回應上執行，會採用兩個參數錯誤，resourcesList
+    content: function executeNext(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#reset
+  id: documentdb.QueryIterator#reset
+  parent: documentdb.QueryIterator
+  name: reset()
+  summary: QueryIterator，重設，並清除其內的所有資源
+  fullName: documentdb.QueryIterator.reset()
+  type: Function
+  syntax:
+    content: function reset()
+  langs:
+  - js

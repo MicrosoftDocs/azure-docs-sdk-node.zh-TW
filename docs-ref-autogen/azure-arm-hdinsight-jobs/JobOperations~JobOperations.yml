@@ -1,0 +1,387 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e5947b368a1053213551619245e92169ec241f0b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051285"
+items:
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: JobOperations
+  summary: >-
+    管理對 HDInsight 叢集作業的作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [HDInsightJobManagementClient] {@link HDInsightJobManagementClient ~ HDInsightJobManagementClient}。
+
+    請參閱 [jobManagement] {@link HDInsightJobManagementClient ~ HDInsightJobManagementClient #jobManagement}。
+
+    初始化 JobOperations 類別的新執行個體。
+  fullName: azure-arm-hdinsight-jobs.JobOperations
+  type: Class
+  children:
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations.#ctor
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#getJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#killJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#listJobs
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitHiveJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceStreamingJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitPigJob
+  langs:
+  - js
+- id: azure-arm-hdinsight-jobs.JobOperations~JobOperations.#ctor
+  uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations.#ctor
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: JobOperations(client)
+  fullName: azure-arm-hdinsight-jobs.JobOperations.JobOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedHDInsightJobManagementClient
+      description: 服務用戶端的參考。
+    content: new JobOperations(client)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#getJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#getJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: getJob(jobId, callback)
+  summary: 從指定的 HDInsight 叢集取得作業清單。
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.getJob(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: 作業識別碼。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: 回應資料流。
+    content: function getJob(jobId, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#killJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#killJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: killJob(jobId, callback)
+  summary: 從指定的 HDInsight 叢集取得作業清單。
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.killJob(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: 作業識別碼。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: 回應資料流。
+    content: function killJob(jobId, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#listJobs
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#listJobs
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: listJobs(callback)
+  summary: 從指定的 HDInsight 叢集取得作業清單。
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.listJobs(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: 回應資料流。
+    content: function listJobs(callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitHiveJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitHiveJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: submitHiveJob(parameters, callback)
+  summary: 提交至 HDINSIGHT 叢集的 Hive 作業。
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.submitHiveJob(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-hdinsight-jobs.HiveJobSubmissionParameters
+      description: Hive 作業參數。
+    - id: parameters.query
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.userName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.file
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.files
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.defines
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.arguments
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.statusDir
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.enableLog
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: 回應資料流。
+    content: function submitHiveJob(parameters, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: submitMapReduceJob(parameters, callback)
+  summary: 提交至 HDINSIGHT 叢集的 MapReduce 作業。
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.submitMapReduceJob(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-hdinsight-jobs.MapReduceJobSubmissionParameters
+      description: MapReduce 作業參數。
+    - id: parameters.userName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.jarFile
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.jarClass
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.libJars
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.files
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.defines
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.arguments
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.statusDir
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.enableLog
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: 回應資料流。
+    content: function submitMapReduceJob(parameters, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceStreamingJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceStreamingJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: submitMapReduceStreamingJob(parameters, callback)
+  summary: 提交至 HDINSIGHT 叢集的 MapReduce 串流作業。
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.submitMapReduceStreamingJob(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-hdinsight-jobs.MapReduceStreamingJobSubmissionParameters
+      description: MapReduce 作業參數。
+    - id: parameters.userName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.input
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.output
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.mapper
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.reducer
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.file
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.defines
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.arguments
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.cmdEnv
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.statusDir
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.enableLog
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: 回應資料流。
+    content: function submitMapReduceStreamingJob(parameters, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitPigJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitPigJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: submitPigJob(parameters, callback)
+  summary: 提交至 HDINSIGHT 叢集的 Hive 作業。
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.submitPigJob(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-hdinsight-jobs.PigJobSubmissionParameters
+      description: Pig 作業參數。
+    - id: parameters.query
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.userName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.file
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.files
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.arguments
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.statusDir
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.enableLog
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: 回應資料流。
+    content: function submitPigJob(parameters, callback)
+  langs:
+  - js

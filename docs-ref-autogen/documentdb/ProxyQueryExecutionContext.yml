@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0de96b9cfcb6a06de36df8c2df8311725add22d0
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051717"
+items:
+- uid: documentdb.ProxyQueryExecutionContext
+  id: documentdb.ProxyQueryExecutionContext
+  name: ProxyQueryExecutionContext
+  summary: 表示 ProxyQueryExecutionContext 物件。 如果查詢是可以平行處理資料分割的查詢切換執行內容。
+  fullName: documentdb.ProxyQueryExecutionContext
+  type: Class
+  children:
+  - documentdb.ProxyQueryExecutionContext.#ctor
+  - documentdb.ProxyQueryExecutionContext#nextItem
+  - documentdb.ProxyQueryExecutionContext#current
+  - documentdb.ProxyQueryExecutionContext#hasMoreResults
+  langs:
+  - js
+- id: documentdb.ProxyQueryExecutionContext.#ctor
+  uid: documentdb.ProxyQueryExecutionContext.#ctor
+  parent: documentdb.ProxyQueryExecutionContext
+  name: ProxyQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  fullName: documentdb.ProxyQueryExecutionContext.ProxyQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  summary: 表示 ProxyQueryExecutionContext 物件。 如果查詢是可以平行處理資料分割的查詢切換執行內容。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: documentclient
+      type:
+      - object
+      description: Documentclient 物件中。
+    - id: query
+      type:
+      - undefinedSqlQuerySpec
+      - string
+      description: SQL 查詢。
+    - id: options
+      type:
+      - undefinedFeedOptions
+      description: 表示摘要的選項。
+    - id: fetchFunctions
+      type:
+      - undefinedcallback
+      - undefinedArray.<callback>
+      description: 擷取每個資料頁函式。 陣列的函式可用來查詢多個資料分割。
+    - id: resourceLink
+      type:
+      - string
+      description: 平行的查詢執行的 collectionLink。
+      optional: true
+    content: new ProxyQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  langs:
+  - js
+- uid: documentdb.ProxyQueryExecutionContext#nextItem
+  id: documentdb.ProxyQueryExecutionContext#nextItem
+  parent: documentdb.ProxyQueryExecutionContext
+  name: nextItem(callback)
+  summary: ProxyQueryExecutionContext 中下一個項目上執行提供的函式。
+  fullName: documentdb.ProxyQueryExecutionContext.nextItem(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: 每個項目執行函式。 函式會採用兩個參數錯誤，項目。
+    content: function nextItem(callback)
+  langs:
+  - js
+- uid: documentdb.ProxyQueryExecutionContext#current
+  id: documentdb.ProxyQueryExecutionContext#current
+  parent: documentdb.ProxyQueryExecutionContext
+  name: current(callback)
+  summary: 擷取目前的項目上 ProxyQueryExecutionContext。
+  fullName: documentdb.ProxyQueryExecutionContext.current(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: 執行目前項目的函式。 函式會採用兩個參數錯誤，項目。
+    content: function current(callback)
+  langs:
+  - js
+- uid: documentdb.ProxyQueryExecutionContext#hasMoreResults
+  id: documentdb.ProxyQueryExecutionContext#hasMoreResults
+  parent: documentdb.ProxyQueryExecutionContext
+  name: hasMoreResults()
+  summary: 決定是否那里仍剩餘的資源來處理。
+  fullName: documentdb.ProxyQueryExecutionContext.hasMoreResults()
+  type: Function
+  syntax:
+    return:
+      type:
+      - Boolean
+      description: 如果沒有其他 ProxyQueryExecutionContext 中要處理的項目為 true。
+    content: function hasMoreResults()
+  langs:
+  - js

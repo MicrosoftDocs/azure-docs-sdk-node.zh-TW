@@ -1,0 +1,504 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 57224e72fed5742b00b47d14fd7204fa9fa44ef8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051379"
+items:
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: JobCollectionOperations
+  summary: >-
+    __附註__： 此類別的執行個體自動建立之執行個體的 [SchedulerManagementClient] {@link SchedulerManagementClient ~ SchedulerManagementClient}。
+
+    請參閱 [jobCollections] {@link SchedulerManagementClient ~ SchedulerManagementClient #jobCollections}。
+
+    初始化 JobCollectionOperations 類別的新執行個體。
+  fullName: azure-asm-scheduler.JobCollectionOperations
+  type: Class
+  children:
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  langs:
+  - js
+- id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: JobCollectionOperations(client)
+  fullName: azure-asm-scheduler.JobCollectionOperations.JobCollectionOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerManagementClient
+      description: 服務用戶端的參考。
+    content: new JobCollectionOperations(client)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: 建立工作集合。
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 包含工作集合之雲端服務名稱。
+    - id: jobCollectionName
+      type:
+      - string
+      description: 若要建立的工作集合名稱。
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionCreateParameters
+      description: 建立工作集合作業提供的參數。
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: 內建屬性，為您的資源版本。 如果未指定，您必須符合您註冊預設為合約資源版本。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 資源標籤。
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: 內建排程器工作集合的設定。
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: 資源的計劃。
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: 工作集合配額設定。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: 可以建立此工作集合中的作業數目上限。 最大值是依據計劃。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: 工作集合中的所有作業的最大次數。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: 定義可以指定此工作集合中的任何作業中的最大週期。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: 定義可以指定此工作集合中的任何作業中的最大週期。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: 定義的間隔。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 回應資料流。
+    content: function beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginDeleting(cloudServiceName, jobCollectionName, callback)
+  summary: 刪除工作集合。
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginDeleting(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 雲端服務的名稱。
+    - id: jobCollectionName
+      type:
+      - string
+      description: 若要刪除的工作集合名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 回應資料流。
+    content: function beginDeleting(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: 更新工作集合。
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 包含工作集合之雲端服務名稱。
+    - id: jobCollectionName
+      type:
+      - string
+      description: 若要更新的工作集合名稱。
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionUpdateParameters
+      description: 更新工作集合作業提供的參數。
+    - id: parameters.eTag
+      type:
+      - string
+      description: >-
+        要更新的 ETag 的工作集合。
+
+        更新將會失敗的 ifthe ETag 不符合。
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: 內建屬性，為您的資源版本。 如果未指定，您必須符合您註冊預設為合約資源版本。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 資源標籤。
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: 內建排程器工作集合的設定。
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: 資源的計劃。
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: 工作集合配額設定。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: 可以建立此工作集合中的作業數目上限。 最大值是依據計劃。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: 工作集合中的所有作業的最大次數。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: 定義可以指定此工作集合中的任何作業中的最大週期。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: 定義可以指定此工作集合中的任何作業中的最大週期。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: 定義的間隔。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 回應資料流。
+    content: function beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  summary: >-
+    判斷是否可用於 JobCollection 名稱。
+
+    JobCollection 名稱必須是雲端服務內唯一的。
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 雲端服務的名稱。
+    - id: jobCollectionName
+      type:
+      - string
+      description: JobCollection 名稱。 名稱必須是範圍內的 CloudService，唯一的。  名稱可以是長度最多 100 個字元。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 回應資料流。
+    content: function checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: create(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: 建立工作集合。
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.create(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 包含工作集合之雲端服務名稱。
+    - id: jobCollectionName
+      type:
+      - string
+      description: 若要建立的工作集合名稱。
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionCreateParameters
+      description: 建立工作集合作業提供的參數。
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: 內建屬性，為您的資源版本。 如果未指定，您必須符合您註冊預設為合約資源版本。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 資源標籤。
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: 內建排程器工作集合的設定。
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: 資源的計劃。
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: 工作集合配額設定。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: 可以建立此工作集合中的作業數目上限。 最大值是依據計劃。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: 工作集合中的所有作業的最大次數。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: 定義可以指定此工作集合中的任何作業中的最大週期。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: 定義可以指定此工作集合中的任何作業中的最大週期。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: 定義的間隔。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 回應資料流。
+    content: function create(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: deleteMethod(cloudServiceName, jobCollectionName, callback)
+  summary: 刪除工作集合。
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.deleteMethod(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 雲端服務的名稱。
+    - id: jobCollectionName
+      type:
+      - string
+      description: 若要刪除的工作集合名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 回應資料流。
+    content: function deleteMethod(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: get(cloudServiceName, jobCollectionName, callback)
+  summary: 擷取工作集合。
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.get(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 雲端服務的名稱。
+    - id: jobCollectionName
+      type:
+      - string
+      description: 工作集合名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 回應資料流。
+    content: function get(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: update(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: 更新工作集合。
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.update(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: 包含工作集合之雲端服務名稱。
+    - id: jobCollectionName
+      type:
+      - string
+      description: 若要更新的工作集合名稱。
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionUpdateParameters
+      description: 更新工作集合作業提供的參數。
+    - id: parameters.eTag
+      type:
+      - string
+      description: >-
+        要更新的 ETag 的工作集合。
+
+        更新將會失敗的 ifthe ETag 不符合。
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: 內建屬性，為您的資源版本。 如果未指定，您必須符合您註冊預設為合約資源版本。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 資源標籤。
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: 內建排程器工作集合的設定。
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: 資源的計劃。
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: 工作集合配額設定。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: 可以建立此工作集合中的作業數目上限。 最大值是依據計劃。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: 工作集合中的所有作業的最大次數。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: 定義可以指定此工作集合中的任何作業中的最大週期。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: 定義可以指定此工作集合中的任何作業中的最大週期。
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: 定義的間隔。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 回應資料流。
+    content: function update(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js

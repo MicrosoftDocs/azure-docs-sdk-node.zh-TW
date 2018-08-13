@@ -1,0 +1,533 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 205aa019bf97d2699ccdd3695309082a90514a54
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051477"
+items:
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations
+  summary: >-
+    服務管理 API 包含管理訂用帳戶下方的儲存體帳戶的作業。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx如需詳細資訊)__注意__: [StorageManagementClient] 執行個體，會自動建立這個類別的執行個體 {@link StorageManagementClient ~ StorageManagementClient}。
+
+    請參閱 [storageAccounts] {@link StorageManagementClient ~ StorageManagementClient #storageAccounts}。
+
+    初始化 StorageAccountOperations 類別的新執行個體。
+  fullName: azure-asm-storage.StorageAccountOperations
+  type: Class
+  children:
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  langs:
+  - js
+- id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations(client)
+  fullName: azure-asm-storage.StorageAccountOperations.StorageAccountOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStorageManagementClient
+      description: 服務用戶端的參考。
+    content: new StorageAccountOperations(client)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: abortMigration(storageAccountName, callback)
+  summary: 中止儲存體帳戶移轉 api 驗證，並與 ARM 的移轉，以將 IaaS Classic 中止指定儲存體帳戶。
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.abortMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: 要移轉的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function abortMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginAbortMigration(storageAccountName, callback)
+  summary: 中止儲存體帳戶移轉 api 驗證，並與 ARM 的移轉，以將 IaaS Classic 中止指定儲存體帳戶。
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginAbortMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: 要移轉的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function beginAbortMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginCommitMigration(storageAccountName, callback)
+  summary: 認可儲存體帳戶移轉 api 會驗證和認可 ARM 移轉以將 IaaS Classic 指定儲存體帳戶。
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginCommitMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: 要移轉的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function beginCommitMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginCreating(parameters, callback)
+  summary: 開始建立儲存體帳戶的作業會在 Azure 中建立新的儲存體帳戶。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountCreateParameters
+      description: 若要開始建立儲存體帳戶作業所提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 儲存體帳戶，Azure 中的唯一名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且必須使用數字和小寫的字母。 這個名稱是 DNS 首碼名稱，而且可用來存取 blob、 佇列和資料表儲存體帳戶中。 例如： http://ServiceName.blob.core.windows.net/mycontainer/ 。
+    - id: parameters.description
+      type:
+      - string
+      description: 儲存體帳戶的描述。 描述可能會有最多 1024 個字元的長度。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 儲存體帳戶名稱，指定為 abase64 編碼的字串。 名稱可能是最多 100 個字元的長度。 此名稱可以用於識別您進行追蹤時的儲存體帳戶。
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: 指定的訂用帳戶中現有的同質群組的名稱。 如果未指定位置的需要。 您可以在要求本文中，但不是能兩者都包含在位置 」 或 「 AffinityGroup 項目。 若要列出可用的同質群組，請使用列出同質群組作業。
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: 建立儲存體帳戶位置。 如果未指定 AffinityGroup 的需要。 您可以在要求本文中，但不是能兩者都包含在位置 」 或 「 AffinityGroup 項目。 若要列出可用的位置，請使用 List Locations 作業。
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: 代表擴充儲存體帳戶屬性的名稱。 每個擴充的屬性必須具有已定義的名稱和值。 您最多可有 50 個擴充屬性名稱/值組。 Name 元素的最大長度為 64 個字元、 只有英數字元和底線可在 [名稱] 和名稱必須以字母開頭。 嘗試使用其他字元、 啟動名稱以非字母字元，或輸入等同於相同的儲存體帳戶所擁有的其他擴充屬性的名稱將會導致狀態碼 400 （不正確的要求） 錯誤。 每個擴充的屬性值的最大長度為 255 個字元。
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "指定帳戶是否支援本地備援儲存體、 異地備援儲存體、 區域備援儲存體或讀取權限異地備援儲存體。 可能的值為: 'Standard_LRS'、 'Standard_ZRS'、 'Standard_GRS，' 和 'Standard_RAGRS'。"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginPrepareMigration(storageAccountName, callback)
+  summary: 準備移轉 api 驗證，並準備 ARM 移轉以將 IaaS Classic 指定儲存體帳戶的儲存體帳戶。
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginPrepareMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: 要移轉的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function beginPrepareMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: checkNameAvailability(accountName, callback)
+  summary: 檢查名稱可用性作業會檢查儲存體帳戶名稱是否可在 Azure 中使用。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.checkNameAvailability(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: 要檢查可用性的所需的儲存體帳戶名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function checkNameAvailability(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: commitMigration(storageAccountName, callback)
+  summary: 認可儲存體帳戶移轉 api 會驗證和認可 ARM 移轉以將 IaaS Classic 指定儲存體帳戶。
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.commitMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: 要移轉的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function commitMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: create(parameters, callback)
+  summary: 建立儲存體帳戶的作業會在 Azure 中建立新的儲存體帳戶。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountCreateParameters
+      description: 建立儲存體帳戶作業所提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 儲存體帳戶，Azure 中的唯一名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且必須使用數字和小寫的字母。 這個名稱是 DNS 首碼名稱，而且可用來存取 blob、 佇列和資料表儲存體帳戶中。 例如： http://ServiceName.blob.core.windows.net/mycontainer/ 。
+    - id: parameters.description
+      type:
+      - string
+      description: 儲存體帳戶的描述。 描述可能會有最多 1024 個字元的長度。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 儲存體帳戶名稱，指定為 abase64 編碼的字串。 名稱可能是最多 100 個字元的長度。 此名稱可以用於識別您進行追蹤時的儲存體帳戶。
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: 指定的訂用帳戶中現有的同質群組的名稱。 如果未指定位置的需要。 您可以在要求本文中，但不是能兩者都包含在位置 」 或 「 AffinityGroup 項目。 若要列出可用的同質群組，請使用列出同質群組作業。
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: 建立儲存體帳戶位置。 如果未指定 AffinityGroup 的需要。 您可以在要求本文中，但不是能兩者都包含在位置 」 或 「 AffinityGroup 項目。 若要列出可用的位置，請使用 List Locations 作業。
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: 代表擴充儲存體帳戶屬性的名稱。 每個擴充的屬性必須具有已定義的名稱和值。 您最多可有 50 個擴充屬性名稱/值組。 Name 元素的最大長度為 64 個字元、 只有英數字元和底線可在 [名稱] 和名稱必須以字母開頭。 嘗試使用其他字元、 啟動名稱以非字母字元，或輸入等同於相同的儲存體帳戶所擁有的其他擴充屬性的名稱將會導致狀態碼 400 （不正確的要求） 錯誤。 每個擴充的屬性值的最大長度為 255 個字元。
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "指定帳戶是否支援本地備援儲存體、 異地備援儲存體、 區域備援儲存體或讀取權限異地備援儲存體。 可能的值為: 'Standard_LRS'、 'Standard_ZRS'、 'Standard_GRS，' 和 'Standard_RAGRS'。"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: deleteMethod(accountName, callback)
+  summary: 刪除儲存體帳戶的作業會從 Azure 刪除指定的儲存體帳戶。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.deleteMethod(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: 要刪除的儲存體帳戶名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function deleteMethod(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: get(accountName, callback)
+  summary: 「 取得儲存體帳戶屬性 」 作業會傳回指定的儲存體帳戶的系統屬性。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.get(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: 若要取得屬性的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function get(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: getKeys(accountName, callback)
+  summary: 取得儲存體金鑰作業會傳回指定儲存體帳戶的主要和次要存取金鑰。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.getKeys(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: 所需的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function getKeys(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: list(callback)
+  summary: 列出儲存體帳戶作業會列出目前訂閱底下可用的儲存體帳戶。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: prepareMigration(storageAccountName, callback)
+  summary: 準備移轉 api 驗證，並準備 ARM 移轉以將 IaaS Classic 指定儲存體帳戶的儲存體帳戶。
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.prepareMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: 要移轉的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function prepareMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: regenerateKeys(parameters, callback)
+  summary: 重新產生金鑰的作業會重新產生指定的儲存體帳戶的主要或次要存取金鑰。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.regenerateKeys(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountRegenerateKeysParameters
+      description: 重新產生金鑰作業提供的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 所需的儲存體帳戶的名稱。
+    - id: parameters.keyType
+      type:
+      - azure-asm-storage.StorageKeyType
+      description: 指定要產生哪種金鑰。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function regenerateKeys(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: update(accountName, parameters, callback)
+  summary: 更新儲存體帳戶的作業會更新標籤和描述，以及啟用或停用 Azure 中的儲存體帳戶的異地複寫狀態。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx如需詳細資訊)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.update(accountName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: 若要更新的儲存體帳戶的名稱。
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountUpdateParameters
+      description: 提供給更新儲存體帳戶作業的參數。
+    - id: parameters.description
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 儲存體帳戶，base64 編碼的名稱。 名稱可能是最多 100 個字元的長度。 此名稱可以用於識別您進行追蹤時的儲存體帳戶。
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: 代表擴充儲存體帳戶屬性的名稱。 每個擴充的屬性必須具有已定義的名稱和值。 您最多可有 50 個擴充屬性名稱/值組。 Name 元素的最大長度為 64 個字元、 只有英數字元和底線可在 [名稱] 和名稱必須以字母開頭。 嘗試使用其他字元、 啟動名稱以非字母字元，或輸入等同於相同的儲存體帳戶所擁有的其他擴充屬性的名稱將會導致狀態碼 400 （不正確的要求） 錯誤。 每個擴充的屬性值的最大長度為 255 個字元。 您可以刪除擴充的屬性的值設定為 NULL。
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "指定帳戶是否支援本地備援儲存體、 異地備援儲存體、 區域備援儲存體或讀取權限異地備援儲存體。 可能的值為: 'Standard_LRS'、 'Standard_ZRS'、 'Standard_GRS，' 和 'Standard_RAGRS'。"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function update(accountName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: validateMigration(storageAccountName, callback)
+  summary: 驗證儲存體帳戶移轉 api 會指定儲存體帳戶以將 IaaS Classic 驗證 ARM 移轉。
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.validateMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: 要移轉的儲存體帳戶的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: 回應資料流。
+    content: function validateMigration(storageAccountName, callback)
+  langs:
+  - js

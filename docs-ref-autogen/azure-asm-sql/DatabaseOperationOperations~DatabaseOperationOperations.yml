@@ -1,0 +1,124 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 43d3f97bde82db60885553c1f3322b23ad527893
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051464"
+items:
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations
+  summary: >-
+    Azure SQL Database 管理 API 包含用於取得資料庫作業的作業。 具體來說，此 API 可讓您取得特定的作業，或列出所有作業發生在特定資料庫或 Azure SQL Database 伺服器中的所有資料庫上。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。
+
+    請參閱 [databaseOperations] {@link SqlManagementClient ~ SqlManagementClient #databaseOperations}。
+
+    初始化 DatabaseOperationOperations 類別的新執行個體。
+  fullName: azure-asm-sql.DatabaseOperationOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations(client)
+  fullName: azure-asm-sql.DatabaseOperationOperations.DatabaseOperationOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: 服務用戶端的參考。
+    content: new DatabaseOperationOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: get(serverName, operationGuid, callback)
+  summary: 使用作業的 Guid，以傳回特定作業的相關資訊。
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.get(serverName, operationGuid, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 資料庫所在的 Azure SQL Database 伺服器名稱。
+    - id: operationGuid
+      type:
+      - string
+      description: 若要取得 Azure SQL Database 作業的 Guid。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function get(serverName, operationGuid, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: listByDatabase(serverName, databaseName, callback)
+  summary: 擷取所有發生在特定資料庫的作業。
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.listByDatabase(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL Database 伺服器裝載資料庫的名稱。
+    - id: databaseName
+      type:
+      - string
+      description: 擷取作業的資料庫名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function listByDatabase(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: listByServer(serverName, callback)
+  summary: 擷取所有的 Azure SQL Database 伺服器發生的作業。
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.listByServer(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 要查詢 Azure SQL Database 伺服器名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 回應資料流。
+    content: function listByServer(serverName, callback)
+  langs:
+  - js

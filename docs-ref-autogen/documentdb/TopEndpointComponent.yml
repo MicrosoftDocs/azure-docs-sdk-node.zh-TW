@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1b2fab0a1e576b8c5992c03b3d61b46024891b6f
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051615"
+items:
+- uid: documentdb.TopEndpointComponent
+  id: documentdb.TopEndpointComponent
+  name: TopEndpointComponent
+  summary: 表示處理 top 查詢中的端點。 它只會傳回做為指定的最上層 arg 的越多結果。
+  fullName: documentdb.TopEndpointComponent
+  type: Class
+  children:
+  - documentdb.TopEndpointComponent.#ctor
+  - documentdb.TopEndpointComponent#nextItem
+  - documentdb.TopEndpointComponent#current
+  - documentdb.TopEndpointComponent#hasMoreResults
+  langs:
+  - js
+- id: documentdb.TopEndpointComponent.#ctor
+  uid: documentdb.TopEndpointComponent.#ctor
+  parent: documentdb.TopEndpointComponent
+  name: TopEndpointComponent(executionContext)
+  fullName: documentdb.TopEndpointComponent.TopEndpointComponent(executionContext)
+  summary: 表示處理 top 查詢中的端點。 它只會傳回做為指定的最上層 arg 的越多結果。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: executionContext
+      type:
+      - object
+      description: 基礎執行內容
+    content: new TopEndpointComponent(executionContext)
+  langs:
+  - js
+- uid: documentdb.TopEndpointComponent#nextItem
+  id: documentdb.TopEndpointComponent#nextItem
+  parent: documentdb.TopEndpointComponent
+  name: nextItem(callback)
+  summary: TopEndpointComponent 中下一個項目上執行提供的函式。
+  fullName: documentdb.TopEndpointComponent.nextItem(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: 每個項目執行函式。 函式會採用兩個參數錯誤，項目。
+    content: function nextItem(callback)
+  langs:
+  - js
+- uid: documentdb.TopEndpointComponent#current
+  id: documentdb.TopEndpointComponent#current
+  parent: documentdb.TopEndpointComponent
+  name: current(callback)
+  summary: 擷取目前的項目上 TopEndpointComponent。
+  fullName: documentdb.TopEndpointComponent.current(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: 執行目前項目的函式。 函式會採用兩個參數錯誤，項目。
+    content: function current(callback)
+  langs:
+  - js
+- uid: documentdb.TopEndpointComponent#hasMoreResults
+  id: documentdb.TopEndpointComponent#hasMoreResults
+  parent: documentdb.TopEndpointComponent
+  name: hasMoreResults()
+  summary: 決定是否仍然還有如何處理資源。
+  fullName: documentdb.TopEndpointComponent.hasMoreResults()
+  type: Function
+  syntax:
+    return:
+      type:
+      - Boolean
+      description: 如果沒有其他 TopEndpointComponent 中要處理的項目為 true。
+    content: function hasMoreResults()
+  langs:
+  - js

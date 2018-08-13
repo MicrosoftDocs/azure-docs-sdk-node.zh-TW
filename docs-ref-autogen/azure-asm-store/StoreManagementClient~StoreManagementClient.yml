@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 540efab116adae8a2df4839b7061663cacba7907
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051454"
+items:
+- uid: azure-asm-store.StoreManagementClient~StoreManagementClient
+  id: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: StoreManagementClient
+  summary: Windows Azure 存放區 API 是 REST API，用於管理 Microsoft Azure 市集增益集。初始化 StoreManagementClient 類別的新執行個體。
+  fullName: azure-asm-store.StoreManagementClient
+  type: Class
+  children:
+  - azure-asm-store.StoreManagementClient~StoreManagementClient.#ctor
+  - azure-asm-store.StoreManagementClient~StoreManagementClient#addOns
+  - azure-asm-store.StoreManagementClient~StoreManagementClient#cloudServices
+  - azure-asm-store.StoreManagementClient~StoreManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-store.StoreManagementClient~StoreManagementClient.#ctor
+  uid: azure-asm-store.StoreManagementClient~StoreManagementClient.#ctor
+  parent: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: StoreManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-store.StoreManagementClient.StoreManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: 取得可唯一識別 Microsoft Azure 訂用帳戶的訂用帳戶認證。 訂用帳戶識別碼構成每個服務呼叫的 URI 的一部分。
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: 取得做為雲端服務的所有要求的基底 URI。
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new StoreManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-store.StoreManagementClient~StoreManagementClient#addOns
+  id: azure-asm-store.StoreManagementClient~StoreManagementClient#addOns
+  parent: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: addOns
+  summary: 提供的執行個體[AddOnOperations](-AddOnOperations.html)物件。
+  fullName: azure-asm-store.StoreManagementClient~StoreManagementClient.addOns
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: addOns
+  langs:
+  - js
+- uid: azure-asm-store.StoreManagementClient~StoreManagementClient#cloudServices
+  id: azure-asm-store.StoreManagementClient~StoreManagementClient#cloudServices
+  parent: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: cloudServices
+  summary: 提供的執行個體[CloudServiceOperations](-CloudServiceOperations.html)物件。
+  fullName: azure-asm-store.StoreManagementClient~StoreManagementClient.cloudServices
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: cloudServices
+  langs:
+  - js
+- uid: azure-asm-store.StoreManagementClient~StoreManagementClient#getOperationStatus
+  id: azure-asm-store.StoreManagementClient~StoreManagementClient#getOperationStatus
+  parent: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: 取得作業狀態 」 作業會傳回 thespecified 作業的狀態。 呼叫非同步作業之後，您可以呼叫 Get Operation Status 來判斷作業是否已成功、 失敗或仍在進行中。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx如需詳細資訊)
+  fullName: azure-asm-store.StoreManagementClient~StoreManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: 您想要追蹤要求的要求識別碼。要求識別碼是 x ms-要求識別碼回應標頭中傳回每個要求。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: 回應資料流。
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js

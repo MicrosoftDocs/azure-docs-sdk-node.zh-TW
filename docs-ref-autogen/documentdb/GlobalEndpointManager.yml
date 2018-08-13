@@ -1,0 +1,122 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2996643fcfbc41176e7b3b33664ea4418a97233d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051622"
+items:
+- uid: documentdb.GlobalEndpointManager
+  id: documentdb.GlobalEndpointManager
+  name: GlobalEndpointManager
+  summary: ''
+  fullName: documentdb.GlobalEndpointManager
+  type: Class
+  children:
+  - documentdb.GlobalEndpointManager.#ctor
+  - documentdb.GlobalEndpointManager#getReadEndpoint
+  - documentdb.GlobalEndpointManager#setReadEndpoint
+  - documentdb.GlobalEndpointManager#getWriteEndpoint
+  - documentdb.GlobalEndpointManager#setWriteEndpoint
+  - documentdb.GlobalEndpointManager#refreshEndpointList
+  langs:
+  - js
+- id: documentdb.GlobalEndpointManager.#ctor
+  uid: documentdb.GlobalEndpointManager.#ctor
+  parent: documentdb.GlobalEndpointManager
+  name: GlobalEndpointManager(client)
+  fullName: documentdb.GlobalEndpointManager.GlobalEndpointManager(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - object
+      description: 文件的用戶端執行個體。
+    content: new GlobalEndpointManager(client)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#getReadEndpoint
+  id: documentdb.GlobalEndpointManager#getReadEndpoint
+  parent: documentdb.GlobalEndpointManager
+  name: getReadEndpoint(callback)
+  summary: 取得端點的快取中目前的讀取的端點。
+  fullName: documentdb.GlobalEndpointManager.getReadEndpoint(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: 回呼函式採用 readEndpoint(string) 做為引數。
+    content: function getReadEndpoint(callback)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#setReadEndpoint
+  id: documentdb.GlobalEndpointManager#setReadEndpoint
+  parent: documentdb.GlobalEndpointManager
+  name: setReadEndpoint(readEndpoint)
+  summary: 設定目前的讀取端點。
+  fullName: documentdb.GlobalEndpointManager.setReadEndpoint(readEndpoint)
+  type: Function
+  syntax:
+    parameters:
+    - id: readEndpoint
+      type:
+      - string
+      description: 若要設定為 readEndpoint 端點。
+    content: function setReadEndpoint(readEndpoint)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#getWriteEndpoint
+  id: documentdb.GlobalEndpointManager#getWriteEndpoint
+  parent: documentdb.GlobalEndpointManager
+  name: getWriteEndpoint(callback)
+  summary: 取得端點的快取中目前的寫入端點。
+  fullName: documentdb.GlobalEndpointManager.getWriteEndpoint(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: 回呼函式採用 writeEndpoint(string) 做為引數。
+    content: function getWriteEndpoint(callback)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#setWriteEndpoint
+  id: documentdb.GlobalEndpointManager#setWriteEndpoint
+  parent: documentdb.GlobalEndpointManager
+  name: setWriteEndpoint(writeEndpoint)
+  summary: 設定目前的寫入端點。
+  fullName: documentdb.GlobalEndpointManager.setWriteEndpoint(writeEndpoint)
+  type: Function
+  syntax:
+    parameters:
+    - id: writeEndpoint
+      type:
+      - string
+      description: 若要設定為 writeEndpoint 端點。
+    content: function setWriteEndpoint(writeEndpoint)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#refreshEndpointList
+  id: documentdb.GlobalEndpointManager#refreshEndpointList
+  parent: documentdb.GlobalEndpointManager
+  name: refreshEndpointList(callback)
+  summary: >-
+    從異地複寫的資料庫帳戶中擷取的可寫入和讀取位置，然後更新 位置快取重新整理端點清單。
+
+    我們會略過重新整理，如果 EnableEndpointDiscovery 設為 False
+  fullName: documentdb.GlobalEndpointManager.refreshEndpointList(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: 回呼函式採用 writeEndpoint(string) 和 readEndpoint(string) 做為引數。
+    content: function refreshEndpointList(callback)
+  langs:
+  - js

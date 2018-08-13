@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 86f2c13f450de06aeba44565b7910b979954a7cc
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051468"
+items:
+- uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: DefinitionOperations
+  summary: >-
+    流量管理員 API 包含管理指定的設定檔定義的作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [TrafficManagerManagementClient] {@link TrafficManagerManagementClient ~ TrafficManagerManagementClient}。
+
+    查看 [定義] {@link TrafficManagerManagementClient ~ TrafficManagerManagementClient #definitions}。
+
+    初始化 DefinitionOperations 類別的新執行個體。
+  fullName: azure-asm-trafficmanager.DefinitionOperations
+  type: Class
+  children:
+  - azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.#ctor
+  - azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#create
+  - azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#get
+  - azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#list
+  langs:
+  - js
+- id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.#ctor
+  uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.#ctor
+  parent: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: DefinitionOperations(client)
+  fullName: azure-asm-trafficmanager.DefinitionOperations.DefinitionOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedTrafficManagerManagementClient
+      description: 服務用戶端的參考。
+    content: new DefinitionOperations(client)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#create
+  id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#create
+  parent: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: create(profileName, parameters, callback)
+  summary: 建立新的定義，針對指定的設定檔。  (請參閱http://msdn.microsoft.com/en-us/library/hh758257.aspx如需詳細資訊)
+  fullName: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.create(profileName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: 若要建立新的定義設定檔的名稱。
+    - id: parameters
+      type:
+      - azure-asm-trafficmanager.DefinitionCreateParameters
+      description: 提供給建立定義作業的參數。
+    - id: parameters.dnsOptions
+      type:
+      - azure-asm-trafficmanager.DefinitionDnsOptions
+      description: ''
+    - id: parameters.dnsOptions.timeToLiveInSeconds
+      type:
+      - number
+      description: 指定 DNS--存留時間 (TTL)，會通知本機 DNS 解析程式多久快取 DNS 項目。 值是介於 30 到 999,999 之間的整數。
+    - id: parameters.monitors
+      type:
+      - array
+      description: ''
+    - id: parameters.policy
+      type:
+      - azure-asm-trafficmanager.DefinitionPolicyCreateParameters
+      description: ''
+    - id: parameters.policy.loadBalancingMethod
+      type:
+      - azure-asm-trafficmanager.LoadBalancingMethod
+      description: 指定的負載平衡方法，以用來散發連接。
+    - id: parameters.policy.endpoints
+      type:
+      - array
+      description: 封裝 Windows Azure Traffic Manager 端點的清單。 您可以定義最多 100 個的端點清單中。 如果負載平衡方法設為容錯移轉時，端點的流量。 負載平衡端點定義所在的循序順序
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: 回應資料流。
+    content: function create(profileName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#get
+  id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#get
+  parent: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: get(profileName, callback)
+  summary: 傳回現有的設定檔定義。  (請參閱http://msdn.microsoft.com/en-us/library/hh758248.aspx如需詳細資訊)
+  fullName: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.get(profileName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: 若要取得的定義設定檔的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: 回應資料流。
+    content: function get(profileName, callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#list
+  id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#list
+  parent: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: list(profileName, callback)
+  summary: 傳回所有定義的設定檔 (請參閱http://msdn.microsoft.com/en-us/library/hh758252.aspx如需詳細資訊)
+  fullName: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.list(profileName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: 表示傳回所有定義的設定檔名稱
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: 回應資料流。
+    content: function list(profileName, callback)
+  langs:
+  - js
