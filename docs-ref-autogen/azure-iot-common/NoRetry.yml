@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: eddad8535e0fc165ea38d1ece8f13b18a62adb50
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40053304"
+items:
+- uid: azure-iot-common.NoRetry
+  name: NoRetry
+  fullName: NoRetry
+  children:
+  - azure-iot-common.NoRetry.nextRetryTimeout
+  - azure-iot-common.NoRetry.shouldRetry
+  langs:
+  - typeScript
+  type: class
+  summary: 虛設常式會封鎖任何重試暫時性的原則。 不會重試作業。
+  package: azure-iot-common
+- uid: azure-iot-common.NoRetry.nextRetryTimeout
+  name: nextRetryTimeout
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 想要任何重試，這一律會傳回-1。
+  syntax:
+    content: 'function nextRetryTimeout(retryCount: number)'
+    parameters:
+    - id: retryCount
+      type:
+      - number
+      description: >
+        會忽略這個參數。
+    return:
+      type:
+      - number
+  package: azure-iot-common
+- uid: azure-iot-common.NoRetry.shouldRetry
+  name: shouldRetry
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 這一律會傳回 false 因為想要使用無重試。
+  syntax:
+    content: 'function shouldRetry(err: Error)'
+    parameters:
+    - id: err
+      type:
+      - Error
+      description: 會忽略這個參數。
+    return:
+      type:
+      - boolean
+  package: azure-iot-common

@@ -1,0 +1,410 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9ad29b980facd9e0591910722aaf2f5dea600cca
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061365"
+items:
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient
+  name: ProvisioningServiceClient
+  fullName: ProvisioningServiceClient
+  children:
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStateQuery
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createIndividualEnrollmentQuery
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateEnrollmentGroup
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
+  - azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationState
+  - azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
+  - azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
+  - azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
+  - azure-iot-provisioning-service.ProvisioningServiceClient.constructor
+  - azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStateQuery
+  name: createEnrollmentGroupDeviceRegistrationStateQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立查詢，可用來傳回，如特定 EnrollmentGroup，現有的裝置註冊狀態的頁面。
+  syntax:
+    content: 'function createEnrollmentGroupDeviceRegistrationStateQuery(querySpecification: QuerySpecification, enrollmentGroupId: string, pageSize?: number)'
+    parameters:
+    - id: querySpecification
+      type:
+      - azure-iot-provisioning-service.QuerySpecification
+      description: 查詢規格中。
+    - id: enrollmentGroupId
+      type:
+      - string
+      description: 提供的查詢範圍 EnrollmentGroup 識別碼。
+    - id: pageSize
+      type:
+      - number
+      description: >
+        要傳回每一頁的項目數目上限。
+      optional: true
+    return:
+      type:
+      - azure-iot-provisioning-service.Query
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
+  name: createEnrollmentGroupQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立查詢，可用來傳回現有的註冊群組的頁面。
+  syntax:
+    content: 'function createEnrollmentGroupQuery(querySpecification: QuerySpecification, pageSize?: number)'
+    parameters:
+    - id: querySpecification
+      type:
+      - azure-iot-provisioning-service.QuerySpecification
+      description: 查詢規格中。
+    - id: pageSize
+      type:
+      - number
+      description: >
+        要傳回每一頁的項目數目上限。
+      optional: true
+    return:
+      type:
+      - azure-iot-provisioning-service.Query
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createIndividualEnrollmentQuery
+  name: createIndividualEnrollmentQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立可用來傳回現有的註冊頁面的查詢。
+  syntax:
+    content: 'function createIndividualEnrollmentQuery(querySpecification: QuerySpecification, pageSize?: number)'
+    parameters:
+    - id: querySpecification
+      type:
+      - azure-iot-provisioning-service.QuerySpecification
+      description: 查詢規格中。
+    - id: pageSize
+      type:
+      - number
+      description: >
+        要傳回每一頁的項目數目上限。
+      optional: true
+    return:
+      type:
+      - azure-iot-provisioning-service.Query
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateEnrollmentGroup
+  name: createOrUpdateEnrollmentGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立或更新裝置的註冊群組。
+  syntax:
+    content: 'function createOrUpdateEnrollmentGroup(enrollmentGroup: EnrollmentGroup, callback?: (err: Error, enrollmentGroup?: EnrollmentGroup, response?: any) => void)'
+    parameters:
+    - id: enrollmentGroup
+      type:
+      - azure-iot-provisioning-service.EnrollmentGroup
+      description: 裝置註冊群組。
+    - id: callback
+      type:
+      - '(err: Error, enrollmentGroup?: EnrollmentGroup, response?: any) => void'
+      description: >
+        在作業完成時叫用。
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
+  name: createOrUpdateIndividualEnrollment
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立或更新裝置的註冊記錄。
+  syntax:
+    content: 'function createOrUpdateIndividualEnrollment(enrollment: IndividualEnrollment, callback?: (err: Error, enrollment?: IndividualEnrollment, response?: any) => void)'
+    parameters:
+    - id: enrollment
+      type:
+      - azure-iot-provisioning-service.IndividualEnrollment
+      description: 裝置註冊記錄。
+    - id: callback
+      type:
+      - '(err: Error, enrollment?: IndividualEnrollment, response?: any) => void'
+      description: >
+        在作業完成時叫用。
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationState
+  name: deleteDeviceRegistrationState
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 刪除裝置註冊狀態。
+  syntax:
+    content: 'function deleteDeviceRegistrationState(idOrRegistrationState: string | DeviceRegistrationState, etagOrCallback?: string | DeleteCallback, deleteCallback?: DeleteCallback)'
+    parameters:
+    - id: idOrRegistrationState
+      type:
+      - string | azure-iot-provisioning-service.DeviceRegistrationState
+      description: 字串，包含註冊識別碼或實際的 DeviceRegistrationState。
+    - id: etagOrCallback
+      type:
+      - string | azure-iot-provisioning-service.DeleteCallback
+      description: 在正在字串的第一個引數的情況下，這可能是 etag （或回呼）。
+      optional: true
+    - id: deleteCallback
+      type:
+      - azure-iot-provisioning-service.DeleteCallback
+      description: >
+        在作業完成時叫用。
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
+  name: deleteEnrollmentGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 刪除裝置註冊群組。
+  syntax:
+    content: 'function deleteEnrollmentGroup(enrollmentGroupOrId: string | EnrollmentGroup, etagOrCallback?: string | DeleteCallback, deleteCallback?: DeleteCallback)'
+    parameters:
+    - id: enrollmentGroupOrId
+      type:
+      - string | azure-iot-provisioning-service.EnrollmentGroup
+      description: EnrollmentGroup 物件或字串，包含註冊群組識別碼。
+    - id: etagOrCallback
+      type:
+      - string | azure-iot-provisioning-service.DeleteCallback
+      description: 在正在字串的第一個引數的情況下，這可能是 etag （或回呼）。
+      optional: true
+    - id: deleteCallback
+      type:
+      - azure-iot-provisioning-service.DeleteCallback
+      description: >
+        在作業完成時叫用。
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
+  name: deleteIndividualEnrollment
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 刪除裝置註冊記錄。
+  syntax:
+    content: 'function deleteIndividualEnrollment(enrollmentOrId: string | IndividualEnrollment, etagOrCallback?: string | DeleteCallback, deleteCallback?: DeleteCallback)'
+    parameters:
+    - id: enrollmentOrId
+      type:
+      - string | azure-iot-provisioning-service.IndividualEnrollment
+      description: IndividualEnrollment 物件或字串，包含註冊識別碼。
+    - id: etagOrCallback
+      type:
+      - string | azure-iot-provisioning-service.DeleteCallback
+      description: 在正在字串的第一個引數的情況下，這可能是 etag （或回呼）。
+      optional: true
+    - id: deleteCallback
+      type:
+      - azure-iot-provisioning-service.DeleteCallback
+      description: >
+        在作業完成時叫用。
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建構 Createorupdateindividualenrollmentasync 物件使用預設傳輸與指定的連接字串 ([Http](xref:azure-iothub.Http))。
+  syntax:
+    content: 'static function fromConnectionString(value: string)'
+    parameters:
+    - id: value
+      type:
+      - string
+      description: 連接字串 （讀取和/或寫入） 封裝適當 Createorupdateenrollmentgroupasync 權限。
+    return:
+      type:
+      - azure-iot-provisioning-service.ProvisioningServiceClient
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
+  name: getDeviceRegistrationState
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取得裝置註冊狀態。
+  syntax:
+    content: 'function getDeviceRegistrationState(id: string, callback: (err: Error, registrationState?: DeviceRegistrationState, response?: any) => void)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: 註冊識別碼。
+    - id: callback
+      type:
+      - '(err: Error, registrationState?: DeviceRegistrationState, response?: any) => void'
+      description: >
+        在作業完成時叫用。
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
+  name: getEnrollmentGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取得裝置註冊群組。
+  syntax:
+    content: 'function getEnrollmentGroup(id: string, getCallback: (err: Error, enrollmentGroup: EnrollmentGroup, response?: any) => void)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: IndividualEnrollment 群組識別碼。
+    - id: getCallback
+      type:
+      - '(err: Error, enrollmentGroup: EnrollmentGroup, response?: any) => void'
+      description: >
+        在作業完成時叫用。
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
+  name: getIndividualEnrollment
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取得裝置註冊記錄。
+  syntax:
+    content: 'function getIndividualEnrollment(id: string, getCallback: (err: Error, enrollmentRecord?: IndividualEnrollment, response?: any) => void)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: 註冊識別碼。
+    - id: getCallback
+      type:
+      - '(err: Error, enrollmentRecord?: IndividualEnrollment, response?: any) => void'
+      description: >
+        在作業完成時叫用。
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.constructor
+  name: ProvisioningServiceClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new ProvisioningServiceClient(config: TransportConfig, restApiClient?: RestApiClient)'
+    parameters:
+    - id: config
+      type:
+      - TransportConfig
+      description: ''
+    - id: restApiClient
+      type:
+      - RestApiClient
+      description: ''
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
+  name: runBulkEnrollmentOperation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 執行編號 CRUD 作業，在陣列上的註冊記錄。
+  syntax:
+    content: 'function runBulkEnrollmentOperation(bulkEnrollmentOperation: BulkEnrollmentOperation, callback?: (err: Error, bulkEnrollmentOperationResult?: BulkEnrollmentOperationResult, response?: any) => void)'
+    parameters:
+    - id: bulkEnrollmentOperation
+      type:
+      - azure-iot-provisioning-service.BulkEnrollmentOperation
+      description: 物件，指定單一的 IndividualEnrollment 物件也屬於物件陣列上的 CRUD 作業的類型。
+    - id: callback
+      type:
+      - '(err: Error, bulkEnrollmentOperationResult?: BulkEnrollmentOperationResult, response?: any) => void'
+      description: >
+        在作業完成時叫用。
+      optional: true
+  package: azure-iot-provisioning-service
+references:
+- uid: azure-iot-provisioning-service.QuerySpecification
+  spec.typeScript:
+  - name: QuerySpecification
+    fullName: QuerySpecification
+    uid: azure-iot-provisioning-service.QuerySpecification
+- uid: azure-iot-provisioning-service.Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-iot-provisioning-service.Query
+- uid: azure-iot-provisioning-service.EnrollmentGroup
+  spec.typeScript:
+  - name: EnrollmentGroup
+    fullName: EnrollmentGroup
+    uid: azure-iot-provisioning-service.EnrollmentGroup
+- uid: azure-iot-provisioning-service.IndividualEnrollment
+  spec.typeScript:
+  - name: IndividualEnrollment
+    fullName: IndividualEnrollment
+    uid: azure-iot-provisioning-service.IndividualEnrollment
+- uid: string | azure-iot-provisioning-service.DeviceRegistrationState
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: DeviceRegistrationState
+    fullName: DeviceRegistrationState
+    uid: azure-iot-provisioning-service.DeviceRegistrationState
+- uid: string | azure-iot-provisioning-service.DeleteCallback
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: DeleteCallback
+    fullName: DeleteCallback
+    uid: azure-iot-provisioning-service.DeleteCallback
+- uid: azure-iot-provisioning-service.DeleteCallback
+  spec.typeScript:
+  - name: DeleteCallback
+    fullName: DeleteCallback
+    uid: azure-iot-provisioning-service.DeleteCallback
+- uid: string | azure-iot-provisioning-service.EnrollmentGroup
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: EnrollmentGroup
+    fullName: EnrollmentGroup
+    uid: azure-iot-provisioning-service.EnrollmentGroup
+- uid: string | azure-iot-provisioning-service.IndividualEnrollment
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: IndividualEnrollment
+    fullName: IndividualEnrollment
+    uid: azure-iot-provisioning-service.IndividualEnrollment
+- uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+  spec.typeScript:
+  - name: BulkEnrollmentOperation
+    fullName: BulkEnrollmentOperation
+    uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient
+  spec.typeScript:
+  - name: ProvisioningServiceClient
+    fullName: ProvisioningServiceClient
+    uid: azure-iot-provisioning-service.ProvisioningServiceClient
