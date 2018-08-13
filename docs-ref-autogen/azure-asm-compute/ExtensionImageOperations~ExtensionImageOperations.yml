@@ -1,0 +1,929 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac1e20f410103a7d8236e85e78387bc84acda4ef
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051393"
+items:
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations
+  summary: >-
+    <span data-ttu-id="cb641-101">服務管理 API 包含用於管理服務和虛擬機器延伸模組映像，在發行者訂用帳戶中的作業。</span><span class="sxs-lookup"><span data-stu-id="cb641-101">The Service Management API includes operations for managing the service and virtual machine extension images in your publisher subscription.</span></span>
+
+    <span data-ttu-id="cb641-102">__附註__： 此類別的執行個體自動建立之執行個體的 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="cb641-102">__NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="cb641-103">請參閱 [extensionImages] {@link ComputeManagementClient ~ ComputeManagementClient #extensionImages}。</span><span class="sxs-lookup"><span data-stu-id="cb641-103">See [extensionImages] {@link ComputeManagementClient~ComputeManagementClient#extensionImages}.</span></span>
+
+    <span data-ttu-id="cb641-104">初始化 ExtensionImageOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="cb641-104">Initializes a new instance of the ExtensionImageOperations class.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations(client)
+  fullName: azure-asm-compute.ExtensionImageOperations.ExtensionImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="cb641-105">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="cb641-105">Reference to the service client.</span></span>
+    content: new ExtensionImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginRegistering(parameters, callback)
+  summary: <span data-ttu-id="cb641-106">註冊新的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-106">Register a new extension.</span></span> <span data-ttu-id="cb641-107">延伸模組會識別其 ProviderNamespace 和型別 （區分大小寫的字串） 的組合。</span><span class="sxs-lookup"><span data-stu-id="cb641-107">An extension is identified by the combination of its ProviderNamespace and Type (case-sensitive string).</span></span> <span data-ttu-id="cb641-108">它不允許註冊具有相同識別 （也就是 ProviderNamespace 和類型的組合） 的已註冊的延伸模組的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-108">It is not allowed to register an extension with the same identity (i.e. combination of ProviderNamespace and Type) of an already-registered extension.</span></span> <span data-ttu-id="cb641-109">若要註冊的現有擴充功能的新版本，應該使用更新延伸模組 API。</span><span class="sxs-lookup"><span data-stu-id="cb641-109">To register new version of an existing extension, the Update Extension API should be used.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginRegistering(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: <span data-ttu-id="cb641-110">提供給註冊的虛擬機器延伸模組映像作業的參數。</span><span class="sxs-lookup"><span data-stu-id="cb641-110">Parameters supplied to the Register Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="cb641-111">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-111">Required.</span></span> <span data-ttu-id="cb641-112">延伸的提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="cb641-112">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="cb641-113">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-113">Required.</span></span> <span data-ttu-id="cb641-114">延伸的型別。</span><span class="sxs-lookup"><span data-stu-id="cb641-114">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="cb641-115">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-115">Required.</span></span> <span data-ttu-id="cb641-116">延伸模組的版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-116">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="cb641-117">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-117">Required.</span></span> <span data-ttu-id="cb641-118">延伸模組的同一行標籤。</span><span class="sxs-lookup"><span data-stu-id="cb641-118">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cb641-119">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-119">Required.</span></span> <span data-ttu-id="cb641-120">支援的裝載資源。</span><span class="sxs-lookup"><span data-stu-id="cb641-120">The supported hosting resources.</span></span> <span data-ttu-id="cb641-121">它必須包含 'W' 及 （或） 'WorkerRole'。</span><span class="sxs-lookup"><span data-stu-id="cb641-121">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="cb641-122">例如</span><span class="sxs-lookup"><span data-stu-id="cb641-122">E.g.</span></span>
+
+        <span data-ttu-id="cb641-123">' WebRole |WorkerRole' 或 ' WebRole |WorkerRole |VmRole'。</span><span class="sxs-lookup"><span data-stu-id="cb641-123">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="cb641-124">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-124">Required.</span></span> <span data-ttu-id="cb641-125">URI 字串，指向 延伸模組的 ZIP 套件。</span><span class="sxs-lookup"><span data-stu-id="cb641-125">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="cb641-126">ZIP 套件必須包含可執行檔的擴充功能和其他支援的檔案，以及 PluginManifest.xml 資訊清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-126">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="cb641-127">MediaLink 值必須指向 Azure blob 儲存體中的 URL （Http 或 Https），且可以下載。</span><span class="sxs-lookup"><span data-stu-id="cb641-127">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="cb641-128">Windows Azure 將會複製從這個來源位置的延伸模組套件，並將它複寫到所有區域。</span><span class="sxs-lookup"><span data-stu-id="cb641-128">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="cb641-129">一般的時間才能完成複寫是 20 分鐘的時間。</span><span class="sxs-lookup"><span data-stu-id="cb641-129">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="cb641-130">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-130">Optional.</span></span> <span data-ttu-id="cb641-131">參數的憑證來加密私用組態資料。</span><span class="sxs-lookup"><span data-stu-id="cb641-131">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="cb641-132">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-132">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="cb641-133">所需的憑證宣告。</span><span class="sxs-lookup"><span data-stu-id="cb641-133">Required for certificate declaration.</span></span> <span data-ttu-id="cb641-134">如有需要，請安裝加密憑證，Windows 憑證存放區位置。</span><span class="sxs-lookup"><span data-stu-id="cb641-134">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-135">其值必須是 'LocalMachine'，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="cb641-135">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-136">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-136">Optional.</span></span> <span data-ttu-id="cb641-137">如有需要，請安裝加密憑證，Windows 憑證存放區名稱。</span><span class="sxs-lookup"><span data-stu-id="cb641-137">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-138">其值必須為 'My' 如果存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-138">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="cb641-139">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-139">Optional.</span></span>
+
+        <span data-ttu-id="cb641-140">是否需要加密的憑證指紋。</span><span class="sxs-lookup"><span data-stu-id="cb641-140">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="cb641-141">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-141">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="cb641-142">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-142">Optional.</span></span> <span data-ttu-id="cb641-143">加密，如有必要的憑證指紋演算法。</span><span class="sxs-lookup"><span data-stu-id="cb641-143">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-144">其值必須是 'sha1'，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="cb641-144">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="cb641-145">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-145">Optional.</span></span> <span data-ttu-id="cb641-146">宣告自動加入這個延伸模組，以新增每個部署的端點。</span><span class="sxs-lookup"><span data-stu-id="cb641-146">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="cb641-147">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-147">Optional.</span></span> <span data-ttu-id="cb641-148">此延伸模組所需的輸入端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-148">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="cb641-149">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-149">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-150">每個輸入的端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-150">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cb641-151">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-151">Optional.</span></span>
+
+        <span data-ttu-id="cb641-152">此延伸模組所需的內部端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-152">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="cb641-153">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-153">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-154">每個內部端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-154">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cb641-155">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-155">Optional.</span></span> <span data-ttu-id="cb641-156">此延伸模組所需的執行個體輸入端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-156">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="cb641-157">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-157">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-158">每個執行個體輸入的端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-158">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cb641-159">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-159">Optional.</span></span> <span data-ttu-id="cb641-160">公用組態資料的 XSD 結構描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-160">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cb641-161">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-161">Optional.</span></span> <span data-ttu-id="cb641-162">私用組態資料的 XSD 結構描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-162">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="cb641-163">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-163">Required.</span></span> <span data-ttu-id="cb641-164">擴充功能的詳細的描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-164">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-165">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-165">Optional.</span></span> <span data-ttu-id="cb641-166">發行者名稱的文字。</span><span class="sxs-lookup"><span data-stu-id="cb641-166">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="cb641-167">發行者可以將它設定為任何任意的日期，這是僅供顯示之用。</span><span class="sxs-lookup"><span data-stu-id="cb641-167">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="cb641-168">如果未指定 「 發行者 」，Azure 會自動指派延伸模組要求已收到時的 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="cb641-168">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="cb641-169">宣告由延伸使用客體虛擬機器的本機資源。</span><span class="sxs-lookup"><span data-stu-id="cb641-169">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="cb641-170">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-170">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-171">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-171">Optional.</span></span> <span data-ttu-id="cb641-172">其值必須為 'true' false' （區分大小寫） 設為 'true'，角色啟動會封鎖，直到擴充功能安裝完成時。</span><span class="sxs-lookup"><span data-stu-id="cb641-172">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="cb641-173">應為 'true' 時，角色無法啟動所安裝的延伸模組沒有設定這個旗標。</span><span class="sxs-lookup"><span data-stu-id="cb641-173">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="cb641-174">如果設定為 'false' （預設值），角色會啟動而不需等到擴充功能安裝完成。</span><span class="sxs-lookup"><span data-stu-id="cb641-174">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="cb641-175">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-175">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-176">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-176">Optional.</span></span> <span data-ttu-id="cb641-177">如果這設定為 'true' 的延伸模組看不公開使用，也就是從 API 清單傳回。</span><span class="sxs-lookup"><span data-stu-id="cb641-177">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="cb641-178">您可以藉由參考 ProviderNamespace、 類型和版本組合仍存取。</span><span class="sxs-lookup"><span data-stu-id="cb641-178">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="cb641-179">因此內部延伸模組僅供測試用途。</span><span class="sxs-lookup"><span data-stu-id="cb641-179">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="cb641-180">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-180">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="cb641-181">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-181">Optional.</span></span> <span data-ttu-id="cb641-182">擴充功能範例組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-182">A sample configuration for the extension.</span></span> <span data-ttu-id="cb641-183">您可以下載的使用者，和使用者可以使用自訂的輸入參數來取代。</span><span class="sxs-lookup"><span data-stu-id="cb641-183">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="cb641-184">範例設定應該夠註解。</span><span class="sxs-lookup"><span data-stu-id="cb641-184">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="cb641-185">如果設定資料的 XML 格式，則 XML 文件層級項目必須是 'Configuration'，和選擇性的公用組態資料對應到子元素的 'PublicConfig'，而選擇性的私用組態資料對應的子系'PrivateConfig' 項目。</span><span class="sxs-lookup"><span data-stu-id="cb641-185">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="cb641-186">範例組態資料應該在由 「 發行者 」 的公用和私用組態結構描述驗證。</span><span class="sxs-lookup"><span data-stu-id="cb641-186">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-187">指出是否此版本的延伸模組已複寫到所有區域與否。</span><span class="sxs-lookup"><span data-stu-id="cb641-187">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="cb641-188">如果為 true，則指定的擴充功能版本可用在建立或更新部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-188">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="cb641-189">否則，給定延伸模組版本可能會造成失敗建立或更新部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-189">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="cb641-190">一般的時間是新註冊或新更新的擴充功能，才能複寫完全由 Azure 的 20 分鐘。</span><span class="sxs-lookup"><span data-stu-id="cb641-190">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="cb641-191">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-191">Optional.</span></span> <span data-ttu-id="cb641-192">這個版本的延伸模組的 EULA （使用者授權合約） 所指向的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-192">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="cb641-193">這是選擇性地指定第三方發佈的延伸模組，而不是 Windows Azure。</span><span class="sxs-lookup"><span data-stu-id="cb641-193">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="cb641-194">如果軟體需要任何額外的 Eula，應提供使用者授權合約的連結。</span><span class="sxs-lookup"><span data-stu-id="cb641-194">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cb641-195">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-195">Optional.</span></span> <span data-ttu-id="cb641-196">隱私權文件的延伸版本所指向的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-196">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="cb641-197">這是選擇性地指定第三方發佈而不是 Azure 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-197">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="cb641-198">如果軟體會收集任何資料和傳輸到客體虛擬機器時，可能會需要額外的隱私權文件。</span><span class="sxs-lookup"><span data-stu-id="cb641-198">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="cb641-199">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-199">Optional.</span></span> <span data-ttu-id="cb641-200">指向此版本的延伸模組的首頁的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-200">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="cb641-201">這是選擇性地指定第三方發佈而不是 Azure 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-201">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="cb641-202">在首頁上應有使用量資訊和客戶支援連絡資訊。</span><span class="sxs-lookup"><span data-stu-id="cb641-202">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-203">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-203">Optional.</span></span> <span data-ttu-id="cb641-204">如果這設定為 'true' 擴充功能應該要接收 JSON 型組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-204">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="cb641-205">如果這設定為 'false' 擴充功能應該會收到 XML 為基礎的組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-205">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="cb641-206">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-206">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-207">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-207">Optional.</span></span> <span data-ttu-id="cb641-208">如果這設定為 'true' 的延伸模組版本無法升級至與其他作用中的部署中的主要版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-208">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="cb641-209">如果值為 'false' 或也存在，延伸模組版本可以升級至從任何其他版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-209">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="cb641-210">不支援降級。</span><span class="sxs-lookup"><span data-stu-id="cb641-210">Downgrade is not supported.</span></span> <span data-ttu-id="cb641-211">值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-211">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="cb641-212">指出延伸模組支援 OS 的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-212">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="cb641-213">目前的值為 'Windows' 或 'Linux'。</span><span class="sxs-lookup"><span data-stu-id="cb641-213">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-214">包含公司/組織發行延伸模組名稱的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-214">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="cb641-215">包含所需的配量的區域名稱的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-215">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cb641-216">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="cb641-216">The response stream.</span></span>
+    content: function beginRegistering(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUnregistering(providerNamespace, type, version, callback)
+  summary: >-
+    <span data-ttu-id="cb641-217">取消註冊先前註冊使用註冊的擴充功能或更新延伸模組 Api 延伸模組的版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-217">Unregister a version of an extension that was previously registered using either the Register Extension or Update Extension APIs.</span></span> <span data-ttu-id="cb641-218">延伸模組版本識別其 ProviderNamespace、 類型和版本註冊擴充功能時指定的組合。</span><span class="sxs-lookup"><span data-stu-id="cb641-218">An extension version is identified by the combination of its ProviderNamespace, Type and Version which are specified when registering the extension.</span></span>
+
+    <span data-ttu-id="cb641-219">取消註冊只允許用於內部延伸模組，也就是擴充功能的 IsInternalExtension 欄位設定為 'true' 或更新期間註冊。</span><span class="sxs-lookup"><span data-stu-id="cb641-219">Unregistering is only allowed for internal extensions, that is, the extensions for which the IsInternalExtension field is set to 'true' during registration or during an update.</span></span> <span data-ttu-id="cb641-220">每個訂用帳戶註冊的延伸模組的數目沒有配額 (15)。</span><span class="sxs-lookup"><span data-stu-id="cb641-220">There is a quota (15) on the number of extensions that can be registered per subscription.</span></span> <span data-ttu-id="cb641-221">如果您的訂用帳戶用盡配額，您將會排除需要取消註冊部分內部延伸模組，或連絡 Azure （成為發行者所使用的相同電子郵件） 增加配額。</span><span class="sxs-lookup"><span data-stu-id="cb641-221">If your subscription runs out of quota, you will wither need to unregister some of the internal extensions or contact Azure (same email used to become a publisher)  to increase the quota.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUnregistering(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="cb641-222">若要取消註冊的延伸模組映像提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="cb641-222">The provider namespace of the extension image to unregister.</span></span>
+    - id: type
+      type:
+      - string
+      description: <span data-ttu-id="cb641-223">若要取消註冊延伸模組映像的類型。</span><span class="sxs-lookup"><span data-stu-id="cb641-223">The type of the extension image to unregister.</span></span>
+    - id: version
+      type:
+      - string
+      description: <span data-ttu-id="cb641-224">若要取消註冊的延伸模組映像的版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-224">The version of the extension image to unregister.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cb641-225">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="cb641-225">The response stream.</span></span>
+    content: function beginUnregistering(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUpdating(parameters, callback)
+  summary: <span data-ttu-id="cb641-226">更新新的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-226">Update a new extension.</span></span> <span data-ttu-id="cb641-227">它允許更新延伸模組，必須使用相同的身分識別 （也就是 ProviderNamespace 和類型的組合），但使用不同的版本已經註冊。</span><span class="sxs-lookup"><span data-stu-id="cb641-227">It is allowed to update an extension which had already been registered with the same identity (i.e. combination of ProviderNamespace and Type) but with different version.</span></span> <span data-ttu-id="cb641-228">如果要更新的延伸模組有尚未註冊之前, 的身分識別，它將會失敗，或已經有相同的身分識別與相同版本的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-228">It will fail if the extension to update has an identity that has not been registered before, or there is already an extension with the same identity and same version.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUpdating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: <span data-ttu-id="cb641-229">更新虛擬機器延伸模組映像作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="cb641-229">Parameters supplied to the Update Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="cb641-230">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-230">Required.</span></span> <span data-ttu-id="cb641-231">延伸的提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="cb641-231">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="cb641-232">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-232">Required.</span></span> <span data-ttu-id="cb641-233">延伸的型別。</span><span class="sxs-lookup"><span data-stu-id="cb641-233">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="cb641-234">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-234">Required.</span></span> <span data-ttu-id="cb641-235">延伸模組的版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-235">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="cb641-236">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-236">Required.</span></span> <span data-ttu-id="cb641-237">延伸模組的同一行標籤。</span><span class="sxs-lookup"><span data-stu-id="cb641-237">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cb641-238">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-238">Required.</span></span> <span data-ttu-id="cb641-239">支援的裝載資源。</span><span class="sxs-lookup"><span data-stu-id="cb641-239">The supported hosting resources.</span></span> <span data-ttu-id="cb641-240">它必須包含 'W' 及 （或） 'WorkerRole'。</span><span class="sxs-lookup"><span data-stu-id="cb641-240">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="cb641-241">例如</span><span class="sxs-lookup"><span data-stu-id="cb641-241">E.g.</span></span>
+
+        <span data-ttu-id="cb641-242">' WebRole |WorkerRole' 或 ' WebRole |WorkerRole |VmRole'。</span><span class="sxs-lookup"><span data-stu-id="cb641-242">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="cb641-243">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-243">Required.</span></span> <span data-ttu-id="cb641-244">URI 字串，指向 延伸模組的 ZIP 套件。</span><span class="sxs-lookup"><span data-stu-id="cb641-244">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="cb641-245">ZIP 套件必須包含可執行檔的擴充功能和其他支援的檔案，以及 PluginManifest.xml 資訊清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-245">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="cb641-246">MediaLink 值必須指向 Azure blob 儲存體中的 URL （Http 或 Https），且可以下載。</span><span class="sxs-lookup"><span data-stu-id="cb641-246">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="cb641-247">Windows Azure 將會複製從這個來源位置的延伸模組套件，並將它複寫到所有區域。</span><span class="sxs-lookup"><span data-stu-id="cb641-247">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="cb641-248">一般的時間才能完成複寫是 20 分鐘的時間。</span><span class="sxs-lookup"><span data-stu-id="cb641-248">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="cb641-249">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-249">Optional.</span></span> <span data-ttu-id="cb641-250">參數的憑證來加密私用組態資料。</span><span class="sxs-lookup"><span data-stu-id="cb641-250">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="cb641-251">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-251">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="cb641-252">所需的憑證宣告。</span><span class="sxs-lookup"><span data-stu-id="cb641-252">Required for certificate declaration.</span></span> <span data-ttu-id="cb641-253">如有需要，請安裝加密憑證，Windows 憑證存放區位置。</span><span class="sxs-lookup"><span data-stu-id="cb641-253">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-254">其值必須是 'LocalMachine'，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="cb641-254">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-255">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-255">Optional.</span></span> <span data-ttu-id="cb641-256">如有需要，請安裝加密憑證，Windows 憑證存放區名稱。</span><span class="sxs-lookup"><span data-stu-id="cb641-256">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-257">其值必須為 'My' 如果存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-257">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="cb641-258">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-258">Optional.</span></span>
+
+        <span data-ttu-id="cb641-259">是否需要加密的憑證指紋。</span><span class="sxs-lookup"><span data-stu-id="cb641-259">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="cb641-260">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-260">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="cb641-261">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-261">Optional.</span></span> <span data-ttu-id="cb641-262">加密，如有必要的憑證指紋演算法。</span><span class="sxs-lookup"><span data-stu-id="cb641-262">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-263">其值必須是 'sha1'，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="cb641-263">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="cb641-264">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-264">Optional.</span></span> <span data-ttu-id="cb641-265">宣告自動加入這個延伸模組，以新增每個部署的端點。</span><span class="sxs-lookup"><span data-stu-id="cb641-265">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="cb641-266">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-266">Optional.</span></span> <span data-ttu-id="cb641-267">此延伸模組所需的輸入端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-267">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="cb641-268">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-268">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-269">每個輸入的端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-269">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cb641-270">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-270">Optional.</span></span>
+
+        <span data-ttu-id="cb641-271">此延伸模組所需的內部端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-271">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="cb641-272">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-272">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-273">每個內部端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-273">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cb641-274">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-274">Optional.</span></span> <span data-ttu-id="cb641-275">此延伸模組所需的執行個體輸入端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-275">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="cb641-276">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-276">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-277">每個執行個體輸入的端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-277">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cb641-278">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-278">Optional.</span></span> <span data-ttu-id="cb641-279">公用組態資料的 XSD 結構描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-279">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cb641-280">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-280">Optional.</span></span> <span data-ttu-id="cb641-281">私用組態資料的 XSD 結構描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-281">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="cb641-282">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-282">Required.</span></span> <span data-ttu-id="cb641-283">擴充功能的詳細的描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-283">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-284">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-284">Optional.</span></span> <span data-ttu-id="cb641-285">發行者名稱的文字。</span><span class="sxs-lookup"><span data-stu-id="cb641-285">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="cb641-286">發行者可以將它設定為任何任意的日期，這是僅供顯示之用。</span><span class="sxs-lookup"><span data-stu-id="cb641-286">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="cb641-287">如果未指定 「 發行者 」，Azure 會自動指派延伸模組要求已收到時的 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="cb641-287">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="cb641-288">宣告由延伸使用客體虛擬機器的本機資源。</span><span class="sxs-lookup"><span data-stu-id="cb641-288">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="cb641-289">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-289">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-290">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-290">Optional.</span></span> <span data-ttu-id="cb641-291">其值必須為 'true' false' （區分大小寫） 設為 'true'，角色啟動會封鎖，直到擴充功能安裝完成時。</span><span class="sxs-lookup"><span data-stu-id="cb641-291">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="cb641-292">應為 'true' 時，角色無法啟動所安裝的延伸模組沒有設定這個旗標。</span><span class="sxs-lookup"><span data-stu-id="cb641-292">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="cb641-293">如果設定為 'false' （預設值），角色會啟動而不需等到擴充功能安裝完成。</span><span class="sxs-lookup"><span data-stu-id="cb641-293">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="cb641-294">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-294">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-295">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-295">Optional.</span></span> <span data-ttu-id="cb641-296">如果這設定為 'true' 的延伸模組看不公開使用，也就是從 API 清單傳回。</span><span class="sxs-lookup"><span data-stu-id="cb641-296">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="cb641-297">您可以藉由參考 ProviderNamespace、 類型和版本組合仍存取。</span><span class="sxs-lookup"><span data-stu-id="cb641-297">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="cb641-298">因此內部延伸模組僅供測試用途。</span><span class="sxs-lookup"><span data-stu-id="cb641-298">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="cb641-299">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-299">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="cb641-300">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-300">Optional.</span></span> <span data-ttu-id="cb641-301">擴充功能範例組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-301">A sample configuration for the extension.</span></span> <span data-ttu-id="cb641-302">您可以下載的使用者，和使用者可以使用自訂的輸入參數來取代。</span><span class="sxs-lookup"><span data-stu-id="cb641-302">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="cb641-303">範例設定應該夠註解。</span><span class="sxs-lookup"><span data-stu-id="cb641-303">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="cb641-304">如果設定資料的 XML 格式，則 XML 文件層級項目必須是 'Configuration'，和選擇性的公用組態資料對應到子元素的 'PublicConfig'，而選擇性的私用組態資料對應的子系'PrivateConfig' 項目。</span><span class="sxs-lookup"><span data-stu-id="cb641-304">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="cb641-305">範例組態資料應該在由 「 發行者 」 的公用和私用組態結構描述驗證。</span><span class="sxs-lookup"><span data-stu-id="cb641-305">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-306">指出是否此版本的延伸模組已複寫到所有區域與否。</span><span class="sxs-lookup"><span data-stu-id="cb641-306">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="cb641-307">如果為 true，則指定的擴充功能版本可用在建立或更新部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-307">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="cb641-308">否則，給定延伸模組版本可能會造成失敗建立或更新部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-308">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="cb641-309">一般的時間是新註冊或新更新的擴充功能，才能複寫完全由 Azure 的 20 分鐘。</span><span class="sxs-lookup"><span data-stu-id="cb641-309">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="cb641-310">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-310">Optional.</span></span> <span data-ttu-id="cb641-311">這個版本的延伸模組的 EULA （使用者授權合約） 所指向的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-311">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="cb641-312">這是選擇性地指定第三方發佈的延伸模組，而不是 Windows Azure。</span><span class="sxs-lookup"><span data-stu-id="cb641-312">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="cb641-313">如果軟體需要任何額外的 Eula，應提供使用者授權合約的連結。</span><span class="sxs-lookup"><span data-stu-id="cb641-313">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cb641-314">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-314">Optional.</span></span> <span data-ttu-id="cb641-315">隱私權文件的延伸版本所指向的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-315">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="cb641-316">這是選擇性地指定第三方發佈而不是 Azure 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-316">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="cb641-317">如果軟體會收集任何資料和傳輸到客體虛擬機器時，可能會需要額外的隱私權文件。</span><span class="sxs-lookup"><span data-stu-id="cb641-317">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="cb641-318">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-318">Optional.</span></span> <span data-ttu-id="cb641-319">指向此版本的延伸模組的首頁的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-319">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="cb641-320">這是選擇性地指定第三方發佈而不是 Azure 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-320">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="cb641-321">在首頁上應有使用量資訊和客戶支援連絡資訊。</span><span class="sxs-lookup"><span data-stu-id="cb641-321">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-322">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-322">Optional.</span></span> <span data-ttu-id="cb641-323">如果這設定為 'true' 擴充功能應該要接收 JSON 型組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-323">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="cb641-324">如果這設定為 'false' 擴充功能應該會收到 XML 為基礎的組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-324">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="cb641-325">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-325">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-326">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-326">Optional.</span></span> <span data-ttu-id="cb641-327">如果這設定為 'true' 的延伸模組版本無法升級至與其他作用中的部署中的主要版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-327">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="cb641-328">如果值為 'false' 或也存在，延伸模組版本可以升級至從任何其他版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-328">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="cb641-329">不支援降級。</span><span class="sxs-lookup"><span data-stu-id="cb641-329">Downgrade is not supported.</span></span> <span data-ttu-id="cb641-330">值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-330">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="cb641-331">指出延伸模組支援 OS 的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-331">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="cb641-332">目前的值為 'Windows' 或 'Linux'。</span><span class="sxs-lookup"><span data-stu-id="cb641-332">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-333">包含公司/組織發行延伸模組名稱的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-333">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="cb641-334">包含所需的配量的區域名稱的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-334">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cb641-335">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="cb641-335">The response stream.</span></span>
+    content: function beginUpdating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: register(parameters, callback)
+  summary: <span data-ttu-id="cb641-336">註冊新的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-336">Register a new extension.</span></span> <span data-ttu-id="cb641-337">延伸模組會識別其 ProviderNamespace 和型別 （區分大小寫的字串） 的組合。</span><span class="sxs-lookup"><span data-stu-id="cb641-337">An extension is identified by the combination of its ProviderNamespace and Type (case-sensitive string).</span></span> <span data-ttu-id="cb641-338">它不允許註冊具有相同識別 （也就是 ProviderNamespace 和類型的組合） 的已註冊的延伸模組的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-338">It is not allowed to register an extension with the same identity (i.e. combination of ProviderNamespace and Type) of an already-registered extension.</span></span> <span data-ttu-id="cb641-339">若要註冊的現有擴充功能的新版本，應該使用更新延伸模組 API。</span><span class="sxs-lookup"><span data-stu-id="cb641-339">To register new version of an existing extension, the Update Extension API should be used.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.register(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: <span data-ttu-id="cb641-340">提供給註冊的虛擬機器延伸模組映像作業的參數。</span><span class="sxs-lookup"><span data-stu-id="cb641-340">Parameters supplied to the Register Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="cb641-341">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-341">Required.</span></span> <span data-ttu-id="cb641-342">延伸的提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="cb641-342">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="cb641-343">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-343">Required.</span></span> <span data-ttu-id="cb641-344">延伸的型別。</span><span class="sxs-lookup"><span data-stu-id="cb641-344">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="cb641-345">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-345">Required.</span></span> <span data-ttu-id="cb641-346">延伸模組的版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-346">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="cb641-347">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-347">Required.</span></span> <span data-ttu-id="cb641-348">延伸模組的同一行標籤。</span><span class="sxs-lookup"><span data-stu-id="cb641-348">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cb641-349">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-349">Required.</span></span> <span data-ttu-id="cb641-350">支援的裝載資源。</span><span class="sxs-lookup"><span data-stu-id="cb641-350">The supported hosting resources.</span></span> <span data-ttu-id="cb641-351">它必須包含 'W' 及 （或） 'WorkerRole'。</span><span class="sxs-lookup"><span data-stu-id="cb641-351">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="cb641-352">例如</span><span class="sxs-lookup"><span data-stu-id="cb641-352">E.g.</span></span>
+
+        <span data-ttu-id="cb641-353">' WebRole |WorkerRole' 或 ' WebRole |WorkerRole |VmRole'。</span><span class="sxs-lookup"><span data-stu-id="cb641-353">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="cb641-354">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-354">Required.</span></span> <span data-ttu-id="cb641-355">URI 字串，指向 延伸模組的 ZIP 套件。</span><span class="sxs-lookup"><span data-stu-id="cb641-355">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="cb641-356">ZIP 套件必須包含可執行檔的擴充功能和其他支援的檔案，以及 PluginManifest.xml 資訊清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-356">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="cb641-357">MediaLink 值必須指向 Azure blob 儲存體中的 URL （Http 或 Https），且可以下載。</span><span class="sxs-lookup"><span data-stu-id="cb641-357">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="cb641-358">Windows Azure 將會複製從這個來源位置的延伸模組套件，並將它複寫到所有區域。</span><span class="sxs-lookup"><span data-stu-id="cb641-358">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="cb641-359">一般的時間才能完成複寫是 20 分鐘的時間。</span><span class="sxs-lookup"><span data-stu-id="cb641-359">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="cb641-360">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-360">Optional.</span></span> <span data-ttu-id="cb641-361">參數的憑證來加密私用組態資料。</span><span class="sxs-lookup"><span data-stu-id="cb641-361">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="cb641-362">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-362">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="cb641-363">所需的憑證宣告。</span><span class="sxs-lookup"><span data-stu-id="cb641-363">Required for certificate declaration.</span></span> <span data-ttu-id="cb641-364">如有需要，請安裝加密憑證，Windows 憑證存放區位置。</span><span class="sxs-lookup"><span data-stu-id="cb641-364">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-365">其值必須是 'LocalMachine'，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="cb641-365">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-366">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-366">Optional.</span></span> <span data-ttu-id="cb641-367">如有需要，請安裝加密憑證，Windows 憑證存放區名稱。</span><span class="sxs-lookup"><span data-stu-id="cb641-367">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-368">其值必須為 'My' 如果存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-368">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="cb641-369">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-369">Optional.</span></span>
+
+        <span data-ttu-id="cb641-370">是否需要加密的憑證指紋。</span><span class="sxs-lookup"><span data-stu-id="cb641-370">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="cb641-371">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-371">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="cb641-372">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-372">Optional.</span></span> <span data-ttu-id="cb641-373">加密，如有必要的憑證指紋演算法。</span><span class="sxs-lookup"><span data-stu-id="cb641-373">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-374">其值必須是 'sha1'，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="cb641-374">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="cb641-375">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-375">Optional.</span></span> <span data-ttu-id="cb641-376">宣告自動加入這個延伸模組，以新增每個部署的端點。</span><span class="sxs-lookup"><span data-stu-id="cb641-376">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="cb641-377">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-377">Optional.</span></span> <span data-ttu-id="cb641-378">此延伸模組所需的輸入端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-378">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="cb641-379">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-379">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-380">每個輸入的端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-380">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cb641-381">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-381">Optional.</span></span>
+
+        <span data-ttu-id="cb641-382">此延伸模組所需的內部端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-382">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="cb641-383">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-383">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-384">每個內部端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-384">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cb641-385">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-385">Optional.</span></span> <span data-ttu-id="cb641-386">此延伸模組所需的執行個體輸入端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-386">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="cb641-387">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-387">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-388">每個執行個體輸入的端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-388">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cb641-389">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-389">Optional.</span></span> <span data-ttu-id="cb641-390">公用組態資料的 XSD 結構描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-390">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cb641-391">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-391">Optional.</span></span> <span data-ttu-id="cb641-392">私用組態資料的 XSD 結構描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-392">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="cb641-393">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-393">Required.</span></span> <span data-ttu-id="cb641-394">擴充功能的詳細的描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-394">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-395">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-395">Optional.</span></span> <span data-ttu-id="cb641-396">發行者名稱的文字。</span><span class="sxs-lookup"><span data-stu-id="cb641-396">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="cb641-397">發行者可以將它設定為任何任意的日期，這是僅供顯示之用。</span><span class="sxs-lookup"><span data-stu-id="cb641-397">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="cb641-398">如果未指定 「 發行者 」，Azure 會自動指派延伸模組要求已收到時的 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="cb641-398">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="cb641-399">宣告由延伸使用客體虛擬機器的本機資源。</span><span class="sxs-lookup"><span data-stu-id="cb641-399">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="cb641-400">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-400">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-401">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-401">Optional.</span></span> <span data-ttu-id="cb641-402">其值必須為 'true' false' （區分大小寫） 設為 'true'，角色啟動會封鎖，直到擴充功能安裝完成時。</span><span class="sxs-lookup"><span data-stu-id="cb641-402">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="cb641-403">應為 'true' 時，角色無法啟動所安裝的延伸模組沒有設定這個旗標。</span><span class="sxs-lookup"><span data-stu-id="cb641-403">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="cb641-404">如果設定為 'false' （預設值），角色會啟動而不需等到擴充功能安裝完成。</span><span class="sxs-lookup"><span data-stu-id="cb641-404">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="cb641-405">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-405">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-406">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-406">Optional.</span></span> <span data-ttu-id="cb641-407">如果這設定為 'true' 的延伸模組看不公開使用，也就是從 API 清單傳回。</span><span class="sxs-lookup"><span data-stu-id="cb641-407">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="cb641-408">您可以藉由參考 ProviderNamespace、 類型和版本組合仍存取。</span><span class="sxs-lookup"><span data-stu-id="cb641-408">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="cb641-409">因此內部延伸模組僅供測試用途。</span><span class="sxs-lookup"><span data-stu-id="cb641-409">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="cb641-410">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-410">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="cb641-411">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-411">Optional.</span></span> <span data-ttu-id="cb641-412">擴充功能範例組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-412">A sample configuration for the extension.</span></span> <span data-ttu-id="cb641-413">您可以下載的使用者，和使用者可以使用自訂的輸入參數來取代。</span><span class="sxs-lookup"><span data-stu-id="cb641-413">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="cb641-414">範例設定應該夠註解。</span><span class="sxs-lookup"><span data-stu-id="cb641-414">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="cb641-415">如果設定資料的 XML 格式，則 XML 文件層級項目必須是 'Configuration'，和選擇性的公用組態資料對應到子元素的 'PublicConfig'，而選擇性的私用組態資料對應的子系'PrivateConfig' 項目。</span><span class="sxs-lookup"><span data-stu-id="cb641-415">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="cb641-416">範例組態資料應該在由 「 發行者 」 的公用和私用組態結構描述驗證。</span><span class="sxs-lookup"><span data-stu-id="cb641-416">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-417">指出是否此版本的延伸模組已複寫到所有區域與否。</span><span class="sxs-lookup"><span data-stu-id="cb641-417">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="cb641-418">如果為 true，則指定的擴充功能版本可用在建立或更新部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-418">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="cb641-419">否則，給定延伸模組版本可能會造成失敗建立或更新部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-419">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="cb641-420">一般的時間是新註冊或新更新的擴充功能，才能複寫完全由 Azure 的 20 分鐘。</span><span class="sxs-lookup"><span data-stu-id="cb641-420">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="cb641-421">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-421">Optional.</span></span> <span data-ttu-id="cb641-422">這個版本的延伸模組的 EULA （使用者授權合約） 所指向的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-422">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="cb641-423">這是選擇性地指定第三方發佈的延伸模組，而不是 Windows Azure。</span><span class="sxs-lookup"><span data-stu-id="cb641-423">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="cb641-424">如果軟體需要任何額外的 Eula，應提供使用者授權合約的連結。</span><span class="sxs-lookup"><span data-stu-id="cb641-424">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cb641-425">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-425">Optional.</span></span> <span data-ttu-id="cb641-426">隱私權文件的延伸版本所指向的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-426">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="cb641-427">這是選擇性地指定第三方發佈而不是 Azure 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-427">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="cb641-428">如果軟體會收集任何資料和傳輸到客體虛擬機器時，可能會需要額外的隱私權文件。</span><span class="sxs-lookup"><span data-stu-id="cb641-428">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="cb641-429">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-429">Optional.</span></span> <span data-ttu-id="cb641-430">指向此版本的延伸模組的首頁的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-430">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="cb641-431">這是選擇性地指定第三方發佈而不是 Azure 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-431">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="cb641-432">在首頁上應有使用量資訊和客戶支援連絡資訊。</span><span class="sxs-lookup"><span data-stu-id="cb641-432">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-433">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-433">Optional.</span></span> <span data-ttu-id="cb641-434">如果這設定為 'true' 擴充功能應該要接收 JSON 型組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-434">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="cb641-435">如果這設定為 'false' 擴充功能應該會收到 XML 為基礎的組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-435">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="cb641-436">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-436">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-437">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-437">Optional.</span></span> <span data-ttu-id="cb641-438">如果這設定為 'true' 的延伸模組版本無法升級至與其他作用中的部署中的主要版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-438">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="cb641-439">如果值為 'false' 或也存在，延伸模組版本可以升級至從任何其他版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-439">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="cb641-440">不支援降級。</span><span class="sxs-lookup"><span data-stu-id="cb641-440">Downgrade is not supported.</span></span> <span data-ttu-id="cb641-441">值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-441">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="cb641-442">指出延伸模組支援 OS 的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-442">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="cb641-443">目前的值為 'Windows' 或 'Linux'。</span><span class="sxs-lookup"><span data-stu-id="cb641-443">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-444">包含公司/組織發行延伸模組名稱的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-444">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="cb641-445">包含所需的配量的區域名稱的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-445">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cb641-446">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="cb641-446">The response stream.</span></span>
+    content: function register(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: unregister(providerNamespace, type, version, callback)
+  summary: >-
+    <span data-ttu-id="cb641-447">取消註冊先前註冊使用註冊的擴充功能或更新延伸模組 Api 延伸模組的版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-447">Unregister a version of an extension that was previously registered using either the Register Extension or Update Extension APIs.</span></span> <span data-ttu-id="cb641-448">延伸模組版本識別其 ProviderNamespace、 類型和版本註冊擴充功能時指定的組合。</span><span class="sxs-lookup"><span data-stu-id="cb641-448">An extension version is identified by the combination of its ProviderNamespace, Type and Version which are specified when registering the extension.</span></span>
+
+    <span data-ttu-id="cb641-449">取消註冊只允許用於內部延伸模組，也就是擴充功能的 IsInternalExtension 欄位設定為 'true' 或更新期間註冊。</span><span class="sxs-lookup"><span data-stu-id="cb641-449">Unregistering is only allowed for internal extensions, that is, the extensions for which the IsInternalExtension field is set to 'true' during registration or during an update.</span></span> <span data-ttu-id="cb641-450">每個訂用帳戶註冊的延伸模組的數目沒有配額 (15)。</span><span class="sxs-lookup"><span data-stu-id="cb641-450">There is a quota (15) on the number of extensions that can be registered per subscription.</span></span> <span data-ttu-id="cb641-451">如果您的訂用帳戶用盡配額，您將會排除需要取消註冊部分內部延伸模組，或連絡 Azure （成為發行者所使用的相同電子郵件） 增加配額。</span><span class="sxs-lookup"><span data-stu-id="cb641-451">If your subscription runs out of quota, you will wither need to unregister some of the internal extensions or contact Azure (same email used to become a publisher)  to increase the quota.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.unregister(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="cb641-452">若要取消註冊的延伸模組映像提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="cb641-452">The provider namespace of the extension image to unregister.</span></span>
+    - id: type
+      type:
+      - string
+      description: <span data-ttu-id="cb641-453">若要取消註冊延伸模組映像的類型。</span><span class="sxs-lookup"><span data-stu-id="cb641-453">The type of the extension image to unregister.</span></span>
+    - id: version
+      type:
+      - string
+      description: <span data-ttu-id="cb641-454">若要取消註冊的延伸模組映像的版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-454">The version of the extension image to unregister.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cb641-455">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="cb641-455">The response stream.</span></span>
+    content: function unregister(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: update(parameters, callback)
+  summary: <span data-ttu-id="cb641-456">更新新的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-456">Update a new extension.</span></span> <span data-ttu-id="cb641-457">它允許更新延伸模組，必須使用相同的身分識別 （也就是 ProviderNamespace 和類型的組合），但使用不同的版本已經註冊。</span><span class="sxs-lookup"><span data-stu-id="cb641-457">It is allowed to update an extension which had already been registered with the same identity (i.e. combination of ProviderNamespace and Type) but with different version.</span></span> <span data-ttu-id="cb641-458">如果要更新的延伸模組有尚未註冊之前, 的身分識別，它將會失敗，或已經有相同的身分識別與相同版本的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-458">It will fail if the extension to update has an identity that has not been registered before, or there is already an extension with the same identity and same version.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.update(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: <span data-ttu-id="cb641-459">更新虛擬機器延伸模組映像作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="cb641-459">Parameters supplied to the Update Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="cb641-460">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-460">Required.</span></span> <span data-ttu-id="cb641-461">延伸的提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="cb641-461">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="cb641-462">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-462">Required.</span></span> <span data-ttu-id="cb641-463">延伸的型別。</span><span class="sxs-lookup"><span data-stu-id="cb641-463">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="cb641-464">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-464">Required.</span></span> <span data-ttu-id="cb641-465">延伸模組的版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-465">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="cb641-466">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-466">Required.</span></span> <span data-ttu-id="cb641-467">延伸模組的同一行標籤。</span><span class="sxs-lookup"><span data-stu-id="cb641-467">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cb641-468">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-468">Required.</span></span> <span data-ttu-id="cb641-469">支援的裝載資源。</span><span class="sxs-lookup"><span data-stu-id="cb641-469">The supported hosting resources.</span></span> <span data-ttu-id="cb641-470">它必須包含 'W' 及 （或） 'WorkerRole'。</span><span class="sxs-lookup"><span data-stu-id="cb641-470">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="cb641-471">例如</span><span class="sxs-lookup"><span data-stu-id="cb641-471">E.g.</span></span>
+
+        <span data-ttu-id="cb641-472">' WebRole |WorkerRole' 或 ' WebRole |WorkerRole |VmRole'。</span><span class="sxs-lookup"><span data-stu-id="cb641-472">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="cb641-473">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-473">Required.</span></span> <span data-ttu-id="cb641-474">URI 字串，指向 延伸模組的 ZIP 套件。</span><span class="sxs-lookup"><span data-stu-id="cb641-474">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="cb641-475">ZIP 套件必須包含可執行檔的擴充功能和其他支援的檔案，以及 PluginManifest.xml 資訊清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-475">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="cb641-476">MediaLink 值必須指向 Azure blob 儲存體中的 URL （Http 或 Https），且可以下載。</span><span class="sxs-lookup"><span data-stu-id="cb641-476">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="cb641-477">Windows Azure 將會複製從這個來源位置的延伸模組套件，並將它複寫到所有區域。</span><span class="sxs-lookup"><span data-stu-id="cb641-477">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="cb641-478">一般的時間才能完成複寫是 20 分鐘的時間。</span><span class="sxs-lookup"><span data-stu-id="cb641-478">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="cb641-479">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-479">Optional.</span></span> <span data-ttu-id="cb641-480">參數的憑證來加密私用組態資料。</span><span class="sxs-lookup"><span data-stu-id="cb641-480">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="cb641-481">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-481">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="cb641-482">所需的憑證宣告。</span><span class="sxs-lookup"><span data-stu-id="cb641-482">Required for certificate declaration.</span></span> <span data-ttu-id="cb641-483">如有需要，請安裝加密憑證，Windows 憑證存放區位置。</span><span class="sxs-lookup"><span data-stu-id="cb641-483">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-484">其值必須是 'LocalMachine'，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="cb641-484">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-485">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-485">Optional.</span></span> <span data-ttu-id="cb641-486">如有需要，請安裝加密憑證，Windows 憑證存放區名稱。</span><span class="sxs-lookup"><span data-stu-id="cb641-486">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-487">其值必須為 'My' 如果存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-487">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="cb641-488">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-488">Optional.</span></span>
+
+        <span data-ttu-id="cb641-489">是否需要加密的憑證指紋。</span><span class="sxs-lookup"><span data-stu-id="cb641-489">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="cb641-490">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-490">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="cb641-491">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-491">Optional.</span></span> <span data-ttu-id="cb641-492">加密，如有必要的憑證指紋演算法。</span><span class="sxs-lookup"><span data-stu-id="cb641-492">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="cb641-493">其值必須是 'sha1'，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="cb641-493">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="cb641-494">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-494">Optional.</span></span> <span data-ttu-id="cb641-495">宣告自動加入這個延伸模組，以新增每個部署的端點。</span><span class="sxs-lookup"><span data-stu-id="cb641-495">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="cb641-496">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-496">Optional.</span></span> <span data-ttu-id="cb641-497">此延伸模組所需的輸入端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-497">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="cb641-498">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-498">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-499">每個輸入的端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-499">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cb641-500">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-500">Optional.</span></span>
+
+        <span data-ttu-id="cb641-501">此延伸模組所需的內部端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-501">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="cb641-502">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-502">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-503">每個內部端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-503">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cb641-504">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-504">Optional.</span></span> <span data-ttu-id="cb641-505">此延伸模組所需的執行個體輸入端點的清單。</span><span class="sxs-lookup"><span data-stu-id="cb641-505">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="cb641-506">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-506">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cb641-507">每個執行個體輸入的端點會自動新增至服務定義，使用此延伸模組的部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-507">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cb641-508">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-508">Optional.</span></span> <span data-ttu-id="cb641-509">公用組態資料的 XSD 結構描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-509">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cb641-510">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-510">Optional.</span></span> <span data-ttu-id="cb641-511">私用組態資料的 XSD 結構描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-511">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="cb641-512">必要。</span><span class="sxs-lookup"><span data-stu-id="cb641-512">Required.</span></span> <span data-ttu-id="cb641-513">擴充功能的詳細的描述。</span><span class="sxs-lookup"><span data-stu-id="cb641-513">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-514">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-514">Optional.</span></span> <span data-ttu-id="cb641-515">發行者名稱的文字。</span><span class="sxs-lookup"><span data-stu-id="cb641-515">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="cb641-516">發行者可以將它設定為任何任意的日期，這是僅供顯示之用。</span><span class="sxs-lookup"><span data-stu-id="cb641-516">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="cb641-517">如果未指定 「 發行者 」，Azure 會自動指派延伸模組要求已收到時的 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="cb641-517">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="cb641-518">宣告由延伸使用客體虛擬機器的本機資源。</span><span class="sxs-lookup"><span data-stu-id="cb641-518">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="cb641-519">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-519">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-520">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-520">Optional.</span></span> <span data-ttu-id="cb641-521">其值必須為 'true' false' （區分大小寫） 設為 'true'，角色啟動會封鎖，直到擴充功能安裝完成時。</span><span class="sxs-lookup"><span data-stu-id="cb641-521">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="cb641-522">應為 'true' 時，角色無法啟動所安裝的延伸模組沒有設定這個旗標。</span><span class="sxs-lookup"><span data-stu-id="cb641-522">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="cb641-523">如果設定為 'false' （預設值），角色會啟動而不需等到擴充功能安裝完成。</span><span class="sxs-lookup"><span data-stu-id="cb641-523">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="cb641-524">支援的 WebRole 或 WorkerRole，但忽略在 VmRole。</span><span class="sxs-lookup"><span data-stu-id="cb641-524">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-525">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-525">Optional.</span></span> <span data-ttu-id="cb641-526">如果這設定為 'true' 的延伸模組看不公開使用，也就是從 API 清單傳回。</span><span class="sxs-lookup"><span data-stu-id="cb641-526">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="cb641-527">您可以藉由參考 ProviderNamespace、 類型和版本組合仍存取。</span><span class="sxs-lookup"><span data-stu-id="cb641-527">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="cb641-528">因此內部延伸模組僅供測試用途。</span><span class="sxs-lookup"><span data-stu-id="cb641-528">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="cb641-529">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-529">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="cb641-530">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-530">Optional.</span></span> <span data-ttu-id="cb641-531">擴充功能範例組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-531">A sample configuration for the extension.</span></span> <span data-ttu-id="cb641-532">您可以下載的使用者，和使用者可以使用自訂的輸入參數來取代。</span><span class="sxs-lookup"><span data-stu-id="cb641-532">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="cb641-533">範例設定應該夠註解。</span><span class="sxs-lookup"><span data-stu-id="cb641-533">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="cb641-534">如果設定資料的 XML 格式，則 XML 文件層級項目必須是 'Configuration'，和選擇性的公用組態資料對應到子元素的 'PublicConfig'，而選擇性的私用組態資料對應的子系'PrivateConfig' 項目。</span><span class="sxs-lookup"><span data-stu-id="cb641-534">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="cb641-535">範例組態資料應該在由 「 發行者 」 的公用和私用組態結構描述驗證。</span><span class="sxs-lookup"><span data-stu-id="cb641-535">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-536">指出是否此版本的延伸模組已複寫到所有區域與否。</span><span class="sxs-lookup"><span data-stu-id="cb641-536">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="cb641-537">如果為 true，則指定的擴充功能版本可用在建立或更新部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-537">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="cb641-538">否則，給定延伸模組版本可能會造成失敗建立或更新部署。</span><span class="sxs-lookup"><span data-stu-id="cb641-538">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="cb641-539">一般的時間是新註冊或新更新的擴充功能，才能複寫完全由 Azure 的 20 分鐘。</span><span class="sxs-lookup"><span data-stu-id="cb641-539">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="cb641-540">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-540">Optional.</span></span> <span data-ttu-id="cb641-541">這個版本的延伸模組的 EULA （使用者授權合約） 所指向的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-541">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="cb641-542">這是選擇性地指定第三方發佈的延伸模組，而不是 Windows Azure。</span><span class="sxs-lookup"><span data-stu-id="cb641-542">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="cb641-543">如果軟體需要任何額外的 Eula，應提供使用者授權合約的連結。</span><span class="sxs-lookup"><span data-stu-id="cb641-543">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cb641-544">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-544">Optional.</span></span> <span data-ttu-id="cb641-545">隱私權文件的延伸版本所指向的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-545">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="cb641-546">這是選擇性地指定第三方發佈而不是 Azure 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-546">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="cb641-547">如果軟體會收集任何資料和傳輸到客體虛擬機器時，可能會需要額外的隱私權文件。</span><span class="sxs-lookup"><span data-stu-id="cb641-547">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="cb641-548">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-548">Optional.</span></span> <span data-ttu-id="cb641-549">指向此版本的延伸模組的首頁的 URL 字串。</span><span class="sxs-lookup"><span data-stu-id="cb641-549">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="cb641-550">這是選擇性地指定第三方發佈而不是 Azure 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="cb641-550">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="cb641-551">在首頁上應有使用量資訊和客戶支援連絡資訊。</span><span class="sxs-lookup"><span data-stu-id="cb641-551">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-552">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-552">Optional.</span></span> <span data-ttu-id="cb641-553">如果這設定為 'true' 擴充功能應該要接收 JSON 型組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-553">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="cb641-554">如果這設定為 'false' 擴充功能應該會收到 XML 為基礎的組態。</span><span class="sxs-lookup"><span data-stu-id="cb641-554">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="cb641-555">其值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-555">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="cb641-556">選用。</span><span class="sxs-lookup"><span data-stu-id="cb641-556">Optional.</span></span> <span data-ttu-id="cb641-557">如果這設定為 'true' 的延伸模組版本無法升級至與其他作用中的部署中的主要版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-557">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="cb641-558">如果值為 'false' 或也存在，延伸模組版本可以升級至從任何其他版本。</span><span class="sxs-lookup"><span data-stu-id="cb641-558">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="cb641-559">不支援降級。</span><span class="sxs-lookup"><span data-stu-id="cb641-559">Downgrade is not supported.</span></span> <span data-ttu-id="cb641-560">值必須是 'true' false' （區分大小寫） 是否存在。</span><span class="sxs-lookup"><span data-stu-id="cb641-560">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="cb641-561">指出延伸模組支援 OS 的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-561">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="cb641-562">目前的值為 'Windows' 或 'Linux'。</span><span class="sxs-lookup"><span data-stu-id="cb641-562">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="cb641-563">包含公司/組織發行延伸模組名稱的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-563">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="cb641-564">包含所需的配量的區域名稱的字串屬性。</span><span class="sxs-lookup"><span data-stu-id="cb641-564">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cb641-565">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="cb641-565">The response stream.</span></span>
+    content: function update(parameters, callback)
+  langs:
+  - js

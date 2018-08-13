@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7a2c7b1fab19483fd1d2af2a16334cf6e7c396b7
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051462"
+items:
+- uid: azure-asm-sql.SqlService
+  id: azure-asm-sql.SqlService
+  name: SqlService
+  summary: <span data-ttu-id="991d3-101">SqlService 物件可讓您針對使用 Microsoft Azure SQL Database 中建立的資料庫執行管理作業。</span><span class="sxs-lookup"><span data-stu-id="991d3-101">The SqlService object allows you to perform management operations against databases created using Microsoft Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.SqlService
+  type: Class
+  children:
+  - azure-asm-sql.SqlService.#ctor
+  - azure-asm-sql.SqlService#createServerDatabase
+  - azure-asm-sql.SqlService#deleteServerDatabase
+  - azure-asm-sql.SqlService#listServerDatabases
+  langs:
+  - js
+- id: azure-asm-sql.SqlService.#ctor
+  uid: azure-asm-sql.SqlService.#ctor
+  parent: azure-asm-sql.SqlService
+  name: SqlService(serverName, administratorLogin, administratorLoginPassword, host, acsHost, authenticationProvider)
+  fullName: azure-asm-sql.SqlService.SqlService(serverName, administratorLogin, administratorLoginPassword, host, acsHost, authenticationProvider)
+  summary: <span data-ttu-id="991d3-102">建立新的 SqlService 物件</span><span class="sxs-lookup"><span data-stu-id="991d3-102">Creates a new SqlService object</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="991d3-103">SQL server 名稱。</span><span class="sxs-lookup"><span data-stu-id="991d3-103">The SQL server name.</span></span>
+    - id: administratorLogin
+      type:
+      - string
+      description: <span data-ttu-id="991d3-104">SQL Server 系統管理員身分登入。</span><span class="sxs-lookup"><span data-stu-id="991d3-104">The SQL Server administrator login.</span></span>
+    - id: administratorLoginPassword
+      type:
+      - string
+      description: <span data-ttu-id="991d3-105">SQL Server 系統管理員身分登入密碼。</span><span class="sxs-lookup"><span data-stu-id="991d3-105">The SQL Server administrator login password.</span></span>
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="991d3-106">服務主機。</span><span class="sxs-lookup"><span data-stu-id="991d3-106">The host for the service.</span></span>
+      optional: true
+    - id: acsHost
+      type:
+      - string
+      description: <span data-ttu-id="991d3-107">Acs 主機。</span><span class="sxs-lookup"><span data-stu-id="991d3-107">The acs host.</span></span>
+      optional: true
+    - id: authenticationProvider
+      type:
+      - object
+      description: <span data-ttu-id="991d3-108">驗證提供者。</span><span class="sxs-lookup"><span data-stu-id="991d3-108">The authentication provider.</span></span>
+      optional: true
+    content: new SqlService(serverName, administratorLogin, administratorLoginPassword, host, acsHost, authenticationProvider)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlService#createServerDatabase
+  id: azure-asm-sql.SqlService#createServerDatabase
+  parent: azure-asm-sql.SqlService
+  name: createServerDatabase(databaseName, options, callback)
+  summary: <span data-ttu-id="991d3-109">建立 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="991d3-109">Creates a SQL Server database.</span></span>
+  fullName: azure-asm-sql.SqlService.createServerDatabase(databaseName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="991d3-110">資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="991d3-110">The database name.</span></span>
+    - id: options
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="991d3-111">取得選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="991d3-111">The get options or callback function.</span></span>
+      optional: true
+    - id: options.collation
+      type:
+      - string
+      description: <span data-ttu-id="991d3-112">若要使用資料庫定序。</span><span class="sxs-lookup"><span data-stu-id="991d3-112">The database collation to be used.</span></span>
+      optional: true
+    - id: options.edition
+      type:
+      - string
+      description: <span data-ttu-id="991d3-113">若要使用資料庫版本。</span><span class="sxs-lookup"><span data-stu-id="991d3-113">The database edition to be used.</span></span>
+      optional: true
+    - id: options.maxSizeInGB
+      type:
+      - string
+      description: <span data-ttu-id="991d3-114">資料庫大小上限 （gb）。</span><span class="sxs-lookup"><span data-stu-id="991d3-114">The database maximum size in gigabytes.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="991d3-115">`error` 發生錯誤時，會包含資訊否則`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="991d3-115">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function createServerDatabase(databaseName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlService#deleteServerDatabase
+  id: azure-asm-sql.SqlService#deleteServerDatabase
+  parent: azure-asm-sql.SqlService
+  name: deleteServerDatabase(databaseId, callback)
+  summary: <span data-ttu-id="991d3-116">刪除 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="991d3-116">Deletes a SQL Server database.</span></span>
+  fullName: azure-asm-sql.SqlService.deleteServerDatabase(databaseId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseId
+      type:
+      - string
+      description: <span data-ttu-id="991d3-117">資料庫識別碼。</span><span class="sxs-lookup"><span data-stu-id="991d3-117">The database identifier.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="991d3-118">`error` 發生錯誤時，會包含資訊否則`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="991d3-118">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function deleteServerDatabase(databaseId, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlService#listServerDatabases
+  id: azure-asm-sql.SqlService#listServerDatabases
+  parent: azure-asm-sql.SqlService
+  name: listServerDatabases(callback)
+  summary: <span data-ttu-id="991d3-119">列出 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="991d3-119">Lists the SQL Server databases.</span></span>
+  fullName: azure-asm-sql.SqlService.listServerDatabases(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="991d3-120">`error` 發生錯誤時，會包含資訊否則`results`將包含資料庫的清單。</span><span class="sxs-lookup"><span data-stu-id="991d3-120">`error` will contain information if an error occurs; otherwise `results` will contain the list of databases.</span></span>
+                                                                 <span data-ttu-id="991d3-121">`response` 將包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="991d3-121">`response` will contain information related to this operation.</span></span>
+    content: function listServerDatabases(callback)
+  langs:
+  - js

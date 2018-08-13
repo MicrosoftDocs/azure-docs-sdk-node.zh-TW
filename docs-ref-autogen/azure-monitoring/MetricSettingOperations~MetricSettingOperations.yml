@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 50065154d90bfb1f406e82728bd6a4abf3527b7c
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051532"
+items:
+- uid: azure-monitoring.MetricSettingOperations~MetricSettingOperations
+  id: azure-monitoring.MetricSettingOperations~MetricSettingOperations
+  name: MetricSettingOperations
+  summary: >-
+    <span data-ttu-id="86dc1-101">__附註__： 此類別的執行個體自動建立之執行個體的 [MetricsClient] <xref:azure-monitoring.MetricsClient~MetricsClient>。</span><span class="sxs-lookup"><span data-stu-id="86dc1-101">__NOTE__: An instance of this class is automatically created for an instance of the [MetricsClient] <xref:azure-monitoring.MetricsClient~MetricsClient>.</span></span>
+
+    <span data-ttu-id="86dc1-102">請參閱 [metricSettings] <xref:azure-monitoring.MetricsClient~MetricsClient%23metricSettings>。</span><span class="sxs-lookup"><span data-stu-id="86dc1-102">See [metricSettings] <xref:azure-monitoring.MetricsClient~MetricsClient%23metricSettings>.</span></span>
+
+    <span data-ttu-id="86dc1-103">初始化 MetricSettingOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="86dc1-103">Initializes a new instance of the MetricSettingOperations class.</span></span>
+  fullName: azure-monitoring.MetricSettingOperations
+  type: Class
+  children:
+  - azure-monitoring.MetricSettingOperations~MetricSettingOperations.#ctor
+  - azure-monitoring.MetricSettingOperations~MetricSettingOperations#createOrUpdate
+  - azure-monitoring.MetricSettingOperations~MetricSettingOperations#list
+  langs:
+  - js
+- id: azure-monitoring.MetricSettingOperations~MetricSettingOperations.#ctor
+  uid: azure-monitoring.MetricSettingOperations~MetricSettingOperations.#ctor
+  parent: azure-monitoring.MetricSettingOperations~MetricSettingOperations
+  name: MetricSettingOperations(client)
+  fullName: azure-monitoring.MetricSettingOperations.MetricSettingOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedMetricsClient
+      description: <span data-ttu-id="86dc1-104">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="86dc1-104">Reference to the service client.</span></span>
+    content: new MetricSettingOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.MetricSettingOperations~MetricSettingOperations#createOrUpdate
+  id: azure-monitoring.MetricSettingOperations~MetricSettingOperations#createOrUpdate
+  parent: azure-monitoring.MetricSettingOperations~MetricSettingOperations
+  name: createOrUpdate(parameters, callback)
+  summary: <span data-ttu-id="86dc1-105">將計量設定作業可建立或更新資源的度量設定。</span><span class="sxs-lookup"><span data-stu-id="86dc1-105">The Put Metric Settings operation creates or updates the metric settings for the resource.</span></span>
+  fullName: azure-monitoring.MetricSettingOperations~MetricSettingOperations.createOrUpdate(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.MetricSettingsPutParameters
+      description: <span data-ttu-id="86dc1-106">若要建立或更新的度量設定。</span><span class="sxs-lookup"><span data-stu-id="86dc1-106">Metric settings to be created or updated.</span></span>
+    - id: parameters.metricSetting
+      type:
+      - azure-monitoring.MetricSetting
+      description: <span data-ttu-id="86dc1-107">度量規模設定。</span><span class="sxs-lookup"><span data-stu-id="86dc1-107">The metric setting.</span></span>
+    - id: parameters.metricSetting.resourceId
+      type:
+      - string
+      description: <span data-ttu-id="86dc1-108">服務的資源識別碼。</span><span class="sxs-lookup"><span data-stu-id="86dc1-108">The resource id of the service.</span></span>
+    - id: parameters.metricSetting.namespace
+      type:
+      - string
+      description: <span data-ttu-id="86dc1-109">度量設定命名空間中。</span><span class="sxs-lookup"><span data-stu-id="86dc1-109">The metric settings namespace.</span></span> <span data-ttu-id="86dc1-110">端點監視度量的命名空間值會是 WindowsAzure.Availability</span><span class="sxs-lookup"><span data-stu-id="86dc1-110">For endpoint monitoring metrics the namespace value is WindowsAzure.Availability</span></span>
+      optional: true
+    - id: parameters.metricSetting.value
+      type:
+      - azure-monitoring.MetricSettingValue
+      description: <span data-ttu-id="86dc1-111">度量設定值。</span><span class="sxs-lookup"><span data-stu-id="86dc1-111">The metric settings value.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="86dc1-112">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="86dc1-112">The response stream.</span></span>
+    content: function createOrUpdate(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.MetricSettingOperations~MetricSettingOperations#list
+  id: azure-monitoring.MetricSettingOperations~MetricSettingOperations#list
+  parent: azure-monitoring.MetricSettingOperations~MetricSettingOperations
+  name: list(resourceId, metricNamespace, callback)
+  summary: <span data-ttu-id="86dc1-113">列出計量設定作業會列出資源的度量設定。</span><span class="sxs-lookup"><span data-stu-id="86dc1-113">The List Metric Settings operation lists the metric settings for the resource.</span></span>
+  fullName: azure-monitoring.MetricSettingOperations~MetricSettingOperations.list(resourceId, metricNamespace, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: <span data-ttu-id="86dc1-114">資源的識別碼。</span><span class="sxs-lookup"><span data-stu-id="86dc1-114">The id of the resource.</span></span>
+    - id: metricNamespace
+      type:
+      - string
+      description: <span data-ttu-id="86dc1-115">度量的命名空間。</span><span class="sxs-lookup"><span data-stu-id="86dc1-115">The namespace of the metrics.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="86dc1-116">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="86dc1-116">The response stream.</span></span>
+    content: function list(resourceId, metricNamespace, callback)
+  langs:
+  - js

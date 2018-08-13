@@ -1,0 +1,649 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d38827acb2346617b73ae6afad4c40d4452cd82
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051388"
+items:
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations
+  summary: >-
+    <span data-ttu-id="dc11f-101">服務管理 API 包含管理訂用帳戶底下託管的服務的作業。</span><span class="sxs-lookup"><span data-stu-id="dc11f-101">The Service Management API includes operations for managing the hosted services beneath your subscription.</span></span>  <span data-ttu-id="dc11f-102">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460812.aspx如需詳細資訊)__注意__: [ComputeManagementClient] 執行個體，會自動建立這個類別的執行個體 {@link ComputeManagementClient ~ ComputeManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="dc11f-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460812.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="dc11f-103">請參閱 [hostedServices] {@link ComputeManagementClient ~ ComputeManagementClient #hostedServices}。</span><span class="sxs-lookup"><span data-stu-id="dc11f-103">See [hostedServices] {@link ComputeManagementClient~ComputeManagementClient#hostedServices}.</span></span>
+
+    <span data-ttu-id="dc11f-104">初始化 HostedServiceOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="dc11f-104">Initializes a new instance of the HostedServiceOperations class.</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations
+  type: Class
+  children:
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations(client)
+  fullName: azure-asm-compute.HostedServiceOperations.HostedServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="dc11f-105">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="dc11f-105">Reference to the service client.</span></span>
+    content: new HostedServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: addExtension(serviceName, parameters, callback)
+  summary: >-
+    <span data-ttu-id="dc11f-106">加入延伸模組作業會將您的雲端服務中可用的擴充功能。</span><span class="sxs-lookup"><span data-stu-id="dc11f-106">The Add Extension operation adds an available extension to your cloud service.</span></span> <span data-ttu-id="dc11f-107">在 Azure 中，處理程序可以執行的雲端服務的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="dc11f-107">In Azure, a process can run as an extension of a cloud service.</span></span>
+
+    <span data-ttu-id="dc11f-108">例如，遠端桌面存取或 Azure 診斷代理程式可以執行做為擴充至雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-108">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span> <span data-ttu-id="dc11f-109">您可以使用 列出可用擴充功能作業，以尋找可用的擴充功能。</span><span class="sxs-lookup"><span data-stu-id="dc11f-109">You can find the available extension by using the List Available Extensions operation.</span></span>  <span data-ttu-id="dc11f-110">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-110">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.addExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-111">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-111">The name of the cloud service.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: <span data-ttu-id="dc11f-112">加入延伸模組作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="dc11f-112">Parameters supplied to the Add Extension operation.</span></span>
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-113">延伸的提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="dc11f-113">The provider namespace of the extension.</span></span> <span data-ttu-id="dc11f-114">Azure 擴充功能的提供者命名空間是 Microsoft.Windows.Azure.Extensions。</span><span class="sxs-lookup"><span data-stu-id="dc11f-114">The provider namespace for Azure extensions is Microsoft.Windows.Azure.Extensions.</span></span>
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-115">延伸的型別。</span><span class="sxs-lookup"><span data-stu-id="dc11f-115">The type of the extension.</span></span>
+    - id: parameters.id
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-116">擴充功能識別碼。</span><span class="sxs-lookup"><span data-stu-id="dc11f-116">The identifier of the extension.</span></span>
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-117">用來加密 PrivateConfiguration 中指定之組態的憑證指紋。</span><span class="sxs-lookup"><span data-stu-id="dc11f-117">The thumbprint of the certificate that is used to encrypt the configuration specified in PrivateConfiguration.</span></span> <span data-ttu-id="dc11f-118">如果未指定這個項目，可能會自動產生憑證並新增至雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-118">If this element is not specified, a certificate may be automatically generated and added to the cloud service.</span></span>
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-119">用來加密 PrivateConfiguration 中指定之組態的憑證指紋演算法。</span><span class="sxs-lookup"><span data-stu-id="dc11f-119">The thumbprint algorithm of the certificate that is used to encrypt the configuration specified in PrivateConfiguration.</span></span>
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-120">使用 列出可用擴充功能作業所傳回的結構描述所定義的公用組態。</span><span class="sxs-lookup"><span data-stu-id="dc11f-120">The public configuration that is defined using the schema returned by the List Available Extensions operation.</span></span>
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-121">使用 列出可用擴充功能作業所傳回的結構描述所定義的私用組態。</span><span class="sxs-lookup"><span data-stu-id="dc11f-121">The private configuration that is defined using the schema returned by the List Available Extensions operation.</span></span>
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-122">指定延伸模組的版本。</span><span class="sxs-lookup"><span data-stu-id="dc11f-122">Specifies the version of the extension.</span></span> <span data-ttu-id="dc11f-123">如果未指定這個項目，或是使用星號 (*) 當做值，延伸模組的最新版本時使用。如果指定的值，與主要版本號碼和星號當做次要版本號碼 (X*)，會選取指定的主要版本的最新次要版本。</span><span class="sxs-lookup"><span data-stu-id="dc11f-123">If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.*), the latest minor version of the specified major version is selected.</span></span> <span data-ttu-id="dc11f-124">如果已指定主要版本號碼和次要版本號碼 (X.Y)，會選取特定的延伸模組版本。</span><span class="sxs-lookup"><span data-stu-id="dc11f-124">If a major version number and a minor version number are specified (X.Y), the specific extension version is selected.</span></span> <span data-ttu-id="dc11f-125">如果指定的版本，則自動升級被對角色執行個體。</span><span class="sxs-lookup"><span data-stu-id="dc11f-125">If a version is specified, an auto-upgrade is performed on the role instance.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-126">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-126">The response stream.</span></span>
+    content: function addExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginAddingExtension(serviceName, parameters, callback)
+  summary: >-
+    <span data-ttu-id="dc11f-127">開始新增擴充功能作業會將您的雲端服務中可用的擴充功能。</span><span class="sxs-lookup"><span data-stu-id="dc11f-127">The Begin Adding Extension operation adds an available extension to your cloud service.</span></span> <span data-ttu-id="dc11f-128">在 Azure 中，處理程序可以執行的雲端服務的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="dc11f-128">In Azure, a process can run as an extension of a cloud service.</span></span> <span data-ttu-id="dc11f-129">例如，遠端桌面存取或 Azure 診斷代理程式可以執行做為擴充至雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-129">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span> <span data-ttu-id="dc11f-130">您可以使用 列出可用擴充功能作業，以尋找可用的擴充功能。</span><span class="sxs-lookup"><span data-stu-id="dc11f-130">You can find the available extension by using the List Available Extensions operation.</span></span>
+
+    <span data-ttu-id="dc11f-131">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-131">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginAddingExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-132">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-132">The name of the cloud service.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: <span data-ttu-id="dc11f-133">提供給開始加入的擴充功能作業的參數。</span><span class="sxs-lookup"><span data-stu-id="dc11f-133">Parameters supplied to the Begin Adding Extension operation.</span></span>
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-134">延伸的提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="dc11f-134">The provider namespace of the extension.</span></span> <span data-ttu-id="dc11f-135">Azure 擴充功能的提供者命名空間是 Microsoft.Windows.Azure.Extensions。</span><span class="sxs-lookup"><span data-stu-id="dc11f-135">The provider namespace for Azure extensions is Microsoft.Windows.Azure.Extensions.</span></span>
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-136">延伸的型別。</span><span class="sxs-lookup"><span data-stu-id="dc11f-136">The type of the extension.</span></span>
+    - id: parameters.id
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-137">擴充功能識別碼。</span><span class="sxs-lookup"><span data-stu-id="dc11f-137">The identifier of the extension.</span></span>
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-138">用來加密 PrivateConfiguration 中指定之組態的憑證指紋。</span><span class="sxs-lookup"><span data-stu-id="dc11f-138">The thumbprint of the certificate that is used to encrypt the configuration specified in PrivateConfiguration.</span></span> <span data-ttu-id="dc11f-139">如果未指定這個項目，可能會自動產生憑證並新增至雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-139">If this element is not specified, a certificate may be automatically generated and added to the cloud service.</span></span>
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-140">用來加密 PrivateConfiguration 中指定之組態的憑證指紋演算法。</span><span class="sxs-lookup"><span data-stu-id="dc11f-140">The thumbprint algorithm of the certificate that is used to encrypt the configuration specified in PrivateConfiguration.</span></span>
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-141">使用 列出可用擴充功能作業所傳回的結構描述所定義的公用組態。</span><span class="sxs-lookup"><span data-stu-id="dc11f-141">The public configuration that is defined using the schema returned by the List Available Extensions operation.</span></span>
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-142">使用 列出可用擴充功能作業所傳回的結構描述所定義的私用組態。</span><span class="sxs-lookup"><span data-stu-id="dc11f-142">The private configuration that is defined using the schema returned by the List Available Extensions operation.</span></span>
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-143">指定延伸模組的版本。</span><span class="sxs-lookup"><span data-stu-id="dc11f-143">Specifies the version of the extension.</span></span> <span data-ttu-id="dc11f-144">如果未指定這個項目，或是使用星號 (*) 當做值，延伸模組的最新版本時使用。如果指定的值，與主要版本號碼和星號當做次要版本號碼 (X*)，會選取指定的主要版本的最新次要版本。</span><span class="sxs-lookup"><span data-stu-id="dc11f-144">If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.*), the latest minor version of the specified major version is selected.</span></span> <span data-ttu-id="dc11f-145">如果已指定主要版本號碼和次要版本號碼 (X.Y)，會選取特定的延伸模組版本。</span><span class="sxs-lookup"><span data-stu-id="dc11f-145">If a major version number and a minor version number are specified (X.Y), the specific extension version is selected.</span></span> <span data-ttu-id="dc11f-146">如果指定的版本，則自動升級被對角色執行個體。</span><span class="sxs-lookup"><span data-stu-id="dc11f-146">If a version is specified, an auto-upgrade is performed on the role instance.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-147">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-147">The response stream.</span></span>
+    content: function beginAddingExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingAll(serviceName, callback)
+  summary: <span data-ttu-id="dc11f-148">DeleteAll 託管服務作業會從 Microsoft Azure 儲存體刪除指定的雲端服務，以及作業系統磁碟、 連結的資料磁碟和磁碟的來源 blob。</span><span class="sxs-lookup"><span data-stu-id="dc11f-148">The DeleteAll Hosted Service operation deletes the specified cloud service as well as operating system disk, attached data disks, and the source blobs for the disks from storage from Microsoft Azure.</span></span> <span data-ttu-id="dc11f-149">(請參閱 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' 如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-149">(see 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-150">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-150">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-151">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-151">The response stream.</span></span>
+    content: function beginDeletingAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingExtension(serviceName, extensionId, callback)
+  summary: <span data-ttu-id="dc11f-152">開始刪除延伸模組作業會刪除指定的延伸模組，從雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-152">The Begin Deleting Extension operation deletes the specified extension from a cloud service.</span></span>  <span data-ttu-id="dc11f-153">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-153">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-154">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-154">The name of the cloud service.</span></span>
+    - id: extensionId
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-155">它加入至雲端服務時，傳遞給擴充功能識別碼</span><span class="sxs-lookup"><span data-stu-id="dc11f-155">The identifier that was assigned to the extension when it was added to the cloud service</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-156">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-156">The response stream.</span></span>
+    content: function beginDeletingExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: checkNameAvailability(serviceName, callback)
+  summary: <span data-ttu-id="dc11f-157">檢查裝載的服務名稱可用性作業會檢查指定的雲端服務名稱的可用性。</span><span class="sxs-lookup"><span data-stu-id="dc11f-157">The Check Hosted Service Name Availability operation checks for the availability of the specified cloud service name.</span></span>  <span data-ttu-id="dc11f-158">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/jj154116.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-158">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154116.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.checkNameAvailability(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-159">您想要使用的雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-159">The cloud service name that you would like to use.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-160">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-160">The response stream.</span></span>
+    content: function checkNameAvailability(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: create(parameters, callback)
+  summary: >-
+    <span data-ttu-id="dc11f-161">建立託管服務作業會在 Azure 中建立新的雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-161">The Create Hosted Service operation creates a new cloud service in Azure.</span></span>
+
+    <span data-ttu-id="dc11f-162">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-162">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceCreateParameters
+      description: <span data-ttu-id="dc11f-163">提供給建立託管服務作業參數。</span><span class="sxs-lookup"><span data-stu-id="dc11f-163">Parameters supplied to the Create Hosted Service operation.</span></span>
+    - id: parameters.serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-164">在 Azure 中獨一無二的雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-164">A name for the cloud service that is unique within Azure.</span></span> <span data-ttu-id="dc11f-165">這個名稱是 DNS 首碼名稱，而且可用來存取服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-165">This name is the DNS prefix name and can be used to access the service.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-166">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-166">A name for the cloud service.</span></span> <span data-ttu-id="dc11f-167">名稱可以是長度最多 100 個字元。</span><span class="sxs-lookup"><span data-stu-id="dc11f-167">The name can be up to 100 characters in length.</span></span> <span data-ttu-id="dc11f-168">名稱可以用來識別您進行追蹤時的儲存體帳戶中。</span><span class="sxs-lookup"><span data-stu-id="dc11f-168">The name can be used to identify the storage account for your tracking purposes.</span></span>
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-169">雲端服務的描述。</span><span class="sxs-lookup"><span data-stu-id="dc11f-169">A description for the cloud service.</span></span> <span data-ttu-id="dc11f-170">描述可以有最多 1024 個字元的長度。</span><span class="sxs-lookup"><span data-stu-id="dc11f-170">The description can be up to 1024 characters in length.</span></span>
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-171">雲端服務建立所在位置。</span><span class="sxs-lookup"><span data-stu-id="dc11f-171">The location where the cloud service will be created.</span></span> <span data-ttu-id="dc11f-172">如果未指定 AffinityGroup 的需要。</span><span class="sxs-lookup"><span data-stu-id="dc11f-172">Required if AffinityGroup is not specified.</span></span> <span data-ttu-id="dc11f-173">指定位置或 AffinityGroup，但不是能兩者都指定。</span><span class="sxs-lookup"><span data-stu-id="dc11f-173">Specify either Location or AffinityGroup, but not both.</span></span> <span data-ttu-id="dc11f-174">若要列出可用的位置，請使用 List Locations 作業。</span><span class="sxs-lookup"><span data-stu-id="dc11f-174">To list available locations, use the List Locations operation.</span></span>
+      optional: true
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-175">此訂用帳戶相關聯的現有同質群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-175">The name of an existing affinity group associated with this subscription.</span></span> <span data-ttu-id="dc11f-176">如果未指定位置的需要。</span><span class="sxs-lookup"><span data-stu-id="dc11f-176">Required if Location is not specified.</span></span> <span data-ttu-id="dc11f-177">此名稱會是 GUID，而且可以藉由檢查 「 列出同質群組 」 作業所傳回的回應主體的 name 元素擷取。</span><span class="sxs-lookup"><span data-stu-id="dc11f-177">This name is a GUID and can be retrieved by examining the name element of the response body returned by the List Affinity Groups operation.</span></span> <span data-ttu-id="dc11f-178">指定位置或 AffinityGroup，但不是能兩者都指定。</span><span class="sxs-lookup"><span data-stu-id="dc11f-178">Specify either Location or AffinityGroup, but not both.</span></span> <span data-ttu-id="dc11f-179">若要列出可用的同質群組，請使用列出同質群組作業。</span><span class="sxs-lookup"><span data-stu-id="dc11f-179">To list available affinity groups, use the List Affinity Groups operation.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="dc11f-180">代表擴充的雲端服務屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-180">Represents the name of an extended cloud service property.</span></span> <span data-ttu-id="dc11f-181">每個擴充的屬性必須具有已定義的名稱和值。</span><span class="sxs-lookup"><span data-stu-id="dc11f-181">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="dc11f-182">您可以有最多 50 的擴充的屬性名稱 / 值組。</span><span class="sxs-lookup"><span data-stu-id="dc11f-182">You can have a maximum of 50 extended property name and value pairs.</span></span> <span data-ttu-id="dc11f-183">Name 元素的最大長度為 64 個字元、 只有英數字元和底線可在 [名稱] 和它必須以字母開頭。</span><span class="sxs-lookup"><span data-stu-id="dc11f-183">The maximum length of the name element is 64 characters, only alphanumeric characters and underscores are valid in the name, and it must start with a letter.</span></span> <span data-ttu-id="dc11f-184">嘗試使用其他字元、 啟動以非字母字元，或輸入名稱完全相同之其他擴充屬性擁有相同的服務將會導致狀態碼 400 （不正確的要求） 錯誤。</span><span class="sxs-lookup"><span data-stu-id="dc11f-184">Attempting to use other characters, starting with a non-letter character, or entering a name that is identical to that of another extended property owned by the same service will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="dc11f-185">每個擴充的屬性值的最大長度為 255 個字元。</span><span class="sxs-lookup"><span data-stu-id="dc11f-185">Each extended property value has a maximum length of 255 characters.</span></span>
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-186">使用反向 Dns 查詢時，查詢的雲端服務的 IP 位址解析時的 Dns 位址。</span><span class="sxs-lookup"><span data-stu-id="dc11f-186">Dns address to which the cloud service's IP address resolves when queried using a reverse Dns query.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-187">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-187">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteMethod(serviceName, callback)
+  summary: <span data-ttu-id="dc11f-188">刪除託管服務作業會從 Azure 刪除指定的雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-188">The Delete Hosted Service operation deletes the specified cloud service from Azure.</span></span>  <span data-ttu-id="dc11f-189">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-189">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteMethod(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-190">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-190">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-191">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-191">The response stream.</span></span>
+    content: function deleteMethod(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteAll(serviceName, callback)
+  summary: <span data-ttu-id="dc11f-192">DeleteAll 託管服務作業會從 Microsoft Azure 儲存體刪除指定的雲端服務，以及作業系統磁碟、 連結的資料磁碟和磁碟的來源 blob。</span><span class="sxs-lookup"><span data-stu-id="dc11f-192">The DeleteAll Hosted Service operation deletes the specified cloud service as well as operating system disk, attached data disks, and the source blobs for the disks from storage from Microsoft Azure.</span></span> <span data-ttu-id="dc11f-193">(請參閱 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' 如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-193">(see 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-194">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-194">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-195">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-195">The response stream.</span></span>
+    content: function deleteAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteExtension(serviceName, extensionId, callback)
+  summary: <span data-ttu-id="dc11f-196">刪除延伸模組作業會刪除指定的延伸模組，從雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-196">The Delete Extension operation deletes the specified extension from a cloud service.</span></span>  <span data-ttu-id="dc11f-197">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-197">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-198">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-198">The name of the cloud service.</span></span>
+    - id: extensionId
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-199">它加入至雲端服務時，傳遞給擴充功能識別碼</span><span class="sxs-lookup"><span data-stu-id="dc11f-199">The identifier that was assigned to the extension when it was added to the cloud service</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-200">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-200">The response stream.</span></span>
+    content: function deleteExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: get(serviceName, callback)
+  summary: >-
+    <span data-ttu-id="dc11f-201">取得裝載的服務屬性作業會擷取指定的雲端服務的系統屬性。</span><span class="sxs-lookup"><span data-stu-id="dc11f-201">The Get Hosted Service Properties operation retrieves system properties for the specified cloud service.</span></span> <span data-ttu-id="dc11f-202">這些屬性包含服務名稱和服務類型;和服務所屬的同質群組或它的位置，如果它不屬於同質群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-202">These properties include the service name and service type; and the name of the affinity group to which the service belongs, or its location if it is not part of an affinity group.</span></span>
+
+    <span data-ttu-id="dc11f-203">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-203">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.get(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-204">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-204">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-205">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-205">The response stream.</span></span>
+    content: function get(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getDetailed(serviceName, callback)
+  summary: <span data-ttu-id="dc11f-206">取得詳細的託管服務屬性作業會擷取指定的雲端服務的系統屬性。</span><span class="sxs-lookup"><span data-stu-id="dc11f-206">The Get Detailed Hosted Service Properties operation retrieves system properties for the specified cloud service.</span></span> <span data-ttu-id="dc11f-207">這些屬性包含服務名稱和服務類型;服務所屬的同質群組或如果它不屬於同質群組，其位置的名稱與服務的部署上的資訊。</span><span class="sxs-lookup"><span data-stu-id="dc11f-207">These properties include the service name and service type; the name of the affinity group to which the service belongs, or its location if it is not part of an affinity group; and information on the deployments of the service.</span></span>  <span data-ttu-id="dc11f-208">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-208">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getDetailed(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-209">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-209">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-210">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-210">The response stream.</span></span>
+    content: function getDetailed(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getExtension(serviceName, extensionId, callback)
+  summary: <span data-ttu-id="dc11f-211">取得延伸模組作業會擷取指定的延伸模組已新增至雲端服務的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="dc11f-211">The Get Extension operation retrieves information about a specified extension that was added to a cloud service.</span></span>  <span data-ttu-id="dc11f-212">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn169557.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-212">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169557.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-213">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-213">The name of the cloud service.</span></span>
+    - id: extensionId
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-214">它加入至雲端服務時，傳遞給擴充功能識別碼</span><span class="sxs-lookup"><span data-stu-id="dc11f-214">The identifier that was assigned to the extension when it was added to the cloud service</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-215">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-215">The response stream.</span></span>
+    content: function getExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: list(callback)
+  summary: <span data-ttu-id="dc11f-216">「 列出託管服務作業會列出目前訂閱底下可用的雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-216">The List Hosted Services operation lists the cloud services available under the current subscription.</span></span>  <span data-ttu-id="dc11f-217">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/ee460781.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-217">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460781.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-218">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-218">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listAvailableExtensions(callback)
+  summary: <span data-ttu-id="dc11f-219">列出可用擴充功能作業會列出可新增至您的雲端服務的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="dc11f-219">The List Available Extensions operation lists the extensions that are available to add to your cloud service.</span></span> <span data-ttu-id="dc11f-220">在 Windows Azure 中的處理序可以執行為雲端服務的延伸。</span><span class="sxs-lookup"><span data-stu-id="dc11f-220">In Windows Azure, a process can run as an extension of a cloud service.</span></span> <span data-ttu-id="dc11f-221">例如，遠端桌面存取或 Azure 診斷代理程式可以執行做為擴充至雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-221">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span>  <span data-ttu-id="dc11f-222">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-222">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listAvailableExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-223">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-223">The response stream.</span></span>
+    content: function listAvailableExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensions(serviceName, callback)
+  summary: <span data-ttu-id="dc11f-224">列出擴充功能 」 作業會列出所有已加入至雲端服務的擴充功能。</span><span class="sxs-lookup"><span data-stu-id="dc11f-224">The List Extensions operation lists all of the extensions that were added to a cloud service.</span></span>  <span data-ttu-id="dc11f-225">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn169561.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-225">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169561.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensions(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-226">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-226">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-227">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-227">The response stream.</span></span>
+    content: function listExtensions(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensionVersions(providerNamespace, extensionType, callback)
+  summary: >-
+    <span data-ttu-id="dc11f-228">列出擴充功能版本作業會列出可新增至雲端服務之擴充功能版本。</span><span class="sxs-lookup"><span data-stu-id="dc11f-228">The List Extension Versions operation lists the versions of an extension that are available to add to a cloud service.</span></span> <span data-ttu-id="dc11f-229">在 Azure 中，處理程序可以執行的雲端服務的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="dc11f-229">In Azure, a process can run as an extension of a cloud service.</span></span> <span data-ttu-id="dc11f-230">例如，遠端桌面存取或 Azure 診斷代理程式可以執行做為擴充至雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-230">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span>
+
+    <span data-ttu-id="dc11f-231">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn495437.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-231">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn495437.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensionVersions(providerNamespace, extensionType, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-232">提供者命名空間中。</span><span class="sxs-lookup"><span data-stu-id="dc11f-232">The provider namespace.</span></span>
+    - id: extensionType
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-233">延伸模組型別名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-233">The extension type name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-234">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-234">The response stream.</span></span>
+    content: function listExtensionVersions(providerNamespace, extensionType, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listPublisherExtensions(callback)
+  summary: <span data-ttu-id="dc11f-235">列出可用擴充功能作業會列出可新增至您的雲端服務的延伸模組。</span><span class="sxs-lookup"><span data-stu-id="dc11f-235">The List Available Extensions operation lists the extensions that are available to add to your cloud service.</span></span> <span data-ttu-id="dc11f-236">在 Windows Azure 中的處理序可以執行為雲端服務的延伸。</span><span class="sxs-lookup"><span data-stu-id="dc11f-236">In Windows Azure, a process can run as an extension of a cloud service.</span></span> <span data-ttu-id="dc11f-237">例如，遠端桌面存取或 Azure 診斷代理程式可以執行做為擴充至雲端服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-237">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span>  <span data-ttu-id="dc11f-238">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-238">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listPublisherExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-239">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-239">The response stream.</span></span>
+    content: function listPublisherExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: update(serviceName, parameters, callback)
+  summary: <span data-ttu-id="dc11f-240">更新裝載的服務作業可以更新的標籤或在 Azure 中雲端服務的描述。</span><span class="sxs-lookup"><span data-stu-id="dc11f-240">The Update Hosted Service operation can update the label or description of a cloud service in Azure.</span></span>  <span data-ttu-id="dc11f-241">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="dc11f-241">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.update(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-242">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-242">The name of the cloud service.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceUpdateParameters
+      description: <span data-ttu-id="dc11f-243">提供給更新裝載的服務作業參數。</span><span class="sxs-lookup"><span data-stu-id="dc11f-243">Parameters supplied to the Update Hosted Service operation.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-244">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-244">A name for the cloud service.</span></span> <span data-ttu-id="dc11f-245">名稱可能是最多 100 個字元的長度。</span><span class="sxs-lookup"><span data-stu-id="dc11f-245">The name may be up to 100 characters in length.</span></span> <span data-ttu-id="dc11f-246">您必須指定至少一個標籤或描述的值。</span><span class="sxs-lookup"><span data-stu-id="dc11f-246">You must specify a value for at least one of Label or Description.</span></span> <span data-ttu-id="dc11f-247">建議的標籤是唯一的訂用帳戶內。</span><span class="sxs-lookup"><span data-stu-id="dc11f-247">It is recommended that the label be unique within the subscription.</span></span> <span data-ttu-id="dc11f-248">此名稱可以用於識別您進行追蹤時的服務。</span><span class="sxs-lookup"><span data-stu-id="dc11f-248">The name can be used identify the service for your tracking purposes.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-249">雲端服務的描述。</span><span class="sxs-lookup"><span data-stu-id="dc11f-249">A description for the cloud service.</span></span> <span data-ttu-id="dc11f-250">描述可能會有最多 1024 個字元的長度。</span><span class="sxs-lookup"><span data-stu-id="dc11f-250">The description may be up to 1024 characters in length.</span></span> <span data-ttu-id="dc11f-251">您必須指定至少一個標籤或描述的值。</span><span class="sxs-lookup"><span data-stu-id="dc11f-251">You must specify a value for at least one of Label or Description.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="dc11f-252">代表擴充的雲端服務屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="dc11f-252">Represents the name of an extended cloud service property.</span></span> <span data-ttu-id="dc11f-253">每個擴充的屬性必須具有已定義的名稱和值。</span><span class="sxs-lookup"><span data-stu-id="dc11f-253">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="dc11f-254">您可以有最多 50 的擴充的屬性名稱 / 值組。</span><span class="sxs-lookup"><span data-stu-id="dc11f-254">You can have a maximum of 50 extended property name and value pairs.</span></span> <span data-ttu-id="dc11f-255">Name 元素的最大長度為 64 個字元、 只有英數字元和底線可在 [名稱] 和它必須以字母開頭。</span><span class="sxs-lookup"><span data-stu-id="dc11f-255">The maximum length of the name element is 64 characters, only alphanumeric characters and underscores are valid in the name, and it must start with a letter.</span></span> <span data-ttu-id="dc11f-256">嘗試使用其他字元、 啟動以非字母字元，或輸入名稱完全相同之其他擴充屬性擁有相同的服務將會導致狀態碼 400 （不正確的要求） 錯誤。</span><span class="sxs-lookup"><span data-stu-id="dc11f-256">Attempting to use other characters, starting with a non-letter character, or entering a name that is identical to that of another extended property owned by the same service will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="dc11f-257">每個擴充的屬性值的最大長度為 255 個字元。</span><span class="sxs-lookup"><span data-stu-id="dc11f-257">Each extended property value has a maximum length of 255 characters.</span></span>
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: <span data-ttu-id="dc11f-258">使用反向 Dns 查詢時，查詢的雲端服務的 IP 位址解析時的 Dns 位址。</span><span class="sxs-lookup"><span data-stu-id="dc11f-258">Dns address to which the cloud service's IP address resolves when queried using a reverse Dns query.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="dc11f-259">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="dc11f-259">The response stream.</span></span>
+    content: function update(serviceName, parameters, callback)
+  langs:
+  - js

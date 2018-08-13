@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ef1453429407ca3e3ebea6b93b11c0054bdc3c0b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051372"
+items:
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: ManagementCertificateOperations
+  summary: >-
+    <span data-ttu-id="720bd-101">您可以使用管理憑證，也就是訂用帳戶憑證，來驗證用戶端嘗試連線到您的 Azure 訂用帳戶相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="720bd-101">You can use management certificates, which are also known as subscription certificates, to authenticate clients attempting to connect to resources associated with your Azure subscription.</span></span>  <span data-ttu-id="720bd-102">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/jj154124.aspx如需詳細資訊)__注意__: [ManagementClient] 執行個體，會自動建立這個類別的執行個體 {@link ManagementClient ~ ManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="720bd-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154124.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [ManagementClient] {@link ManagementClient~ManagementClient}.</span></span>
+
+    <span data-ttu-id="720bd-103">請參閱 [managementCertificates] {@link ManagementClient ~ ManagementClient #managementCertificates}。</span><span class="sxs-lookup"><span data-stu-id="720bd-103">See [managementCertificates] {@link ManagementClient~ManagementClient#managementCertificates}.</span></span>
+
+    <span data-ttu-id="720bd-104">初始化 ManagementCertificateOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="720bd-104">Initializes a new instance of the ManagementCertificateOperations class.</span></span>
+  fullName: azure-asm-mgmt.ManagementCertificateOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: ManagementCertificateOperations(client)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations.ManagementCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: <span data-ttu-id="720bd-105">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="720bd-105">Reference to the service client.</span></span>
+    content: new ManagementCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: create(parameters, callback)
+  summary: <span data-ttu-id="720bd-106">建立管理憑證作業會將管理憑證的清單中的憑證。</span><span class="sxs-lookup"><span data-stu-id="720bd-106">The Create Management Certificate operation adds a certificate to the list of management certificates.</span></span> <span data-ttu-id="720bd-107">管理憑證，也就是訂用帳戶憑證，驗證用戶端嘗試連線到您的 Azure 訂用帳戶相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="720bd-107">Management certificates, which are also known as subscription certificates, authenticate clients attempting to connect to resources associated with your Azure subscription.</span></span>  <span data-ttu-id="720bd-108">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/jj154123.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="720bd-108">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154123.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.ManagementCertificateCreateParameters
+      description: <span data-ttu-id="720bd-109">建立管理憑證作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="720bd-109">Parameters supplied to the Create Management Certificate operation.</span></span>
+    - id: parameters.publicKey
+      type:
+      - azure-asm-mgmt.buffer
+      description: <span data-ttu-id="720bd-110">Base-64-表示法的管理憑證公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="720bd-110">A base-64-representation of the management certificate public key.</span></span>
+      optional: true
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="720bd-111">可唯一識別的管理憑證的憑證指紋。</span><span class="sxs-lookup"><span data-stu-id="720bd-111">The thumbprint that uniquely identifies the management certificate.</span></span>
+      optional: true
+    - id: parameters.data
+      type:
+      - azure-asm-mgmt.buffer
+      description: <span data-ttu-id="720bd-112">憑證的 base-64 編碼的 cer 格式的未經處理資料。</span><span class="sxs-lookup"><span data-stu-id="720bd-112">The certificate's raw data in base-64-encoded cer format.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="720bd-113">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="720bd-113">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: deleteMethod(thumbprint, callback)
+  summary: <span data-ttu-id="720bd-114">刪除管理憑證作業會從管理憑證的清單刪除憑證。</span><span class="sxs-lookup"><span data-stu-id="720bd-114">The Delete Management Certificate operation deletes a certificate from the list of management certificates.</span></span> <span data-ttu-id="720bd-115">管理憑證，也就是訂用帳戶憑證，驗證用戶端嘗試連線到您的 Azure 訂用帳戶相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="720bd-115">Management certificates, which are also known as subscription certificates, authenticate clients attempting to connect to resources associated with your Azure subscription.</span></span>  <span data-ttu-id="720bd-116">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/jj154127.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="720bd-116">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154127.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.deleteMethod(thumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="720bd-117">若要刪除憑證的指紋值。</span><span class="sxs-lookup"><span data-stu-id="720bd-117">The thumbprint value of the certificate to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="720bd-118">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="720bd-118">The response stream.</span></span>
+    content: function deleteMethod(thumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: get(thumbprint, callback)
+  summary: <span data-ttu-id="720bd-119">取得管理憑證作業會擷取與指定的憑證指紋的管理憑證的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="720bd-119">The Get Management Certificate operation retrieves information about the management certificate with the specified thumbprint.</span></span> <span data-ttu-id="720bd-120">管理憑證，也就是訂用帳戶憑證，驗證用戶端嘗試連線到您的 Azure 訂用帳戶相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="720bd-120">Management certificates, which are also known as subscription certificates, authenticate clients attempting to connect to resources associated with your Azure subscription.</span></span>  <span data-ttu-id="720bd-121">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/jj154131.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="720bd-121">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154131.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.get(thumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="720bd-122">要擷取其相關資訊的憑證指紋值。</span><span class="sxs-lookup"><span data-stu-id="720bd-122">The thumbprint value of the certificate to retrieve information about.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="720bd-123">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="720bd-123">The response stream.</span></span>
+    content: function get(thumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: list(callback)
+  summary: <span data-ttu-id="720bd-124">列出管理憑證作業會列出，並傳回所有與指定的訂用帳戶相關聯的管理憑證的基本資訊。</span><span class="sxs-lookup"><span data-stu-id="720bd-124">The List Management Certificates operation lists and returns basic information about all of the management certificates associated with the specified subscription.</span></span> <span data-ttu-id="720bd-125">管理憑證，也就是訂用帳戶憑證，驗證用戶端嘗試連線到您的 Azure 訂用帳戶相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="720bd-125">Management certificates, which are also known as subscription certificates, authenticate clients attempting to connect to resources associated with your Azure subscription.</span></span>  <span data-ttu-id="720bd-126">(請參閱http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx如需詳細資訊)</span><span class="sxs-lookup"><span data-stu-id="720bd-126">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx for more information)</span></span>
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: <span data-ttu-id="720bd-127">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="720bd-127">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js

@@ -1,0 +1,286 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 10ec832091f323e528abe455cf35dd220c726912
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051475"
+items:
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations
+  summary: >-
+    <span data-ttu-id="ed82c-101">表示操作 Azure SQL Database 上的所有作業。</span><span class="sxs-lookup"><span data-stu-id="ed82c-101">Represents all the operations for operating on Azure SQL Databases.</span></span>
+
+    <span data-ttu-id="ed82c-102">包含作業： 建立、 擷取、 更新和刪除資料庫，和也包含要取得資料庫事件記錄檔的能力。</span><span class="sxs-lookup"><span data-stu-id="ed82c-102">Contains operations to: Create, Retrieve, Update, and Delete databases, and also includes the ability to get the event logs for a database.</span></span>
+
+    <span data-ttu-id="ed82c-103">__附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="ed82c-103">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="ed82c-104">請參閱 [資料庫] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23databases>。</span><span class="sxs-lookup"><span data-stu-id="ed82c-104">See [databases] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23databases>.</span></span>
+
+    <span data-ttu-id="ed82c-105">初始化 DatabaseOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="ed82c-105">Initializes a new instance of the DatabaseOperations class.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  uid: azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations(client)
+  fullName: azure-asm-sql.DatabaseOperations.DatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="ed82c-106">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="ed82c-106">Reference to the service client.</span></span>
+    content: new DatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: create(serverName, parameters, callback)
+  summary: <span data-ttu-id="ed82c-107">Azure SQL Database 伺服器中建立的資料庫。</span><span class="sxs-lookup"><span data-stu-id="ed82c-107">Creates a database in an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-108">Azure SQL Database 伺服器會建立此資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-108">The name of the Azure SQL Database Server where the database will be created.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCreateParameters
+      description: <span data-ttu-id="ed82c-109">建立資料庫作業的參數。</span><span class="sxs-lookup"><span data-stu-id="ed82c-109">The parameters for the create database operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-110">取得或設定新資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-110">Gets or sets the name for the new database.</span></span>
+    - id: parameters.edition
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-111">取得或設定新的資料庫版本。</span><span class="sxs-lookup"><span data-stu-id="ed82c-111">Gets or sets the edition for the new database.</span></span>  <span data-ttu-id="ed82c-112">DatabaseEditions 列舉型別包含這個屬性的有效值。</span><span class="sxs-lookup"><span data-stu-id="ed82c-112">The DatabaseEditions enumeration contains the valid values for this property.</span></span>
+      optional: true
+    - id: parameters.maximumDatabaseSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="ed82c-113">取得或設定以 gb 為單位來表示此資料庫的大小上限。</span><span class="sxs-lookup"><span data-stu-id="ed82c-113">Gets or sets the maximum size of this database expressed in gigabytes.</span></span>  <span data-ttu-id="ed82c-114">如果這用來搭配 MaximumDatabaseSizeInBytes 這些規格必須一致。</span><span class="sxs-lookup"><span data-stu-id="ed82c-114">If this is used in conjunction with MaximumDatabaseSizeInBytes they must agree.</span></span>
+      optional: true
+    - id: parameters.collationName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-115">取得或設定新的資料庫定序名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-115">Gets or sets the collation name for the new database.</span></span>
+      optional: true
+    - id: parameters.maximumDatabaseSizeInBytes
+      type:
+      - number
+      description: <span data-ttu-id="ed82c-116">取得或設定以位元組為單位來表示此資料庫的大小上限。</span><span class="sxs-lookup"><span data-stu-id="ed82c-116">Gets or sets the maximum size of this database expressed in bytes.</span></span>  <span data-ttu-id="ed82c-117">如果這用來搭配 MaximumDatabaseSizeInGB 這些規格必須一致。</span><span class="sxs-lookup"><span data-stu-id="ed82c-117">If this is used in conjunction with MaximumDatabaseSizeInGB they must agree.</span></span>
+      optional: true
+    - id: parameters.serviceObjectiveId
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-118">取得或設定要套用至資料庫的服務目標識別碼。</span><span class="sxs-lookup"><span data-stu-id="ed82c-118">Gets or sets the service objective ID to be applied to the database.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="ed82c-119">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="ed82c-119">The response stream.</span></span>
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: deleteMethod(serverName, databaseName, callback)
+  summary: <span data-ttu-id="ed82c-120">從 Azure SQL Database 伺服器中卸除資料庫。</span><span class="sxs-lookup"><span data-stu-id="ed82c-120">Drops a database from an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.deleteMethod(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-121">資料庫裝載所在的 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-121">The name of the Azure SQL Database Server on which the database is hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-122">要刪除 Azure SQL Database 的名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-122">The name of the Azure SQL Database to be deleted.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="ed82c-123">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="ed82c-123">The response stream.</span></span>
+    content: function deleteMethod(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: get(serverName, databaseName, callback)
+  summary: <span data-ttu-id="ed82c-124">傳回 Azure SQL Database 的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ed82c-124">Returns information about an Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.get(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-125">資料庫裝載所在的 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-125">The name of the Azure SQL Database Server on which the database is hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-126">要擷取的 Azure SQL Database 的名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-126">The name of the Azure SQL Database to be retrieved.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="ed82c-127">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="ed82c-127">The response stream.</span></span>
+    content: function get(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: getEventLogs(serverName, databaseName, parameters, callback)
+  summary: <span data-ttu-id="ed82c-128">傳回 Azure SQL Database 事件記錄檔的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ed82c-128">Returns information about an Azure SQL Database event logs.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.getEventLogs(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-129">資料庫裝載所在的 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-129">The name of the Azure SQL Database Server on which the database is hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-130">要擷取的 Azure SQL Database 的名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-130">The name of the Azure SQL Database to be retrieved.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseGetEventLogsParameters
+      description: <span data-ttu-id="ed82c-131">取得資料庫事件記錄檔作業參數。</span><span class="sxs-lookup"><span data-stu-id="ed82c-131">The parameters for the Get Database Event Logs operation.</span></span>
+    - id: parameters.startDate
+      type:
+      - date
+      description: <span data-ttu-id="ed82c-132">取得或設定事件記錄檔的開始日期。</span><span class="sxs-lookup"><span data-stu-id="ed82c-132">Gets or sets the start date for the event log.</span></span>
+    - id: parameters.intervalSizeInMinutes
+      type:
+      - number
+      description: <span data-ttu-id="ed82c-133">取得或設定以分鐘為單位的間隔大小。</span><span class="sxs-lookup"><span data-stu-id="ed82c-133">Gets or sets the interval size in minutes.</span></span>
+    - id: parameters.eventTypes
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-134">取得或設定要擷取的事件類型。</span><span class="sxs-lookup"><span data-stu-id="ed82c-134">Gets or sets the event types to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="ed82c-135">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="ed82c-135">The response stream.</span></span>
+    content: function getEventLogs(serverName, databaseName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: list(serverName, callback)
+  summary: <span data-ttu-id="ed82c-136">傳回 Azure SQL Database 的集合。</span><span class="sxs-lookup"><span data-stu-id="ed82c-136">Returns a collection of Azure SQL Databases.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-137">Azure SQL Database 伺服器，用來擷取資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-137">The name of the Azure SQL Database Server from which to retrieve the database.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="ed82c-138">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="ed82c-138">The response stream.</span></span>
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: update(serverName, databaseName, parameters, callback)
+  summary: <span data-ttu-id="ed82c-139">更新 Azure SQL Database 的屬性。</span><span class="sxs-lookup"><span data-stu-id="ed82c-139">Updates the properties of an Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.update(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-140">資料庫所在的 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-140">The name of the Azure SQL Database Server where the database is hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-141">更新 Azure SQL Database 的名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-141">The name of the Azure SQL Database to be updated.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseUpdateParameters
+      description: <span data-ttu-id="ed82c-142">更新資料庫作業的參數。</span><span class="sxs-lookup"><span data-stu-id="ed82c-142">The parameters for the Update Database operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-143">取得或設定資料庫的新名稱。</span><span class="sxs-lookup"><span data-stu-id="ed82c-143">Gets or sets the new name of the database.</span></span>
+      optional: true
+    - id: parameters.edition
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-144">取得或設定資料庫的新版本。</span><span class="sxs-lookup"><span data-stu-id="ed82c-144">Gets or sets the new edition for the database.</span></span>
+    - id: parameters.maximumDatabaseSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="ed82c-145">取得或設定以 gb 為單位來表示此資料庫的大小上限。</span><span class="sxs-lookup"><span data-stu-id="ed82c-145">Gets or sets the maximum size of this database expressed in gigabytes.</span></span>  <span data-ttu-id="ed82c-146">如果這搭配 MaximumDatabaseSizeInBytes 這些規格必須一致。</span><span class="sxs-lookup"><span data-stu-id="ed82c-146">If this is used with MaximumDatabaseSizeInBytes they must agree.</span></span>
+      optional: true
+    - id: parameters.maximumDatabaseSizeInBytes
+      type:
+      - number
+      description: <span data-ttu-id="ed82c-147">取得或設定以位元組為單位來表示此資料庫的大小上限。</span><span class="sxs-lookup"><span data-stu-id="ed82c-147">Gets or sets the maximum size of this database expressed in bytes.</span></span>  <span data-ttu-id="ed82c-148">如果這搭配 MaximumDatabaseSizeInGB 這些規格必須一致。</span><span class="sxs-lookup"><span data-stu-id="ed82c-148">If this is used with MaximumDatabaseSizeInGB they must agree.</span></span>
+      optional: true
+    - id: parameters.serviceObjectiveId
+      type:
+      - string
+      description: <span data-ttu-id="ed82c-149">取得或設定要套用至資料庫的服務目標的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="ed82c-149">Gets or sets the unique identifier for the service objective to apply to the database.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="ed82c-150">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="ed82c-150">The response stream.</span></span>
+    content: function update(serverName, databaseName, parameters, callback)
+  langs:
+  - js

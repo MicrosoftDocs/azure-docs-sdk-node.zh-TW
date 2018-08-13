@@ -1,0 +1,162 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 96b0b3e923a59f735d4c4f065748b06273fff3cb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051467"
+items:
+- uid: azure-asm-sql.ServerOperations~ServerOperations
+  id: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations
+  summary: >-
+    <span data-ttu-id="256b6-101">包含方法，可讓 Azure SQL Database 伺服器上的各種作業。</span><span class="sxs-lookup"><span data-stu-id="256b6-101">Contains methods to allow various operations on Azure SQL Database Servers.</span></span>
+
+    <span data-ttu-id="256b6-102">__附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="256b6-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="256b6-103">請參閱 [伺服器] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23servers>。</span><span class="sxs-lookup"><span data-stu-id="256b6-103">See [servers] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23servers>.</span></span>
+
+    <span data-ttu-id="256b6-104">初始化 ServerOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="256b6-104">Initializes a new instance of the ServerOperations class.</span></span>
+  fullName: azure-asm-sql.ServerOperations
+  type: Class
+  children:
+  - azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  - azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  - azure-asm-sql.ServerOperations~ServerOperations#create
+  - azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  - azure-asm-sql.ServerOperations~ServerOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  uid: azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations(client)
+  fullName: azure-asm-sql.ServerOperations.ServerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="256b6-105">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="256b6-105">Reference to the service client.</span></span>
+    content: new ServerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  id: azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: changeAdministratorPassword(serverName, parameters, callback)
+  summary: <span data-ttu-id="256b6-106">變更現有 Azure SQL Database 伺服器指定的訂用帳戶的系統管理密碼。</span><span class="sxs-lookup"><span data-stu-id="256b6-106">Changes the administrative password of an existing Azure SQL Database Server for a given subscription.</span></span>
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.changeAdministratorPassword(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="256b6-107">將會有系統管理員密碼已變更 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="256b6-107">The name of the Azure SQL Database Server that will have the administrator password changed.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.ServerChangeAdministratorPasswordParameters
+      description: <span data-ttu-id="256b6-108">修改伺服器的系統管理員密碼的必要的參數。</span><span class="sxs-lookup"><span data-stu-id="256b6-108">The necessary parameters for modifying the adminstrator password for a server.</span></span>
+    - id: parameters.newPassword
+      type:
+      - string
+      description: <span data-ttu-id="256b6-109">取得或設定系統管理員的新密碼。</span><span class="sxs-lookup"><span data-stu-id="256b6-109">Gets or sets the new password for the administrator.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="256b6-110">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="256b6-110">The response stream.</span></span>
+    content: function changeAdministratorPassword(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#create
+  id: azure-asm-sql.ServerOperations~ServerOperations#create
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: create(parameters, callback)
+  summary: <span data-ttu-id="256b6-111">佈建在訂用帳戶中的新 SQL Database 伺服器。</span><span class="sxs-lookup"><span data-stu-id="256b6-111">Provisions a new SQL Database server in a subscription.</span></span>
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-sql.ServerCreateParameters
+      description: <span data-ttu-id="256b6-112">若要佈建伺服器所需的參數。</span><span class="sxs-lookup"><span data-stu-id="256b6-112">The parameters needed to provision a server.</span></span>
+    - id: parameters.administratorUserName
+      type:
+      - string
+      description: <span data-ttu-id="256b6-113">取得或設定要用於新的伺服器系統管理員使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="256b6-113">Gets or sets the administrator username that will be used for the new server.</span></span>
+    - id: parameters.administratorPassword
+      type:
+      - string
+      description: <span data-ttu-id="256b6-114">取得或設定新伺服器的系統管理員密碼。</span><span class="sxs-lookup"><span data-stu-id="256b6-114">Gets or sets the administrator password for the new server.</span></span>
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="256b6-115">取得或設定將在其中建立此伺服器的區域。</span><span class="sxs-lookup"><span data-stu-id="256b6-115">Gets or sets the region in which this server will be created.</span></span>  <span data-ttu-id="256b6-116">請參閱http://azure.microsoft.com/en-us/regions/#services取得一份所有可用的區域。</span><span class="sxs-lookup"><span data-stu-id="256b6-116">See http://azure.microsoft.com/en-us/regions/#services for a list of all the available regions.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: '<span data-ttu-id="256b6-117">取得或設定要建立伺服器的版本。</span><span class="sxs-lookup"><span data-stu-id="256b6-117">Gets or sets the version of server to create.</span></span>  <span data-ttu-id="256b6-118">有效值為： 1.0、 2.0。</span><span class="sxs-lookup"><span data-stu-id="256b6-118">Valid values are: 1.0, 2.0.</span></span>'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="256b6-119">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="256b6-119">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  id: azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: deleteMethod(serverName, callback)
+  summary: <span data-ttu-id="256b6-120">從訂用帳戶中刪除指定的 Azure SQL Database 伺服器。</span><span class="sxs-lookup"><span data-stu-id="256b6-120">Deletes the specified Azure SQL Database Server from a subscription.</span></span>
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.deleteMethod(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="256b6-121">要刪除的 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="256b6-121">The name of the Azure SQL Database Server to be deleted.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="256b6-122">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="256b6-122">The response stream.</span></span>
+    content: function deleteMethod(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#list
+  id: azure-asm-sql.ServerOperations~ServerOperations#list
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: list(callback)
+  summary: <span data-ttu-id="256b6-123">傳回所有訂用帳戶佈建的 SQL Database 伺服器。</span><span class="sxs-lookup"><span data-stu-id="256b6-123">Returns all SQL Database Servers that are provisioned for a subscription.</span></span>
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="256b6-124">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="256b6-124">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js

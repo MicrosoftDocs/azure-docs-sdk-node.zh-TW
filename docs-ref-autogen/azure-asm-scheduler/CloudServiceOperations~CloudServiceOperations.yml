@@ -1,0 +1,233 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5e442ed31a49c012dbf1f415cf14bed8148a249d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051361"
+items:
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: CloudServiceOperations
+  summary: >-
+    <span data-ttu-id="648bf-101">__附註__： 此類別的執行個體自動建立之執行個體的 [CloudServiceManagementClient] {@link CloudServiceManagementClient ~ CloudServiceManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="648bf-101">__NOTE__: An instance of this class is automatically created for an instance of the [CloudServiceManagementClient] {@link CloudServiceManagementClient~CloudServiceManagementClient}.</span></span>
+
+    <span data-ttu-id="648bf-102">請參閱 [cloudServices] {@link CloudServiceManagementClient ~ CloudServiceManagementClient #cloudServices}。</span><span class="sxs-lookup"><span data-stu-id="648bf-102">See [cloudServices] {@link CloudServiceManagementClient~CloudServiceManagementClient#cloudServices}.</span></span>
+
+    <span data-ttu-id="648bf-103">初始化 CloudServiceOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="648bf-103">Initializes a new instance of the CloudServiceOperations class.</span></span>
+  fullName: azure-asm-scheduler.CloudServiceOperations
+  type: Class
+  children:
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.#ctor
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginCreating
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginDeleting
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#create
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#delete
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#get
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#list
+  langs:
+  - js
+- id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.#ctor
+  uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.#ctor
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: CloudServiceOperations(client)
+  fullName: azure-asm-scheduler.CloudServiceOperations.CloudServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedCloudServiceManagementClient
+      description: <span data-ttu-id="648bf-104">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="648bf-104">Reference to the service client.</span></span>
+    content: new CloudServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginCreating
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginCreating
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: beginCreating(cloudServiceName, parameters, callback)
+  summary: <span data-ttu-id="648bf-105">建立雲端服務。</span><span class="sxs-lookup"><span data-stu-id="648bf-105">Create a cloud service.</span></span>
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.beginCreating(cloudServiceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="648bf-106">雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="648bf-106">The cloud service name.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.CloudServiceCreateParameters
+      description: <span data-ttu-id="648bf-107">提供給建立雲端服務作業參數。</span><span class="sxs-lookup"><span data-stu-id="648bf-107">Parameters supplied to the Create cloud service operation.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="648bf-108">雲端服務的標籤。</span><span class="sxs-lookup"><span data-stu-id="648bf-108">Label for the cloud service.</span></span>
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="648bf-109">雲端服務的描述。</span><span class="sxs-lookup"><span data-stu-id="648bf-109">Description for the cloud service.</span></span>
+    - id: parameters.geoRegion
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="648bf-110">雲端服務的區域。</span><span class="sxs-lookup"><span data-stu-id="648bf-110">The region for the cloud service.</span></span>
+
+        <span data-ttu-id="648bf-111">建立雲端服務之後，無法更新此欄位。</span><span class="sxs-lookup"><span data-stu-id="648bf-111">This field cannot be updated after the cloud service is created.</span></span>
+    - id: parameters.email
+      type:
+      - string
+      description: <span data-ttu-id="648bf-112">若要與服務產生關聯的選擇性電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="648bf-112">Optional e-mail address to associate with the service.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="648bf-113">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="648bf-113">The response stream.</span></span>
+    content: function beginCreating(cloudServiceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginDeleting
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginDeleting
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: beginDeleting(cloudServiceName, callback)
+  summary: <span data-ttu-id="648bf-114">刪除雲端服務。</span><span class="sxs-lookup"><span data-stu-id="648bf-114">Delete a cloud service.</span></span>
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.beginDeleting(cloudServiceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="648bf-115">雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="648bf-115">The cloud service name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="648bf-116">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="648bf-116">The response stream.</span></span>
+    content: function beginDeleting(cloudServiceName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#create
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#create
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: create(cloudServiceName, parameters, callback)
+  summary: <span data-ttu-id="648bf-117">建立雲端服務。</span><span class="sxs-lookup"><span data-stu-id="648bf-117">Create a cloud service.</span></span>
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.create(cloudServiceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="648bf-118">雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="648bf-118">The cloud service name.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.CloudServiceCreateParameters
+      description: <span data-ttu-id="648bf-119">提供給建立雲端服務作業參數。</span><span class="sxs-lookup"><span data-stu-id="648bf-119">Parameters supplied to the Create cloud service operation.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="648bf-120">雲端服務的標籤。</span><span class="sxs-lookup"><span data-stu-id="648bf-120">Label for the cloud service.</span></span>
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="648bf-121">雲端服務的描述。</span><span class="sxs-lookup"><span data-stu-id="648bf-121">Description for the cloud service.</span></span>
+    - id: parameters.geoRegion
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="648bf-122">雲端服務的區域。</span><span class="sxs-lookup"><span data-stu-id="648bf-122">The region for the cloud service.</span></span>
+
+        <span data-ttu-id="648bf-123">建立雲端服務之後，無法更新此欄位。</span><span class="sxs-lookup"><span data-stu-id="648bf-123">This field cannot be updated after the cloud service is created.</span></span>
+    - id: parameters.email
+      type:
+      - string
+      description: <span data-ttu-id="648bf-124">若要與服務產生關聯的選擇性電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="648bf-124">Optional e-mail address to associate with the service.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="648bf-125">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="648bf-125">The response stream.</span></span>
+    content: function create(cloudServiceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#delete
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#delete
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: delete(cloudServiceName, callback)
+  summary: <span data-ttu-id="648bf-126">刪除雲端服務。</span><span class="sxs-lookup"><span data-stu-id="648bf-126">Delete a cloud service.</span></span>
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.delete(cloudServiceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="648bf-127">雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="648bf-127">The cloud service name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="648bf-128">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="648bf-128">The response stream.</span></span>
+    content: function delete(cloudServiceName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#get
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#get
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: get(cloudServiceName, callback)
+  summary: <span data-ttu-id="648bf-129">擷取雲端服務。</span><span class="sxs-lookup"><span data-stu-id="648bf-129">Retreive a cloud service.</span></span>
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.get(cloudServiceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="648bf-130">雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="648bf-130">The cloud service name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="648bf-131">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="648bf-131">The response stream.</span></span>
+    content: function get(cloudServiceName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#list
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#list
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: list(callback)
+  summary: <span data-ttu-id="648bf-132">列出雲端服務作業會列舉訂用帳戶佈建服務。</span><span class="sxs-lookup"><span data-stu-id="648bf-132">The List Cloud Services operation enumerates services that are provisioned for a subscription.</span></span>
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="648bf-133">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="648bf-133">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js

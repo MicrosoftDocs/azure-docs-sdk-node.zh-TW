@@ -1,0 +1,228 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 69cd8be33fc74bdf792e221b491c62d90f8c69d5
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051470"
+items:
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: DatabaseCopyOperations
+  summary: >-
+    <span data-ttu-id="1b860-101">代表 SQL Database 管理 API 包含管理訂用帳戶的 SQL Server 資料庫複製作業。</span><span class="sxs-lookup"><span data-stu-id="1b860-101">Represents the SQL Database Management API includes operations for managing SQL Server database copies for a subscription.</span></span>
+
+    <span data-ttu-id="1b860-102">__附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="1b860-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="1b860-103">請參閱 [databaseCopies] {@link SqlManagementClient ~ SqlManagementClient #databaseCopies}。</span><span class="sxs-lookup"><span data-stu-id="1b860-103">See [databaseCopies] {@link SqlManagementClient~SqlManagementClient#databaseCopies}.</span></span>
+
+    <span data-ttu-id="1b860-104">初始化 DatabaseCopyOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="1b860-104">Initializes a new instance of the DatabaseCopyOperations class.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: DatabaseCopyOperations(client)
+  fullName: azure-asm-sql.DatabaseCopyOperations.DatabaseCopyOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="1b860-105">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="1b860-105">Reference to the service client.</span></span>
+    content: new DatabaseCopyOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: create(serverName, databaseName, parameters, callback)
+  summary: <span data-ttu-id="1b860-106">啟動 SQL Server 資料庫複本。</span><span class="sxs-lookup"><span data-stu-id="1b860-106">Starts a SQL Server database copy.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.create(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-107">來源資料庫所在的 SQL server 名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-107">The name of the SQL Server where the source database resides.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-108">來源資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-108">The name of the source database.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCopyCreateParameters
+      description: <span data-ttu-id="1b860-109">建立資料庫複製作業的其他參數。</span><span class="sxs-lookup"><span data-stu-id="1b860-109">The additional parameters for the create database copy operation.</span></span>
+    - id: parameters.partnerServer
+      type:
+      - string
+      description: <span data-ttu-id="1b860-110">取得複本的目的地伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-110">Gets the name of the destination server for the copy.</span></span>
+    - id: parameters.partnerDatabase
+      type:
+      - string
+      description: <span data-ttu-id="1b860-111">取得複本的目的地資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-111">Gets the name of the destination database for the copy.</span></span>
+    - id: parameters.isContinuous
+      type:
+      - boolean
+      description: <span data-ttu-id="1b860-112">取得值，指出是否複製應為連續。</span><span class="sxs-lookup"><span data-stu-id="1b860-112">Gets a value that indicates whether the copy should be continuous.</span></span>
+    - id: parameters.isOfflineSecondary
+      type:
+      - boolean
+      description: <span data-ttu-id="1b860-113">取得值，指出它是否離線的次要複本。</span><span class="sxs-lookup"><span data-stu-id="1b860-113">Gets a value that indicates whether it is an offline secondary copy.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="1b860-114">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="1b860-114">The response stream.</span></span>
+    content: function create(serverName, databaseName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  summary: <span data-ttu-id="1b860-115">停止 SQL Server 資料庫複製。</span><span class="sxs-lookup"><span data-stu-id="1b860-115">Stops a SQL Server database copy.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-116">來源或目的地 SQL Server 執行個體的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-116">The name of the source or destination SQL Server instance.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-117">資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-117">The name of the database.</span></span>
+    - id: databaseCopyName
+      type:
+      - azure-asm-sql.Guid
+      description: <span data-ttu-id="1b860-118">若要停止資料庫複本的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="1b860-118">The unique identifier for the database copy to stop.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="1b860-119">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="1b860-119">The response stream.</span></span>
+    content: function deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: get(serverName, databaseName, databaseCopyName, callback)
+  summary: <span data-ttu-id="1b860-120">擷取 SQL Server 資料庫複本的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="1b860-120">Retrieves information about a SQL Server database copy.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.get(serverName, databaseName, databaseCopyName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-121">來源或目的地 SQL Server 執行個體的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-121">The name of the source or destination SQL Server instance.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-122">資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-122">The name of the database.</span></span>
+    - id: databaseCopyName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-123">擷取的資料庫複本的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="1b860-123">The unique identifier for the database copy to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="1b860-124">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="1b860-124">The response stream.</span></span>
+    content: function get(serverName, databaseName, databaseCopyName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: list(serverName, databaseName, callback)
+  summary: <span data-ttu-id="1b860-125">擷取資料庫的 SQL Server 資料庫複本清單。</span><span class="sxs-lookup"><span data-stu-id="1b860-125">Retrieves the list of SQL Server database copies for a database.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.list(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-126">要查詢的資料庫伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-126">The name of the database server to be queried.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-127">要查詢之資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-127">The name of the database to be queried.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="1b860-128">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="1b860-128">The response stream.</span></span>
+    content: function list(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: update(serverName, databaseName, databaseCopyName, parameters, callback)
+  summary: <span data-ttu-id="1b860-129">更新 SQL Server 資料庫複本。</span><span class="sxs-lookup"><span data-stu-id="1b860-129">Updates a SQL Server database copy.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.update(serverName, databaseName, databaseCopyName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-130">來源或目的地 SQL Server 執行個體的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-130">The name of the source or destination SQL Server instance.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="1b860-131">資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b860-131">The name of the database.</span></span>
+    - id: databaseCopyName
+      type:
+      - azure-asm-sql.Guid
+      description: <span data-ttu-id="1b860-132">若要更新資料庫複本的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="1b860-132">The unique identifier for the database copy to update.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCopyUpdateParameters
+      description: <span data-ttu-id="1b860-133">更新資料庫複製作業的其他參數。</span><span class="sxs-lookup"><span data-stu-id="1b860-133">The additional parameters for the update database copy operation.</span></span>
+    - id: parameters.isForcedTerminate
+      type:
+      - boolean
+      description: <span data-ttu-id="1b860-134">取得或設定是否要刪除的資料庫作業將會導致強制或易用的終止。</span><span class="sxs-lookup"><span data-stu-id="1b860-134">Gets or sets whether a Delete Database Operation will result in forced or friendly termination.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="1b860-135">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="1b860-135">The response stream.</span></span>
+    content: function update(serverName, databaseName, databaseCopyName, parameters, callback)
+  langs:
+  - js

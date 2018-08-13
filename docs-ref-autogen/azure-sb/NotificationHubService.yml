@@ -1,0 +1,508 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0e839634bf45a6ca21fbdf7120bdb9d631febf5b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051537"
+items:
+- uid: azure-sb.NotificationHubService
+  id: azure-sb.NotificationHubService
+  name: NotificationHubService
+  summary: >-
+    <span data-ttu-id="fa2f9-101">NotificationHubService 可讓您將推播通知傳送至 iOS、 Android 和 Windows 市集裝置。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-101">The NotificationHubService allows you to send push notifications to iOS, Android, and Windows Store devices.</span></span>
+
+
+    <span data-ttu-id="fa2f9-102">如需有關通知中樞，以及如工作上使用它們從 Node.js 應用程式的重點的資訊，請參閱[如何使用服務匯流排通知中樞](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-notification-hubs/)。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-102">For more information on Notification Hubs, as well as task focused information on using them from Node.js applications, see [How to Use Service Bus Notification Hubs](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-notification-hubs/).</span></span>
+  fullName: azure-sb.NotificationHubService
+  type: Class
+  children:
+  - azure-sb.NotificationHubService.#ctor
+  - azure-sb.NotificationHubService#wns
+  - azure-sb.NotificationHubService#apns
+  - azure-sb.NotificationHubService#gcm
+  - azure-sb.NotificationHubService#mpns
+  - azure-sb.NotificationHubService#send
+  - azure-sb.NotificationHubService#createRegistrationId
+  - azure-sb.NotificationHubService#getRegistration
+  - azure-sb.NotificationHubService#deleteRegistration
+  - azure-sb.NotificationHubService#updateRegistration
+  - azure-sb.NotificationHubService#createOrUpdateRegistration
+  - azure-sb.NotificationHubService#listRegistrations
+  - azure-sb.NotificationHubService#listRegistrationsByTag
+  - azure-sb.NotificationHubService#createOrUpdateInstallation
+  - azure-sb.NotificationHubService#patchInstallation
+  - azure-sb.NotificationHubService#deleteInstallation
+  - azure-sb.NotificationHubService#getInstallation
+  langs:
+  - js
+- id: azure-sb.NotificationHubService.#ctor
+  uid: azure-sb.NotificationHubService.#ctor
+  parent: azure-sb.NotificationHubService
+  name: NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  fullName: azure-sb.NotificationHubService.NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  summary: <span data-ttu-id="fa2f9-103">建立新的 NotificationHubService 物件。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-103">Creates a new NotificationHubService object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: hubName
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-104">通知中樞名稱。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-104">The notification hub name.</span></span>
+    - id: endpointOrConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-105">服務匯流排端點或連接字串。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-105">The service bus endpoint or connection string.</span></span>
+      optional: true
+    - id: sharedAccessKeyName
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-106">通知中樞共用的存取金鑰名稱。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-106">The notification hub shared access key name.</span></span>
+      optional: true
+    - id: sharedAccessKeyValue
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-107">通知中樞共用存取金鑰值。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-107">The notification hub shared access key value.</span></span>
+      optional: true
+    content: new NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#wns
+  id: azure-sb.NotificationHubService#wns
+  parent: azure-sb.NotificationHubService
+  name: wns
+  summary: <span data-ttu-id="fa2f9-108">提供方法來傳送給 WNS 的通知 （適用於 Windows 市集應用程式） 和建立/更新註冊的 Windows 市集應用程式的存取。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-108">Provides access to methods to send notifications to WNS (for Windows Store apps) and create/update registrations for Windows Store apps.</span></span>
+  fullName: azure-sb.NotificationHubService.wns
+  type: Member
+  syntax:
+    return:
+      type:
+      - WnsService
+    content: wns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#apns
+  id: azure-sb.NotificationHubService#apns
+  parent: azure-sb.NotificationHubService
+  name: apns
+  summary: <span data-ttu-id="fa2f9-109">提供方法來傳送通知給 APNs （適用於 iOS 的應用程式） 並建立/更新註冊的 iOS 應用程式的存取。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-109">Provides access to methods to send notifications to APNs (for iOS apps) and create/update registrations for iOS apps.</span></span>
+  fullName: azure-sb.NotificationHubService.apns
+  type: Member
+  syntax:
+    return:
+      type:
+      - ApnsService
+    content: apns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#gcm
+  id: azure-sb.NotificationHubService#gcm
+  parent: azure-sb.NotificationHubService
+  name: gcm
+  summary: <span data-ttu-id="fa2f9-110">提供存取權 （適用於 Android 的應用程式），將通知傳送至 GCM 和建立/更新註冊的 Android 應用程式的方法。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-110">Provides access to methods to send notifications to GCM (for Android apps) and create/update registrations for Android apps.</span></span>
+  fullName: azure-sb.NotificationHubService.gcm
+  type: Member
+  syntax:
+    return:
+      type:
+      - GcmService
+    content: gcm
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#mpns
+  id: azure-sb.NotificationHubService#mpns
+  parent: azure-sb.NotificationHubService
+  name: mpns
+  summary: <span data-ttu-id="fa2f9-111">提供方法來傳送通知給 MPNS （適用於 Windows Phone 應用程式） 並建立/更新註冊 Windows Phone 應用程式的存取。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-111">Provides access to methods to send notifications to MPNS (for Windows Phone apps) and create/update registrations for Windows Phone apps.</span></span>
+  fullName: azure-sb.NotificationHubService.mpns
+  type: Member
+  syntax:
+    return:
+      type:
+      - MpnsService
+    content: mpns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#send
+  id: azure-sb.NotificationHubService#send
+  parent: azure-sb.NotificationHubService
+  name: send(tags, payload, options, callback)
+  summary: <span data-ttu-id="fa2f9-112">傳送範本訊息。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-112">Sends a template message.</span></span>
+  fullName: azure-sb.NotificationHubService.send(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="fa2f9-113">單一標記或標記運算式中。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-113">A single tag or tag expression.</span></span>
+
+        <span data-ttu-id="fa2f9-114">如果是 null 會廣播到此中樞內的所有註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-114">If null it will broadcast to all registrations in this hub</span></span>
+    - id: payload
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="fa2f9-115">訊息的承載。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-115">The message's payload.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-116">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-116">The request options or callback function.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-117">其他標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-117">Additional headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-118">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-118">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function send(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createRegistrationId
+  id: azure-sb.NotificationHubService#createRegistrationId
+  parent: azure-sb.NotificationHubService
+  name: createRegistrationId(callback)
+  summary: <span data-ttu-id="fa2f9-119">建立註冊識別碼。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-119">Creates a registration identifier.</span></span>
+  fullName: azure-sb.NotificationHubService.createRegistrationId(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-120">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-120">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createRegistrationId(callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#getRegistration
+  id: azure-sb.NotificationHubService#getRegistration
+  parent: azure-sb.NotificationHubService
+  name: getRegistration(registrationId, options, callback)
+  summary: <span data-ttu-id="fa2f9-121">擷取註冊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-121">Retrieves a registration.</span></span>
+  fullName: azure-sb.NotificationHubService.getRegistration(registrationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-122">註冊識別碼。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-122">The registration identifier.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-123">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-123">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-124">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-124">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-125">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-125">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function getRegistration(registrationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#deleteRegistration
+  id: azure-sb.NotificationHubService#deleteRegistration
+  parent: azure-sb.NotificationHubService
+  name: deleteRegistration(registrationId, options, callback)
+  summary: <span data-ttu-id="fa2f9-126">刪除註冊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-126">Deletes a registration.</span></span>
+  fullName: azure-sb.NotificationHubService.deleteRegistration(registrationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-127">註冊識別碼。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-127">The registration identifier.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-128">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-128">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-129">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-129">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-130">Etag。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-130">The etag.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-131">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-131">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function deleteRegistration(registrationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#updateRegistration
+  id: azure-sb.NotificationHubService#updateRegistration
+  parent: azure-sb.NotificationHubService
+  name: updateRegistration(registration, options, callback)
+  summary: <span data-ttu-id="fa2f9-132">更新註冊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-132">Updates a registration.</span></span>
+  fullName: azure-sb.NotificationHubService.updateRegistration(registration, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registration
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-133">要更新的註冊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-133">The registration to update.</span></span>
+    - id: registration.RegistrationId
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-134">若要更新的註冊識別碼</span><span class="sxs-lookup"><span data-stu-id="fa2f9-134">Registration id to update</span></span>
+    - id: registration._.ContentRootElement
+      type:
+      - object
+      description: '<span data-ttu-id="fa2f9-135">註冊的型別。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-135">Type of the registration.</span></span> <span data-ttu-id="fa2f9-136">允許的類型： WindowsRegistrationDescription、 WindowsTemplateRegistrationDescription、 AppleRegistrationDescription、 AppleTemplateRegistrationDescription、 GcmRegistrationDescription、 GcmTemplateRegistrationDescription，MpnsRegistrationDescription MpnsTemplateRegistrationDescription。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-136">Types allowed: WindowsRegistrationDescription, WindowsTemplateRegistrationDescription, AppleRegistrationDescription, AppleTemplateRegistrationDescription, GcmRegistrationDescription, GcmTemplateRegistrationDescription, MpnsRegistrationDescription, MpnsTemplateRegistrationDescription.</span></span>'
+    - id: registration.ChannelUri
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-137">只有當 Windows 或 Mpns 註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-137">Only if Windows or Mpns registration</span></span>
+    - id: registration.DeviceToken
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-138">只有當 Apple 註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-138">Only if Apple registration</span></span>
+    - id: registration.GcmRegistrationId
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-139">只有當 Gcm 註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-139">Only if Gcm registration</span></span>
+    - id: registration.Tags
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-140">以逗號分隔的標記 （無空格） 的清單</span><span class="sxs-lookup"><span data-stu-id="fa2f9-140">Comma-separated list of tags (no spaces)</span></span>
+    - id: registration.BodyTemplate
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-141">只有當範本註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-141">Only if template registration</span></span>
+    - id: registration.WnsHeaders
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-142">只有當 Windows 範本註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-142">Only if Windows template registration</span></span>
+    - id: registration.MpnsHeaders
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-143">只有當 Mpns 範本註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-143">Only if Mpns template registration</span></span>
+    - id: registration.Expiry
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-144">只有當 Apple 範本註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-144">Only if Apple template registration</span></span>
+    - id: registration.ApnsHeaders
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-145">只有當 Apple 範本註冊</span><span class="sxs-lookup"><span data-stu-id="fa2f9-145">Only if Apple template registration</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-146">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-146">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-147">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-147">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-148">Etag。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-148">The etag.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-149">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-149">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function updateRegistration(registration, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createOrUpdateRegistration
+  id: azure-sb.NotificationHubService#createOrUpdateRegistration
+  parent: azure-sb.NotificationHubService
+  name: createOrUpdateRegistration(registration, options, callback)
+  summary: <span data-ttu-id="fa2f9-150">建立或更新註冊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-150">Creates or updates a registration.</span></span>
+  fullName: azure-sb.NotificationHubService.createOrUpdateRegistration(registration, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registration
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-151">要更新的註冊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-151">The registration to update.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-152">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-152">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-153">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-153">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-154">Etag。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-154">The etag.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-155">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-155">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateRegistration(registration, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#listRegistrations
+  id: azure-sb.NotificationHubService#listRegistrations
+  parent: azure-sb.NotificationHubService
+  name: listRegistrations(options, callback)
+  summary: <span data-ttu-id="fa2f9-156">清單中註冊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-156">List registrations.</span></span>
+  fullName: azure-sb.NotificationHubService.listRegistrations(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-157">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-157">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-158">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-158">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-159">指定在呼叫中取得註冊的最大數目。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-159">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-160">指定要略過的呼叫中的註冊數目。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-160">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-161">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-161">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function listRegistrations(options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#listRegistrationsByTag
+  id: azure-sb.NotificationHubService#listRegistrationsByTag
+  parent: azure-sb.NotificationHubService
+  name: listRegistrationsByTag(tag, options, callback)
+  summary: <span data-ttu-id="fa2f9-162">擷取註冊的標記。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-162">Retrieves a registration by tag.</span></span>
+  fullName: azure-sb.NotificationHubService.listRegistrationsByTag(tag, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tag
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-163">註冊標記。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-163">The registration tag.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-164">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-164">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-165">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-165">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-166">指定在呼叫中取得註冊的最大數目。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-166">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-167">指定要略過的呼叫中的註冊數目。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-167">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-168">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-168">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function listRegistrationsByTag(tag, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createOrUpdateInstallation
+  id: azure-sb.NotificationHubService#createOrUpdateInstallation
+  parent: azure-sb.NotificationHubService
+  name: createOrUpdateInstallation(installation, options, callback)
+  summary: <span data-ttu-id="fa2f9-169">建立或更新的安裝。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-169">Creates or updates a installation.</span></span>
+  fullName: azure-sb.NotificationHubService.createOrUpdateInstallation(installation, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installation
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-170">建立/更新安裝。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-170">The installation to create/update.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-171">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-171">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-172">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-172">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-173">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-173">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateInstallation(installation, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#patchInstallation
+  id: azure-sb.NotificationHubService#patchInstallation
+  parent: azure-sb.NotificationHubService
+  name: patchInstallation(installationId, partialUpdateOperations, options, callback)
+  summary: <span data-ttu-id="fa2f9-174">修補現有的安裝。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-174">Patches an existing installation.</span></span>
+  fullName: azure-sb.NotificationHubService.patchInstallation(installationId, partialUpdateOperations, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-175">安裝識別碼</span><span class="sxs-lookup"><span data-stu-id="fa2f9-175">Installation Id</span></span>
+    - id: partialUpdateOperations
+      type:
+      - array
+      description: <span data-ttu-id="fa2f9-176">修補現有安裝的部分作業的清單</span><span class="sxs-lookup"><span data-stu-id="fa2f9-176">List of partial operations to patch an existing installation</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-177">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-177">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-178">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-178">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-179">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-179">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function patchInstallation(installationId, partialUpdateOperations, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#deleteInstallation
+  id: azure-sb.NotificationHubService#deleteInstallation
+  parent: azure-sb.NotificationHubService
+  name: deleteInstallation(installationId, options, callback)
+  summary: <span data-ttu-id="fa2f9-180">刪除現有的安裝。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-180">Deletes an existing installation.</span></span>
+  fullName: azure-sb.NotificationHubService.deleteInstallation(installationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-181">安裝識別碼</span><span class="sxs-lookup"><span data-stu-id="fa2f9-181">Installation Id</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-182">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-182">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-183">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-183">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-184">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-184">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function deleteInstallation(installationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#getInstallation
+  id: azure-sb.NotificationHubService#getInstallation
+  parent: azure-sb.NotificationHubService
+  name: getInstallation(installationId, options, callback)
+  summary: <span data-ttu-id="fa2f9-185">取得依識別碼安裝</span><span class="sxs-lookup"><span data-stu-id="fa2f9-185">Gets an installation by its Id</span></span>
+  fullName: azure-sb.NotificationHubService.getInstallation(installationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: <span data-ttu-id="fa2f9-186">安裝識別碼</span><span class="sxs-lookup"><span data-stu-id="fa2f9-186">Installation Id</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="fa2f9-187">要求選項或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-187">The request options or callback function.</span></span> <span data-ttu-id="fa2f9-188">其他屬性會傳入作為標頭。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-188">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="fa2f9-189">`error` 發生錯誤時，會包含資訊否則，`response`會包含這項作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2f9-189">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function getInstallation(installationId, options, callback)
+  langs:
+  - js

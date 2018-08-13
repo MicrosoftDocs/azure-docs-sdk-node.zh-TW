@@ -1,0 +1,124 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 43d3f97bde82db60885553c1f3322b23ad527893
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051464"
+items:
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations
+  summary: >-
+    <span data-ttu-id="fa393-101">Azure SQL Database 管理 API 包含用於取得資料庫作業的作業。</span><span class="sxs-lookup"><span data-stu-id="fa393-101">The Azure SQL Database Management API includes operations for getting database operations.</span></span> <span data-ttu-id="fa393-102">具體來說，此 API 可讓您取得特定的作業，或列出所有作業發生在特定資料庫或 Azure SQL Database 伺服器中的所有資料庫上。</span><span class="sxs-lookup"><span data-stu-id="fa393-102">Specifically, this API allows you to get a specific operation, or to list all the operations that happened on a specific database or on all databases in the Azure SQL Database Server.</span></span>
+
+    <span data-ttu-id="fa393-103">__附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="fa393-103">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="fa393-104">請參閱 [databaseOperations] {@link SqlManagementClient ~ SqlManagementClient #databaseOperations}。</span><span class="sxs-lookup"><span data-stu-id="fa393-104">See [databaseOperations] {@link SqlManagementClient~SqlManagementClient#databaseOperations}.</span></span>
+
+    <span data-ttu-id="fa393-105">初始化 DatabaseOperationOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="fa393-105">Initializes a new instance of the DatabaseOperationOperations class.</span></span>
+  fullName: azure-asm-sql.DatabaseOperationOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations(client)
+  fullName: azure-asm-sql.DatabaseOperationOperations.DatabaseOperationOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="fa393-106">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="fa393-106">Reference to the service client.</span></span>
+    content: new DatabaseOperationOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: get(serverName, operationGuid, callback)
+  summary: <span data-ttu-id="fa393-107">使用作業的 Guid，以傳回特定作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa393-107">Returns information about a specific operation by using the operation Guid.</span></span>
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.get(serverName, operationGuid, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="fa393-108">資料庫所在的 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="fa393-108">The name of the Azure SQL Database Server where the database is hosted.</span></span>
+    - id: operationGuid
+      type:
+      - string
+      description: <span data-ttu-id="fa393-109">若要取得 Azure SQL Database 作業的 Guid。</span><span class="sxs-lookup"><span data-stu-id="fa393-109">The Guid of the Azure SQL Database operation to be obtained.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="fa393-110">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="fa393-110">The response stream.</span></span>
+    content: function get(serverName, operationGuid, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: listByDatabase(serverName, databaseName, callback)
+  summary: <span data-ttu-id="fa393-111">擷取所有發生在特定資料庫的作業。</span><span class="sxs-lookup"><span data-stu-id="fa393-111">Retrieves all of the operations that took place on a specific database.</span></span>
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.listByDatabase(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="fa393-112">Azure SQL Database 伺服器裝載資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="fa393-112">The name of the Azure SQL Database Server that hosts the database.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="fa393-113">擷取作業的資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="fa393-113">The name of the database for which the operations should be retrieved.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="fa393-114">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="fa393-114">The response stream.</span></span>
+    content: function listByDatabase(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: listByServer(serverName, callback)
+  summary: <span data-ttu-id="fa393-115">擷取所有的 Azure SQL Database 伺服器發生的作業。</span><span class="sxs-lookup"><span data-stu-id="fa393-115">Retrieves all of the operations that occured on the Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.listByServer(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="fa393-116">要查詢 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="fa393-116">The name of the Azure SQL Database Server to be queried.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="fa393-117">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="fa393-117">The response stream.</span></span>
+    content: function listByServer(serverName, callback)
+  langs:
+  - js

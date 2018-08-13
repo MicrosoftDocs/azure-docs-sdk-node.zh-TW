@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9764605e49c643fe252a6477f697ccd077eaf1e0
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051518"
+items:
+- uid: azure-gallery.ItemOperations~ItemOperations
+  id: azure-gallery.ItemOperations~ItemOperations
+  name: ItemOperations
+  summary: >-
+    <span data-ttu-id="f21e0-101">主機庫項目所使用的作業。</span><span class="sxs-lookup"><span data-stu-id="f21e0-101">Operations for working with gallery items.</span></span>
+
+    <span data-ttu-id="f21e0-102">__附註__： 此類別的執行個體自動建立之執行個體的 [GalleryClient] <xref:azure-gallery.GalleryClient~GalleryClient>。</span><span class="sxs-lookup"><span data-stu-id="f21e0-102">__NOTE__: An instance of this class is automatically created for an instance of the [GalleryClient] <xref:azure-gallery.GalleryClient~GalleryClient>.</span></span>
+
+    <span data-ttu-id="f21e0-103">請參閱 [項目] <xref:azure-gallery.GalleryClient~GalleryClient%23items>。</span><span class="sxs-lookup"><span data-stu-id="f21e0-103">See [items] <xref:azure-gallery.GalleryClient~GalleryClient%23items>.</span></span>
+
+    <span data-ttu-id="f21e0-104">初始化 ItemOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="f21e0-104">Initializes a new instance of the ItemOperations class.</span></span>
+  fullName: azure-gallery.ItemOperations
+  type: Class
+  children:
+  - azure-gallery.ItemOperations~ItemOperations.#ctor
+  - azure-gallery.ItemOperations~ItemOperations#get
+  - azure-gallery.ItemOperations~ItemOperations#list
+  langs:
+  - js
+- id: azure-gallery.ItemOperations~ItemOperations.#ctor
+  uid: azure-gallery.ItemOperations~ItemOperations.#ctor
+  parent: azure-gallery.ItemOperations~ItemOperations
+  name: ItemOperations(client)
+  fullName: azure-gallery.ItemOperations.ItemOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedGalleryClient
+      description: <span data-ttu-id="f21e0-105">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="f21e0-105">Reference to the service client.</span></span>
+    content: new ItemOperations(client)
+  langs:
+  - js
+- uid: azure-gallery.ItemOperations~ItemOperations#get
+  id: azure-gallery.ItemOperations~ItemOperations#get
+  parent: azure-gallery.ItemOperations~ItemOperations
+  name: get(itemIdentity, callback)
+  summary: <span data-ttu-id="f21e0-106">取得資源庫項目。</span><span class="sxs-lookup"><span data-stu-id="f21e0-106">Gets a gallery items.</span></span>
+  fullName: azure-gallery.ItemOperations~ItemOperations.get(itemIdentity, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: itemIdentity
+      type:
+      - string
+      description: <span data-ttu-id="f21e0-107">資源庫項目識別。</span><span class="sxs-lookup"><span data-stu-id="f21e0-107">Gallery item identity.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-gallery.Stream
+      description: <span data-ttu-id="f21e0-108">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="f21e0-108">The response stream.</span></span>
+    content: function get(itemIdentity, callback)
+  langs:
+  - js
+- uid: azure-gallery.ItemOperations~ItemOperations#list
+  id: azure-gallery.ItemOperations~ItemOperations#list
+  parent: azure-gallery.ItemOperations~ItemOperations
+  name: list(parametersOrCallback, callback)
+  summary: <span data-ttu-id="f21e0-109">取得集合的主機庫項目。</span><span class="sxs-lookup"><span data-stu-id="f21e0-109">Gets collection of gallery items.</span></span>
+  fullName: azure-gallery.ItemOperations~ItemOperations.list(parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parametersOrCallback
+      type:
+      - azure-gallery.ItemListParameters
+      description: <span data-ttu-id="f21e0-110">查詢參數。</span><span class="sxs-lookup"><span data-stu-id="f21e0-110">Query parameters.</span></span> <span data-ttu-id="f21e0-111">如果傳遞 null，則會傳回所有的主機庫項目。</span><span class="sxs-lookup"><span data-stu-id="f21e0-111">If null is passed returns all gallery items.</span></span>
+      optional: true
+    - id: parametersOrCallback.filter
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="f21e0-112">取得或設定 OData 篩選器。</span><span class="sxs-lookup"><span data-stu-id="f21e0-112">Gets or sets OData filter.</span></span>
+
+        <span data-ttu-id="f21e0-113">選用。</span><span class="sxs-lookup"><span data-stu-id="f21e0-113">Optional.</span></span>
+      optional: true
+    - id: parametersOrCallback.top
+      type:
+      - number
+      description: >-
+        <span data-ttu-id="f21e0-114">要傳回的項目數目。</span><span class="sxs-lookup"><span data-stu-id="f21e0-114">Number of items to return.</span></span>
+
+        <span data-ttu-id="f21e0-115">選用。</span><span class="sxs-lookup"><span data-stu-id="f21e0-115">Optional.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-gallery.Stream
+      description: <span data-ttu-id="f21e0-116">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="f21e0-116">The response stream.</span></span>
+    content: function list(parametersOrCallback, callback)
+  langs:
+  - js

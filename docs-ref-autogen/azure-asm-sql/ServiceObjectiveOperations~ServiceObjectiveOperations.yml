@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 40daf86560c1ab196e064a59d536ef2a11f14760
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051459"
+items:
+- uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  id: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: ServiceObjectiveOperations
+  summary: >-
+    <span data-ttu-id="9b9c8-101">這個類別提供方法以使用其識別碼取得特定的服務目標，或列出所有在伺服器上的服務目標。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-101">This class provides methods to get a specific service objective by using its ID or to List all of the service objectives on a server.</span></span>
+
+    <span data-ttu-id="9b9c8-102">__附註__： 此類別的執行個體自動建立之執行個體的 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="9b9c8-103">請參閱 [serviceObjectives] {@link SqlManagementClient ~ SqlManagementClient #serviceObjectives}。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-103">See [serviceObjectives] {@link SqlManagementClient~SqlManagementClient#serviceObjectives}.</span></span>
+
+    <span data-ttu-id="9b9c8-104">初始化 ServiceObjectiveOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-104">Initializes a new instance of the ServiceObjectiveOperations class.</span></span>
+  fullName: azure-asm-sql.ServiceObjectiveOperations
+  type: Class
+  children:
+  - azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.#ctor
+  - azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#get
+  - azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.#ctor
+  uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.#ctor
+  parent: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: ServiceObjectiveOperations(client)
+  fullName: azure-asm-sql.ServiceObjectiveOperations.ServiceObjectiveOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="9b9c8-105">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-105">Reference to the service client.</span></span>
+    content: new ServiceObjectiveOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#get
+  id: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#get
+  parent: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: get(serverName, serviceObjectiveId, callback)
+  summary: <span data-ttu-id="9b9c8-106">傳回與特定識別碼的特定服務目標的相關資訊</span><span class="sxs-lookup"><span data-stu-id="9b9c8-106">Returns information about a certain Service Objective with a specific Id.</span></span>
+  fullName: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.get(serverName, serviceObjectiveId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="9b9c8-107">要查詢 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-107">The name of the Azure SQL Database Server to be queried.</span></span>
+    - id: serviceObjectiveId
+      type:
+      - string
+      description: <span data-ttu-id="9b9c8-108">若要取得服務目標的識別碼。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-108">The Id of the Service Objective to be obtained.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="9b9c8-109">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-109">The response stream.</span></span>
+    content: function get(serverName, serviceObjectiveId, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#list
+  id: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#list
+  parent: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: list(serverName, callback)
+  summary: <span data-ttu-id="9b9c8-110">傳回 Azure SQL Database 伺服器上的所有服務目標的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-110">Returns information about all Service Objectives on an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="9b9c8-111">要查詢 Azure SQL Database 伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-111">The name of the Azure SQL Database Server to be queried.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="9b9c8-112">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="9b9c8-112">The response stream.</span></span>
+    content: function list(serverName, callback)
+  langs:
+  - js

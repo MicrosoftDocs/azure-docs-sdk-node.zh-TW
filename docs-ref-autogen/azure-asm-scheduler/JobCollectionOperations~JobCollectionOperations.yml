@@ -1,0 +1,504 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 57224e72fed5742b00b47d14fd7204fa9fa44ef8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40051379"
+items:
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: JobCollectionOperations
+  summary: >-
+    <span data-ttu-id="7fc92-101">__附註__： 此類別的執行個體自動建立之執行個體的 [SchedulerManagementClient] {@link SchedulerManagementClient ~ SchedulerManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="7fc92-101">__NOTE__: An instance of this class is automatically created for an instance of the [SchedulerManagementClient] {@link SchedulerManagementClient~SchedulerManagementClient}.</span></span>
+
+    <span data-ttu-id="7fc92-102">請參閱 [jobCollections] {@link SchedulerManagementClient ~ SchedulerManagementClient #jobCollections}。</span><span class="sxs-lookup"><span data-stu-id="7fc92-102">See [jobCollections] {@link SchedulerManagementClient~SchedulerManagementClient#jobCollections}.</span></span>
+
+    <span data-ttu-id="7fc92-103">初始化 JobCollectionOperations 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="7fc92-103">Initializes a new instance of the JobCollectionOperations class.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations
+  type: Class
+  children:
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  langs:
+  - js
+- id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: JobCollectionOperations(client)
+  fullName: azure-asm-scheduler.JobCollectionOperations.JobCollectionOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerManagementClient
+      description: <span data-ttu-id="7fc92-104">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="7fc92-104">Reference to the service client.</span></span>
+    content: new JobCollectionOperations(client)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: <span data-ttu-id="7fc92-105">建立工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-105">Create a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-106">包含工作集合之雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-106">The name of the cloud service containing the job collection.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-107">若要建立的工作集合名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-107">The name of the job collection to create.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionCreateParameters
+      description: <span data-ttu-id="7fc92-108">建立工作集合作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="7fc92-108">Parameters supplied to the Create Job Collection operation.</span></span>
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-109">內建屬性，為您的資源版本。</span><span class="sxs-lookup"><span data-stu-id="7fc92-109">The version of the Intrinsic Properties for your Resource.</span></span> <span data-ttu-id="7fc92-110">如果未指定，您必須符合您註冊預設為合約資源版本。</span><span class="sxs-lookup"><span data-stu-id="7fc92-110">If not specified, you must conform to the contract resource version you registered as default.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-111">資源標籤。</span><span class="sxs-lookup"><span data-stu-id="7fc92-111">Label for the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: <span data-ttu-id="7fc92-112">內建排程器工作集合的設定。</span><span class="sxs-lookup"><span data-stu-id="7fc92-112">Intrinsic settings for the scheduler job collections.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: <span data-ttu-id="7fc92-113">資源的計劃。</span><span class="sxs-lookup"><span data-stu-id="7fc92-113">The plan of the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: <span data-ttu-id="7fc92-114">工作集合配額設定。</span><span class="sxs-lookup"><span data-stu-id="7fc92-114">Quota settings for the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-115">可以建立此工作集合中的作業數目上限。</span><span class="sxs-lookup"><span data-stu-id="7fc92-115">Maximum number of jobs that can be created in this job collection.</span></span> <span data-ttu-id="7fc92-116">最大值是依據計劃。</span><span class="sxs-lookup"><span data-stu-id="7fc92-116">Maximum value is dependent on the plan.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-117">工作集合中的所有作業的最大次數。</span><span class="sxs-lookup"><span data-stu-id="7fc92-117">Maximum number of occurrences for all jobs in the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: <span data-ttu-id="7fc92-118">定義可以指定此工作集合中的任何作業中的最大週期。</span><span class="sxs-lookup"><span data-stu-id="7fc92-118">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: <span data-ttu-id="7fc92-119">定義可以指定此工作集合中的任何作業中的最大週期。</span><span class="sxs-lookup"><span data-stu-id="7fc92-119">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-120">定義的間隔。</span><span class="sxs-lookup"><span data-stu-id="7fc92-120">Defines the interval.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="7fc92-121">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="7fc92-121">The response stream.</span></span>
+    content: function beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginDeleting(cloudServiceName, jobCollectionName, callback)
+  summary: <span data-ttu-id="7fc92-122">刪除工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-122">Deletes a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginDeleting(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-123">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-123">The name of the cloud service.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-124">若要刪除的工作集合名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-124">The name of the job collection to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="7fc92-125">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="7fc92-125">The response stream.</span></span>
+    content: function beginDeleting(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: <span data-ttu-id="7fc92-126">更新工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-126">Update a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-127">包含工作集合之雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-127">The name of the cloud service containing the job collection.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-128">若要更新的工作集合名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-128">The name of the job collection to update.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionUpdateParameters
+      description: <span data-ttu-id="7fc92-129">更新工作集合作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="7fc92-129">Parameters supplied to the Update Job Collection operation.</span></span>
+    - id: parameters.eTag
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="7fc92-130">要更新的 ETag 的工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-130">The ETag of the job collection to update.</span></span>
+
+        <span data-ttu-id="7fc92-131">更新將會失敗的 ifthe ETag 不符合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-131">The update will fail ifthe ETag doesn't match.</span></span>
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-132">內建屬性，為您的資源版本。</span><span class="sxs-lookup"><span data-stu-id="7fc92-132">The version of the Intrinsic Properties for your Resource.</span></span> <span data-ttu-id="7fc92-133">如果未指定，您必須符合您註冊預設為合約資源版本。</span><span class="sxs-lookup"><span data-stu-id="7fc92-133">If not specified, you must conform to the contract resource version you registered as default.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-134">資源標籤。</span><span class="sxs-lookup"><span data-stu-id="7fc92-134">Label for the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: <span data-ttu-id="7fc92-135">內建排程器工作集合的設定。</span><span class="sxs-lookup"><span data-stu-id="7fc92-135">Intrinsic settings for the scheduler job collections.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: <span data-ttu-id="7fc92-136">資源的計劃。</span><span class="sxs-lookup"><span data-stu-id="7fc92-136">The plan of the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: <span data-ttu-id="7fc92-137">工作集合配額設定。</span><span class="sxs-lookup"><span data-stu-id="7fc92-137">Quota settings for the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-138">可以建立此工作集合中的作業數目上限。</span><span class="sxs-lookup"><span data-stu-id="7fc92-138">Maximum number of jobs that can be created in this job collection.</span></span> <span data-ttu-id="7fc92-139">最大值是依據計劃。</span><span class="sxs-lookup"><span data-stu-id="7fc92-139">Maximum value is dependent on the plan.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-140">工作集合中的所有作業的最大次數。</span><span class="sxs-lookup"><span data-stu-id="7fc92-140">Maximum number of occurrences for all jobs in the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: <span data-ttu-id="7fc92-141">定義可以指定此工作集合中的任何作業中的最大週期。</span><span class="sxs-lookup"><span data-stu-id="7fc92-141">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: <span data-ttu-id="7fc92-142">定義可以指定此工作集合中的任何作業中的最大週期。</span><span class="sxs-lookup"><span data-stu-id="7fc92-142">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-143">定義的間隔。</span><span class="sxs-lookup"><span data-stu-id="7fc92-143">Defines the interval.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="7fc92-144">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="7fc92-144">The response stream.</span></span>
+    content: function beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  summary: >-
+    <span data-ttu-id="7fc92-145">判斷是否可用於 JobCollection 名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-145">Determine if the JobCollection name is available to be used.</span></span>
+
+    <span data-ttu-id="7fc92-146">JobCollection 名稱必須是雲端服務內唯一的。</span><span class="sxs-lookup"><span data-stu-id="7fc92-146">JobCollection names must be unique within a cloud-service.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-147">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-147">The name of the cloud service.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-148">JobCollection 名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-148">A name for the JobCollection.</span></span> <span data-ttu-id="7fc92-149">名稱必須是範圍內的 CloudService，唯一的。</span><span class="sxs-lookup"><span data-stu-id="7fc92-149">The name must be unique as scoped within the CloudService.</span></span>  <span data-ttu-id="7fc92-150">名稱可以是長度最多 100 個字元。</span><span class="sxs-lookup"><span data-stu-id="7fc92-150">The name can be up to 100 characters in length.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="7fc92-151">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="7fc92-151">The response stream.</span></span>
+    content: function checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: create(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: <span data-ttu-id="7fc92-152">建立工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-152">Create a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.create(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-153">包含工作集合之雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-153">The name of the cloud service containing the job collection.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-154">若要建立的工作集合名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-154">The name of the job collection to create.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionCreateParameters
+      description: <span data-ttu-id="7fc92-155">建立工作集合作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="7fc92-155">Parameters supplied to the Create Job Collection operation.</span></span>
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-156">內建屬性，為您的資源版本。</span><span class="sxs-lookup"><span data-stu-id="7fc92-156">The version of the Intrinsic Properties for your Resource.</span></span> <span data-ttu-id="7fc92-157">如果未指定，您必須符合您註冊預設為合約資源版本。</span><span class="sxs-lookup"><span data-stu-id="7fc92-157">If not specified, you must conform to the contract resource version you registered as default.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-158">資源標籤。</span><span class="sxs-lookup"><span data-stu-id="7fc92-158">Label for the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: <span data-ttu-id="7fc92-159">內建排程器工作集合的設定。</span><span class="sxs-lookup"><span data-stu-id="7fc92-159">Intrinsic settings for the scheduler job collections.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: <span data-ttu-id="7fc92-160">資源的計劃。</span><span class="sxs-lookup"><span data-stu-id="7fc92-160">The plan of the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: <span data-ttu-id="7fc92-161">工作集合配額設定。</span><span class="sxs-lookup"><span data-stu-id="7fc92-161">Quota settings for the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-162">可以建立此工作集合中的作業數目上限。</span><span class="sxs-lookup"><span data-stu-id="7fc92-162">Maximum number of jobs that can be created in this job collection.</span></span> <span data-ttu-id="7fc92-163">最大值是依據計劃。</span><span class="sxs-lookup"><span data-stu-id="7fc92-163">Maximum value is dependent on the plan.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-164">工作集合中的所有作業的最大次數。</span><span class="sxs-lookup"><span data-stu-id="7fc92-164">Maximum number of occurrences for all jobs in the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: <span data-ttu-id="7fc92-165">定義可以指定此工作集合中的任何作業中的最大週期。</span><span class="sxs-lookup"><span data-stu-id="7fc92-165">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: <span data-ttu-id="7fc92-166">定義可以指定此工作集合中的任何作業中的最大週期。</span><span class="sxs-lookup"><span data-stu-id="7fc92-166">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-167">定義的間隔。</span><span class="sxs-lookup"><span data-stu-id="7fc92-167">Defines the interval.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="7fc92-168">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="7fc92-168">The response stream.</span></span>
+    content: function create(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: deleteMethod(cloudServiceName, jobCollectionName, callback)
+  summary: <span data-ttu-id="7fc92-169">刪除工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-169">Deletes a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.deleteMethod(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-170">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-170">The name of the cloud service.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-171">若要刪除的工作集合名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-171">The name of the job collection to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="7fc92-172">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="7fc92-172">The response stream.</span></span>
+    content: function deleteMethod(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: get(cloudServiceName, jobCollectionName, callback)
+  summary: <span data-ttu-id="7fc92-173">擷取工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-173">Retreive a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.get(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-174">雲端服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-174">Name of the cloud service.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-175">工作集合名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-175">Name of the job collection.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="7fc92-176">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="7fc92-176">The response stream.</span></span>
+    content: function get(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: update(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: <span data-ttu-id="7fc92-177">更新工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-177">Update a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.update(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-178">包含工作集合之雲端服務名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-178">The name of the cloud service containing the job collection.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-179">若要更新的工作集合名稱。</span><span class="sxs-lookup"><span data-stu-id="7fc92-179">The name of the job collection to update.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionUpdateParameters
+      description: <span data-ttu-id="7fc92-180">更新工作集合作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="7fc92-180">Parameters supplied to the Update Job Collection operation.</span></span>
+    - id: parameters.eTag
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="7fc92-181">要更新的 ETag 的工作集合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-181">The ETag of the job collection to update.</span></span>
+
+        <span data-ttu-id="7fc92-182">更新將會失敗的 ifthe ETag 不符合。</span><span class="sxs-lookup"><span data-stu-id="7fc92-182">The update will fail ifthe ETag doesn't match.</span></span>
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-183">內建屬性，為您的資源版本。</span><span class="sxs-lookup"><span data-stu-id="7fc92-183">The version of the Intrinsic Properties for your Resource.</span></span> <span data-ttu-id="7fc92-184">如果未指定，您必須符合您註冊預設為合約資源版本。</span><span class="sxs-lookup"><span data-stu-id="7fc92-184">If not specified, you must conform to the contract resource version you registered as default.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="7fc92-185">資源標籤。</span><span class="sxs-lookup"><span data-stu-id="7fc92-185">Label for the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: <span data-ttu-id="7fc92-186">內建排程器工作集合的設定。</span><span class="sxs-lookup"><span data-stu-id="7fc92-186">Intrinsic settings for the scheduler job collections.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: <span data-ttu-id="7fc92-187">資源的計劃。</span><span class="sxs-lookup"><span data-stu-id="7fc92-187">The plan of the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: <span data-ttu-id="7fc92-188">工作集合配額設定。</span><span class="sxs-lookup"><span data-stu-id="7fc92-188">Quota settings for the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-189">可以建立此工作集合中的作業數目上限。</span><span class="sxs-lookup"><span data-stu-id="7fc92-189">Maximum number of jobs that can be created in this job collection.</span></span> <span data-ttu-id="7fc92-190">最大值是依據計劃。</span><span class="sxs-lookup"><span data-stu-id="7fc92-190">Maximum value is dependent on the plan.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-191">工作集合中的所有作業的最大次數。</span><span class="sxs-lookup"><span data-stu-id="7fc92-191">Maximum number of occurrences for all jobs in the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: <span data-ttu-id="7fc92-192">定義可以指定此工作集合中的任何作業中的最大週期。</span><span class="sxs-lookup"><span data-stu-id="7fc92-192">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: <span data-ttu-id="7fc92-193">定義可以指定此工作集合中的任何作業中的最大週期。</span><span class="sxs-lookup"><span data-stu-id="7fc92-193">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="7fc92-194">定義的間隔。</span><span class="sxs-lookup"><span data-stu-id="7fc92-194">Defines the interval.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="7fc92-195">回應資料流。</span><span class="sxs-lookup"><span data-stu-id="7fc92-195">The response stream.</span></span>
+    content: function update(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
