@@ -1,0 +1,297 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b1b639bf4cfb4408fcf6bcf53c7cc5cf81a00250
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40051819"
+items:
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations
+  summary: >-
+    用於管理虛擬主機方案，您的訂用帳戶下的作業。
+
+    __附註__： 此類別的執行個體自動建立之執行個體的 [WebSiteManagementClient] {@link WebSiteManagementClient ~ WebSiteManagementClient}。
+
+    請參閱 [webHostingPlans] {@link WebSiteManagementClient ~ WebSiteManagementClient #webHostingPlans}。
+
+    初始化 WebHostingPlanOperations 類別的新執行個體。
+  fullName: azure-asm-website.WebHostingPlanOperations
+  type: Class
+  children:
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  langs:
+  - js
+- id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations(client)
+  fullName: azure-asm-website.WebHostingPlanOperations.WebHostingPlanOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedWebSiteManagementClient
+      description: 服務用戶端的參考。
+    content: new WebHostingPlanOperations(client)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: create(webSpaceName, parameters, callback)
+  summary: 建立新 Web 主控方案。  (請參閱http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/如需詳細資訊)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.create(webSpaceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: 網路空間的名稱。
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanCreateParameters
+      description: Web 裝載方案的參數。
+    - id: parameters.name
+      type:
+      - string
+      description: 虛擬主機方案的名稱。
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: 要求的背景工作角色數目。
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: 虛擬主機方案的 SKU。
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        背景工作角色大小。
+
+        可能的值為小型、 中型和大型。 For JSON，對等項目都是 0 = 小型、 1 = 中、 2 = 大型。
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: 管理網站。 管理員網站用來部署網站擴充功能或方案中的所有站台共用的內容。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 回應資料流。
+    content: function create(webSpaceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: deleteMethod(webSpaceName, webHostingPlanName, callback)
+  summary: 刪除 Web 主控方案 (請參閱http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/如需詳細資訊)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.deleteMethod(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: 網路空間的名稱。
+    - id: webHostingPlanName
+      type:
+      - string
+      description: 虛擬主機方案的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 回應資料流。
+    content: function deleteMethod(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: get(webSpaceName, webHostingPlanName, callback)
+  summary: 取得現有 Web 裝載方案的詳細資料 (請參閱http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/如需詳細資訊)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.get(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: 網路空間的名稱。
+    - id: webHostingPlanName
+      type:
+      - string
+      description: 虛擬主機方案的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 回應資料流。
+    content: function get(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: 您可以透過發出 HTTP GET 要求來擷取站台的歷史使用量計量。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx如需詳細資訊)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: 網路空間的名稱。
+    - id: webHostingPlanName
+      type:
+      - string
+      description: 虛擬主機方案的名稱。
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanGetHistoricalUsageMetricsParameters
+      description: 若要取得歷程記錄使用量度量 Web 主控方案作業提供的參數。
+    - id: parameters.metricNames
+      type:
+      - array
+      description: 指定要傳回的度量名稱的逗號分隔清單。 如果未指定名稱參數，則會傳回所有可用的度量。
+      optional: true
+    - id: parameters.startTime
+      type:
+      - date
+      description: 傳回度量開始時間。 如果未指定此參數，則會使用目前的小時開頭。
+      optional: true
+    - id: parameters.endTime
+      type:
+      - date
+      description: 傳回度量的結束時間。 如果未指定此參數，則會使用目前的時間。
+      optional: true
+    - id: parameters.timeGrain
+      type:
+      - string
+      description: 度量都會傳回的資料粒度。 支援的值是 PT1M （分鐘），PT1H （小時），P1D （天）。
+      optional: true
+    - id: parameters.includeInstanceBreakdown
+      type:
+      - boolean
+      description: >-
+        旗標，指定是否應該包含每個機器執行個體的度量。
+
+        在多部電腦上執行的網站這可能是適用於識別不正確的電腦。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 回應資料流。
+    content: function getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: list(webSpaceName, callback)
+  summary: 您可以藉由發出 GET 要求來列出目前訂用帳戶下的 web 空間。  (請參閱http://msdn.microsoft.com/en-us/library/windowsazure/dn166961.aspx如需詳細資訊)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.list(webSpaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: 網路空間的名稱。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 回應資料流。
+    content: function list(webSpaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: update(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: 更新現有虛擬主機方案。  (請參閱http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/如需詳細資訊)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.update(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: 網路空間的名稱。
+    - id: webHostingPlanName
+      type:
+      - string
+      description: 虛擬主機方案的名稱。
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanUpdateParameters
+      description: 提供給 Web 裝載方案的更新作業的參數。
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: 要求的背景工作角色數目。
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: 虛擬主機方案的 SKU。
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        背景工作角色大小。
+
+        可能的值為小型、 中型和大型。 For JSON，對等項目都是 0 = 小型、 1 = 中、 2 = 大型。
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: 管理網站。 管理員網站用來部署網站擴充功能或方案中的所有站台共用的內容。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 回應資料流。
+    content: function update(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js

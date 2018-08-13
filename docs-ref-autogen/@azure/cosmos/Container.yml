@@ -1,0 +1,371 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8d085c8c928b40486992ef118d6155a39853015e
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40052289"
+items:
+- uid: '@azure/cosmos.Container'
+  name: Container
+  fullName: Container
+  children:
+  - '@azure/cosmos.Container.conflict'
+  - '@azure/cosmos.Container.database'
+  - '@azure/cosmos.Container.delete'
+  - '@azure/cosmos.Container.id'
+  - '@azure/cosmos.Container.item'
+  - '@azure/cosmos.Container.items'
+  - '@azure/cosmos.Container.read'
+  - '@azure/cosmos.Container.replace'
+  - '@azure/cosmos.Container.storedProcedure'
+  - '@azure/cosmos.Container.storedProcedures'
+  - '@azure/cosmos.Container.trigger'
+  - '@azure/cosmos.Container.triggers'
+  - '@azure/cosmos.Container.url'
+  - '@azure/cosmos.Container.userDefinedFunction'
+  - '@azure/cosmos.Container.userDefinedFunctions'
+  langs:
+  - typeScript
+  type: class
+  summary: 讀取、 取代或依識別碼刪除特定的現有容器的作業。
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.conflict'
+  name: conflict
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 用來讀取、 取代或刪除特定的現有<xref:Conflict>依識別碼。使用`.conflicts`來建立新的衝突，或查詢/讀取所有的衝突。
+  syntax:
+    content: 'function conflict(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        識別碼<xref:Conflict>。
+    return:
+      type:
+      - '@azure/cosmos.Conflict'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.database'
+  name: database
+  fullName: database
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'database: Database'
+    return:
+      type:
+      - '@azure/cosmos.Database'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.delete'
+  name: delete
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 刪除容器
+  syntax:
+    content: 'function delete(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.id'
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.item'
+  name: item
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    用來讀取、 取代或刪除特定的現有<xref:Item>依識別碼。使用`.items`建立新的項目，或查詢/讀取所有項目。
+  syntax:
+    content: 'function item(id: string, partitionKey?: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: 識別碼<xref:Item>。
+    - id: partitionKey
+      type:
+      - string
+      description: 資料分割索引鍵<xref:Item>。 （所需資料分割的容器）。
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.Item'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.items'
+  name: items
+  fullName: items
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    建立新的項目，以及讀取/查詢的讀取、 取代或刪除現有的項目，所有項目作業使用`.item(id)`。
+  syntax:
+    content: 'items: Items'
+    return:
+      type:
+      - '@azure/cosmos.Items'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.read'
+  name: read
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 讀取容器的定義
+  syntax:
+    content: 'function read(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.replace'
+  name: replace
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取代容器的定義
+  syntax:
+    content: 'function replace(body: ContainerDefinition, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - '@azure/cosmos.ContainerDefinition'
+      description: ''
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.storedProcedure'
+  name: storedProcedure
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 用來讀取、 取代或刪除特定的現有<xref:StoredProcedure>依識別碼。使用`.storedProcedures`來建立新的預存程序，或查詢/讀取所有預存程序。
+  syntax:
+    content: 'function storedProcedure(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        識別碼<xref:StoredProcedure>。
+    return:
+      type:
+      - '@azure/cosmos.StoredProcedure'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.storedProcedures'
+  name: storedProcedures
+  fullName: storedProcedures
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    建立新的預存程序，並讀取/查詢所有預存程序的作業。
+
+    讀取、 取代或刪除現有的預存程序，使用`.storedProcedure(id)`。
+  syntax:
+    content: 'storedProcedures: StoredProcedures'
+    return:
+      type:
+      - '@azure/cosmos.StoredProcedures'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.trigger'
+  name: trigger
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 用來讀取、 取代或刪除特定的現有<xref:Trigger>依識別碼。使用`.triggers`建立新的觸發程序，或查詢/讀取所有觸發程序。
+  syntax:
+    content: 'function trigger(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        識別碼<xref:Trigger>。
+    return:
+      type:
+      - '@azure/cosmos.Trigger'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.triggers'
+  name: triggers
+  fullName: triggers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    建立新的觸發程序，並讀取/查詢所有觸發程序的作業。
+
+    讀取、 取代或刪除現有的觸發程序，使用`.trigger(id)`。
+  syntax:
+    content: 'triggers: Triggers'
+    return:
+      type:
+      - '@azure/cosmos.Triggers'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.url'
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 傳回資源的參考 URL。 用於連結中的權限。
+  syntax:
+    content: 'url: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.userDefinedFunction'
+  name: userDefinedFunction
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 用來讀取、 取代或刪除特定的現有<xref:UserDefinedFunction>依識別碼。使用`.userDefinedFunctions`建立新的使用者定義函式，或查詢/讀取所有使用者定義函式。
+  syntax:
+    content: 'function userDefinedFunction(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        識別碼<xref:UserDefinedFunction>。
+    return:
+      type:
+      - '@azure/cosmos.UserDefinedFunction'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.userDefinedFunctions'
+  name: userDefinedFunctions
+  fullName: userDefinedFunctions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    作業建立新的使用者定義函式，並讀取/查詢所有使用者定義函數。
+
+    讀取、 取代或刪除現有的使用者定義函式，使用`.userDefinedFunction(id)`。
+  syntax:
+    content: 'userDefinedFunctions: UserDefinedFunctions'
+    return:
+      type:
+      - '@azure/cosmos.UserDefinedFunctions'
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.Database'
+  spec.typeScript:
+  - name: Database
+    fullName: Database
+    uid: '@azure/cosmos.Database'
+- uid: '@azure/cosmos.Items'
+  spec.typeScript:
+  - name: Items
+    fullName: Items
+    uid: '@azure/cosmos.Items'
+- uid: '@azure/cosmos.StoredProcedures'
+  spec.typeScript:
+  - name: StoredProcedures
+    fullName: StoredProcedures
+    uid: '@azure/cosmos.StoredProcedures'
+- uid: '@azure/cosmos.Triggers'
+  spec.typeScript:
+  - name: Triggers
+    fullName: Triggers
+    uid: '@azure/cosmos.Triggers'
+- uid: '@azure/cosmos.UserDefinedFunctions'
+  spec.typeScript:
+  - name: UserDefinedFunctions
+    fullName: UserDefinedFunctions
+    uid: '@azure/cosmos.UserDefinedFunctions'
+- uid: '@azure/cosmos.Conflict'
+  spec.typeScript:
+  - name: Conflict
+    fullName: Conflict
+    uid: '@azure/cosmos.Conflict'
+- uid: '@azure/cosmos.RequestOptions'
+  spec.typeScript:
+  - name: RequestOptions
+    fullName: RequestOptions
+    uid: '@azure/cosmos.RequestOptions'
+- uid: Promise<@azure/cosmos.ContainerResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ContainerResponse
+    fullName: ContainerResponse
+    uid: '@azure/cosmos.ContainerResponse'
+  - name: '>'
+    fullName: '>'
+- uid: '@azure/cosmos.Item'
+  spec.typeScript:
+  - name: Item
+    fullName: Item
+    uid: '@azure/cosmos.Item'
+- uid: '@azure/cosmos.ContainerDefinition'
+  spec.typeScript:
+  - name: ContainerDefinition
+    fullName: ContainerDefinition
+    uid: '@azure/cosmos.ContainerDefinition'
+- uid: '@azure/cosmos.StoredProcedure'
+  spec.typeScript:
+  - name: StoredProcedure
+    fullName: StoredProcedure
+    uid: '@azure/cosmos.StoredProcedure'
+- uid: '@azure/cosmos.Trigger'
+  spec.typeScript:
+  - name: Trigger
+    fullName: Trigger
+    uid: '@azure/cosmos.Trigger'
+- uid: '@azure/cosmos.UserDefinedFunction'
+  spec.typeScript:
+  - name: UserDefinedFunction
+    fullName: UserDefinedFunction
+    uid: '@azure/cosmos.UserDefinedFunction'

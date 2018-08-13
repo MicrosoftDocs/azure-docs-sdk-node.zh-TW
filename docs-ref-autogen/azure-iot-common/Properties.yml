@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 02f61767eab762b53800eaceddcb62cd1b0fdaee
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40051895"
+items:
+- uid: azure-iot-common.Properties
+  name: Properties
+  fullName: Properties
+  children:
+  - azure-iot-common.Properties.add
+  - azure-iot-common.Properties.count
+  - azure-iot-common.Properties.getItem
+  - azure-iot-common.Properties.getValue
+  - azure-iot-common.Properties.propertyList
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    集合的使用者定義的屬性<xref:azure-iot-common.Message>物件，要與訊息本文一起傳送，並可用於[路由](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-process-d2c)。
+
+    值只能是字串。
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.add
+  name: add
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 將索引鍵 / 值組加入至集合。 字串`'Authorization'`並`'iothub-to'`會被視為保留索引鍵的名稱，且會導致此函數傳回`false`如果會使用這些金鑰的名稱。
+  syntax:
+    content: 'function add(itemKey: string, itemValue: string)'
+    parameters:
+    - id: itemKey
+      type:
+      - string
+      description: ''
+    - id: itemValue
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - boolean
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.count
+  name: count
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 傳回集合中的項目數目。
+  syntax:
+    content: function count()
+    parameters: []
+    return:
+      type:
+      - number
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.getItem
+  name: getItem
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 傳回與指定索引相對應的索引鍵 / 值組。
+  syntax:
+    content: 'function getItem(index: number)'
+    parameters:
+    - id: index
+      type:
+      - number
+      description: ''
+    return:
+      type:
+      - function
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.getValue
+  name: getValue
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 傳回具有指定索引鍵的元素的 value 屬性。
+  syntax:
+    content: 'function getValue(key: string)'
+    parameters:
+    - id: key
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - any
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.propertyList
+  name: propertyList
+  fullName: propertyList
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    陣列，其中包含儲存為索引鍵/值組的屬性
+
+    ```json
+
+    [
+      { key: 'prop1', value: 'value1' },
+      { key: 'prop2', value: 'value2' }
+    ]
+
+    ```
+  syntax:
+    content: 'propertyList: any[]'
+    return:
+      type:
+      - any[]
+  package: azure-iot-common
