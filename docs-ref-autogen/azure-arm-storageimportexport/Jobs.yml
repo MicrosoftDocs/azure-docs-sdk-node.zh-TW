@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f3536bd47d2ed09b6411c796c29449a7d7e491c0
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: bdd6c56e59d8dfe17de1ddc664d777b890561e57
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40053865"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41693265"
 items:
 - uid: azure-arm-storageimportexport.Jobs
   name: Jobs
@@ -63,7 +63,7 @@ items:
   - typeScript
   summary: 建立新的匯入/匯出工作，或更新指定的訂用帳戶中現有的匯入/匯出作業。
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, jobName: string, jobProperties: Job, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, jobName: string, jobProperties: Job, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -82,7 +82,7 @@ items:
         必須在建立期間指定的匯入/匯出作業的屬性。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -127,7 +127,7 @@ items:
   - typeScript
   summary: 建立新的匯入/匯出工作，或更新指定的訂用帳戶中現有的匯入/匯出作業。
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, jobName: string, jobProperties: Job, options: function, callback: ServiceCallback<Job>)'
+    content: 'function createOrUpdate(resourceGroupName: string, jobName: string, jobProperties: Job, options: Object, callback: ServiceCallback<Job>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -143,7 +143,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -161,7 +161,7 @@ items:
   - typeScript
   summary: 建立新的匯入/匯出工作，或更新指定的訂用帳戶中現有的匯入/匯出作業。
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, jobName: string, jobProperties: Job, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, jobName: string, jobProperties: Job, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -180,7 +180,7 @@ items:
         必須在建立期間指定的匯入/匯出作業的屬性。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -195,7 +195,7 @@ items:
   - typeScript
   summary: 刪除現有的匯入/匯出工作。 只匯入/匯出作業中建立，或是可以刪除已完成狀態。
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, jobName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, jobName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -209,7 +209,7 @@ items:
         匯入/匯出作業的名稱。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -224,7 +224,7 @@ items:
   - typeScript
   summary: 刪除現有的匯入/匯出工作。 只匯入/匯出作業中建立，或是可以刪除已完成狀態。
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, jobName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, jobName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -236,7 +236,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -280,7 +280,7 @@ items:
   - typeScript
   summary: 刪除現有的匯入/匯出工作。 只匯入/匯出作業中建立，或是可以刪除已完成狀態。
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, jobName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, jobName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -294,7 +294,7 @@ items:
         匯入/匯出作業的名稱。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -335,7 +335,7 @@ items:
   - typeScript
   summary: 取得現有的匯入/匯出作業的相關資訊。
   syntax:
-    content: 'function get(resourceGroupName: string, jobName: string, options: function, callback: ServiceCallback<Job>)'
+    content: 'function get(resourceGroupName: string, jobName: string, options: Object, callback: ServiceCallback<Job>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -347,7 +347,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -365,7 +365,7 @@ items:
   - typeScript
   summary: 取得現有的匯入/匯出作業的相關資訊。
   syntax:
-    content: 'function get(resourceGroupName: string, jobName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, jobName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -379,7 +379,7 @@ items:
         匯入/匯出作業的名稱。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -394,7 +394,7 @@ items:
   - typeScript
   summary: 取得現有的匯入/匯出作業的相關資訊。
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, jobName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, jobName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -408,7 +408,7 @@ items:
         匯入/匯出作業的名稱。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -441,11 +441,11 @@ items:
   - typeScript
   summary: 取得訂用帳戶中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function list(options: function, callback: ServiceCallback<JobListResult>)'
+    content: 'function list(options: Object, callback: ServiceCallback<JobListResult>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -463,11 +463,11 @@ items:
   - typeScript
   summary: 取得訂用帳戶中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function list(options?: function)'
+    content: 'function list(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -482,7 +482,7 @@ items:
   - typeScript
   summary: 列出指定的匯入/匯出作業中的所有磁碟機的 BitLocker 金鑰。
   syntax:
-    content: 'function listBitLockerKeys(resourceGroupName: string, jobName: string, options?: function)'
+    content: 'function listBitLockerKeys(resourceGroupName: string, jobName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -496,7 +496,7 @@ items:
         匯入/匯出作業的名稱。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -537,7 +537,7 @@ items:
   - typeScript
   summary: 列出指定的匯入/匯出作業中的所有磁碟機的 BitLocker 金鑰。
   syntax:
-    content: 'function listBitLockerKeys(resourceGroupName: string, jobName: string, options: function, callback: ServiceCallback<BitLockerKeysListResult>)'
+    content: 'function listBitLockerKeys(resourceGroupName: string, jobName: string, options: Object, callback: ServiceCallback<BitLockerKeysListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -549,7 +549,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -567,7 +567,7 @@ items:
   - typeScript
   summary: 列出指定的匯入/匯出作業中的所有磁碟機的 BitLocker 金鑰。
   syntax:
-    content: 'function listBitLockerKeysWithHttpOperationResponse(resourceGroupName: string, jobName: string, options?: function)'
+    content: 'function listBitLockerKeysWithHttpOperationResponse(resourceGroupName: string, jobName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -581,7 +581,7 @@ items:
         匯入/匯出作業的名稱。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -596,7 +596,7 @@ items:
   - typeScript
   summary: 傳回資源群組中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -605,7 +605,7 @@ items:
         資源群組名稱可唯一識別使用者的訂用帳戶內的資源群組。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -642,7 +642,7 @@ items:
   - typeScript
   summary: 傳回資源群組中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<JobListResult>)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<JobListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -650,7 +650,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -668,7 +668,7 @@ items:
   - typeScript
   summary: 傳回資源群組中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -677,7 +677,7 @@ items:
         從清單作業前一次成功呼叫 NextLink。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -692,7 +692,7 @@ items:
   - typeScript
   summary: 傳回資源群組中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options: function, callback: ServiceCallback<JobListResult>)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<JobListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -700,7 +700,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -740,7 +740,7 @@ items:
   - typeScript
   summary: 傳回資源群組中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -749,7 +749,7 @@ items:
         從清單作業前一次成功呼叫 NextLink。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -764,7 +764,7 @@ items:
   - typeScript
   summary: 傳回資源群組中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -773,7 +773,7 @@ items:
         資源群組名稱可唯一識別使用者的訂用帳戶內的資源群組。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -788,7 +788,7 @@ items:
   - typeScript
   summary: 取得訂用帳戶中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -797,7 +797,7 @@ items:
         從清單作業前一次成功呼叫 NextLink。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -834,7 +834,7 @@ items:
   - typeScript
   summary: 取得訂用帳戶中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<JobListResult>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<JobListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -842,7 +842,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -860,7 +860,7 @@ items:
   - typeScript
   summary: 取得訂用帳戶中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -869,7 +869,7 @@ items:
         從清單作業前一次成功呼叫 NextLink。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -884,11 +884,11 @@ items:
   - typeScript
   summary: 取得訂用帳戶中的所有作用中和已完成匯入/匯出作業。
   syntax:
-    content: 'function listWithHttpOperationResponse(options?: function)'
+    content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -903,7 +903,7 @@ items:
   - typeScript
   summary: 將指定的匯入/匯出作業從資源群組移到目標資源群組。 目標資源群組可能是不同的訂用帳戶中。
   syntax:
-    content: 'function move(resourceGroupName: string, moveJobsParameters: MoveJobParameters, options?: function)'
+    content: 'function move(resourceGroupName: string, moveJobsParameters: MoveJobParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -917,7 +917,7 @@ items:
         若要將作業移到另一個資源群組提供的參數。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -958,7 +958,7 @@ items:
   - typeScript
   summary: 將指定的匯入/匯出作業從資源群組移到目標資源群組。 目標資源群組可能是不同的訂用帳戶中。
   syntax:
-    content: 'function move(resourceGroupName: string, moveJobsParameters: MoveJobParameters, options: function, callback: ServiceCallback<void>)'
+    content: 'function move(resourceGroupName: string, moveJobsParameters: MoveJobParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -970,7 +970,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -988,7 +988,7 @@ items:
   - typeScript
   summary: 將指定的匯入/匯出作業從資源群組移到目標資源群組。 目標資源群組可能是不同的訂用帳戶中。
   syntax:
-    content: 'function moveWithHttpOperationResponse(resourceGroupName: string, moveJobsParameters: MoveJobParameters, options?: function)'
+    content: 'function moveWithHttpOperationResponse(resourceGroupName: string, moveJobsParameters: MoveJobParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1002,7 +1002,7 @@ items:
         若要將作業移到另一個資源群組提供的參數。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1017,7 +1017,7 @@ items:
   - typeScript
   summary: 更新匯入/匯出作業的特定的屬性。 您可以呼叫這項作業以通知匯入/匯出服務，包含匯入或匯出工作的硬碟機都寄給 Microsoft 資料中心。 它也可以用來取消現有的工作。
   syntax:
-    content: 'function update(resourceGroupName: string, jobName: string, jobProperties: MutableJob, options?: function)'
+    content: 'function update(resourceGroupName: string, jobName: string, jobProperties: MutableJob, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1036,7 +1036,7 @@ items:
         匯入/匯出作業需要更新的屬性。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1081,7 +1081,7 @@ items:
   - typeScript
   summary: 更新匯入/匯出作業的特定的屬性。 您可以呼叫這項作業以通知匯入/匯出服務，包含匯入或匯出工作的硬碟機都寄給 Microsoft 資料中心。 它也可以用來取消現有的工作。
   syntax:
-    content: 'function update(resourceGroupName: string, jobName: string, jobProperties: MutableJob, options: function, callback: ServiceCallback<Job>)'
+    content: 'function update(resourceGroupName: string, jobName: string, jobProperties: MutableJob, options: Object, callback: ServiceCallback<Job>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1097,7 +1097,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1115,7 +1115,7 @@ items:
   - typeScript
   summary: 更新匯入/匯出作業的特定的屬性。 您可以呼叫這項作業以通知匯入/匯出服務，包含匯入或匯出工作的硬碟機都寄給 Microsoft 資料中心。 它也可以用來取消現有的工作。
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, jobName: string, jobProperties: MutableJob, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, jobName: string, jobProperties: MutableJob, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1134,7 +1134,7 @@ items:
         匯入/匯出作業需要更新的屬性。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 63eeab03296103462e40e417d41f306e83682d4b
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 8c9d28993a037c3ef99b5db89d9a143beb3252f7
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40052860"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41694227"
 items:
 - uid: azure-arm-cosmosdb.CollectionRegion
   name: CollectionRegion
@@ -27,7 +27,7 @@ items:
   - typeScript
   summary: 擷取的度量取決於指定的篩選條件，指定的資料庫帳戶、 集合和區域。
   syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: function)'
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -61,7 +61,7 @@ items:
         OData 篩選運算式，用來描述要傳回的度量資訊的子集。 可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。 支援的運算子是相等於
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -118,7 +118,7 @@ items:
   - typeScript
   summary: 擷取的度量取決於指定的篩選條件，指定的資料庫帳戶、 集合和區域。
   syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options: function, callback: ServiceCallback<MetricListResult>)'
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options: Object, callback: ServiceCallback<MetricListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -146,7 +146,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -164,7 +164,7 @@ items:
   - typeScript
   summary: 擷取的度量取決於指定的篩選條件，指定的資料庫帳戶、 集合和區域。
   syntax:
-    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: function)'
+    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -198,7 +198,7 @@ items:
         OData 篩選運算式，用來描述要傳回的度量資訊的子集。 可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。 支援的運算子是相等於
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
