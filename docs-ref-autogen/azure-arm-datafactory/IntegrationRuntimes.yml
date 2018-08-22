@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 11653afe9c8c4a422ac1494551bebf01c8cbe3f9
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 2aa2f985e3acb65c13b9498c33083859100ddf81
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40054289"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41702366"
 items:
 - uid: azure-arm-datafactory.IntegrationRuntimes
   name: IntegrationRuntimes
@@ -58,10 +58,10 @@ items:
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKey_2
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKey
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKeyWithHttpOperationResponse
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode_2
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode_1
-  - azure-arm-datafactory.IntegrationRuntimes.removeNodeWithHttpOperationResponse
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks_2
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks_1
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinksWithHttpOperationResponse
   - azure-arm-datafactory.IntegrationRuntimes.start
   - azure-arm-datafactory.IntegrationRuntimes.start_1
   - azure-arm-datafactory.IntegrationRuntimes.start_2
@@ -93,28 +93,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-101">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-101">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-101">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-101">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-102">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-102">The resource group name.</span></span>
+        <span data-ttu-id="ca972-102">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-102">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-103">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-103">The factory name.</span></span>
+        <span data-ttu-id="ca972-103">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-103">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-104">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-104">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-104">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-104">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -127,7 +127,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-105">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-105">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-105">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-105">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
     content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
@@ -157,9 +157,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-106">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-106">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-106">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-106">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -175,7 +175,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -191,28 +191,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-107">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-107">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-107">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-107">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStartWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStartWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-108">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-108">The resource group name.</span></span>
+        <span data-ttu-id="ca972-108">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-108">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-109">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-109">The factory name.</span></span>
+        <span data-ttu-id="ca972-109">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-109">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-110">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-110">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-110">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-110">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -225,28 +225,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-111">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-111">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-111">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-111">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-112">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-112">The resource group name.</span></span>
+        <span data-ttu-id="ca972-112">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-112">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-113">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-113">The factory name.</span></span>
+        <span data-ttu-id="ca972-113">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-113">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-114">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-114">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-114">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-114">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -259,7 +259,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-115">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-115">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-115">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-115">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
     content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -289,9 +289,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-116">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-116">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-116">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-116">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -307,7 +307,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -323,28 +323,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-117">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-117">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-117">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-117">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-118">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-118">The resource group name.</span></span>
+        <span data-ttu-id="ca972-118">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-118">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-119">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-119">The factory name.</span></span>
+        <span data-ttu-id="ca972-119">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-119">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-120">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-120">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-120">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-120">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -357,7 +357,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-121">建立或更新整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-121">Creates or updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-121">建立或更新整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-121">Creates or updates an integration runtime.</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
@@ -391,33 +391,33 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-122">建立或更新整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-122">Creates or updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-122">建立或更新整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-122">Creates or updates an integration runtime.</span></span>
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-123">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-123">The resource group name.</span></span>
+        <span data-ttu-id="ca972-123">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-123">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-124">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-124">The factory name.</span></span>
+        <span data-ttu-id="ca972-124">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-124">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-125">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-125">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-125">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-125">The integration runtime name.</span></span>
     - id: integrationRuntime
       type:
       - azure-arm-datafactory.IntegrationRuntimeResource
       description: >
-        <span data-ttu-id="b5f09-126">整合執行階段資源定義。</span><span class="sxs-lookup"><span data-stu-id="b5f09-126">Integration runtime resource definition.</span></span>
+        <span data-ttu-id="ca972-126">整合執行階段資源定義。</span><span class="sxs-lookup"><span data-stu-id="ca972-126">Integration runtime resource definition.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -430,9 +430,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-127">建立或更新整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-127">Creates or updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-127">建立或更新整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-127">Creates or updates an integration runtime.</span></span>
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options: function, callback: ServiceCallback<IntegrationRuntimeResource>)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -452,7 +452,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -468,33 +468,33 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-128">建立或更新整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-128">Creates or updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-128">建立或更新整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-128">Creates or updates an integration runtime.</span></span>
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-129">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-129">The resource group name.</span></span>
+        <span data-ttu-id="ca972-129">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-129">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-130">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-130">The factory name.</span></span>
+        <span data-ttu-id="ca972-130">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-130">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-131">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-131">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-131">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-131">The integration runtime name.</span></span>
     - id: integrationRuntime
       type:
       - azure-arm-datafactory.IntegrationRuntimeResource
       description: >
-        <span data-ttu-id="b5f09-132">整合執行階段資源定義。</span><span class="sxs-lookup"><span data-stu-id="b5f09-132">Integration runtime resource definition.</span></span>
+        <span data-ttu-id="ca972-132">整合執行階段資源定義。</span><span class="sxs-lookup"><span data-stu-id="ca972-132">Integration runtime resource definition.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -507,9 +507,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-133">刪除整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-133">Deletes an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-133">刪除整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-133">Deletes an integration runtime.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -525,7 +525,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -541,28 +541,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-134">刪除整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-134">Deletes an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-134">刪除整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-134">Deletes an integration runtime.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-135">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-135">The resource group name.</span></span>
+        <span data-ttu-id="ca972-135">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-135">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-136">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-136">The factory name.</span></span>
+        <span data-ttu-id="ca972-136">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-136">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-137">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-137">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-137">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-137">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -575,7 +575,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-138">刪除整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-138">Deletes an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-138">刪除整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-138">Deletes an integration runtime.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -605,28 +605,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-139">刪除整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-139">Deletes an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-139">刪除整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-139">Deletes an integration runtime.</span></span>
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-140">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-140">The resource group name.</span></span>
+        <span data-ttu-id="ca972-140">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-140">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-141">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-141">The factory name.</span></span>
+        <span data-ttu-id="ca972-141">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-141">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-142">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-142">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-142">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-142">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -639,7 +639,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-143">取得整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-143">Gets an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-143">取得整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-143">Gets an integration runtime.</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
@@ -669,9 +669,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-144">取得整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-144">Gets an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-144">取得整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-144">Gets an integration runtime.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeResource>)'
+    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -687,7 +687,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -703,28 +703,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-145">取得整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-145">Gets an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-145">取得整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-145">Gets an integration runtime.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-146">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-146">The resource group name.</span></span>
+        <span data-ttu-id="ca972-146">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-146">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-147">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-147">The factory name.</span></span>
+        <span data-ttu-id="ca972-147">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-147">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-148">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-148">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-148">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-148">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -737,28 +737,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-149">取得內部加密內部部署資料來源認證的整合執行階段連接資訊。</span><span class="sxs-lookup"><span data-stu-id="b5f09-149">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
+  summary: <span data-ttu-id="ca972-149">取得內部加密內部部署資料來源認證的整合執行階段連接資訊。</span><span class="sxs-lookup"><span data-stu-id="ca972-149">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
   syntax:
-    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-150">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-150">The resource group name.</span></span>
+        <span data-ttu-id="ca972-150">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-150">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-151">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-151">The factory name.</span></span>
+        <span data-ttu-id="ca972-151">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-151">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-152">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-152">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-152">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-152">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -771,9 +771,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-153">取得內部加密內部部署資料來源認證的整合執行階段連接資訊。</span><span class="sxs-lookup"><span data-stu-id="b5f09-153">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
+  summary: <span data-ttu-id="ca972-153">取得內部加密內部部署資料來源認證的整合執行階段連接資訊。</span><span class="sxs-lookup"><span data-stu-id="ca972-153">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
   syntax:
-    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeConnectionInfo>)'
+    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeConnectionInfo>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -789,7 +789,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -805,7 +805,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-154">取得內部加密內部部署資料來源認證的整合執行階段連接資訊。</span><span class="sxs-lookup"><span data-stu-id="b5f09-154">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
+  summary: <span data-ttu-id="ca972-154">取得內部加密內部部署資料來源認證的整合執行階段連接資訊。</span><span class="sxs-lookup"><span data-stu-id="ca972-154">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
   syntax:
     content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeConnectionInfo>)'
     parameters:
@@ -835,28 +835,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-155">取得內部加密內部部署資料來源認證的整合執行階段連接資訊。</span><span class="sxs-lookup"><span data-stu-id="b5f09-155">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
+  summary: <span data-ttu-id="ca972-155">取得內部加密內部部署資料來源認證的整合執行階段連接資訊。</span><span class="sxs-lookup"><span data-stu-id="ca972-155">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
   syntax:
-    content: 'function getConnectionInfoWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getConnectionInfoWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-156">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-156">The resource group name.</span></span>
+        <span data-ttu-id="ca972-156">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-156">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-157">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-157">The factory name.</span></span>
+        <span data-ttu-id="ca972-157">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-157">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-158">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-158">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-158">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-158">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -869,7 +869,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-159">取得整合執行階段監視資料，其中包含此整合執行階段下的所有節點的監視資料。</span><span class="sxs-lookup"><span data-stu-id="b5f09-159">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-159">取得整合執行階段監視資料，其中包含此整合執行階段下的所有節點的監視資料。</span><span class="sxs-lookup"><span data-stu-id="ca972-159">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
   syntax:
     content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeMonitoringData>)'
     parameters:
@@ -899,28 +899,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-160">取得整合執行階段監視資料，其中包含此整合執行階段下的所有節點的監視資料。</span><span class="sxs-lookup"><span data-stu-id="b5f09-160">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-160">取得整合執行階段監視資料，其中包含此整合執行階段下的所有節點的監視資料。</span><span class="sxs-lookup"><span data-stu-id="ca972-160">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
   syntax:
-    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-161">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-161">The resource group name.</span></span>
+        <span data-ttu-id="ca972-161">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-161">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-162">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-162">The factory name.</span></span>
+        <span data-ttu-id="ca972-162">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-162">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-163">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-163">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-163">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-163">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -933,9 +933,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-164">取得整合執行階段監視資料，其中包含此整合執行階段下的所有節點的監視資料。</span><span class="sxs-lookup"><span data-stu-id="b5f09-164">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-164">取得整合執行階段監視資料，其中包含此整合執行階段下的所有節點的監視資料。</span><span class="sxs-lookup"><span data-stu-id="ca972-164">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
   syntax:
-    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeMonitoringData>)'
+    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeMonitoringData>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -951,7 +951,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -967,28 +967,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-165">取得整合執行階段監視資料，其中包含此整合執行階段下的所有節點的監視資料。</span><span class="sxs-lookup"><span data-stu-id="b5f09-165">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-165">取得整合執行階段監視資料，其中包含此整合執行階段下的所有節點的監視資料。</span><span class="sxs-lookup"><span data-stu-id="ca972-165">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
   syntax:
-    content: 'function getMonitoringDataWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getMonitoringDataWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-166">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-166">The resource group name.</span></span>
+        <span data-ttu-id="ca972-166">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-166">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-167">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-167">The factory name.</span></span>
+        <span data-ttu-id="ca972-167">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-167">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-168">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-168">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-168">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-168">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1001,7 +1001,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-169">取得整合執行階段的詳細的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="b5f09-169">Gets detailed status information for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-169">取得整合執行階段的詳細的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="ca972-169">Gets detailed status information for an integration runtime.</span></span>
   syntax:
     content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
@@ -1031,9 +1031,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-170">取得整合執行階段的詳細的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="b5f09-170">Gets detailed status information for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-170">取得整合執行階段的詳細的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="ca972-170">Gets detailed status information for an integration runtime.</span></span>
   syntax:
-    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1049,7 +1049,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1065,28 +1065,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-171">取得整合執行階段的詳細的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="b5f09-171">Gets detailed status information for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-171">取得整合執行階段的詳細的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="ca972-171">Gets detailed status information for an integration runtime.</span></span>
   syntax:
-    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-172">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-172">The resource group name.</span></span>
+        <span data-ttu-id="ca972-172">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-172">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-173">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-173">The factory name.</span></span>
+        <span data-ttu-id="ca972-173">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-173">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-174">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-174">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-174">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-174">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1099,28 +1099,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-175">取得整合執行階段的詳細的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="b5f09-175">Gets detailed status information for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-175">取得整合執行階段的詳細的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="ca972-175">Gets detailed status information for an integration runtime.</span></span>
   syntax:
-    content: 'function getStatusWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getStatusWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-176">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-176">The resource group name.</span></span>
+        <span data-ttu-id="ca972-176">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-176">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-177">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-177">The factory name.</span></span>
+        <span data-ttu-id="ca972-177">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-177">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-178">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-178">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-178">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-178">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1133,28 +1133,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-179">取得整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-179">Gets an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-179">取得整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-179">Gets an integration runtime.</span></span>
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-180">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-180">The resource group name.</span></span>
+        <span data-ttu-id="ca972-180">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-180">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-181">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-181">The factory name.</span></span>
+        <span data-ttu-id="ca972-181">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-181">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-182">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-182">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-182">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-182">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1167,28 +1167,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-183">擷取整合執行階段的驗證金鑰。</span><span class="sxs-lookup"><span data-stu-id="b5f09-183">Retrieves the authentication keys for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-183">擷取整合執行階段的驗證金鑰。</span><span class="sxs-lookup"><span data-stu-id="ca972-183">Retrieves the authentication keys for an integration runtime.</span></span>
   syntax:
-    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-184">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-184">The resource group name.</span></span>
+        <span data-ttu-id="ca972-184">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-184">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-185">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-185">The factory name.</span></span>
+        <span data-ttu-id="ca972-185">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-185">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-186">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-186">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-186">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-186">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1201,7 +1201,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-187">擷取整合執行階段的驗證金鑰。</span><span class="sxs-lookup"><span data-stu-id="b5f09-187">Retrieves the authentication keys for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-187">擷取整合執行階段的驗證金鑰。</span><span class="sxs-lookup"><span data-stu-id="ca972-187">Retrieves the authentication keys for an integration runtime.</span></span>
   syntax:
     content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
@@ -1231,9 +1231,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-188">擷取整合執行階段的驗證金鑰。</span><span class="sxs-lookup"><span data-stu-id="b5f09-188">Retrieves the authentication keys for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-188">擷取整合執行階段的驗證金鑰。</span><span class="sxs-lookup"><span data-stu-id="ca972-188">Retrieves the authentication keys for an integration runtime.</span></span>
   syntax:
-    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
+    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1249,7 +1249,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1265,28 +1265,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-189">擷取整合執行階段的驗證金鑰。</span><span class="sxs-lookup"><span data-stu-id="b5f09-189">Retrieves the authentication keys for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-189">擷取整合執行階段的驗證金鑰。</span><span class="sxs-lookup"><span data-stu-id="ca972-189">Retrieves the authentication keys for an integration runtime.</span></span>
   syntax:
-    content: 'function listAuthKeysWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function listAuthKeysWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-190">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-190">The resource group name.</span></span>
+        <span data-ttu-id="ca972-190">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-190">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-191">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-191">The factory name.</span></span>
+        <span data-ttu-id="ca972-191">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-191">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-192">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-192">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-192">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-192">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1299,23 +1299,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-193">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-193">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="ca972-193">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-193">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-194">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-194">The resource group name.</span></span>
+        <span data-ttu-id="ca972-194">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-194">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-195">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-195">The factory name.</span></span>
+        <span data-ttu-id="ca972-195">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-195">The factory name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1328,7 +1328,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-196">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-196">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="ca972-196">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-196">Lists integration runtimes.</span></span>
   syntax:
     content: 'function listByFactory(resourceGroupName: string, factoryName: string, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
@@ -1354,9 +1354,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-197">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-197">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="ca972-197">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-197">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options: function, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
+    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1368,7 +1368,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1384,18 +1384,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-198">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-198">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="ca972-198">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-198">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactoryNext(nextPageLink: string, options?: function)'
+    content: 'function listByFactoryNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-199">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b5f09-199">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="ca972-199">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="ca972-199">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1408,7 +1408,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-200">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-200">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="ca972-200">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-200">Lists integration runtimes.</span></span>
   syntax:
     content: 'function listByFactoryNext(nextPageLink: string, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
@@ -1430,9 +1430,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-201">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-201">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="ca972-201">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-201">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactoryNext(nextPageLink: string, options: function, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
+    content: 'function listByFactoryNext(nextPageLink: string, options: Object, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
     - id: nextPageLink
       type:
@@ -1440,7 +1440,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1456,18 +1456,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-202">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-202">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="ca972-202">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-202">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactoryNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByFactoryNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-203">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b5f09-203">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="ca972-203">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="ca972-203">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1480,23 +1480,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-204">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-204">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="ca972-204">列出整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-204">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactoryWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function listByFactoryWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-205">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-205">The resource group name.</span></span>
+        <span data-ttu-id="ca972-205">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-205">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-206">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-206">The factory name.</span></span>
+        <span data-ttu-id="ca972-206">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-206">The factory name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1509,7 +1509,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-207">重新產生驗證金鑰，整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-207">Regenerates the authentication key for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-207">重新產生驗證金鑰，整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-207">Regenerates the authentication key for an integration runtime.</span></span>
   syntax:
     content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
@@ -1543,9 +1543,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-208">重新產生驗證金鑰，整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-208">Regenerates the authentication key for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-208">重新產生驗證金鑰，整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-208">Regenerates the authentication key for an integration runtime.</span></span>
   syntax:
-    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options: function, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
+    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options: Object, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1565,7 +1565,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1581,33 +1581,33 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-209">重新產生驗證金鑰，整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-209">Regenerates the authentication key for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-209">重新產生驗證金鑰，整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-209">Regenerates the authentication key for an integration runtime.</span></span>
   syntax:
-    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: function)'
+    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-210">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-210">The resource group name.</span></span>
+        <span data-ttu-id="ca972-210">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-210">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-211">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-211">The factory name.</span></span>
+        <span data-ttu-id="ca972-211">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-211">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-212">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-212">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-212">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-212">The integration runtime name.</span></span>
     - id: regenerateKeyParameters
       type:
       - azure-arm-datafactory.IntegrationRuntimeRegenerateKeyParameters
       description: >
-        <span data-ttu-id="b5f09-213">正在重新產生整合執行階段驗證金鑰參數。</span><span class="sxs-lookup"><span data-stu-id="b5f09-213">The parameters for regenerating integration runtime authentication key.</span></span>
+        <span data-ttu-id="ca972-213">正在重新產生整合執行階段驗證金鑰參數。</span><span class="sxs-lookup"><span data-stu-id="ca972-213">The parameters for regenerating integration runtime authentication key.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1620,87 +1620,87 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-214">重新產生驗證金鑰，整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-214">Regenerates the authentication key for an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-214">重新產生驗證金鑰，整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-214">Regenerates the authentication key for an integration runtime.</span></span>
   syntax:
-    content: 'function regenerateAuthKeyWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: function)'
+    content: 'function regenerateAuthKeyWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-215">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-215">The resource group name.</span></span>
+        <span data-ttu-id="ca972-215">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-215">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-216">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-216">The factory name.</span></span>
+        <span data-ttu-id="ca972-216">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-216">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-217">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-217">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-217">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-217">The integration runtime name.</span></span>
     - id: regenerateKeyParameters
       type:
       - azure-arm-datafactory.IntegrationRuntimeRegenerateKeyParameters
       description: >
-        <span data-ttu-id="b5f09-218">正在重新產生整合執行階段驗證金鑰參數。</span><span class="sxs-lookup"><span data-stu-id="b5f09-218">The parameters for regenerating integration runtime authentication key.</span></span>
+        <span data-ttu-id="ca972-218">正在重新產生整合執行階段驗證金鑰參數。</span><span class="sxs-lookup"><span data-stu-id="ca972-218">The parameters for regenerating integration runtime authentication key.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
       - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeAuthKeys>>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-219">從 整合執行階段中移除節點。</span><span class="sxs-lookup"><span data-stu-id="b5f09-219">Remove a node from integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-219">移除所有連結的整合執行階段，在特定的 data factory 中的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-219">Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.</span></span>
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options?: function)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-220">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-220">The resource group name.</span></span>
+        <span data-ttu-id="ca972-220">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-220">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-221">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-221">The factory name.</span></span>
+        <span data-ttu-id="ca972-221">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-221">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-222">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-222">The integration runtime name.</span></span>
-    - id: removeNodeParameters
+        <span data-ttu-id="ca972-222">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-222">The integration runtime name.</span></span>
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: >
-        <span data-ttu-id="b5f09-223">從 整合執行階段中移除節點的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-223">The name of the node to be removed from an integration runtime.</span></span>
+        <span data-ttu-id="ca972-223">連結的整合執行階段資料處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-223">The data factory name for the linked integration runtime.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode_2
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks_2
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-224">從 整合執行階段中移除節點。</span><span class="sxs-lookup"><span data-stu-id="b5f09-224">Remove a node from integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-224">移除所有連結的整合執行階段，在特定的 data factory 中的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-224">Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.</span></span>
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options: function, callback: ServiceCallback<void>)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1714,13 +1714,13 @@ items:
       type:
       - string
       description: ''
-    - id: removeNodeParameters
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1730,15 +1730,15 @@ items:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode_1
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks_1
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-225">從 整合執行階段中移除節點。</span><span class="sxs-lookup"><span data-stu-id="b5f09-225">Remove a node from integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-225">移除所有連結的整合執行階段，在特定的 data factory 中的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-225">Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.</span></span>
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, callback: ServiceCallback<void>)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1752,9 +1752,9 @@ items:
       type:
       - string
       description: ''
-    - id: removeNodeParameters
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: ''
     - id: callback
       type:
@@ -1764,39 +1764,39 @@ items:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNodeWithHttpOperationResponse
-  name: removeNodeWithHttpOperationResponse
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinksWithHttpOperationResponse
+  name: removeLinksWithHttpOperationResponse
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-226">從 整合執行階段中移除節點。</span><span class="sxs-lookup"><span data-stu-id="b5f09-226">Remove a node from integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-226">移除所有連結的整合執行階段，在特定的 data factory 中的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-226">Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.</span></span>
   syntax:
-    content: 'function removeNodeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options?: function)'
+    content: 'function removeLinksWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-227">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-227">The resource group name.</span></span>
+        <span data-ttu-id="ca972-227">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-227">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-228">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-228">The factory name.</span></span>
+        <span data-ttu-id="ca972-228">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-228">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-229">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-229">The integration runtime name.</span></span>
-    - id: removeNodeParameters
+        <span data-ttu-id="ca972-229">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-229">The integration runtime name.</span></span>
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: >
-        <span data-ttu-id="b5f09-230">從 整合執行階段中移除節點的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-230">The name of the node to be removed from an integration runtime.</span></span>
+        <span data-ttu-id="ca972-230">連結的整合執行階段資料處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-230">The data factory name for the linked integration runtime.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1809,28 +1809,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-231">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-231">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-231">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-231">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-232">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-232">The resource group name.</span></span>
+        <span data-ttu-id="ca972-232">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-232">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-233">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-233">The factory name.</span></span>
+        <span data-ttu-id="ca972-233">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-233">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-234">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-234">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-234">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-234">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1843,7 +1843,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-235">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-235">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-235">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-235">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
     content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
@@ -1873,9 +1873,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-236">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-236">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-236">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-236">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1891,7 +1891,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1907,28 +1907,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-237">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-237">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-237">啟動 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-237">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function startWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function startWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-238">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-238">The resource group name.</span></span>
+        <span data-ttu-id="ca972-238">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-238">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-239">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-239">The factory name.</span></span>
+        <span data-ttu-id="ca972-239">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-239">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-240">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-240">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-240">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-240">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1941,28 +1941,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-241">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-241">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-241">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-241">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-242">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-242">The resource group name.</span></span>
+        <span data-ttu-id="ca972-242">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-242">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-243">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-243">The factory name.</span></span>
+        <span data-ttu-id="ca972-243">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-243">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-244">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-244">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-244">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-244">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1975,9 +1975,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-245">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-245">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-245">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-245">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1993,7 +1993,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2009,7 +2009,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-246">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-246">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-246">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-246">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
     content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -2039,28 +2039,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-247">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-247">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-247">停止 ManagedReserved 類型整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-247">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function stopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function stopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-248">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-248">The resource group name.</span></span>
+        <span data-ttu-id="ca972-248">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-248">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-249">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-249">The factory name.</span></span>
+        <span data-ttu-id="ca972-249">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-249">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-250">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-250">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-250">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-250">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2073,28 +2073,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-251">強制跨整合執行階段節點，同步處理認證的整合執行階段，而這會覆寫的認證與發送器節點上可用的所有背景工作節點。</span><span class="sxs-lookup"><span data-stu-id="b5f09-251">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="b5f09-252">您已經有最新的認證備份檔時，就應該手動匯入它 （慣用） 比直接使用此 API 的任何自我裝載的整合執行階段節點上。</span><span class="sxs-lookup"><span data-stu-id="b5f09-252">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
+  summary: <span data-ttu-id="ca972-251">強制跨整合執行階段節點，同步處理認證的整合執行階段，而這會覆寫的認證與發送器節點上可用的所有背景工作節點。</span><span class="sxs-lookup"><span data-stu-id="ca972-251">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="ca972-252">您已經有最新的認證備份檔時，就應該手動匯入它 （慣用） 比直接使用此 API 的任何自我裝載的整合執行階段節點上。</span><span class="sxs-lookup"><span data-stu-id="ca972-252">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
   syntax:
-    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-253">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-253">The resource group name.</span></span>
+        <span data-ttu-id="ca972-253">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-253">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-254">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-254">The factory name.</span></span>
+        <span data-ttu-id="ca972-254">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-254">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-255">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-255">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-255">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-255">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2107,7 +2107,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-256">強制跨整合執行階段節點，同步處理認證的整合執行階段，而這會覆寫的認證與發送器節點上可用的所有背景工作節點。</span><span class="sxs-lookup"><span data-stu-id="b5f09-256">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="b5f09-257">您已經有最新的認證備份檔時，就應該手動匯入它 （慣用） 比直接使用此 API 的任何自我裝載的整合執行階段節點上。</span><span class="sxs-lookup"><span data-stu-id="b5f09-257">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
+  summary: <span data-ttu-id="ca972-256">強制跨整合執行階段節點，同步處理認證的整合執行階段，而這會覆寫的認證與發送器節點上可用的所有背景工作節點。</span><span class="sxs-lookup"><span data-stu-id="ca972-256">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="ca972-257">您已經有最新的認證備份檔時，就應該手動匯入它 （慣用） 比直接使用此 API 的任何自我裝載的整合執行階段節點上。</span><span class="sxs-lookup"><span data-stu-id="ca972-257">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
   syntax:
     content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -2137,9 +2137,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-258">強制跨整合執行階段節點，同步處理認證的整合執行階段，而這會覆寫的認證與發送器節點上可用的所有背景工作節點。</span><span class="sxs-lookup"><span data-stu-id="b5f09-258">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="b5f09-259">您已經有最新的認證備份檔時，就應該手動匯入它 （慣用） 比直接使用此 API 的任何自我裝載的整合執行階段節點上。</span><span class="sxs-lookup"><span data-stu-id="b5f09-259">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
+  summary: <span data-ttu-id="ca972-258">強制跨整合執行階段節點，同步處理認證的整合執行階段，而這會覆寫的認證與發送器節點上可用的所有背景工作節點。</span><span class="sxs-lookup"><span data-stu-id="ca972-258">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="ca972-259">您已經有最新的認證備份檔時，就應該手動匯入它 （慣用） 比直接使用此 API 的任何自我裝載的整合執行階段節點上。</span><span class="sxs-lookup"><span data-stu-id="ca972-259">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
   syntax:
-    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2155,7 +2155,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2171,28 +2171,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-260">強制跨整合執行階段節點，同步處理認證的整合執行階段，而這會覆寫的認證與發送器節點上可用的所有背景工作節點。</span><span class="sxs-lookup"><span data-stu-id="b5f09-260">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="b5f09-261">您已經有最新的認證備份檔時，就應該手動匯入它 （慣用） 比直接使用此 API 的任何自我裝載的整合執行階段節點上。</span><span class="sxs-lookup"><span data-stu-id="b5f09-261">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
+  summary: <span data-ttu-id="ca972-260">強制跨整合執行階段節點，同步處理認證的整合執行階段，而這會覆寫的認證與發送器節點上可用的所有背景工作節點。</span><span class="sxs-lookup"><span data-stu-id="ca972-260">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="ca972-261">您已經有最新的認證備份檔時，就應該手動匯入它 （慣用） 比直接使用此 API 的任何自我裝載的整合執行階段節點上。</span><span class="sxs-lookup"><span data-stu-id="ca972-261">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
   syntax:
-    content: 'function syncCredentialsWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function syncCredentialsWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-262">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-262">The resource group name.</span></span>
+        <span data-ttu-id="ca972-262">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-262">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-263">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-263">The factory name.</span></span>
+        <span data-ttu-id="ca972-263">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-263">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-264">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-264">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-264">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-264">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2205,38 +2205,38 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-265">更新的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-265">Updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-265">更新的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-265">Updates an integration runtime.</span></span>
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: function)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-266">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-266">The resource group name.</span></span>
+        <span data-ttu-id="ca972-266">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-266">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-267">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-267">The factory name.</span></span>
+        <span data-ttu-id="ca972-267">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-267">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-268">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-268">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-268">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-268">The integration runtime name.</span></span>
     - id: updateIntegrationRuntimeRequest
       type:
       - azure-arm-datafactory.UpdateIntegrationRuntimeRequest
       description: >
-        <span data-ttu-id="b5f09-269">正在更新 integration runtime 參數。</span><span class="sxs-lookup"><span data-stu-id="b5f09-269">The parameters for updating an integration runtime.</span></span>
+        <span data-ttu-id="ca972-269">正在更新 integration runtime 參數。</span><span class="sxs-lookup"><span data-stu-id="ca972-269">The parameters for updating an integration runtime.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.update_1
   name: update
@@ -2244,9 +2244,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-270">更新的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-270">Updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-270">更新的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-270">Updates an integration runtime.</span></span>
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2266,11 +2266,11 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeResource>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.update_2
   name: update
@@ -2278,9 +2278,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-271">更新的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-271">Updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-271">更新的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-271">Updates an integration runtime.</span></span>
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2300,15 +2300,15 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeResource>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.updateWithHttpOperationResponse
   name: updateWithHttpOperationResponse
@@ -2316,38 +2316,38 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-272">更新的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-272">Updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="ca972-272">更新的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-272">Updates an integration runtime.</span></span>
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-273">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-273">The resource group name.</span></span>
+        <span data-ttu-id="ca972-273">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-273">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-274">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-274">The factory name.</span></span>
+        <span data-ttu-id="ca972-274">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-274">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-275">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-275">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-275">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-275">The integration runtime name.</span></span>
     - id: updateIntegrationRuntimeRequest
       type:
       - azure-arm-datafactory.UpdateIntegrationRuntimeRequest
       description: >
-        <span data-ttu-id="b5f09-276">正在更新 integration runtime 參數。</span><span class="sxs-lookup"><span data-stu-id="b5f09-276">The parameters for updating an integration runtime.</span></span>
+        <span data-ttu-id="ca972-276">正在更新 integration runtime 參數。</span><span class="sxs-lookup"><span data-stu-id="ca972-276">The parameters for updating an integration runtime.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeStatusResponse>>
+      - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeResource>>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.upgrade
   name: upgrade
@@ -2355,28 +2355,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-277">如果可用性，請升級至最新版的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-277">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
+  summary: <span data-ttu-id="ca972-277">如果可用性，請升級至最新版的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-277">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
   syntax:
-    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-278">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-278">The resource group name.</span></span>
+        <span data-ttu-id="ca972-278">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-278">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-279">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-279">The factory name.</span></span>
+        <span data-ttu-id="ca972-279">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-279">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-280">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-280">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-280">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-280">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2389,7 +2389,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-281">如果可用性，請升級至最新版的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-281">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
+  summary: <span data-ttu-id="ca972-281">如果可用性，請升級至最新版的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-281">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
   syntax:
     content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -2419,9 +2419,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-282">如果可用性，請升級至最新版的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-282">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
+  summary: <span data-ttu-id="ca972-282">如果可用性，請升級至最新版的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-282">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
   syntax:
-    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2437,7 +2437,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2453,28 +2453,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5f09-283">如果可用性，請升級至最新版的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5f09-283">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
+  summary: <span data-ttu-id="ca972-283">如果可用性，請升級至最新版的自我裝載的整合執行階段。</span><span class="sxs-lookup"><span data-stu-id="ca972-283">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
   syntax:
-    content: 'function upgradeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function upgradeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-284">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-284">The resource group name.</span></span>
+        <span data-ttu-id="ca972-284">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-284">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-285">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-285">The factory name.</span></span>
+        <span data-ttu-id="ca972-285">處理站名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-285">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="b5f09-286">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="b5f09-286">The integration runtime name.</span></span>
+        <span data-ttu-id="ca972-286">整合執行階段名稱。</span><span class="sxs-lookup"><span data-stu-id="ca972-286">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2654,11 +2654,11 @@ references:
   - name: IntegrationRuntimeRegenerateKeyParameters
     fullName: IntegrationRuntimeRegenerateKeyParameters
     uid: azure-arm-datafactory.IntegrationRuntimeRegenerateKeyParameters
-- uid: azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+- uid: azure-arm-datafactory.LinkedIntegrationRuntimeRequest
   spec.typeScript:
-  - name: IntegrationRuntimeRemoveNodeRequest
-    fullName: IntegrationRuntimeRemoveNodeRequest
-    uid: azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+  - name: LinkedIntegrationRuntimeRequest
+    fullName: LinkedIntegrationRuntimeRequest
+    uid: azure-arm-datafactory.LinkedIntegrationRuntimeRequest
 - uid: azure-arm-datafactory.UpdateIntegrationRuntimeRequest
   spec.typeScript:
   - name: UpdateIntegrationRuntimeRequest
