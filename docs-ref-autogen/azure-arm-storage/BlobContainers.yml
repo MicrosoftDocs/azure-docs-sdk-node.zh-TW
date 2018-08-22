@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f6278ec3e2f1f1451d80e1327f91eed10a0fc78d
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 16e5c8d5e48a413877be9cffa7bf2a859943cbd2
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40053005"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41697407"
 items:
 - uid: azure-arm-storage.BlobContainers
   name: BlobContainers
@@ -71,7 +71,7 @@ items:
   - typeScript
   summary: 清除法律保留標記。 清除相同或不存在的標記會導致等冪作業。 ClearLegalHold 清除只在要求中指定標記。
   syntax:
-    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -97,7 +97,7 @@ items:
         每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -146,7 +146,7 @@ items:
   - typeScript
   summary: 清除法律保留標記。 清除相同或不存在的標記會導致等冪作業。 ClearLegalHold 清除只在要求中指定標記。
   syntax:
-    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: function, callback: ServiceCallback<LegalHold>)'
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -166,7 +166,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -184,7 +184,7 @@ items:
   - typeScript
   summary: 清除法律保留標記。 清除相同或不存在的標記會導致等冪作業。 ClearLegalHold 清除只在要求中指定標記。
   syntax:
-    content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -210,7 +210,7 @@ items:
         每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -225,7 +225,7 @@ items:
   - typeScript
   summary: 要求本文所述，請建立新的容器，指定帳戶下。 容器資源包含中繼資料和容器的屬性。 它不包含容器的 blob 清單。
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -246,7 +246,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -261,7 +261,7 @@ items:
   - typeScript
   summary: 要求本文所述，請建立新的容器，指定帳戶下。 容器資源包含中繼資料和容器的屬性。 它不包含容器的 blob 清單。
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -277,7 +277,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -325,7 +325,7 @@ items:
   - typeScript
   summary: 建立或更新的解除鎖定的不變性原則。 如果指定，但不是需要這項作業，會接受 ETag 的 If-match。
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -351,7 +351,7 @@ items:
         不變性的期間之後建立原則之後，以天為單位的容器中的 blob。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -400,7 +400,7 @@ items:
   - typeScript
   summary: 建立或更新的解除鎖定的不變性原則。 如果指定，但不是需要這項作業，會接受 ETag 的 If-match。
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -420,7 +420,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -438,7 +438,7 @@ items:
   - typeScript
   summary: 建立或更新的解除鎖定的不變性原則。 如果指定，但不是需要這項作業，會接受 ETag 的 If-match。
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -464,7 +464,7 @@ items:
         不變性的期間之後建立原則之後，以天為單位的容器中的 blob。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -479,7 +479,7 @@ items:
   - typeScript
   summary: 要求本文所述，請建立新的容器，指定帳戶下。 容器資源包含中繼資料和容器的屬性。 它不包含容器的 blob 清單。
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -500,7 +500,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -549,7 +549,7 @@ items:
   - typeScript
   summary: 中止解除鎖定的不變性原則。 刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。 如果比對中的 ETag 是需要這項作業。 刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。
   syntax:
-    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -575,7 +575,7 @@ items:
         不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -590,7 +590,7 @@ items:
   - typeScript
   summary: 中止解除鎖定的不變性原則。 刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。 如果比對中的 ETag 是需要這項作業。 刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。
   syntax:
-    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -610,7 +610,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -628,7 +628,7 @@ items:
   - typeScript
   summary: 中止解除鎖定的不變性原則。 刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。 如果比對中的 ETag 是需要這項作業。 刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。
   syntax:
-    content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -654,7 +654,7 @@ items:
         不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -669,7 +669,7 @@ items:
   - typeScript
   summary: 刪除指定的容器，其帳戶下。
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -690,7 +690,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -735,7 +735,7 @@ items:
   - typeScript
   summary: 刪除指定的容器，其帳戶下。
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -751,7 +751,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -769,7 +769,7 @@ items:
   - typeScript
   summary: 刪除指定的容器，其帳戶下。
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -790,7 +790,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -805,7 +805,7 @@ items:
   - typeScript
   summary: 延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。 唯一允許的鎖定原則的動作將會此動作。 如果比對中的 ETag 是需要這項作業。
   syntax:
-    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -836,7 +836,7 @@ items:
         不變性的期間之後建立原則之後，以天為單位的容器中的 blob。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -889,7 +889,7 @@ items:
   - typeScript
   summary: 延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。 唯一允許的鎖定原則的動作將會此動作。 如果比對中的 ETag 是需要這項作業。
   syntax:
-    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -913,7 +913,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -931,7 +931,7 @@ items:
   - typeScript
   summary: 延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。 唯一允許的鎖定原則的動作將會此動作。 如果比對中的 ETag 是需要這項作業。
   syntax:
-    content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -962,7 +962,7 @@ items:
         不變性的期間之後建立原則之後，以天為單位的容器中的 blob。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -977,7 +977,7 @@ items:
   - typeScript
   summary: 取得指定容器的屬性。
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -998,7 +998,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1043,7 +1043,7 @@ items:
   - typeScript
   summary: 取得指定容器的屬性。
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1059,7 +1059,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1077,7 +1077,7 @@ items:
   - typeScript
   summary: 取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。
   syntax:
-    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1098,7 +1098,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1113,7 +1113,7 @@ items:
   - typeScript
   summary: 取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。
   syntax:
-    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1129,7 +1129,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1177,7 +1177,7 @@ items:
   - typeScript
   summary: 取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。
   syntax:
-    content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1198,7 +1198,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1213,7 +1213,7 @@ items:
   - typeScript
   summary: 取得指定容器的屬性。
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1234,7 +1234,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1249,7 +1249,7 @@ items:
   - typeScript
   summary: 列出所有容器，並不支援的前置詞，例如資料平面。 也 SRP 今天不會傳回接續 token。
   syntax:
-    content: 'function list(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function list(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1263,7 +1263,7 @@ items:
         指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1304,7 +1304,7 @@ items:
   - typeScript
   summary: 列出所有容器，並不支援的前置詞，例如資料平面。 也 SRP 今天不會傳回接續 token。
   syntax:
-    content: 'function list(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<ListContainerItems>)'
+    content: 'function list(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<ListContainerItems>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1316,7 +1316,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1334,7 +1334,7 @@ items:
   - typeScript
   summary: 列出所有容器，並不支援的前置詞，例如資料平面。 也 SRP 今天不會傳回接續 token。
   syntax:
-    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1348,7 +1348,7 @@ items:
         指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1363,7 +1363,7 @@ items:
   - typeScript
   summary: 將不變性原則設定已鎖定狀態。 唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。 如果比對中的 ETag 是需要這項作業。
   syntax:
-    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1389,7 +1389,7 @@ items:
         不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1438,7 +1438,7 @@ items:
   - typeScript
   summary: 將不變性原則設定已鎖定狀態。 唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。 如果比對中的 ETag 是需要這項作業。
   syntax:
-    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1458,7 +1458,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1476,7 +1476,7 @@ items:
   - typeScript
   summary: 將不變性原則設定已鎖定狀態。 唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。 如果比對中的 ETag 是需要這項作業。
   syntax:
-    content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1502,7 +1502,7 @@ items:
         不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1517,7 +1517,7 @@ items:
   - typeScript
   summary: 集的法律保留標記。 等冪作業中設定相同的標記結果。 SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。
   syntax:
-    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1543,7 +1543,7 @@ items:
         每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1592,7 +1592,7 @@ items:
   - typeScript
   summary: 集的法律保留標記。 等冪作業中設定相同的標記結果。 SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。
   syntax:
-    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: function, callback: ServiceCallback<LegalHold>)'
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1612,7 +1612,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1630,7 +1630,7 @@ items:
   - typeScript
   summary: 集的法律保留標記。 等冪作業中設定相同的標記結果。 SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。
   syntax:
-    content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1656,7 +1656,7 @@ items:
         每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1671,7 +1671,7 @@ items:
   - typeScript
   summary: 要求本文中所指定的更新容器屬性。 在要求中未提及的屬性將會維持不變。 如果指定的容器不存在，更新將會失敗。
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1692,7 +1692,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1737,7 +1737,7 @@ items:
   - typeScript
   summary: 要求本文中所指定的更新容器屬性。 在要求中未提及的屬性將會維持不變。 如果指定的容器不存在，更新將會失敗。
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1753,7 +1753,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1771,7 +1771,7 @@ items:
   - typeScript
   summary: 要求本文中所指定的更新容器屬性。 在要求中未提及的屬性將會維持不變。 如果指定的容器不存在，更新將會失敗。
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1792,7 +1792,7 @@ items:
         每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
