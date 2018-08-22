@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: e46a5a038ac1b40706d5d7c5d49f04bec86c3f84
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 7b391204b3338bd7ab834710fdf32cc8f2752b1e
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40054052"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690460"
 items:
 - uid: azure-event-hubs.EventHubClient
   name: EventHubClient
@@ -15,6 +15,7 @@ items:
   - azure-event-hubs.EventHubClient.createFromAadTokenCredentials
   - azure-event-hubs.EventHubClient.createFromConnectionString
   - azure-event-hubs.EventHubClient.createFromIotHubConnectionString
+  - azure-event-hubs.EventHubClient.createFromTokenProvider
   - azure-event-hubs.EventHubClient.constructor
   - azure-event-hubs.EventHubClient.getHubRuntimeInformation
   - azure-event-hubs.EventHubClient.getPartitionIds
@@ -34,7 +35,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-101">關閉這個用戶端，並傳回一項承諾完成中斷連線時，就會解析至事件中樞的 AMQP 連線。</span><span class="sxs-lookup"><span data-stu-id="18e5a-101">Closes the AMQP connection to the Event Hub for this client, returning a promise that will be resolved when disconnection is completed.</span></span>
+  summary: <span data-ttu-id="ee670-101">關閉這個用戶端，並傳回一項承諾完成中斷連線時，就會解析至事件中樞的 AMQP 連線。</span><span class="sxs-lookup"><span data-stu-id="ee670-101">Closes the AMQP connection to the Event Hub for this client, returning a promise that will be resolved when disconnection is completed.</span></span>
   syntax:
     content: function close()
     parameters: []
@@ -49,7 +50,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="ee670-102">{string}[connectionId]Amqp 連線識別碼可唯一識別處理程序內的連接。</span><span class="sxs-lookup"><span data-stu-id="ee670-102">{string} [connectionId] The amqp connection id that uniquely identifies the connection within a process.</span></span>
   optional: true
   syntax:
     content: 'connectionId?: string'
@@ -63,26 +64,26 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-102">建立事件中樞用戶端從 AADTokenCredentials。</span><span class="sxs-lookup"><span data-stu-id="18e5a-102">Creates an EventHub Client from AADTokenCredentials.</span></span>
+  summary: <span data-ttu-id="ee670-103">建立事件中樞用戶端從 AADTokenCredentials。</span><span class="sxs-lookup"><span data-stu-id="ee670-103">Creates an EventHub Client from AADTokenCredentials.</span></span>
   syntax:
     content: 'static function createFromAadTokenCredentials(host: string, entityPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ClientOptionsBase)'
     parameters:
     - id: host
       type:
       - string
-      description: <span data-ttu-id="18e5a-103">事件中樞的完整的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="18e5a-103">Fully qualified domain name for Event Hubs.</span></span> <span data-ttu-id="18e5a-104">最有可能，{yournamespace}。 servicebus.windows.net</span><span class="sxs-lookup"><span data-stu-id="18e5a-104">Most likely, {yournamespace}.servicebus.windows.net</span></span>
+      description: <span data-ttu-id="ee670-104">事件中樞的完整的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="ee670-104">Fully qualified domain name for Event Hubs.</span></span> <span data-ttu-id="ee670-105">最有可能<yournamespace>。 servicebus.windows.net</span><span class="sxs-lookup"><span data-stu-id="ee670-105">Most likely, <yournamespace>.servicebus.windows.net</span></span>
     - id: entityPath
       type:
       - string
-      description: <span data-ttu-id="18e5a-105">EventHub 路徑的形式 ' 我的事件中樞-名稱 '</span><span class="sxs-lookup"><span data-stu-id="18e5a-105">EventHub path of the form 'my-event-hub-name'</span></span>
+      description: <span data-ttu-id="ee670-106">EventHub 路徑的形式 ' 我的事件中樞-名稱 '</span><span class="sxs-lookup"><span data-stu-id="ee670-106">EventHub path of the form 'my-event-hub-name'</span></span>
     - id: credentials
       type:
       - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
-      description: '<span data-ttu-id="18e5a-106">AAD 權杖的認證。</span><span class="sxs-lookup"><span data-stu-id="18e5a-106">The AAD Token credentials.</span></span> <span data-ttu-id="18e5a-107">它可以是下列其中之一： ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials。</span><span class="sxs-lookup"><span data-stu-id="18e5a-107">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
+      description: '<span data-ttu-id="ee670-107">AAD 權杖的認證。</span><span class="sxs-lookup"><span data-stu-id="ee670-107">The AAD Token credentials.</span></span> <span data-ttu-id="ee670-108">它可以是下列其中之一： ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials。</span><span class="sxs-lookup"><span data-stu-id="ee670-108">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
     - id: options
       type:
       - azure-event-hubs.ClientOptionsBase
-      description: <span data-ttu-id="18e5a-108">可以在用戶端建立期間提供的選項。</span><span class="sxs-lookup"><span data-stu-id="18e5a-108">The options that can be provided during client creation.</span></span>
+      description: <span data-ttu-id="ee670-109">可以在用戶端建立期間提供的選項。</span><span class="sxs-lookup"><span data-stu-id="ee670-109">The options that can be provided during client creation.</span></span>
       optional: true
     return:
       type:
@@ -94,14 +95,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-109">建立事件中樞用戶端從連接字串。</span><span class="sxs-lookup"><span data-stu-id="18e5a-109">Creates an EventHub Client from connection string.</span></span>
+  summary: <span data-ttu-id="ee670-110">建立事件中樞用戶端從連接字串。</span><span class="sxs-lookup"><span data-stu-id="ee670-110">Creates an EventHub Client from connection string.</span></span>
   syntax:
     content: 'static function createFromConnectionString(connectionString: string, path?: string, options?: ClientOptions)'
     parameters:
     - id: connectionString
       type:
       - string
-      description: <span data-ttu-id="18e5a-110">連接字串格式的 ' Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我的 SA 名稱;SharedAccessKey = 我 SA-機碼 '</span><span class="sxs-lookup"><span data-stu-id="18e5a-110">Connection string of the form 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+      description: <span data-ttu-id="ee670-111">連接字串格式的 ' Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我的 SA 名稱;SharedAccessKey = 我 SA-機碼 '</span><span class="sxs-lookup"><span data-stu-id="ee670-111">Connection string of the form 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
     - id: path
       type:
       - string
@@ -122,14 +123,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-111">建立事件中樞用戶端從連接字串。</span><span class="sxs-lookup"><span data-stu-id="18e5a-111">Creates an EventHub Client from connection string.</span></span>
+  summary: <span data-ttu-id="ee670-112">建立事件中樞用戶端從連接字串。</span><span class="sxs-lookup"><span data-stu-id="ee670-112">Creates an EventHub Client from connection string.</span></span>
   syntax:
     content: 'static function createFromIotHubConnectionString(iothubConnectionString: string, options?: ClientOptions)'
     parameters:
     - id: iothubConnectionString
       type:
       - string
-      description: <span data-ttu-id="18e5a-112">連接字串格式的 ' HostName = iot 主機名稱;SharedAccessKeyName = 我的 SA 名稱;SharedAccessKey = 我 SA-機碼 '</span><span class="sxs-lookup"><span data-stu-id="18e5a-112">Connection string of the form 'HostName=iot-host-name;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+      description: <span data-ttu-id="ee670-113">連接字串格式的 ' HostName = iot 主機名稱;SharedAccessKeyName = 我的 SA 名稱;SharedAccessKey = 我 SA-機碼 '</span><span class="sxs-lookup"><span data-stu-id="ee670-113">Connection string of the form 'HostName=iot-host-name;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
     - id: options
       type:
       - azure-event-hubs.ClientOptions
@@ -139,25 +140,56 @@ items:
       type:
       - Promise<azure-event-hubs.EventHubClient>
   package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.createFromTokenProvider
+  name: createFromTokenProvider
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ee670-114">從一般的語彙基元提供者中建立事件中樞用戶端。</span><span class="sxs-lookup"><span data-stu-id="ee670-114">Creates an EventHub Client from a generic token provider.</span></span>
+  syntax:
+    content: 'static function createFromTokenProvider(host: string, entityPath: string, tokenProvider: TokenProvider, options?: ClientOptionsBase)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="ee670-115">事件中樞的完整的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="ee670-115">Fully qualified domain name for Event Hubs.</span></span> <span data-ttu-id="ee670-116">最有可能<yournamespace>。 servicebus.windows.net</span><span class="sxs-lookup"><span data-stu-id="ee670-116">Most likely, <yournamespace>.servicebus.windows.net</span></span>
+    - id: entityPath
+      type:
+      - string
+      description: <span data-ttu-id="ee670-117">EventHub 路徑的形式 ' 我的事件中樞-名稱 '</span><span class="sxs-lookup"><span data-stu-id="ee670-117">EventHub path of the form 'my-event-hub-name'</span></span>
+    - id: tokenProvider
+      type:
+      - azure-event-hubs.TokenProvider
+      description: <span data-ttu-id="ee670-118">您的權杖提供者可實作 TokenProvider 介面。</span><span class="sxs-lookup"><span data-stu-id="ee670-118">Your token provider that implements the TokenProvider interface.</span></span>
+    - id: options
+      type:
+      - azure-event-hubs.ClientOptionsBase
+      description: <span data-ttu-id="ee670-119">可以在用戶端建立期間提供的選項。</span><span class="sxs-lookup"><span data-stu-id="ee670-119">The options that can be provided during client creation.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventHubClient
+  package: azure-event-hubs
 - uid: azure-event-hubs.EventHubClient.constructor
   name: EventHubClient
   children: []
   type: constructor
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-113">具現化指向此組態所指定的事件中樞的用戶端。</span><span class="sxs-lookup"><span data-stu-id="18e5a-113">Instantiates a client pointing to the Event Hub given by this configuration.</span></span>
+  summary: <span data-ttu-id="ee670-120">具現化指向此組態所指定的事件中樞的用戶端。</span><span class="sxs-lookup"><span data-stu-id="ee670-120">Instantiates a client pointing to the Event Hub given by this configuration.</span></span>
   syntax:
     content: 'new EventHubClient(config: ConnectionConfig, options?: ClientOptions)'
     parameters:
     - id: config
       type:
       - azure-event-hubs.ConnectionConfig
-      description: <span data-ttu-id="18e5a-114">若要建立事件中樞用戶端連線設定。</span><span class="sxs-lookup"><span data-stu-id="18e5a-114">The connection configuration to create the EventHub Client.</span></span>
+      description: <span data-ttu-id="ee670-121">若要建立事件中樞用戶端連線設定。</span><span class="sxs-lookup"><span data-stu-id="ee670-121">The connection configuration to create the EventHub Client.</span></span>
     - id: options
       type:
       - azure-event-hubs.ClientOptions
       description: >
-        <span data-ttu-id="18e5a-115">可以提供事件中樞用戶端建構函式的選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="18e5a-115">The optional parameters that can be provided to the EventHub Client constructor.</span></span>
+        <span data-ttu-id="ee670-122">可以提供事件中樞用戶端建構函式的選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="ee670-122">The optional parameters that can be provided to the EventHub Client constructor.</span></span>
       optional: true
   package: azure-event-hubs
 - uid: azure-event-hubs.EventHubClient.getHubRuntimeInformation
@@ -166,7 +198,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-116">提供事件中樞執行階段資訊。</span><span class="sxs-lookup"><span data-stu-id="18e5a-116">Provides the eventhub runtime information.</span></span>
+  summary: <span data-ttu-id="ee670-123">提供事件中樞執行階段資訊。</span><span class="sxs-lookup"><span data-stu-id="ee670-123">Provides the eventhub runtime information.</span></span>
   syntax:
     content: function getHubRuntimeInformation()
     parameters: []
@@ -180,7 +212,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-117">提供 partitionIds 的陣列。</span><span class="sxs-lookup"><span data-stu-id="18e5a-117">Provides an array of partitionIds.</span></span>
+  summary: <span data-ttu-id="ee670-124">提供 partitionIds 的陣列。</span><span class="sxs-lookup"><span data-stu-id="ee670-124">Provides an array of partitionIds.</span></span>
   syntax:
     content: function getPartitionIds()
     parameters: []
@@ -194,14 +226,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-118">提供指定的資料分割的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="18e5a-118">Provides information about the specified partition.</span></span>
+  summary: <span data-ttu-id="ee670-125">提供指定的資料分割的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ee670-125">Provides information about the specified partition.</span></span>
   syntax:
     content: 'function getPartitionInformation(partitionId: string | number)'
     parameters:
     - id: partitionId
       type:
       - string | number
-      description: <span data-ttu-id="18e5a-119">哪一個資料分割的資訊是必要的資料分割識別碼。</span><span class="sxs-lookup"><span data-stu-id="18e5a-119">Partition ID for which partition information is required.</span></span>
+      description: <span data-ttu-id="ee670-126">哪一個資料分割的資訊是必要的資料分割識別碼。</span><span class="sxs-lookup"><span data-stu-id="ee670-126">Partition ID for which partition information is required.</span></span>
     return:
       type:
       - Promise<azure-event-hubs.EventHubPartitionRuntimeInformation>
@@ -212,22 +244,22 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-120">一開始會建立 AMQP 工作階段和 AMQP 接收者連結上的工作階段接收者。</span><span class="sxs-lookup"><span data-stu-id="18e5a-120">Starts the receiver by establishing an AMQP session and an AMQP receiver link on the session.</span></span> <span data-ttu-id="18e5a-121">訊息會傳遞至提供的 onMessage 處理常式和錯誤會傳遞至提供的 onError 處理常式。</span><span class="sxs-lookup"><span data-stu-id="18e5a-121">Messages will be passed to the provided onMessage handler and error will be passed to the provided onError handler.</span></span>
+  summary: <span data-ttu-id="ee670-127">一開始會建立 AMQP 工作階段和 AMQP 接收者連結上的工作階段接收者。</span><span class="sxs-lookup"><span data-stu-id="ee670-127">Starts the receiver by establishing an AMQP session and an AMQP receiver link on the session.</span></span> <span data-ttu-id="ee670-128">訊息會傳遞至提供的 onMessage 處理常式和錯誤會傳遞至提供的 onError 處理常式。</span><span class="sxs-lookup"><span data-stu-id="ee670-128">Messages will be passed to the provided onMessage handler and error will be passed to the provided onError handler.</span></span>
   syntax:
     content: 'function receive(partitionId: string | number, onMessage: OnMessage, onError: OnError, options?: ReceiveOptions)'
     parameters:
     - id: partitionId
       type:
       - string | number
-      description: <span data-ttu-id="18e5a-122">要接收的資料分割識別碼。</span><span class="sxs-lookup"><span data-stu-id="18e5a-122">Partition ID from which to receive.</span></span>
+      description: <span data-ttu-id="ee670-129">要接收的資料分割識別碼。</span><span class="sxs-lookup"><span data-stu-id="ee670-129">Partition ID from which to receive.</span></span>
     - id: onMessage
       type:
       - azure-event-hubs.OnMessage
-      description: <span data-ttu-id="18e5a-123">訊息處理常式以接收事件資料物件。</span><span class="sxs-lookup"><span data-stu-id="18e5a-123">The message handler to receive event data objects.</span></span>
+      description: <span data-ttu-id="ee670-130">訊息處理常式以接收事件資料物件。</span><span class="sxs-lookup"><span data-stu-id="ee670-130">The message handler to receive event data objects.</span></span>
     - id: onError
       type:
       - azure-event-hubs.OnError
-      description: <span data-ttu-id="18e5a-124">錯誤處理常式以接收所接收訊息時所發生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="18e5a-124">The error handler to receive an error that occurs while receiving messages.</span></span>
+      description: <span data-ttu-id="ee670-131">錯誤處理常式以接收所接收訊息時所發生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="ee670-131">The error handler to receive an error that occurs while receiving messages.</span></span>
     - id: options
       type:
       - azure-event-hubs.ReceiveOptions
@@ -243,18 +275,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-125">接收來自事件中樞資料分割的 EventData 物件批次，針對指定的計數和指定的最大等待時間 （秒），何者先發生。</span><span class="sxs-lookup"><span data-stu-id="18e5a-125">Receives a batch of EventData objects from an EventHub partition for a given count and a given max wait time in seconds, whichever happens first.</span></span> <span data-ttu-id="18e5a-126">這個方法可以用於建立收件者物件之後，直接與**不得**可搭配`start()`方法。</span><span class="sxs-lookup"><span data-stu-id="18e5a-126">This method can be used directly after creating the receiver object and **MUST NOT** be used along with the `start()` method.</span></span>
+  summary: <span data-ttu-id="ee670-132">接收來自事件中樞資料分割的 EventData 物件批次，針對指定的計數和指定的最大等待時間 （秒），何者先發生。</span><span class="sxs-lookup"><span data-stu-id="ee670-132">Receives a batch of EventData objects from an EventHub partition for a given count and a given max wait time in seconds, whichever happens first.</span></span> <span data-ttu-id="ee670-133">這個方法可以用於建立收件者物件之後，直接與**不得**可搭配`start()`方法。</span><span class="sxs-lookup"><span data-stu-id="ee670-133">This method can be used directly after creating the receiver object and **MUST NOT** be used along with the `start()` method.</span></span>
   syntax:
     content: 'function receiveBatch(partitionId: string | number, maxMessageCount: number, maxWaitTimeInSeconds?: number, options?: ReceiveOptions)'
     parameters:
     - id: partitionId
       type:
       - string | number
-      description: <span data-ttu-id="18e5a-127">要接收的資料分割識別碼。</span><span class="sxs-lookup"><span data-stu-id="18e5a-127">Partition ID from which to receive.</span></span>
+      description: <span data-ttu-id="ee670-134">要接收的資料分割識別碼。</span><span class="sxs-lookup"><span data-stu-id="ee670-134">Partition ID from which to receive.</span></span>
     - id: maxMessageCount
       type:
       - number
-      description: <span data-ttu-id="18e5a-128">最大訊息計數。</span><span class="sxs-lookup"><span data-stu-id="18e5a-128">The maximum message count.</span></span> <span data-ttu-id="18e5a-129">是的值必須大於 0。</span><span class="sxs-lookup"><span data-stu-id="18e5a-129">Must be a value greater than 0.</span></span>
+      description: <span data-ttu-id="ee670-135">最大訊息計數。</span><span class="sxs-lookup"><span data-stu-id="ee670-135">The maximum message count.</span></span> <span data-ttu-id="ee670-136">是的值必須大於 0。</span><span class="sxs-lookup"><span data-stu-id="ee670-136">Must be a value greater than 0.</span></span>
     - id: maxWaitTimeInSeconds
       type:
       - number
@@ -275,14 +307,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-130">會將指定的訊息傳送至事件中樞。</span><span class="sxs-lookup"><span data-stu-id="18e5a-130">Sends the given message to the EventHub.</span></span>
+  summary: <span data-ttu-id="ee670-137">會將指定的訊息傳送至事件中樞。</span><span class="sxs-lookup"><span data-stu-id="ee670-137">Sends the given message to the EventHub.</span></span>
   syntax:
     content: 'function send(data: EventData, partitionId?: string | number)'
     parameters:
     - id: data
       type:
       - azure-event-hubs.EventData
-      description: <span data-ttu-id="18e5a-131">要傳送的訊息。</span><span class="sxs-lookup"><span data-stu-id="18e5a-131">Message to send.</span></span>  <span data-ttu-id="18e5a-132">將會傳送為 UTF8 編碼的 JSON 字串。</span><span class="sxs-lookup"><span data-stu-id="18e5a-132">Will be sent as UTF8-encoded JSON string.</span></span>
+      description: <span data-ttu-id="ee670-138">要傳送的訊息。</span><span class="sxs-lookup"><span data-stu-id="ee670-138">Message to send.</span></span>  <span data-ttu-id="ee670-139">將會傳送為 UTF8 編碼的 JSON 字串。</span><span class="sxs-lookup"><span data-stu-id="ee670-139">Will be sent as UTF8-encoded JSON string.</span></span>
     - id: partitionId
       type:
       - string | number
@@ -298,14 +330,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="18e5a-133">傳送至事件中樞的 EventData 批次。</span><span class="sxs-lookup"><span data-stu-id="18e5a-133">Send a batch of EventData to the EventHub.</span></span> <span data-ttu-id="18e5a-134">「 Message_annotations"、"application_properties 」 和 「 屬性 」 的第一個訊息將會設定為的信封 （批次訊息）。</span><span class="sxs-lookup"><span data-stu-id="18e5a-134">The "message_annotations", "application_properties" and "properties" of the first message will be set as that of the envelope (batch message).</span></span>
+  summary: <span data-ttu-id="ee670-140">傳送至事件中樞的 EventData 批次。</span><span class="sxs-lookup"><span data-stu-id="ee670-140">Send a batch of EventData to the EventHub.</span></span> <span data-ttu-id="ee670-141">「 Message_annotations"、"application_properties 」 和 「 屬性 」 的第一個訊息將會設定為的信封 （批次訊息）。</span><span class="sxs-lookup"><span data-stu-id="ee670-141">The "message_annotations", "application_properties" and "properties" of the first message will be set as that of the envelope (batch message).</span></span>
   syntax:
     content: 'function sendBatch(datas: EventData[], partitionId?: string | number)'
     parameters:
     - id: datas
       type:
       - azure-event-hubs.EventData[]
-      description: <span data-ttu-id="18e5a-135">要在批次訊息中傳送的 EventData 物件的陣列。</span><span class="sxs-lookup"><span data-stu-id="18e5a-135">An array of EventData objects to be sent in a Batch message.</span></span>
+      description: <span data-ttu-id="ee670-142">要在批次訊息中傳送的 EventData 物件的陣列。</span><span class="sxs-lookup"><span data-stu-id="ee670-142">An array of EventData objects to be sent in a Batch message.</span></span>
     - id: partitionId
       type:
       - string | number
@@ -404,3 +436,8 @@ references:
     uid: azure-event-hubs.EventHubClient
   - name: '>'
     fullName: '>'
+- uid: azure-event-hubs.TokenProvider
+  spec.typeScript:
+  - name: TokenProvider
+    fullName: TokenProvider
+    uid: azure-event-hubs.TokenProvider
