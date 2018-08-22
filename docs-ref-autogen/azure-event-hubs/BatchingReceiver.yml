@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4ac025f0d9bcf9ac402041803f2242eaf32f50f
+ms.sourcegitcommit: 6341d50df9591697ca6d5ae0e657a9840289d8c9
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40479238"
+items:
+- uid: azure-event-hubs.BatchingReceiver
+  name: BatchingReceiver
+  fullName: BatchingReceiver
+  children:
+  - azure-event-hubs.BatchingReceiver.constructor
+  - azure-event-hubs.BatchingReceiver.create
+  - azure-event-hubs.BatchingReceiver.receive
+  langs:
+  - typeScript
+  type: class
+  summary: 說明批次處理的接收者，其中使用者可以接收訊息的指定的數目的預先定義的時間。
+  extends:
+    name: azure-event-hubs.EventHubReceiver
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.constructor
+  name: BatchingReceiver
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: 具現化新的接收器，從 AMQP `Receiver`。 使用`EventHubClient`。
+  syntax:
+    content: 'new BatchingReceiver(context: ConnectionContext, partitionId: string | number, options?: ReceiveOptions)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: 連接內容。
+    - id: partitionId
+      type:
+      - string | number
+      description: 要接收的資料分割識別碼。
+    - id: options
+      type:
+      - azure-event-hubs.ReceiveOptions
+      description: ''
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立批次接收者。
+  syntax:
+    content: 'static function create(context: ConnectionContext, partitionId: string | number, options?: ReceiveOptions)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: 連接內容。
+    - id: partitionId
+      type:
+      - string | number
+      description: 要從中接收事件 partitionId。
+    - id: options
+      type:
+      - azure-event-hubs.ReceiveOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.BatchingReceiver
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.receive
+  name: receive
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 接收一批的 EventData 物件從事件中樞資料分割指定的計數和指定的最大等待時間 （秒），何者先發生。 這個方法可以用於直接建立收件者物件之後。
+  syntax:
+    content: 'function receive(maxMessageCount: number, maxWaitTimeInSeconds?: number)'
+    parameters:
+    - id: maxMessageCount
+      type:
+      - number
+      description: 最大訊息計數。 是的值必須大於 0。
+    - id: maxWaitTimeInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-hubs.EventData[]>
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.EventHubReceiver
+  spec.typeScript:
+  - name: EventHubReceiver
+    fullName: EventHubReceiver
+    uid: azure-event-hubs.EventHubReceiver
+- uid: azure-event-hubs.ConnectionContext
+  spec.typeScript:
+  - name: ConnectionContext
+    fullName: ConnectionContext
+    uid: azure-event-hubs.ConnectionContext
+- uid: azure-event-hubs.ReceiveOptions
+  spec.typeScript:
+  - name: ReceiveOptions
+    fullName: ReceiveOptions
+    uid: azure-event-hubs.ReceiveOptions
+- uid: Promise<azure-event-hubs.EventData[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+  - name: '[]>'
+    fullName: '[]>'
+- uid: azure-event-hubs.BatchingReceiver
+  spec.typeScript:
+  - name: BatchingReceiver
+    fullName: BatchingReceiver
+    uid: azure-event-hubs.BatchingReceiver
