@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f7bd73b1e22b76513c5e5e8c633dc18760567b58
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: a927f0e321294933af7ce24216ab4b5b85da0e38
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40051896"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41683628"
 items:
 - uid: azure-event-hubs.MessageHeader
   name: MessageHeader
@@ -20,8 +20,9 @@ items:
   langs:
   - typeScript
   type: module
-  summary: 描述訊息的標準標頭屬性的一組已定義。
+  summary: 描述可以在訊息標頭執行的作業。
   package: azure-event-hubs
+  module: MessageHeader
 - uid: azure-event-hubs.MessageHeader.deliveryCount
   name: deliveryCount
   fullName: deliveryCount
@@ -29,7 +30,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number}[deliveryCount]先前的失敗傳遞嘗試次數。'
   optional: true
   syntax:
     content: 'deliveryCount?: number'
@@ -44,7 +45,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{布林值}[長期]指定持續性需求。'
   optional: true
   syntax:
     content: 'durable?: boolean'
@@ -59,7 +60,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{布林值}[firstAcquirer]如果此值為 true，則此訊息不取得由任何其他連結。 Ifthis 值為 false，則此訊息可能先前已取得由另一個連結或連結。'
   optional: true
   syntax:
     content: 'firstAcquirer?: boolean'
@@ -73,14 +74,14 @@ items:
   type: function
   langs:
   - typeScript
-  summary: ''
+  summary: 將 MessageHeader AmqpMessageHeader。
   syntax:
     content: 'function fromAmqpMessageProperties(props: AmqpMessageHeader)'
     parameters:
     - id: props
       type:
       - AmqpMessageHeader
-      description: ''
+      description: Amqp 訊息標頭
     return:
       type:
       - azure-event-hubs.MessageHeader
@@ -92,7 +93,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number}[優先順序]相對的訊息的優先權。 較高的數字表示較高優先權的訊息。'
   optional: true
   syntax:
     content: 'priority?: number'
@@ -106,14 +107,14 @@ items:
   type: function
   langs:
   - typeScript
-  summary: ''
+  summary: 將 AmqpMessageHeader MessageHeader。
   syntax:
     content: 'function toAmqpMessageHeader(props: MessageHeader)'
     parameters:
     - id: props
       type:
       - azure-event-hubs.MessageHeader
-      description: ''
+      description: 訊息標頭。
     return:
       type:
       - AmqpMessageHeader
@@ -125,7 +126,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number}[ttl] 的存留時間以毫秒為單位。'
   optional: true
   syntax:
     content: 'ttl?: number'
