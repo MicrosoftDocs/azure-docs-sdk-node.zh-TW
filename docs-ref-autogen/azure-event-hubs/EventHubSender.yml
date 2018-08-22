@@ -1,0 +1,200 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fd20d5dca0499e15eff272445fd330effcc1b8a6
+ms.sourcegitcommit: 6341d50df9591697ca6d5ae0e657a9840289d8c9
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40473341"
+items:
+- uid: azure-event-hubs.EventHubSender
+  name: EventHubSender
+  fullName: EventHubSender
+  children:
+  - azure-event-hubs.EventHubSender.close
+  - azure-event-hubs.EventHubSender.create
+  - azure-event-hubs.EventHubSender.detached
+  - azure-event-hubs.EventHubSender.constructor
+  - azure-event-hubs.EventHubSender.isOpen
+  - azure-event-hubs.EventHubSender.send
+  - azure-event-hubs.EventHubSender.sendBatch
+  - azure-event-hubs.EventHubSender.senderLock
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="adf63-101">描述將事件資料傳送至事件中樞 EventHubSender。</span><span class="sxs-lookup"><span data-stu-id="adf63-101">Describes the EventHubSender that will send event data to EventHub.</span></span>
+  extends:
+    name: azure-event-hubs.LinkEntity
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adf63-102">刪除 寄件者從內容。</span><span class="sxs-lookup"><span data-stu-id="adf63-102">Deletes the sender fromt the context.</span></span> <span data-ttu-id="adf63-103">清除權杖更新計時器。</span><span class="sxs-lookup"><span data-stu-id="adf63-103">Clears the token renewal timer.</span></span> <span data-ttu-id="adf63-104">關閉 [寄件者] 連結。</span><span class="sxs-lookup"><span data-stu-id="adf63-104">Closes the sender link.</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adf63-105">如果它不存在於內容，或傳回內容中有一個，請建立新的傳送者指定的事件中樞，並選擇性地指定資料分割。</span><span class="sxs-lookup"><span data-stu-id="adf63-105">Creates a new sender to the given event hub, and optionally to a given partition if it is not present in the context or returns the one present in the context.</span></span>
+  syntax:
+    content: 'static function create(context: ConnectionContext, partitionId?: string | number)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: ''
+    - id: partitionId
+      type:
+      - string | number
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventHubSender
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.detached
+  name: detached
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adf63-106">如有必要，則會重新連接 [寄件者] 連結。</span><span class="sxs-lookup"><span data-stu-id="adf63-106">Will reconnect the sender link if necessary.</span></span>
+  syntax:
+    content: 'function detached(senderError?: AmqpError | Error)'
+    parameters:
+    - id: senderError
+      type:
+      - AmqpError | Error
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.constructor
+  name: EventHubSender
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adf63-107">建立新的 EventHubSender 執行個體。</span><span class="sxs-lookup"><span data-stu-id="adf63-107">Creates a new EventHubSender instance.</span></span>
+  syntax:
+    content: 'new EventHubSender(context: ConnectionContext, partitionId?: string | number, name?: string)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: <span data-ttu-id="adf63-108">連接內容。</span><span class="sxs-lookup"><span data-stu-id="adf63-108">The connection context.</span></span>
+    - id: partitionId
+      type:
+      - string | number
+      description: ''
+      optional: true
+    - id: name
+      type:
+      - string
+      description: ''
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.isOpen
+  name: isOpen
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adf63-109">判斷是否開啟 AMQP 寄件者的連結。</span><span class="sxs-lookup"><span data-stu-id="adf63-109">Determines whether the AMQP sender link is open.</span></span> <span data-ttu-id="adf63-110">如果開啟則會傳回 true 的其他會傳回 false。</span><span class="sxs-lookup"><span data-stu-id="adf63-110">If open then returns true else returns false.</span></span>
+  syntax:
+    content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.send
+  name: send
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adf63-111">傳送指定的訊息，使用給定的選項，此連結</span><span class="sxs-lookup"><span data-stu-id="adf63-111">Sends the given message, with the given options on this link</span></span>
+  syntax:
+    content: 'function send(data: EventData)'
+    parameters:
+    - id: data
+      type:
+      - azure-event-hubs.EventData
+      description: <span data-ttu-id="adf63-112">要傳送的訊息。</span><span class="sxs-lookup"><span data-stu-id="adf63-112">Message to send.</span></span>  <span data-ttu-id="adf63-113">將會傳送為 UTF8 編碼的 JSON 字串。</span><span class="sxs-lookup"><span data-stu-id="adf63-113">Will be sent as UTF8-encoded JSON string.</span></span>
+    return:
+      type:
+      - Promise<Delivery>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.sendBatch
+  name: sendBatch
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adf63-114">傳送至事件中樞的 EventData 批次。</span><span class="sxs-lookup"><span data-stu-id="adf63-114">Send a batch of EventData to the EventHub.</span></span> <span data-ttu-id="adf63-115">「 Message_annotations"、"application_properties 」 和 「 屬性 」 的第一個訊息將會設定為的信封 （批次訊息）。</span><span class="sxs-lookup"><span data-stu-id="adf63-115">The "message_annotations", "application_properties" and "properties" of the first message will be set as that of the envelope (batch message).</span></span>
+  syntax:
+    content: 'function sendBatch(datas: EventData[])'
+    parameters:
+    - id: datas
+      type:
+      - azure-event-hubs.EventData[]
+      description: <span data-ttu-id="adf63-116">要在批次訊息中傳送的 EventData 物件的陣列。</span><span class="sxs-lookup"><span data-stu-id="adf63-116">An array of EventData objects to be sent in a Batch message.</span></span>
+    return:
+      type:
+      - Promise<Delivery>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.senderLock
+  name: senderLock
+  fullName: senderLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'senderLock: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.LinkEntity
+  spec.typeScript:
+  - name: LinkEntity
+    fullName: LinkEntity
+    uid: azure-event-hubs.LinkEntity
+- uid: azure-event-hubs.ConnectionContext
+  spec.typeScript:
+  - name: ConnectionContext
+    fullName: ConnectionContext
+    uid: azure-event-hubs.ConnectionContext
+- uid: azure-event-hubs.EventData
+  spec.typeScript:
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+- uid: azure-event-hubs.EventData[]
+  spec.typeScript:
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-event-hubs.EventHubSender
+  spec.typeScript:
+  - name: EventHubSender
+    fullName: EventHubSender
+    uid: azure-event-hubs.EventHubSender
