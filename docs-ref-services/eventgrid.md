@@ -12,33 +12,33 @@ ms.devlang: nodejs
 ms.service: event-grid
 ms.custom: devcenter
 ms.openlocfilehash: bddf4efc1eda186aee92d30af24125823c7a8f7b
-ms.sourcegitcommit: f830f2f37429b32bbcfa856ad82a817ae2658341
+ms.sourcegitcommit: da60ea91d4215d738b1e0df82066f0fc337ad85a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46275719"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47347133"
 ---
-# <a name="azure-event-grid-libraries-for-nodejs"></a><span data-ttu-id="d1d12-103">適用於 Node.js 的 Azure Event Grid 程式庫</span><span class="sxs-lookup"><span data-stu-id="d1d12-103">Azure Event Grid libraries for Node.js</span></span>
+# <a name="azure-event-grid-libraries-for-nodejs"></a><span data-ttu-id="c5c37-103">適用於 Node.js 的 Azure Event Grid 程式庫</span><span class="sxs-lookup"><span data-stu-id="c5c37-103">Azure Event Grid libraries for Node.js</span></span>
 
-<span data-ttu-id="d1d12-104">建置事件導向的應用程式會傾聽並回應來自 Azure 服務和自訂來源的事件，這些事件會使用由 Azure Event Grid 處理的簡單型事件。</span><span class="sxs-lookup"><span data-stu-id="d1d12-104">Build event-driven applications that listen and react to events from Azure services and custom sources using simple HTTP-based event handling with Azure Event Grid.</span></span>
+<span data-ttu-id="c5c37-104">建置事件導向的應用程式會傾聽並回應來自 Azure 服務和自訂來源的事件，這些事件會使用由 Azure Event Grid 處理的簡單型事件。</span><span class="sxs-lookup"><span data-stu-id="c5c37-104">Build event-driven applications that listen and react to events from Azure services and custom sources using simple HTTP-based event handling with Azure Event Grid.</span></span>
 
-<span data-ttu-id="d1d12-105">[進一步了解 ](/azure/event-grid/overview)Azure Event Grid 的相關資訊，並參考 [Azure Blob 儲存體教學課程](/azure/storage/blobs/storage-blob-event-quickstart)開始使用。</span><span class="sxs-lookup"><span data-stu-id="d1d12-105">[Learn more](/azure/event-grid/overview) about Azure Event Grid and get started with the [Azure Blob storage event tutorial](/azure/storage/blobs/storage-blob-event-quickstart).</span></span> 
+<span data-ttu-id="c5c37-105">[進一步了解 ](/azure/event-grid/overview)Azure Event Grid 的相關資訊，並參考 [Azure Blob 儲存體教學課程](/azure/storage/blobs/storage-blob-event-quickstart)開始使用。</span><span class="sxs-lookup"><span data-stu-id="c5c37-105">[Learn more](/azure/event-grid/overview) about Azure Event Grid and get started with the [Azure Blob storage event tutorial](/azure/storage/blobs/storage-blob-event-quickstart).</span></span> 
 
-## <a name="publish-sdk"></a><span data-ttu-id="d1d12-106">發佈 SDK</span><span class="sxs-lookup"><span data-stu-id="d1d12-106">Publish SDK</span></span>
+## <a name="publish-sdk"></a><span data-ttu-id="c5c37-106">發佈 SDK</span><span class="sxs-lookup"><span data-stu-id="c5c37-106">Publish SDK</span></span>
 
-<span data-ttu-id="d1d12-107">使用 Azure Event Grid 發佈 SDK 來建立事件、驗證並發佈至主題。</span><span class="sxs-lookup"><span data-stu-id="d1d12-107">Create events, authenticate, and post to topics using the Azure Event Grid publish SDK.</span></span>
+<span data-ttu-id="c5c37-107">使用 Azure Event Grid 發佈 SDK 來建立事件、驗證並發佈至主題。</span><span class="sxs-lookup"><span data-stu-id="c5c37-107">Create events, authenticate, and post to topics using the Azure Event Grid publish SDK.</span></span>
 
-### <a name="installation"></a><span data-ttu-id="d1d12-108">安裝</span><span class="sxs-lookup"><span data-stu-id="d1d12-108">Installation</span></span>
+### <a name="installation"></a><span data-ttu-id="c5c37-108">安裝</span><span class="sxs-lookup"><span data-stu-id="c5c37-108">Installation</span></span>
 
-<span data-ttu-id="d1d12-109">使用 npm 將模組新增到您的專案中：</span><span class="sxs-lookup"><span data-stu-id="d1d12-109">Add the module to your project with npm:</span></span>
+<span data-ttu-id="c5c37-109">使用 npm 將模組新增到您的專案中：</span><span class="sxs-lookup"><span data-stu-id="c5c37-109">Add the module to your project with npm:</span></span>
 
 ```bash
 npm install azure-eventgrid
 ```
 
-### <a name="example-code"></a><span data-ttu-id="d1d12-110">程式碼範例</span><span class="sxs-lookup"><span data-stu-id="d1d12-110">Example code</span></span>
+### <a name="example-code"></a><span data-ttu-id="c5c37-110">程式碼範例</span><span class="sxs-lookup"><span data-stu-id="c5c37-110">Example code</span></span>
 
-<span data-ttu-id="d1d12-111">下列程式碼片段會將模擬事件發佈至 Event Grid 主題。</span><span class="sxs-lookup"><span data-stu-id="d1d12-111">The following code segment publishes a mock event to a Event Grid topic.</span></span> <span data-ttu-id="d1d12-112">您可以從 Azure 入口網站或透過 Azure CLI，擷取端點和主題存取金鑰：</span><span class="sxs-lookup"><span data-stu-id="d1d12-112">You can retrieve the endpoint and topic access keys from the Azure Portal or through the Azure CLI:</span></span>
+<span data-ttu-id="c5c37-111">下列程式碼片段會將模擬事件發佈至 Event Grid 主題。</span><span class="sxs-lookup"><span data-stu-id="c5c37-111">The following code segment publishes a mock event to a Event Grid topic.</span></span> <span data-ttu-id="c5c37-112">您可以從 Azure 入口網站或透過 Azure CLI，擷取端點和主題存取金鑰：</span><span class="sxs-lookup"><span data-stu-id="c5c37-112">You can retrieve the endpoint and topic access keys from the Azure Portal or through the Azure CLI:</span></span>
 
 ```azurecli-interactive
 endpoint=$(az eventgrid topic show --name <topic_name> -g gridResourceGroup --query "endpoint" --output tsv)
@@ -73,7 +73,7 @@ return EGClient.publishEvents(topicHostName, events).then((result) => {
 });
 ```
 
-<span data-ttu-id="d1d12-113">此範例顯示如何從 Azure 儲存體處理事件：</span><span class="sxs-lookup"><span data-stu-id="d1d12-113">This sample shows how to handle an event from Azure Storage:</span></span>
+<span data-ttu-id="c5c37-113">此範例顯示如何從 Azure 儲存體處理事件：</span><span class="sxs-lookup"><span data-stu-id="c5c37-113">This sample shows how to handle an event from Azure Storage:</span></span>
 
 ```javascript
 var http = require('http');
@@ -104,21 +104,21 @@ module.exports = function (context, req) {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="d1d12-114">探索用戶端 API</span><span class="sxs-lookup"><span data-stu-id="d1d12-114">Explore the client APIs</span></span>](/javascript/api/overview/azure/eventgrid/client)
+> [<span data-ttu-id="c5c37-114">探索用戶端 API</span><span class="sxs-lookup"><span data-stu-id="c5c37-114">Explore the client APIs</span></span>](/javascript/api/overview/azure/eventgrid/client)
 
-## <a name="management-sdk"></a><span data-ttu-id="d1d12-115">管理 SDK</span><span class="sxs-lookup"><span data-stu-id="d1d12-115">Management SDK</span></span>
+## <a name="management-sdk"></a><span data-ttu-id="c5c37-115">管理 SDK</span><span class="sxs-lookup"><span data-stu-id="c5c37-115">Management SDK</span></span>
 
-<span data-ttu-id="d1d12-116">透過管理 SDK 來建立、更新或刪除 Event Grid 執行個體、主題和訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="d1d12-116">Create, update, or delete Event Grid instances, topics, and subscriptions with the management SDK.</span></span>
+<span data-ttu-id="c5c37-116">透過管理 SDK 來建立、更新或刪除 Event Grid 執行個體、主題和訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="c5c37-116">Create, update, or delete Event Grid instances, topics, and subscriptions with the management SDK.</span></span>
 
-### <a name="installation"></a><span data-ttu-id="d1d12-117">安裝</span><span class="sxs-lookup"><span data-stu-id="d1d12-117">Installation</span></span>
+### <a name="installation"></a><span data-ttu-id="c5c37-117">安裝</span><span class="sxs-lookup"><span data-stu-id="c5c37-117">Installation</span></span>
 
 ```
 npm install azure-arm-eventgrid
 ```
 
-### <a name="example-code"></a><span data-ttu-id="d1d12-118">程式碼範例</span><span class="sxs-lookup"><span data-stu-id="d1d12-118">Example code</span></span>
+### <a name="example-code"></a><span data-ttu-id="c5c37-118">程式碼範例</span><span class="sxs-lookup"><span data-stu-id="c5c37-118">Example code</span></span>
 
-<span data-ttu-id="d1d12-119">下列程式碼會建立 Event Grid 主題 `topic1`，並傳回與新建立主題相關聯的存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="d1d12-119">The following code creates an Event Grid topic `topic1` and returns the access keys associated with the newly created topic.</span></span>
+<span data-ttu-id="c5c37-119">下列程式碼會建立 Event Grid 主題 `topic1`，並傳回與新建立主題相關聯的存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="c5c37-119">The following code creates an Event Grid topic `topic1` and returns the access keys associated with the newly created topic.</span></span>
 
 ```javascript
 var msRestAzure = require('ms-rest-azure');
@@ -138,8 +138,8 @@ msRestAzure.interactiveLogin(function(err, credentials) {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="d1d12-120">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="d1d12-120">Explore the management APIs</span></span>](/javascript/api/overview/azure/eventgrid/management)
+> [<span data-ttu-id="c5c37-120">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="c5c37-120">Explore the management APIs</span></span>](/javascript/api/overview/azure/eventgrid/management)
 
-## <a name="learn-more"></a><span data-ttu-id="d1d12-121">深入了解</span><span class="sxs-lookup"><span data-stu-id="d1d12-121">Learn more</span></span>
+## <a name="learn-more"></a><span data-ttu-id="c5c37-121">深入了解</span><span class="sxs-lookup"><span data-stu-id="c5c37-121">Learn more</span></span>
 
-- [<span data-ttu-id="d1d12-122">使用 Event Grid SDK 接收事件</span><span class="sxs-lookup"><span data-stu-id="d1d12-122">Receive events using the Event Grid SDK</span></span>](/azure/event-grid/receive-events)
+- [<span data-ttu-id="c5c37-122">使用 Event Grid SDK 接收事件</span><span class="sxs-lookup"><span data-stu-id="c5c37-122">Receive events using the Event Grid SDK</span></span>](/azure/event-grid/receive-events)
