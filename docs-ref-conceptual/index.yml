@@ -1,21 +1,20 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 3d6625cbda0ec2f44347fb1b08073404b4dda7ca
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 0339f131ecdfa5e21aeebca9ee94a1085829a83c
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "41547487"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48551866"
 documentType: LandingData
-title: 適用於 Node.js 開發人員的 Azure
+title: 適用於 JavaScript 開發人員的 Azure
 metadata:
-  document_id: d849f3b1-92db-460b-93c2-f1b8d0567b49
-  title: 適用於 Node.js 開發人員的 Azure - 教學課程、API 參考
-  description: 請使用下列資源來尋找適用於 .Node.js 開發人員的優質快速入門、教學課程和工具，以透過 Azure 開始開發應用程式。
+  title: 適用於 Node.js 開發人員的 Azure - 教學課程、工具與 API 參考
+  description: 請使用專為 Node.js 開發人員 撰寫的教學課程、課程模組與工具，透過 Azure 開始開發應用程式。
   keywords: Azure, Node.js, SDK, API, npm
-  author: tomarcher
-  ms.author: tarcher
+  author: rloutlaw
+  ms.author: routlaw
   manager: douge
-  ms.date: 07/14/2017
+  ms.date: 07/11/2018
   ms.topic: landing-page
   ms.prod: azure
   featureFlags:
@@ -24,104 +23,268 @@ metadata:
   ms.devlang: nodejs
   ms.service: multiple
 sections:
-- items:
-  - type: markdown
-    text: >
-      請使用下列資源來尋找適用於 .Node.js 開發人員的優質快速入門、教學課程和工具，以透過 Azure 開始開發應用程式。
-- items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 2
-    items:
-    - href: https://docs.microsoft.com/azure/app-service/containers/quickstart-nodejs
-      html: <p>將第一個 Node.js 應用程式部署至 Azure</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: 開始使用
-    - href: https://azure.microsoft.com/resources/samples/?platform=nodejs
-      html: <p>使用 Node.js 的 Azure 程式碼範例</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-samples.svg
-      title: 程式碼範例
-    - href: https://docs.microsoft.com/javascript/azure/node-azure-tools
-      html: <p>開發人員工具</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_download-install.svg
-      title: 工具
-    - href: https://docs.microsoft.com/javascript/api?view=azure-node-latest
-      html: <p>適用於 Azure 服務的 npm 套件</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
-      title: API 參考
-- title: 5 分鐘快速入門
+- title: 快速開始使用
   items:
-  - type: paragraph
-    text: 了解如何使用 Azure 服務來建置 Node.js 應用程式。
+  - type: paragragh
+    html: <p>看看在 Azure 上開始使用 Node.js 有多麼容易！
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items:
-    - href: https://code.visualstudio.com/docs/nodejs/nodejs-deployment?utm_source=msdocs&utm_medium=node_hub
-      title: 透過 Visual Studio Code 部署應用程式
+    - href: https://aka.ms/try-azure-node
+      html: <p>在免費的沙箱環境中部署第一個應用程式</p>
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+      title: 免費開始使用！
+- title: 裝載應用程式
+  items:
+  - type: paragragh
+    html: <p>在 Azure 上建置、部署及縮放 Node.js 應用程式
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://code.visualstudio.com/tutorials/static-website/getting-started
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_React.svg
+      title: 靜態網站
+      html: <p>使用 Azure 儲存體裝載您的 React、Angular 和 Vue 應用程式</p>
+    - href: https://code.visualstudio.com/tutorials/app-service-extension/getting-started
+      html: <p>使用 App Service 部署快速應用程式</p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
-    - href: http://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function
-      title: 建立 Node.js 無伺服器函式
+      title: 完整堆疊
+    - href: https://code.visualstudio.com/tutorials/docker-extension/getting-started
+      html: <p>在 Azure 上建置及部署 Docker 容器和微服務</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/ContainerInstances.svg
+      title: 容器應用程式
+    - href: https://code.visualstudio.com/tutorials/functions-extension/getting-started
+      html: <p>使用 Azure Functions 建立無伺服器環境</p>
       image:
         src: https://docs.microsoft.com/azure/media/index/azurefunctions.svg
-    - href: https://docs.microsoft.com/azure/cosmos-db/create-mongodb-nodejs
-      title: 使用 Cosmos DB 建置 MEAN 應用程式
-      image:
-        src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
-    - href: https://docs.microsoft.com/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=/vsts/deploy-azure/toc.json&bc=/vsts/deploy-azure/breadcrumb/toc.json
-      title: 使用 Node.js 進行 Azure DevOps
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_vs-team-services.svg
-    - href: https://docs.microsoft.com/azure/container-service/kubernetes/container-service-kubernetes-walkthrough
-      title: 部署至 Linux 和 Kubernetes
-      image:
-        src: media/k8s_logo.svg
-- title: 社群
+      title: 無伺服器應用程式與 API
+- title: 儲存資料
   items:
+  - type: paragragh
+    html: <p>管理檔案或資料庫中的資料</p>
   - type: list
     style: cards
     className: cardsM
-    columns: 2
+    columns: 3
     items:
-    - href: https://www.youtube.com/watch?v=9t2GWFegnkQ&list=PLlrxD0HtieHgugDxYBujMFnvSveH4fgWN
-      html: <p>有關 JavaScript、Node.js 和 Web 的顯示</p>
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/Storage.svg
+      title: 檔案儲存體
+      html: <p>將檔案安全地儲存在雲端儲存體中。</p>
+      href: https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-nodejs
+    - href: https://docs.microsoft.com/azure/cosmos-db/create-mongodb-nodejs
+      title: MongoDB
+      html: <p>在 Node 應用程式中使用 MongoDB 和 CosmosDB</p>
       image:
-        src: media/5-things-logo.svg
-      title: 5 個項目
-- title: 針對 Pluralsight 的免費 Node.js 和 Azure 影片訓練
+        src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/RedisCache.svg
+      title: Redis 快取
+      html: <p>將資料讀取和寫入至 Redis 的記憶體內資料存放區</p>
+      href: https://docs.microsoft.com/azure/redis-cache/cache-nodejs-get-started
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/PostgreSQL.svg
+      title: PostgreSQL
+      html: <p>建立和管理雲端 Postgres 資料庫</p>
+      href: https://docs.microsoft.com/azure/postgresql/connect-nodejs
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/MySQL.SVG
+      title: MySQL
+      html: <p>建立和管理雲端 MySQL 資料庫</p>
+      href: https://docs.microsoft.com/azure/mysql/connect-nodejs
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/SQLDatabase.svg
+      title: 連接字串
+      html: <p>建立和管理雲端 SQL 資料庫</p>
+      href: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs
+- title: 驗證和安全性
+  items:
+  - type: paragragh
+    html: <p>保護應用程式、資源及雲端密碼和金鑰</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-devquickstarts-webapi-nodejs
+      html: <p>使用 Passport 策略驗證使用者</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg
+      title: Active Directory
+    - href: https://docs.microsoft.com/en-us/azure/key-vault/quick-create-cli
+      html: <p>將 API 金鑰和祕密安全地儲存在您的應用程式中</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/KeyVault.svg
+      title: Key Vault
+    - href: https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-devquickstarts-web-node
+      html: <p>使用 Passport 和 Azure AD 將 Facebook、Twitter 或 GitHub 登入資料新增至您的 Web 應用程式</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg
+      title: Active Directory B2C
+- title: 監視和記錄
+  items:
+  - type: paragragh
+    html: <p>監視資源健康狀態，並偵測應用程式中的問題</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/azure/application-insights/app-insights-nodejs-quick-start
+      html: <p>監視要求，並找出應用程式中的錯誤</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/ApplicationInsights.svg
+      title: Application Insights
+    - href: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal
+      html: <p>檢閱計量，並設定適用於 Azure 資源的警示</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/azure_event_grid.svg
+      title: Event Grid
+    - href: https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-collect-linux-computer
+      html: <p>檢閱單一位置中的環境相關資料</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/operationsmanagementsuite.svg
+      title: Log Analytics
+    - href: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/
+      html: <p>取得詳細的效能和使用量資料</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/AzureMonitoring.svg
+      title: Azure 監視器
+- title: 偵錯與診斷
+  items:
+  - type: paragragh
+    html: <p>使用一流工具找出並修正生產環境的錯誤 (bug)</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach
+      html: <p>將記錄陳述式新增至生產環境應用程式，而不必重新部署</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_tools.svg
+      title: 記錄點
+    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_remote-debugging
+      html: <p>將偵錯工具附加至測試或生產環境執行個體</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_debug.svg
+      title: 遠端偵錯
+    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+      html: <p>尋找常見 Node.js 錯誤的指南</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_investigate.svg
+      title: 為應用程式失敗問題進行疑難排解
+    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+      html: <p>自動附加偵錯工具以執行 Node 流程</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+      title: 在 VS Code 中偵錯
+- title: 訊息
+  items:
+  - type: paragragh
+    html: <p>將裝置和應用程式連線並進行管理</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>使用 HTTP 式事件傳遞消除輪詢</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/azure_event_grid.svg
+      title: Event Grid
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>高度可靠的傳訊服務</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/IOT_edge_50.svg
+      title: 服務匯流排
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>簡單的可擴充訊息佇列</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
+      title: 佇列儲存體
+- title: IoT
+  items:
+  - type: paragragh
+    html: <p>將裝置和應用程式連線並進行管理</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>使用 IoT 中樞管理數千部裝置</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/IOT_edge_50.svg
+      title: 連線及管理 IoT 裝置
+    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+      html: <p>使用事件中樞收集數十億個資料點</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/EventHubs.svg
+      title: 巨量資料串流
+- title: DevOps
+  items:
+  - type: paragragh
+    html: <p>建置、測試及管理應用程式版本</p>
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts
+      html: <p>新增 Jenkins、CircleCI 或 Travis 以管理組建</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_scrum.svg
+      title: 持續整合
+    - href: https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts
+      html: <p>建置及部署 VSTS 小組的 Node 應用程式</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_vs-team-services.svg
+      title: VSTS
+- title: Azure SDK for Node.js
   items:
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items:
-    - href: https://www.pluralsight.com/courses/developing-nodejs-microsoft-azure-getting-started?twoid=d6abac77-7dcc-4d33-9e03-f85e78989f02
+    - href: https://docs.microsoft.com/en-us/javascript/azure/node-sdk-azure-get-started
+      html: <p>設定本機開發環境和測試 Node SDK 磁碟</p>
       image:
-        src: https://docs.microsoft.com/media/logos/logo_pluralsight.svg
-      title: 開始使用：Azure 上的 Node.js
-- title: 範例
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: 開始使用 SDK
+    - href: https://code.visualstudio.com/docs/azure/extensions
+      html: <p>適用於 Azure SDK 的完整參考文件</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+      title: 參考
+    - href: https://azure.microsoft.com/en-us/resources/samples/?sort=0&platform=nodejs
+      html: <p>適用於 Azure SDK 的 GitHub 存放庫範例</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-samples.svg
+      title: SDK 範例
+- title: 工具和擴充功能
   items:
   - type: list
-    style: unordered
+    style: cards
+    className: cardsM
+    columns: 3
     items:
-    - html: <a href="https://azure.microsoft.com/resources/samples/meanjs/">使用 Azure Cosmos DB 開發 MEAN 應用程式</a>
-    - html: <a href="https://azure.microsoft.com/resources/samples/azure-cosmos-db-graph-nodejs-getting-started/">使用 Azure Cosmos DB 開發具有 Gremlin 圖表資料的 Node.js 應用程式</a>
-    - html: <a href="https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/">開始使用 Node.js 應用程式中的 Azure Blob 服務</a>
-    - html: <a href="https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/">將 Azure AD 整合到 Node.js 應用程式</a>
-    - html: <a href="https://azure.microsoft.com/resources/samples/key-vault-node-getting-started">透過 Azure 開始使用 Key Vault</a>
-- title: 逐步教學課程
-  items:
-  - type: paragraph
-    text: 了解如何使用 Node.js 應用程式中的 Azure 服務和工具。
-  - type: list
-    style: unordered
-    items:
-    - html: <a href="https://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app">在 Azure 中建置 Node.js 和 MongoDB 應用程式</a>
-    - html: <a href="https://docs.microsoft.com/azure/app-service-api/app-service-api-nodejs-api-app">建置 Node.js RESTful API 並將它部署至 Azure 中的 API 應用程式</a>
+    - href: https://code.visualstudio.com/docs/azure/extensions
+      html: <p>直接透過延伸模組從 Visual Studio Code 使用 Azure</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+      title: Visual Studio Code
+    - href: https://docs.microsoft.com/cli/azure
+      html: <p><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">從命令列管理 Azure 資源</a></p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/azure_dev-7.svg
+      title: Azure CLI 2.0
