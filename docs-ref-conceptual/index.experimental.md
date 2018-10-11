@@ -5,11 +5,11 @@ title: Node.js 開發人員中心 | Microsoft Docs
 description: 了解如何使用 Azure 在雲端中開發和部署 Node.js 應用程式。
 ms.topic: hub-page
 ms.openlocfilehash: e2959c6ec20f07bc672cae05aebd7be039ca641e
-ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48488540"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "48981772"
 ---
 <div id="main" class="v2">
     <div class="container">
