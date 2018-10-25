@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Resources
-ms.openlocfilehash: 9c5eb1c2f8241d50bd459cda25216b4ed12535ce
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: ac82356f0f9f566e29cb2c89181a0cedf2f62f87
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34261647"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49748253"
 ---
 # <a name="azure-resource-modules-for-nodejs"></a>適用於 Node.js 的 Azure Resource Manager 模組
 
@@ -27,14 +27,14 @@ Azure Resource Manager 可讓您部署和管理 Azure 解決方案的基礎結�
 
 使用 npm 來安裝適用於 Node.js 的 Azure Resource Manager 模組
 
-### <a name="management"></a>管理
+### <a name="management"></a>管理性
 
 ```bash
 npm install azure-arm-resource
 ```
 
-##<a name="example"></a>範例
+## <a name="example"></a>範例
 
-##<a name="samples"></a>範例
+## <a name="samples"></a>範例
 
 深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。

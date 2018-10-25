@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Server Management
-ms.openlocfilehash: bd9577bf758552227a98a81b756a81ce05239be2
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: e712bf500bef94327f49a05e4ae31e5d3eb0400d
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260421"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49674263"
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a>適用於 Node.js 的 Azure 伺服器管理模組
 
@@ -28,14 +28,14 @@ Azure 伺服器管理員可讓您管理節點、閘道、工作階段，以及 P
 
 使用 npm 來安裝適用於 Node.js 的 Azure 伺服器管理模組
 
-### <a name="management"></a>管理
+### <a name="management"></a>管理性
 
 ```bash
 npm install azure-arm-servermanagement
 ```
 
-##<a name="example"></a>範例
+## <a name="example"></a>範例
 
-##<a name="samples"></a>範例
+## <a name="samples"></a>範例
 
 深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。

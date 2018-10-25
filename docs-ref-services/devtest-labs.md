@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
-ms.openlocfilehash: 5bd010d26ca11f9909191f25128b9bdb89811fd5
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 4528bf6a09bc86d23bfec982988added1aa3e257
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49694913"
 ---
 # <a name="azure-devtest-labs-modules-for-nodejs"></a>適用於 Node.js 的 Azure DevTest Labs 模組
 
@@ -53,8 +53,6 @@ msRestAzure
     console.log('Details of lab:');
     console.dir(lab, { depth: null, colors: true });
   });
-
-
 ```
 
 ## <a name="samples"></a>範例

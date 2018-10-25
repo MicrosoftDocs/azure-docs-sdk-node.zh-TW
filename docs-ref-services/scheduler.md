@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Scheduler
-ms.openlocfilehash: d52a61a786a86b21bc48752e6531a000ae1aefde
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 9a842919fddb3d6448d5a4e951dc58dd0d3211e0
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260791"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49747473"
 ---
 # <a name="azure-scheduler-modules-for-nodejs"></a>適用於 Node.js 的 Azure 排程器模組
 
