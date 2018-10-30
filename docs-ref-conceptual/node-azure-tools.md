@@ -1,6 +1,6 @@
 ---
-title: Azure 上適用於 Node.js 開發人員的工具 | Microsoft Docs
-description: 在 Azure 上安裝適用於 Node.js 開發的個別工具
+title: Azure 上適用於 JavaScript 開發人員的工具 | Microsoft Docs
+description: 在 Azure 上安裝適用於 JavaScript 開發的個別工具
 services: multiple
 author: rloutlaw
 manager: routlaw
@@ -10,15 +10,15 @@ ms.devlang: nodejs
 ms.topic: article
 ms.date: 11/07/2017
 ms.author: routlaw
-ms.openlocfilehash: 172cc3e1bff763cbf768dce5aa85065da0dd4927
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1c676b1f31fde7b14a16031b78f767a2c59edd5a
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220730"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49726663"
 ---
-# <a name="azure-tools-for-nodejs-developers"></a>適用於 Node.js 開發人員的 Azure 工具
-建議使用下列工具，在 Node.js 上開發 Azure。
+# <a name="azure-tools-for-javascript-developers"></a>適用於 JavaScript 開發人員的 Azure 工具
+建議使用下列工具，在 Azure 上開發 JavaScript 應用程式。
 
 ## <a name="azure-cli"></a>Azure CLI
 Azure CLI 已針對從命令列管理 Azure 資源進行最佳化。
@@ -29,7 +29,7 @@ Azure CLI 已針對從命令列管理 Azure 資源進行最佳化。
 > [安裝 Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
-在任何作業系統上編輯和偵錯 Node.js 應用程式。
+在任何作業系統上編輯和偵錯 JavaScript 應用程式。
 
 ![Visual Studio Code](media/node-azure-tools/vs-code.png)
 
@@ -42,7 +42,7 @@ Azure CLI 已針對從命令列管理 Azure 資源進行最佳化。
 | 工具 | 說明  |
 |:---------:|---------|
 | [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Azure Functions 工具](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | 建立、管理、檢視、偵錯，以及部署函式|
-| [Azure App Service](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![App Service 工具](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | 瀏覽網站和 Azure 入口網站、建立新網站 (僅限 Node.js 上的 Linux) 並部署到各個位置 |
+| [Azure App Service](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![App Service 工具](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | 瀏覽網站和 Azure 入口網站、建立新網站並部署到各個位置 |
 | [Cosmos DB](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)  <br> [![Cosmos DB 工具](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)| 在 Azure 中建立、瀏覽，並更新散佈全球的多模型資料庫 |
 | [Docker](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)   <br> [![Cosmos DB 工具](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)| 管理 Docker 容器和映像、Docker 中樞和 Azure 容器登錄 |
 

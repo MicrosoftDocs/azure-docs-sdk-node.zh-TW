@@ -1,6 +1,6 @@
 ---
-title: 適用於 Node.js 的 Azure 模組
-description: 適用於 Node.js 的 Azure 管理和服務模組概觀
+title: 適用於 JavaScript 的 Azure 模組
+description: 適用於 JavaScript 的 Azure 管理和服務模組概觀
 author: rloutlaw
 ms.author: routlaw
 manager: routlaw
@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 165e1580e408b71b6147e51c41e22bc8fe7277a1
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49672993"
 ---
-# <a name="azure-modules-for-nodejs"></a>適用於 Node.js 的 Azure 模組
+# <a name="azure-modules-for-javascript"></a>適用於 JavaScript 的 Azure 模組
 
-使用適用於 Node.js 的 Azure 模組，管理 Azure 資源並從 Node.js 應用程式連線至服務。 此程式碼可以 [npm 模組](node-sdk-azure-install.md)提供，以便在您的專案中使用。 
+使用適用於 JavaScript 的 Azure 模組，管理 Azure 資源並從 JavaScript 應用程式連線至服務。 此程式碼可以 [npm 模組](node-sdk-azure-install.md)提供，以便在您的專案中使用。 
 
 ## <a name="manage-azure-resources"></a>管理 Azure 資源
 
@@ -85,7 +85,7 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 
 ## <a name="connect-to-azure-services"></a>連線到 Azure 服務
 
-除了使用 Azure 模組在 Azure 中建立和管理資源外，您也可以使用套件來連線到應用程式中的 Azure 雲端服務並加以使用。 例如，您可以更新資料表 SQL Database，或將檔案上傳至 Azure 儲存體。 從[完整清單](node-sdk-azure-install.md)選取特定服務所需的套件，然後瀏覽 [Node.js 開發人員中心](https://azure.microsoft.com/develop/nodejs/)，以取得可供了解如何在應用程式中使用模組的教學課程和程式碼範例。
+除了使用 Azure 模組在 Azure 中建立和管理資源外，您也可以使用套件來連線到應用程式中的 Azure 雲端服務並加以使用。 例如，您可以更新資料表 SQL Database，或將檔案上傳至 Azure 儲存體。 從[完整清單](node-sdk-azure-install.md)選取特定服務所需的套件，然後瀏覽 [JavaScript 開發人員中心](https://azure.microsoft.com/develop/nodejs/)，以取得可供了解如何在應用程式中使用模組的教學課程和程式碼範例。
 
 例如，若要在 Azure 儲存體容器中列印出每個 blob 的內容：
 
