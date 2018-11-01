@@ -10,21 +10,21 @@ ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
 ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49672993"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50310965"
 ---
-# <a name="azure-modules-for-javascript"></a><span data-ttu-id="47f41-103">適用於 JavaScript 的 Azure 模組</span><span class="sxs-lookup"><span data-stu-id="47f41-103">Azure modules for JavaScript</span></span>
+# <a name="azure-modules-for-javascript"></a><span data-ttu-id="f74bd-103">適用於 JavaScript 的 Azure 模組</span><span class="sxs-lookup"><span data-stu-id="f74bd-103">Azure modules for JavaScript</span></span>
 
-<span data-ttu-id="47f41-104">使用適用於 JavaScript 的 Azure 模組，管理 Azure 資源並從 JavaScript 應用程式連線至服務。</span><span class="sxs-lookup"><span data-stu-id="47f41-104">Manage Azure resources and connect to services from your JavaScript applications with the Azure modules for JavaScript.</span></span> <span data-ttu-id="47f41-105">此程式碼可以 [npm 模組](node-sdk-azure-install.md)提供，以便在您的專案中使用。</span><span class="sxs-lookup"><span data-stu-id="47f41-105">The code is available as [npm modules](node-sdk-azure-install.md) for use in your projects.</span></span> 
+<span data-ttu-id="f74bd-104">使用適用於 JavaScript 的 Azure 模組，管理 Azure 資源並從 JavaScript 應用程式連線至服務。</span><span class="sxs-lookup"><span data-stu-id="f74bd-104">Manage Azure resources and connect to services from your JavaScript applications with the Azure modules for JavaScript.</span></span> <span data-ttu-id="f74bd-105">此程式碼可以 [npm 模組](node-sdk-azure-install.md)提供，以便在您的專案中使用。</span><span class="sxs-lookup"><span data-stu-id="f74bd-105">The code is available as [npm modules](node-sdk-azure-install.md) for use in your projects.</span></span> 
 
-## <a name="manage-azure-resources"></a><span data-ttu-id="47f41-106">管理 Azure 資源</span><span class="sxs-lookup"><span data-stu-id="47f41-106">Manage Azure resources</span></span>
+## <a name="manage-azure-resources"></a><span data-ttu-id="f74bd-106">管理 Azure 資源</span><span class="sxs-lookup"><span data-stu-id="f74bd-106">Manage Azure resources</span></span>
 
-<span data-ttu-id="47f41-107">使用管理模組從您的應用程式建立及查詢資源，或建置自己的 Azure 自動化工具。</span><span class="sxs-lookup"><span data-stu-id="47f41-107">Use management modules to create and query resources from your apps or to build your own Azure automation tools.</span></span> 
+<span data-ttu-id="f74bd-107">使用管理模組從您的應用程式建立及查詢資源，或建置自己的 Azure 自動化工具。</span><span class="sxs-lookup"><span data-stu-id="f74bd-107">Use management modules to create and query resources from your apps or to build your own Azure automation tools.</span></span> 
 
-<span data-ttu-id="47f41-108">例如，若要使用現有的網路介面來建立 Linux VM，您需要撰寫下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="47f41-108">For example, to create a Linux VM using an existing network interface, you would write the following code:</span></span>
+<span data-ttu-id="f74bd-108">例如，若要使用現有的網路介面來建立 Linux VM，您需要撰寫下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="f74bd-108">For example, to create a Linux VM using an existing network interface, you would write the following code:</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -81,13 +81,13 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 });
 ```
 
-<span data-ttu-id="47f41-109">請檢閱[安裝指示](node-sdk-azure-install.md)以取得完整的模組清單和[開始使用文章](node-sdk-azure-get-started.md)，以設定驗證和執行程式碼範例，進而針對您自己的 Azure 訂用帳戶建立和更新資源。</span><span class="sxs-lookup"><span data-stu-id="47f41-109">Review the [install instructions](node-sdk-azure-install.md) for a full list of the modules and the [get started article](node-sdk-azure-get-started.md) to set up authentication and run sample code to create and update resources against your own Azure subscription.</span></span> 
+<span data-ttu-id="f74bd-109">請檢閱[安裝指示](node-sdk-azure-install.md)以取得完整的模組清單和[開始使用文章](node-sdk-azure-get-started.md)，以設定驗證和執行程式碼範例，進而針對您自己的 Azure 訂用帳戶建立和更新資源。</span><span class="sxs-lookup"><span data-stu-id="f74bd-109">Review the [install instructions](node-sdk-azure-install.md) for a full list of the modules and the [get started article](node-sdk-azure-get-started.md) to set up authentication and run sample code to create and update resources against your own Azure subscription.</span></span> 
 
-## <a name="connect-to-azure-services"></a><span data-ttu-id="47f41-110">連線到 Azure 服務</span><span class="sxs-lookup"><span data-stu-id="47f41-110">Connect to Azure services</span></span>
+## <a name="connect-to-azure-services"></a><span data-ttu-id="f74bd-110">連線到 Azure 服務</span><span class="sxs-lookup"><span data-stu-id="f74bd-110">Connect to Azure services</span></span>
 
-<span data-ttu-id="47f41-111">除了使用 Azure 模組在 Azure 中建立和管理資源外，您也可以使用套件來連線到應用程式中的 Azure 雲端服務並加以使用。</span><span class="sxs-lookup"><span data-stu-id="47f41-111">In addition to using the Azure modules to create and manage resources within Azure, you can also use packages to connect and use Azure cloud services in your apps.</span></span> <span data-ttu-id="47f41-112">例如，您可以更新資料表 SQL Database，或將檔案上傳至 Azure 儲存體。</span><span class="sxs-lookup"><span data-stu-id="47f41-112">For example, you might update a table SQL Database or upload files to Azure Storage.</span></span> <span data-ttu-id="47f41-113">從[完整清單](node-sdk-azure-install.md)選取特定服務所需的套件，然後瀏覽 [JavaScript 開發人員中心](https://azure.microsoft.com/develop/nodejs/)，以取得可供了解如何在應用程式中使用模組的教學課程和程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="47f41-113">Select the package you need for a particular service from the [complete list](node-sdk-azure-install.md) and visit the [JavaScript developer center](https://azure.microsoft.com/develop/nodejs/) for tutorials and sample code to learn how to use the modules in your apps.</span></span>
+<span data-ttu-id="f74bd-111">除了使用 Azure 模組在 Azure 中建立和管理資源外，您也可以使用套件來連線到應用程式中的 Azure 雲端服務並加以使用。</span><span class="sxs-lookup"><span data-stu-id="f74bd-111">In addition to using the Azure modules to create and manage resources within Azure, you can also use packages to connect and use Azure cloud services in your apps.</span></span> <span data-ttu-id="f74bd-112">例如，您可以更新資料表 SQL Database，或將檔案上傳至 Azure 儲存體。</span><span class="sxs-lookup"><span data-stu-id="f74bd-112">For example, you might update a table SQL Database or upload files to Azure Storage.</span></span> <span data-ttu-id="f74bd-113">從[完整清單](node-sdk-azure-install.md)選取特定服務所需的套件，然後瀏覽 [JavaScript 開發人員中心](https://azure.microsoft.com/develop/nodejs/)，以取得可供了解如何在應用程式中使用模組的教學課程和程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="f74bd-113">Select the package you need for a particular service from the [complete list](node-sdk-azure-install.md) and visit the [JavaScript developer center](https://azure.microsoft.com/develop/nodejs/) for tutorials and sample code to learn how to use the modules in your apps.</span></span>
 
-<span data-ttu-id="47f41-114">例如，若要在 Azure 儲存體容器中列印出每個 blob 的內容：</span><span class="sxs-lookup"><span data-stu-id="47f41-114">For example, to print out the contents of every blob in an Azure storage container:</span></span>
+<span data-ttu-id="f74bd-114">例如，若要在 Azure 儲存體容器中列印出每個 blob 的內容：</span><span class="sxs-lookup"><span data-stu-id="f74bd-114">For example, to print out the contents of every blob in an Azure storage container:</span></span>
 
 ```javascript
 var azure = require('azure-storage');
@@ -98,12 +98,12 @@ blobService.listBlobsSegmented('testcontainer', null, function(error, result, re
 });
 ```
 
-## <a name="sample-code-and-reference"></a><span data-ttu-id="47f41-115">程式碼範例和參考</span><span class="sxs-lookup"><span data-stu-id="47f41-115">Sample code and reference</span></span>
+## <a name="sample-code-and-reference"></a><span data-ttu-id="f74bd-115">程式碼範例和參考</span><span class="sxs-lookup"><span data-stu-id="f74bd-115">Sample code and reference</span></span>
 
-<span data-ttu-id="47f41-116">下列範例涵蓋了可使用 Azure 管理模組來執行的常見工作，並已備有程式碼可供您自己的應用程式使用：</span><span class="sxs-lookup"><span data-stu-id="47f41-116">The following samples cover common tasks with the Azure management modules and have code ready to use in your own apps:</span></span>
+<span data-ttu-id="f74bd-116">下列範例涵蓋了可使用 Azure 管理模組來執行的常見工作，並已備有程式碼可供您自己的應用程式使用：</span><span class="sxs-lookup"><span data-stu-id="f74bd-116">The following samples cover common tasks with the Azure management modules and have code ready to use in your own apps:</span></span>
 
-- [<span data-ttu-id="47f41-117">虛擬機器</span><span class="sxs-lookup"><span data-stu-id="47f41-117">Virtual machines</span></span>](node-samples-services-compute.md)
-- [<span data-ttu-id="47f41-118">Web Apps</span><span class="sxs-lookup"><span data-stu-id="47f41-118">Web apps</span></span>](node-samples-services-web-and-mobile.md)
-- [<span data-ttu-id="47f41-119">SQL Database</span><span class="sxs-lookup"><span data-stu-id="47f41-119">SQL Database</span></span>](node-samples-services-database.md)
+- [<span data-ttu-id="f74bd-117">虛擬機器</span><span class="sxs-lookup"><span data-stu-id="f74bd-117">Virtual machines</span></span>](node-samples-services-compute.md)
+- [<span data-ttu-id="f74bd-118">Web Apps</span><span class="sxs-lookup"><span data-stu-id="f74bd-118">Web apps</span></span>](node-samples-services-web-and-mobile.md)
+- [<span data-ttu-id="f74bd-119">SQL Database</span><span class="sxs-lookup"><span data-stu-id="f74bd-119">SQL Database</span></span>](node-samples-services-database.md)
    
-<span data-ttu-id="47f41-120">我們提供了一個適用於服務和管理模組中所有模組的[參考](https://docs.microsoft.com/javascript/api)。</span><span class="sxs-lookup"><span data-stu-id="47f41-120">A [reference](https://docs.microsoft.com/javascript/api) is available for all modules in both the service and management modules.</span></span> <span data-ttu-id="47f41-121">新功能、重大變更以及從先前版本移轉的指示則會在[版本資訊](https://github.com/Azure/azure-sdk-for-node/releases)中提供。</span><span class="sxs-lookup"><span data-stu-id="47f41-121">New features, breaking changes, and migration instructions from previous versions are available in the [release notes](https://github.com/Azure/azure-sdk-for-node/releases).</span></span>
+<span data-ttu-id="f74bd-120">我們提供了一個適用於服務和管理模組中所有模組的[參考](https://docs.microsoft.com/javascript/api)。</span><span class="sxs-lookup"><span data-stu-id="f74bd-120">A [reference](https://docs.microsoft.com/javascript/api) is available for all modules in both the service and management modules.</span></span> <span data-ttu-id="f74bd-121">新功能、重大變更以及從先前版本移轉的指示則會在[版本資訊](https://github.com/Azure/azure-sdk-for-node/releases)中提供。</span><span class="sxs-lookup"><span data-stu-id="f74bd-121">New features, breaking changes, and migration instructions from previous versions are available in the [release notes](https://github.com/Azure/azure-sdk-for-node/releases).</span></span>

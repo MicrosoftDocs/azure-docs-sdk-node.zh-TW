@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Authorization
 ms.openlocfilehash: 0b0ecd088d8b7728e56f352597e2db038678945f
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49735063"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50340016"
 ---
-# <a name="azure-authorization-modules-for-nodejs"></a><span data-ttu-id="020a1-103">適用於 Node.js 的 Azure 授權模組</span><span class="sxs-lookup"><span data-stu-id="020a1-103">Azure Authorization modules for Node.js</span></span>
+# <a name="azure-authorization-modules-for-nodejs"></a><span data-ttu-id="d62c2-103">適用於 Node.js 的 Azure 授權模組</span><span class="sxs-lookup"><span data-stu-id="d62c2-103">Azure Authorization modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="020a1-104">概觀</span><span class="sxs-lookup"><span data-stu-id="020a1-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="d62c2-104">概觀</span><span class="sxs-lookup"><span data-stu-id="d62c2-104">Overview</span></span>
 
-<span data-ttu-id="020a1-105">Azure App Service 驗證/授權是可讓應用程式接受使用者登入的一種功能，而不需要在應用程式後端變更程式碼。</span><span class="sxs-lookup"><span data-stu-id="020a1-105">Azure App Service Authentication / Authorization is a feature that provides a way for your application to sign in users so that code doesn't have to be changed on the app backend.</span></span> <span data-ttu-id="020a1-106">授權提供簡單的方法來保護您的應用程式，以及使用每位使用者的資料。</span><span class="sxs-lookup"><span data-stu-id="020a1-106">Authorization provides an easy way to protect your application and work with per-user data.</span></span>
+<span data-ttu-id="d62c2-105">Azure App Service 驗證/授權是可讓應用程式接受使用者登入的一種功能，而不需要在應用程式後端變更程式碼。</span><span class="sxs-lookup"><span data-stu-id="d62c2-105">Azure App Service Authentication / Authorization is a feature that provides a way for your application to sign in users so that code doesn't have to be changed on the app backend.</span></span> <span data-ttu-id="d62c2-106">授權提供簡單的方法來保護您的應用程式，以及使用每位使用者的資料。</span><span class="sxs-lookup"><span data-stu-id="d62c2-106">Authorization provides an easy way to protect your application and work with per-user data.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="020a1-107">管理封裝</span><span class="sxs-lookup"><span data-stu-id="020a1-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="d62c2-107">管理封裝</span><span class="sxs-lookup"><span data-stu-id="d62c2-107">Management package</span></span>
 
-<span data-ttu-id="020a1-108">使用 npm 來安裝適用於 Node.js 的 Azure 授權模組</span><span class="sxs-lookup"><span data-stu-id="020a1-108">Use npm to install the Azure Authorization modules for Node.js</span></span>
+<span data-ttu-id="d62c2-108">使用 npm 來安裝適用於 Node.js 的 Azure 授權模組</span><span class="sxs-lookup"><span data-stu-id="d62c2-108">Use npm to install the Azure Authorization modules for Node.js</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="020a1-109">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="020a1-109">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="d62c2-109">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="d62c2-109">Install the npm module</span></span>
 
-<span data-ttu-id="020a1-110">安裝 Azure 授權 npm 模組</span><span class="sxs-lookup"><span data-stu-id="020a1-110">Install the Azure authorization npm module</span></span>
+<span data-ttu-id="d62c2-110">安裝 Azure 授權 npm 模組</span><span class="sxs-lookup"><span data-stu-id="d62c2-110">Install the Azure authorization npm module</span></span>
 
 ```bash
 npm install azure-arm-authorization
 ```
 
-### <a name="example"></a><span data-ttu-id="020a1-111">範例</span><span class="sxs-lookup"><span data-stu-id="020a1-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="d62c2-111">範例</span><span class="sxs-lookup"><span data-stu-id="d62c2-111">Example</span></span>
 
-<span data-ttu-id="020a1-112">此範例會列出所要求資源群組的所有角色指派。</span><span class="sxs-lookup"><span data-stu-id="020a1-112">This example lists all role assignments for the requested resource group.</span></span>
+<span data-ttu-id="d62c2-112">此範例會列出所要求資源群組的所有角色指派。</span><span class="sxs-lookup"><span data-stu-id="d62c2-112">This example lists all role assignments for the requested resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="020a1-113">範例</span><span class="sxs-lookup"><span data-stu-id="020a1-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="d62c2-113">範例</span><span class="sxs-lookup"><span data-stu-id="d62c2-113">Samples</span></span>
 
-<span data-ttu-id="020a1-114">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="020a1-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="d62c2-114">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="d62c2-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
