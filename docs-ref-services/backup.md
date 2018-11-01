@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
 ms.openlocfilehash: bf3e66ac8341cebd28dee20b6370ed3e5fbfbfa0
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49728267"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50378086"
 ---
 # <a name="azure-backup-modules-for-nodejs"></a>適用於 Node.js 的 Azure 備份模組
 
