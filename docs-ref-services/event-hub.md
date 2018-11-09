@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Event Hub
 ms.openlocfilehash: cf50d0e69e336dac9addc85625599fbbefd1902e
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50381429"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51121827"
 ---
 # <a name="azure-event-hub-modules-for-nodejs"></a>適用於 Node.js 的 Azure 事件中樞模組
 

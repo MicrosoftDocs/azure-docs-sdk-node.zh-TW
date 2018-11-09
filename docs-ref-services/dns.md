@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: DNS
 ms.openlocfilehash: 93eec1890fc15d19c0545086a53b751d0886988a
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50324265"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51062037"
 ---
 # <a name="azure-dns-modules-for-nodejs"></a>適用於 Node.js 的 Azure DNS 模組
 
