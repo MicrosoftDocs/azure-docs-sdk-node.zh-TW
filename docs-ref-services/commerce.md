@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Commerce
 ms.openlocfilehash: 87a0e8d689d8d782a705a4525fdbe9b681403c07
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51111216"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51459402"
 ---
-# <a name="azure-commerce-modules-for-nodejs"></a><span data-ttu-id="d0391-103">適用於 Node.js 的 Azure Commerce 模組</span><span class="sxs-lookup"><span data-stu-id="d0391-103">Azure Commerce modules for Node.js</span></span>
+# <a name="azure-commerce-modules-for-nodejs"></a><span data-ttu-id="95445-103">適用於 Node.js 的 Azure Commerce 模組</span><span class="sxs-lookup"><span data-stu-id="95445-103">Azure Commerce modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="d0391-104">概觀</span><span class="sxs-lookup"><span data-stu-id="d0391-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="95445-104">概觀</span><span class="sxs-lookup"><span data-stu-id="95445-104">Overview</span></span>
 
-<span data-ttu-id="d0391-105">使用 Azure Commerce API 將使用情況和資源資料提取到您慣用的資料分析工具。</span><span class="sxs-lookup"><span data-stu-id="d0391-105">Use Azure Commerce APIs to pull usage and resource data into your preferred data analysis tools.</span></span> <span data-ttu-id="d0391-106">Azure 資源使用情況和 RateCard API 可協助您準確地預測並管理成本。</span><span class="sxs-lookup"><span data-stu-id="d0391-106">The Azure Resource Usage and RateCard APIs can help you accurately predict and manage your costs.</span></span> <span data-ttu-id="d0391-107">這些 API 會實作為資源提供者，並成為 Azure Resource Manager 所公開之 API 系列的一部分。</span><span class="sxs-lookup"><span data-stu-id="d0391-107">The APIs are implemented as a Resource Provider and part of the family of APIs exposed by the Azure Resource Manager.</span></span>
+<span data-ttu-id="95445-105">使用 Azure Commerce API 將使用情況和資源資料提取到您慣用的資料分析工具。</span><span class="sxs-lookup"><span data-stu-id="95445-105">Use Azure Commerce APIs to pull usage and resource data into your preferred data analysis tools.</span></span> <span data-ttu-id="95445-106">Azure 資源使用情況和 RateCard API 可協助您準確地預測並管理成本。</span><span class="sxs-lookup"><span data-stu-id="95445-106">The Azure Resource Usage and RateCard APIs can help you accurately predict and manage your costs.</span></span> <span data-ttu-id="95445-107">這些 API 會實作為資源提供者，並成為 Azure Resource Manager 所公開之 API 系列的一部分。</span><span class="sxs-lookup"><span data-stu-id="95445-107">The APIs are implemented as a Resource Provider and part of the family of APIs exposed by the Azure Resource Manager.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="d0391-108">管理封裝</span><span class="sxs-lookup"><span data-stu-id="d0391-108">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="95445-108">管理封裝</span><span class="sxs-lookup"><span data-stu-id="95445-108">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="d0391-109">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="d0391-109">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="95445-109">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="95445-109">Install the npm module</span></span>
 
-<span data-ttu-id="d0391-110">安裝 Azure Commerce npm 模組</span><span class="sxs-lookup"><span data-stu-id="d0391-110">Install the Azure Commerce npm module</span></span>
+<span data-ttu-id="95445-110">安裝 Azure Commerce npm 模組</span><span class="sxs-lookup"><span data-stu-id="95445-110">Install the Azure Commerce npm module</span></span>
 
 ```bash
 npm install azure-arm-commerce
 ```
 
-### <a name="example"></a><span data-ttu-id="d0391-111">範例</span><span class="sxs-lookup"><span data-stu-id="d0391-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="95445-111">範例</span><span class="sxs-lookup"><span data-stu-id="95445-111">Example</span></span>
 
-<span data-ttu-id="d0391-112">此範例會擷取您上個月估計的 Azure 取用資料。</span><span class="sxs-lookup"><span data-stu-id="d0391-112">This example retrieves your estimated Azure consumption data for the last month.</span></span>
+<span data-ttu-id="95445-112">此範例會擷取您上個月估計的 Azure 取用資料。</span><span class="sxs-lookup"><span data-stu-id="95445-112">This example retrieves your estimated Azure consumption data for the last month.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -64,6 +64,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="d0391-113">範例</span><span class="sxs-lookup"><span data-stu-id="d0391-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="95445-113">範例</span><span class="sxs-lookup"><span data-stu-id="95445-113">Samples</span></span>
 
-<span data-ttu-id="d0391-114">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="d0391-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="95445-114">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="95445-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
 ms.openlocfilehash: bf3e66ac8341cebd28dee20b6370ed3e5fbfbfa0
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51173027"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51465764"
 ---
-# <a name="azure-backup-modules-for-nodejs"></a><span data-ttu-id="1b205-103">適用於 Node.js 的 Azure 備份模組</span><span class="sxs-lookup"><span data-stu-id="1b205-103">Azure Backup Modules for Node.js</span></span>
+# <a name="azure-backup-modules-for-nodejs"></a><span data-ttu-id="fea7a-103">適用於 Node.js 的 Azure 備份模組</span><span class="sxs-lookup"><span data-stu-id="fea7a-103">Azure Backup Modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="1b205-104">概觀</span><span class="sxs-lookup"><span data-stu-id="1b205-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="fea7a-104">概觀</span><span class="sxs-lookup"><span data-stu-id="fea7a-104">Overview</span></span>
 
-<span data-ttu-id="1b205-105">Azure 備份是您可用來備份 (或保護) 和還原 Microsoft Cloud 資料的 Azure 服務。</span><span class="sxs-lookup"><span data-stu-id="1b205-105">Azure Backup is the Azure-based service you can use to back up (or protect) and restore your data in the Microsoft cloud.</span></span> <span data-ttu-id="1b205-106">Azure 備份將以一個可靠、安全及具成本競爭力的雲端架構解決方案，取代您現有的內部部署或異地備份解決方案。</span><span class="sxs-lookup"><span data-stu-id="1b205-106">Azure Backup replaces your existing on-premises or off-site backup solution with a cloud-based solution that is reliable, secure, and cost-competitive.</span></span> <span data-ttu-id="1b205-107">Azure 備份提供多個元件，您可以下載並部署在適當的電腦、伺服器或雲端中。</span><span class="sxs-lookup"><span data-stu-id="1b205-107">Azure Backup offers multiple components that you download and deploy on the appropriate computer, server, or in the cloud.</span></span> <span data-ttu-id="1b205-108">您部署的元件或代理程式，取決於您想要保護的項目。</span><span class="sxs-lookup"><span data-stu-id="1b205-108">The component, or agent, that you deploy depends on what you want to protect.</span></span> <span data-ttu-id="1b205-109">所有 Azure 備份的元件 (無論您要保護的是內部部署或雲端資料) 都可以將資料備份至 Azure 中的復原服務保存庫。</span><span class="sxs-lookup"><span data-stu-id="1b205-109">All Azure Backup components (no matter whether you're protecting data on-premises or in the cloud) can be used to back up data to a Recovery Services vault in Azure.</span></span> 
+<span data-ttu-id="fea7a-105">Azure 備份是您可用來備份 (或保護) 和還原 Microsoft Cloud 資料的 Azure 服務。</span><span class="sxs-lookup"><span data-stu-id="fea7a-105">Azure Backup is the Azure-based service you can use to back up (or protect) and restore your data in the Microsoft cloud.</span></span> <span data-ttu-id="fea7a-106">Azure 備份將以一個可靠、安全及具成本競爭力的雲端架構解決方案，取代您現有的內部部署或異地備份解決方案。</span><span class="sxs-lookup"><span data-stu-id="fea7a-106">Azure Backup replaces your existing on-premises or off-site backup solution with a cloud-based solution that is reliable, secure, and cost-competitive.</span></span> <span data-ttu-id="fea7a-107">Azure 備份提供多個元件，您可以下載並部署在適當的電腦、伺服器或雲端中。</span><span class="sxs-lookup"><span data-stu-id="fea7a-107">Azure Backup offers multiple components that you download and deploy on the appropriate computer, server, or in the cloud.</span></span> <span data-ttu-id="fea7a-108">您部署的元件或代理程式，取決於您想要保護的項目。</span><span class="sxs-lookup"><span data-stu-id="fea7a-108">The component, or agent, that you deploy depends on what you want to protect.</span></span> <span data-ttu-id="fea7a-109">所有 Azure 備份的元件 (無論您要保護的是內部部署或雲端資料) 都可以將資料備份至 Azure 中的復原服務保存庫。</span><span class="sxs-lookup"><span data-stu-id="fea7a-109">All Azure Backup components (no matter whether you're protecting data on-premises or in the cloud) can be used to back up data to a Recovery Services vault in Azure.</span></span> 
 
-## <a name="management-package"></a><span data-ttu-id="1b205-110">管理封裝</span><span class="sxs-lookup"><span data-stu-id="1b205-110">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="fea7a-110">管理封裝</span><span class="sxs-lookup"><span data-stu-id="fea7a-110">Management package</span></span>
 
-### <a name="install-the-modules-with-npm"></a><span data-ttu-id="1b205-111">使用 npm 安裝模組</span><span class="sxs-lookup"><span data-stu-id="1b205-111">Install the modules with npm</span></span>
+### <a name="install-the-modules-with-npm"></a><span data-ttu-id="fea7a-111">使用 npm 安裝模組</span><span class="sxs-lookup"><span data-stu-id="fea7a-111">Install the modules with npm</span></span>
 
-<span data-ttu-id="1b205-112">使用 npm 來安裝適用於 Node.js 的 Azure 備份模組</span><span class="sxs-lookup"><span data-stu-id="1b205-112">Use npm to install the Azure Backup modules for Node.js</span></span>
+<span data-ttu-id="fea7a-112">使用 npm 來安裝適用於 Node.js 的 Azure 備份模組</span><span class="sxs-lookup"><span data-stu-id="fea7a-112">Use npm to install the Azure Backup modules for Node.js</span></span>
 
 ```bash
 npm install azure-arm-recoveryservicesbackup
 ```
 
-### <a name="example"></a><span data-ttu-id="1b205-113">範例</span><span class="sxs-lookup"><span data-stu-id="1b205-113">Example</span></span>
+### <a name="example"></a><span data-ttu-id="fea7a-113">範例</span><span class="sxs-lookup"><span data-stu-id="fea7a-113">Example</span></span>
 
-<span data-ttu-id="1b205-114">此範例會列出指定之保存庫與資源群組的復原作業。</span><span class="sxs-lookup"><span data-stu-id="1b205-114">This example lists the recovery jobs for a given vault and resource group.</span></span>
+<span data-ttu-id="fea7a-114">此範例會列出指定之保存庫與資源群組的復原作業。</span><span class="sxs-lookup"><span data-stu-id="fea7a-114">This example lists the recovery jobs for a given vault and resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -58,6 +58,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="1b205-115">範例</span><span class="sxs-lookup"><span data-stu-id="1b205-115">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="fea7a-115">範例</span><span class="sxs-lookup"><span data-stu-id="fea7a-115">Samples</span></span>
 
-<span data-ttu-id="1b205-116">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="1b205-116">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="fea7a-116">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="fea7a-116">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
