@@ -11,11 +11,11 @@ ms.service: billing
 ms.product: ''
 ms.technology: ''
 ms.openlocfilehash: 7be64d01c1bf8d247694735b8581f72678f55983
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51172967"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51501972"
 ---
 # <a name="azure-billing-modules-for-nodejs"></a>適用於 Node.js 的 Azure 計費模組
 

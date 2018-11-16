@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
 ms.openlocfilehash: 4528bf6a09bc86d23bfec982988added1aa3e257
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51192371"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51494732"
 ---
 # <a name="azure-devtest-labs-modules-for-nodejs"></a>適用於 Node.js 的 Azure DevTest Labs 模組
 

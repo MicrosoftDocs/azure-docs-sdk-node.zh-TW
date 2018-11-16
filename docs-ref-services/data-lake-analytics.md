@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Analytics
 ms.openlocfilehash: 97a846d9970310931e05e681b23b5787c97260b6
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51134327"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51381372"
 ---
 # <a name="azure-data-lake-analytics-modules-for-nodejs"></a>適用於 Node.js 的 Azure Data Lake Analytics 模組
 

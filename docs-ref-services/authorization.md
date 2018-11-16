@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Authorization
 ms.openlocfilehash: 0b0ecd088d8b7728e56f352597e2db038678945f
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51062027"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51480842"
 ---
 # <a name="azure-authorization-modules-for-nodejs"></a>適用於 Node.js 的 Azure 授權模組
 
