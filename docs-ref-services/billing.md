@@ -11,29 +11,29 @@ ms.service: billing
 ms.product: ''
 ms.technology: ''
 ms.openlocfilehash: 7be64d01c1bf8d247694735b8581f72678f55983
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51501972"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52094465"
 ---
-# <a name="azure-billing-modules-for-nodejs"></a><span data-ttu-id="c1eb2-103">適用於 Node.js 的 Azure 計費模組</span><span class="sxs-lookup"><span data-stu-id="c1eb2-103">Azure Billing modules for Node.js</span></span>
+# <a name="azure-billing-modules-for-nodejs"></a><span data-ttu-id="1a1a2-103">適用於 Node.js 的 Azure 計費模組</span><span class="sxs-lookup"><span data-stu-id="1a1a2-103">Azure Billing modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="c1eb2-104">概觀</span><span class="sxs-lookup"><span data-stu-id="c1eb2-104">Overview</span></span>
-<span data-ttu-id="c1eb2-105">Azure 計費 API 可供存取您的 Azure 計費資訊和發票。</span><span class="sxs-lookup"><span data-stu-id="c1eb2-105">The Azure Billing APIs provide access to your Azure billing information and invoices.</span></span>
+## <a name="overview"></a><span data-ttu-id="1a1a2-104">概觀</span><span class="sxs-lookup"><span data-stu-id="1a1a2-104">Overview</span></span>
+<span data-ttu-id="1a1a2-105">Azure 計費 API 可供存取您的 Azure 計費資訊和發票。</span><span class="sxs-lookup"><span data-stu-id="1a1a2-105">The Azure Billing APIs provide access to your Azure billing information and invoices.</span></span>
 
-<span data-ttu-id="c1eb2-106">若要使用此 API，帳戶管理員必須透過 Azure 入口網站選擇加入。</span><span class="sxs-lookup"><span data-stu-id="c1eb2-106">To use this API, the account admin must opt in via the Azure portal.</span></span> <span data-ttu-id="c1eb2-107">請參閱[使用角色來管理對 Azure 帳單的存取](https://docs.microsoft.com/azure/billing/billing-manage-access)。</span><span class="sxs-lookup"><span data-stu-id="c1eb2-107">See [Manage access to Azure billing using roles](https://docs.microsoft.com/azure/billing/billing-manage-access).</span></span>
+<span data-ttu-id="1a1a2-106">若要使用此 API，帳戶管理員必須透過 Azure 入口網站選擇加入。</span><span class="sxs-lookup"><span data-stu-id="1a1a2-106">To use this API, the account admin must opt in via the Azure portal.</span></span> <span data-ttu-id="1a1a2-107">請參閱[使用角色來管理對 Azure 帳單的存取](https://docs.microsoft.com/azure/billing/billing-manage-access)。</span><span class="sxs-lookup"><span data-stu-id="1a1a2-107">See [Manage access to Azure billing using roles](https://docs.microsoft.com/azure/billing/billing-manage-access).</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="c1eb2-108">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="c1eb2-108">Install the npm module</span></span> 
+### <a name="install-the-npm-module"></a><span data-ttu-id="1a1a2-108">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="1a1a2-108">Install the npm module</span></span> 
 
-<span data-ttu-id="c1eb2-109">安裝 Azure 計費 npm 模組</span><span class="sxs-lookup"><span data-stu-id="c1eb2-109">Install the Azure Billing npm module</span></span> 
+<span data-ttu-id="1a1a2-109">安裝 Azure 計費 npm 模組</span><span class="sxs-lookup"><span data-stu-id="1a1a2-109">Install the Azure Billing npm module</span></span> 
 
 ```bash
 npm install azure-arm-billing
 ```
-### <a name="example"></a><span data-ttu-id="c1eb2-110">範例</span><span class="sxs-lookup"><span data-stu-id="c1eb2-110">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="1a1a2-110">範例</span><span class="sxs-lookup"><span data-stu-id="1a1a2-110">Example</span></span> 
  
-<span data-ttu-id="c1eb2-111">此範例會列印您過去所有發票的清單。</span><span class="sxs-lookup"><span data-stu-id="c1eb2-111">This example prints a list of all of your past invoices.</span></span>
+<span data-ttu-id="1a1a2-111">此範例會列印您過去所有發票的清單。</span><span class="sxs-lookup"><span data-stu-id="1a1a2-111">This example prints a list of all of your past invoices.</span></span>
  
 ```javascript 
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure
 ``` 
 
 
-## <a name="samples"></a><span data-ttu-id="c1eb2-112">範例</span><span class="sxs-lookup"><span data-stu-id="c1eb2-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="1a1a2-112">範例</span><span class="sxs-lookup"><span data-stu-id="1a1a2-112">Samples</span></span>
 
-<span data-ttu-id="c1eb2-113">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="c1eb2-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="1a1a2-113">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="1a1a2-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: PowerBI Embedded
 ms.openlocfilehash: 58251dd1cd3a672a5167193f74d311952d70e84e
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51481392"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52084846"
 ---
-# <a name="azure-powerbi-embedded-modules-for-nodejs"></a><span data-ttu-id="2d1e9-103">適用於 Node.js 的 Azure PowerBI Embedded 模組</span><span class="sxs-lookup"><span data-stu-id="2d1e9-103">Azure PowerBI Embedded modules for Node.js</span></span>
+# <a name="azure-powerbi-embedded-modules-for-nodejs"></a><span data-ttu-id="5e538-103">適用於 Node.js 的 Azure PowerBI Embedded 模組</span><span class="sxs-lookup"><span data-stu-id="5e538-103">Azure PowerBI Embedded modules for Node.js</span></span>
 
-<span data-ttu-id="2d1e9-104">運用 Power BI Embedded Azure 服務，您可以將 Power BI 報告整合至 Node 應用程式以建立或編輯圖表和報告。</span><span class="sxs-lookup"><span data-stu-id="2d1e9-104">With the Power BI Embedded Azure service, you can integrate Power BI reports right into your node application to create or edit charts and reports.</span></span>
+<span data-ttu-id="5e538-104">運用 Power BI Embedded Azure 服務，您可以將 Power BI 報告整合至 Node 應用程式以建立或編輯圖表和報告。</span><span class="sxs-lookup"><span data-stu-id="5e538-104">With the Power BI Embedded Azure service, you can integrate Power BI reports right into your node application to create or edit charts and reports.</span></span>
 
-<span data-ttu-id="2d1e9-105">深入了解 [Power BI Embedded](https://powerbi.microsoft.com/documentation/powerbi-developer-embedding/)。</span><span class="sxs-lookup"><span data-stu-id="2d1e9-105">Learn more about [Power BI Embedded](https://powerbi.microsoft.com/documentation/powerbi-developer-embedding/).</span></span>
+<span data-ttu-id="5e538-105">深入了解 [Power BI Embedded](https://powerbi.microsoft.com/documentation/powerbi-developer-embedding/)。</span><span class="sxs-lookup"><span data-stu-id="5e538-105">Learn more about [Power BI Embedded](https://powerbi.microsoft.com/documentation/powerbi-developer-embedding/).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="2d1e9-106">管理套件</span><span class="sxs-lookup"><span data-stu-id="2d1e9-106">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="5e538-106">管理套件</span><span class="sxs-lookup"><span data-stu-id="5e538-106">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="2d1e9-107">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="2d1e9-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="5e538-107">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="5e538-107">Install the npm module</span></span>
 
-<span data-ttu-id="2d1e9-108">安裝 Azure Power BI npm 模組</span><span class="sxs-lookup"><span data-stu-id="2d1e9-108">Install the Azure Power BI npm module</span></span>
+<span data-ttu-id="5e538-108">安裝 Azure Power BI npm 模組</span><span class="sxs-lookup"><span data-stu-id="5e538-108">Install the Azure Power BI npm module</span></span>
 
 ```bash
 npm install azure-arm-powerbiembedded
 ```
 
-### <a name="example"></a><span data-ttu-id="2d1e9-109">範例</span><span class="sxs-lookup"><span data-stu-id="2d1e9-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="5e538-109">範例</span><span class="sxs-lookup"><span data-stu-id="5e538-109">Example</span></span>
 
-<span data-ttu-id="2d1e9-110">此範例會在現有的資源群組中建立工作區集合。</span><span class="sxs-lookup"><span data-stu-id="2d1e9-110">This example creates a workspace collection in an existing resource group.</span></span>
+<span data-ttu-id="5e538-110">此範例會在現有的資源群組中建立工作區集合。</span><span class="sxs-lookup"><span data-stu-id="5e538-110">This example creates a workspace collection in an existing resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -74,6 +74,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="2d1e9-111">範例</span><span class="sxs-lookup"><span data-stu-id="2d1e9-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="5e538-111">範例</span><span class="sxs-lookup"><span data-stu-id="5e538-111">Samples</span></span>
 
-<span data-ttu-id="2d1e9-112">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="2d1e9-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="5e538-112">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="5e538-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

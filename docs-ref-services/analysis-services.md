@@ -11,30 +11,30 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Analysis Services
 ms.openlocfilehash: 5214cd2f171074ba330bc639643dfba490540856
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51450342"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52008662"
 ---
-# <a name="azure-analysis-services-modules-for-nodejs"></a><span data-ttu-id="03452-103">適用於 Node.js 的 Azure Analysis Services 模組</span><span class="sxs-lookup"><span data-stu-id="03452-103">Azure Analysis Services modules for Node.js</span></span>
+# <a name="azure-analysis-services-modules-for-nodejs"></a><span data-ttu-id="65614-103">適用於 Node.js 的 Azure Analysis Services 模組</span><span class="sxs-lookup"><span data-stu-id="65614-103">Azure Analysis Services modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="03452-104">概觀</span><span class="sxs-lookup"><span data-stu-id="03452-104">Overview</span></span>
-<span data-ttu-id="03452-105">此套件提供可讓您輕鬆管理 Microsoft Azure Analysis Services 的 Node.js 模組。</span><span class="sxs-lookup"><span data-stu-id="03452-105">This package provides a Node.js module that makes it easy to manage Microsoft Azure Analysis Services.</span></span>
+## <a name="overview"></a><span data-ttu-id="65614-104">概觀</span><span class="sxs-lookup"><span data-stu-id="65614-104">Overview</span></span>
+<span data-ttu-id="65614-105">此套件提供可讓您輕鬆管理 Microsoft Azure Analysis Services 的 Node.js 模組。</span><span class="sxs-lookup"><span data-stu-id="65614-105">This package provides a Node.js module that makes it easy to manage Microsoft Azure Analysis Services.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="03452-106">管理封裝</span><span class="sxs-lookup"><span data-stu-id="03452-106">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="65614-106">管理封裝</span><span class="sxs-lookup"><span data-stu-id="65614-106">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="03452-107">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="03452-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="65614-107">安裝 npm 模組</span><span class="sxs-lookup"><span data-stu-id="65614-107">Install the npm module</span></span>
 
-<span data-ttu-id="03452-108">安裝 Azure Analysis Services npm 模組</span><span class="sxs-lookup"><span data-stu-id="03452-108">Install the Azure Analysis Services npm module</span></span>
+<span data-ttu-id="65614-108">安裝 Azure Analysis Services npm 模組</span><span class="sxs-lookup"><span data-stu-id="65614-108">Install the Azure Analysis Services npm module</span></span>
 
 ```bash
 npm install azure-arm-analysisservices
 ```
 
-### <a name="example"></a><span data-ttu-id="03452-109">範例</span><span class="sxs-lookup"><span data-stu-id="03452-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="65614-109">範例</span><span class="sxs-lookup"><span data-stu-id="65614-109">Example</span></span>
 
-<span data-ttu-id="03452-110">此範例會列出所有可用的 Analysis Service 伺服器。</span><span class="sxs-lookup"><span data-stu-id="03452-110">This example lists all available Analysis Service servers.</span></span>
+<span data-ttu-id="65614-110">此範例會列出所有可用的 Analysis Service 伺服器。</span><span class="sxs-lookup"><span data-stu-id="65614-110">This example lists all available Analysis Service servers.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -52,6 +52,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="03452-111">範例</span><span class="sxs-lookup"><span data-stu-id="03452-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="65614-111">範例</span><span class="sxs-lookup"><span data-stu-id="65614-111">Samples</span></span>
 
-<span data-ttu-id="03452-112">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="03452-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="65614-112">深入探索可在應用程式中使用的 [Node.js 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="65614-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
