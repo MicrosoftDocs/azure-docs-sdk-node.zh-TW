@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 345d4aba2a62e1299bfbc896e1d6304120aa5fc2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52098846"
+items:
+- uid: '@azure/cosmos.ConsistencyLevel'
+  name: ConsistencyLevel
+  fullName: ConsistencyLevel
+  children:
+  - '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  - '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  - '@azure/cosmos.ConsistencyLevel.Eventual'
+  - '@azure/cosmos.ConsistencyLevel.Session'
+  - '@azure/cosmos.ConsistencyLevel.Strong'
+  langs:
+  - typeScript
+  type: enum
+  summary: >
+    <span data-ttu-id="4fa41-101">表示支援的 Azure Cosmos DB 用戶端作業的一致性層級。</span><span class="sxs-lookup"><span data-stu-id="4fa41-101">Represents the consistency levels supported for Azure Cosmos DB client operations.</span></span><br>
+
+    <span data-ttu-id="4fa41-102">要求的 ConsistencyLevel 必須相符，或者是低於佈建資料庫帳戶。</span><span class="sxs-lookup"><span data-stu-id="4fa41-102">The requested ConsistencyLevel must match or be weaker than that provisioned for the database account.</span></span>
+
+    <span data-ttu-id="4fa41-103">一致性層級。</span><span class="sxs-lookup"><span data-stu-id="4fa41-103">Consistency levels.</span></span>
+
+    <span data-ttu-id="4fa41-104">順序強度的一致性層級是強式、 BoundedStaleness、 工作階段、 一致前置詞和最終。</span><span class="sxs-lookup"><span data-stu-id="4fa41-104">Consistency levels by order of strength are Strong, BoundedStaleness, Session, Consistent Prefix, and Eventual.</span></span>
+
+
+    <span data-ttu-id="4fa41-105">請參閱https://aka.ms/cosmos-consistency如需詳細的一致性層級上的文件。</span><span class="sxs-lookup"><span data-stu-id="4fa41-105">See https://aka.ms/cosmos-consistency for more detailed documentation on Consistency Levels.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  name: BoundedStaleness
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="4fa41-106">限定的過期保證讀取不太過時。</span><span class="sxs-lookup"><span data-stu-id="4fa41-106">Bounded Staleness guarantees that reads are not too out-of-date.</span></span>
+
+    <span data-ttu-id="4fa41-107">這可以根據作業 (MaxStalenessPrefix) 或時間 (MaxStalenessIntervalInSeconds) 的數目來設定。</span><span class="sxs-lookup"><span data-stu-id="4fa41-107">This can be configured based on number of operations (MaxStalenessPrefix) or time (MaxStalenessIntervalInSeconds).</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  name: ConsistentPrefix
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="4fa41-108">ConsistentPrefix 一致性保證讀取會傳回所有的寫入，且沒有間距的部分前置詞。</span><span class="sxs-lookup"><span data-stu-id="4fa41-108">ConsistentPrefix Consistency guarantees that reads will return some prefix of all writes with no gaps.</span></span>
+
+    <span data-ttu-id="4fa41-109">所有 writes 都是最終都將可供讀取。 '</span><span class="sxs-lookup"><span data-stu-id="4fa41-109">All writes will be eventually be available for reads.\`</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Eventual'
+  name: Eventual
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="4fa41-110">最終一致性保證讀取會傳回寫入的子集。</span><span class="sxs-lookup"><span data-stu-id="4fa41-110">Eventual Consistency guarantees that reads will return a subset of writes.</span></span>
+
+    <span data-ttu-id="4fa41-111">所有 writes 都是最終都將可供讀取。</span><span class="sxs-lookup"><span data-stu-id="4fa41-111">All writes will be eventually be available for reads.</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Session'
+  name: Session
+  children: []
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="4fa41-112">工作階段一致性的保證單純讀取 (您永遠不會讀取舊的資料，則新的則舊一次)，（排序寫入） 的單純寫入和讀取的寫入 （您的寫入會立即看見您讀取），在任何單一工作階段。</span><span class="sxs-lookup"><span data-stu-id="4fa41-112">Session Consistency guarantees monotonic reads (you never read old data, then new, then old again), monotonic writes (writes are ordered) and read your writes (your writes are immediately visible to your reads) within any single session.</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Strong'
+  name: Strong
+  children: []
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="4fa41-113">強式一致性保證讀取作業一律會傳回上次被寫入的值。</span><span class="sxs-lookup"><span data-stu-id="4fa41-113">Strong Consistency guarantees that read operations always return the value that was last written.</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
