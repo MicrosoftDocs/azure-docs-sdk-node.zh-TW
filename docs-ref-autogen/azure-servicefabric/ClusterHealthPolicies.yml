@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2863767b51e05b4f83f88c017ce9104bf03a4a5b
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52035393"
+items:
+- uid: azure-servicefabric.ClusterHealthPolicies
+  name: ClusterHealthPolicies
+  fullName: ClusterHealthPolicies
+  children:
+  - azure-servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap
+  - azure-servicefabric.ClusterHealthPolicies.clusterHealthPolicy
+  langs:
+  - typeScript
+  type: interface
+  summary: 健全狀況原則，來評估叢集健康情況。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap
+  name: applicationHealthPolicyMap
+  fullName: applicationHealthPolicyMap
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    定義包含不同的應用程式的特定應用程式的健康狀態原則對應。
+
+    每個項目指定為金鑰的應用程式名稱，並為 ApplicationHealthPolicy 用來評估應用程式健全狀況的值。
+
+    如果在對應中未指定應用程式，應用程式健康狀態評估會使用 （若沒有健全狀況原則定義資訊清單中），位於其應用程式資訊清單或預設應用程式健康狀態原則 ApplicationHealthPolicy。
+
+    對應預設是空的。
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicyMap?: ApplicationHealthPolicyMapItem[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicyMapItem[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicies.clusterHealthPolicy
+  name: clusterHealthPolicy
+  fullName: clusterHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 定義用來評估叢集或叢集節點的健全狀況的健全狀況原則。
+  optional: true
+  syntax:
+    content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ClusterHealthPolicy
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicyMapItem[]
+  name: ApplicationHealthPolicyMapItem[]
+  spec.typeScript:
+  - name: ApplicationHealthPolicyMapItem
+    fullName: ApplicationHealthPolicyMapItem
+    uid: azure-servicefabric.ApplicationHealthPolicyMapItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ClusterHealthPolicy
+  name: ClusterHealthPolicy
+  spec.typeScript:
+  - name: ClusterHealthPolicy
+    fullName: ClusterHealthPolicy
+    uid: azure-servicefabric.ClusterHealthPolicy

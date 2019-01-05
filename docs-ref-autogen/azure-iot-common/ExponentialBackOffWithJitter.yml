@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 32c61f1d1e0be7f27878b5ad6d4a04b662dc92f9
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 566bfe341884a40c4792a091f7842a7ab5ea7ac6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41682467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52057193"
 items:
 - uid: azure-iot-common.ExponentialBackOffWithJitter
   name: ExponentialBackOffWithJitter
@@ -22,15 +22,15 @@ items:
   summary: >-
     實作 Jitter 使用指數輪詢重試策略。
 
-    使用函數來計算下一個間隔如下 （x 是第 x 個重試）： f （x) = 最小值 (Cmin + (2^(x-1)-1) * rand (C * (1 – Jd)，C*(1-Ju))、 Cmax)
+    使用函數來計算下一個間隔如下 （x 是第 x 個重試）：F （x) = 最小值 (Cmin + (2^(x-1)-1) * rand (C * (1 – Jd)，C*(1-Ju))、 Cmax)
   package: azure-iot-common
 - uid: azure-iot-common.ExponentialBackOffWithJitter.constructor
-  name: ExponentialBackOffWithJitter
+  name: ExponentialBackOffWithJitter(boolean, ErrorFilter)
   children: []
   type: constructor
   langs:
   - typeScript
-  summary: 初始化的新執行個體<xref:azure-iot-common.ExponentialBackOffWithJitter>類別。
+  summary: 初始化 <xref:azure-iot-common.ExponentialBackOffWithJitter> 類別的新執行個體。
   syntax:
     content: 'new ExponentialBackOffWithJitter(immediateFirstRetry?: boolean, errorFilter?: ErrorFilter)'
     parameters:
@@ -61,7 +61,7 @@ items:
       - boolean
   package: azure-iot-common
 - uid: azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
-  name: nextRetryTimeout
+  name: nextRetryTimeout(number, boolean)
   children: []
   type: method
   langs:
@@ -97,7 +97,7 @@ items:
       - azure-iot-common.ExponentialBackoffWithJitterParameters
   package: azure-iot-common
 - uid: azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
-  name: shouldRetry
+  name: shouldRetry(Error)
   children: []
   type: method
   langs:
@@ -130,6 +130,7 @@ items:
   package: azure-iot-common
 references:
 - uid: azure-iot-common.ExponentialBackoffWithJitterParameters
+  name: ExponentialBackoffWithJitterParameters
   spec.typeScript:
   - name: ExponentialBackoffWithJitterParameters
     fullName: ExponentialBackoffWithJitterParameters
