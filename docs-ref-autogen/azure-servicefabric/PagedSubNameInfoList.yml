@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6a39625db8ec4d5ba7bb0bfedc107f04acff1392
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52016192"
+items:
+- uid: azure-servicefabric.PagedSubNameInfoList
+  name: PagedSubNameInfoList
+  fullName: PagedSubNameInfoList
+  children:
+  - azure-servicefabric.PagedSubNameInfoList.continuationToken
+  - azure-servicefabric.PagedSubNameInfoList.isConsistent
+  - azure-servicefabric.PagedSubNameInfoList.subNames
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="1cee6-101">Service Fabric 名稱分頁的清單。</span><span class="sxs-lookup"><span data-stu-id="1cee6-101">A paged list of Service Fabric names.</span></span> <span data-ttu-id="1cee6-102">清單被分頁時的所有結果無法放入單一訊息。</span><span class="sxs-lookup"><span data-stu-id="1cee6-102">The list is paged when all of the results cannot fit in a single message.</span></span> <span data-ttu-id="1cee6-103">下一步 的結果集可以取得執行相同的查詢使用這份清單中所提供的接續 token。</span><span class="sxs-lookup"><span data-stu-id="1cee6-103">The next set of results can be obtained by executing the same query with the continuation token provided in this list.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedSubNameInfoList.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="1cee6-104">接續權杖參數可用來取得下一組結果。</span><span class="sxs-lookup"><span data-stu-id="1cee6-104">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id="1cee6-105">接續權杖會隨附在 API 的回應中時，系統的結果無法放入單一回應。</span><span class="sxs-lookup"><span data-stu-id="1cee6-105">The continuation token is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id="1cee6-106">當此值傳遞至下一個 API 呼叫時，API 會傳回下一組結果。</span><span class="sxs-lookup"><span data-stu-id="1cee6-106">When this value is passed to the next API call, the API returns next set of results.</span></span>
+
+    <span data-ttu-id="1cee6-107">如果不有任何進一步的結果，然後接續 token 不包含在回應中。</span><span class="sxs-lookup"><span data-stu-id="1cee6-107">If there are no further results, then the continuation token is not included in the response.</span></span>
+  optional: true
+  syntax:
+    content: 'continuationToken?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedSubNameInfoList.isConsistent
+  name: isConsistent
+  fullName: isConsistent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1cee6-108">指出是否已經在列舉期間修改指定的名稱下的任何名稱。</span><span class="sxs-lookup"><span data-stu-id="1cee6-108">Indicates whether any name under the given name has been modified during the enumeration.</span></span> <span data-ttu-id="1cee6-109">所做的修改時，這個屬性值為 false。</span><span class="sxs-lookup"><span data-stu-id="1cee6-109">If there was a modification, this property value is false.</span></span>
+  optional: true
+  syntax:
+    content: 'isConsistent?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedSubNameInfoList.subNames
+  name: subNames
+  fullName: subNames
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1cee6-110">子系名稱的清單。</span><span class="sxs-lookup"><span data-stu-id="1cee6-110">List of the child names.</span></span>
+  optional: true
+  syntax:
+    content: 'subNames?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-servicefabric

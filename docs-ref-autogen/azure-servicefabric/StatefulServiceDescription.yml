@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6a26081a8779302e6524a8b01778592788b4d8c8
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52101353"
+items:
+- uid: azure-servicefabric.StatefulServiceDescription
+  name: StatefulServiceDescription
+  fullName: StatefulServiceDescription
+  children:
+  - azure-servicefabric.StatefulServiceDescription.flags
+  - azure-servicefabric.StatefulServiceDescription.hasPersistedState
+  - azure-servicefabric.StatefulServiceDescription.minReplicaSetSize
+  - azure-servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.targetReplicaSetSize
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="81d76-101">說明具狀態服務。</span><span class="sxs-lookup"><span data-stu-id="81d76-101">Describes a stateful service.</span></span>
+  extends:
+    name: azure-servicefabric.ServiceDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="81d76-102">旗標，指出是否已設定其他屬性。</span><span class="sxs-lookup"><span data-stu-id="81d76-102">Flags indicating whether other properties are set.</span></span> <span data-ttu-id="81d76-103">每個相關聯的屬性對應至下面指定的旗標，如果設定，指出屬性是否有指定。</span><span class="sxs-lookup"><span data-stu-id="81d76-103">Each of the associated properties corresponds to a flag, specified below, which, if set, indicate that the property is specified.</span></span>
+
+    <span data-ttu-id="81d76-104">這個屬性可以是使用位元 'OR' 運算子取得的這些旗標的組合。</span><span class="sxs-lookup"><span data-stu-id="81d76-104">This property can be a combination of those flags obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="81d76-105">比方說，如果提供的值為 6 則 QuorumLossWaitDuration (2) 和 StandByReplicaKeepDuration(4) 旗標是設定。</span><span class="sxs-lookup"><span data-stu-id="81d76-105">For example, if the provided value is 6 then the flags for QuorumLossWaitDuration (2) and StandByReplicaKeepDuration(4) are set.</span></span>
+
+    - <span data-ttu-id="81d76-106">None-不會指出設定任何其他屬性。</span><span class="sxs-lookup"><span data-stu-id="81d76-106">None - Does not indicate any other properties are set.</span></span> <span data-ttu-id="81d76-107">值為零。</span><span class="sxs-lookup"><span data-stu-id="81d76-107">The value is zero.</span></span>
+
+    - <span data-ttu-id="81d76-108">ReplicaRestartWaitDuration-表示屬性設定的 ReplicaRestartWaitDuration。</span><span class="sxs-lookup"><span data-stu-id="81d76-108">ReplicaRestartWaitDuration - Indicates the ReplicaRestartWaitDuration property is set.</span></span> <span data-ttu-id="81d76-109">值為 1。</span><span class="sxs-lookup"><span data-stu-id="81d76-109">The value is 1.</span></span>
+
+    - <span data-ttu-id="81d76-110">QuorumLossWaitDuration-表示屬性設定的 QuorumLossWaitDuration。</span><span class="sxs-lookup"><span data-stu-id="81d76-110">QuorumLossWaitDuration - Indicates the QuorumLossWaitDuration property is set.</span></span> <span data-ttu-id="81d76-111">值是</span><span class="sxs-lookup"><span data-stu-id="81d76-111">The value is</span></span>
+
+    2.
+
+    - <span data-ttu-id="81d76-112">StandByReplicaKeepDuration-表示屬性設定的 StandByReplicaKeepDuration。</span><span class="sxs-lookup"><span data-stu-id="81d76-112">StandByReplicaKeepDuration - Indicates the StandByReplicaKeepDuration property is set.</span></span> <span data-ttu-id="81d76-113">值為 4。</span><span class="sxs-lookup"><span data-stu-id="81d76-113">The value is 4.</span></span>
+  optional: true
+  syntax:
+    content: 'flags?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.hasPersistedState
+  name: hasPersistedState
+  fullName: hasPersistedState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="81d76-114">旗標，指出這是否為本機磁碟儲存狀態的持續性服務。</span><span class="sxs-lookup"><span data-stu-id="81d76-114">A flag indicating whether this is a persistent service which stores states on the local disk.</span></span>
+
+    <span data-ttu-id="81d76-115">如果這個屬性的值則為 true，否則為 false。</span><span class="sxs-lookup"><span data-stu-id="81d76-115">If it is then the value of this property is true, if not it is false.</span></span>
+  syntax:
+    content: 'hasPersistedState: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.minReplicaSetSize
+  name: minReplicaSetSize
+  fullName: minReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="81d76-116">以數字表示的最小複本集大小。</span><span class="sxs-lookup"><span data-stu-id="81d76-116">The minimum replica set size as a number.</span></span>
+  syntax:
+    content: 'minReplicaSetSize: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds
+  name: quorumLossWaitDurationSeconds
+  fullName: quorumLossWaitDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="81d76-117">允許分割區處於仲裁遺失狀態的持續時間上限 (秒)。</span><span class="sxs-lookup"><span data-stu-id="81d76-117">The maximum duration, in seconds, for which a partition is allowed to be in a state of quorum loss.</span></span>
+  optional: true
+  syntax:
+    content: 'quorumLossWaitDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds
+  name: replicaRestartWaitDurationSeconds
+  fullName: replicaRestartWaitDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="81d76-118">關閉複本與建立新複本之間的持續時間 (秒)。</span><span class="sxs-lookup"><span data-stu-id="81d76-118">The duration, in seconds, between when a replica goes down and when a new replica is created.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaRestartWaitDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds
+  name: standByReplicaKeepDurationSeconds
+  fullName: standByReplicaKeepDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="81d76-119">在待命複本應該多久維護之前要移除定義。</span><span class="sxs-lookup"><span data-stu-id="81d76-119">The definition on how long StandBy replicas should be maintained before being removed.</span></span>
+  optional: true
+  syntax:
+    content: 'standByReplicaKeepDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.targetReplicaSetSize
+  name: targetReplicaSetSize
+  fullName: targetReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="81d76-120">以數字表示的目標複本集大小。</span><span class="sxs-lookup"><span data-stu-id="81d76-120">The target replica set size as a number.</span></span>
+  syntax:
+    content: 'targetReplicaSetSize: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServiceDescription
+  name: ServiceDescription
+  spec.typeScript:
+  - name: ServiceDescription
+    fullName: ServiceDescription
+    uid: azure-servicefabric.ServiceDescription

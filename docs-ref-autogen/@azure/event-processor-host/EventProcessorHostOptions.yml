@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9e3f638b19d4ce0c2761dfaa54950d6187dabe66
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52012905"
+items:
+- uid: '@azure/event-processor-host.EventProcessorHostOptions'
+  name: EventProcessorHostOptions
+  fullName: EventProcessorHostOptions
+  children:
+  - '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+  - '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+  - '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+  - '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+  - '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+  - '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="902bf-101">描述可供建立 EventProcessorHost 的選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="902bf-101">Describes the optional parameters that can be provided for creating an EventProcessorHost.</span></span>
+  extends:
+    name: '@azure/event-processor-host.FromConnectionStringOptions'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+  name: checkpointManager
+  fullName: checkpointManager
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="902bf-102">{CheckpointManager}[checkpointManager]若要管理檢查點管理員。</span><span class="sxs-lookup"><span data-stu-id="902bf-102">{CheckpointManager} [checkpointManager] A manager to manage checkpoints.</span></span>
+
+    <span data-ttu-id="902bf-103">預設值： \*\* `AzureStorageCheckpointLeaseManager` \*\*。</span><span class="sxs-lookup"><span data-stu-id="902bf-103">Default: **`AzureStorageCheckpointLeaseManager`**.</span></span>
+  optional: true
+  syntax:
+    content: 'checkpointManager?: CheckpointManager'
+    return:
+      type:
+      - '@azure/event-processor-host.CheckpointManager'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+  name: eventHubConnectionString
+  fullName: eventHubConnectionString
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="902bf-104">{string}[eventHubConnectionString]接收來自事件中樞的連接字串。</span><span class="sxs-lookup"><span data-stu-id="902bf-104">{string} [eventHubConnectionString] Connection string for the Event Hub to receive from.</span></span> <span data-ttu-id="902bf-105">範例：「 Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我的 SA 名稱;SharedAccessKey = 我 SA 金鑰 」。</span><span class="sxs-lookup"><span data-stu-id="902bf-105">Example: "Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key".</span></span>'
+  optional: true
+  syntax:
+    content: 'eventHubConnectionString?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+  name: leaseManager
+  fullName: leaseManager
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="902bf-106">{LeaseManager}[LeaseManager]若要管理的租用管理員。</span><span class="sxs-lookup"><span data-stu-id="902bf-106">{LeaseManager} [LeaseManager] A manager to manage leases.</span></span> <span data-ttu-id="902bf-107">預設值： \*\* `AzureStorageCheckpointLeaseManager` \*\*。</span><span class="sxs-lookup"><span data-stu-id="902bf-107">Default: **`AzureStorageCheckpointLeaseManager`**.</span></span>'
+  optional: true
+  syntax:
+    content: 'leaseManager?: LeaseManager'
+    return:
+      type:
+      - '@azure/event-processor-host.LeaseManager'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+  name: storageConnectionString
+  fullName: storageConnectionString
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="902bf-108">{string}[storageConnectionString]租用和檢查點所使用的 Azure 儲存體帳戶連接字串。</span><span class="sxs-lookup"><span data-stu-id="902bf-108">{string} [storageConnectionString] Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="902bf-109">範例"DefaultEndpointsProtocol = https;AccountName = < 帳戶名稱 >;AccountKey = < 帳戶金鑰 >;EndpointSuffix=core.windows.net"</span><span class="sxs-lookup"><span data-stu-id="902bf-109">Example "DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net"</span></span>
+  optional: true
+  syntax:
+    content: 'storageConnectionString?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+  name: storageContainerName
+  fullName: storageContainerName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="902bf-110">{string}[storageContainerName]使用內建的租用和檢查點管理員 」 的 azure 儲存體容器名稱。</span><span class="sxs-lookup"><span data-stu-id="902bf-110">{string} [storageContainerName] Azure Storage container name for use by built-in lease and checkpoint manager.</span></span>
+  optional: true
+  syntax:
+    content: 'storageContainerName?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+  name: tokenProvider
+  fullName: tokenProvider
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="902bf-111">{TokenProvider}[tokenProvider]提供驗證權杖的權杖提供者介面的執行個體。</span><span class="sxs-lookup"><span data-stu-id="902bf-111">{TokenProvider} [tokenProvider] An instance of the token provider interface that provides the token for authentication.</span></span> <span data-ttu-id="902bf-112">預設值： \*\* `SasTokenProvider` \*\*。</span><span class="sxs-lookup"><span data-stu-id="902bf-112">Default value: **`SasTokenProvider`**.</span></span>'
+  optional: true
+  syntax:
+    content: 'tokenProvider?: TokenProvider'
+    return:
+      type:
+      - TokenProvider
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.FromConnectionStringOptions'
+  name: FromConnectionStringOptions
+  spec.typeScript:
+  - name: FromConnectionStringOptions
+    fullName: FromConnectionStringOptions
+    uid: '@azure/event-processor-host.FromConnectionStringOptions'
+- uid: '@azure/event-processor-host.CheckpointManager'
+  name: CheckpointManager
+  spec.typeScript:
+  - name: CheckpointManager
+    fullName: CheckpointManager
+    uid: '@azure/event-processor-host.CheckpointManager'
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  spec.typeScript:
+  - name: LeaseManager
+    fullName: LeaseManager
+    uid: '@azure/event-processor-host.LeaseManager'

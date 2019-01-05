@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 58b6591e26a44795bdf58e7dc015d2da60234313
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52033383"
+items:
+- uid: azure-servicefabric.PartitionInformation
+  name: PartitionInformation
+  fullName: PartitionInformation
+  children:
+  - azure-servicefabric.PartitionInformation.id
+  - azure-servicefabric.PartitionInformation.servicePartitionKind
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="d5211-101">分割區的身分識別，資料分割配置和它所支援的索引鍵的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="d5211-101">Information about the partition identity, partitioning scheme and keys supported by it.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionInformation.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d5211-102">Service Fabric 用來唯一識別資料分割的內部識別碼。</span><span class="sxs-lookup"><span data-stu-id="d5211-102">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="d5211-103">建立服務時，這會是隨機產生的 GUID。</span><span class="sxs-lookup"><span data-stu-id="d5211-103">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="d5211-104">分割區識別碼是唯一的而且不會變更服務的存留期。</span><span class="sxs-lookup"><span data-stu-id="d5211-104">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="d5211-105">如果相同的服務已刪除，並重新建立資料分割識別碼會相同。</span><span class="sxs-lookup"><span data-stu-id="d5211-105">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionInformation.servicePartitionKind
+  name: servicePartitionKind
+  fullName: servicePartitionKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d5211-106">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="d5211-106">Polymorphic Discriminator</span></span>
+  syntax:
+    content: 'servicePartitionKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

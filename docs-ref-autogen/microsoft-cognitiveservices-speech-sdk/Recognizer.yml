@@ -1,0 +1,147 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2916693dce29ca1d4cd2d3b853e6536501becaa2
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661012"
+items:
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+  name: Recognizer
+  fullName: Recognizer
+  children:
+  - microsoft-cognitiveservices-speech-sdk.Recognizer.close
+  - microsoft-cognitiveservices-speech-sdk.Recognizer.dispose
+  - microsoft-cognitiveservices-speech-sdk.Recognizer.enableTelemetry
+  - microsoft-cognitiveservices-speech-sdk.Recognizer.sessionStarted
+  - microsoft-cognitiveservices-speech-sdk.Recognizer.sessionStopped
+  - microsoft-cognitiveservices-speech-sdk.Recognizer.speechEndDetected
+  - microsoft-cognitiveservices-speech-sdk.Recognizer.speechStartDetected
+  - microsoft-cognitiveservices-speech-sdk.Recognizer.telemetryEnabled
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="aa6ab-101">定義主要包含常見的事件處理常式的辨識器的基底類別。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-101">Defines the base class Recognizer which mainly contains common event handlers.</span></span>
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer.close
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa6ab-102">處置相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-102">Dispose of associated resources.</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer.dispose
+  name: dispose(boolean)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="aa6ab-103">這個方法會執行清除資源。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-103">This method performs cleanup of resources.</span></span>
+
+    <span data-ttu-id="aa6ab-104">布林值參數的處置，指出是否會呼叫的方法從 Dispose （如果處置，則為 true） 或完成項 （是否處置，則為 false）。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-104">The Boolean parameter disposing indicates whether the method is called from Dispose (if disposing is true) or from the finalizer (if disposing is false).</span></span>
+
+    <span data-ttu-id="aa6ab-105">在衍生的類別應該覆寫這個方法，以視處置資源。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-105">Derived classes should override this method to dispose resource if needed.</span></span>
+  syntax:
+    content: 'function dispose(disposing: boolean)'
+    parameters:
+    - id: disposing
+      type:
+      - boolean
+      description: >
+        <span data-ttu-id="aa6ab-106">要求可供使用的旗標。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-106">Flag to request disposal.</span></span>
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer.enableTelemetry
+  name: enableTelemetry(boolean)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa6ab-107">這個方法會全域啟用，或停用遙測。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-107">This method globally enables or disables telemetry.</span></span>
+  syntax:
+    content: 'static function enableTelemetry(enabled: boolean)'
+    parameters:
+    - id: enabled
+      type:
+      - boolean
+      description: >
+        <span data-ttu-id="aa6ab-108">全域設定遙測收集。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-108">Global setting for telemetry collection.</span></span>
+
+        <span data-ttu-id="aa6ab-109">如果設為 true，遙測資訊麥克風錯誤，辨識錯誤收集並傳送給 Microsoft。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-109">If set to true, telemetry information like microphone errors, recognition errors are collected and sent to Microsoft.</span></span>
+
+        <span data-ttu-id="aa6ab-110">如果設定為 false，任何遙測會傳送給 Microsoft。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-110">If set to false, no telemetry is sent to Microsoft.</span></span>
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer.sessionStarted
+  name: sessionStarted
+  fullName: sessionStarted
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="aa6ab-111">定義啟動工作階段事件的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-111">Defines event handler for session started events.</span></span>
+  syntax:
+    content: 'public sessionStarted: (sender: Recognizer, event: SessionEventArgs) => void'
+    return:
+      type:
+      - '(sender: Recognizer, event: SessionEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer.sessionStopped
+  name: sessionStopped
+  fullName: sessionStopped
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="aa6ab-112">定義已停止的工作階段事件的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-112">Defines event handler for session stopped events.</span></span>
+  syntax:
+    content: 'public sessionStopped: (sender: Recognizer, event: SessionEventArgs) => void'
+    return:
+      type:
+      - '(sender: Recognizer, event: SessionEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer.speechEndDetected
+  name: speechEndDetected
+  fullName: speechEndDetected
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="aa6ab-113">定義語音停止事件的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-113">Defines event handler for speech stopped events.</span></span>
+  syntax:
+    content: 'public speechEndDetected: (sender: Recognizer, event: RecognitionEventArgs) => void'
+    return:
+      type:
+      - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer.speechStartDetected
+  name: speechStartDetected
+  fullName: speechStartDetected
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="aa6ab-114">定義語音啟動事件的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-114">Defines event handler for speech started events.</span></span>
+  syntax:
+    content: 'public speechStartDetected: (sender: Recognizer, event: RecognitionEventArgs) => void'
+    return:
+      type:
+      - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer.telemetryEnabled
+  name: telemetryEnabled
+  fullName: telemetryEnabled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="aa6ab-115">這個方法會傳回遙測設定的目前狀態。</span><span class="sxs-lookup"><span data-stu-id="aa6ab-115">This method returns the current state of the telemetry setting.</span></span>
+  syntax:
+    content: 'public static telemetryEnabled: boolean'
+    return:
+      type:
+      - boolean
+  package: microsoft-cognitiveservices-speech-sdk
