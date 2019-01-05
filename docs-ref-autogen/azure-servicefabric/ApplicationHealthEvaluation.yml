@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 261eddcec0f77f42a8b999fa89d54268e4d7c860
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52112683"
+items:
+- uid: azure-servicefabric.ApplicationHealthEvaluation
+  name: ApplicationHealthEvaluation
+  fullName: ApplicationHealthEvaluation
+  children:
+  - azure-servicefabric.ApplicationHealthEvaluation.applicationName
+  - azure-servicefabric.ApplicationHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: 表示應用程式，其中包含相關的資料和健康狀態存放區用來評估健康情況的演算法資訊的健康狀態評估。
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthEvaluation.applicationName
+  name: applicationName
+  fullName: applicationName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 應用程式名稱包括 ' fabric:'应用程序全名。
+  optional: true
+  syntax:
+    content: 'applicationName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 狀況不良的評估，導致目前的應用程式的彙總的健全狀態的清單。 狀況不良的評估的類型可以是 DeployedApplicationsHealthEvaluation、 ServicesHealthEvaluation 或 EventHealthEvaluation。
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

@@ -1,0 +1,293 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 446c9b90175cf1963ec14f6f23a4852439598867
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53659559"
+items:
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer
+  name: TranslationRecognizer
+  fullName: TranslationRecognizer
+  children:
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.authorizationToken
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.canceled
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.properties
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognized
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizeOnceAsync
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizing
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechRecognitionLanguage
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.stopContinuousRecognitionAsync
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.synthesizing
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.targetLanguages
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.constructor
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.voiceName
+  langs:
+  - typeScript
+  type: class
+  summary: 翻譯辨識器
+  extends:
+    name: microsoft-cognitiveservices-speech-sdk.Recognizer
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.authorizationToken
+  name: authorizationToken
+  fullName: authorizationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 設定用來與服務通訊的授權權杖。
+  syntax:
+    content: 'public authorizationToken: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.canceled
+  name: canceled
+  fullName: canceled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 取消辨識期間發生錯誤時，發出訊號的事件。
+  syntax:
+    content: 'public canceled: (sender: TranslationRecognizer, event: TranslationRecognitionCanceledEventArgs) => void'
+    return:
+      type:
+      - '(sender: TranslationRecognizer, event: TranslationRecognitionCanceledEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 關閉此類別的執行個體所持有的所有外部資源。
+  syntax:
+    content: function close()
+    parameters: []
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 屬性定義這個 TranslationRecognizer 及其值的集合。
+  syntax:
+    content: 'public properties: PropertyCollection'
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.PropertyCollection
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognized
+  name: recognized
+  fullName: recognized
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 辨識的最終辨識結果收到訊號的事件。
+  syntax:
+    content: 'public recognized: (sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+    return:
+      type:
+      - '(sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizeOnceAsync
+  name: 'recognizeOnceAsync((e: TranslationRecognitionResult) => void, (e: string) => void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    開始辨識和轉譯，然後會在第一個 [utterance] 辨識之後停止。
+
+    工作會傳回為結果的翻譯文字。
+
+    附註： recognizeOnceAsync 會傳回已辨識第一個 [utterance] 時，因此它是單一的一次性辨識 suitableonly 像命令或查詢。 針對長時間執行辨識，請改為使用 startContinuousRecognitionAsync()。
+  syntax:
+    content: 'function recognizeOnceAsync(cb?: (e: TranslationRecognitionResult) => void, err?: (e: string) => void)'
+    parameters:
+    - id: cb
+      type:
+      - '(e: TranslationRecognitionResult) => void'
+      description: 轉譯完成時接收結果的回呼。
+      optional: true
+    - id: err
+      type:
+      - '(e: string) => void'
+      description: >
+        發生錯誤時叫用的回呼。
+      optional: true
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizing
+  name: recognizing
+  fullName: recognizing
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 辨識中繼的辨識結果收到訊號的事件。
+  syntax:
+    content: 'public recognizing: (sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+    return:
+      type:
+      - '(sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechRecognitionLanguage
+  name: speechRecognitionLanguage
+  fullName: speechRecognitionLanguage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 取得辨識器所建立時設定的語言名稱。
+  syntax:
+    content: 'public speechRecognitionLanguage: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync
+  name: 'startContinuousRecognitionAsync(() => void, (e: string) => void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    啟動辨識和轉譯，直到呼叫 stopContinuousRecognitionAsync() 為止。
+
+    使用者必須訂閱以接收轉譯結果的事件。
+  syntax:
+    content: 'function startContinuousRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+    parameters:
+    - id: cb
+      type:
+      - () => void
+      description: 接收轉譯的回呼已啟動。
+      optional: true
+    - id: err
+      type:
+      - '(e: string) => void'
+      description: >
+        發生錯誤時叫用的回呼。
+      optional: true
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.stopContinuousRecognitionAsync
+  name: 'stopContinuousRecognitionAsync(() => void, (e: string) => void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 停止連續辨識和轉譯。
+  syntax:
+    content: 'function stopContinuousRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+    parameters:
+    - id: cb
+      type:
+      - () => void
+      description: 接收轉譯的回呼已停止。
+      optional: true
+    - id: err
+      type:
+      - '(e: string) => void'
+      description: >
+        發生錯誤時叫用的回呼。
+      optional: true
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.synthesizing
+  name: synthesizing
+  fullName: synthesizing
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 由合成翻譯合成結果收到訊號的事件。
+  syntax:
+    content: 'public synthesizing: (sender: TranslationRecognizer, event: TranslationSynthesisEventArgs) => void'
+    return:
+      type:
+      - '(sender: TranslationRecognizer, event: TranslationSynthesisEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.targetLanguages
+  name: targetLanguages
+  fullName: targetLanguages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    取得辨識器所建立時所設定的轉譯目標語言。
+
+    BCP-47 格式指定的語言。 翻譯將會針對每個語言提供翻譯的文字。
+  syntax:
+    content: 'public targetLanguages: string[]'
+    return:
+      type:
+      - string[]
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.constructor
+  name: TranslationRecognizer(SpeechTranslationConfig, AudioConfig)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: 初始化 TranslationRecognizer 的執行個體。
+  syntax:
+    content: 'new TranslationRecognizer(speechConfig: SpeechTranslationConfig, audioConfig?: AudioConfig)'
+    parameters:
+    - id: speechConfig
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+      description: 要設定這個辨識器的屬性集。
+    - id: audioConfig
+      type:
+      - microsoft-cognitiveservices-speech-sdk.AudioConfig
+      description: >
+        辨識器相關聯的選擇性音訊設定
+      optional: true
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.voiceName
+  name: voiceName
+  fullName: voiceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 取得輸出語音的名稱。
+  syntax:
+    content: 'public voiceName: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+references:
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+  name: Recognizer
+  spec.typeScript:
+  - name: Recognizer
+    fullName: Recognizer
+    uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  name: SpeechTranslationConfig
+  spec.typeScript:
+  - name: SpeechTranslationConfig
+    fullName: SpeechTranslationConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+- uid: microsoft-cognitiveservices-speech-sdk.AudioConfig
+  name: AudioConfig
+  spec.typeScript:
+  - name: AudioConfig
+    fullName: AudioConfig
+    uid: microsoft-cognitiveservices-speech-sdk.AudioConfig
+- uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection
+  name: PropertyCollection
+  spec.typeScript:
+  - name: PropertyCollection
+    fullName: PropertyCollection
+    uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection

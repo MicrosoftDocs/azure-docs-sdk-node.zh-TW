@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a00377b11a0a4f5c6d2453d40f079b28cb2f6aff
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52121106"
+items:
+- uid: '@azure/event-processor-host.CheckpointManager'
+  name: CheckpointManager
+  fullName: CheckpointManager
+  children:
+  - '@azure/event-processor-host.CheckpointManager.checkpointStoreExists'
+  - '@azure/event-processor-host.CheckpointManager.createAllCheckpointsIfNotExists'
+  - '@azure/event-processor-host.CheckpointManager.createCheckpointStoreIfNotExists'
+  - '@azure/event-processor-host.CheckpointManager.deleteCheckpoint'
+  - '@azure/event-processor-host.CheckpointManager.deleteCheckpointStore'
+  - '@azure/event-processor-host.CheckpointManager.getCheckpoint'
+  - '@azure/event-processor-host.CheckpointManager.updateCheckpoint'
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.checkpointStoreExists'
+  name: checkpointStoreExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 不存在的檢查點存放區
+  syntax:
+    content: function checkpointStoreExists()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.createAllCheckpointsIfNotExists'
+  name: createAllCheckpointsIfNotExists(string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    建立指定之資料分割的持有者檢查點。 沒有任何檢查點存在的持有者。
+
+    語意相當複雜，因為它是可以使用相同的存放區進行租用和檢查點 （Azure 儲存體實作這麼做） 和它需要有每個資料分割的租用，但它不需要有資料分割的檢查點。
+
+    因此很重要的區別建立結構不僅會包含檢查點以及實際建立檢查點 （儲存在結構中的位移/順序編號組） 的存放區，就永遠不會使用檢查點，是有效的案例。
+  syntax:
+    content: 'function createAllCheckpointsIfNotExists(partitionIds: string[])'
+    parameters:
+    - id: partitionIds
+      type:
+      - string[]
+      description: 若要建立的檢查點持有者的資料分割的清單。
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.createCheckpointStoreIfNotExists'
+  name: createCheckpointStoreIfNotExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 如果不存在，請建立檢查點存放區。 若有的話，則沒有任何作用。
+  syntax:
+    content: function createCheckpointStoreIfNotExists()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.deleteCheckpoint'
+  name: deleteCheckpoint(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 刪除指定的資料分割的預存的檢查點。 如果沒有針對指定的分割區，會被視為成功的任何預存的檢查點。 正在刪除檢查點的持有者是允許但並非必要;免費要取其較方便您的實作。
+  syntax:
+    content: 'function deleteCheckpoint(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: 若要從存放區刪除檢查點 partitionId。
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.deleteCheckpointStore'
+  name: deleteCheckpointStore()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 刪除檢查點存放區。
+  syntax:
+    content: function deleteCheckpointStore()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.getCheckpoint'
+  name: getCheckpoint(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取得與指定的資料分割相關聯的檢查點資訊。 如果沒有檢查點已建立該資料分割，則可能傳回未定義。
+  syntax:
+    content: 'function getCheckpoint(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: 若要取得的檢查點資訊 partitionId。
+    return:
+      type:
+      - Promise<@azure/event-processor-host.CheckpointInfo | undefined>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.updateCheckpoint'
+  name: updateCheckpoint(CompleteLease, CheckpointInfo)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 更新存放區中的檢查點位移/sequenceNumber 中提供的檢查點。
+  syntax:
+    content: 'function updateCheckpoint(lease: CompleteLease, checkpoint: CheckpointInfo)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 針對要執行檢查點的磁碟分割資訊。
+    - id: checkpoint
+      type:
+      - '@azure/event-processor-host.CheckpointInfo'
+      description: 位移/sequeceNumber 更新的存放區
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+references:
+- uid: Promise<@azure/event-processor-host.CheckpointInfo | undefined>
+  name: CheckpointInfo | undefined>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CheckpointInfo
+    fullName: CheckpointInfo
+    uid: '@azure/event-processor-host.CheckpointInfo'
+  - name: " | undefined>"
+    fullName: " | undefined>"
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+- uid: '@azure/event-processor-host.CheckpointInfo'
+  name: CheckpointInfo
+  spec.typeScript:
+  - name: CheckpointInfo
+    fullName: CheckpointInfo
+    uid: '@azure/event-processor-host.CheckpointInfo'

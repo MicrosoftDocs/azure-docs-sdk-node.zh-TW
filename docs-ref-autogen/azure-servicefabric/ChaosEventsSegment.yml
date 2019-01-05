@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a3a31dfcc2dac96a682e046f65aa5f1b05b5d4e0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52037193"
+items:
+- uid: azure-servicefabric.ChaosEventsSegment
+  name: ChaosEventsSegment
+  fullName: ChaosEventsSegment
+  children:
+  - azure-servicefabric.ChaosEventsSegment.continuationToken
+  - azure-servicefabric.ChaosEventsSegment.history
+  langs:
+  - typeScript
+  type: interface
+  summary: 包含混亂事件及要取得下一個區段的接續權杖的清單。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ChaosEventsSegment.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    接續權杖參數可用來取得下一組結果。 接續權杖會隨附在 API 的回應中時，系統的結果無法放入單一回應。 當此值傳遞至下一個 API 呼叫時，API 會傳回下一組結果。
+
+    如果不有任何進一步的結果，然後接續 token 不包含在回應中。
+  optional: true
+  syntax:
+    content: 'continuationToken?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ChaosEventsSegment.history
+  name: history
+  fullName: history
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 符合的使用者提供的準則的混亂事件的清單。
+  optional: true
+  syntax:
+    content: 'history?: ChaosEventWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.ChaosEventWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ChaosEventWrapper[]
+  name: ChaosEventWrapper[]
+  spec.typeScript:
+  - name: ChaosEventWrapper
+    fullName: ChaosEventWrapper
+    uid: azure-servicefabric.ChaosEventWrapper
+  - name: '[]'
+    fullName: '[]'

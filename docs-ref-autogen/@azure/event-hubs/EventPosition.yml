@@ -1,0 +1,290 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 57904c874fb45bb5bfb6f2b2c17c8aac38af3e3c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52067916"
+items:
+- uid: '@azure/event-hubs.EventPosition'
+  name: EventPosition
+  fullName: EventPosition
+  children:
+  - '@azure/event-hubs.EventPosition.customFilter'
+  - '@azure/event-hubs.EventPosition.endOfStream'
+  - '@azure/event-hubs.EventPosition.enqueuedTime'
+  - '@azure/event-hubs.EventPosition.constructor'
+  - '@azure/event-hubs.EventPosition.fromEnd'
+  - '@azure/event-hubs.EventPosition.fromEnqueuedTime'
+  - '@azure/event-hubs.EventPosition.fromOffset'
+  - '@azure/event-hubs.EventPosition.fromSequenceNumber'
+  - '@azure/event-hubs.EventPosition.fromStart'
+  - '@azure/event-hubs.EventPosition.getExpression'
+  - '@azure/event-hubs.EventPosition.isInclusive'
+  - '@azure/event-hubs.EventPosition.offset'
+  - '@azure/event-hubs.EventPosition.sequenceNumber'
+  - '@azure/event-hubs.EventPosition.startOfStream'
+  - '@azure/event-hubs.EventPosition.withCustomFilter'
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    事件中樞接收器的建立期間，可以設定代表選項。
+
+    定義位置@link~ EventData 事件中樞資料分割中的。
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.customFilter'
+  name: customFilter
+  fullName: customFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string}[customFilter]必須在接收者上設定自訂的篩選條件運算式。'
+  optional: true
+  syntax:
+    content: 'customFilter?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.endOfStream'
+  name: endOfStream
+  fullName: endOfStream
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '收到的事件從位移 {string} endOfStream: `"@latest"`。'
+  syntax:
+    content: 'static endOfStream: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.enqueuedTime'
+  name: enqueuedTime
+  fullName: enqueuedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Date | 數目}[enqueuedTime]已加入佇列的事件時間的位置。 如果位置只會從序號或位移的方式建立，它可以是未定義。'
+  optional: true
+  syntax:
+    content: 'enqueuedTime?: Date | number'
+    return:
+      type:
+      - Date | number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.constructor'
+  name: EventPosition(EventPositionOptions)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new EventPosition(options?: EventPositionOptions)'
+    parameters:
+    - id: options
+      type:
+      - EventPositionOptions
+      description: ''
+      optional: true
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromEnd'
+  name: fromEnd()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 傳回資料流結尾的位置。 會提供此位置中開始建立接收者後，接收從資料分割中下一個可用的事件接收器的建立。
+  syntax:
+    content: static function fromEnd()
+    parameters: []
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromEnqueuedTime'
+  name: fromEnqueuedTime(Date | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立位置在指定的加入佇列時間。
+  syntax:
+    content: 'static function fromEnqueuedTime(enqueuedTime: Date | number)'
+    parameters:
+    - id: enqueuedTime
+      type:
+      - Date | number
+      description: 加入佇列的時間。 這個值表示佇列訊息的實際時間。
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromOffset'
+  name: fromOffset(string, undefined | false | true)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立指定的位移的位置。
+  syntax:
+    content: 'static function fromOffset(offset: string, isInclusive?: undefined | false | true)'
+    parameters:
+    - id: offset
+      type:
+      - string
+      description: >-
+        相對於事件中樞資料分割串流的資料位移。
+
+        此位移是事件中樞串流中事件的標記或識別碼。
+
+        此識別碼在事件中樞串流的資料分割內是唯一的。
+    - id: isInclusive
+      type:
+      - undefined | false | true
+      description: 如果為 true，指定的事件包含在內。否則會傳回下一個事件。 預設：false。
+      optional: true
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromSequenceNumber'
+  name: fromSequenceNumber(number, undefined | false | true)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立位置在指定的序號。
+  syntax:
+    content: 'static function fromSequenceNumber(sequenceNumber: number, isInclusive?: undefined | false | true)'
+    parameters:
+    - id: sequenceNumber
+      type:
+      - number
+      description: 事件中樞的資料分割資料流中事件邏輯的序號。
+    - id: isInclusive
+      type:
+      - undefined | false | true
+      description: 如果為 true，指定的事件包含在內。否則會傳回下一個事件。 預設為 false。
+      optional: true
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromStart'
+  name: fromStart()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 傳回資料流開頭的位置。 會提供此位置中要開始接收來自分割區中的第一個可用的事件接收器的建立。
+  syntax:
+    content: static function fromStart()
+    parameters: []
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.getExpression'
+  name: getExpression()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取得必須在來源上設定的運算式 （filter 子句）。
+  syntax:
+    content: function getExpression()
+    parameters: []
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.isInclusive'
+  name: isInclusive
+  fullName: isInclusive
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{布林} isInclusive 指出為包含目前事件中指定的位移。 如果位移設定，才適用。 預設值： false。'
+  syntax:
+    content: 'isInclusive: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.offset'
+  name: offset
+  fullName: offset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string}[位移]事件位置的位移。 如果位置剛建立的序號或已加入佇列的時間，它可以是未定義。'
+  optional: true
+  syntax:
+    content: 'offset?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.sequenceNumber'
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number}[sequenceNumber]事件位置的序號。 如果位置只會從已加入佇列的時間或位移的方式建立，它可以是未定義。'
+  optional: true
+  syntax:
+    content: 'sequenceNumber?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.startOfStream'
+  name: startOfStream
+  fullName: startOfStream
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '收到的事件從位移 {string} startOfStream: `"-1"`。'
+  syntax:
+    content: 'static startOfStream: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.withCustomFilter'
+  name: withCustomFilter(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 建立根據指定的自訂篩選條件的位置。
+  syntax:
+    content: 'static function withCustomFilter(customFilter: string)'
+    parameters:
+    - id: customFilter
+      type:
+      - string
+      description: >
+        必須在接收者上套用 cutom 篩選運算式。 這應該只有時才能使用一種其他方法`fromOffset()`， `fromSequenceNumber()`，`fromEnqueuedTime()`並不適用於您的案例。
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.EventPosition'
+  name: EventPosition
+  spec.typeScript:
+  - name: EventPosition
+    fullName: EventPosition
+    uid: '@azure/event-hubs.EventPosition'
