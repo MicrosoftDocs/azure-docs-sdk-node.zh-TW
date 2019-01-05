@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bd5b9eaacd3e0fe8d39d35790a637a735d1c1cef
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52115883"
+items:
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription
+  name: RollingUpgradeUpdateDescription
+  fullName: RollingUpgradeUpdateDescription
+  children:
+  - azure-servicefabric.RollingUpgradeUpdateDescription.failureAction
+  - azure-servicefabric.RollingUpgradeUpdateDescription.forceRestart
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode
+  - azure-servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
+  langs:
+  - typeScript
+  type: interface
+  summary: 描述更新應用程式或叢集的輪流升級的參數。
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.failureAction
+  name: failureAction
+  fullName: failureAction
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    要受監視的升級遇到監視原則或健康情況原則違規時執行的補償動作。
+
+    無效的表示是無效的失敗動作。 復原指定升級將會啟動自動回復。
+
+    Manual 表示升級會切換為 UnmonitoredManual 升級模式。 可能的值包括：' Invalid'、 'Rollback'、 'Manual'
+  optional: true
+  syntax:
+    content: 'failureAction?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果為 true，然後處理程序會強制重新啟動在升級期間即使程式碼版本尚未變更 （升級的唯一變更組態或資料）。
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
+  name: healthCheckRetryTimeoutInMilliseconds
+  fullName: healthCheckRetryTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 當應用程式或叢集狀況不良執行 FailureAction 之前，請重試健康狀態評估的時間量。 它會先解譯為代表 ISO 8601 持續時間的字串。 如果失敗，則會解譯為代表總毫秒數的數字。
+  optional: true
+  syntax:
+    content: 'healthCheckRetryTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
+  name: healthCheckStableDurationInMilliseconds
+  fullName: healthCheckStableDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 在升級繼續進入下一個升級網域之前，應用程式或叢集必須維持狀況良好的時間長度。 它會先解譯為代表 ISO 8601 持續時間的字串。 如果失敗，則會解譯為代表總毫秒數的數字。
+  optional: true
+  syntax:
+    content: 'healthCheckStableDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
+  name: healthCheckWaitDurationInMilliseconds
+  fullName: healthCheckWaitDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    完成升級網域之後，在套用健康原則之前，要等待的時間長度。
+
+    它會先解譯為代表 ISO 8601 持續時間的字串。 如果失敗，則會解譯為代表總毫秒數的數字。
+  optional: true
+  syntax:
+    content: 'healthCheckWaitDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
+  name: replicaSetCheckTimeoutInMilliseconds
+  fullName: replicaSetCheckTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    發生非預期問題時，封鎖處理升級網域並防止遺失可用性的時間長度上限。 此逾時過期時，無論是否發生可用性遺失問題，升級網域的處理都將繼續。 逾時會在每個升級網域啟動時重設。 有效值介於 0 到 42949672925 (含) 之間。
+
+    （不帶正負號的 32 位元整數）。
+  optional: true
+  syntax:
+    content: 'replicaSetCheckTimeoutInMilliseconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 在輪流升級期間用來監視健康情況的模式。 的值為 UnmonitoredAuto 及 UnmonitoredManual，受監視。 可能的值包括：' Invalid'、 'UnmonitoredAuto'、 'UnmonitoredManual'、 '監視'
+  syntax:
+    content: 'rollingUpgradeMode: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
+  name: upgradeDomainTimeoutInMilliseconds
+  fullName: upgradeDomainTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 執行 FailureAction 之前，每個升級網域必須完成的時間長度。 它會先解譯為代表 ISO 8601 持續時間的字串。 如果失敗，則會解譯為代表總毫秒數的數字。
+  optional: true
+  syntax:
+    content: 'upgradeDomainTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
+  name: upgradeTimeoutInMilliseconds
+  fullName: upgradeTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 執行 FailureAction 之前，整體升級必須完成的時間長度。 它會先解譯為代表 ISO 8601 持續時間的字串。 如果失敗，則會解譯為代表總毫秒數的數字。
+  optional: true
+  syntax:
+    content: 'upgradeTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

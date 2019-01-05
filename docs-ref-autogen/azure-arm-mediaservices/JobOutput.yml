@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b55c1abbd7c66ee7dfacaae97fe767a685f2678a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661412"
+items:
+- uid: azure-arm-mediaservices.JobOutput
+  name: JobOutput
+  fullName: JobOutput
+  children:
+  - azure-arm-mediaservices.JobOutput.error
+  - azure-arm-mediaservices.JobOutput.label
+  - azure-arm-mediaservices.JobOutput.odatatype
+  - azure-arm-mediaservices.JobOutput.progress
+  - azure-arm-mediaservices.JobOutput.state
+  langs:
+  - typeScript
+  type: interface
+  summary: 描述 JobOutput 的所有屬性。
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.error
+  name: error
+  fullName: error
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果 JobOutput 處於錯誤狀態時，它會包含錯誤詳細資料。
+  optional: true
+  syntax:
+    content: 'error?: JobError'
+    return:
+      type:
+      - azure-arm-mediaservices.JobError
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.label
+  name: label
+  fullName: label
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 標籤指派給 JobOutput 為了唯一識別它。 當您轉換都有一個以上的 TransformOutput，藉此讓您的作業有一個以上的 JobOutput，這非常有用。 在這種情況下，當您提交作業，您會將兩個或多個 JobOutputs，在轉換中的 TransformOutputs 順序相同。 接下來，當您擷取作業，透過事件，或在 GET 要求中，您可以使用標籤輕鬆地識別 JobOutput。 如果未提供標籤，預設值為 '{presetName} _ {outputIndex}' 將會使用，其中的預設的名稱是在對應的 TransformOutput 和輸出的索引中的預設值的名稱是相對的索引，這個 JobOutput 作業內。 請注意，此索引是在其轉換對應 TransformOutput 的相對索引相同。
+  optional: true
+  syntax:
+    content: 'label?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.odatatype
+  name: odatatype
+  fullName: odatatype
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 多型的鑑別子
+  syntax:
+    content: 'odatatype: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.progress
+  name: progress
+  fullName: progress
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果 JobOutput 處於處理中狀態，這會包含作業的完成百分比。 值為估計值，並不適合用來預測工作的完成時間。 若要判斷 JobOutput 是否完成，請使用 State 屬性。
+  optional: true
+  syntax:
+    content: 'progress?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 描述 JobOutput 狀態。 可能的值包括：「 已取消'、 '取消'，'Error'，'結束'、 '處理'、 ' 排入佇列 '，'Scheduled'
+  optional: true
+  syntax:
+    content: 'state?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.JobError
+  name: JobError
+  spec.typeScript:
+  - name: JobError
+    fullName: JobError
+    uid: azure-arm-mediaservices.JobError
