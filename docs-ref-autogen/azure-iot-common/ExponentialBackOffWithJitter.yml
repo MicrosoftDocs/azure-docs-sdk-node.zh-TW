@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 566bfe341884a40c4792a091f7842a7ab5ea7ac6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52057193"
+items:
+- uid: azure-iot-common.ExponentialBackOffWithJitter
+  name: ExponentialBackOffWithJitter
+  fullName: ExponentialBackOffWithJitter
+  children:
+  - azure-iot-common.ExponentialBackOffWithJitter.constructor
+  - azure-iot-common.ExponentialBackOffWithJitter.immediateFirstRetry
+  - azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
+  - azure-iot-common.ExponentialBackOffWithJitter.normalParameters
+  - azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
+  - azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    <span data-ttu-id="adc78-101">實作 Jitter 使用指數輪詢重試策略。</span><span class="sxs-lookup"><span data-stu-id="adc78-101">Implements an Exponential Backoff with Jitter retry strategy.</span></span>
+
+    <span data-ttu-id="adc78-102">使用函數來計算下一個間隔如下 （x 是第 x 個重試）：F （x) = 最小值 (Cmin + (2^(x-1)-1) \* rand (C \* (1 – Jd)，C\*(1-Ju))、 Cmax)</span><span class="sxs-lookup"><span data-stu-id="adc78-102">The function to calculate the next interval is the following (x is the xth retry): F(x) = min(Cmin+ (2^(x-1)-1) \* rand(C \* (1 – Jd), C\*(1-Ju)), Cmax)</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.constructor
+  name: ExponentialBackOffWithJitter(boolean, ErrorFilter)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adc78-103">初始化 <xref:azure-iot-common.ExponentialBackOffWithJitter> 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="adc78-103">Initializes a new instance of the <xref:azure-iot-common.ExponentialBackOffWithJitter> class.</span></span>
+  syntax:
+    content: 'new ExponentialBackOffWithJitter(immediateFirstRetry?: boolean, errorFilter?: ErrorFilter)'
+    parameters:
+    - id: immediateFirstRetry
+      type:
+      - boolean
+      description: >
+        <span data-ttu-id="adc78-104">布林值，指出第一個重試應該會立即 （預設值） 或等候第一次的間隔 （c 值）。</span><span class="sxs-lookup"><span data-stu-id="adc78-104">boolean indicating whether the first retry should be immediate (default) or wait the first interval (c value).</span></span>
+      optional: true
+    - id: errorFilter
+      type:
+      - ErrorFilter
+      description: ''
+      optional: true
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.immediateFirstRetry
+  name: immediateFirstRetry
+  fullName: immediateFirstRetry
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="adc78-105">布林值，指出是否應該立即第一次重試 (如果設定為 true) 或 normalParameters.c 延遲之後 (如果設定為 false)。</span><span class="sxs-lookup"><span data-stu-id="adc78-105">Boolean indicating whether the first retry should be immediate (if set to true) or after the normalParameters.c delay (if set to false).</span></span>
+  syntax:
+    content: 'immediateFirstRetry: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
+  name: nextRetryTimeout(number, boolean)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adc78-106">計算每個新的重試暫時性重試之前等待的間隔。</span><span class="sxs-lookup"><span data-stu-id="adc78-106">Computes the interval to wait before retrying at each new retry tentative.</span></span>
+  syntax:
+    content: 'function nextRetryTimeout(retryCount: number, isThrottled: boolean)'
+    parameters:
+    - id: retryCount
+      type:
+      - number
+      description: <span data-ttu-id="adc78-107">目前的重試暫時性。</span><span class="sxs-lookup"><span data-stu-id="adc78-107">Current retry tentative.</span></span>
+    - id: isThrottled
+      type:
+      - boolean
+      description: <span data-ttu-id="adc78-108">布林值，指出 Azure IoT 中樞是否正在進行節流作業。</span><span class="sxs-lookup"><span data-stu-id="adc78-108">Boolean indicating whether the Azure IoT hub is throttling operations.</span></span>
+    return:
+      type:
+      - number
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.normalParameters
+  name: normalParameters
+  fullName: normalParameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="adc78-109">重試參數用來計算在正常情況下每次重試之間的延遲 (亦即。 不會執行節流)。</span><span class="sxs-lookup"><span data-stu-id="adc78-109">Retry parameters used to calculate the delay between each retry in normal situations (ie. not throttled).</span></span>
+  syntax:
+    content: 'normalParameters: ExponentialBackoffWithJitterParameters'
+    return:
+      type:
+      - azure-iot-common.ExponentialBackoffWithJitterParameters
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
+  name: shouldRetry(Error)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="adc78-110">根據當做引數傳遞的錯誤，決定如果錯誤是暫時性，以及是否應該重試此作業。</span><span class="sxs-lookup"><span data-stu-id="adc78-110">Based on the error passed as argument, determines if an error is transient and if the operation should be retried or not.</span></span>
+  syntax:
+    content: 'function shouldRetry(error: Error)'
+    parameters:
+    - id: error
+      type:
+      - Error
+      description: <span data-ttu-id="adc78-111">作業所發生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="adc78-111">The error encountered by the operation.</span></span>
+    return:
+      type:
+      - boolean
+  package: azure-iot-common
+- uid: azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
+  name: throttledParameters
+  fullName: throttledParameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="adc78-112">重試參數用來計算已節流處理的情況下在每次重試之間的延遲。</span><span class="sxs-lookup"><span data-stu-id="adc78-112">Retry parameters used to calculate the delay between each retry in throttled situations.</span></span>
+  syntax:
+    content: 'throttledParameters: ExponentialBackoffWithJitterParameters'
+    return:
+      type:
+      - azure-iot-common.ExponentialBackoffWithJitterParameters
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.ExponentialBackoffWithJitterParameters
+  name: ExponentialBackoffWithJitterParameters
+  spec.typeScript:
+  - name: ExponentialBackoffWithJitterParameters
+    fullName: ExponentialBackoffWithJitterParameters
+    uid: azure-iot-common.ExponentialBackoffWithJitterParameters

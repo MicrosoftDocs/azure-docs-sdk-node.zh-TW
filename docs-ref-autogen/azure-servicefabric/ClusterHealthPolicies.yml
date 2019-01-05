@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2863767b51e05b4f83f88c017ce9104bf03a4a5b
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52035393"
+items:
+- uid: azure-servicefabric.ClusterHealthPolicies
+  name: ClusterHealthPolicies
+  fullName: ClusterHealthPolicies
+  children:
+  - azure-servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap
+  - azure-servicefabric.ClusterHealthPolicies.clusterHealthPolicy
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="53f95-101">健全狀況原則，來評估叢集健康情況。</span><span class="sxs-lookup"><span data-stu-id="53f95-101">Health policies to evaluate cluster health.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap
+  name: applicationHealthPolicyMap
+  fullName: applicationHealthPolicyMap
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="53f95-102">定義包含不同的應用程式的特定應用程式的健康狀態原則對應。</span><span class="sxs-lookup"><span data-stu-id="53f95-102">Defines a map that contains specific application health policies for different applications.</span></span>
+
+    <span data-ttu-id="53f95-103">每個項目指定為金鑰的應用程式名稱，並為 ApplicationHealthPolicy 用來評估應用程式健全狀況的值。</span><span class="sxs-lookup"><span data-stu-id="53f95-103">Each entry specifies as key the application name and as value an ApplicationHealthPolicy used to evaluate the application health.</span></span>
+
+    <span data-ttu-id="53f95-104">如果在對應中未指定應用程式，應用程式健康狀態評估會使用 （若沒有健全狀況原則定義資訊清單中），位於其應用程式資訊清單或預設應用程式健康狀態原則 ApplicationHealthPolicy。</span><span class="sxs-lookup"><span data-stu-id="53f95-104">If an application is not specified in the map, the application health evaluation uses the ApplicationHealthPolicy found in its application manifest or the default application health policy (if no health policy is defined in the manifest).</span></span>
+
+    <span data-ttu-id="53f95-105">對應預設是空的。</span><span class="sxs-lookup"><span data-stu-id="53f95-105">The map is empty by default.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicyMap?: ApplicationHealthPolicyMapItem[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicyMapItem[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicies.clusterHealthPolicy
+  name: clusterHealthPolicy
+  fullName: clusterHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="53f95-106">定義用來評估叢集或叢集節點的健全狀況的健全狀況原則。</span><span class="sxs-lookup"><span data-stu-id="53f95-106">Defines a health policy used to evaluate the health of the cluster or of a cluster node.</span></span>
+  optional: true
+  syntax:
+    content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ClusterHealthPolicy
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicyMapItem[]
+  name: ApplicationHealthPolicyMapItem[]
+  spec.typeScript:
+  - name: ApplicationHealthPolicyMapItem
+    fullName: ApplicationHealthPolicyMapItem
+    uid: azure-servicefabric.ApplicationHealthPolicyMapItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ClusterHealthPolicy
+  name: ClusterHealthPolicy
+  spec.typeScript:
+  - name: ClusterHealthPolicy
+    fullName: ClusterHealthPolicy
+    uid: azure-servicefabric.ClusterHealthPolicy

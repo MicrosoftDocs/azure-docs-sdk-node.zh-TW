@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f981572ac204e89f3a3b64661a006d2fb082828f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52035293"
+items:
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation
+  name: ApplicationTypeApplicationsHealthEvaluation
+  fullName: ApplicationTypeApplicationsHealthEvaluation
+  children:
+  - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.applicationTypeName
+  - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.maxPercentUnhealthyApplications
+  - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.totalCount
+  - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="d4677-101">表示特定的應用程式類型的應用程式的健康狀態評估。</span><span class="sxs-lookup"><span data-stu-id="d4677-101">Represents health evaluation for applications of a particular application type.</span></span> <span data-ttu-id="d4677-102">當叢集健康狀態評估會傳回處於不健全狀況彙總的健康狀態、 錯誤或警告時，會傳回應用程式類型應用程式評估。</span><span class="sxs-lookup"><span data-stu-id="d4677-102">The application type applications evaluation can be returned when cluster health evaluation returns unhealthy aggregated health state, either Error or Warning.</span></span> <span data-ttu-id="d4677-103">它包含每個狀況不良應用程式隨附的應用程式類型影響目前的彙總健全狀況狀態的健康情況評估。</span><span class="sxs-lookup"><span data-stu-id="d4677-103">It contains health evaluations for each unhealthy application of the included application type that impacted current aggregated health state.</span></span>
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.applicationTypeName
+  name: applicationTypeName
+  fullName: applicationTypeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d4677-104">應用程式類型名稱的應用程式資訊清單中所定義。</span><span class="sxs-lookup"><span data-stu-id="d4677-104">The application type name as defined in the application manifest.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationTypeName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.maxPercentUnhealthyApplications
+  name: maxPercentUnhealthyApplications
+  fullName: maxPercentUnhealthyApplications
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d4677-105">允許的最大百分比狀況不良的應用程式，應用程式類型，指定為 ApplicationTypeHealthPolicyMap 中的項目。</span><span class="sxs-lookup"><span data-stu-id="d4677-105">Maximum allowed percentage of unhealthy applications for the application type, specified as an entry in ApplicationTypeHealthPolicyMap.</span></span>
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyApplications?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.totalCount
+  name: totalCount
+  fullName: totalCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d4677-106">在健康狀態存放區中找到的應用程式類型的應用程式總數。</span><span class="sxs-lookup"><span data-stu-id="d4677-106">Total number of applications of the application type found in the health store.</span></span>
+  optional: true
+  syntax:
+    content: 'totalCount?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d4677-107">狀況不良的評估，導致的彙總健全狀況狀態的清單。</span><span class="sxs-lookup"><span data-stu-id="d4677-107">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="d4677-108">包含所有狀況不良的 ApplicationHealthEvaluation tohoto typu aplikace 影響彙總的健康情況。</span><span class="sxs-lookup"><span data-stu-id="d4677-108">Includes all the unhealthy ApplicationHealthEvaluation of this application type that impacted the aggregated health.</span></span>
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

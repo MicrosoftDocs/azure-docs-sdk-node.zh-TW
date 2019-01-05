@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7cfa6c93f47756f2ca02217849d1083336f867f2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52007812"
+items:
+- uid: azure-servicefabric.NodeHealthStateFilter
+  name: NodeHealthStateFilter
+  fullName: NodeHealthStateFilter
+  children:
+  - azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  - azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="ee194-101">定義比對準則，以判斷是否應包含一個節點傳回的叢集健全狀況區塊中。</span><span class="sxs-lookup"><span data-stu-id="ee194-101">Defines matching criteria to determine whether a node should be included in the returned cluster health chunk.</span></span>
+
+    <span data-ttu-id="ee194-102">一個篩選條件可以比對零、 一或多個節點，根據其屬性。</span><span class="sxs-lookup"><span data-stu-id="ee194-102">One filter can match zero, one or multiple nodes, depending on its properties.</span></span>
+
+    <span data-ttu-id="ee194-103">可以指定在叢集健全狀況區塊查詢描述。</span><span class="sxs-lookup"><span data-stu-id="ee194-103">Can be specified in the cluster health chunk query description.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="ee194-104">篩選節點的健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="ee194-104">The filter for the health state of the nodes.</span></span> <span data-ttu-id="ee194-105">它可讓選取的節點，如果兩者相符的所需的健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="ee194-105">It allows selecting nodes if they match the desired health states.</span></span>
+
+    <span data-ttu-id="ee194-106">可能的值為其中一個下列的健全狀況狀態的整數值。</span><span class="sxs-lookup"><span data-stu-id="ee194-106">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="ee194-107">只會傳回符合篩選條件的節點。</span><span class="sxs-lookup"><span data-stu-id="ee194-107">Only nodes that match the filter are returned.</span></span> <span data-ttu-id="ee194-108">所有節點都會都用來評估彙總的叢集健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="ee194-108">All nodes are used to evaluate the cluster aggregated health state.</span></span>
+
+    <span data-ttu-id="ee194-109">如果未指定，預設值會是 None，除非指定節點名稱。</span><span class="sxs-lookup"><span data-stu-id="ee194-109">If not specified, default value is None, unless the node name is specified.</span></span> <span data-ttu-id="ee194-110">如果篩選器有預設值，指定節點名稱時，會傳回相符的節點。</span><span class="sxs-lookup"><span data-stu-id="ee194-110">If the filter has default value and node name is specified, the matching node is returned.</span></span>
+
+    <span data-ttu-id="ee194-111">狀態值是以旗標為基礎的列舉，因此值可以是使用位元 'OR' 運算子取得的這些值的組合。</span><span class="sxs-lookup"><span data-stu-id="ee194-111">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="ee194-112">例如，如果提供的值為 6，它會符合 HealthState 值為 OK (2) 和 Warning (4) 的節點。</span><span class="sxs-lookup"><span data-stu-id="ee194-112">For example, if the provided value is 6, it matches nodes with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="ee194-113">Default-預設值。</span><span class="sxs-lookup"><span data-stu-id="ee194-113">Default - Default value.</span></span> <span data-ttu-id="ee194-114">符合任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="ee194-114">Matches any HealthState.</span></span> <span data-ttu-id="ee194-115">值為零。</span><span class="sxs-lookup"><span data-stu-id="ee194-115">The value is zero.</span></span>
+
+    - <span data-ttu-id="ee194-116">None-不符合任何 HealthState 值的篩選。</span><span class="sxs-lookup"><span data-stu-id="ee194-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="ee194-117">用來在指定狀態集合沒有任何結果時傳回。</span><span class="sxs-lookup"><span data-stu-id="ee194-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="ee194-118">值為 1。</span><span class="sxs-lookup"><span data-stu-id="ee194-118">The value is 1.</span></span>
+
+    - <span data-ttu-id="ee194-119">Ok-符合輸入含 HealthState 值 Ok 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="ee194-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="ee194-120">值為 2。</span><span class="sxs-lookup"><span data-stu-id="ee194-120">The value is 2.</span></span>
+
+    - <span data-ttu-id="ee194-121">警告-篩選符合輸入含 HealthState 值 Warning。</span><span class="sxs-lookup"><span data-stu-id="ee194-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="ee194-122">值為 4。</span><span class="sxs-lookup"><span data-stu-id="ee194-122">The value is 4.</span></span>
+
+    - <span data-ttu-id="ee194-123">Error-符合輸入含 HealthState 值 Error 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="ee194-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="ee194-124">值為 8。</span><span class="sxs-lookup"><span data-stu-id="ee194-124">The value is 8.</span></span>
+
+    - <span data-ttu-id="ee194-125">All-符合輸入含任何 HealthState 值的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="ee194-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="ee194-126">值為 65535。</span><span class="sxs-lookup"><span data-stu-id="ee194-126">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  name: nodeNameFilter
+  fullName: nodeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="ee194-127">符合篩選條件的節點名稱。</span><span class="sxs-lookup"><span data-stu-id="ee194-127">Name of the node that matches the filter.</span></span> <span data-ttu-id="ee194-128">篩選為只套用至指定的節點，若有的話。</span><span class="sxs-lookup"><span data-stu-id="ee194-128">The filter is applied only to the specified node, if it exists.</span></span>
+
+    <span data-ttu-id="ee194-129">如果節點不存在，此篩選器為基礎的叢集健全狀況區塊會不傳回任何節點。</span><span class="sxs-lookup"><span data-stu-id="ee194-129">If the node doesn't exist, no node is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="ee194-130">如果節點存在，就會包含在叢集健康狀態區塊如果健全狀況狀態相符的篩選屬性。</span><span class="sxs-lookup"><span data-stu-id="ee194-130">If the node exists, it is included in the cluster health chunk if the health state matches the other filter properties.</span></span>
+
+    <span data-ttu-id="ee194-131">如果未指定，符合父篩選 （如果有的話） 的所有節點會納入考量，並比對其他篩選成員，例如健康情況狀態篩選。</span><span class="sxs-lookup"><span data-stu-id="ee194-131">If not specified, all nodes that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
