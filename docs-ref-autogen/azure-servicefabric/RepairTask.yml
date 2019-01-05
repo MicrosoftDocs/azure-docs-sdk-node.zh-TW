@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5777e998a9726c2c811e04d5dc0efbc786c7eacd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52141243"
+items:
+- uid: azure-servicefabric.RepairTask
+  name: RepairTask
+  fullName: RepairTask
+  children:
+  - azure-servicefabric.RepairTask.action
+  - azure-servicefabric.RepairTask.description
+  - azure-servicefabric.RepairTask.executor
+  - azure-servicefabric.RepairTask.executorData
+  - azure-servicefabric.RepairTask.flags
+  - azure-servicefabric.RepairTask.history
+  - azure-servicefabric.RepairTask.impact
+  - azure-servicefabric.RepairTask.performPreparingHealthCheck
+  - azure-servicefabric.RepairTask.performRestoringHealthCheck
+  - azure-servicefabric.RepairTask.preparingHealthCheckState
+  - azure-servicefabric.RepairTask.restoringHealthCheckState
+  - azure-servicefabric.RepairTask.resultCode
+  - azure-servicefabric.RepairTask.resultDetails
+  - azure-servicefabric.RepairTask.resultStatus
+  - azure-servicefabric.RepairTask.state
+  - azure-servicefabric.RepairTask.target
+  - azure-servicefabric.RepairTask.taskId
+  - azure-servicefabric.RepairTask.version
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    表示修復工作，其中包含哪一種修復要求，其進度的是，其最終結果是什麼相關資訊。
+
+    此型別支援的 Service Fabric 平台;並不適合直接從您的程式碼使用。
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.action
+  name: action
+  fullName: action
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 要求的修復動作。 必須指定的修復工作建立時，並設定不可變的一次。
+  syntax:
+    content: 'action: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.description
+  name: description
+  fullName: description
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    修復工作或其他資訊的詳細資料的用途的描述。
+
+    設定修復工作建立，且不變時一次設定。
+  optional: true
+  syntax:
+    content: 'description?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.executor
+  name: executor
+  fullName: executor
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 修復執行者名稱。 必須指定已領取和更新版本的狀態，且是不可變一次設定。
+  optional: true
+  syntax:
+    content: 'executor?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.executorData
+  name: executorData
+  fullName: executorData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 資料字串的修復執行者可以用來儲存其內部狀態。
+  optional: true
+  syntax:
+    content: 'executorData?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    位元 OR 的下列值，可提供其他詳細資料的修復工作的狀態。
+
+    - 1-已要求取消的修復
+
+    - 2-已要求中止的修復
+
+    - 4-核准的修復已強制透過用戶端要求
+  optional: true
+  syntax:
+    content: 'flags?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.history
+  name: history
+  fullName: history
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    物件，包含時間戳記的修復工作的狀態轉換。
+
+    這些時間戳記，系統會更新，而且無法直接修改。
+  optional: true
+  syntax:
+    content: 'history?: RepairTaskHistory'
+    return:
+      type:
+      - azure-servicefabric.RepairTaskHistory
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.impact
+  name: impact
+  fullName: impact
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    影響的物件可以決定系統將會準備的修復，再核准執行修復影響採取哪些動作。
+
+    影響則必須指定的修復執行者時轉換為 「 準備 」 狀態，並設定不可變的一次。
+  optional: true
+  syntax:
+    content: 'impact?: RepairImpactDescriptionBase'
+    return:
+      type:
+      - azure-servicefabric.RepairImpactDescriptionBase
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.performPreparingHealthCheck
+  name: performPreparingHealthCheck
+  fullName: performPreparingHealthCheck
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 值，以判斷修復工作處於準備狀態時，是否將會執行健康狀態檢查。
+  optional: true
+  syntax:
+    content: 'performPreparingHealthCheck?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.performRestoringHealthCheck
+  name: performRestoringHealthCheck
+  fullName: performRestoringHealthCheck
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 值，以判斷修復工作會進入 Restoring 狀態時，是否將會執行健康狀態檢查。
+  optional: true
+  syntax:
+    content: 'performRestoringHealthCheck?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.preparingHealthCheckState
+  name: preparingHealthCheckState
+  fullName: preparingHealthCheckState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    健全狀況檢查時修復工作處於準備狀態的工作流程狀態。
+
+    可能的值包括：'NotStarted'、 'InProgress'、 'Succeeded'，' 略過 '，'TimedOut'
+  optional: true
+  syntax:
+    content: 'preparingHealthCheckState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.restoringHealthCheckState
+  name: restoringHealthCheckState
+  fullName: restoringHealthCheckState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    健全狀況檢查的修復工作處於 Restoring 狀態時的工作流程狀態。
+
+    可能的值包括：'NotStarted'、 'InProgress'、 'Succeeded'，' 略過 '，'TimedOut'
+  optional: true
+  syntax:
+    content: 'restoringHealthCheckState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultCode
+  name: resultCode
+  fullName: resultCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    數字的值，提供其他詳細資料的修復工作執行結果。
+
+    可指定在還原和更新版本的狀態，並不變的一次設定。
+  optional: true
+  syntax:
+    content: 'resultCode?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultDetails
+  name: resultDetails
+  fullName: resultDetails
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    字串，提供其他詳細資料的修復工作執行結果。
+
+    可指定在還原和更新版本的狀態，並不變的一次設定。
+  optional: true
+  syntax:
+    content: 'resultDetails?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultStatus
+  name: resultStatus
+  fullName: resultStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 值，描述修復工作執行的整體結果。 必須指定在還原和更新版本的狀態，且是不可變一次設定。 可能的值包括：'Invalid'、 ' Succeeded'，'已取消'、 '中斷'、 「 失敗 」，「 擱置中 」
+  optional: true
+  syntax:
+    content: 'resultStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 修復工作的工作流程狀態。 有效的初始狀態是已建立、 已領取及準備。 可能的值包括：'Invalid'、 '建立'，'宣告'，'準備'，' 核准 '，'執行'、 '還原'、 '已完成
+  syntax:
+    content: 'state: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.target
+  name: target
+  fullName: target
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    目標物件會決定系統將會準備的修復，再核准執行修復影響採取哪些動作。
+
+    設定修復工作建立，且不變時一次設定。
+  optional: true
+  syntax:
+    content: 'target?: RepairTargetDescriptionBase'
+    return:
+      type:
+      - azure-servicefabric.RepairTargetDescriptionBase
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.taskId
+  name: taskId
+  fullName: taskId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 修復工作的識別碼。
+  syntax:
+    content: 'taskId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.version
+  name: version
+  fullName: version
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    修復工作的版本。
+
+    在建立新的修復工作時，版本必須設定為零。  在更新修復工作時，會將版本用於開放式並行存取檢查。  如果版本設定為零，寫入衝突不會檢查更新。  如果版本設定為非零值，然後更新才會成功的修復工作的實際目前版本符合這個值。
+  optional: true
+  syntax:
+    content: 'version?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RepairTaskHistory
+  name: RepairTaskHistory
+  spec.typeScript:
+  - name: RepairTaskHistory
+    fullName: RepairTaskHistory
+    uid: azure-servicefabric.RepairTaskHistory
+- uid: azure-servicefabric.RepairImpactDescriptionBase
+  name: RepairImpactDescriptionBase
+  spec.typeScript:
+  - name: RepairImpactDescriptionBase
+    fullName: RepairImpactDescriptionBase
+    uid: azure-servicefabric.RepairImpactDescriptionBase
+- uid: azure-servicefabric.RepairTargetDescriptionBase
+  name: RepairTargetDescriptionBase
+  spec.typeScript:
+  - name: RepairTargetDescriptionBase
+    fullName: RepairTargetDescriptionBase
+    uid: azure-servicefabric.RepairTargetDescriptionBase
