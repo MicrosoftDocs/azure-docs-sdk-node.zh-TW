@@ -1,0 +1,1958 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b1521a511e7ee0730ff748630c3a1880246ff06e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52093013"
+items:
+- uid: azure-arm-compute.Snapshots
+  name: Snapshots
+  fullName: Snapshots
+  children:
+  - azure-arm-compute.Snapshots.beginCreateOrUpdate
+  - azure-arm-compute.Snapshots.beginCreateOrUpdate_2
+  - azure-arm-compute.Snapshots.beginCreateOrUpdate_1
+  - azure-arm-compute.Snapshots.beginCreateOrUpdateWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.beginDeleteMethod
+  - azure-arm-compute.Snapshots.beginDeleteMethod_2
+  - azure-arm-compute.Snapshots.beginDeleteMethod_1
+  - azure-arm-compute.Snapshots.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.beginGrantAccess
+  - azure-arm-compute.Snapshots.beginGrantAccess_2
+  - azure-arm-compute.Snapshots.beginGrantAccess_1
+  - azure-arm-compute.Snapshots.beginGrantAccessWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.beginRevokeAccess
+  - azure-arm-compute.Snapshots.beginRevokeAccess_2
+  - azure-arm-compute.Snapshots.beginRevokeAccess_1
+  - azure-arm-compute.Snapshots.beginRevokeAccessWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.beginUpdate
+  - azure-arm-compute.Snapshots.beginUpdate_2
+  - azure-arm-compute.Snapshots.beginUpdate_1
+  - azure-arm-compute.Snapshots.beginUpdateWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.createOrUpdate
+  - azure-arm-compute.Snapshots.createOrUpdate_2
+  - azure-arm-compute.Snapshots.createOrUpdate_1
+  - azure-arm-compute.Snapshots.createOrUpdateWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.deleteMethod
+  - azure-arm-compute.Snapshots.deleteMethod_2
+  - azure-arm-compute.Snapshots.deleteMethod_1
+  - azure-arm-compute.Snapshots.deleteMethodWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.get
+  - azure-arm-compute.Snapshots.get_2
+  - azure-arm-compute.Snapshots.get_1
+  - azure-arm-compute.Snapshots.getWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.grantAccess
+  - azure-arm-compute.Snapshots.grantAccess_2
+  - azure-arm-compute.Snapshots.grantAccess_1
+  - azure-arm-compute.Snapshots.grantAccessWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.list
+  - azure-arm-compute.Snapshots.list_2
+  - azure-arm-compute.Snapshots.list_1
+  - azure-arm-compute.Snapshots.listByResourceGroup
+  - azure-arm-compute.Snapshots.listByResourceGroup_2
+  - azure-arm-compute.Snapshots.listByResourceGroup_1
+  - azure-arm-compute.Snapshots.listByResourceGroupNext
+  - azure-arm-compute.Snapshots.listByResourceGroupNext_2
+  - azure-arm-compute.Snapshots.listByResourceGroupNext_1
+  - azure-arm-compute.Snapshots.listByResourceGroupNextWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.listByResourceGroupWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.listNext
+  - azure-arm-compute.Snapshots.listNext_2
+  - azure-arm-compute.Snapshots.listNext_1
+  - azure-arm-compute.Snapshots.listNextWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.listWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.revokeAccess
+  - azure-arm-compute.Snapshots.revokeAccess_2
+  - azure-arm-compute.Snapshots.revokeAccess_1
+  - azure-arm-compute.Snapshots.revokeAccessWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.update
+  - azure-arm-compute.Snapshots.update_2
+  - azure-arm-compute.Snapshots.update_1
+  - azure-arm-compute.Snapshots.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, Snapshot, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-101">建立或更新快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-101">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-102">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-102">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-103">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-103">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-104">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-104">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-105">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-105">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-106">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-106">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: >
+        <span data-ttu-id="3f4be-107">Put 磁碟作業的主體中提供的快照集物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-107">Snapshot object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginCreateOrUpdate_2
+  name: beginCreateOrUpdate(string, string, Snapshot, Object, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-108">建立或更新快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-108">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options: Object, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginCreateOrUpdate_1
+  name: beginCreateOrUpdate(string, string, Snapshot, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-109">建立或更新快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-109">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse(string, string, Snapshot, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-110">建立或更新快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-110">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-111">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-111">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-112">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-112">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-113">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-113">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-114">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-114">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-115">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-115">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: >
+        <span data-ttu-id="3f4be-116">Put 磁碟作業的主體中提供的快照集物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-116">Snapshot object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginDeleteMethod
+  name: beginDeleteMethod(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-117">刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-117">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-118">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-118">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-119">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-119">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-120">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-120">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-121">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-121">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-122">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-122">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginDeleteMethod_2
+  name: beginDeleteMethod(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-123">刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-123">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, snapshotName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginDeleteMethod_1
+  name: beginDeleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-124">刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-124">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-125">刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-125">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-126">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-126">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-127">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-127">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-128">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-128">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-129">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-129">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-130">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-130">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginGrantAccess
+  name: beginGrantAccess(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-131">授與存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-131">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-132">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-132">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-133">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-133">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-134">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-134">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-135">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-135">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-136">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-136">The max name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="3f4be-137">取得快照集的存取作業的主體中提供存取資料物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-137">Access data object supplied in the body of the get snapshot access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginGrantAccess_2
+  name: beginGrantAccess(string, string, GrantAccessData, Object, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-138">授與存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-138">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options: Object, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginGrantAccess_1
+  name: beginGrantAccess(string, string, GrantAccessData, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-139">授與存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-139">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginGrantAccessWithHttpOperationResponse
+  name: beginGrantAccessWithHttpOperationResponse(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-140">授與存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-140">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginGrantAccessWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-141">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-141">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-142">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-142">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-143">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-143">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-144">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-144">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-145">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-145">The max name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="3f4be-146">取得快照集的存取作業的主體中提供存取資料物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-146">Access data object supplied in the body of the get snapshot access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginRevokeAccess
+  name: beginRevokeAccess(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-147">撤銷存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-147">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-148">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-148">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-149">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-149">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-150">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-150">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-151">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-151">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-152">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-152">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginRevokeAccess_2
+  name: beginRevokeAccess(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-153">撤銷存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-153">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, snapshotName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginRevokeAccess_1
+  name: beginRevokeAccess(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-154">撤銷存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-154">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginRevokeAccessWithHttpOperationResponse
+  name: beginRevokeAccessWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-155">撤銷存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-155">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginRevokeAccessWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-156">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-156">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-157">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-157">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-158">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-158">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-159">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-159">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-160">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-160">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginUpdate
+  name: beginUpdate(string, string, SnapshotUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-161">更新 （修補程式） 的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-161">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-162">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-162">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-163">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-163">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-164">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-164">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-165">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-165">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-166">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-166">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: >
+        <span data-ttu-id="3f4be-167">修補程式的快照集作業的主體中提供快照集的物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-167">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginUpdate_2
+  name: beginUpdate(string, string, SnapshotUpdate, Object, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-168">更新 （修補程式） 的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-168">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options: Object, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginUpdate_1
+  name: beginUpdate(string, string, SnapshotUpdate, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-169">更新 （修補程式） 的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-169">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginUpdateWithHttpOperationResponse
+  name: beginUpdateWithHttpOperationResponse(string, string, SnapshotUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-170">更新 （修補程式） 的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-170">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-171">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-171">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-172">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-172">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-173">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-173">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-174">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-174">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-175">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-175">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: >
+        <span data-ttu-id="3f4be-176">修補程式的快照集作業的主體中提供快照集的物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-176">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.createOrUpdate
+  name: createOrUpdate(string, string, Snapshot, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-177">建立或更新快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-177">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-178">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-178">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-179">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-179">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-180">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-180">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-181">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-181">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-182">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-182">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: >
+        <span data-ttu-id="3f4be-183">Put 磁碟作業的主體中提供的快照集物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-183">Snapshot object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.createOrUpdate_2
+  name: createOrUpdate(string, string, Snapshot, Object, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-184">建立或更新快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-184">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options: Object, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.createOrUpdate_1
+  name: createOrUpdate(string, string, Snapshot, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-185">建立或更新快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-185">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, Snapshot, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-186">建立或更新快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-186">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-187">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-187">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-188">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-188">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-189">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-189">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-190">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-190">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-191">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-191">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: >
+        <span data-ttu-id="3f4be-192">Put 磁碟作業的主體中提供的快照集物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-192">Snapshot object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.deleteMethod
+  name: deleteMethod(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-193">刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-193">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-194">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-194">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-195">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-195">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-196">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-196">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-197">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-197">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-198">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-198">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.deleteMethod_2
+  name: deleteMethod(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-199">刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-199">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, snapshotName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.deleteMethod_1
+  name: deleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-200">刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-200">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-201">刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-201">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-202">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-202">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-203">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-203">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-204">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-204">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-205">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-205">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-206">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-206">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.get
+  name: get(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-207">取得快照集的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="3f4be-207">Gets information about a snapshot.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-208">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-208">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-209">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-209">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-210">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-210">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-211">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-211">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-212">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-212">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.get_2
+  name: get(string, string, Object, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-213">取得快照集的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="3f4be-213">Gets information about a snapshot.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, snapshotName: string, options: Object, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.get_1
+  name: get(string, string, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-214">取得快照集的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="3f4be-214">Gets information about a snapshot.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-215">取得快照集的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="3f4be-215">Gets information about a snapshot.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-216">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-216">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-217">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-217">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-218">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-218">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-219">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-219">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-220">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-220">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.grantAccess
+  name: grantAccess(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-221">授與存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-221">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-222">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-222">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-223">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-223">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-224">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-224">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-225">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-225">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-226">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-226">The max name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="3f4be-227">取得快照集的存取作業的主體中提供存取資料物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-227">Access data object supplied in the body of the get snapshot access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.grantAccess_2
+  name: grantAccess(string, string, GrantAccessData, Object, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-228">授與存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-228">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options: Object, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.grantAccess_1
+  name: grantAccess(string, string, GrantAccessData, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-229">授與存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-229">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.grantAccessWithHttpOperationResponse
+  name: grantAccessWithHttpOperationResponse(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-230">授與存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-230">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function grantAccessWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-231">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-231">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-232">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-232">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-233">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-233">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-234">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-234">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-235">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-235">The max name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="3f4be-236">取得快照集的存取作業的主體中提供存取資料物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-236">Access data object supplied in the body of the get snapshot access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.list
+  name: list(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-237">列出訂用帳戶下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-237">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function list(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.list_2
+  name: list(Object, ServiceCallback<SnapshotList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-238">列出訂用帳戶下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-238">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function list(options: Object, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.list_1
+  name: list(ServiceCallback<SnapshotList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-239">列出訂用帳戶下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-239">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function list(callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroup
+  name: listByResourceGroup(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-240">列出資源群組下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-240">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-241">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-241">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroup_2
+  name: listByResourceGroup(string, Object, ServiceCallback<SnapshotList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-242">列出資源群組下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-242">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroup_1
+  name: listByResourceGroup(string, ServiceCallback<SnapshotList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-243">列出資源群組下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-243">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupNext
+  name: listByResourceGroupNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-244">列出資源群組下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-244">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-245">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="3f4be-245">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupNext_2
+  name: listByResourceGroupNext(string, Object, ServiceCallback<SnapshotList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-246">列出資源群組下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-246">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupNext_1
+  name: listByResourceGroupNext(string, ServiceCallback<SnapshotList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-247">列出資源群組下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-247">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupNextWithHttpOperationResponse
+  name: listByResourceGroupNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-248">列出資源群組下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-248">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-249">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="3f4be-249">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupWithHttpOperationResponse
+  name: listByResourceGroupWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-250">列出資源群組下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-250">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-251">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-251">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listNext
+  name: listNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-252">列出訂用帳戶下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-252">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-253">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="3f4be-253">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listNext_2
+  name: listNext(string, Object, ServiceCallback<SnapshotList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-254">列出訂用帳戶下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-254">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listNext_1
+  name: listNext(string, ServiceCallback<SnapshotList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-255">列出訂用帳戶下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-255">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-256">列出訂用帳戶下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-256">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-257">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="3f4be-257">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-258">列出訂用帳戶下的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-258">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.revokeAccess
+  name: revokeAccess(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-259">撤銷存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-259">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-260">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-260">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-261">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-261">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-262">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-262">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-263">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-263">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-264">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-264">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.revokeAccess_2
+  name: revokeAccess(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-265">撤銷存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-265">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, snapshotName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.revokeAccess_1
+  name: revokeAccess(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-266">撤銷存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-266">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.revokeAccessWithHttpOperationResponse
+  name: revokeAccessWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-267">撤銷存取快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-267">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function revokeAccessWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-268">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-268">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-269">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-269">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-270">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-270">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-271">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-271">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-272">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-272">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.update
+  name: update(string, string, SnapshotUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-273">更新 （修補程式） 的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-273">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-274">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-274">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-275">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-275">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-276">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-276">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-277">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-277">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-278">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-278">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: >
+        <span data-ttu-id="3f4be-279">修補程式的快照集作業的主體中提供快照集的物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-279">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.update_2
+  name: update(string, string, SnapshotUpdate, Object, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-280">更新 （修補程式） 的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-280">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options: Object, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.update_1
+  name: update(string, string, SnapshotUpdate, ServiceCallback<Snapshot>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-281">更新 （修補程式） 的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-281">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, SnapshotUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="3f4be-282">更新 （修補程式） 的快照集。</span><span class="sxs-lookup"><span data-stu-id="3f4be-282">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-283">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-283">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="3f4be-284">正在建立快照集的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-284">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="3f4be-285">在建立快照集之後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4be-285">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="3f4be-286">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="3f4be-286">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="3f4be-287">最大名稱的長度為 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="3f4be-287">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: >
+        <span data-ttu-id="3f4be-288">修補程式的快照集作業的主體中提供快照集的物件。</span><span class="sxs-lookup"><span data-stu-id="3f4be-288">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+references:
+- uid: azure-arm-compute.Snapshot
+  name: Snapshot
+  spec.typeScript:
+  - name: Snapshot
+    fullName: Snapshot
+    uid: azure-arm-compute.Snapshot
+- uid: Promise<azure-arm-compute.Snapshot>
+  name: Snapshot>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Snapshot
+    fullName: Snapshot
+    uid: azure-arm-compute.Snapshot
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.Snapshot>
+  name: Snapshot>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Snapshot
+    fullName: Snapshot
+    uid: azure-arm-compute.Snapshot
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  name: Snapshot>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Snapshot
+    fullName: Snapshot
+    uid: azure-arm-compute.Snapshot
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-compute.GrantAccessData
+  name: GrantAccessData
+  spec.typeScript:
+  - name: GrantAccessData
+    fullName: GrantAccessData
+    uid: azure-arm-compute.GrantAccessData
+- uid: Promise<azure-arm-compute.AccessUri>
+  name: AccessUri>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.AccessUri>
+  name: AccessUri>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  name: AccessUri>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-compute.SnapshotUpdate
+  name: SnapshotUpdate
+  spec.typeScript:
+  - name: SnapshotUpdate
+    fullName: SnapshotUpdate
+    uid: azure-arm-compute.SnapshotUpdate
+- uid: Promise<azure-arm-compute.SnapshotList>
+  name: SnapshotList>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: SnapshotList
+    fullName: SnapshotList
+    uid: azure-arm-compute.SnapshotList
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.SnapshotList>
+  name: SnapshotList>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: SnapshotList
+    fullName: SnapshotList
+    uid: azure-arm-compute.SnapshotList
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  name: SnapshotList>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: SnapshotList
+    fullName: SnapshotList
+    uid: azure-arm-compute.SnapshotList
+  - name: '>>'
+    fullName: '>>'

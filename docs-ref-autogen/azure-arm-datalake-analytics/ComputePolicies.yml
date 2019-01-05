@@ -1,0 +1,864 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 66114edca51904049b77fbedba45bb5ebfda88f0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52145319"
+items:
+- uid: azure-arm-datalake-analytics.ComputePolicies
+  name: ComputePolicies
+  fullName: ComputePolicies
+  children:
+  - azure-arm-datalake-analytics.ComputePolicies.createOrUpdate
+  - azure-arm-datalake-analytics.ComputePolicies.createOrUpdate_2
+  - azure-arm-datalake-analytics.ComputePolicies.createOrUpdate_1
+  - azure-arm-datalake-analytics.ComputePolicies.createOrUpdateWithHttpOperationResponse
+  - azure-arm-datalake-analytics.ComputePolicies.deleteMethod
+  - azure-arm-datalake-analytics.ComputePolicies.deleteMethod_2
+  - azure-arm-datalake-analytics.ComputePolicies.deleteMethod_1
+  - azure-arm-datalake-analytics.ComputePolicies.deleteMethodWithHttpOperationResponse
+  - azure-arm-datalake-analytics.ComputePolicies.get
+  - azure-arm-datalake-analytics.ComputePolicies.get_2
+  - azure-arm-datalake-analytics.ComputePolicies.get_1
+  - azure-arm-datalake-analytics.ComputePolicies.getWithHttpOperationResponse
+  - azure-arm-datalake-analytics.ComputePolicies.listByAccount
+  - azure-arm-datalake-analytics.ComputePolicies.listByAccount_2
+  - azure-arm-datalake-analytics.ComputePolicies.listByAccount_1
+  - azure-arm-datalake-analytics.ComputePolicies.listByAccountNext
+  - azure-arm-datalake-analytics.ComputePolicies.listByAccountNext_2
+  - azure-arm-datalake-analytics.ComputePolicies.listByAccountNext_1
+  - azure-arm-datalake-analytics.ComputePolicies.listByAccountNextWithHttpOperationResponse
+  - azure-arm-datalake-analytics.ComputePolicies.listByAccountWithHttpOperationResponse
+  - azure-arm-datalake-analytics.ComputePolicies.update
+  - azure-arm-datalake-analytics.ComputePolicies.update_2
+  - azure-arm-datalake-analytics.ComputePolicies.update_1
+  - azure-arm-datalake-analytics.ComputePolicies.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.createOrUpdate
+  name: createOrUpdate(string, string, string, ComputePolicyCreateOrUpdateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-101">建立或更新指定的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-101">Creates or updates the specified compute policy.</span></span> <span data-ttu-id="79de9-102">在更新期間，具有指定名稱的計算原則會取代這個新的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-102">During update, the compute policy with the specified name will be replaced with this new compute policy.</span></span> <span data-ttu-id="79de9-103">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-103">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, accountName: string, computePolicyName: string, parameters: ComputePolicyCreateOrUpdateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-104">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-104">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-105">Data Lake Analytics 帳戶，來加入或取代計算原則名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-105">The name of the Data Lake Analytics account to add or replace the compute policy.</span></span>
+    - id: computePolicyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-106">若要建立或更新計算原則的名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-106">The name of the compute policy to create or update.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-datalake-analytics.ComputePolicyCreateOrUpdateParameters
+      description: >
+        <span data-ttu-id="79de9-107">若要建立或更新計算原則所提供的參數。</span><span class="sxs-lookup"><span data-stu-id="79de9-107">Parameters supplied to create or update the compute policy.</span></span> <span data-ttu-id="79de9-108">每個作業屬性的平行處理原則的最大程度，最低優先順序，每個作業的屬性，或兩者都必須存在。</span><span class="sxs-lookup"><span data-stu-id="79de9-108">The max degree of parallelism per job property, min priority per job property, or both must be present.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.createOrUpdate_2
+  name: createOrUpdate(string, string, string, ComputePolicyCreateOrUpdateParameters, Object, ServiceCallback<ComputePolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-109">建立或更新指定的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-109">Creates or updates the specified compute policy.</span></span> <span data-ttu-id="79de9-110">在更新期間，具有指定名稱的計算原則會取代這個新的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-110">During update, the compute policy with the specified name will be replaced with this new compute policy.</span></span> <span data-ttu-id="79de9-111">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-111">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, accountName: string, computePolicyName: string, parameters: ComputePolicyCreateOrUpdateParameters, options: Object, callback: ServiceCallback<ComputePolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: computePolicyName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-datalake-analytics.ComputePolicyCreateOrUpdateParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.createOrUpdate_1
+  name: createOrUpdate(string, string, string, ComputePolicyCreateOrUpdateParameters, ServiceCallback<ComputePolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-112">建立或更新指定的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-112">Creates or updates the specified compute policy.</span></span> <span data-ttu-id="79de9-113">在更新期間，具有指定名稱的計算原則會取代這個新的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-113">During update, the compute policy with the specified name will be replaced with this new compute policy.</span></span> <span data-ttu-id="79de9-114">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-114">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, accountName: string, computePolicyName: string, parameters: ComputePolicyCreateOrUpdateParameters, callback: ServiceCallback<ComputePolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: computePolicyName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-datalake-analytics.ComputePolicyCreateOrUpdateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, string, ComputePolicyCreateOrUpdateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-115">建立或更新指定的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-115">Creates or updates the specified compute policy.</span></span> <span data-ttu-id="79de9-116">在更新期間，具有指定名稱的計算原則會取代這個新的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-116">During update, the compute policy with the specified name will be replaced with this new compute policy.</span></span> <span data-ttu-id="79de9-117">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-117">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, accountName: string, computePolicyName: string, parameters: ComputePolicyCreateOrUpdateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-118">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-118">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-119">Data Lake Analytics 帳戶，來加入或取代計算原則名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-119">The name of the Data Lake Analytics account to add or replace the compute policy.</span></span>
+    - id: computePolicyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-120">若要建立或更新計算原則的名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-120">The name of the compute policy to create or update.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-datalake-analytics.ComputePolicyCreateOrUpdateParameters
+      description: >
+        <span data-ttu-id="79de9-121">若要建立或更新計算原則所提供的參數。</span><span class="sxs-lookup"><span data-stu-id="79de9-121">Parameters supplied to create or update the compute policy.</span></span> <span data-ttu-id="79de9-122">每個作業屬性的平行處理原則的最大程度，最低優先順序，每個作業的屬性，或兩者都必須存在。</span><span class="sxs-lookup"><span data-stu-id="79de9-122">The max degree of parallelism per job property, min priority per job property, or both must be present.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-datalake-analytics.ComputePolicy>>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.deleteMethod
+  name: deleteMethod(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-123">從指定的 Data Lake Analytics 帳戶中刪除指定的計算原則</span><span class="sxs-lookup"><span data-stu-id="79de9-123">Deletes the specified compute policy from the specified Data Lake Analytics account</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, computePolicyName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-124">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-124">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-125">要從中刪除計算原則的 Data Lake Analytics 帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-125">The name of the Data Lake Analytics account from which to delete the compute policy.</span></span>
+    - id: computePolicyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-126">若要刪除的計算原則名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-126">The name of the compute policy to delete.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.deleteMethod_2
+  name: deleteMethod(string, string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-127">從指定的 Data Lake Analytics 帳戶中刪除指定的計算原則</span><span class="sxs-lookup"><span data-stu-id="79de9-127">Deletes the specified compute policy from the specified Data Lake Analytics account</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, computePolicyName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: computePolicyName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.deleteMethod_1
+  name: deleteMethod(string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-128">從指定的 Data Lake Analytics 帳戶中刪除指定的計算原則</span><span class="sxs-lookup"><span data-stu-id="79de9-128">Deletes the specified compute policy from the specified Data Lake Analytics account</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, computePolicyName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: computePolicyName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-129">從指定的 Data Lake Analytics 帳戶中刪除指定的計算原則</span><span class="sxs-lookup"><span data-stu-id="79de9-129">Deletes the specified compute policy from the specified Data Lake Analytics account</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, computePolicyName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-130">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-130">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-131">要從中刪除計算原則的 Data Lake Analytics 帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-131">The name of the Data Lake Analytics account from which to delete the compute policy.</span></span>
+    - id: computePolicyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-132">若要刪除的計算原則名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-132">The name of the compute policy to delete.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.get
+  name: get(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-133">取得指定的 Data Lake Analytics 計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-133">Gets the specified Data Lake Analytics compute policy.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, computePolicyName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-134">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-134">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-135">要從中取得計算原則的 Data Lake Analytics 帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-135">The name of the Data Lake Analytics account from which to get the compute policy.</span></span>
+    - id: computePolicyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-136">若要擷取的計算原則名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-136">The name of the compute policy to retrieve.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.get_2
+  name: get(string, string, string, Object, ServiceCallback<ComputePolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-137">取得指定的 Data Lake Analytics 計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-137">Gets the specified Data Lake Analytics compute policy.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, computePolicyName: string, options: Object, callback: ServiceCallback<ComputePolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: computePolicyName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.get_1
+  name: get(string, string, string, ServiceCallback<ComputePolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-138">取得指定的 Data Lake Analytics 計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-138">Gets the specified Data Lake Analytics compute policy.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, accountName: string, computePolicyName: string, callback: ServiceCallback<ComputePolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: computePolicyName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-139">取得指定的 Data Lake Analytics 計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-139">Gets the specified Data Lake Analytics compute policy.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, computePolicyName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-140">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-140">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-141">要從中取得計算原則的 Data Lake Analytics 帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-141">The name of the Data Lake Analytics account from which to get the compute policy.</span></span>
+    - id: computePolicyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-142">若要擷取的計算原則名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-142">The name of the compute policy to retrieve.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-datalake-analytics.ComputePolicy>>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.listByAccount
+  name: listByAccount(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-143">列出 Data Lake Analytics 計算在指定的 Data Lake Analytics 帳戶中的原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-143">Lists the Data Lake Analytics compute policies within the specified Data Lake Analytics account.</span></span> <span data-ttu-id="79de9-144">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-144">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function listByAccount(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-145">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-145">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-146">要從中取得計算原則的 Data Lake Analytics 帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-146">The name of the Data Lake Analytics account from which to get the compute policies.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicyListResult>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.listByAccount_2
+  name: listByAccount(string, string, Object, ServiceCallback<ComputePolicyListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-147">列出 Data Lake Analytics 計算在指定的 Data Lake Analytics 帳戶中的原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-147">Lists the Data Lake Analytics compute policies within the specified Data Lake Analytics account.</span></span> <span data-ttu-id="79de9-148">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-148">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function listByAccount(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<ComputePolicyListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicyListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicyListResult>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.listByAccount_1
+  name: listByAccount(string, string, ServiceCallback<ComputePolicyListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-149">列出 Data Lake Analytics 計算在指定的 Data Lake Analytics 帳戶中的原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-149">Lists the Data Lake Analytics compute policies within the specified Data Lake Analytics account.</span></span> <span data-ttu-id="79de9-150">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-150">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function listByAccount(resourceGroupName: string, accountName: string, callback: ServiceCallback<ComputePolicyListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicyListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicyListResult>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.listByAccountNext
+  name: listByAccountNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-151">列出 Data Lake Analytics 計算在指定的 Data Lake Analytics 帳戶中的原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-151">Lists the Data Lake Analytics compute policies within the specified Data Lake Analytics account.</span></span> <span data-ttu-id="79de9-152">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-152">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function listByAccountNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-153">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="79de9-153">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicyListResult>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.listByAccountNext_2
+  name: listByAccountNext(string, Object, ServiceCallback<ComputePolicyListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-154">列出 Data Lake Analytics 計算在指定的 Data Lake Analytics 帳戶中的原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-154">Lists the Data Lake Analytics compute policies within the specified Data Lake Analytics account.</span></span> <span data-ttu-id="79de9-155">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-155">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function listByAccountNext(nextPageLink: string, options: Object, callback: ServiceCallback<ComputePolicyListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicyListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicyListResult>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.listByAccountNext_1
+  name: listByAccountNext(string, ServiceCallback<ComputePolicyListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-156">列出 Data Lake Analytics 計算在指定的 Data Lake Analytics 帳戶中的原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-156">Lists the Data Lake Analytics compute policies within the specified Data Lake Analytics account.</span></span> <span data-ttu-id="79de9-157">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-157">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function listByAccountNext(nextPageLink: string, callback: ServiceCallback<ComputePolicyListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicyListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicyListResult>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.listByAccountNextWithHttpOperationResponse
+  name: listByAccountNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-158">列出 Data Lake Analytics 計算在指定的 Data Lake Analytics 帳戶中的原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-158">Lists the Data Lake Analytics compute policies within the specified Data Lake Analytics account.</span></span> <span data-ttu-id="79de9-159">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-159">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function listByAccountNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-160">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="79de9-160">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-datalake-analytics.ComputePolicyListResult>>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.listByAccountWithHttpOperationResponse
+  name: listByAccountWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-161">列出 Data Lake Analytics 計算在指定的 Data Lake Analytics 帳戶中的原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-161">Lists the Data Lake Analytics compute policies within the specified Data Lake Analytics account.</span></span> <span data-ttu-id="79de9-162">帳戶支援，最多 50 個原則</span><span class="sxs-lookup"><span data-stu-id="79de9-162">An account supports, at most, 50 policies</span></span>
+  syntax:
+    content: 'function listByAccountWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-163">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-163">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-164">要從中取得計算原則的 Data Lake Analytics 帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-164">The name of the Data Lake Analytics account from which to get the compute policies.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-datalake-analytics.ComputePolicyListResult>>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.update
+  name: update(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-165">更新指定的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-165">Updates the specified compute policy.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, computePolicyName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-166">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-166">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-167">要更新計算原則的 Data Lake Analytics 帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-167">The name of the Data Lake Analytics account to which to update the compute policy.</span></span>
+    - id: computePolicyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-168">若要更新的計算原則名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-168">The name of the compute policy to update.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.update_2
+  name: update(string, string, string, Object, ServiceCallback<ComputePolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-169">更新指定的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-169">Updates the specified compute policy.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, computePolicyName: string, options: Object, callback: ServiceCallback<ComputePolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: computePolicyName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.update_1
+  name: update(string, string, string, ServiceCallback<ComputePolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-170">更新指定的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-170">Updates the specified compute policy.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, accountName: string, computePolicyName: string, callback: ServiceCallback<ComputePolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: computePolicyName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datalake-analytics.ComputePolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datalake-analytics.ComputePolicy>
+  package: azure-arm-datalake-analytics
+- uid: azure-arm-datalake-analytics.ComputePolicies.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79de9-171">更新指定的計算原則。</span><span class="sxs-lookup"><span data-stu-id="79de9-171">Updates the specified compute policy.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, computePolicyName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-172">包含 Data Lake Analytics 帳戶的 Azure 資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-172">The name of the Azure resource group that contains the Data Lake Analytics account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-173">要更新計算原則的 Data Lake Analytics 帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-173">The name of the Data Lake Analytics account to which to update the compute policy.</span></span>
+    - id: computePolicyName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79de9-174">若要更新的計算原則名稱。</span><span class="sxs-lookup"><span data-stu-id="79de9-174">The name of the compute policy to update.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-datalake-analytics.ComputePolicy>>
+  package: azure-arm-datalake-analytics
+references:
+- uid: azure-arm-datalake-analytics.ComputePolicyCreateOrUpdateParameters
+  name: ComputePolicyCreateOrUpdateParameters
+  spec.typeScript:
+  - name: ComputePolicyCreateOrUpdateParameters
+    fullName: ComputePolicyCreateOrUpdateParameters
+    uid: azure-arm-datalake-analytics.ComputePolicyCreateOrUpdateParameters
+- uid: Promise<azure-arm-datalake-analytics.ComputePolicy>
+  name: ComputePolicy>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ComputePolicy
+    fullName: ComputePolicy
+    uid: azure-arm-datalake-analytics.ComputePolicy
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-datalake-analytics.ComputePolicy>
+  name: ComputePolicy>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ComputePolicy
+    fullName: ComputePolicy
+    uid: azure-arm-datalake-analytics.ComputePolicy
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-datalake-analytics.ComputePolicy>>
+  name: ComputePolicy>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ComputePolicy
+    fullName: ComputePolicy
+    uid: azure-arm-datalake-analytics.ComputePolicy
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-datalake-analytics.ComputePolicyListResult>
+  name: ComputePolicyListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ComputePolicyListResult
+    fullName: ComputePolicyListResult
+    uid: azure-arm-datalake-analytics.ComputePolicyListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-datalake-analytics.ComputePolicyListResult>
+  name: ComputePolicyListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ComputePolicyListResult
+    fullName: ComputePolicyListResult
+    uid: azure-arm-datalake-analytics.ComputePolicyListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-datalake-analytics.ComputePolicyListResult>>
+  name: ComputePolicyListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ComputePolicyListResult
+    fullName: ComputePolicyListResult
+    uid: azure-arm-datalake-analytics.ComputePolicyListResult
+  - name: '>>'
+    fullName: '>>'

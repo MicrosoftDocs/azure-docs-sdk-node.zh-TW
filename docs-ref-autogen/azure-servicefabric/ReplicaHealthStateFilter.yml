@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f0cfdbf2404b8afd8fc089d17b5f9c895a0dfced
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52008102"
+items:
+- uid: azure-servicefabric.ReplicaHealthStateFilter
+  name: ReplicaHealthStateFilter
+  fullName: ReplicaHealthStateFilter
+  children:
+  - azure-servicefabric.ReplicaHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="bb3cc-101">定義比對準則，以判斷是否應該包含做為子系的叢集健全狀況區塊中的分割區複本。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-101">Defines matching criteria to determine whether a replica should be included as a child of a partition in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="bb3cc-102">只有符合篩選，叢集健全狀況區塊查詢描述中指定的父實體時，才會傳回複本。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-102">The replicas are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="bb3cc-103">父磁碟分割、 服務和應用程式，都必須包含在叢集健全狀況區塊。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-103">The parent partition, service and application must be included in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="bb3cc-104">一個篩選條件可以比對零、 一或多個複本，其屬性而定。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-104">One filter can match zero, one or multiple replicas, depending on its properties.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="bb3cc-105">複本的健全狀況狀態之篩選條件。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-105">The filter for the health state of the replicas.</span></span> <span data-ttu-id="bb3cc-106">它可讓選取的複本，如果兩者相符的所需的健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-106">It allows selecting replicas if they match the desired health states.</span></span>
+
+    <span data-ttu-id="bb3cc-107">可能的值為其中一個下列的健全狀況狀態的整數值。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-107">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="bb3cc-108">仅返回与筛选器匹配的副本。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-108">Only replicas that match the filter are returned.</span></span> <span data-ttu-id="bb3cc-109">所有複本都會都用來評估的父磁碟分割的彙總健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-109">All replicas are used to evaluate the parent partition aggregated health state.</span></span>
+
+    <span data-ttu-id="bb3cc-110">如果未指定，預設值會是 None，除非指定複本識別碼。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-110">If not specified, default value is None, unless the replica ID is specified.</span></span> <span data-ttu-id="bb3cc-111">如果篩選器有預設值，指定複本識別碼，則會傳回相符的複本。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-111">If the filter has default value and replica ID is specified, the matching replica is returned.</span></span>
+
+    <span data-ttu-id="bb3cc-112">狀態值是以旗標為基礎的列舉，因此值可以是使用位元 'OR' 運算子取得的這些值的組合。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-112">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="bb3cc-113">例如，如果提供的值為 6，它會符合 HealthState 值為 OK (2) 和 Warning (4) 的複本。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-113">For example, if the provided value is 6, it matches replicas with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="bb3cc-114">Default-預設值。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-114">Default - Default value.</span></span> <span data-ttu-id="bb3cc-115">符合任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-115">Matches any HealthState.</span></span> <span data-ttu-id="bb3cc-116">值為零。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-116">The value is zero.</span></span>
+
+    - <span data-ttu-id="bb3cc-117">None-不符合任何 HealthState 值的篩選。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-117">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="bb3cc-118">用來在指定狀態集合沒有任何結果時傳回。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-118">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="bb3cc-119">值為 1。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-119">The value is 1.</span></span>
+
+    - <span data-ttu-id="bb3cc-120">Ok-符合輸入含 HealthState 值 Ok 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-120">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="bb3cc-121">值為 2。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-121">The value is 2.</span></span>
+
+    - <span data-ttu-id="bb3cc-122">警告-篩選符合輸入含 HealthState 值 Warning。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-122">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="bb3cc-123">值為 4。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-123">The value is 4.</span></span>
+
+    - <span data-ttu-id="bb3cc-124">Error-符合輸入含 HealthState 值 Error 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-124">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="bb3cc-125">值為 8。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-125">The value is 8.</span></span>
+
+    - <span data-ttu-id="bb3cc-126">All-符合輸入含任何 HealthState 值的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-126">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="bb3cc-127">值為 65535。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-127">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter
+  name: replicaOrInstanceIdFilter
+  fullName: replicaOrInstanceIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="bb3cc-128">具狀態服務複本或符合篩選條件的無狀態服務執行個體的識別碼。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-128">Id of the stateful service replica or stateless service instance that matches the filter.</span></span> <span data-ttu-id="bb3cc-129">篩選為只套用至指定的複本，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-129">The filter is applied only to the specified replica, if it exists.</span></span>
+
+    <span data-ttu-id="bb3cc-130">如果複本不存在，此篩選器為基礎的叢集健全狀況區塊會傳回沒有複本。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-130">If the replica doesn't exist, no replica is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="bb3cc-131">如果複本存在，就會包含在叢集健全狀況區塊如果它採用的其他篩選屬性。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-131">If the replica exists, it is included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="bb3cc-132">如果未指定，符合父篩選 （如果有的話） 的所有複本都納入考量，並比對其他篩選成員，例如健康情況狀態篩選。</span><span class="sxs-lookup"><span data-stu-id="bb3cc-132">If not specified, all replicas that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaOrInstanceIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
