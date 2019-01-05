@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f6ee4c3e6138a35965b5f008694dede094c32ffa
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52132243"
+items:
+- uid: azure-servicefabric.ClusterHealthPolicy
+  name: ClusterHealthPolicy
+  fullName: ClusterHealthPolicy
+  children:
+  - azure-servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap
+  - azure-servicefabric.ClusterHealthPolicy.considerWarningAsError
+  - azure-servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications
+  - azure-servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes
+  langs:
+  - typeScript
+  type: interface
+  summary: 定義用來評估叢集或叢集節點的健全狀況的健全狀況原則。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap
+  name: applicationTypeHealthPolicyMap
+  fullName: applicationTypeHealthPolicyMap
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    對於特定應用程式類型，定義具有最大健康情況不良應用程式百分比的對應。
+
+    每個項目都會指定應用程式類型名稱做為一個索引鍵，並指定一個整數的值，表示用來評估指定應用程式類型之應用程式的 MaxPercentUnhealthyApplications 百分比。
+
+    應用程式類型的健康狀態原則對應可以在叢集健康狀態評估期間，用來描述特殊的應用程式類型。
+
+    對應中包含的應用程式類型是針對在對應中指定的百分比進行評估，不包含在叢集健康原則中定義的全域 MaxPercentUnhealthyApplications。
+
+    對應中指定之應用程式類型的應用程式不會針對應用程式的全域集區進行計算。
+
+    例如，如果某個類型的某些應用程式非常重要，叢集系統管理員可以針對該應用程式類型將項目新增至對應，並且為它指派 0% 的值 (也就是不容忍任何失敗)。
+
+    其他所有應用程式則可以使用設為 20% 的 MaxPercentUnhealthyApplications 來進行評估，以容忍數千個應用程式執行個體發生一些失敗。
+
+    只有在叢集資訊清單使用 HealthManager/EnableApplicationTypeHealthEvaluation 的設定項目啟用應用程式類型健康情況評估時，才會使用應用程式類型健康原則對應。
+  optional: true
+  syntax:
+    content: 'applicationTypeHealthPolicyMap?: ApplicationTypeHealthPolicyMapItem[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationTypeHealthPolicyMapItem[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicy.considerWarningAsError
+  name: considerWarningAsError
+  fullName: considerWarningAsError
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 可指示是否將具有相同嚴重性的警告視為錯誤。
+  optional: true
+  syntax:
+    content: 'considerWarningAsError?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications
+  name: maxPercentUnhealthyApplications
+  fullName: maxPercentUnhealthyApplications
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    在報告錯誤之前，允許健康情況不良應用程式的最大百分比。 例如，若要允許 10% 的應用程式健康情況不良，這個值會是 10。
+
+    百分比表示在系統將叢集視為錯誤之前，容許應用程式健康情況不良的最大百分比。
+
+    如果未到達此百分比，但至少有一個健康情況不良的應用程式，則健康情況會評估為 Warning。
+
+    此計算是將健康情況不良的應用程式數目除以叢集中應用程式執行個體的總數而得，但不包括 ApplicationTypeHealthPolicyMap 所包含之應用程式類型的應用程式。
+
+    針對少量的應用程式數目，計算會四捨五入以容許一個失敗。 預設百分比是零。
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyApplications?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes
+  name: maxPercentUnhealthyNodes
+  fullName: maxPercentUnhealthyNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    在報告錯誤之前，允許健康情況不良節點的最大百分比。 例如，若要允許 10% 的節點健康情況不良，這個值會是 10。
+
+    百分比表示在叢集被視為處於錯誤狀態之前，容許節點健康情況不良的最大百分比。
+
+    如果未到達此百分比，但至少有一個健康情況不良的節點，則健康情況會評估為 Warning。
+
+    百分比是將健康情況不良節點數目除以叢集中的節點總數計算而得。
+
+    針對較少的節點數目，計算會四捨五入以容許一個失敗。 預設百分比是零。
+
+
+    在大型叢集中，永遠都有一些節點會關閉或需要修復，因此應設定此百分比來容許這種情形。
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationTypeHealthPolicyMapItem[]
+  name: ApplicationTypeHealthPolicyMapItem[]
+  spec.typeScript:
+  - name: ApplicationTypeHealthPolicyMapItem
+    fullName: ApplicationTypeHealthPolicyMapItem
+    uid: azure-servicefabric.ApplicationTypeHealthPolicyMapItem
+  - name: '[]'
+    fullName: '[]'
