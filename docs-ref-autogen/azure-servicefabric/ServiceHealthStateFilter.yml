@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 23bebeb9af47e6ab96610c85ddc45108807e8321
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52170273"
+items:
+- uid: azure-servicefabric.ServiceHealthStateFilter
+  name: ServiceHealthStateFilter
+  fullName: ServiceHealthStateFilter
+  children:
+  - azure-servicefabric.ServiceHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ServiceHealthStateFilter.partitionFilters
+  - azure-servicefabric.ServiceHealthStateFilter.serviceNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    定義比對的準則，來判斷服務是否應該包含叢集健全狀況區塊中的應用程式的子系。
+
+    只有將上層應用程式符合叢集健全狀況區塊查詢描述中所指定篩選器時，才會傳回服務。
+
+    一個篩選條件可以比對零、 一或多個服務，根據其屬性。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    服務的健全狀況狀態之篩選條件。 它可讓選取的服務，如果兩者相符的所需的健全狀況狀態。
+
+    可能的值為其中一個下列的健全狀況狀態的整數值。 只會傳回符合篩選條件的服務。 所有服務都會都用來評估彙總的叢集健全狀況狀態。
+
+    如果未指定，預設值會是 None，除非已指定服務名稱。 如果篩選器有預設值，指定服務名稱時，會傳回符合的服務。
+
+    狀態值是以旗標為基礎的列舉，因此值可以是使用位元 'OR' 運算子取得的這些值的組合。
+
+    例如，如果提供的值為 6，它會符合 HealthState 值為 OK (2) 和 Warning (4) 的服務。
+
+    - Default-預設值。 符合任何 HealthState。 值為零。
+
+    - None-不符合任何 HealthState 值的篩選。 用來在指定狀態集合沒有任何結果時傳回。 值為 1。
+
+    - Ok-符合輸入含 HealthState 值 Ok 的篩選條件。 值為 2。
+
+    - 警告-篩選符合輸入含 HealthState 值 Warning。 值為 4。
+
+    - Error-符合輸入含 HealthState 值 Error 的篩選條件。 值為 8。
+
+    - All-符合輸入含任何 HealthState 值的篩選條件。 值為 65535。
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.partitionFilters
+  name: partitionFilters
+  fullName: partitionFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    定義篩選條件，指定要包含在傳回的叢集健康狀態中的哪些分割區區塊做為服務的子系清單。 如果父系服務符合篩選條件，就會傳回資料分割。
+
+    如果清單是空的則會不傳回任何資料分割。 所有資料分割都會用來評估父系的彙總的服務健全狀況狀態，不論輸入篩選器。
+
+    服務篩選條件可以指定多個資料分割的篩選條件。
+
+    比方說，它可以在其中指定要傳回的健全狀況狀態錯誤的所有資料分割的篩選器並永遠包含分割區識別碼所識別的資料分割的另一個篩選條件
+  optional: true
+  syntax:
+    content: 'partitionFilters?: PartitionHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.PartitionHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.serviceNameFilter
+  name: serviceNameFilter
+  fullName: serviceNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    符合篩選條件的服務名稱。 篩選為只套用至指定的服務，若有的話。
+
+    如果服務不存在，此篩選器為基礎的叢集健全狀況區塊會不傳回任何服務。
+
+    如果服務存在，它會保持為應用程式的子系的健全狀況狀態符合的篩選屬性。
+
+    如果未指定，符合父篩選 （如果有的話） 的所有服務都納入考量，並比對其他篩選成員，例如健康情況狀態篩選。
+  optional: true
+  syntax:
+    content: 'serviceNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.PartitionHealthStateFilter[]
+  name: PartitionHealthStateFilter[]
+  spec.typeScript:
+  - name: PartitionHealthStateFilter
+    fullName: PartitionHealthStateFilter
+    uid: azure-servicefabric.PartitionHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

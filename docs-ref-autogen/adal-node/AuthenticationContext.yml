@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 5b26e2e8d37b7e100c33489055ed7e76cdaf2099
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 718b5e201a01e0a07231aa2a48f11df17d286ec6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41685267"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52167843"
 items:
 - uid: adal-node.AuthenticationContext
   name: AuthenticationContext
@@ -15,8 +15,8 @@ items:
   - adal-node.AuthenticationContext.acquireTokenWithClientCertificate
   - adal-node.AuthenticationContext.acquireTokenWithClientCredentials
   - adal-node.AuthenticationContext.acquireTokenWithDeviceCode
-  - adal-node.AuthenticationContext.acquireTokenWithRefreshToken_1
   - adal-node.AuthenticationContext.acquireTokenWithRefreshToken
+  - adal-node.AuthenticationContext.acquireTokenWithRefreshToken_1
   - adal-node.AuthenticationContext.acquireTokenWithUsernamePassword
   - adal-node.AuthenticationContext.acquireUserCode
   - adal-node.AuthenticationContext.constructor
@@ -31,7 +31,7 @@ items:
   summary: ''
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireToken
-  name: acquireToken
+  name: acquireToken(string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -59,7 +59,7 @@ items:
         回呼函式中。
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithAuthorizationCode
-  name: acquireTokenWithAuthorizationCode
+  name: acquireTokenWithAuthorizationCode(string, string, string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -95,7 +95,7 @@ items:
         回呼函式中。
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithClientCertificate
-  name: acquireTokenWithClientCertificate
+  name: acquireTokenWithClientCertificate(string, string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -127,7 +127,7 @@ items:
         回呼函式中。
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithClientCredentials
-  name: acquireTokenWithClientCredentials
+  name: acquireTokenWithClientCredentials(string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -155,7 +155,7 @@ items:
         回呼函式中。
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithDeviceCode
-  name: acquireTokenWithDeviceCode
+  name: acquireTokenWithDeviceCode(string, string, UserCodeInfo, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -182,8 +182,36 @@ items:
       description: >
         回呼函式中。
   package: adal-node
+- uid: adal-node.AuthenticationContext.acquireTokenWithRefreshToken
+  name: acquireTokenWithRefreshToken(string, string, string, AcquireTokenCallback)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取得新存取權杖透過先前簽發的重新整理權杖。
+  syntax:
+    content: 'function acquireTokenWithRefreshToken(refreshToken: string, clientId: string, resource: string, callback: AcquireTokenCallback)'
+    parameters:
+    - id: refreshToken
+      type:
+      - string
+      description: 重新整理權杖，從先前的引動過程的 acquireToken tokne 回應中傳回。
+    - id: clientId
+      type:
+      - string
+      description: 呼叫的應用程式的 OAuth 用戶端識別碼。
+    - id: resource
+      type:
+      - string
+      description: 語彙基元所要求的 OAuth 資源。  這個參數是選擇性的可以設定為 null。
+    - id: callback
+      type:
+      - adal-node.AcquireTokenCallback
+      description: >
+        回呼函式中。
+  package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithRefreshToken_1
-  name: acquireTokenWithRefreshToken
+  name: acquireTokenWithRefreshToken(string, string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -213,36 +241,8 @@ items:
       - adal-node.AcquireTokenCallback
       description: ''
   package: adal-node
-- uid: adal-node.AuthenticationContext.acquireTokenWithRefreshToken
-  name: acquireTokenWithRefreshToken
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: 取得新存取權杖透過先前簽發的重新整理權杖。
-  syntax:
-    content: 'function acquireTokenWithRefreshToken(refreshToken: string, clientId: string, resource: string, callback: AcquireTokenCallback)'
-    parameters:
-    - id: refreshToken
-      type:
-      - string
-      description: 重新整理權杖，從先前的引動過程的 acquireToken tokne 回應中傳回。
-    - id: clientId
-      type:
-      - string
-      description: 呼叫的應用程式的 OAuth 用戶端識別碼。
-    - id: resource
-      type:
-      - string
-      description: 語彙基元所要求的 OAuth 資源。  這個參數是選擇性的可以設定為 null。
-    - id: callback
-      type:
-      - adal-node.AcquireTokenCallback
-      description: >
-        回呼函式中。
-  package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithUsernamePassword
-  name: acquireTokenWithUsernamePassword
+  name: acquireTokenWithUsernamePassword(string, string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -274,7 +274,7 @@ items:
         回呼函式中。
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireUserCode
-  name: acquireUserCode
+  name: acquireUserCode(string, string, string, AcquireUserCodeCallback)
   children: []
   type: method
   langs:
@@ -302,14 +302,14 @@ items:
         回呼函式中。
   package: adal-node
 - uid: adal-node.AuthenticationContext.constructor
-  name: AuthenticationContext
+  name: AuthenticationContext(string, undefined | false | true, TokenCache)
   children: []
   type: constructor
   langs:
   - typeScript
   summary: 建立新的 AuthenticationContext 物件。  根據預設，會根據已知的 Azure Active Directory 授權單位清單檢查授權單位。  如果授權單位無法辨識為其中一個這些已知的授權單位取得權杖將會失敗。  此行為可以透過下列 validateAuthority 參數已關閉。
   syntax:
-    content: 'new AuthenticationContext(authority: string, validateAuthority?: boolean, cache?: TokenCache)'
+    content: 'new AuthenticationContext(authority: string, validateAuthority?: undefined | false | true, cache?: TokenCache)'
     parameters:
     - id: authority
       type:
@@ -317,7 +317,7 @@ items:
       description: 識別權杖的授權單位的 URL。
     - id: validateAuthority
       type:
-      - boolean
+      - undefined | false | true
       description: ''
       optional: true
     - id: cache
@@ -355,7 +355,7 @@ items:
       - adal-node.TokenCache
   package: adal-node
 - uid: adal-node.AuthenticationContext.cancelRequestToGetTokenWithDeviceCode
-  name: cancelRequestToGetTokenWithDeviceCode
+  name: cancelRequestToGetTokenWithDeviceCode(UserCodeInfo, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -404,21 +404,25 @@ items:
   package: adal-node
 references:
 - uid: adal-node.TokenCache
+  name: TokenCache
   spec.typeScript:
   - name: TokenCache
     fullName: TokenCache
     uid: adal-node.TokenCache
 - uid: adal-node.AcquireTokenCallback
+  name: AcquireTokenCallback
   spec.typeScript:
   - name: AcquireTokenCallback
     fullName: AcquireTokenCallback
     uid: adal-node.AcquireTokenCallback
 - uid: adal-node.UserCodeInfo
+  name: UserCodeInfo
   spec.typeScript:
   - name: UserCodeInfo
     fullName: UserCodeInfo
     uid: adal-node.UserCodeInfo
 - uid: adal-node.AcquireUserCodeCallback
+  name: AcquireUserCodeCallback
   spec.typeScript:
   - name: AcquireUserCodeCallback
     fullName: AcquireUserCodeCallback
