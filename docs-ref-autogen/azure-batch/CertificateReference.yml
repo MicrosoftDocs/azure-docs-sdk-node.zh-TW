@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 403a06562f99d622dbb686ab68530cd3cb593a1d
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53678012"
+items:
+- uid: azure-batch.CertificateReference
+  name: CertificateReference
+  fullName: CertificateReference
+  children:
+  - azure-batch.CertificateReference.storeLocation
+  - azure-batch.CertificateReference.storeName
+  - azure-batch.CertificateReference.thumbprint
+  - azure-batch.CertificateReference.thumbprintAlgorithm
+  - azure-batch.CertificateReference.visibility
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.CertificateReference.storeLocation
+  name: storeLocation
+  fullName: storeLocation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="afb21-101">預設值為 currentuser。</span><span class="sxs-lookup"><span data-stu-id="afb21-101">The default value is currentuser.</span></span> <span data-ttu-id="afb21-102">只適用於集區的 Windows 節點 （也就是使用 cloudServiceConfiguration 建立的或使用 virtualMachineConfiguration 使用 Windows 映像參考） 設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="afb21-102">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id="afb21-103">對於 Linux 計算節點，憑證會儲存在目錄內工作工作目錄和環境變數的 AZ_BATCH_CERTIFICATES_DIR 提供給此位置的查詢工作。</span><span class="sxs-lookup"><span data-stu-id="afb21-103">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="afb21-104">與 'remoteUser' 的可見性的憑證，建立 'certs' 目錄中使用者的主目錄 (例如，/home/ {使用者-名稱} / certs) 和憑證會放在該目錄。</span><span class="sxs-lookup"><span data-stu-id="afb21-104">For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>
+
+    <span data-ttu-id="afb21-105">可能的值包括: 'currentUser'，'localMachine'</span><span class="sxs-lookup"><span data-stu-id="afb21-105">Possible values include: 'currentUser', 'localMachine'</span></span>
+  optional: true
+  syntax:
+    content: 'storeLocation?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CertificateReference.storeName
+  name: storeName
+  fullName: storeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="afb21-106">只適用於集區的 Windows 節點 （也就是使用 cloudServiceConfiguration 建立的或使用 virtualMachineConfiguration 使用 Windows 映像參考） 設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="afb21-106">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id="afb21-107">常見的存放區名稱包括：My，根，CA、 信任、 不允許、 TrustedPeople、 TrustedPublisher、 AuthRoot、 通訊錄，但任何自訂存放區名稱也可用。</span><span class="sxs-lookup"><span data-stu-id="afb21-107">Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used.</span></span> <span data-ttu-id="afb21-108">預設值是我。</span><span class="sxs-lookup"><span data-stu-id="afb21-108">The default value is My.</span></span>'
+  optional: true
+  syntax:
+    content: 'storeName?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CertificateReference.thumbprint
+  name: thumbprint
+  fullName: thumbprint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'thumbprint: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CertificateReference.thumbprintAlgorithm
+  name: thumbprintAlgorithm
+  fullName: thumbprintAlgorithm
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'thumbprintAlgorithm: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CertificateReference.visibility
+  name: visibility
+  fullName: visibility
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="afb21-109">您可以在此集合中指定一個以上的可見性。</span><span class="sxs-lookup"><span data-stu-id="afb21-109">You can specify more than one visibility in this collection.</span></span> <span data-ttu-id="afb21-110">預設為所有帳戶。</span><span class="sxs-lookup"><span data-stu-id="afb21-110">The default is all accounts.</span></span>
+  optional: true
+  syntax:
+    content: 'visibility?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-batch

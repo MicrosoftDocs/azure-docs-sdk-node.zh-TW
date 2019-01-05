@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7e95f0beae379495707dd37aaab38ce53161ecb5
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52150053"
+items:
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription
+  name: ComposeDeploymentUpgradeDescription
+  fullName: ComposeDeploymentUpgradeDescription
+  children:
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.applicationHealthPolicy
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.composeFileContent
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.deploymentName
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.forceRestart
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.monitoringPolicy
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.registryCredential
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.rollingUpgradeMode
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.upgradeKind
+  - azure-servicefabric.ComposeDeploymentUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="b407b-101">描述 compose 部署升級的參數。</span><span class="sxs-lookup"><span data-stu-id="b407b-101">Describes the parameters for a compose deployment upgrade.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.applicationHealthPolicy
+  name: applicationHealthPolicy
+  fullName: applicationHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b407b-102">定義用來評估應用程式或其中一個子系實體的健全狀況的健全狀況原則。</span><span class="sxs-lookup"><span data-stu-id="b407b-102">Defines a health policy used to evaluate the health of an application or one of its children entities.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicy
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.composeFileContent
+  name: composeFileContent
+  fullName: composeFileContent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b407b-103">描述建立部署之 compose 檔案的內容。</span><span class="sxs-lookup"><span data-stu-id="b407b-103">The content of the compose file that describes the deployment to create.</span></span>
+  syntax:
+    content: 'composeFileContent: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.deploymentName
+  name: deploymentName
+  fullName: deploymentName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b407b-104">部署的名稱。</span><span class="sxs-lookup"><span data-stu-id="b407b-104">The name of the deployment.</span></span>
+  syntax:
+    content: 'deploymentName: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b407b-105">如果為 true，然後處理程序會強制重新啟動在升級期間即使程式碼版本尚未變更 （升級的唯一變更組態或資料）。</span><span class="sxs-lookup"><span data-stu-id="b407b-105">If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).</span></span>
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.monitoringPolicy
+  name: monitoringPolicy
+  fullName: monitoringPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b407b-106">說明用於監視的升級，以監視模式的參數。</span><span class="sxs-lookup"><span data-stu-id="b407b-106">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+  optional: true
+  syntax:
+    content: 'monitoringPolicy?: MonitoringPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.MonitoringPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.registryCredential
+  name: registryCredential
+  fullName: registryCredential
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b407b-107">若要連線到容器登錄的認證資訊。</span><span class="sxs-lookup"><span data-stu-id="b407b-107">Credential information to connect to container registry.</span></span>
+  optional: true
+  syntax:
+    content: 'registryCredential?: RegistryCredential'
+    return:
+      type:
+      - azure-servicefabric.RegistryCredential
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"b407b-108\">在輪流升級期間用來監視健康情況的模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b407b-108\">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id=\"b407b-109\">的值為 UnmonitoredAuto 及 UnmonitoredManual，受監視。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b407b-109\">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id=\"b407b-110\">可能的值包括：' Invalid'、 'UnmonitoredAuto'、 'UnmonitoredManual'、 '監視'</span><span class=\"sxs-lookup\"><span data-stu-id=\"b407b-110\">Possible values include: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Monitored'</span></span>"
+  optional: true
+  syntax:
+    content: 'rollingUpgradeMode?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.upgradeKind
+  name: upgradeKind
+  fullName: upgradeKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"b407b-111\">下列可能的值超出升級種類。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b407b-111\">The kind of upgrade out of the following possible values.</span></span> <span data-ttu-id=\"b407b-112\">可能的值包括：' Invalid'、 '輪流'</span><span class=\"sxs-lookup\"><span data-stu-id=\"b407b-112\">Possible values include: 'Invalid', 'Rolling'</span></span>"
+  syntax:
+    content: 'upgradeKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
+  name: upgradeReplicaSetCheckTimeoutInSeconds
+  fullName: upgradeReplicaSetCheckTimeoutInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b407b-113">發生非預期問題時，封鎖處理升級網域並防止遺失可用性的時間長度上限。</span><span class="sxs-lookup"><span data-stu-id="b407b-113">The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues.</span></span> <span data-ttu-id="b407b-114">此逾時過期時，無論是否發生可用性遺失問題，升級網域的處理都將繼續。</span><span class="sxs-lookup"><span data-stu-id="b407b-114">When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues.</span></span> <span data-ttu-id="b407b-115">逾時會在每個升級網域啟動時重設。</span><span class="sxs-lookup"><span data-stu-id="b407b-115">The timeout is reset at the start of each upgrade domain.</span></span> <span data-ttu-id="b407b-116">有效值介於 0 到 42949672925 (含) 之間。</span><span class="sxs-lookup"><span data-stu-id="b407b-116">Valid values are between 0 and 42949672925 inclusive.</span></span>
+
+    <span data-ttu-id="b407b-117">（不帶正負號的 32 位元整數）。</span><span class="sxs-lookup"><span data-stu-id="b407b-117">(unsigned 32-bit integer).</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeReplicaSetCheckTimeoutInSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicy
+  name: ApplicationHealthPolicy
+  spec.typeScript:
+  - name: ApplicationHealthPolicy
+    fullName: ApplicationHealthPolicy
+    uid: azure-servicefabric.ApplicationHealthPolicy
+- uid: azure-servicefabric.MonitoringPolicyDescription
+  name: MonitoringPolicyDescription
+  spec.typeScript:
+  - name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    uid: azure-servicefabric.MonitoringPolicyDescription
+- uid: azure-servicefabric.RegistryCredential
+  name: RegistryCredential
+  spec.typeScript:
+  - name: RegistryCredential
+    fullName: RegistryCredential
+    uid: azure-servicefabric.RegistryCredential
