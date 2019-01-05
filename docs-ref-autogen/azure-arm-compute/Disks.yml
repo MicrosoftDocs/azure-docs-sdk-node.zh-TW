@@ -1,0 +1,1958 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4c56db4d8d55793b5fdeec1aa055c26423b78250
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52048704"
+items:
+- uid: azure-arm-compute.Disks
+  name: Disks
+  fullName: Disks
+  children:
+  - azure-arm-compute.Disks.beginCreateOrUpdate
+  - azure-arm-compute.Disks.beginCreateOrUpdate_2
+  - azure-arm-compute.Disks.beginCreateOrUpdate_1
+  - azure-arm-compute.Disks.beginCreateOrUpdateWithHttpOperationResponse
+  - azure-arm-compute.Disks.beginDeleteMethod
+  - azure-arm-compute.Disks.beginDeleteMethod_2
+  - azure-arm-compute.Disks.beginDeleteMethod_1
+  - azure-arm-compute.Disks.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-compute.Disks.beginGrantAccess
+  - azure-arm-compute.Disks.beginGrantAccess_2
+  - azure-arm-compute.Disks.beginGrantAccess_1
+  - azure-arm-compute.Disks.beginGrantAccessWithHttpOperationResponse
+  - azure-arm-compute.Disks.beginRevokeAccess
+  - azure-arm-compute.Disks.beginRevokeAccess_2
+  - azure-arm-compute.Disks.beginRevokeAccess_1
+  - azure-arm-compute.Disks.beginRevokeAccessWithHttpOperationResponse
+  - azure-arm-compute.Disks.beginUpdate
+  - azure-arm-compute.Disks.beginUpdate_2
+  - azure-arm-compute.Disks.beginUpdate_1
+  - azure-arm-compute.Disks.beginUpdateWithHttpOperationResponse
+  - azure-arm-compute.Disks.createOrUpdate
+  - azure-arm-compute.Disks.createOrUpdate_2
+  - azure-arm-compute.Disks.createOrUpdate_1
+  - azure-arm-compute.Disks.createOrUpdateWithHttpOperationResponse
+  - azure-arm-compute.Disks.deleteMethod
+  - azure-arm-compute.Disks.deleteMethod_2
+  - azure-arm-compute.Disks.deleteMethod_1
+  - azure-arm-compute.Disks.deleteMethodWithHttpOperationResponse
+  - azure-arm-compute.Disks.get
+  - azure-arm-compute.Disks.get_2
+  - azure-arm-compute.Disks.get_1
+  - azure-arm-compute.Disks.getWithHttpOperationResponse
+  - azure-arm-compute.Disks.grantAccess
+  - azure-arm-compute.Disks.grantAccess_2
+  - azure-arm-compute.Disks.grantAccess_1
+  - azure-arm-compute.Disks.grantAccessWithHttpOperationResponse
+  - azure-arm-compute.Disks.list
+  - azure-arm-compute.Disks.list_2
+  - azure-arm-compute.Disks.list_1
+  - azure-arm-compute.Disks.listByResourceGroup
+  - azure-arm-compute.Disks.listByResourceGroup_2
+  - azure-arm-compute.Disks.listByResourceGroup_1
+  - azure-arm-compute.Disks.listByResourceGroupNext
+  - azure-arm-compute.Disks.listByResourceGroupNext_2
+  - azure-arm-compute.Disks.listByResourceGroupNext_1
+  - azure-arm-compute.Disks.listByResourceGroupNextWithHttpOperationResponse
+  - azure-arm-compute.Disks.listByResourceGroupWithHttpOperationResponse
+  - azure-arm-compute.Disks.listNext
+  - azure-arm-compute.Disks.listNext_2
+  - azure-arm-compute.Disks.listNext_1
+  - azure-arm-compute.Disks.listNextWithHttpOperationResponse
+  - azure-arm-compute.Disks.listWithHttpOperationResponse
+  - azure-arm-compute.Disks.revokeAccess
+  - azure-arm-compute.Disks.revokeAccess_2
+  - azure-arm-compute.Disks.revokeAccess_1
+  - azure-arm-compute.Disks.revokeAccessWithHttpOperationResponse
+  - azure-arm-compute.Disks.update
+  - azure-arm-compute.Disks.update_2
+  - azure-arm-compute.Disks.update_1
+  - azure-arm-compute.Disks.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, Disk, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-101">建立或更新磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-101">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-102">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-102">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-103">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-103">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-104">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-104">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-105">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-105">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-106">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-106">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: >
+        <span data-ttu-id="f9531-107">Put 磁碟作業的主體中提供的磁碟物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-107">Disk object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginCreateOrUpdate_2
+  name: beginCreateOrUpdate(string, string, Disk, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-108">建立或更新磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-108">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginCreateOrUpdate_1
+  name: beginCreateOrUpdate(string, string, Disk, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-109">建立或更新磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-109">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse(string, string, Disk, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-110">建立或更新磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-110">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, diskName: string, disk: Disk, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-111">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-111">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-112">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-112">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-113">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-113">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-114">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-114">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-115">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-115">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: >
+        <span data-ttu-id="f9531-116">Put 磁碟作業的主體中提供的磁碟物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-116">Disk object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginDeleteMethod
+  name: beginDeleteMethod(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-117">刪除磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-117">Deletes a disk.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-118">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-118">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-119">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-119">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-120">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-120">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-121">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-121">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-122">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-122">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginDeleteMethod_2
+  name: beginDeleteMethod(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-123">刪除磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-123">Deletes a disk.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginDeleteMethod_1
+  name: beginDeleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-124">刪除磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-124">Deletes a disk.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, diskName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-125">刪除磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-125">Deletes a disk.</span></span>
+  syntax:
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-126">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-126">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-127">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-127">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-128">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-128">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-129">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-129">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-130">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-130">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginGrantAccess
+  name: beginGrantAccess(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-131">授與存取磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-131">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-132">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-132">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-133">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-133">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-134">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-134">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-135">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-135">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-136">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-136">The maximum name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="f9531-137">取得磁碟存取作業的主體中提供存取資料物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-137">Access data object supplied in the body of the get disk access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginGrantAccess_2
+  name: beginGrantAccess(string, string, GrantAccessData, Object, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-138">授與存取磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-138">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options: Object, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginGrantAccess_1
+  name: beginGrantAccess(string, string, GrantAccessData, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-139">授與存取磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-139">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginGrantAccessWithHttpOperationResponse
+  name: beginGrantAccessWithHttpOperationResponse(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-140">授與存取磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-140">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function beginGrantAccessWithHttpOperationResponse(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-141">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-141">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-142">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-142">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-143">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-143">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-144">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-144">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-145">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-145">The maximum name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="f9531-146">取得磁碟存取作業的主體中提供存取資料物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-146">Access data object supplied in the body of the get disk access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginRevokeAccess
+  name: beginRevokeAccess(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-147">撤銷磁碟的存取權。</span><span class="sxs-lookup"><span data-stu-id="f9531-147">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-148">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-148">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-149">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-149">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-150">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-150">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-151">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-151">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-152">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-152">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginRevokeAccess_2
+  name: beginRevokeAccess(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-153">撤銷磁碟的存取權。</span><span class="sxs-lookup"><span data-stu-id="f9531-153">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginRevokeAccess_1
+  name: beginRevokeAccess(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-154">撤銷磁碟的存取權。</span><span class="sxs-lookup"><span data-stu-id="f9531-154">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, diskName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginRevokeAccessWithHttpOperationResponse
+  name: beginRevokeAccessWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-155">撤銷磁碟的存取權。</span><span class="sxs-lookup"><span data-stu-id="f9531-155">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function beginRevokeAccessWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-156">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-156">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-157">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-157">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-158">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-158">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-159">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-159">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-160">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-160">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginUpdate
+  name: beginUpdate(string, string, DiskUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-161">更新 （修補程式） 的磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-161">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-162">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-162">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-163">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-163">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-164">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-164">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-165">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-165">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-166">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-166">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: >
+        <span data-ttu-id="f9531-167">修補程式磁碟作業的主體中提供的磁碟物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-167">Disk object supplied in the body of the Patch disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginUpdate_2
+  name: beginUpdate(string, string, DiskUpdate, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-168">更新 （修補程式） 的磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-168">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, diskName: string, disk: DiskUpdate, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginUpdate_1
+  name: beginUpdate(string, string, DiskUpdate, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-169">更新 （修補程式） 的磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-169">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, diskName: string, disk: DiskUpdate, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginUpdateWithHttpOperationResponse
+  name: beginUpdateWithHttpOperationResponse(string, string, DiskUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-170">更新 （修補程式） 的磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-170">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-171">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-171">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-172">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-172">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-173">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-173">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-174">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-174">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-175">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-175">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: >
+        <span data-ttu-id="f9531-176">修補程式磁碟作業的主體中提供的磁碟物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-176">Disk object supplied in the body of the Patch disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.createOrUpdate
+  name: createOrUpdate(string, string, Disk, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-177">建立或更新磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-177">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-178">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-178">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-179">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-179">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-180">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-180">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-181">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-181">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-182">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-182">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: >
+        <span data-ttu-id="f9531-183">Put 磁碟作業的主體中提供的磁碟物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-183">Disk object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.createOrUpdate_2
+  name: createOrUpdate(string, string, Disk, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-184">建立或更新磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-184">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.createOrUpdate_1
+  name: createOrUpdate(string, string, Disk, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-185">建立或更新磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-185">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, Disk, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-186">建立或更新磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-186">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, diskName: string, disk: Disk, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-187">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-187">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-188">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-188">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-189">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-189">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-190">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-190">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-191">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-191">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: >
+        <span data-ttu-id="f9531-192">Put 磁碟作業的主體中提供的磁碟物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-192">Disk object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.deleteMethod
+  name: deleteMethod(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-193">刪除磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-193">Deletes a disk.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-194">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-194">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-195">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-195">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-196">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-196">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-197">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-197">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-198">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-198">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.deleteMethod_2
+  name: deleteMethod(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-199">刪除磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-199">Deletes a disk.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.deleteMethod_1
+  name: deleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-200">刪除磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-200">Deletes a disk.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, diskName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-201">刪除磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-201">Deletes a disk.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-202">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-202">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-203">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-203">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-204">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-204">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-205">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-205">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-206">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-206">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.get
+  name: get(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-207">取得磁碟的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="f9531-207">Gets information about a disk.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-208">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-208">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-209">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-209">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-210">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-210">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-211">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-211">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-212">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-212">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.get_2
+  name: get(string, string, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-213">取得磁碟的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="f9531-213">Gets information about a disk.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.get_1
+  name: get(string, string, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-214">取得磁碟的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="f9531-214">Gets information about a disk.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, diskName: string, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-215">取得磁碟的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="f9531-215">Gets information about a disk.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-216">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-216">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-217">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-217">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-218">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-218">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-219">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-219">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-220">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-220">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.grantAccess
+  name: grantAccess(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-221">授與存取磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-221">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-222">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-222">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-223">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-223">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-224">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-224">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-225">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-225">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-226">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-226">The maximum name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="f9531-227">取得磁碟存取作業的主體中提供存取資料物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-227">Access data object supplied in the body of the get disk access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.grantAccess_2
+  name: grantAccess(string, string, GrantAccessData, Object, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-228">授與存取磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-228">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options: Object, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.grantAccess_1
+  name: grantAccess(string, string, GrantAccessData, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-229">授與存取磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-229">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.grantAccessWithHttpOperationResponse
+  name: grantAccessWithHttpOperationResponse(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-230">授與存取磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-230">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function grantAccessWithHttpOperationResponse(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-231">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-231">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-232">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-232">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-233">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-233">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-234">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-234">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-235">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-235">The maximum name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="f9531-236">取得磁碟存取作業的主體中提供存取資料物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-236">Access data object supplied in the body of the get disk access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.list
+  name: list(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-237">列出訂用帳戶下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-237">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function list(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.list_2
+  name: list(Object, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-238">列出訂用帳戶下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-238">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function list(options: Object, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.list_1
+  name: list(ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-239">列出訂用帳戶下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-239">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function list(callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroup
+  name: listByResourceGroup(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-240">列出資源群組下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-240">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-241">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-241">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroup_2
+  name: listByResourceGroup(string, Object, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-242">列出資源群組下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-242">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroup_1
+  name: listByResourceGroup(string, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-243">列出資源群組下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-243">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupNext
+  name: listByResourceGroupNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-244">列出資源群組下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-244">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-245">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f9531-245">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupNext_2
+  name: listByResourceGroupNext(string, Object, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-246">列出資源群組下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-246">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupNext_1
+  name: listByResourceGroupNext(string, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-247">列出資源群組下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-247">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupNextWithHttpOperationResponse
+  name: listByResourceGroupNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-248">列出資源群組下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-248">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-249">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f9531-249">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupWithHttpOperationResponse
+  name: listByResourceGroupWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-250">列出資源群組下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-250">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-251">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-251">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listNext
+  name: listNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-252">列出訂用帳戶下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-252">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-253">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f9531-253">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listNext_2
+  name: listNext(string, Object, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-254">列出訂用帳戶下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-254">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listNext_1
+  name: listNext(string, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-255">列出訂用帳戶下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-255">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-256">列出訂用帳戶下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-256">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-257">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f9531-257">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-258">列出訂用帳戶下的所有磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-258">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.revokeAccess
+  name: revokeAccess(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-259">撤銷磁碟的存取權。</span><span class="sxs-lookup"><span data-stu-id="f9531-259">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-260">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-260">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-261">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-261">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-262">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-262">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-263">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-263">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-264">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-264">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.revokeAccess_2
+  name: revokeAccess(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-265">撤銷磁碟的存取權。</span><span class="sxs-lookup"><span data-stu-id="f9531-265">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.revokeAccess_1
+  name: revokeAccess(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-266">撤銷磁碟的存取權。</span><span class="sxs-lookup"><span data-stu-id="f9531-266">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, diskName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.revokeAccessWithHttpOperationResponse
+  name: revokeAccessWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-267">撤銷磁碟的存取權。</span><span class="sxs-lookup"><span data-stu-id="f9531-267">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function revokeAccessWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-268">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-268">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-269">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-269">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-270">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-270">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-271">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-271">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-272">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-272">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.update
+  name: update(string, string, DiskUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-273">更新 （修補程式） 的磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-273">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-274">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-274">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-275">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-275">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-276">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-276">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-277">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-277">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-278">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-278">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: >
+        <span data-ttu-id="f9531-279">修補程式磁碟作業的主體中提供的磁碟物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-279">Disk object supplied in the body of the Patch disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.update_2
+  name: update(string, string, DiskUpdate, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-280">更新 （修補程式） 的磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-280">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, diskName: string, disk: DiskUpdate, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.update_1
+  name: update(string, string, DiskUpdate, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-281">更新 （修補程式） 的磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-281">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, diskName: string, disk: DiskUpdate, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, DiskUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f9531-282">更新 （修補程式） 的磁碟。</span><span class="sxs-lookup"><span data-stu-id="f9531-282">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-283">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-283">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f9531-284">正在建立受控磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-284">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="f9531-285">建立磁碟後，就無法變更名稱。</span><span class="sxs-lookup"><span data-stu-id="f9531-285">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="f9531-286">支援名稱的字元是 a-z、 A-Z、 0-9 和 _。</span><span class="sxs-lookup"><span data-stu-id="f9531-286">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f9531-287">名稱長度上限是 80 個字元。</span><span class="sxs-lookup"><span data-stu-id="f9531-287">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: >
+        <span data-ttu-id="f9531-288">修補程式磁碟作業的主體中提供的磁碟物件。</span><span class="sxs-lookup"><span data-stu-id="f9531-288">Disk object supplied in the body of the Patch disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+references:
+- uid: azure-arm-compute.Disk
+  name: Disk
+  spec.typeScript:
+  - name: Disk
+    fullName: Disk
+    uid: azure-arm-compute.Disk
+- uid: Promise<azure-arm-compute.Disk>
+  name: Disk>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Disk
+    fullName: Disk
+    uid: azure-arm-compute.Disk
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.Disk>
+  name: Disk>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Disk
+    fullName: Disk
+    uid: azure-arm-compute.Disk
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  name: Disk>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Disk
+    fullName: Disk
+    uid: azure-arm-compute.Disk
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-compute.GrantAccessData
+  name: GrantAccessData
+  spec.typeScript:
+  - name: GrantAccessData
+    fullName: GrantAccessData
+    uid: azure-arm-compute.GrantAccessData
+- uid: Promise<azure-arm-compute.AccessUri>
+  name: AccessUri>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.AccessUri>
+  name: AccessUri>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  name: AccessUri>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-compute.DiskUpdate
+  name: DiskUpdate
+  spec.typeScript:
+  - name: DiskUpdate
+    fullName: DiskUpdate
+    uid: azure-arm-compute.DiskUpdate
+- uid: Promise<azure-arm-compute.DiskList>
+  name: DiskList>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: DiskList
+    fullName: DiskList
+    uid: azure-arm-compute.DiskList
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.DiskList>
+  name: DiskList>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: DiskList
+    fullName: DiskList
+    uid: azure-arm-compute.DiskList
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  name: DiskList>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: DiskList
+    fullName: DiskList
+    uid: azure-arm-compute.DiskList
+  - name: '>>'
+    fullName: '>>'

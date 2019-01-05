@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 75c8a0c2fd2d2e5de0ab87ce6db8876b89dbd0c0
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53683346"
+items:
+- uid: azure-arm-mediaservices.H264Layer
+  name: H264Layer
+  fullName: H264Layer
+  children:
+  - azure-arm-mediaservices.H264Layer.bufferWindow
+  - azure-arm-mediaservices.H264Layer.entropyMode
+  - azure-arm-mediaservices.H264Layer.level
+  - azure-arm-mediaservices.H264Layer.profile
+  - azure-arm-mediaservices.H264Layer.referenceFrames
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="f7a5b-101">描述輸入的視訊編碼為 H.264 視訊轉碼器所需的輸出位元速率層時要使用的設定。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-101">Describes the settings to be used when encoding the input video into a desired output bitrate layer with the H.264 video codec.</span></span>
+  extends:
+    name: azure-arm-mediaservices.VideoLayer
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.bufferWindow
+  name: bufferWindow
+  fullName: bufferWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f7a5b-102">VBV 緩衝區 視窗的長度。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-102">The VBV buffer window length.</span></span> <span data-ttu-id="f7a5b-103">值應該是以 ISO 8601 格式。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-103">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="f7a5b-104">值應該是範圍 [0.1-100] （秒）。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-104">The value should be in the range [0.1-100] seconds.</span></span> <span data-ttu-id="f7a5b-105">預設值為 5 秒 (比方說，PT5S)。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-105">The default is 5 seconds (for example, PT5S).</span></span>
+  optional: true
+  syntax:
+    content: 'bufferWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.entropyMode
+  name: entropyMode
+  fullName: entropyMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"f7a5b-106\">要用於此圖層的 entropy 模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"f7a5b-106\">The entropy mode to be used for this layer.</span></span> <span data-ttu-id=\"f7a5b-107\">如果未指定，編碼器會選擇適當的設定檔和層級的模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"f7a5b-107\">If not specified, the encoder chooses the mode that is appropriate for the profile and level.</span></span> <span data-ttu-id=\"f7a5b-108\">可能的值包括：' Cabac'，'Cavlc'</span><span class=\"sxs-lookup\"><span data-stu-id=\"f7a5b-108\">Possible values include: 'Cabac', 'Cavlc'</span></span>"
+  optional: true
+  syntax:
+    content: 'entropyMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.level
+  name: level
+  fullName: level
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f7a5b-109">編碼此圖層時，就應該使用的 H.264 標準層級。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-109">Which level of the H.264 standard should be used when encoding this layer.</span></span> <span data-ttu-id="f7a5b-110">值可以是自動] 或 [符合 H.264 設定檔的數字。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-110">The value can be Auto, or a number that matches the H.264 profile.</span></span> <span data-ttu-id="f7a5b-111">如果未指定，預設為自動，可讓編碼器選擇適用於這一層的層級。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-111">If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.</span></span>
+  optional: true
+  syntax:
+    content: 'level?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.profile
+  name: profile
+  fullName: profile
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"f7a5b-112\">編碼此圖層時，就應該使用 H.264 標準的哪一個設定檔。</span><span class=\"sxs-lookup\"><span data-stu-id=\"f7a5b-112\">Which profile of the H.264 standard should be used when encoding this layer.</span></span> <span data-ttu-id=\"f7a5b-113\">預設值是 Auto。可能的值包括：'Auto'、 '基準線'、 'Main'、 '高'、 'High422'、 'High444'</span><span class=\"sxs-lookup\"><span data-stu-id=\"f7a5b-113\">Default is Auto. Possible values include: 'Auto', 'Baseline', 'Main', 'High', 'High422', 'High444'</span></span>"
+  optional: true
+  syntax:
+    content: 'profile?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.referenceFrames
+  name: referenceFrames
+  fullName: referenceFrames
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f7a5b-114">此圖層的編碼方式時要使用的參考畫面格數目。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-114">The number of reference frames to be used when encoding this layer.</span></span> <span data-ttu-id="f7a5b-115">如果未指定，編碼器會判斷適當數目的編碼器複雜性設定為基礎。</span><span class="sxs-lookup"><span data-stu-id="f7a5b-115">If not specified, the encoder determines an appropriate number based on the encoder complexity setting.</span></span>
+  optional: true
+  syntax:
+    content: 'referenceFrames?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.VideoLayer
+  name: VideoLayer
+  spec.typeScript:
+  - name: VideoLayer
+    fullName: VideoLayer
+    uid: azure-arm-mediaservices.VideoLayer
