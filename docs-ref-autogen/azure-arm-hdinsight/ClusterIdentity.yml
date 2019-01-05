@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5a419247f25db5933098d29fbaceda1fb944775a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53679032"
+items:
+- uid: azure-arm-hdinsight.ClusterIdentity
+  name: ClusterIdentity
+  fullName: ClusterIdentity
+  children:
+  - azure-arm-hdinsight.ClusterIdentity.principalId
+  - azure-arm-hdinsight.ClusterIdentity.tenantId
+  - azure-arm-hdinsight.ClusterIdentity.type
+  - azure-arm-hdinsight.ClusterIdentity.userAssignedIdentities
+  langs:
+  - typeScript
+  type: interface
+  summary: 叢集的身分識別。
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.ClusterIdentity.principalId
+  name: principalId
+  fullName: principalId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 叢集身分識別的主體識別碼。 這個屬性只會提供系統指派的身分識別。
+  optional: true
+  syntax:
+    content: 'principalId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.ClusterIdentity.tenantId
+  name: tenantId
+  fullName: tenantId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 與叢集相關聯的租用戶識別碼。 這個屬性只會提供系統指派的身分識別。
+  optional: true
+  syntax:
+    content: 'tenantId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.ClusterIdentity.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 針對叢集使用的身分識別的型別。 類型 'SystemAssigned UserAssigned' 包含隱含建立的身分識別和一組指派給使用者的身分識別。 可能的值包括：'SystemAssigned'、 'UserAssigned'、 'SystemAssigned UserAssigned'、 'None'
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.ClusterIdentity.userAssignedIdentities
+  name: userAssignedIdentities
+  fullName: userAssignedIdentities
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "與叢集相關聯的使用者身分識別清單。 使用者的身分識別字典索引鍵參考將會在表單中的 ARM 資源識別碼: ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'。"
+  optional: true
+  syntax:
+    content: 'userAssignedIdentities?: [key: string]: ClusterIdentityUserAssignedIdentitiesValue'
+    return:
+      type:
+      - '[key: string]: azure-arm-hdinsight.ClusterIdentityUserAssignedIdentitiesValue'
+  package: azure-arm-hdinsight
+references:
+- uid: '[key: string]: azure-arm-hdinsight.ClusterIdentityUserAssignedIdentitiesValue'
+  name: ClusterIdentityUserAssignedIdentitiesValue
+  spec.typeScript:
+  - name: '[key: string]: '
+    fullName: '[key: string]: '
+  - name: ClusterIdentityUserAssignedIdentitiesValue
+    fullName: ClusterIdentityUserAssignedIdentitiesValue
+    uid: azure-arm-hdinsight.ClusterIdentityUserAssignedIdentitiesValue

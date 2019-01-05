@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7ee2030edfb8d3fd7e62c662828dd18a49186c00
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52072916"
+items:
+- uid: azure-servicefabric.StatelessServiceInstanceHealth
+  name: StatelessServiceInstanceHealth
+  fullName: StatelessServiceInstanceHealth
+  children:
+  - azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    代表無狀態服務執行個體的健全狀況。
+
+    包含彙總的執行個體的健全狀況狀態、 健康情況事件和狀況不良的評估。
+  extends:
+    name: azure-servicefabric.ReplicaHealth
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 無狀態服務執行個體的識別碼。 Service Fabric 會使用 InstanceId 來唯一識別的無狀態服務分割區的執行個體。 它是資料分割內唯一的並不會變更執行個體的存留期。 如果在相同或不同的節點上，執行個體已容錯移轉，它會取得不同值的執行個體識別碼。
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ReplicaHealth
+  name: ReplicaHealth
+  spec.typeScript:
+  - name: ReplicaHealth
+    fullName: ReplicaHealth
+    uid: azure-servicefabric.ReplicaHealth

@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 75c8a0c2fd2d2e5de0ab87ce6db8876b89dbd0c0
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53683346"
+items:
+- uid: azure-arm-mediaservices.H264Layer
+  name: H264Layer
+  fullName: H264Layer
+  children:
+  - azure-arm-mediaservices.H264Layer.bufferWindow
+  - azure-arm-mediaservices.H264Layer.entropyMode
+  - azure-arm-mediaservices.H264Layer.level
+  - azure-arm-mediaservices.H264Layer.profile
+  - azure-arm-mediaservices.H264Layer.referenceFrames
+  langs:
+  - typeScript
+  type: interface
+  summary: 描述輸入的視訊編碼為 H.264 視訊轉碼器所需的輸出位元速率層時要使用的設定。
+  extends:
+    name: azure-arm-mediaservices.VideoLayer
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.bufferWindow
+  name: bufferWindow
+  fullName: bufferWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: VBV 緩衝區 視窗的長度。 值應該是以 ISO 8601 格式。 值應該是範圍 [0.1-100] （秒）。 預設值為 5 秒 (比方說，PT5S)。
+  optional: true
+  syntax:
+    content: 'bufferWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.entropyMode
+  name: entropyMode
+  fullName: entropyMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 要用於此圖層的 entropy 模式。 如果未指定，編碼器會選擇適當的設定檔和層級的模式。 可能的值包括：' Cabac'，'Cavlc'
+  optional: true
+  syntax:
+    content: 'entropyMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.level
+  name: level
+  fullName: level
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 編碼此圖層時，就應該使用的 H.264 標準層級。 值可以是自動] 或 [符合 H.264 設定檔的數字。 如果未指定，預設為自動，可讓編碼器選擇適用於這一層的層級。
+  optional: true
+  syntax:
+    content: 'level?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.profile
+  name: profile
+  fullName: profile
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 編碼此圖層時，就應該使用 H.264 標準的哪一個設定檔。 預設值是 Auto。可能的值包括：'Auto'、 '基準線'、 'Main'、 '高'、 'High422'、 'High444'
+  optional: true
+  syntax:
+    content: 'profile?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.referenceFrames
+  name: referenceFrames
+  fullName: referenceFrames
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 此圖層的編碼方式時要使用的參考畫面格數目。 如果未指定，編碼器會判斷適當數目的編碼器複雜性設定為基礎。
+  optional: true
+  syntax:
+    content: 'referenceFrames?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.VideoLayer
+  name: VideoLayer
+  spec.typeScript:
+  - name: VideoLayer
+    fullName: VideoLayer
+    uid: azure-arm-mediaservices.VideoLayer
