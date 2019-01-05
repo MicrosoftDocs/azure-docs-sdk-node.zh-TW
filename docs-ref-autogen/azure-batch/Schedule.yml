@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 06b60b35e92b1bdb78fb167cb73a13f659ab965c
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658922"
+items:
+- uid: azure-batch.Schedule
+  name: Schedule
+  fullName: Schedule
+  children:
+  - azure-batch.Schedule.doNotRunAfter
+  - azure-batch.Schedule.doNotRunUntil
+  - azure-batch.Schedule.recurrenceInterval
+  - azure-batch.Schedule.startWindow
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.Schedule.doNotRunAfter
+  name: doNotRunAfter
+  fullName: doNotRunAfter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b28b3-101">如果您未指定 doNotRunAfter 時間，而且您要建立週期性工作排程，作業排程會保持作用中，直到您明確地結束。</span><span class="sxs-lookup"><span data-stu-id="b28b3-101">If you do not specify a doNotRunAfter time, and you are creating a recurring job schedule, the job schedule will remain active until you explicitly terminate it.</span></span>
+  optional: true
+  syntax:
+    content: 'doNotRunAfter?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.Schedule.doNotRunUntil
+  name: doNotRunUntil
+  fullName: doNotRunUntil
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b28b3-102">如果您未指定 doNotRunUntil 時間，排程會成為準備好立即建立作業。</span><span class="sxs-lookup"><span data-stu-id="b28b3-102">If you do not specify a doNotRunUntil time, the schedule becomes ready to create jobs immediately.</span></span>
+  optional: true
+  syntax:
+    content: 'doNotRunUntil?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.Schedule.recurrenceInterval
+  name: recurrenceInterval
+  fullName: recurrenceInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="b28b3-103">因為作業排程可以在任何時候，有最多一個作用中的作業，如果就可以開始建立新的工作，在 作業排程，但先前的作業仍在執行中，Batch 服務不會建立新的工作先前的工作完成為止。</span><span class="sxs-lookup"><span data-stu-id="b28b3-103">Because a job schedule can have at most one active job under it at any given time, if it is time to create a new job under a job schedule, but the previous job is still running, the Batch service will not create the new job until the previous job finishes.</span></span> <span data-ttu-id="b28b3-104">如果先前的作業無法完成新 recurrenceInterval 的 startWindow 期間內，將會對於該間隔不排程任何新的工作。</span><span class="sxs-lookup"><span data-stu-id="b28b3-104">If the previous job does not finish within the startWindow period of the new recurrenceInterval, then no new job will be scheduled for that interval.</span></span> <span data-ttu-id="b28b3-105">適用於週期性工作，您通常應該指定 jobManagerTask jobSpecification 中。</span><span class="sxs-lookup"><span data-stu-id="b28b3-105">For recurring jobs, you should normally specify a jobManagerTask in the jobSpecification.</span></span> <span data-ttu-id="b28b3-106">如果您不要使用 jobManagerTask，您必須監視建立作業時，將工作新增至工作終止工作準備好進行下一個循環的外部處理序。</span><span class="sxs-lookup"><span data-stu-id="b28b3-106">If you do not use jobManagerTask, you will need an external process to monitor when jobs are created, add tasks to the jobs and terminate the jobs ready for the next recurrence.</span></span> <span data-ttu-id="b28b3-107">預設值是，排程不會再發生： 一項作業建立 doNotRunUntil 時間之後, startWindow 內以及該工作完成時立即排程已完成。</span><span class="sxs-lookup"><span data-stu-id="b28b3-107">The default is that the schedule does not recur: one job is created, within the startWindow after the doNotRunUntil time, and the schedule is complete as soon as that job finishes.</span></span> <span data-ttu-id="b28b3-108">最小值為 1 分鐘。</span><span class="sxs-lookup"><span data-stu-id="b28b3-108">The minimum value is 1 minute.</span></span> <span data-ttu-id="b28b3-109">如果您指定較低的值時，Batch 服務會拒絕並產生錯誤; 排程如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。</span><span class="sxs-lookup"><span data-stu-id="b28b3-109">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+  optional: true
+  syntax:
+    content: 'recurrenceInterval?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.Schedule.startWindow
+  name: startWindow
+  fullName: startWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b28b3-110">如果 startWindow 間隔內，不會建立一個作業，則 '機會' 是遺失;會不建立任何作業，直到下一個週期的排程。</span><span class="sxs-lookup"><span data-stu-id="b28b3-110">If a job is not created within the startWindow interval, then the 'opportunity' is lost; no job will be created until the next recurrence of the schedule.</span></span> <span data-ttu-id="b28b3-111">如果週期性的排程，，而且超過循環間隔的 startWindow，則這就相當於無限的 startWindow，因為 '由於' 一個 recurrenceInterval 中相關的作業不被轉送到下一個循環間隔。</span><span class="sxs-lookup"><span data-stu-id="b28b3-111">If the schedule is recurring, and the startWindow is longer than the recurrence interval, then this is equivalent to an infinite startWindow, because the job that is 'due' in one recurrenceInterval is not carried forward into the next recurrence interval.</span></span> <span data-ttu-id="b28b3-112">預設為無限。</span><span class="sxs-lookup"><span data-stu-id="b28b3-112">The default is infinite.</span></span> <span data-ttu-id="b28b3-113">最小值為 1 分鐘。</span><span class="sxs-lookup"><span data-stu-id="b28b3-113">The minimum value is 1 minute.</span></span> <span data-ttu-id="b28b3-114">如果您指定較低的值時，Batch 服務會拒絕並產生錯誤; 排程如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。</span><span class="sxs-lookup"><span data-stu-id="b28b3-114">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>
+  optional: true
+  syntax:
+    content: 'startWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch

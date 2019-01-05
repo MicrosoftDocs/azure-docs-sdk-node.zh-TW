@@ -1,0 +1,174 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e61f19a4736cc7a09b4a6980d6773cbaa8f6ede9
+ms.sourcegitcommit: 42c41a3863e31111d98796f150878d4fa93463af
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48297835"
+items:
+- uid: '@azure/event-hubs.ClientEntity'
+  name: ClientEntity
+  fullName: ClientEntity
+  children:
+  - '@azure/event-hubs.ClientEntity.address'
+  - '@azure/event-hubs.ClientEntity.audience'
+  - '@azure/event-hubs.ClientEntity.constructor'
+  - '@azure/event-hubs.ClientEntity.name'
+  - '@azure/event-hubs.ClientEntity.partitionId'
+  - '@azure/event-hubs.ClientEntity.type'
+  - '@azure/event-hubs.ClientEntity.wasCloseCalled'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="0925d-101">描述實體，例如 EventHub 寄件者、 接收者和管理用戶端的基底類別。</span><span class="sxs-lookup"><span data-stu-id="0925d-101">Describes the base class for entities like EventHub Sender, Receiver and Management client.</span></span>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.address'
+  name: address
+  fullName: address
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="0925d-102">{string} 地址的其中一種下列形式的用戶端實體位址：</span><span class="sxs-lookup"><span data-stu-id="0925d-102">{string} address The client entity address in one of the following forms:</span></span>
+
+
+    <span data-ttu-id="0925d-103">**寄件者**</span><span class="sxs-lookup"><span data-stu-id="0925d-103">**Sender**</span></span>
+
+    - `"<hubName>"`
+
+    - <span data-ttu-id="0925d-104">`"<hubName>/Partitions/<partitionId>"` 。</span><span class="sxs-lookup"><span data-stu-id="0925d-104">`"<hubName>/Partitions/<partitionId>"`.</span></span>
+
+
+    <span data-ttu-id="0925d-105">**接收者**</span><span class="sxs-lookup"><span data-stu-id="0925d-105">**Receiver**</span></span>
+
+    - <span data-ttu-id="0925d-106">`"<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"` 。</span><span class="sxs-lookup"><span data-stu-id="0925d-106">`"<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"`.</span></span>
+
+
+    <span data-ttu-id="0925d-107">**ManagementClient**
+
+    -`"$management"`。</span><span class="sxs-lookup"><span data-stu-id="0925d-107">**ManagementClient**
+
+    -`"$management"`.</span></span>
+  syntax:
+    content: 'address: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.audience'
+  name: audience
+  fullName: audience
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="0925d-108">{string} 對象的用戶端實體權杖對象其中一種下列形式：</span><span class="sxs-lookup"><span data-stu-id="0925d-108">{string} audience The client entity token audience in one of the following forms:</span></span>
+
+
+    <span data-ttu-id="0925d-109">**寄件者**</span><span class="sxs-lookup"><span data-stu-id="0925d-109">**Sender**</span></span>
+
+    - `"sb://<yournamespace>.servicebus.windows.net/<hubName>"`
+
+    - <span data-ttu-id="0925d-110">`"sb://<yournamespace>.servicebus.windows.net/<hubName>/Partitions/<partitionId>"` 。</span><span class="sxs-lookup"><span data-stu-id="0925d-110">`"sb://<yournamespace>.servicebus.windows.net/<hubName>/Partitions/<partitionId>"`.</span></span>
+
+
+    <span data-ttu-id="0925d-111">**接收者**</span><span class="sxs-lookup"><span data-stu-id="0925d-111">**Receiver**</span></span>
+
+    - <span data-ttu-id="0925d-112">`"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"` 。</span><span class="sxs-lookup"><span data-stu-id="0925d-112">`"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"`.</span></span>
+
+
+    <span data-ttu-id="0925d-113">**ManagementClient**</span><span class="sxs-lookup"><span data-stu-id="0925d-113">**ManagementClient**</span></span>
+
+    - <span data-ttu-id="0925d-114">`"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/$management"` 。</span><span class="sxs-lookup"><span data-stu-id="0925d-114">`"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/$management"`.</span></span>
+  syntax:
+    content: 'audience: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.constructor'
+  name: ClientEntity
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0925d-115">建立新的 ClientEntity 執行個體。</span><span class="sxs-lookup"><span data-stu-id="0925d-115">Creates a new ClientEntity instance.</span></span>
+  syntax:
+    content: 'new ClientEntity(context: ConnectionContext, options?: ClientEntityOptions)'
+    parameters:
+    - id: context
+      type:
+      - ConnectionContext
+      description: <span data-ttu-id="0925d-116">連接內容。</span><span class="sxs-lookup"><span data-stu-id="0925d-116">The connection context.</span></span>
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientEntityOptions'
+      description: ''
+      optional: true
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.name'
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0925d-117">{string}[名稱]實體 (通常是 guid) 的唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="0925d-117">{string} [name] The unique name for the entity (mostly a guid).</span></span>
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.partitionId'
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0925d-118">{字串 | 數目}[partitionId]PartitionId 與用戶端實體相關聯。</span><span class="sxs-lookup"><span data-stu-id="0925d-118">{string | number} [partitionId] The partitionId associated with the client entity.</span></span>
+  optional: true
+  syntax:
+    content: 'partitionId?: string | number'
+    return:
+      type:
+      - string | number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.type'
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0925d-119">提供目前 ClientEntity 的類型。</span><span class="sxs-lookup"><span data-stu-id="0925d-119">Provides the current type of the ClientEntity.</span></span>
+  syntax:
+    content: 'type: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.wasCloseCalled'
+  name: wasCloseCalled
+  fullName: wasCloseCalled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0925d-120">{布林} wasCloseCalled 表示 close （） 方法是否已在指定的內容中呼叫本身。</span><span class="sxs-lookup"><span data-stu-id="0925d-120">{boolean} wasCloseCalled Indicates whether the close() method was called on itself in a given context.</span></span>
+  syntax:
+    content: 'wasCloseCalled: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.ClientEntityOptions'
+  name: ClientEntityOptions
+  spec.typeScript:
+  - name: ClientEntityOptions
+    fullName: ClientEntityOptions
+    uid: '@azure/event-hubs.ClientEntityOptions'
