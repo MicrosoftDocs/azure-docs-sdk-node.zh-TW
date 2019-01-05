@@ -1,42 +1,42 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 884bd51b4cd368418b1251188b069e73b9652a00
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 3ed1e1566523954a0e036ae900417482109ad143
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41690906"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52168373"
 items:
 - uid: azure-arm-sql.ReplicationLinks
   name: ReplicationLinks
   fullName: ReplicationLinks
   children:
   - azure-arm-sql.ReplicationLinks.beginFailover
-  - azure-arm-sql.ReplicationLinks.beginFailover_1
   - azure-arm-sql.ReplicationLinks.beginFailover_2
-  - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_1
-  - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_2
+  - azure-arm-sql.ReplicationLinks.beginFailover_1
   - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss
+  - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_2
+  - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_1
   - azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLossWithHttpOperationResponse
   - azure-arm-sql.ReplicationLinks.beginFailoverWithHttpOperationResponse
   - azure-arm-sql.ReplicationLinks.deleteMethod
-  - azure-arm-sql.ReplicationLinks.deleteMethod_1
   - azure-arm-sql.ReplicationLinks.deleteMethod_2
+  - azure-arm-sql.ReplicationLinks.deleteMethod_1
   - azure-arm-sql.ReplicationLinks.deleteMethodWithHttpOperationResponse
   - azure-arm-sql.ReplicationLinks.failover
-  - azure-arm-sql.ReplicationLinks.failover_1
   - azure-arm-sql.ReplicationLinks.failover_2
+  - azure-arm-sql.ReplicationLinks.failover_1
   - azure-arm-sql.ReplicationLinks.failoverAllowDataLoss
   - azure-arm-sql.ReplicationLinks.failoverAllowDataLoss_2
   - azure-arm-sql.ReplicationLinks.failoverAllowDataLoss_1
   - azure-arm-sql.ReplicationLinks.failoverAllowDataLossWithHttpOperationResponse
   - azure-arm-sql.ReplicationLinks.failoverWithHttpOperationResponse
   - azure-arm-sql.ReplicationLinks.get
-  - azure-arm-sql.ReplicationLinks.get_1
   - azure-arm-sql.ReplicationLinks.get_2
+  - azure-arm-sql.ReplicationLinks.get_1
   - azure-arm-sql.ReplicationLinks.getWithHttpOperationResponse
   - azure-arm-sql.ReplicationLinks.listByDatabase
-  - azure-arm-sql.ReplicationLinks.listByDatabase_1
   - azure-arm-sql.ReplicationLinks.listByDatabase_2
+  - azure-arm-sql.ReplicationLinks.listByDatabase_1
   - azure-arm-sql.ReplicationLinks.listByDatabaseWithHttpOperationResponse
   langs:
   - typeScript
@@ -44,7 +44,7 @@ items:
   summary: ''
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.beginFailover
-  name: beginFailover
+  name: beginFailover(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -82,42 +82,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-sql
-- uid: azure-arm-sql.ReplicationLinks.beginFailover_1
-  name: beginFailover
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: 從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。
-  syntax:
-    content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: linkId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.beginFailover_2
-  name: beginFailover
+  name: beginFailover(string, string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -154,15 +120,15 @@ items:
       type:
       - Promise<void>
   package: azure-arm-sql
-- uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_1
-  name: beginFailoverAllowDataLoss
+- uid: azure-arm-sql.ReplicationLinks.beginFailover_1
+  name: beginFailover(string, string, string, string, ServiceCallback<void>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: 從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。 這項作業可能會導致資料遺失。
+  summary: 從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。
   syntax:
-    content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -179,44 +145,6 @@ items:
     - id: linkId
       type:
       - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-sql
-- uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_2
-  name: beginFailoverAllowDataLoss
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: 從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。 這項作業可能會導致資料遺失。
-  syntax:
-    content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: Object, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: linkId
-      type:
-      - string
-      description: ''
-    - id: options
-      type:
-      - Object
       description: ''
     - id: callback
       type:
@@ -227,7 +155,7 @@ items:
       - Promise<void>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss
-  name: beginFailoverAllowDataLoss
+  name: beginFailoverAllowDataLoss(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -265,8 +193,80 @@ items:
       type:
       - Promise<void>
   package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_2
+  name: beginFailoverAllowDataLoss(string, string, string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。 這項作業可能會導致資料遺失。
+  syntax:
+    content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLoss_1
+  name: beginFailoverAllowDataLoss(string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。 這項作業可能會導致資料遺失。
+  syntax:
+    content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.beginFailoverAllowDataLossWithHttpOperationResponse
-  name: beginFailoverAllowDataLossWithHttpOperationResponse
+  name: beginFailoverAllowDataLossWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -305,7 +305,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.beginFailoverWithHttpOperationResponse
-  name: beginFailoverWithHttpOperationResponse
+  name: beginFailoverWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -344,7 +344,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -382,42 +382,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-sql
-- uid: azure-arm-sql.ReplicationLinks.deleteMethod_1
-  name: deleteMethod
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: 刪除資料庫複寫連結。 無法在容錯移轉期間進行。
-  syntax:
-    content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: linkId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -454,8 +420,42 @@ items:
       type:
       - Promise<void>
   package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.deleteMethod_1
+  name: deleteMethod(string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 刪除資料庫複寫連結。 無法在容錯移轉期間進行。
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -494,7 +494,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.failover
-  name: failover
+  name: failover(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -532,42 +532,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-sql
-- uid: azure-arm-sql.ReplicationLinks.failover_1
-  name: failover
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: 從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。
-  syntax:
-    content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: linkId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.failover_2
-  name: failover
+  name: failover(string, string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -604,8 +570,42 @@ items:
       type:
       - Promise<void>
   package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.failover_1
+  name: failover(string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 從目前主要複本資料庫進行容錯移轉，以設定主要的複本資料庫。
+  syntax:
+    content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.failoverAllowDataLoss
-  name: failoverAllowDataLoss
+  name: failoverAllowDataLoss(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -644,7 +644,7 @@ items:
       - Promise<void>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.failoverAllowDataLoss_2
-  name: failoverAllowDataLoss
+  name: failoverAllowDataLoss(string, string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -682,7 +682,7 @@ items:
       - Promise<void>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.failoverAllowDataLoss_1
-  name: failoverAllowDataLoss
+  name: failoverAllowDataLoss(string, string, string, string, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -716,7 +716,7 @@ items:
       - Promise<void>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.failoverAllowDataLossWithHttpOperationResponse
-  name: failoverAllowDataLossWithHttpOperationResponse
+  name: failoverAllowDataLossWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -755,7 +755,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.failoverWithHttpOperationResponse
-  name: failoverWithHttpOperationResponse
+  name: failoverWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -794,7 +794,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.get
-  name: get
+  name: get(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -832,42 +832,8 @@ items:
       type:
       - Promise<azure-arm-sql.ReplicationLink>
   package: azure-arm-sql
-- uid: azure-arm-sql.ReplicationLinks.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: 取得資料庫複寫連結。
-  syntax:
-    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<ReplicationLink>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: linkId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.ReplicationLink>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.ReplicationLink>
-  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.get_2
-  name: get
+  name: get(string, string, string, string, Object, ServiceCallback<ReplicationLink>)
   children: []
   type: method
   langs:
@@ -904,8 +870,42 @@ items:
       type:
       - Promise<azure-arm-sql.ReplicationLink>
   package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.get_1
+  name: get(string, string, string, string, ServiceCallback<ReplicationLink>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取得資料庫複寫連結。
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<ReplicationLink>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: linkId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.ReplicationLink>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.ReplicationLink>
+  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -944,7 +944,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.ReplicationLink>>
   package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.listByDatabase
-  name: listByDatabase
+  name: listByDatabase(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -977,38 +977,8 @@ items:
       type:
       - Promise<azure-arm-sql.ReplicationLinkListResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.ReplicationLinks.listByDatabase_1
-  name: listByDatabase
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: 列出的資料庫複寫連結。
-  syntax:
-    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ReplicationLinkListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.ReplicationLinkListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.ReplicationLinkListResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.listByDatabase_2
-  name: listByDatabase
+  name: listByDatabase(string, string, string, Object, ServiceCallback<ReplicationLinkListResult>)
   children: []
   type: method
   langs:
@@ -1041,8 +1011,38 @@ items:
       type:
       - Promise<azure-arm-sql.ReplicationLinkListResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.ReplicationLinks.listByDatabase_1
+  name: listByDatabase(string, string, string, ServiceCallback<ReplicationLinkListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 列出的資料庫複寫連結。
+  syntax:
+    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ReplicationLinkListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.ReplicationLinkListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.ReplicationLinkListResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.ReplicationLinks.listByDatabaseWithHttpOperationResponse
-  name: listByDatabaseWithHttpOperationResponse
+  name: listByDatabaseWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -1077,6 +1077,7 @@ items:
   package: azure-arm-sql
 references:
 - uid: Promise<azure-arm-sql.ReplicationLink>
+  name: ReplicationLink>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1086,6 +1087,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.ReplicationLink>
+  name: ReplicationLink>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1095,6 +1097,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.ReplicationLink>>
+  name: ReplicationLink>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1104,6 +1107,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-sql.ReplicationLinkListResult>
+  name: ReplicationLinkListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1113,6 +1117,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.ReplicationLinkListResult>
+  name: ReplicationLinkListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1122,6 +1127,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.ReplicationLinkListResult>>
+  name: ReplicationLinkListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
