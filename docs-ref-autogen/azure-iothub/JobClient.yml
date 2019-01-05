@@ -1,0 +1,599 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 123d93a49cd2b4774f4e87edf8520b6f8fb5b8a4
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658902"
+items:
+- uid: azure-iothub.JobClient
+  name: JobClient
+  fullName: JobClient
+  children:
+  - azure-iothub.JobClient.cancelJob_1
+  - azure-iothub.JobClient.cancelJob
+  - azure-iothub.JobClient.createQuery
+  - azure-iothub.JobClient.fromConnectionString
+  - azure-iothub.JobClient.fromSharedAccessSignature
+  - azure-iothub.JobClient.getJob_1
+  - azure-iothub.JobClient.getJob
+  - azure-iothub.JobClient.JobCallback
+  - azure-iothub.JobClient.scheduleDeviceMethod_5
+  - azure-iothub.JobClient.scheduleDeviceMethod_4
+  - azure-iothub.JobClient.scheduleDeviceMethod_3
+  - azure-iothub.JobClient.scheduleDeviceMethod
+  - azure-iothub.JobClient.scheduleDeviceMethod_1
+  - azure-iothub.JobClient.scheduleDeviceMethod_2
+  - azure-iothub.JobClient.scheduleTwinUpdate_5
+  - azure-iothub.JobClient.scheduleTwinUpdate_4
+  - azure-iothub.JobClient.scheduleTwinUpdate_3
+  - azure-iothub.JobClient.scheduleTwinUpdate
+  - azure-iothub.JobClient.scheduleTwinUpdate_1
+  - azure-iothub.JobClient.scheduleTwinUpdate_2
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="619cd-101">提供方法來建立、 更新、 監視和取消長時間執行的作業，在 IoT 中樞執行個體，以及查詢現有的作業。</span><span class="sxs-lookup"><span data-stu-id="619cd-101">Provides methods to create, update, monitor and cancel long-running jobs on an IoT Hub instance, as well as query existing jobs.</span></span>
+
+    <span data-ttu-id="619cd-102">Azure IoT 中樞作業 API，可讓排程的直接方法呼叫和多個裝置上的對應項更新。</span><span class="sxs-lookup"><span data-stu-id="619cd-102">The Jobs API in Azure IoT Hub allows to schedule direct method calls and twin updates on multiple devices.</span></span>
+
+    <span data-ttu-id="619cd-103">建立預期 SDK 使用者<xref:azure-iothub.JobClient>執行個體的 factory 方法<xref:azure-iothub.JobClient.fromConnectionString>和<xref:azure-iothub.JobClient.fromSharedAccessSignature>。</span><span class="sxs-lookup"><span data-stu-id="619cd-103">SDK users are expected to create <xref:azure-iothub.JobClient> instances using the factory methods <xref:azure-iothub.JobClient.fromConnectionString> and <xref:azure-iothub.JobClient.fromSharedAccessSignature>.</span></span>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.cancelJob_1
+  name: cancelJob(string | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-104">取消現有的工作。</span><span class="sxs-lookup"><span data-stu-id="619cd-104">Cancels an existing job.</span></span>
+  syntax:
+    content: 'function cancelJob(jobId: string | number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.cancelJob
+  name: cancelJob(string | number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-105">取消現有的工作。</span><span class="sxs-lookup"><span data-stu-id="619cd-105">Cancels an existing job.</span></span>
+  syntax:
+    content: 'function cancelJob(jobId: string | number, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="619cd-106">現有工作的識別碼。</span><span class="sxs-lookup"><span data-stu-id="619cd-106">The identifier of an existing job.</span></span>
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.createQuery
+  name: createQuery(JobType, JobStatus, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-107">建立可用來傳回頁面的 現有的作業類型和狀態為基礎的查詢。</span><span class="sxs-lookup"><span data-stu-id="619cd-107">Creates a query that can be used to return pages of existing job based on type and status.</span></span>
+  syntax:
+    content: 'function createQuery(jobType?: JobType, jobStatus?: JobStatus, pageSize?: number)'
+    parameters:
+    - id: jobType
+      type:
+      - azure-iothub.JobType
+      description: <span data-ttu-id="619cd-108">應該用來篩選結果的型別。</span><span class="sxs-lookup"><span data-stu-id="619cd-108">The type that should be used to filter results.</span></span>
+      optional: true
+    - id: jobStatus
+      type:
+      - azure-iothub.JobStatus
+      description: <span data-ttu-id="619cd-109">應該用來篩選結果的狀態。</span><span class="sxs-lookup"><span data-stu-id="619cd-109">The status that should be used to filter results.</span></span>
+      optional: true
+    - id: pageSize
+      type:
+      - number
+      description: >
+        <span data-ttu-id="619cd-110">傳回每頁項目數。</span><span class="sxs-lookup"><span data-stu-id="619cd-110">The number of elements to return per page.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-iothub.Query
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromConnectionString
+  name: fromConnectionString(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-111">建構 JobClient 物件從指定的連接字串。</span><span class="sxs-lookup"><span data-stu-id="619cd-111">Constructs a JobClient object from the given connection string.</span></span>
+  syntax:
+    content: 'static function fromConnectionString(connectionString: string)'
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: >
+        <span data-ttu-id="619cd-112">連接字串 （讀取和/或寫入） 封裝適當登錄權限。</span><span class="sxs-lookup"><span data-stu-id="619cd-112">A connection string which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromSharedAccessSignature
+  name: fromSharedAccessSignature(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-113">建構 JobClient 物件從指定的共用的存取簽章。</span><span class="sxs-lookup"><span data-stu-id="619cd-113">Constructs a JobClient object from the given shared access signature.</span></span>
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: >
+        <span data-ttu-id="619cd-114">共用的存取簽章 （讀取和/或寫入） 封裝適當登錄權限。</span><span class="sxs-lookup"><span data-stu-id="619cd-114">A shared access signature which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.getJob_1
+  name: getJob(string | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-115">現有工作的相關要求資訊。</span><span class="sxs-lookup"><span data-stu-id="619cd-115">Requests information about an existing job.</span></span>
+  syntax:
+    content: 'function getJob(jobId: string | number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.getJob
+  name: getJob(string | number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-116">現有工作的相關要求資訊。</span><span class="sxs-lookup"><span data-stu-id="619cd-116">Requests information about an existing job.</span></span>
+  syntax:
+    content: 'function getJob(jobId: string | number, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="619cd-117">現有工作的識別碼。</span><span class="sxs-lookup"><span data-stu-id="619cd-117">The identifier of an existing job.</span></span>
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_5
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-118">排程的作業，將在一組裝置上執行的裝置方法。</span><span class="sxs-lookup"><span data-stu-id="619cd-118">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_4
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-119">排程的作業，將在一組裝置上執行的裝置方法。</span><span class="sxs-lookup"><span data-stu-id="619cd-119">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_3
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-120">排程的作業，將在一組裝置上執行的裝置方法。</span><span class="sxs-lookup"><span data-stu-id="619cd-120">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, maxExecutionTimeInSeconds: number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-121">排程的作業，將在一組裝置上執行的裝置方法。</span><span class="sxs-lookup"><span data-stu-id="619cd-121">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, maxExecutionTimeInSeconds: number, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="619cd-122">應該用於這項作業的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="619cd-122">The unique identifier that should be used for this job.</span></span>
+    - id: queryCondition
+      type:
+      - string
+      description: <span data-ttu-id="619cd-123">SQL 查詢 WHERE 子句用來計算的裝置應該執行此作業的清單。</span><span class="sxs-lookup"><span data-stu-id="619cd-123">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: >-
+        <span data-ttu-id="619cd-124">描述方法的物件，且應該有下列屬性:-methodName 應該會叫用方法的名稱。</span><span class="sxs-lookup"><span data-stu-id="619cd-124">An object describing the method and shall have the following properties: - methodName          The name of the method that shall be invoked.</span></span>
+
+        <span data-ttu-id="619cd-125">-裝載 [選用] 若要使用的方法呼叫的承載。</span><span class="sxs-lookup"><span data-stu-id="619cd-125">- payload             [optional] The payload to use for the method call.</span></span>
+
+        <span data-ttu-id="619cd-126">-[選擇性] responseTimeoutInSeconds 的 IoT 中樞都應該等候裝置的秒數</span><span class="sxs-lookup"><span data-stu-id="619cd-126">- responseTimeoutInSeconds [optional] The number of seconds IoT Hub shall wait for the device</span></span>
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_1
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-127">排程的作業，將在一組裝置上執行的裝置方法。</span><span class="sxs-lookup"><span data-stu-id="619cd-127">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_2
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-128">排程的作業，將在一組裝置上執行的裝置方法。</span><span class="sxs-lookup"><span data-stu-id="619cd-128">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_5
+  name: scheduleTwinUpdate(string | number, string, any)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-129">排程的作業，將會使用當做參數提供的修補程式更新一組對應項。</span><span class="sxs-lookup"><span data-stu-id="619cd-129">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_4
+  name: scheduleTwinUpdate(string | number, string, any, Date)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-130">排程的作業，將會使用當做參數提供的修補程式更新一組對應項。</span><span class="sxs-lookup"><span data-stu-id="619cd-130">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_3
+  name: scheduleTwinUpdate(string | number, string, any, Date, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-131">排程的作業，將會使用當做參數提供的修補程式更新一組對應項。</span><span class="sxs-lookup"><span data-stu-id="619cd-131">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, maxExecutionTimeInSeconds?: number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate
+  name: scheduleTwinUpdate(string | number, string, any, Date, number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-132">排程的作業，將會使用當做參數提供的修補程式更新一組對應項。</span><span class="sxs-lookup"><span data-stu-id="619cd-132">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, maxExecutionTimeInSeconds: number, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="619cd-133">應該用於這項作業的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="619cd-133">The unique identifier that should be used for this job.</span></span>
+    - id: queryCondition
+      type:
+      - string
+      description: <span data-ttu-id="619cd-134">SQL 查詢 WHERE 子句用來計算的裝置應該執行此作業的清單。</span><span class="sxs-lookup"><span data-stu-id="619cd-134">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
+    - id: patch
+      type:
+      - any
+      description: <span data-ttu-id="619cd-135">對應項修補程式，應該套用至對應項。</span><span class="sxs-lookup"><span data-stu-id="619cd-135">The twin patch that should be applied to the twins.</span></span>
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_1
+  name: scheduleTwinUpdate(string | number, string, any, Date, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-136">排程的作業，將會使用當做參數提供的修補程式更新一組對應項。</span><span class="sxs-lookup"><span data-stu-id="619cd-136">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_2
+  name: scheduleTwinUpdate(string | number, string, any, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="619cd-137">排程的作業，將會使用當做參數提供的修補程式更新一組對應項。</span><span class="sxs-lookup"><span data-stu-id="619cd-137">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+references:
+- uid: Promise<azure-iothub.JobStatusResponse>
+  name: JobStatusResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: JobStatusResponse
+    fullName: JobStatusResponse
+    uid: azure-iothub.JobStatusResponse
+  - name: '>'
+    fullName: '>'
+- uid: azure-iothub.JobType
+  name: JobType
+  spec.typeScript:
+  - name: JobType
+    fullName: JobType
+    uid: azure-iothub.JobType
+- uid: azure-iothub.JobStatus
+  name: JobStatus
+  spec.typeScript:
+  - name: JobStatus
+    fullName: JobStatus
+    uid: azure-iothub.JobStatus
+- uid: azure-iothub.Query
+  name: Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-iothub.Query
+- uid: azure-iothub.DeviceMethodParams
+  name: DeviceMethodParams
+  spec.typeScript:
+  - name: DeviceMethodParams
+    fullName: DeviceMethodParams
+    uid: azure-iothub.DeviceMethodParams
+- uid: azure-iothub.JobClient
+  name: JobClient
+  spec.typeScript:
+  - name: JobClient
+    fullName: JobClient
+    uid: azure-iothub.JobClient
+- uid: azure-iothub.JobClient.JobCallback
+  name: JobCallback

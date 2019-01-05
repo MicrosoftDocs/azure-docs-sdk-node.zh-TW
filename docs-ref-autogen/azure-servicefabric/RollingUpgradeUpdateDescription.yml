@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bd5b9eaacd3e0fe8d39d35790a637a735d1c1cef
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52115883"
+items:
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription
+  name: RollingUpgradeUpdateDescription
+  fullName: RollingUpgradeUpdateDescription
+  children:
+  - azure-servicefabric.RollingUpgradeUpdateDescription.failureAction
+  - azure-servicefabric.RollingUpgradeUpdateDescription.forceRestart
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode
+  - azure-servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="26f2e-101">描述更新應用程式或叢集的輪流升級的參數。</span><span class="sxs-lookup"><span data-stu-id="26f2e-101">Describes the parameters for updating a rolling upgrade of application or cluster.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.failureAction
+  name: failureAction
+  fullName: failureAction
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="26f2e-102">要受監視的升級遇到監視原則或健康情況原則違規時執行的補償動作。</span><span class="sxs-lookup"><span data-stu-id="26f2e-102">The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations.</span></span>
+
+    <span data-ttu-id="26f2e-103">無效的表示是無效的失敗動作。</span><span class="sxs-lookup"><span data-stu-id="26f2e-103">Invalid indicates the failure action is invalid.</span></span> <span data-ttu-id="26f2e-104">復原指定升級將會啟動自動回復。</span><span class="sxs-lookup"><span data-stu-id="26f2e-104">Rollback specifies that the upgrade will start rolling back automatically.</span></span>
+
+    <span data-ttu-id="26f2e-105">Manual 表示升級會切換為 UnmonitoredManual 升級模式。</span><span class="sxs-lookup"><span data-stu-id="26f2e-105">Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.</span></span> <span data-ttu-id="26f2e-106">可能的值包括：' Invalid'、 'Rollback'、 'Manual'</span><span class="sxs-lookup"><span data-stu-id="26f2e-106">Possible values include: 'Invalid', 'Rollback', 'Manual'</span></span>
+  optional: true
+  syntax:
+    content: 'failureAction?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26f2e-107">如果為 true，然後處理程序會強制重新啟動在升級期間即使程式碼版本尚未變更 （升級的唯一變更組態或資料）。</span><span class="sxs-lookup"><span data-stu-id="26f2e-107">If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).</span></span>
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
+  name: healthCheckRetryTimeoutInMilliseconds
+  fullName: healthCheckRetryTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26f2e-108">當應用程式或叢集狀況不良執行 FailureAction 之前，請重試健康狀態評估的時間量。</span><span class="sxs-lookup"><span data-stu-id="26f2e-108">The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed.</span></span> <span data-ttu-id="26f2e-109">它會先解譯為代表 ISO 8601 持續時間的字串。</span><span class="sxs-lookup"><span data-stu-id="26f2e-109">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="26f2e-110">如果失敗，則會解譯為代表總毫秒數的數字。</span><span class="sxs-lookup"><span data-stu-id="26f2e-110">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckRetryTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
+  name: healthCheckStableDurationInMilliseconds
+  fullName: healthCheckStableDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26f2e-111">在升級繼續進入下一個升級網域之前，應用程式或叢集必須維持狀況良好的時間長度。</span><span class="sxs-lookup"><span data-stu-id="26f2e-111">The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain.</span></span> <span data-ttu-id="26f2e-112">它會先解譯為代表 ISO 8601 持續時間的字串。</span><span class="sxs-lookup"><span data-stu-id="26f2e-112">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="26f2e-113">如果失敗，則會解譯為代表總毫秒數的數字。</span><span class="sxs-lookup"><span data-stu-id="26f2e-113">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckStableDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
+  name: healthCheckWaitDurationInMilliseconds
+  fullName: healthCheckWaitDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="26f2e-114">完成升級網域之後，在套用健康原則之前，要等待的時間長度。</span><span class="sxs-lookup"><span data-stu-id="26f2e-114">The amount of time to wait after completing an upgrade domain before applying health policies.</span></span>
+
+    <span data-ttu-id="26f2e-115">它會先解譯為代表 ISO 8601 持續時間的字串。</span><span class="sxs-lookup"><span data-stu-id="26f2e-115">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="26f2e-116">如果失敗，則會解譯為代表總毫秒數的數字。</span><span class="sxs-lookup"><span data-stu-id="26f2e-116">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckWaitDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
+  name: replicaSetCheckTimeoutInMilliseconds
+  fullName: replicaSetCheckTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="26f2e-117">發生非預期問題時，封鎖處理升級網域並防止遺失可用性的時間長度上限。</span><span class="sxs-lookup"><span data-stu-id="26f2e-117">The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues.</span></span> <span data-ttu-id="26f2e-118">此逾時過期時，無論是否發生可用性遺失問題，升級網域的處理都將繼續。</span><span class="sxs-lookup"><span data-stu-id="26f2e-118">When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues.</span></span> <span data-ttu-id="26f2e-119">逾時會在每個升級網域啟動時重設。</span><span class="sxs-lookup"><span data-stu-id="26f2e-119">The timeout is reset at the start of each upgrade domain.</span></span> <span data-ttu-id="26f2e-120">有效值介於 0 到 42949672925 (含) 之間。</span><span class="sxs-lookup"><span data-stu-id="26f2e-120">Valid values are between 0 and 42949672925 inclusive.</span></span>
+
+    <span data-ttu-id="26f2e-121">（不帶正負號的 32 位元整數）。</span><span class="sxs-lookup"><span data-stu-id="26f2e-121">(unsigned 32-bit integer).</span></span>
+  optional: true
+  syntax:
+    content: 'replicaSetCheckTimeoutInMilliseconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"26f2e-122\">在輪流升級期間用來監視健康情況的模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"26f2e-122\">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id=\"26f2e-123\">的值為 UnmonitoredAuto 及 UnmonitoredManual，受監視。</span><span class=\"sxs-lookup\"><span data-stu-id=\"26f2e-123\">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id=\"26f2e-124\">可能的值包括：' Invalid'、 'UnmonitoredAuto'、 'UnmonitoredManual'、 '監視'</span><span class=\"sxs-lookup\"><span data-stu-id=\"26f2e-124\">Possible values include: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Monitored'</span></span>"
+  syntax:
+    content: 'rollingUpgradeMode: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
+  name: upgradeDomainTimeoutInMilliseconds
+  fullName: upgradeDomainTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26f2e-125">執行 FailureAction 之前，每個升級網域必須完成的時間長度。</span><span class="sxs-lookup"><span data-stu-id="26f2e-125">The amount of time each upgrade domain has to complete before FailureAction is executed.</span></span> <span data-ttu-id="26f2e-126">它會先解譯為代表 ISO 8601 持續時間的字串。</span><span class="sxs-lookup"><span data-stu-id="26f2e-126">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="26f2e-127">如果失敗，則會解譯為代表總毫秒數的數字。</span><span class="sxs-lookup"><span data-stu-id="26f2e-127">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeDomainTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
+  name: upgradeTimeoutInMilliseconds
+  fullName: upgradeTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26f2e-128">執行 FailureAction 之前，整體升級必須完成的時間長度。</span><span class="sxs-lookup"><span data-stu-id="26f2e-128">The amount of time the overall upgrade has to complete before FailureAction is executed.</span></span> <span data-ttu-id="26f2e-129">它會先解譯為代表 ISO 8601 持續時間的字串。</span><span class="sxs-lookup"><span data-stu-id="26f2e-129">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="26f2e-130">如果失敗，則會解譯為代表總毫秒數的數字。</span><span class="sxs-lookup"><span data-stu-id="26f2e-130">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

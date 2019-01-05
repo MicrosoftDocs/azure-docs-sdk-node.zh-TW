@@ -1,0 +1,124 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0f68a88d4b2da01025df7e9c9fee32179f5cf910
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52089233"
+items:
+- uid: azure-servicefabric.ApplicationLoadInfo
+  name: ApplicationLoadInfo
+  fullName: ApplicationLoadInfo
+  children:
+  - azure-servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation
+  - azure-servicefabric.ApplicationLoadInfo.id
+  - azure-servicefabric.ApplicationLoadInfo.maximumNodes
+  - azure-servicefabric.ApplicationLoadInfo.minimumNodes
+  - azure-servicefabric.ApplicationLoadInfo.nodeCount
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="ad25e-101">Service Fabric 應用程式的負載資訊。</span><span class="sxs-lookup"><span data-stu-id="ad25e-101">Load Information about a Service Fabric application.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation
+  name: applicationLoadMetricInformation
+  fullName: applicationLoadMetricInformation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ad25e-102">應用程式容量計量描述的清單。</span><span class="sxs-lookup"><span data-stu-id="ad25e-102">List of application capacity metric description.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationLoadMetricInformation?: ApplicationMetricDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationMetricDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="ad25e-103">應用程式的身分識別。</span><span class="sxs-lookup"><span data-stu-id="ad25e-103">The identity of the application.</span></span> <span data-ttu-id="ad25e-104">這是應用程式名稱的編碼表示法。</span><span class="sxs-lookup"><span data-stu-id="ad25e-104">This is an encoded representation of the application name.</span></span>
+
+    <span data-ttu-id="ad25e-105">這是 REST Api 中用來識別應用程式資源。</span><span class="sxs-lookup"><span data-stu-id="ad25e-105">This is used in the REST APIs to identify the application resource.</span></span>
+
+    <span data-ttu-id="ad25e-106">從 6.0 版開始，階層的名稱會以 「\~"字元。</span><span class="sxs-lookup"><span data-stu-id="ad25e-106">Starting in version 6.0, hierarchical names are delimited with the "\~" character.</span></span> <span data-ttu-id="ad25e-107">比方說，如果應用程式名稱是"fabric: / myapp/app1"，應用程式身分識別會是"myapp\~app1 」 在 6.0 + 和"myapp/app1"在舊版中。</span><span class="sxs-lookup"><span data-stu-id="ad25e-107">For example, if the application name is "fabric:/myapp/app1", the application identity would be "myapp\~app1" in 6.0+ and "myapp/app1" in previous versions.</span></span>
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.maximumNodes
+  name: maximumNodes
+  fullName: maximumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="ad25e-108">可以執行個體化這個應用程式的節點數目上限。</span><span class="sxs-lookup"><span data-stu-id="ad25e-108">The maximum number of nodes where this application can be instantiated.</span></span>
+
+    <span data-ttu-id="ad25e-109">它是允許此應用程式跨越的節點數目。</span><span class="sxs-lookup"><span data-stu-id="ad25e-109">It is the number of nodes this application is allowed to span.</span></span>
+
+    <span data-ttu-id="ad25e-110">沒有定義的應用程式容量的應用程式的這個值會是零。</span><span class="sxs-lookup"><span data-stu-id="ad25e-110">For applications that do not have application capacity defined this value will be zero.</span></span>
+  optional: true
+  syntax:
+    content: 'maximumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.minimumNodes
+  name: minimumNodes
+  fullName: minimumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="ad25e-111">此應用程式的節點數目下限。</span><span class="sxs-lookup"><span data-stu-id="ad25e-111">The minimum number of nodes for this application.</span></span>
+
+    <span data-ttu-id="ad25e-112">是，Service Fabric 將會保留容量 ReservedLoad 相當於將叢集中的節點數目 \* MinimumNodes 此應用程式執行個體。</span><span class="sxs-lookup"><span data-stu-id="ad25e-112">It is the number of nodes where Service Fabric will reserve Capacity in the cluster which equals to ReservedLoad \* MinimumNodes for this Application instance.</span></span>
+
+    <span data-ttu-id="ad25e-113">沒有定義的應用程式容量的應用程式的這個值會是零。</span><span class="sxs-lookup"><span data-stu-id="ad25e-113">For applications that do not have application capacity defined this value will be zero.</span></span>
+  optional: true
+  syntax:
+    content: 'minimumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationLoadInfo.nodeCount
+  name: nodeCount
+  fullName: nodeCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="ad25e-114">此應用程式具現化的節點數目。</span><span class="sxs-lookup"><span data-stu-id="ad25e-114">The number of nodes on which this application is instantiated.</span></span>
+
+    <span data-ttu-id="ad25e-115">沒有定義的應用程式容量的應用程式的這個值會是零。</span><span class="sxs-lookup"><span data-stu-id="ad25e-115">For applications that do not have application capacity defined this value will be zero.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeCount?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationMetricDescription[]
+  name: ApplicationMetricDescription[]
+  spec.typeScript:
+  - name: ApplicationMetricDescription
+    fullName: ApplicationMetricDescription
+    uid: azure-servicefabric.ApplicationMetricDescription
+  - name: '[]'
+    fullName: '[]'

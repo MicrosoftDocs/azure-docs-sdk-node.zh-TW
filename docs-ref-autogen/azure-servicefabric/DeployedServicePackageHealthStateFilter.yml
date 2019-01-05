@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 62fd16ee404efba59799d1de2f35e41f30d61e8d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126434"
+items:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  name: DeployedServicePackageHealthStateFilter
+  fullName: DeployedServicePackageHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="379af-101">定義比對的準則，以判斷是否應該包含部署的應用程式，在叢集健全狀況區塊中的子系部署的服務套件。</span><span class="sxs-lookup"><span data-stu-id="379af-101">Defines matching criteria to determine whether a deployed service package should be included as a child of a deployed application in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="379af-102">只有符合篩選，叢集健全狀況區塊查詢描述中指定的父實體時，才會傳回已部署的服務套件。</span><span class="sxs-lookup"><span data-stu-id="379af-102">The deployed service packages are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="379af-103">父代已部署應用程式和其父系應用程式必須包含在叢集健全狀況區塊。</span><span class="sxs-lookup"><span data-stu-id="379af-103">The parent deployed application and its parent application must be included in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="379af-104">一個篩選條件可以比對零、 一或多個已部署服務套件，其屬性而定。</span><span class="sxs-lookup"><span data-stu-id="379af-104">One filter can match zero, one or multiple deployed service packages, depending on its properties.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="379af-105">已部署的服務封裝健全狀況狀態之篩選條件。</span><span class="sxs-lookup"><span data-stu-id="379af-105">The filter for the health state of the deployed service packages.</span></span> <span data-ttu-id="379af-106">它可讓選取部署服務封裝，如果它們符合所需的健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="379af-106">It allows selecting deployed service packages if they match the desired health states.</span></span>
+
+    <span data-ttu-id="379af-107">可能的值為其中一個下列的健全狀況狀態的整數值。</span><span class="sxs-lookup"><span data-stu-id="379af-107">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="379af-108">只會傳回符合篩選條件的已部署服務套件。</span><span class="sxs-lookup"><span data-stu-id="379af-108">Only deployed service packages that match the filter are returned.</span></span> <span data-ttu-id="379af-109">所有已部署的服務封裝都會用來評估的父代已部署應用程式彙總健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="379af-109">All deployed service packages are used to evaluate the parent deployed application aggregated health state.</span></span>
+
+    <span data-ttu-id="379af-110">如果未指定，預設值會是 None，除非指定已部署的服務封裝識別碼。</span><span class="sxs-lookup"><span data-stu-id="379af-110">If not specified, default value is None, unless the deployed service package ID is specified.</span></span>
+
+    <span data-ttu-id="379af-111">如果篩選器有預設值，指定已部署的服務封裝識別碼，則會傳回符合的已部署的服務套件。</span><span class="sxs-lookup"><span data-stu-id="379af-111">If the filter has default value and deployed service package ID is specified, the matching deployed service package is returned.</span></span>
+
+    <span data-ttu-id="379af-112">狀態值是以旗標為基礎的列舉，因此值可以是使用位元 'OR' 運算子取得的這些值的組合。</span><span class="sxs-lookup"><span data-stu-id="379af-112">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="379af-113">比方說，如果提供的值為 6，它會符合已部署的服務封裝 HealthState 值為 OK (2) 和 Warning (4)。</span><span class="sxs-lookup"><span data-stu-id="379af-113">For example, if the provided value is 6, it matches deployed service packages with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="379af-114">Default-預設值。</span><span class="sxs-lookup"><span data-stu-id="379af-114">Default - Default value.</span></span> <span data-ttu-id="379af-115">符合任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="379af-115">Matches any HealthState.</span></span> <span data-ttu-id="379af-116">值為零。</span><span class="sxs-lookup"><span data-stu-id="379af-116">The value is zero.</span></span>
+
+    - <span data-ttu-id="379af-117">None-不符合任何 HealthState 值的篩選。</span><span class="sxs-lookup"><span data-stu-id="379af-117">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="379af-118">用來在指定狀態集合沒有任何結果時傳回。</span><span class="sxs-lookup"><span data-stu-id="379af-118">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="379af-119">值為 1。</span><span class="sxs-lookup"><span data-stu-id="379af-119">The value is 1.</span></span>
+
+    - <span data-ttu-id="379af-120">Ok-符合輸入含 HealthState 值 Ok 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="379af-120">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="379af-121">值為 2。</span><span class="sxs-lookup"><span data-stu-id="379af-121">The value is 2.</span></span>
+
+    - <span data-ttu-id="379af-122">警告-篩選符合輸入含 HealthState 值 Warning。</span><span class="sxs-lookup"><span data-stu-id="379af-122">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="379af-123">值為 4。</span><span class="sxs-lookup"><span data-stu-id="379af-123">The value is 4.</span></span>
+
+    - <span data-ttu-id="379af-124">Error-符合輸入含 HealthState 值 Error 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="379af-124">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="379af-125">值為 8。</span><span class="sxs-lookup"><span data-stu-id="379af-125">The value is 8.</span></span>
+
+    - <span data-ttu-id="379af-126">All-符合輸入含任何 HealthState 值的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="379af-126">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="379af-127">值為 65535。</span><span class="sxs-lookup"><span data-stu-id="379af-127">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  name: serviceManifestNameFilter
+  fullName: serviceManifestNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="379af-128">服務資訊清單可識別已部署的服務封裝符合篩選的名稱。</span><span class="sxs-lookup"><span data-stu-id="379af-128">The name of the service manifest which identifies the deployed service packages that matches the filter.</span></span>
+
+    <span data-ttu-id="379af-129">如果指定，便套用篩選才能指定已部署的服務封裝中，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="379af-129">If specified, the filter is applied only to the specified deployed service packages, if any.</span></span>
+
+    <span data-ttu-id="379af-130">如果沒有具有指定資訊清單名稱的已部署的服務套件存在，則不會傳回此篩選器為基礎之叢集健全狀況區塊中。</span><span class="sxs-lookup"><span data-stu-id="379af-130">If no deployed service packages with specified manifest name exist, nothing is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="379af-131">如果任何已部署的服務套件存在，它們會包含在叢集健康狀態區塊如果它採用的其他篩選屬性。</span><span class="sxs-lookup"><span data-stu-id="379af-131">If any deployed service package exists, they are included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="379af-132">如果沒有指定，所有已部署的服務封裝 （如果有的話），符合父篩選條件會納入考量，並比對其他篩選成員，例如健康情況狀態篩選。</span><span class="sxs-lookup"><span data-stu-id="379af-132">If not specified, all deployed service packages that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceManifestNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  name: servicePackageActivationIdFilter
+  fullName: servicePackageActivationIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="379af-133">符合篩選條件的已部署的服務套件啟用識別碼。</span><span class="sxs-lookup"><span data-stu-id="379af-133">The activation ID of a deployed service package that matches the filter.</span></span>
+
+    <span data-ttu-id="379af-134">如果未指定，篩選條件套用到所有已部署的服務封裝符合其他參數。</span><span class="sxs-lookup"><span data-stu-id="379af-134">If not specified, the filter applies to all deployed service packages that match the other parameters.</span></span>
+
+    <span data-ttu-id="379af-135">如果指定，篩選會比對只具有指定的啟用識別碼所部署的服務套件</span><span class="sxs-lookup"><span data-stu-id="379af-135">If specified, the filter matches only the deployed service package with the specified activation ID.</span></span>
+  optional: true
+  syntax:
+    content: 'servicePackageActivationIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

@@ -1,0 +1,184 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 741b8dff794217fbf15793e2218b57340e7237e6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52100433"
+items:
+- uid: azure-arm-cosmosdb.Percentile
+  name: Percentile
+  fullName: Percentile
+  children:
+  - azure-arm-cosmosdb.Percentile.listMetrics
+  - azure-arm-cosmosdb.Percentile.listMetrics_2
+  - azure-arm-cosmosdb.Percentile.listMetrics_1
+  - azure-arm-cosmosdb.Percentile.listMetricsWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.Percentile.listMetrics
+  name: listMetrics(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="32e45-101">擷取由指定的篩選條件，給定的資料庫帳戶的計量。</span><span class="sxs-lookup"><span data-stu-id="32e45-101">Retrieves the metrics determined by the given filter for the given database account.</span></span> <span data-ttu-id="32e45-102">此 url 是只能針對 PBS 和複寫延遲資料</span><span class="sxs-lookup"><span data-stu-id="32e45-102">This url is only for PBS and Replication Latency data</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, filter: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="32e45-103">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="32e45-103">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="32e45-104">Cosmos DB 資料庫帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="32e45-104">Cosmos DB database account name.</span></span>
+    - id: filter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="32e45-105">OData 篩選運算式，用來描述要傳回的度量資訊的子集。</span><span class="sxs-lookup"><span data-stu-id="32e45-105">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="32e45-106">可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="32e45-106">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="32e45-107">支援的運算子是相等於</span><span class="sxs-lookup"><span data-stu-id="32e45-107">The supported operator is eq.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PercentileMetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.Percentile.listMetrics_2
+  name: listMetrics(string, string, string, Object, ServiceCallback<PercentileMetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="32e45-108">擷取由指定的篩選條件，給定的資料庫帳戶的計量。</span><span class="sxs-lookup"><span data-stu-id="32e45-108">Retrieves the metrics determined by the given filter for the given database account.</span></span> <span data-ttu-id="32e45-109">此 url 是只能針對 PBS 和複寫延遲資料</span><span class="sxs-lookup"><span data-stu-id="32e45-109">This url is only for PBS and Replication Latency data</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, filter: string, options: Object, callback: ServiceCallback<PercentileMetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.PercentileMetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PercentileMetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.Percentile.listMetrics_1
+  name: listMetrics(string, string, string, ServiceCallback<PercentileMetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="32e45-110">擷取由指定的篩選條件，給定的資料庫帳戶的計量。</span><span class="sxs-lookup"><span data-stu-id="32e45-110">Retrieves the metrics determined by the given filter for the given database account.</span></span> <span data-ttu-id="32e45-111">此 url 是只能針對 PBS 和複寫延遲資料</span><span class="sxs-lookup"><span data-stu-id="32e45-111">This url is only for PBS and Replication Latency data</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, filter: string, callback: ServiceCallback<PercentileMetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.PercentileMetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PercentileMetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.Percentile.listMetricsWithHttpOperationResponse
+  name: listMetricsWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="32e45-112">擷取由指定的篩選條件，給定的資料庫帳戶的計量。</span><span class="sxs-lookup"><span data-stu-id="32e45-112">Retrieves the metrics determined by the given filter for the given database account.</span></span> <span data-ttu-id="32e45-113">此 url 是只能針對 PBS 和複寫延遲資料</span><span class="sxs-lookup"><span data-stu-id="32e45-113">This url is only for PBS and Replication Latency data</span></span>
+  syntax:
+    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, filter: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="32e45-114">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="32e45-114">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="32e45-115">Cosmos DB 資料庫帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="32e45-115">Cosmos DB database account name.</span></span>
+    - id: filter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="32e45-116">OData 篩選運算式，用來描述要傳回的度量資訊的子集。</span><span class="sxs-lookup"><span data-stu-id="32e45-116">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="32e45-117">可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="32e45-117">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="32e45-118">支援的運算子是相等於</span><span class="sxs-lookup"><span data-stu-id="32e45-118">The supported operator is eq.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-cosmosdb.PercentileMetricListResult>>
+  package: azure-arm-cosmosdb
+references:
+- uid: Promise<azure-arm-cosmosdb.PercentileMetricListResult>
+  name: PercentileMetricListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: PercentileMetricListResult
+    fullName: PercentileMetricListResult
+    uid: azure-arm-cosmosdb.PercentileMetricListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-cosmosdb.PercentileMetricListResult>
+  name: PercentileMetricListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: PercentileMetricListResult
+    fullName: PercentileMetricListResult
+    uid: azure-arm-cosmosdb.PercentileMetricListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.PercentileMetricListResult>>
+  name: PercentileMetricListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: PercentileMetricListResult
+    fullName: PercentileMetricListResult
+    uid: azure-arm-cosmosdb.PercentileMetricListResult
+  - name: '>>'
+    fullName: '>>'
