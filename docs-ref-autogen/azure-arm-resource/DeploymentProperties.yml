@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d3e75182e570626c77183494aebb37f3ae54a77c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52170013"
+items:
+- uid: azure-arm-resource.DeploymentProperties
+  name: DeploymentProperties
+  fullName: DeploymentProperties
+  children:
+  - azure-arm-resource.DeploymentProperties.debugSetting
+  - azure-arm-resource.DeploymentProperties.mode
+  - azure-arm-resource.DeploymentProperties.onErrorDeployment
+  - azure-arm-resource.DeploymentProperties.parameters
+  - azure-arm-resource.DeploymentProperties.parametersLink
+  - azure-arm-resource.DeploymentProperties.template
+  - azure-arm-resource.DeploymentProperties.templateLink
+  langs:
+  - typeScript
+  type: interface
+  summary: 部署屬性。
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.debugSetting
+  name: debugSetting
+  fullName: debugSetting
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 部署的偵錯設定。
+  optional: true
+  syntax:
+    content: 'debugSetting?: DebugSetting'
+    return:
+      type:
+      - azure-arm-resource.DebugSetting
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.mode
+  name: mode
+  fullName: mode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    用來部署資源的模式。 此值可以是累加或完整。
+
+    在累加模式中，而不會刪除現有的資源未包含在範本中部署資源。 在完整模式中，資源會部署，也會刪除資源群組中不包含在範本中的現有資源。 使用完整模式，因為您可能會不小心刪除資源時要小心。 可能的值包括：「 累加 」、 「 完成 」
+  syntax:
+    content: 'mode: string'
+    return:
+      type:
+      - string
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.onErrorDeployment
+  name: onErrorDeployment
+  fullName: onErrorDeployment
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 錯誤行為上部署。
+  optional: true
+  syntax:
+    content: 'onErrorDeployment?: OnErrorDeployment'
+    return:
+      type:
+      - azure-arm-resource.OnErrorDeployment
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.parameters
+  name: parameters
+  fullName: parameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 定義範本的部署參數的名稱 / 值組。 當您想要提供直接在要求，而不是連結至現有的參數檔案中的參數值時，您可以使用這個項目。 使用 parametersLink 屬性或 [參數] 屬性中，但非兩者。 它可以是 JObject 或格式正確的 JSON 字串。
+  optional: true
+  syntax:
+    content: 'parameters?: any'
+    return:
+      type:
+      - any
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.parametersLink
+  name: parametersLink
+  fullName: parametersLink
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 參數檔案的 URI。 您可以使用這個項目連結至現有的參數檔案。 使用 parametersLink 屬性或 [參數] 屬性中，但非兩者。
+  optional: true
+  syntax:
+    content: 'parametersLink?: ParametersLink'
+    return:
+      type:
+      - azure-arm-resource.ParametersLink
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.template
+  name: template
+  fullName: template
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 範本內容中。 當您想要傳遞範本中的語法直接要求，而不是連結到現有的範本時，您可以使用這個項目。 它可以是 JObject 或語式正確的 JSON 字串。 使用 templateLink 屬性或 template 屬性，但非兩者。
+  optional: true
+  syntax:
+    content: 'template?: any'
+    return:
+      type:
+      - any
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.templateLink
+  name: templateLink
+  fullName: templateLink
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 範本的 URI。 使用 templateLink 屬性或 template 屬性，但非兩者。
+  optional: true
+  syntax:
+    content: 'templateLink?: TemplateLink'
+    return:
+      type:
+      - azure-arm-resource.TemplateLink
+  package: azure-arm-resource
+references:
+- uid: azure-arm-resource.DebugSetting
+  name: DebugSetting
+  spec.typeScript:
+  - name: DebugSetting
+    fullName: DebugSetting
+    uid: azure-arm-resource.DebugSetting
+- uid: azure-arm-resource.OnErrorDeployment
+  name: OnErrorDeployment
+  spec.typeScript:
+  - name: OnErrorDeployment
+    fullName: OnErrorDeployment
+    uid: azure-arm-resource.OnErrorDeployment
+- uid: azure-arm-resource.ParametersLink
+  name: ParametersLink
+  spec.typeScript:
+  - name: ParametersLink
+    fullName: ParametersLink
+    uid: azure-arm-resource.ParametersLink
+- uid: azure-arm-resource.TemplateLink
+  name: TemplateLink
+  spec.typeScript:
+  - name: TemplateLink
+    fullName: TemplateLink
+    uid: azure-arm-resource.TemplateLink
