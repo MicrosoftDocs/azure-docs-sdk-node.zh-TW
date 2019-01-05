@@ -1,0 +1,254 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 937af6d054d269b3f8cfc13740dfa0bd3037eac5
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53667502"
+items:
+- uid: azure-arm-network.LoadBalancingRule
+  name: LoadBalancingRule
+  fullName: LoadBalancingRule
+  children:
+  - azure-arm-network.LoadBalancingRule.backendAddressPool
+  - azure-arm-network.LoadBalancingRule.backendPort
+  - azure-arm-network.LoadBalancingRule.disableOutboundSnat
+  - azure-arm-network.LoadBalancingRule.enableFloatingIP
+  - azure-arm-network.LoadBalancingRule.enableTcpReset
+  - azure-arm-network.LoadBalancingRule.etag
+  - azure-arm-network.LoadBalancingRule.frontendIPConfiguration
+  - azure-arm-network.LoadBalancingRule.frontendPort
+  - azure-arm-network.LoadBalancingRule.idleTimeoutInMinutes
+  - azure-arm-network.LoadBalancingRule.loadDistribution
+  - azure-arm-network.LoadBalancingRule.name
+  - azure-arm-network.LoadBalancingRule.probe
+  - azure-arm-network.LoadBalancingRule.protocol
+  - azure-arm-network.LoadBalancingRule.provisioningState
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="47e3a-101">負載平衡負載平衡器規則。</span><span class="sxs-lookup"><span data-stu-id="47e3a-101">A load balancing rule for a load balancer.</span></span>
+  extends:
+    name: azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.backendAddressPool
+  name: backendAddressPool
+  fullName: backendAddressPool
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-102">Dip 的集區參考。</span><span class="sxs-lookup"><span data-stu-id="47e3a-102">A reference to a pool of DIPs.</span></span> <span data-ttu-id="47e3a-103">傳送輸入的流量會隨機進行負載平衡 Ip 跨後端 Ip。</span><span class="sxs-lookup"><span data-stu-id="47e3a-103">Inbound traffic is randomly load balanced across IPs in the backend IPs.</span></span>
+  optional: true
+  syntax:
+    content: 'backendAddressPool?: SubResource'
+    return:
+      type:
+      - azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.backendPort
+  name: backendPort
+  fullName: backendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="47e3a-104">用於端點上內部連線的連接埠。</span><span class="sxs-lookup"><span data-stu-id="47e3a-104">The port used for internal connections on the endpoint.</span></span> <span data-ttu-id="47e3a-105">可接受的值是介於 0 和</span><span class="sxs-lookup"><span data-stu-id="47e3a-105">Acceptable values are between 0 and</span></span>
+
+    65535. <span data-ttu-id="47e3a-106">請注意，值 0 會啟用 「 任何連接埠 」</span><span class="sxs-lookup"><span data-stu-id="47e3a-106">Note that value 0 enables "Any Port"</span></span>
+  optional: true
+  syntax:
+    content: 'backendPort?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.disableOutboundSnat
+  name: disableOutboundSnat
+  fullName: disableOutboundSnat
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-107">若要使用的前端的負載平衡規則中指定的 publicIP 位址後端集區中設定 vm 的 SNAT。</span><span class="sxs-lookup"><span data-stu-id="47e3a-107">Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.</span></span>
+  optional: true
+  syntax:
+    content: 'disableOutboundSnat?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.enableFloatingIP
+  name: enableFloatingIP
+  fullName: enableFloatingIP
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-108">設定 SQL AlwaysOn 可用性群組設定所需的浮動 IP 功能的虛擬機器的端點。</span><span class="sxs-lookup"><span data-stu-id="47e3a-108">Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group.</span></span> <span data-ttu-id="47e3a-109">在 SQL server 中使用 SQL AlwaysOn 可用性群組時，需要此設定。</span><span class="sxs-lookup"><span data-stu-id="47e3a-109">This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.</span></span> <span data-ttu-id="47e3a-110">在您建立端點之後，就無法變更此設定。</span><span class="sxs-lookup"><span data-stu-id="47e3a-110">This setting can't be changed after you create the endpoint.</span></span>
+  optional: true
+  syntax:
+    content: 'enableFloatingIP?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.enableTcpReset
+  name: enableTcpReset
+  fullName: enableTcpReset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="47e3a-111">接收 TCP 重設的 TCP 流量閒置逾時或未預期的連接終止的雙向。</span><span class="sxs-lookup"><span data-stu-id="47e3a-111">Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination.</span></span>
+
+    <span data-ttu-id="47e3a-112">只能在通訊協定設定為 TCP 時，會使用這個項目。</span><span class="sxs-lookup"><span data-stu-id="47e3a-112">This element is only used when the protocol is set to TCP.</span></span>
+  optional: true
+  syntax:
+    content: 'enableTcpReset?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-113">唯一唯寫的字串，每當更新資源，就會變更。</span><span class="sxs-lookup"><span data-stu-id="47e3a-113">A unique read-only string that changes whenever the resource is updated.</span></span>
+  optional: true
+  syntax:
+    content: 'etag?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.frontendIPConfiguration
+  name: frontendIPConfiguration
+  fullName: frontendIPConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-114">參考前端 IP 位址。</span><span class="sxs-lookup"><span data-stu-id="47e3a-114">A reference to frontend IP addresses.</span></span>
+  optional: true
+  syntax:
+    content: 'frontendIPConfiguration?: SubResource'
+    return:
+      type:
+      - azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.frontendPort
+  name: frontendPort
+  fullName: frontendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-115">外部端點的連接埠。</span><span class="sxs-lookup"><span data-stu-id="47e3a-115">The port for the external endpoint.</span></span> <span data-ttu-id="47e3a-116">針對每個規則的連接埠號碼必須是負載平衡器中的唯一的。</span><span class="sxs-lookup"><span data-stu-id="47e3a-116">Port numbers for each rule must be unique within the Load Balancer.</span></span> <span data-ttu-id="47e3a-117">可接受的值是介於 0 和 65534 之間。</span><span class="sxs-lookup"><span data-stu-id="47e3a-117">Acceptable values are between 0 and 65534.</span></span> <span data-ttu-id="47e3a-118">請注意，值 0 會啟用 「 任何連接埠 」</span><span class="sxs-lookup"><span data-stu-id="47e3a-118">Note that value 0 enables "Any Port"</span></span>
+  syntax:
+    content: 'frontendPort: number'
+    return:
+      type:
+      - number
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.idleTimeoutInMinutes
+  name: idleTimeoutInMinutes
+  fullName: idleTimeoutInMinutes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-119">TCP 閒置連線逾時。</span><span class="sxs-lookup"><span data-stu-id="47e3a-119">The timeout for the TCP idle connection.</span></span> <span data-ttu-id="47e3a-120">值可以設定介於 4 到 30 分鐘之間。</span><span class="sxs-lookup"><span data-stu-id="47e3a-120">The value can be set between 4 and 30 minutes.</span></span> <span data-ttu-id="47e3a-121">預設值為 4 分鐘。</span><span class="sxs-lookup"><span data-stu-id="47e3a-121">The default value is 4 minutes.</span></span> <span data-ttu-id="47e3a-122">只能在通訊協定設定為 TCP 時，會使用這個項目。</span><span class="sxs-lookup"><span data-stu-id="47e3a-122">This element is only used when the protocol is set to TCP.</span></span>
+  optional: true
+  syntax:
+    content: 'idleTimeoutInMinutes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.loadDistribution
+  name: loadDistribution
+  fullName: loadDistribution
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"47e3a-123\">此規則的負載散發原則。</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e3a-123\">The load distribution policy for this rule.</span></span> <span data-ttu-id=\"47e3a-124\">可能的值為 'Default'、 'SourceIP，' 和 'SourceIPProtocol'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e3a-124\">Possible values are 'Default', 'SourceIP', and 'SourceIPProtocol'.</span></span> <span data-ttu-id=\"47e3a-125\">可能的值包括：' Default'，'SourceIP'，'SourceIPProtocol'</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e3a-125\">Possible values include: 'Default', 'SourceIP', 'SourceIPProtocol'</span></span>"
+  optional: true
+  syntax:
+    content: 'loadDistribution?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-126">之資源的資源群組內是唯一的名稱。</span><span class="sxs-lookup"><span data-stu-id="47e3a-126">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="47e3a-127">此名稱可用來存取資源。</span><span class="sxs-lookup"><span data-stu-id="47e3a-127">This name can be used to access the resource.</span></span>
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.probe
+  name: probe
+  fullName: probe
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="47e3a-128">負載平衡規則所使用的負載平衡器探查的參考。</span><span class="sxs-lookup"><span data-stu-id="47e3a-128">The reference of the load balancer probe used by the load balancing rule.</span></span>
+  optional: true
+  syntax:
+    content: 'probe?: SubResource'
+    return:
+      type:
+      - azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.protocol
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"47e3a-129\">可能的值包括：'Udp'、 'Tcp'，'All'</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e3a-129\">Possible values include: 'Udp', 'Tcp', 'All'</span></span>"
+  syntax:
+    content: 'protocol: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancingRule.provisioningState
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"47e3a-130\">取得 PublicIP 資源的佈建狀態。</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e3a-130\">Gets the provisioning state of the PublicIP resource.</span></span> <span data-ttu-id=\"47e3a-131\">可能的值包括：「 更新 」、 「 刪除中 」，和 「 失敗 」。</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e3a-131\">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>"
+  optional: true
+  syntax:
+    content: 'provisioningState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+references:
+- uid: azure-arm-network.SubResource
+  name: SubResource
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: azure-arm-network.SubResource

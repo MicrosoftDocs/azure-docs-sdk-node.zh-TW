@@ -1,0 +1,77 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5064c7ba42cdf7e585c62232e01311cde594e7af
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53710403"
+items:
+- uid: azure-batch.NetworkConfiguration
+  name: NetworkConfiguration
+  fullName: NetworkConfiguration
+  children:
+  - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+  - azure-batch.NetworkConfiguration.endpointConfiguration
+  - azure-batch.NetworkConfiguration.subnetId
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="7d7f2-101">集區網路組態。</span><span class="sxs-lookup"><span data-stu-id="7d7f2-101">The network configuration for a pool.</span></span>
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+  name: dynamicVNetAssignmentScope
+  fullName: dynamicVNetAssignmentScope
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"7d7f2-102\">可能的值包括: 'none'、 '作業'</span><span class=\"sxs-lookup\"><span data-stu-id=\"7d7f2-102\">Possible values include: 'none', 'job'</span></span>"
+  optional: true
+  syntax:
+    content: 'dynamicVNetAssignmentScope?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.endpointConfiguration
+  name: endpointConfiguration
+  fullName: endpointConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7d7f2-103">在使用 virtualMachineConfiguration 屬性的集區上才支援集區端點設定。</span><span class="sxs-lookup"><span data-stu-id="7d7f2-103">Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.</span></span>
+  optional: true
+  syntax:
+    content: 'endpointConfiguration?: PoolEndpointConfiguration'
+    return:
+      type:
+      - azure-batch.PoolEndpointConfiguration
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="7d7f2-104">這是表單 /subscriptions/ {subscription} /resourceGroups/ {群組} /providers/ {provider} /virtualNetworks/ {network} /subnets/ {子網路}。</span><span class="sxs-lookup"><span data-stu-id="7d7f2-104">This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/{provider}/virtualNetworks/{network}/subnets/{subnet}.</span></span>
+
+    <span data-ttu-id="7d7f2-105">虛擬網路必須位於相同的區域和訂用帳戶與 Azure Batch 帳戶。</span><span class="sxs-lookup"><span data-stu-id="7d7f2-105">The virtual network must be in the same region and subscription as the Azure Batch account.</span></span>
+
+    <span data-ttu-id="7d7f2-106">指定的子網路必須有足夠可用的 IP 位址，以配合集區中的節點數目。</span><span class="sxs-lookup"><span data-stu-id="7d7f2-106">The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool.</span></span> <span data-ttu-id="7d7f2-107">如果子網路沒有足夠的可用 IP 位址，集區將部分配置計算節點，並調整大小錯誤會發生。</span><span class="sxs-lookup"><span data-stu-id="7d7f2-107">If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur.</span></span> <span data-ttu-id="7d7f2-108">使用 virtualMachineConfiguration 建立的集區支援的只有 ARM 虛擬網路 (' microsoft.network/virtualnetworks')，但使用 cloudServiceConfiguration 建立的 ARM 和傳統虛擬網路支援。</span><span class="sxs-lookup"><span data-stu-id="7d7f2-108">For pools created with virtualMachineConfiguration only ARM virtual networks ('Microsoft.Network/virtualNetworks') are supported, but for pools created with cloudServiceConfiguration both ARM and classic virtual networks are supported.</span></span> <span data-ttu-id="7d7f2-109">如需詳細資訊，請參閱： https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="7d7f2-109">For more details, see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>
+  optional: true
+  syntax:
+    content: 'subnetId?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.PoolEndpointConfiguration
+  name: PoolEndpointConfiguration
+  spec.typeScript:
+  - name: PoolEndpointConfiguration
+    fullName: PoolEndpointConfiguration
+    uid: azure-batch.PoolEndpointConfiguration
