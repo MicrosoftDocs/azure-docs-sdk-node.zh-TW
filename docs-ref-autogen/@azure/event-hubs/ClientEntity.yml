@@ -1,0 +1,172 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e61f19a4736cc7a09b4a6980d6773cbaa8f6ede9
+ms.sourcegitcommit: 42c41a3863e31111d98796f150878d4fa93463af
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48297835"
+items:
+- uid: '@azure/event-hubs.ClientEntity'
+  name: ClientEntity
+  fullName: ClientEntity
+  children:
+  - '@azure/event-hubs.ClientEntity.address'
+  - '@azure/event-hubs.ClientEntity.audience'
+  - '@azure/event-hubs.ClientEntity.constructor'
+  - '@azure/event-hubs.ClientEntity.name'
+  - '@azure/event-hubs.ClientEntity.partitionId'
+  - '@azure/event-hubs.ClientEntity.type'
+  - '@azure/event-hubs.ClientEntity.wasCloseCalled'
+  langs:
+  - typeScript
+  type: class
+  summary: 描述實體，例如 EventHub 寄件者、 接收者和管理用戶端的基底類別。
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.address'
+  name: address
+  fullName: address
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {string} 地址的其中一種下列形式的用戶端實體位址：
+
+
+    **寄件者**
+
+    - `"<hubName>"`
+
+    - `"<hubName>/Partitions/<partitionId>"` 。
+
+
+    **接收者**
+
+    - `"<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"` 。
+
+
+    **ManagementClient**
+
+    -`"$management"`。
+  syntax:
+    content: 'address: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.audience'
+  name: audience
+  fullName: audience
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {string} 對象的用戶端實體權杖對象其中一種下列形式：
+
+
+    **寄件者**
+
+    - `"sb://<yournamespace>.servicebus.windows.net/<hubName>"`
+
+    - `"sb://<yournamespace>.servicebus.windows.net/<hubName>/Partitions/<partitionId>"` 。
+
+
+    **接收者**
+
+    - `"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"` 。
+
+
+    **ManagementClient**
+
+    - `"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/$management"` 。
+  syntax:
+    content: 'audience: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.constructor'
+  name: ClientEntity
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: 建立新的 ClientEntity 執行個體。
+  syntax:
+    content: 'new ClientEntity(context: ConnectionContext, options?: ClientEntityOptions)'
+    parameters:
+    - id: context
+      type:
+      - ConnectionContext
+      description: 連接內容。
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientEntityOptions'
+      description: ''
+      optional: true
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.name'
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string}[名稱]實體 (通常是 guid) 的唯一名稱。'
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.partitionId'
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{字串 | 數目}[partitionId]PartitionId 與用戶端實體相關聯。'
+  optional: true
+  syntax:
+    content: 'partitionId?: string | number'
+    return:
+      type:
+      - string | number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.type'
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 提供目前 ClientEntity 的類型。
+  syntax:
+    content: 'type: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.wasCloseCalled'
+  name: wasCloseCalled
+  fullName: wasCloseCalled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{布林} wasCloseCalled 表示 close （） 方法是否已在指定的內容中呼叫本身。'
+  syntax:
+    content: 'wasCloseCalled: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.ClientEntityOptions'
+  name: ClientEntityOptions
+  spec.typeScript:
+  - name: ClientEntityOptions
+    fullName: ClientEntityOptions
+    uid: '@azure/event-hubs.ClientEntityOptions'
