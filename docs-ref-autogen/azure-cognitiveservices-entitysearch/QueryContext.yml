@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c8f3036b76e6d0b9703a2bfb163a1e55ba313765
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658722"
+items:
+- uid: azure-cognitiveservices-entitysearch.QueryContext
+  name: QueryContext
+  fullName: QueryContext
+  children:
+  - azure-cognitiveservices-entitysearch.QueryContext.adultIntent
+  - azure-cognitiveservices-entitysearch.QueryContext.alterationOverrideQuery
+  - azure-cognitiveservices-entitysearch.QueryContext.alteredQuery
+  - azure-cognitiveservices-entitysearch.QueryContext.askUserForLocation
+  - azure-cognitiveservices-entitysearch.QueryContext.originalQuery
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="66462-101">定義 Bing 針對要求而使用的查詢內容。</span><span class="sxs-lookup"><span data-stu-id="66462-101">Defines the query context that Bing used for the request.</span></span>
+  package: azure-cognitiveservices-entitysearch
+- uid: azure-cognitiveservices-entitysearch.QueryContext.adultIntent
+  name: adultIntent
+  fullName: adultIntent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66462-102">一個布林值，用以指出指定的查詢是否有成人意圖。</span><span class="sxs-lookup"><span data-stu-id="66462-102">A Boolean value that indicates whether the specified query has adult intent.</span></span> <span data-ttu-id="66462-103">值為 true，如果查詢有成人用途;否則為 false。</span><span class="sxs-lookup"><span data-stu-id="66462-103">The value is true if the query has adult intent; otherwise, false.</span></span>
+  optional: true
+  syntax:
+    content: 'adultIntent?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-cognitiveservices-entitysearch
+- uid: azure-cognitiveservices-entitysearch.QueryContext.alterationOverrideQuery
+  name: alterationOverrideQuery
+  fullName: alterationOverrideQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66462-104">要用來強制 Bing 使用原始字串的查詢字串。</span><span class="sxs-lookup"><span data-stu-id="66462-104">The query string to use to force Bing to use the original string.</span></span> <span data-ttu-id="66462-105">比方說，如果查詢字串為"downwind saling:"，將會覆寫查詢字串 」 + saling downwind"。</span><span class="sxs-lookup"><span data-stu-id="66462-105">For example, if the query string is "saling downwind", the override query string will be "+saling downwind".</span></span> <span data-ttu-id="66462-106">這會產生的查詢字串編碼，請記得 「 %2bsaling + downwind"。</span><span class="sxs-lookup"><span data-stu-id="66462-106">Remember to encode the query string which results in "%2Bsaling+downwind".</span></span> <span data-ttu-id="66462-107">只有原始查詢字串包含拼字錯誤時，才需要加入此欄位。</span><span class="sxs-lookup"><span data-stu-id="66462-107">This field is included only if the original query string contains a spelling mistake.</span></span>
+  optional: true
+  syntax:
+    content: 'alterationOverrideQuery?: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-entitysearch
+- uid: azure-cognitiveservices-entitysearch.QueryContext.alteredQuery
+  name: alteredQuery
+  fullName: alteredQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66462-108">Bing 用來執行查詢的查詢字串。</span><span class="sxs-lookup"><span data-stu-id="66462-108">The query string used by Bing to perform the query.</span></span> <span data-ttu-id="66462-109">如果原始查詢字串包含拼字錯誤，Bing 就會使用更改的查詢字串。</span><span class="sxs-lookup"><span data-stu-id="66462-109">Bing uses the altered query string if the original query string contained spelling mistakes.</span></span> <span data-ttu-id="66462-110">比方說，如果查詢字串為"downwind saling:"，更改過的查詢字串會"sailing downwind"。</span><span class="sxs-lookup"><span data-stu-id="66462-110">For example, if the query string is "saling downwind", the altered query string will be "sailing downwind".</span></span> <span data-ttu-id="66462-111">只有原始查詢字串包含拼字錯誤時，才需要加入此欄位。</span><span class="sxs-lookup"><span data-stu-id="66462-111">This field is included only if the original query string contains a spelling mistake.</span></span>
+  optional: true
+  syntax:
+    content: 'alteredQuery?: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-entitysearch
+- uid: azure-cognitiveservices-entitysearch.QueryContext.askUserForLocation
+  name: askUserForLocation
+  fullName: askUserForLocation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66462-112">一個布林值，用以指出 Bing 是否需要使用者的位置以提供精確的結果。</span><span class="sxs-lookup"><span data-stu-id="66462-112">A Boolean value that indicates whether Bing requires the user's location to provide accurate results.</span></span> <span data-ttu-id="66462-113">如果您使用的 X-MSEdge-ClientIP 和 X 搜尋位置標頭所指定使用者的位置，您可以忽略此欄位。</span><span class="sxs-lookup"><span data-stu-id="66462-113">If you specified the user's location by using the X-MSEdge-ClientIP and X-Search-Location headers, you can ignore this field.</span></span> <span data-ttu-id="66462-114">位置感知的查詢，例如 「 當天的氣象"或"附近的餐廳 」 需要使用者的位置，以提供精確的結果，此欄位會設為 true。</span><span class="sxs-lookup"><span data-stu-id="66462-114">For location aware queries, such as "today's weather" or "restaurants near me" that need the user's location to provide accurate results, this field is set to true.</span></span> <span data-ttu-id="66462-115">位置感知查詢即包含位置 （例如，「 西雅圖狀況 」），此欄位設為 false。</span><span class="sxs-lookup"><span data-stu-id="66462-115">For location aware queries that include the location (for example, "Seattle weather"), this field is set to false.</span></span> <span data-ttu-id="66462-116">這個欄位也會設定為 false，不是位置感知的功能，例如 「 最佳銷售產品 」 的查詢中。</span><span class="sxs-lookup"><span data-stu-id="66462-116">This field is also set to false for queries that are not location aware, such as "best sellers".</span></span>
+  optional: true
+  syntax:
+    content: 'askUserForLocation?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-cognitiveservices-entitysearch
+- uid: azure-cognitiveservices-entitysearch.QueryContext.originalQuery
+  name: originalQuery
+  fullName: originalQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66462-117">指定於要求中的查詢字串。</span><span class="sxs-lookup"><span data-stu-id="66462-117">The query string as specified in the request.</span></span>
+  syntax:
+    content: 'originalQuery: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-entitysearch
