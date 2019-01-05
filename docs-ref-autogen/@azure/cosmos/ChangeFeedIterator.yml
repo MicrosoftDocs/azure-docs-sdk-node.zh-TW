@@ -1,0 +1,99 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2d60ce38f0f08cc69c94d3b4cbd1054f859e27ac
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53691835"
+items:
+- uid: '@azure/cosmos.ChangeFeedIterator'
+  name: ChangeFeedIterator
+  fullName: ChangeFeedIterator<T>
+  children:
+  - '@azure/cosmos.ChangeFeedIterator.executeNext'
+  - '@azure/cosmos.ChangeFeedIterator.getAsyncIterator'
+  - '@azure/cosmos.ChangeFeedIterator.hasMoreResults'
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    提供變更摘要中的迭代器。
+
+    使用`Items.readChangeFeed()`來取得 iterator 的執行個體。
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedIterator.executeNext'
+  name: executeNext()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 讀取摘要，並擷取結果，Azure Cosmos DB 中的下一個頁面。
+  syntax:
+    content: function executeNext()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.ChangeFeedResponse<Array<T & @azure/cosmos.Resource>>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedIterator.getAsyncIterator'
+  name: getAsyncIterator()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 取得非同步迭代器會產生結果的頁面，從 Azure Cosmos DB。
+  syntax:
+    content: function getAsyncIterator()
+    parameters: []
+    return:
+      type:
+      - AsyncIterable<@azure/cosmos.ChangeFeedResponse<Array<T & @azure/cosmos.Resource>>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedIterator.hasMoreResults'
+  name: hasMoreResults
+  fullName: hasMoreResults
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    取得值，指出是否有其他可能可以擷取的結果。
+
+    一開始會傳回 true。 此值設定為根據上次執行是否傳回接續 token。
+  syntax:
+    content: 'hasMoreResults: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+references:
+- uid: Promise<@azure/cosmos.ChangeFeedResponse<Array<T & @azure/cosmos.Resource>>>
+  name: Resource>>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ChangeFeedResponse
+    fullName: ChangeFeedResponse
+    uid: '@azure/cosmos.ChangeFeedResponse'
+  - name: '<Array<T & '
+    fullName: '<Array<T & '
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/cosmos.Resource'
+  - name: '>>>'
+    fullName: '>>>'
+- uid: AsyncIterable<@azure/cosmos.ChangeFeedResponse<Array<T & @azure/cosmos.Resource>>>
+  name: Resource>>>
+  spec.typeScript:
+  - name: AsyncIterable<
+    fullName: AsyncIterable<
+  - name: ChangeFeedResponse
+    fullName: ChangeFeedResponse
+    uid: '@azure/cosmos.ChangeFeedResponse'
+  - name: '<Array<T & '
+    fullName: '<Array<T & '
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/cosmos.Resource'
+  - name: '>>>'
+    fullName: '>>>'

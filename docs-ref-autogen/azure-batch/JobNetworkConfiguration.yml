@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac978cb530aed286b2542882777941ef7b17d24d
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53690654"
+items:
+- uid: azure-batch.JobNetworkConfiguration
+  name: JobNetworkConfiguration
+  fullName: JobNetworkConfiguration
+  children:
+  - azure-batch.JobNetworkConfiguration.subnetId
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobNetworkConfiguration.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    這僅適用於在 VirtualMachineConfiguration 集區上執行的工作。
+
+    這是表單 /subscriptions/ {subscription} /resourceGroups/ {群組} /providers/ {provider} /virtualNetworks/ {network} /subnets/ {子網路}。
+
+    虛擬網路必須位於相同的區域和訂用帳戶與 Azure Batch 帳戶。
+
+    指定的子網路必須有足夠可用的 IP 位址，以容納會從作業中執行工作的節點數目。 如需詳細資訊，請參閱https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration。
+  syntax:
+    content: 'subnetId: string'
+    return:
+      type:
+      - string
+  package: azure-batch

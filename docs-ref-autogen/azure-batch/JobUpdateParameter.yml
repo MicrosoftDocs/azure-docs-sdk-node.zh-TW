@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: af32c4a39fd7e794559661f55c43f5ee3c48b89e
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53662876"
+items:
+- uid: azure-batch.JobUpdateParameter
+  name: JobUpdateParameter
+  fullName: JobUpdateParameter
+  children:
+  - azure-batch.JobUpdateParameter.constraints
+  - azure-batch.JobUpdateParameter.metadata
+  - azure-batch.JobUpdateParameter.onAllTasksComplete
+  - azure-batch.JobUpdateParameter.poolInfo
+  - azure-batch.JobUpdateParameter.priority
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果省略，則會清除條件約束。
+  optional: true
+  syntax:
+    content: 'constraints?: JobConstraints'
+    return:
+      type:
+      - azure-batch.JobConstraints
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果省略，它會採用預設值為空的清單;作用中，會刪除任何現有的中繼資料。
+  optional: true
+  syntax:
+    content: 'metadata?: MetadataItem[]'
+    return:
+      type:
+      - azure-batch.MetadataItem[]
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.onAllTasksComplete
+  name: onAllTasksComplete
+  fullName: onAllTasksComplete
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    如果省略，完成行為設為 noaction。 如果目前的值為 terminatejob，這是錯誤，因為作業的完成行為可能不會從變更 terminatejob 為 noaction 也一樣。 您可能無法將值變更從 terminatejob 為 noaction-也就是說，一旦您有參與自動作業終止，您無法將它關閉一次。 如果您嘗試執行這項操作，要求會失敗，批次傳回狀態程式碼 400 （不正確的要求） 和 「 無效的屬性值' 錯誤回應。 如果您在 PUT 要求中未指定這個項目，它就相當於傳遞 noaction。 如果目前的值為 terminatejob，這會是錯誤。
+
+    可能的值包括: 'noAction'，'terminateJob'
+  optional: true
+  syntax:
+    content: 'onAllTasksComplete?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.poolInfo
+  name: poolInfo
+  fullName: poolInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 工作已停用時，才，您可以變更作業的集區。 如果您包含 poolInfo 項目和作業不會停用，更新作業呼叫會失敗。 如果您指定 autoPoolSpecification 規格 poolInfo 中時，就可以更新只能使用 keepAlive 屬性，然後才自動集區 poollifetimeoption 作業。
+  syntax:
+    content: 'poolInfo: PoolInformation'
+    return:
+      type:
+      - azure-batch.PoolInformation
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 優先順序值的範圍可以從-1000年到 1000，-1000年表示最低優先順序，1000年表示最高的優先順序。 如果省略，則會將它設定為預設值 0。
+  optional: true
+  syntax:
+    content: 'priority?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+references:
+- uid: azure-batch.JobConstraints
+  name: JobConstraints
+  spec.typeScript:
+  - name: JobConstraints
+    fullName: JobConstraints
+    uid: azure-batch.JobConstraints
+- uid: azure-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.PoolInformation
+  name: PoolInformation
+  spec.typeScript:
+  - name: PoolInformation
+    fullName: PoolInformation
+    uid: azure-batch.PoolInformation
