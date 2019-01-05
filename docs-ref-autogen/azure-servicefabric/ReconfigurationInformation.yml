@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4557e6fbf7a07e424f47a9df6388b7ffe440975
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52075233"
+items:
+- uid: azure-servicefabric.ReconfigurationInformation
+  name: ReconfigurationInformation
+  fullName: ReconfigurationInformation
+  children:
+  - azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  langs:
+  - typeScript
+  type: interface
+  summary: 目前的重新設定，例如階段、 類型、 先前的設定角色的複本和重新設定的相關資訊的開始日期時間。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  name: previousConfigurationRole
+  fullName: previousConfigurationRole
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 重新設定啟動之前的複本角色。 可能的值包括：'Unknown'，'None'、 'Primary'，'IdleSecondary'、 'ActiveSecondary'
+  optional: true
+  syntax:
+    content: 'previousConfigurationRole?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  name: reconfigurationPhase
+  fullName: reconfigurationPhase
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 目前正在進行重新設定階段。 如果正在進行任何重新設定，則這個值會是 「 無 」。 可能的值包括：'Unknown'，'None'、 '0'，'階段 1'，'階段 2'、 'Phase3'、 '階段 4'、 'AbortPhaseZero'
+  optional: true
+  syntax:
+    content: 'reconfigurationPhase?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  name: reconfigurationStartTimeUtc
+  fullName: reconfigurationStartTimeUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 開始時間 （UTC) 的進行中的重新設定。 如果不進行任何重新設定這個值會是零的日期時間。
+  optional: true
+  syntax:
+    content: 'reconfigurationStartTimeUtc?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  name: reconfigurationType
+  fullName: reconfigurationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 目前正在進行重新設定的類型。 如果正在進行任何重新設定，則這個值會是 「 無 」。 可能的值包括：'Unknown'，'SwapPrimary'，'容錯移轉，其他
+  optional: true
+  syntax:
+    content: 'reconfigurationType?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

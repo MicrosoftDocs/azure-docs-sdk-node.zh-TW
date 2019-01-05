@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c8a0b3dd37f77da0d9b10681c4945f5e6d375ff3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52057303"
+items:
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+  name: DeployedStatefulServiceReplicaInfo
+  fullName: DeployedStatefulServiceReplicaInfo
+  children:
+  - azure-servicefabric.DeployedStatefulServiceReplicaInfo.reconfigurationInformation
+  - azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaId
+  - azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaRole
+  langs:
+  - typeScript
+  type: interface
+  summary: 具狀態服務複本節點上所部署的相關資訊。
+  extends:
+    name: azure-servicefabric.DeployedServiceReplicaInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.reconfigurationInformation
+  name: reconfigurationInformation
+  fullName: reconfigurationInformation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 目前的重新設定，例如階段、 類型、 先前的設定角色的複本和重新設定的相關資訊的開始日期時間。
+  optional: true
+  syntax:
+    content: 'reconfigurationInformation?: ReconfigurationInformation'
+    return:
+      type:
+      - azure-servicefabric.ReconfigurationInformation
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaId
+  name: replicaId
+  fullName: replicaId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 具狀態服務複本的識別碼。 Service Fabric 會使用 ReplicaId 來唯一識別資料分割的複本。 它是資料分割內唯一的並不會變更複本的存留期。 如果複本卸除相同資料分割在相同節點上建立另一個複本，它會取得不同值的識別碼。有時候無狀態服務執行個體的識別碼也稱為複本識別碼。
+  optional: true
+  syntax:
+    content: 'replicaId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaRole
+  name: replicaRole
+  fullName: replicaRole
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 具狀態服務複本的角色。 可能的值包括：'Unknown'，'None'、 'Primary'，'IdleSecondary'、 'ActiveSecondary'
+  optional: true
+  syntax:
+    content: 'replicaRole?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServiceReplicaInfo
+  name: DeployedServiceReplicaInfo
+  spec.typeScript:
+  - name: DeployedServiceReplicaInfo
+    fullName: DeployedServiceReplicaInfo
+    uid: azure-servicefabric.DeployedServiceReplicaInfo
+- uid: azure-servicefabric.ReconfigurationInformation
+  name: ReconfigurationInformation
+  spec.typeScript:
+  - name: ReconfigurationInformation
+    fullName: ReconfigurationInformation
+    uid: azure-servicefabric.ReconfigurationInformation
