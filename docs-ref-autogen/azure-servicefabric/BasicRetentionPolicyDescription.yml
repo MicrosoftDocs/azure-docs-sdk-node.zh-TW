@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 029fc494f2cf062af43d57c41c2f225d2f2dfc8b
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53690583"
+items:
+- uid: azure-servicefabric.BasicRetentionPolicyDescription
+  name: BasicRetentionPolicyDescription
+  fullName: BasicRetentionPolicyDescription
+  children:
+  - azure-servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups
+  - azure-servicefabric.BasicRetentionPolicyDescription.retentionDuration
+  langs:
+  - typeScript
+  type: interface
+  summary: 描述基本的保留原則。
+  extends:
+    name: azure-servicefabric.RetentionPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups
+  name: minimumNumberOfBackups
+  fullName: minimumNumberOfBackups
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 它是保留在任何時間點備份的最小數目。 如果指定非零值，備份將不會刪除即使備份已經超過保留期限，並具有備份數目小於或等於它。
+  optional: true
+  syntax:
+    content: 'minimumNumberOfBackups?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.BasicRetentionPolicyDescription.retentionDuration
+  name: retentionDuration
+  fullName: retentionDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 它是最小持續期間，備份建立，將仍然會儲存在儲存體，且之後的時間長度是時間可能會刪除。 它應該指定 ISO8601 格式。
+  syntax:
+    content: 'retentionDuration: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RetentionPolicyDescription
+  name: RetentionPolicyDescription
+  spec.typeScript:
+  - name: RetentionPolicyDescription
+    fullName: RetentionPolicyDescription
+    uid: azure-servicefabric.RetentionPolicyDescription

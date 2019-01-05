@@ -1,0 +1,414 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: dcb90cdf245bc5954e12439a40d0d83c0c4cb1c8
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53679692"
+items:
+- uid: azure-batch.PoolAddParameter
+  name: PoolAddParameter
+  fullName: PoolAddParameter
+  children:
+  - azure-batch.PoolAddParameter.applicationLicenses
+  - azure-batch.PoolAddParameter.applicationPackageReferences
+  - azure-batch.PoolAddParameter.autoScaleEvaluationInterval
+  - azure-batch.PoolAddParameter.autoScaleFormula
+  - azure-batch.PoolAddParameter.certificateReferences
+  - azure-batch.PoolAddParameter.cloudServiceConfiguration
+  - azure-batch.PoolAddParameter.displayName
+  - azure-batch.PoolAddParameter.enableAutoScale
+  - azure-batch.PoolAddParameter.enableInterNodeCommunication
+  - azure-batch.PoolAddParameter.id
+  - azure-batch.PoolAddParameter.maxTasksPerNode
+  - azure-batch.PoolAddParameter.metadata
+  - azure-batch.PoolAddParameter.networkConfiguration
+  - azure-batch.PoolAddParameter.resizeTimeout
+  - azure-batch.PoolAddParameter.startTask
+  - azure-batch.PoolAddParameter.targetDedicatedNodes
+  - azure-batch.PoolAddParameter.targetLowPriorityNodes
+  - azure-batch.PoolAddParameter.taskSchedulingPolicy
+  - azure-batch.PoolAddParameter.userAccounts
+  - azure-batch.PoolAddParameter.virtualMachineConfiguration
+  - azure-batch.PoolAddParameter.vmSize
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.applicationLicenses
+  name: applicationLicenses
+  fullName: applicationLicenses
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 應用程式授權份必須是可用的批次服務應用程式授權的子集。 如果這不支援要求授權時，建立集區將會失敗。
+  optional: true
+  syntax:
+    content: 'applicationLicenses?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.applicationPackageReferences
+  name: applicationPackageReferences
+  fullName: applicationPackageReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-batch.ApplicationPackageReference[]
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.autoScaleEvaluationInterval
+  name: autoScaleEvaluationInterval
+  fullName: autoScaleEvaluationInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 預設值為 15 分鐘。 最小和最大值會分別為 5 分鐘和 168 小時。 如果您指定的值超過 5 分鐘或更高 168 小時，Batch 服務會傳回錯誤;如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。
+  optional: true
+  syntax:
+    content: 'autoScaleEvaluationInterval?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.autoScaleFormula
+  name: autoScaleFormula
+  fullName: autoScaleFormula
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 這個屬性不能指定是否 enableAutoScale 設定為 false。 它是必要的如果 enableAutoScale 設定為 true。 建立集區之前，公式會檢查有效性。 如果公式無效，Batch 服務會拒絕要求，並詳細的錯誤資訊。 如需指定此公式的詳細資訊，請參閱 < [自動調整 Azure Batch 集區中的計算節點] (https://azure.microsoft.com/documentation/articles/batch-automatic-scaling/)。
+  optional: true
+  syntax:
+    content: 'autoScaleFormula?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.certificateReferences
+  name: certificateReferences
+  fullName: certificateReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 針對 Windows 計算節點，Batch 服務會安裝憑證至指定的憑證存放區和位置。 對於 Linux 計算節點，憑證會儲存在目錄內工作工作目錄和環境變數的 AZ_BATCH_CERTIFICATES_DIR 提供給此位置的查詢工作。 與 'remoteUser' 的可見性的憑證，建立 'certs' 目錄中使用者的主目錄 (例如，/home/ {使用者-名稱} / certs) 和憑證會放在該目錄。
+  optional: true
+  syntax:
+    content: 'certificateReferences?: CertificateReference[]'
+    return:
+      type:
+      - azure-batch.CertificateReference[]
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.cloudServiceConfiguration
+  name: cloudServiceConfiguration
+  fullName: cloudServiceConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 此屬性和 virtualMachineConfiguration 互斥，且必須指定其中一個屬性。 這個屬性不能指定是否使用其 poolAllocationMode; 屬性設定為 「 UserSubscription 」 建立 Batch 帳戶。
+  optional: true
+  syntax:
+    content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+    return:
+      type:
+      - azure-batch.CloudServiceConfiguration
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.displayName
+  name: displayName
+  fullName: displayName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 不需要是唯一的顯示名稱，並可包含任何 Unicode 字元，最大長度為 1024年。
+  optional: true
+  syntax:
+    content: 'displayName?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.enableAutoScale
+  name: enableAutoScale
+  fullName: enableAutoScale
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果為 false，至少一個 targetDedicateNodes 和 targetLowPriorityNodes 必須指定。 如果為 true，autoScaleFormula 屬性就是必要，並根據公式自動調整集區大小。 預設值為 False。
+  optional: true
+  syntax:
+    content: 'enableAutoScale?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.enableInterNodeCommunication
+  name: enableInterNodeCommunication
+  fullName: enableInterNodeCommunication
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 啟用節點間通訊會限制由於在節點上的部署限制，集區的集區的大小上限。 這可能會導致無法達到其所需的大小的集區。 預設值為 False。
+  optional: true
+  syntax:
+    content: 'enableInterNodeCommunication?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 識別碼可包含英數字元，包括連字號及底線的任意組合，而且不能包含超過 64 個字元。 識別碼是保留大小寫和區分大小寫 （也就是說，您可能沒有兩個帳戶中只有大小寫不同的集區識別碼）。
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.maxTasksPerNode
+  name: maxTasksPerNode
+  fullName: maxTasksPerNode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 預設值為 1。 這項設定的最大值取決於集區 （vmSize 設定） 中的計算節點的大小。
+  optional: true
+  syntax:
+    content: 'maxTasksPerNode?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Batch 服務不會將任何意義指派給中繼資料;它只是使用使用者程式碼。
+  optional: true
+  syntax:
+    content: 'metadata?: MetadataItem[]'
+    return:
+      type:
+      - azure-batch.MetadataItem[]
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.networkConfiguration
+  name: networkConfiguration
+  fullName: networkConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'networkConfiguration?: NetworkConfiguration'
+    return:
+      type:
+      - azure-batch.NetworkConfiguration
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.resizeTimeout
+  name: resizeTimeout
+  fullName: resizeTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 此逾時只適用於手動調整;它沒有任何作用時 enableAutoScale 設定為 true。 預設值為 15 分鐘。 最小值為 5 分鐘。 如果您指定的值少於 5 分鐘時，Batch 服務會傳回錯誤;如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。
+  optional: true
+  syntax:
+    content: 'resizeTimeout?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.startTask
+  name: startTask
+  fullName: startTask
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 當節點加入至集區，或重新啟動節點時，就會執行工作。
+  optional: true
+  syntax:
+    content: 'startTask?: StartTask'
+    return:
+      type:
+      - azure-batch.StartTask
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.targetDedicatedNodes
+  name: targetDedicatedNodes
+  fullName: targetDedicatedNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 這個屬性不能指定是否 enableAutoScale 設定為 true。 如果 enableAutoScale 設定為 false，則您必須設定 targetDedicatedNodes、 targetLowPriorityNodes，或兩者。
+  optional: true
+  syntax:
+    content: 'targetDedicatedNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.targetLowPriorityNodes
+  name: targetLowPriorityNodes
+  fullName: targetLowPriorityNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 這個屬性不能指定是否 enableAutoScale 設定為 true。 如果 enableAutoScale 設定為 false，則您必須設定 targetDedicatedNodes、 targetLowPriorityNodes，或兩者。
+  optional: true
+  syntax:
+    content: 'targetLowPriorityNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.taskSchedulingPolicy
+  name: taskSchedulingPolicy
+  fullName: taskSchedulingPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+    return:
+      type:
+      - azure-batch.TaskSchedulingPolicy
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.userAccounts
+  name: userAccounts
+  fullName: userAccounts
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'userAccounts?: UserAccount[]'
+    return:
+      type:
+      - azure-batch.UserAccount[]
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.virtualMachineConfiguration
+  name: virtualMachineConfiguration
+  fullName: virtualMachineConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 此屬性和 cloudServiceConfiguration 互斥，且必須指定其中一個屬性。
+  optional: true
+  syntax:
+    content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+    return:
+      type:
+      - azure-batch.VirtualMachineConfiguration
+  package: azure-batch
+- uid: azure-batch.PoolAddParameter.vmSize
+  name: vmSize
+  fullName: vmSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如需詳細資訊可用大小的虛擬機器的雲端服務集區 （使用 cloudServiceConfiguration 建立的集區，） 大小的雲端服務 (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/)。 Batch 支援 ExtraSmall、 A1V2 和 A2V2 除外的所有雲端服務 VM 大小。 如需詳細資訊可用 VM 大小使用映像市集中的虛擬機器 （使用 virtualMachineConfiguration 建立的集區） 的集區大小的虛擬機器 (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/)或虛擬機器 (Windows) 的大小 (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch 支援 STANDARD_A0 和進階儲存體 （STANDARD_GS、 STANDARD_DS 和 STANDARD_DSV2 系列） 以外的所有 Azure VM 大小。
+  syntax:
+    content: 'vmSize: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.CertificateReference[]
+  name: CertificateReference[]
+  spec.typeScript:
+  - name: CertificateReference
+    fullName: CertificateReference
+    uid: azure-batch.CertificateReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.CloudServiceConfiguration
+  name: CloudServiceConfiguration
+  spec.typeScript:
+  - name: CloudServiceConfiguration
+    fullName: CloudServiceConfiguration
+    uid: azure-batch.CloudServiceConfiguration
+- uid: azure-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.NetworkConfiguration
+  name: NetworkConfiguration
+  spec.typeScript:
+  - name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    uid: azure-batch.NetworkConfiguration
+- uid: azure-batch.StartTask
+  name: StartTask
+  spec.typeScript:
+  - name: StartTask
+    fullName: StartTask
+    uid: azure-batch.StartTask
+- uid: azure-batch.TaskSchedulingPolicy
+  name: TaskSchedulingPolicy
+  spec.typeScript:
+  - name: TaskSchedulingPolicy
+    fullName: TaskSchedulingPolicy
+    uid: azure-batch.TaskSchedulingPolicy
+- uid: azure-batch.UserAccount[]
+  name: UserAccount[]
+  spec.typeScript:
+  - name: UserAccount
+    fullName: UserAccount
+    uid: azure-batch.UserAccount
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.VirtualMachineConfiguration
+  name: VirtualMachineConfiguration
+  spec.typeScript:
+  - name: VirtualMachineConfiguration
+    fullName: VirtualMachineConfiguration
+    uid: azure-batch.VirtualMachineConfiguration
