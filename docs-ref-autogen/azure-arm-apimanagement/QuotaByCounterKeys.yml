@@ -1,0 +1,344 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 29f626d7c983d07246df5863ba8200cda15f597a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52118023"
+items:
+- uid: azure-arm-apimanagement.QuotaByCounterKeys
+  name: QuotaByCounterKeys
+  fullName: QuotaByCounterKeys
+  children:
+  - azure-arm-apimanagement.QuotaByCounterKeys.listByService
+  - azure-arm-apimanagement.QuotaByCounterKeys.listByService_2
+  - azure-arm-apimanagement.QuotaByCounterKeys.listByService_1
+  - azure-arm-apimanagement.QuotaByCounterKeys.listByServiceWithHttpOperationResponse
+  - azure-arm-apimanagement.QuotaByCounterKeys.update
+  - azure-arm-apimanagement.QuotaByCounterKeys.update_2
+  - azure-arm-apimanagement.QuotaByCounterKeys.update_1
+  - azure-arm-apimanagement.QuotaByCounterKeys.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.listByService
+  name: listByService(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="5df3e-101">列出目前的配額計數器週期計數器在指定的服務執行個體上的原則中設定的索引鍵相關聯的集合。</span><span class="sxs-lookup"><span data-stu-id="5df3e-101">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="5df3e-102">此 api 不支援尚未分頁。</span><span class="sxs-lookup"><span data-stu-id="5df3e-102">The api does not support paging yet.</span></span>
+  syntax:
+    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-103">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="5df3e-103">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-104">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="5df3e-104">The name of the API Management service.</span></span>
+    - id: quotaCounterKey
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-105">配額計數器金鑰識別項。這是運算式的在計數器索引鍵屬性的索引鍵的配額原則中定義的結果。比方說，如果您指定計數器機碼 ="boo 的 「 在原則中，則是供 「 boo 」 計數器索引鍵。</span><span class="sxs-lookup"><span data-stu-id="5df3e-105">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="5df3e-106">但是，如果它定義為 counter-key="@("b"+"a")"則會依"ba"索引鍵可存取</span><span class="sxs-lookup"><span data-stu-id="5df3e-106">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.QuotaCounterCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.listByService_2
+  name: listByService(string, string, string, Object, ServiceCallback<QuotaCounterCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="5df3e-107">列出目前的配額計數器週期計數器在指定的服務執行個體上的原則中設定的索引鍵相關聯的集合。</span><span class="sxs-lookup"><span data-stu-id="5df3e-107">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="5df3e-108">此 api 不支援尚未分頁。</span><span class="sxs-lookup"><span data-stu-id="5df3e-108">The api does not support paging yet.</span></span>
+  syntax:
+    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options: Object, callback: ServiceCallback<QuotaCounterCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: quotaCounterKey
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.QuotaCounterCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.QuotaCounterCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.listByService_1
+  name: listByService(string, string, string, ServiceCallback<QuotaCounterCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="5df3e-109">列出目前的配額計數器週期計數器在指定的服務執行個體上的原則中設定的索引鍵相關聯的集合。</span><span class="sxs-lookup"><span data-stu-id="5df3e-109">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="5df3e-110">此 api 不支援尚未分頁。</span><span class="sxs-lookup"><span data-stu-id="5df3e-110">The api does not support paging yet.</span></span>
+  syntax:
+    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, callback: ServiceCallback<QuotaCounterCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: quotaCounterKey
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.QuotaCounterCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.QuotaCounterCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.listByServiceWithHttpOperationResponse
+  name: listByServiceWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="5df3e-111">列出目前的配額計數器週期計數器在指定的服務執行個體上的原則中設定的索引鍵相關聯的集合。</span><span class="sxs-lookup"><span data-stu-id="5df3e-111">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="5df3e-112">此 api 不支援尚未分頁。</span><span class="sxs-lookup"><span data-stu-id="5df3e-112">The api does not support paging yet.</span></span>
+  syntax:
+    content: 'function listByServiceWithHttpOperationResponse(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-113">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="5df3e-113">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-114">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="5df3e-114">The name of the API Management service.</span></span>
+    - id: quotaCounterKey
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-115">配額計數器金鑰識別項。這是運算式的在計數器索引鍵屬性的索引鍵的配額原則中定義的結果。比方說，如果您指定計數器機碼 ="boo 的 「 在原則中，則是供 「 boo 」 計數器索引鍵。</span><span class="sxs-lookup"><span data-stu-id="5df3e-115">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="5df3e-116">但是，如果它定義為 counter-key="@("b"+"a")"則會依"ba"索引鍵可存取</span><span class="sxs-lookup"><span data-stu-id="5df3e-116">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-apimanagement.QuotaCounterCollection>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.update
+  name: update(string, string, string, QuotaCounterValueContractProperties, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="5df3e-117">更新現有的配額計數器索引鍵中指定的服務執行個體的值與指定的所有配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-117">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="5df3e-118">這應該用於重設配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-118">This should be used for reset of the quota counter values.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-119">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="5df3e-119">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-120">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="5df3e-120">The name of the API Management service.</span></span>
+    - id: quotaCounterKey
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-121">配額計數器金鑰識別項。這是運算式的在計數器索引鍵屬性的索引鍵的配額原則中定義的結果。比方說，如果您指定計數器機碼 ="boo 的 「 在原則中，則是供 「 boo 」 計數器索引鍵。</span><span class="sxs-lookup"><span data-stu-id="5df3e-121">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="5df3e-122">但是，如果它定義為 counter-key="@("b"+"a")"則會依"ba"索引鍵可存取</span><span class="sxs-lookup"><span data-stu-id="5df3e-122">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.QuotaCounterValueContractProperties
+      description: >
+        <span data-ttu-id="5df3e-123">要套用至所有的配額計數器期間的配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-123">The value of the quota counter to be applied to all quota counter periods.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.update_2
+  name: update(string, string, string, QuotaCounterValueContractProperties, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="5df3e-124">更新現有的配額計數器索引鍵中指定的服務執行個體的值與指定的所有配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-124">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="5df3e-125">這應該用於重設配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-125">This should be used for reset of the quota counter values.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: quotaCounterKey
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.QuotaCounterValueContractProperties
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.update_1
+  name: update(string, string, string, QuotaCounterValueContractProperties, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="5df3e-126">更新現有的配額計數器索引鍵中指定的服務執行個體的值與指定的所有配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-126">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="5df3e-127">這應該用於重設配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-127">This should be used for reset of the quota counter values.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: quotaCounterKey
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.QuotaCounterValueContractProperties
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, string, QuotaCounterValueContractProperties, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="5df3e-128">更新現有的配額計數器索引鍵中指定的服務執行個體的值與指定的所有配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-128">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="5df3e-129">這應該用於重設配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-129">This should be used for reset of the quota counter values.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-130">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="5df3e-130">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-131">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="5df3e-131">The name of the API Management service.</span></span>
+    - id: quotaCounterKey
+      type:
+      - string
+      description: >
+        <span data-ttu-id="5df3e-132">配額計數器金鑰識別項。這是運算式的在計數器索引鍵屬性的索引鍵的配額原則中定義的結果。比方說，如果您指定計數器機碼 ="boo 的 「 在原則中，則是供 「 boo 」 計數器索引鍵。</span><span class="sxs-lookup"><span data-stu-id="5df3e-132">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="5df3e-133">但是，如果它定義為 counter-key="@("b"+"a")"則會依"ba"索引鍵可存取</span><span class="sxs-lookup"><span data-stu-id="5df3e-133">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.QuotaCounterValueContractProperties
+      description: >
+        <span data-ttu-id="5df3e-134">要套用至所有的配額計數器期間的配額計數器值。</span><span class="sxs-lookup"><span data-stu-id="5df3e-134">The value of the quota counter to be applied to all quota counter periods.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-apimanagement
+references:
+- uid: Promise<azure-arm-apimanagement.QuotaCounterCollection>
+  name: QuotaCounterCollection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: QuotaCounterCollection
+    fullName: QuotaCounterCollection
+    uid: azure-arm-apimanagement.QuotaCounterCollection
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-apimanagement.QuotaCounterCollection>
+  name: QuotaCounterCollection>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: QuotaCounterCollection
+    fullName: QuotaCounterCollection
+    uid: azure-arm-apimanagement.QuotaCounterCollection
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-apimanagement.QuotaCounterCollection>>
+  name: QuotaCounterCollection>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: QuotaCounterCollection
+    fullName: QuotaCounterCollection
+    uid: azure-arm-apimanagement.QuotaCounterCollection
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-apimanagement.QuotaCounterValueContractProperties
+  name: QuotaCounterValueContractProperties
+  spec.typeScript:
+  - name: QuotaCounterValueContractProperties
+    fullName: QuotaCounterValueContractProperties
+    uid: azure-arm-apimanagement.QuotaCounterValueContractProperties

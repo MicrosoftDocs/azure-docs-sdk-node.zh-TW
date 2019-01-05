@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4557e6fbf7a07e424f47a9df6388b7ffe440975
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52075233"
+items:
+- uid: azure-servicefabric.ReconfigurationInformation
+  name: ReconfigurationInformation
+  fullName: ReconfigurationInformation
+  children:
+  - azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="39aa3-101">目前的重新設定，例如階段、 類型、 先前的設定角色的複本和重新設定的相關資訊的開始日期時間。</span><span class="sxs-lookup"><span data-stu-id="39aa3-101">Information about current reconfiguration like phase, type, previous configuration role of replica and reconfiguration start date time.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  name: previousConfigurationRole
+  fullName: previousConfigurationRole
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"39aa3-102\">重新設定啟動之前的複本角色。</span><span class=\"sxs-lookup\"><span data-stu-id=\"39aa3-102\">Replica role before reconfiguration started.</span></span> <span data-ttu-id=\"39aa3-103\">可能的值包括：'Unknown'，'None'、 'Primary'，'IdleSecondary'、 'ActiveSecondary'</span><span class=\"sxs-lookup\"><span data-stu-id=\"39aa3-103\">Possible values include: 'Unknown', 'None', 'Primary', 'IdleSecondary', 'ActiveSecondary'</span></span>"
+  optional: true
+  syntax:
+    content: 'previousConfigurationRole?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  name: reconfigurationPhase
+  fullName: reconfigurationPhase
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"39aa3-104\">目前正在進行重新設定階段。</span><span class=\"sxs-lookup\"><span data-stu-id=\"39aa3-104\">Current phase of ongoing reconfiguration.</span></span> <span data-ttu-id=\"39aa3-105\">如果正在進行任何重新設定，則這個值會是 「 無 」。</span><span class=\"sxs-lookup\"><span data-stu-id=\"39aa3-105\">If no reconfiguration is taking place then this value will be \"None\".</span></span> <span data-ttu-id=\"39aa3-106\">可能的值包括：'Unknown'，'None'、 '0'，'階段 1'，'階段 2'、 'Phase3'、 '階段 4'、 'AbortPhaseZero'</span><span class=\"sxs-lookup\"><span data-stu-id=\"39aa3-106\">Possible values include: 'Unknown', 'None', 'Phase0', 'Phase1', 'Phase2', 'Phase3', 'Phase4', 'AbortPhaseZero'</span></span>"
+  optional: true
+  syntax:
+    content: 'reconfigurationPhase?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  name: reconfigurationStartTimeUtc
+  fullName: reconfigurationStartTimeUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="39aa3-107">開始時間 （UTC) 的進行中的重新設定。</span><span class="sxs-lookup"><span data-stu-id="39aa3-107">Start time (in UTC) of the ongoing reconfiguration.</span></span> <span data-ttu-id="39aa3-108">如果不進行任何重新設定這個值會是零的日期時間。</span><span class="sxs-lookup"><span data-stu-id="39aa3-108">If no reconfiguration is taking place then this value will be zero date-time.</span></span>
+  optional: true
+  syntax:
+    content: 'reconfigurationStartTimeUtc?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  name: reconfigurationType
+  fullName: reconfigurationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"39aa3-109\">目前正在進行重新設定的類型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"39aa3-109\">Type of current ongoing reconfiguration.</span></span> <span data-ttu-id=\"39aa3-110\">如果正在進行任何重新設定，則這個值會是 「 無 」。</span><span class=\"sxs-lookup\"><span data-stu-id=\"39aa3-110\">If no reconfiguration is taking place then this value will be \"None\".</span></span> <span data-ttu-id=\"39aa3-111\">可能的值包括：'Unknown'，'SwapPrimary'，'容錯移轉，其他</span><span class=\"sxs-lookup\"><span data-stu-id=\"39aa3-111\">Possible values include: 'Unknown', 'SwapPrimary', 'Failover', 'Other'</span></span>"
+  optional: true
+  syntax:
+    content: 'reconfigurationType?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

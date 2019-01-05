@@ -1,0 +1,246 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 957ca1a07fe531d91b55072a34578e566ec68a5e
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53681512"
+items:
+- uid: azure-iot-device.Client
+  name: Client
+  fullName: Client
+  children:
+  - azure-iot-device.Client.constructor
+  - azure-iot-device.Client.close_1
+  - azure-iot-device.Client.close
+  - azure-iot-device.Client.fromAuthenticationProvider
+  - azure-iot-device.Client.fromConnectionString
+  - azure-iot-device.Client.fromSharedAccessSignature
+  - azure-iot-device.Client.onDeviceMethod
+  - azure-iot-device.Client.uploadToBlob_1
+  - azure-iot-device.Client.uploadToBlob
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="2f598-101">用來連接裝置與 Azure IoT 中樞的 IoT 中樞裝置用戶端。</span><span class="sxs-lookup"><span data-stu-id="2f598-101">IoT Hub device client used to connect a device with an Azure IoT hub.</span></span>
+
+    <span data-ttu-id="2f598-102">SDK 的使用者應該呼叫 factory 方法，其中[fromConnectionString](xref:azure-iot-device.Client.fromConnectionString)或是[fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature)建立 IoT 中樞裝置用戶端。</span><span class="sxs-lookup"><span data-stu-id="2f598-102">Users of the SDK should call one of the factory methods, [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString) or [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) to create an IoT Hub device client.</span></span>
+  extends:
+    name: InternalClient
+  package: azure-iot-device
+- uid: azure-iot-device.Client.constructor
+  name: Client(DeviceTransport, string, BlobUploadClient)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new Client(transport: DeviceTransport, connStr?: string, blobUploadClient?: BlobUploadClient)'
+    parameters:
+    - id: transport
+      type:
+      - azure-iot-device.DeviceTransport
+      description: <span data-ttu-id="2f598-103">物件，實作介面所預期的傳輸物件，例如[Http](xref:azure-iot-device-http.Http)。</span><span class="sxs-lookup"><span data-stu-id="2f598-103">An object that implements the interface expected of a transport object, e.g., [Http](xref:azure-iot-device-http.Http).</span></span>
+    - id: connStr
+      type:
+      - string
+      description: '<span data-ttu-id="2f598-104">連接字串 (選擇性： 未提供時，必須呼叫 updateSharedAccessSignature 直接設定 SharedAccessSignature 語彙基元)。</span><span class="sxs-lookup"><span data-stu-id="2f598-104">A connection string (optional: when not provided, updateSharedAccessSignature must be called to set the SharedAccessSignature token directly).</span></span>'
+      optional: true
+    - id: blobUploadClient
+      type:
+      - BlobUploadClient
+      description: >
+        <span data-ttu-id="2f598-105">物件，是能夠將資料流上傳至 blob。</span><span class="sxs-lookup"><span data-stu-id="2f598-105">An object that is capable of uploading a stream to a blob.</span></span>
+      optional: true
+  package: azure-iot-device
+- uid: azure-iot-device.Client.close_1
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="2f598-106">關閉傳輸連接，並終結的用戶端的資源。</span><span class="sxs-lookup"><span data-stu-id="2f598-106">Closes the transport connection and destroys the client resources.</span></span>
+
+    <span data-ttu-id="2f598-107">*注意：用戶端呼叫這個方法之後不能重複使用物件。*</span><span class="sxs-lookup"><span data-stu-id="2f598-107">*Note: After calling this method the Client object cannot be reused.*</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<Disconnected>
+  package: azure-iot-device
+- uid: azure-iot-device.Client.close
+  name: close(Callback<Disconnected>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="2f598-108">關閉傳輸連接，並終結的用戶端的資源。</span><span class="sxs-lookup"><span data-stu-id="2f598-108">Closes the transport connection and destroys the client resources.</span></span>
+
+    <span data-ttu-id="2f598-109">*注意：用戶端呼叫這個方法之後不能重複使用物件。*</span><span class="sxs-lookup"><span data-stu-id="2f598-109">*Note: After calling this method the Client object cannot be reused.*</span></span>
+  syntax:
+    content: 'function close(closeCallback: Callback<Disconnected>)'
+    parameters:
+    - id: closeCallback
+      type:
+      - Callback<Disconnected>
+      description: ''
+  package: azure-iot-device
+- uid: azure-iot-device.Client.fromAuthenticationProvider
+  name: fromAuthenticationProvider(AuthenticationProvider, any)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2f598-110">建立 IoT 中樞裝置用戶端從指定的驗證方法，並使用指定的傳輸類型。</span><span class="sxs-lookup"><span data-stu-id="2f598-110">Creates an IoT Hub device client from the given authentication method and using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromAuthenticationProvider(authenticationProvider: AuthenticationProvider, transportCtor: any)'
+    parameters:
+    - id: authenticationProvider
+      type:
+      - AuthenticationProvider
+      description: <span data-ttu-id="2f598-111">用來取得 IoT 中樞的驗證參數的物件。</span><span class="sxs-lookup"><span data-stu-id="2f598-111">Object used to obtain the authentication parameters for the IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: >
+        <span data-ttu-id="2f598-112">傳輸通訊協定用來連線到 IoT 中樞。</span><span class="sxs-lookup"><span data-stu-id="2f598-112">Transport protocol used to connect to IoT hub.</span></span>
+    return:
+      type:
+      - azure-iot-device.Client
+  package: azure-iot-device
+- uid: azure-iot-device.Client.fromConnectionString
+  name: fromConnectionString(string, any)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2f598-113">使用指定的傳輸類型與指定的連接字串建立的 IoT 中樞裝置用戶端。</span><span class="sxs-lookup"><span data-stu-id="2f598-113">Creates an IoT Hub device client from the given connection string using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromConnectionString(connStr: string, transportCtor: any)'
+    parameters:
+    - id: connStr
+      type:
+      - string
+      description: <span data-ttu-id="2f598-114">封裝 「 裝置連線 」 的權限的 IoT 中樞連接字串。</span><span class="sxs-lookup"><span data-stu-id="2f598-114">A connection string which encapsulates "device connect" permissions on an IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: >
+        <span data-ttu-id="2f598-115">傳輸的建構函式。</span><span class="sxs-lookup"><span data-stu-id="2f598-115">A transport constructor.</span></span>
+    return:
+      type:
+      - azure-iot-device.Client
+  package: azure-iot-device
+- uid: azure-iot-device.Client.fromSharedAccessSignature
+  name: fromSharedAccessSignature(string, any)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2f598-116">建立 IoT 中樞裝置用戶端從指定的共用的存取簽章使用指定的傳輸類型。</span><span class="sxs-lookup"><span data-stu-id="2f598-116">Creates an IoT Hub device client from the given shared access signature using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string, transportCtor: any)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: <span data-ttu-id="2f598-117">共用的存取簽章會封裝在 IoT 中樞上的 「 裝置連線 」 權限。</span><span class="sxs-lookup"><span data-stu-id="2f598-117">A shared access signature which encapsulates "device connect" permissions on an IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - azure-iot-device.Client
+  package: azure-iot-device
+- uid: azure-iot-device.Client.onDeviceMethod
+  name: 'onDeviceMethod(string, (request: DeviceMethodRequest, response: DeviceMethodResponse) => void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2f598-118">註冊的回呼方法，名為`methodName`。</span><span class="sxs-lookup"><span data-stu-id="2f598-118">Registers a callback for a method named `methodName`.</span></span>
+  syntax:
+    content: 'function onDeviceMethod(methodName: string, callback: (request: DeviceMethodRequest, response: DeviceMethodResponse) => void)'
+    parameters:
+    - id: methodName
+      type:
+      - string
+      description: <span data-ttu-id="2f598-119">將處理的回呼方法的名稱</span><span class="sxs-lookup"><span data-stu-id="2f598-119">Name of the method that will be handled by the callback</span></span>
+    - id: callback
+      type:
+      - '(request: DeviceMethodRequest, response: DeviceMethodResponse) => void'
+      description: >
+        <span data-ttu-id="2f598-120">應該會在每次呼叫方法的方法要求時呼叫的函式`methodName`收到。</span><span class="sxs-lookup"><span data-stu-id="2f598-120">Function that shall be called whenever a method request for the method called `methodName` is received.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.Client.uploadToBlob_1
+  name: uploadToBlob(string, Stream, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2f598-121">`uploadToBlob`方法的資料流上傳至 blob。</span><span class="sxs-lookup"><span data-stu-id="2f598-121">The `uploadToBlob` method uploads a stream to a blob.</span></span>
+  syntax:
+    content: 'function uploadToBlob(blobName: string, stream: Stream, streamLength: number)'
+    parameters:
+    - id: blobName
+      type:
+      - string
+      description: ''
+    - id: stream
+      type:
+      - Stream
+      description: ''
+    - id: streamLength
+      type:
+      - number
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-iot-device
+- uid: azure-iot-device.Client.uploadToBlob
+  name: uploadToBlob(string, Stream, number, ErrorCallback)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2f598-122">`uploadToBlob`方法的資料流上傳至 blob。</span><span class="sxs-lookup"><span data-stu-id="2f598-122">The `uploadToBlob` method uploads a stream to a blob.</span></span>
+  syntax:
+    content: 'function uploadToBlob(blobName: string, stream: Stream, streamLength: number, callback: ErrorCallback)'
+    parameters:
+    - id: blobName
+      type:
+      - string
+      description: <span data-ttu-id="2f598-123">要用於將資料流的內容中建立 blob 的名稱。</span><span class="sxs-lookup"><span data-stu-id="2f598-123">The name to use for the blob that will be created with the content of the stream.</span></span>
+    - id: stream
+      type:
+      - Stream
+      description: <span data-ttu-id="2f598-124">資料應上傳至 blob。</span><span class="sxs-lookup"><span data-stu-id="2f598-124">The data to that should be uploaded to the blob.</span></span>
+    - id: streamLength
+      type:
+      - number
+      description: <span data-ttu-id="2f598-125">該資料的大小應上傳至 blob。</span><span class="sxs-lookup"><span data-stu-id="2f598-125">The size of the data to that should be uploaded to the blob.</span></span>
+    - id: callback
+      type:
+      - ErrorCallback
+      description: ''
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.DeviceTransport
+  name: DeviceTransport
+  spec.typeScript:
+  - name: DeviceTransport
+    fullName: DeviceTransport
+    uid: azure-iot-device.DeviceTransport
+- uid: azure-iot-device.Client
+  name: Client
+  spec.typeScript:
+  - name: Client
+    fullName: Client
+    uid: azure-iot-device.Client

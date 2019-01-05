@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0a5bc610a2934b397637cbefb775b255740fbddd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083823"
+items:
+- uid: azure-iot-provisioning-service.TpmAttestation
+  name: TpmAttestation
+  fullName: TpmAttestation
+  children:
+  - azure-iot-provisioning-service.TpmAttestation.endorsementKey
+  - azure-iot-provisioning-service.TpmAttestation.storageRootKey
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="3235c-101">透過 TPM 證明。</span><span class="sxs-lookup"><span data-stu-id="3235c-101">Attestation via TPM.</span></span>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.TpmAttestation.endorsementKey
+  name: endorsementKey
+  fullName: endorsementKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="3235c-102">簽署金鑰是永久內嵌在信賴平台模組 (TPM) 安全性硬體，通常在製造時的加密金鑰。</span><span class="sxs-lookup"><span data-stu-id="3235c-102">The endorsement key is an encryption key that is permanently embedded in the Trusted Platform Module (TPM) security hardware, generally at the time of manufacture.</span></span> <span data-ttu-id="3235c-103">此簽署金鑰的私密部分絕不會釋放到 TPM 外部。</span><span class="sxs-lookup"><span data-stu-id="3235c-103">This private portion of the endorsement key is never released outside of the TPM.</span></span> <span data-ttu-id="3235c-104">有助於識別正版 TPM 簽署金鑰的公開部分。</span><span class="sxs-lookup"><span data-stu-id="3235c-104">The public portion of the endorsement key helps to recognize a genuine TPM.</span></span>
+
+    <span data-ttu-id="3235c-105">簽署金鑰是 base64 編碼值。</span><span class="sxs-lookup"><span data-stu-id="3235c-105">The endorsement key is a base64 encoded value.</span></span>
+  syntax:
+    content: 'endorsementKey: string'
+    return:
+      type:
+      - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.TpmAttestation.storageRootKey
+  name: storageRootKey
+  fullName: storageRootKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="3235c-106">儲存根金鑰內嵌於受信任的平台模組 (TPM) 安全性硬體。</span><span class="sxs-lookup"><span data-stu-id="3235c-106">The storage root key is embedded in the Trusted Platform Module (TPM) security hardware.</span></span>
+
+    <span data-ttu-id="3235c-107">它用來保護應用程式，所建立的 TPM 金鑰，這樣一來，TPM 才能使用這些金鑰。</span><span class="sxs-lookup"><span data-stu-id="3235c-107">It is used to protect TPM keys created by applications, so that these keys cannot be used without the TPM.</span></span>
+
+    <span data-ttu-id="3235c-108">不同於簽署金鑰 （這通常建立在製造 TPM 時），當您取得 TPM 的擁有權時，會建立儲存根金鑰。</span><span class="sxs-lookup"><span data-stu-id="3235c-108">Unlike the endorsement key (which is generally created when the TPM is manufactured), the storage root key is created when you take ownership of the TPM.</span></span> <span data-ttu-id="3235c-109">這表示如果您清除 TPM，而且新的使用者取得擁有權，建立新的儲存體根目錄機碼。</span><span class="sxs-lookup"><span data-stu-id="3235c-109">This means that if you clear the TPM and a new user takes ownership, a new storage root key is created.</span></span>
+
+    <span data-ttu-id="3235c-110">這個屬性通常不操作服務用戶端。</span><span class="sxs-lookup"><span data-stu-id="3235c-110">This property is not typically manipulated by the service client.</span></span>
+
+
+    <span data-ttu-id="3235c-111">StorageRootKey 是 base64 編碼值。</span><span class="sxs-lookup"><span data-stu-id="3235c-111">The storageRootKey is a base64 encoded value.</span></span>
+  syntax:
+    content: 'storageRootKey: string'
+    return:
+      type:
+      - string
+  package: azure-iot-provisioning-service

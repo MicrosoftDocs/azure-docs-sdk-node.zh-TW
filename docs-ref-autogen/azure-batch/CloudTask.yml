@@ -1,0 +1,535 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7b15fc14fb3cf5a610ca8f083844c96503c8ec87
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53665212"
+items:
+- uid: azure-batch.CloudTask
+  name: CloudTask
+  fullName: CloudTask
+  children:
+  - azure-batch.CloudTask.affinityInfo
+  - azure-batch.CloudTask.applicationPackageReferences
+  - azure-batch.CloudTask.authenticationTokenSettings
+  - azure-batch.CloudTask.commandLine
+  - azure-batch.CloudTask.constraints
+  - azure-batch.CloudTask.containerSettings
+  - azure-batch.CloudTask.creationTime
+  - azure-batch.CloudTask.dependsOn
+  - azure-batch.CloudTask.displayName
+  - azure-batch.CloudTask.environmentSettings
+  - azure-batch.CloudTask.eTag
+  - azure-batch.CloudTask.executionInfo
+  - azure-batch.CloudTask.exitConditions
+  - azure-batch.CloudTask.id
+  - azure-batch.CloudTask.lastModified
+  - azure-batch.CloudTask.multiInstanceSettings
+  - azure-batch.CloudTask.nodeInfo
+  - azure-batch.CloudTask.outputFiles
+  - azure-batch.CloudTask.previousState
+  - azure-batch.CloudTask.previousStateTransitionTime
+  - azure-batch.CloudTask.resourceFiles
+  - azure-batch.CloudTask.state
+  - azure-batch.CloudTask.stateTransitionTime
+  - azure-batch.CloudTask.stats
+  - azure-batch.CloudTask.url
+  - azure-batch.CloudTask.userIdentity
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="4be2a-101">在計算節點上觸發復原作業時，批次會重試工作。</span><span class="sxs-lookup"><span data-stu-id="4be2a-101">Batch will retry tasks when a recovery operation is triggered on a compute node.</span></span>
+
+    <span data-ttu-id="4be2a-102">復原作業的範例包括 （但不限於） 將狀況不良的計算節點重新開機或計算節點消失，因為主機失敗時。</span><span class="sxs-lookup"><span data-stu-id="4be2a-102">Examples of recovery operations include (but are not limited to) when an unhealthy compute node is rebooted or a compute node disappeared due to host failure.</span></span> <span data-ttu-id="4be2a-103">因為復原作業在獨立的而且不會納入 maxTaskRetryCount 會重試。</span><span class="sxs-lookup"><span data-stu-id="4be2a-103">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="4be2a-104">即使 maxTaskRetryCount 為 0，因為復原作業內部重試可能會發生。</span><span class="sxs-lookup"><span data-stu-id="4be2a-104">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="4be2a-105">因為這個緣故，所有工作都應該具有等冪性。</span><span class="sxs-lookup"><span data-stu-id="4be2a-105">Because of this, all tasks should be idempotent.</span></span> <span data-ttu-id="4be2a-106">這表示工作需要容許正在中斷並重新啟動而不會造成任何損毀或重複的資料。</span><span class="sxs-lookup"><span data-stu-id="4be2a-106">This means tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="4be2a-107">最佳做法長時間執行的工作是使用某種形式的檢查點。</span><span class="sxs-lookup"><span data-stu-id="4be2a-107">The best practice for long running tasks is to use some form of checkpointing.</span></span>
+  package: azure-batch
+- uid: azure-batch.CloudTask.affinityInfo
+  name: affinityInfo
+  fullName: affinityInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'affinityInfo?: AffinityInformation'
+    return:
+      type:
+      - azure-batch.AffinityInformation
+  package: azure-batch
+- uid: azure-batch.CloudTask.applicationPackageReferences
+  name: applicationPackageReferences
+  fullName: applicationPackageReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-108">應用程式封裝會下載並部署到共用目錄，而不將工作目錄的工作。</span><span class="sxs-lookup"><span data-stu-id="4be2a-108">Application packages are downloaded and deployed to a shared directory, not the task working directory.</span></span> <span data-ttu-id="4be2a-109">因此，如果所參考的套件已在計算節點上，而是最新狀態，則不會被重新下載;會使用計算節點上現有的複本。</span><span class="sxs-lookup"><span data-stu-id="4be2a-109">Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used.</span></span> <span data-ttu-id="4be2a-110">如果參考的應用程式套件無法安裝，例如因為封裝已被刪除，或因為下載失敗，則工作會失敗。</span><span class="sxs-lookup"><span data-stu-id="4be2a-110">If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-batch.ApplicationPackageReference[]
+  package: azure-batch
+- uid: azure-batch.CloudTask.authenticationTokenSettings
+  name: authenticationTokenSettings
+  fullName: authenticationTokenSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-111">如果設定這個屬性，則 Batch 服務會提供可用來驗證批次服務作業，而不需要帳戶存取金鑰驗證權杖的工作。</span><span class="sxs-lookup"><span data-stu-id="4be2a-111">If this property is set, the Batch service provides the task with an authentication token which can be used to authenticate Batch service operations without requiring an account access key.</span></span> <span data-ttu-id="4be2a-112">提供的語彙基元是透過 AZ_BATCH_AUTHENTICATION_TOKEN 環境變數。</span><span class="sxs-lookup"><span data-stu-id="4be2a-112">The token is provided via the AZ_BATCH_AUTHENTICATION_TOKEN environment variable.</span></span> <span data-ttu-id="4be2a-113">工作可以執行使用權杖的作業會視設定而定。</span><span class="sxs-lookup"><span data-stu-id="4be2a-113">The operations that the task can carry out using the token depend on the settings.</span></span> <span data-ttu-id="4be2a-114">例如，工作可以要求作業的權限，才能將其他工作新增至作業中，或檢查的作業，或在作業下的其他工作的狀態。</span><span class="sxs-lookup"><span data-stu-id="4be2a-114">For example, a task can request job permissions in order to add other tasks to the job, or check the status of the job or of other tasks under the job.</span></span>
+  optional: true
+  syntax:
+    content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+    return:
+      type:
+      - azure-batch.AuthenticationTokenSettings
+  package: azure-batch
+- uid: azure-batch.CloudTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-115">多重執行個體工作命令列之後會執行主要工作中，為主要工作及所有子工作已完成執行協調命令列。</span><span class="sxs-lookup"><span data-stu-id="4be2a-115">For multi-instance tasks, the command line is executed as the primary task, after the primary task and all subtasks have finished executing the coordination command line.</span></span> <span data-ttu-id="4be2a-116">命令列不會在殼層中執行，因此無法利用 shell 功能，例如環境變數擴充。</span><span class="sxs-lookup"><span data-stu-id="4be2a-116">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="4be2a-117">如果您想要利用這類功能，您應該叫用命令列中的殼層並不會使用"cmd /c MyCommand"在 Windows 或 「 / bin/sh-c MyCommand 」 在 Linux 中。</span><span class="sxs-lookup"><span data-stu-id="4be2a-117">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="4be2a-118">如果命令列參考檔案路徑，它應該使用相對路徑 （相對於工作工作目錄），或使用批次提供的環境變數 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。</span><span class="sxs-lookup"><span data-stu-id="4be2a-118">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>
+  optional: true
+  syntax:
+    content: 'commandLine?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'constraints?: TaskConstraints'
+    return:
+      type:
+      - azure-batch.TaskConstraints
+  package: azure-batch
+- uid: azure-batch.CloudTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-119">如果會執行這項工作的集區有設定 containerConfiguration，這必須設定以及。</span><span class="sxs-lookup"><span data-stu-id="4be2a-119">If the pool that will run this task has containerConfiguration set, this must be set as well.</span></span> <span data-ttu-id="4be2a-120">如果會執行這項工作的集區未設定 containerConfiguration，這不能設定。</span><span class="sxs-lookup"><span data-stu-id="4be2a-120">If the pool that will run this task doesn't have containerConfiguration set, this must not be set.</span></span> <span data-ttu-id="4be2a-121">時指定此參數，AZ_BATCH_NODE_ROOT_DIR （在節點上的 Azure Batch 根目錄） 下方的所有目錄以遞迴方式都對應至容器，所有的工作環境變數會都對應至容器，且工作命令列在容器中執行。</span><span class="sxs-lookup"><span data-stu-id="4be2a-121">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.CloudTask.creationTime
+  name: creationTime
+  fullName: creationTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'creationTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.CloudTask.dependsOn
+  name: dependsOn
+  fullName: dependsOn
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-122">這項工作會排程，直到它所依存的所有工作已順利都完成。</span><span class="sxs-lookup"><span data-stu-id="4be2a-122">This task will not be scheduled until all tasks that it depends on have completed successfully.</span></span> <span data-ttu-id="4be2a-123">如果任何這些工作會失敗，而且耗盡其重試計數，將永遠不會排定這項工作。</span><span class="sxs-lookup"><span data-stu-id="4be2a-123">If any of those tasks fail and exhaust their retry counts, this task will never be scheduled.</span></span>
+  optional: true
+  syntax:
+    content: 'dependsOn?: TaskDependencies'
+    return:
+      type:
+      - azure-batch.TaskDependencies
+  package: azure-batch
+- uid: azure-batch.CloudTask.displayName
+  name: displayName
+  fullName: displayName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-124">不需要是唯一的顯示名稱，並可包含任何 Unicode 字元，最大長度為 1024年。</span><span class="sxs-lookup"><span data-stu-id="4be2a-124">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+  optional: true
+  syntax:
+    content: 'displayName?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.CloudTask.eTag
+  name: eTag
+  fullName: eTag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-125">這是不透明的字串。</span><span class="sxs-lookup"><span data-stu-id="4be2a-125">This is an opaque string.</span></span> <span data-ttu-id="4be2a-126">您可以使用它來偵測工作是否已變更，要求之間。</span><span class="sxs-lookup"><span data-stu-id="4be2a-126">You can use it to detect whether the task has changed between requests.</span></span> <span data-ttu-id="4be2a-127">特別是，您可以會傳遞 ETag 時正在更新工作，以指定您的變更應該沒有其他人已經在同時修改工作時，才會生效。</span><span class="sxs-lookup"><span data-stu-id="4be2a-127">In particular, you can be pass the ETag when updating a task to specify that your changes should take effect only if nobody else has modified the task in the meantime.</span></span>
+  optional: true
+  syntax:
+    content: 'eTag?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.executionInfo
+  name: executionInfo
+  fullName: executionInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'executionInfo?: TaskExecutionInformation'
+    return:
+      type:
+      - azure-batch.TaskExecutionInformation
+  package: azure-batch
+- uid: azure-batch.CloudTask.exitConditions
+  name: exitConditions
+  fullName: exitConditions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-128">如何在工作完成時，應該回應的批次服務。</span><span class="sxs-lookup"><span data-stu-id="4be2a-128">How the Batch service should respond when the task completes.</span></span>
+  optional: true
+  syntax:
+    content: 'exitConditions?: ExitConditions'
+    return:
+      type:
+      - azure-batch.ExitConditions
+  package: azure-batch
+- uid: azure-batch.CloudTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-129">識別碼可包含英數字元，包括連字號及底線的任意組合，而且不能包含超過 64 個字元。</span><span class="sxs-lookup"><span data-stu-id="4be2a-129">The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters.</span></span>
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.lastModified
+  name: lastModified
+  fullName: lastModified
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'lastModified?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.CloudTask.multiInstanceSettings
+  name: multiInstanceSettings
+  fullName: multiInstanceSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'multiInstanceSettings?: MultiInstanceSettings'
+    return:
+      type:
+      - azure-batch.MultiInstanceSettings
+  package: azure-batch
+- uid: azure-batch.CloudTask.nodeInfo
+  name: nodeInfo
+  fullName: nodeInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'nodeInfo?: ComputeNodeInformation'
+    return:
+      type:
+      - azure-batch.ComputeNodeInformation
+  package: azure-batch
+- uid: azure-batch.CloudTask.outputFiles
+  name: outputFiles
+  fullName: outputFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-130">對於多重執行個體的工作，將只上傳檔案的主要工作執行於計算節點。</span><span class="sxs-lookup"><span data-stu-id="4be2a-130">For multi-instance tasks, the files will only be uploaded from the compute node on which the primary task is executed.</span></span>
+  optional: true
+  syntax:
+    content: 'outputFiles?: OutputFile[]'
+    return:
+      type:
+      - azure-batch.OutputFile[]
+  package: azure-batch
+- uid: azure-batch.CloudTask.previousState
+  name: previousState
+  fullName: previousState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"4be2a-131\">未設定這個屬性，如果工作處於其初始作用中狀態。</span><span class=\"sxs-lookup\"><span data-stu-id=\"4be2a-131\">This property is not set if the task is in its initial Active state.</span></span> <span data-ttu-id=\"4be2a-132\">可能的值包括: 'active'、 '準備'，'running'，'已完成</span><span class=\"sxs-lookup\"><span data-stu-id=\"4be2a-132\">Possible values include: 'active', 'preparing', 'running', 'completed'</span></span>"
+  optional: true
+  syntax:
+    content: 'previousState?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.previousStateTransitionTime
+  name: previousStateTransitionTime
+  fullName: previousStateTransitionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-133">未設定這個屬性，如果工作處於其初始作用中狀態。</span><span class="sxs-lookup"><span data-stu-id="4be2a-133">This property is not set if the task is in its initial Active state.</span></span>
+  optional: true
+  syntax:
+    content: 'previousStateTransitionTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.CloudTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-134">多重執行個體工作只將主要工作執行所在的計算節點下載的資源檔。</span><span class="sxs-lookup"><span data-stu-id="4be2a-134">For multi-instance tasks, the resource files will only be downloaded to the compute node on which the primary task is executed.</span></span> <span data-ttu-id="4be2a-135">沒有資源檔清單的最大大小。</span><span class="sxs-lookup"><span data-stu-id="4be2a-135">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="4be2a-136">當超過大小上限時，則要求會失敗，並回應錯誤程式碼會比較 RequestEntityTooLarge。</span><span class="sxs-lookup"><span data-stu-id="4be2a-136">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="4be2a-137">如果發生這種情況，就必須降低的 ResourceFiles 集合的大小。</span><span class="sxs-lookup"><span data-stu-id="4be2a-137">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="4be2a-138">這可以使用.zip 檔、 應用程式套件或 Docker 容器來達成。</span><span class="sxs-lookup"><span data-stu-id="4be2a-138">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.CloudTask.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"4be2a-139\">可能的值包括: 'active'、 '準備'，'running'，'已完成</span><span class=\"sxs-lookup\"><span data-stu-id=\"4be2a-139\">Possible values include: 'active', 'preparing', 'running', 'completed'</span></span>"
+  optional: true
+  syntax:
+    content: 'state?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.stateTransitionTime
+  name: stateTransitionTime
+  fullName: stateTransitionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'stateTransitionTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.CloudTask.stats
+  name: stats
+  fullName: stats
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'stats?: TaskStatistics'
+    return:
+      type:
+      - azure-batch.TaskStatistics
+  package: azure-batch
+- uid: azure-batch.CloudTask.url
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'url?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CloudTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4be2a-140">如果省略，則工作可唯一的非系統管理使用者身分執行工作。</span><span class="sxs-lookup"><span data-stu-id="4be2a-140">If omitted, the task runs as a non-administrative user unique to the task.</span></span>
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+references:
+- uid: azure-batch.AffinityInformation
+  name: AffinityInformation
+  spec.typeScript:
+  - name: AffinityInformation
+    fullName: AffinityInformation
+    uid: azure-batch.AffinityInformation
+- uid: azure-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.AuthenticationTokenSettings
+  name: AuthenticationTokenSettings
+  spec.typeScript:
+  - name: AuthenticationTokenSettings
+    fullName: AuthenticationTokenSettings
+    uid: azure-batch.AuthenticationTokenSettings
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  spec.typeScript:
+  - name: TaskConstraints
+    fullName: TaskConstraints
+    uid: azure-batch.TaskConstraints
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.TaskDependencies
+  name: TaskDependencies
+  spec.typeScript:
+  - name: TaskDependencies
+    fullName: TaskDependencies
+    uid: azure-batch.TaskDependencies
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.TaskExecutionInformation
+  name: TaskExecutionInformation
+  spec.typeScript:
+  - name: TaskExecutionInformation
+    fullName: TaskExecutionInformation
+    uid: azure-batch.TaskExecutionInformation
+- uid: azure-batch.ExitConditions
+  name: ExitConditions
+  spec.typeScript:
+  - name: ExitConditions
+    fullName: ExitConditions
+    uid: azure-batch.ExitConditions
+- uid: azure-batch.MultiInstanceSettings
+  name: MultiInstanceSettings
+  spec.typeScript:
+  - name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    uid: azure-batch.MultiInstanceSettings
+- uid: azure-batch.ComputeNodeInformation
+  name: ComputeNodeInformation
+  spec.typeScript:
+  - name: ComputeNodeInformation
+    fullName: ComputeNodeInformation
+    uid: azure-batch.ComputeNodeInformation
+- uid: azure-batch.OutputFile[]
+  name: OutputFile[]
+  spec.typeScript:
+  - name: OutputFile
+    fullName: OutputFile
+    uid: azure-batch.OutputFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.TaskStatistics
+  name: TaskStatistics
+  spec.typeScript:
+  - name: TaskStatistics
+    fullName: TaskStatistics
+    uid: azure-batch.TaskStatistics
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity

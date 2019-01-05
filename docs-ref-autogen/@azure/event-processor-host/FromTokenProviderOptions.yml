@@ -1,0 +1,183 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9baa9c766599f124110a803987ea4f1799fe0f36
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52061579"
+items:
+- uid: '@azure/event-processor-host.FromTokenProviderOptions'
+  name: FromTokenProviderOptions
+  fullName: FromTokenProviderOptions
+  children:
+  - '@azure/event-processor-host.FromTokenProviderOptions.consumerGroup'
+  - '@azure/event-processor-host.FromTokenProviderOptions.fastScanInterval'
+  - '@azure/event-processor-host.FromTokenProviderOptions.initialOffset'
+  - '@azure/event-processor-host.FromTokenProviderOptions.leaseDuration'
+  - '@azure/event-processor-host.FromTokenProviderOptions.leaseRenewInterval'
+  - '@azure/event-processor-host.FromTokenProviderOptions.onEphError'
+  - '@azure/event-processor-host.FromTokenProviderOptions.slowScanInterval'
+  - '@azure/event-processor-host.FromTokenProviderOptions.startupScanDelay'
+  - '@azure/event-processor-host.FromTokenProviderOptions.storageBlobPrefix'
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="f9565-101">描述可供建立 EventProcessorHost 從指定的權杖提供者建立時的選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f9565-101">Describes the optional parameters that can be provided for creating an EventProcessorHost while creating from the given token provider</span></span>
+  extends:
+    name: ClientOptionsBase
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.consumerGroup'
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="f9565-102">{string}[consumerGroup]事件中樞內的取用者群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f9565-102">{string} [consumerGroup] The name of the consumer group within the Event Hub.</span></span> <span data-ttu-id="f9565-103">預設值： \*\* `"$default"` \*\*。</span><span class="sxs-lookup"><span data-stu-id="f9565-103">Default value: **`"$default"`**.</span></span>'
+  optional: true
+  syntax:
+    content: 'consumerGroup?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.fastScanInterval'
+  name: fastScanInterval
+  fullName: fastScanInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f9565-104">{number}[fastScanInterval]掃描可用的磁碟分割，快慢之間有兩個可能的間隔時間。</span><span class="sxs-lookup"><span data-stu-id="f9565-104">{number} [fastScanInterval] There are two possible interval times between scans for available partitions, fast and slow.</span></span> <span data-ttu-id="f9565-105">快速 （短） 間隔\*\* `in seconds` \*\*掃描中的租用竊取已發生，升級更快的重新平衡之後使用。</span><span class="sxs-lookup"><span data-stu-id="f9565-105">The fast (short) interval **`in seconds`** is used after a scan in which lease stealing has occurred, to promote quicker rebalancing.</span></span>
+
+    <span data-ttu-id="f9565-106">預設值： \*\* `3`秒\*\*。</span><span class="sxs-lookup"><span data-stu-id="f9565-106">Default: **`3` seconds**.</span></span>
+  optional: true
+  syntax:
+    content: 'fastScanInterval?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.initialOffset'
+  name: initialOffset
+  fullName: initialOffset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9565-107">這只是 {EventPosition} initialOffset 則建立接收者後正在第一次，並在 blob 中沒有檢查點資料時使用。</span><span class="sxs-lookup"><span data-stu-id="f9565-107">{EventPosition} initialOffset This is only used when then receiver is being created for the very first time and there is no checkpoint data in the blob.</span></span> <span data-ttu-id="f9565-108">此選項才會有效請務必提供新的主機名稱，從未使用過。</span><span class="sxs-lookup"><span data-stu-id="f9565-108">For this option to be effective please make sure to provide a new hostName that was not used previously.</span></span>
+  optional: true
+  syntax:
+    content: 'initialOffset?: EventPosition'
+    return:
+      type:
+      - EventPosition
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.leaseDuration'
+  name: leaseDuration
+  fullName: leaseDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="f9565-109">{number}[leaseDuration]租用的持續時間\*\* `in seconds` \*\*除非更新到期之前。</span><span class="sxs-lookup"><span data-stu-id="f9565-109">{number} [leaseDuration] Duration of a lease **`in seconds`** before it expires unless renewed.</span></span> <span data-ttu-id="f9565-110">預設值： \*\* `30`秒**，最小值： \*\* `15`秒**，最大值： \*\* `60`秒\*\*。</span><span class="sxs-lookup"><span data-stu-id="f9565-110">Default: **`30` seconds**, Min Value: **`15` seconds**, Max value: **`60` seconds**.</span></span>'
+  optional: true
+  syntax:
+    content: 'leaseDuration?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.leaseRenewInterval'
+  name: leaseRenewInterval
+  fullName: leaseRenewInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f9565-111">{number}[leaseRenewInterval]睡眠間隔\*\* `in seconds` \*\*掃描間隔。</span><span class="sxs-lookup"><span data-stu-id="f9565-111">{number} [leaseRenewInterval] The sleep interval **`in seconds`** between scans.</span></span>
+
+    <span data-ttu-id="f9565-112">預設值： \*\* `10`秒\*\*。</span><span class="sxs-lookup"><span data-stu-id="f9565-112">Default: **`10` seconds**.</span></span>
+
+
+    <span data-ttu-id="f9565-113">可讓租用管理員實作指定 PartitionManager 頻率應該掃描租用並更新它們。</span><span class="sxs-lookup"><span data-stu-id="f9565-113">Allows a lease manager implementation to specify to PartitionManager how often it should scan leases and renew them.</span></span> <span data-ttu-id="f9565-114">若要重新發佈 neodpověděl včas 租用，主機會停止運作之後，建議相對較短的間隔，例如十秒。</span><span class="sxs-lookup"><span data-stu-id="f9565-114">In order to redistribute leases in a timely fashion after a host ceases operating, we recommend a relatively short interval, such as ten seconds.</span></span> <span data-ttu-id="f9565-115">很明顯地，它應該小於一半的租用期長度，以防止意外到期。</span><span class="sxs-lookup"><span data-stu-id="f9565-115">Obviously it should be less than half of the lease length, to prevent accidental expiration.</span></span>
+  optional: true
+  syntax:
+    content: 'leaseRenewInterval?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.onEphError'
+  name: onEphError
+  fullName: onEphError
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f9565-116">{OnEphError}[onEphError]可供接收通知的一般錯誤的錯誤處理常式。</span><span class="sxs-lookup"><span data-stu-id="f9565-116">{OnEphError} [onEphError] Error handler that can be provided to receive notifcation for general errors.</span></span>
+
+
+    <span data-ttu-id="f9565-117">錯誤可能發生在處理來自特定的事件中樞分割區的事件時傳遞給`onError`中所提供的處理常式`start()`方法。</span><span class="sxs-lookup"><span data-stu-id="f9565-117">Errors which occur while processing events from a particular EventHub partition are delivered to the `onError` handler provided in the `start()` method.</span></span> <span data-ttu-id="f9565-118">在管理資料分割或資料分割的租用時在錯誤發生時的情況下，會呼叫此處理常式。</span><span class="sxs-lookup"><span data-stu-id="f9565-118">This handler is called on occasions when an error occurs while managing partitions or leases for the partitions.</span></span>
+  optional: true
+  syntax:
+    content: 'onEphError?: OnEphError'
+    return:
+      type:
+      - '@azure/event-processor-host.OnEphError'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.slowScanInterval'
+  name: slowScanInterval
+  fullName: slowScanInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="f9565-119">{number}[slowScanInterval]緩慢 (long) 的時間間隔\*\* `in seconds` \*\*掃描中的租用竊取並未發生，以減少不必要的掃描時系統處於穩定狀態之後使用。</span><span class="sxs-lookup"><span data-stu-id="f9565-119">{number} [slowScanInterval] The slow (long) interval **`in seconds`** is used after a scan in which lease stealing did not occur, to reduce unnecessary scanning when the system is in steady state.</span></span> <span data-ttu-id="f9565-120">預設值： \*\* `5`秒\*\*。</span><span class="sxs-lookup"><span data-stu-id="f9565-120">Default: **`5` seconds**.</span></span>'
+  optional: true
+  syntax:
+    content: 'slowScanInterval?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.startupScanDelay'
+  name: startupScanDelay
+  fullName: startupScanDelay
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="f9565-121">{number}[startupScanDelay]延遲時間\*\* `in seconds` \*\*之間可用的資料分割的第一次的掃描和第二個。</span><span class="sxs-lookup"><span data-stu-id="f9565-121">{number} [startupScanDelay] The delay time **`in seconds`** between the first scan for available partitions and the second.</span></span> <span data-ttu-id="f9565-122">這是啟動最佳化可變成可見到其他主機，並藉此取得更精確的主機數目計數在系統中，才能嘗試估計其應該擁有多少個資料分割的個別主機的一部分。</span><span class="sxs-lookup"><span data-stu-id="f9565-122">This is part of a startup optimization which allows individual hosts to become visible to other hosts, and thereby get a more accurate count of the number of hosts in the system, before they try to estimate how many partitions they should own.</span></span> <span data-ttu-id="f9565-123">預設值： \*\* `30`秒\*\*。</span><span class="sxs-lookup"><span data-stu-id="f9565-123">Default: **`30` seconds**.</span></span>'
+  optional: true
+  syntax:
+    content: 'startupScanDelay?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions.storageBlobPrefix'
+  name: storageBlobPrefix
+  fullName: storageBlobPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9565-124">{string}[storageBlobPrefix]命名的儲存體容器內的 blob 時使用的前置詞。</span><span class="sxs-lookup"><span data-stu-id="f9565-124">{string} [storageBlobPrefix] Prefix used when naming blobs within the storage container.</span></span>
+  optional: true
+  syntax:
+    content: 'storageBlobPrefix?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.OnEphError'
+  name: OnEphError
+  spec.typeScript:
+  - name: OnEphError
+    fullName: OnEphError
+    uid: '@azure/event-processor-host.OnEphError'

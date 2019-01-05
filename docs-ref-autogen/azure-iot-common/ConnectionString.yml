@@ -1,0 +1,177 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3b28fb8cd37f73cef606dd8efc6359565c781ca1
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53677117"
+items:
+- uid: azure-iot-common.ConnectionString
+  name: ConnectionString
+  fullName: ConnectionString
+  children:
+  - azure-iot-common.ConnectionString.DeviceId
+  - azure-iot-common.ConnectionString.GatewayHostName
+  - azure-iot-common.ConnectionString.HostName
+  - azure-iot-common.ConnectionString.ModuleId
+  - azure-iot-common.ConnectionString.parse
+  - azure-iot-common.ConnectionString.SharedAccessKey
+  - azure-iot-common.ConnectionString.SharedAccessKeyName
+  - azure-iot-common.ConnectionString.SharedAccessSignature
+  - azure-iot-common.ConnectionString.x509
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="30eaa-101">描述啟用連接到 Azure IoT 中樞的裝置或雲端應用程式的參數。</span><span class="sxs-lookup"><span data-stu-id="30eaa-101">Describes the parameters that enable a device or cloud application to connect to an Azure IoT hub.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.DeviceId
+  name: DeviceId
+  fullName: DeviceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="30eaa-102">唯一裝置識別碼，因為它存在於裝置身分識別登錄中。</span><span class="sxs-lookup"><span data-stu-id="30eaa-102">Unique device identifier as it exists in the device identity registry.</span></span> <span data-ttu-id="30eaa-103">這只用於裝置連接字串。</span><span class="sxs-lookup"><span data-stu-id="30eaa-103">This is only used for device connection strings.</span></span>
+  optional: true
+  syntax:
+    content: 'DeviceId?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.GatewayHostName
+  name: GatewayHostName
+  fullName: GatewayHostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="30eaa-104">IP 位址或網際網路使用做為裝置或通訊協定閘道主機電腦的名稱。</span><span class="sxs-lookup"><span data-stu-id="30eaa-104">IP address or internet name of the host machine working as a device or protocol gateway.</span></span>  <span data-ttu-id="30eaa-105">與 Azure Edge 裝置通訊時，會使用它。</span><span class="sxs-lookup"><span data-stu-id="30eaa-105">Used when communicating with Azure Edge devices.</span></span>
+  optional: true
+  syntax:
+    content: 'GatewayHostName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.HostName
+  name: HostName
+  fullName: HostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="30eaa-106">Azure IoT 中樞主機名稱。</span><span class="sxs-lookup"><span data-stu-id="30eaa-106">Hostname of the Azure IoT hub.</span></span>
+  optional: true
+  syntax:
+    content: 'HostName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.ModuleId
+  name: ModuleId
+  fullName: ModuleId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="30eaa-107">唯一的模組識別項，因為它存在於裝置身分識別登錄中。</span><span class="sxs-lookup"><span data-stu-id="30eaa-107">Unique module identifier as it exists in the device identity registry.</span></span> <span data-ttu-id="30eaa-108">這只用於裝置連接字串。</span><span class="sxs-lookup"><span data-stu-id="30eaa-108">This is only used for device connection strings.</span></span>
+  optional: true
+  syntax:
+    content: 'ModuleId?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.parse
+  name: parse(string, string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="30eaa-109">將字串剖析，並傳回對應<xref:azure-iot-common.ConnectionString>物件。</span><span class="sxs-lookup"><span data-stu-id="30eaa-109">Parses a string and returns the corresponding <xref:azure-iot-common.ConnectionString> object.</span></span>
+  syntax:
+    content: 'static function parse(source: string, requiredFields?: string[])'
+    parameters:
+    - id: source
+      type:
+      - string
+      description: <span data-ttu-id="30eaa-110">擷取連接字串的字串</span><span class="sxs-lookup"><span data-stu-id="30eaa-110">string from which the connection string will be extracted</span></span>
+    - id: requiredFields
+      type:
+      - string[]
+      description: >
+        <span data-ttu-id="30eaa-111">列出預期要尋找的欄位的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="30eaa-111">array of strings listing the fields that are expected to be found.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-iot-common.ConnectionString
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.SharedAccessKey
+  name: SharedAccessKey
+  fullName: SharedAccessKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="30eaa-112">用來建立共用的存取簽章權杖，接著用來驗證連線的對稱金鑰。</span><span class="sxs-lookup"><span data-stu-id="30eaa-112">Symmetric key used to create shared access signature tokens that are in turn used to authenticate the connection.</span></span> <span data-ttu-id="30eaa-113">相關聯的特定裝置或特定服務的原則。</span><span class="sxs-lookup"><span data-stu-id="30eaa-113">Associated either with a specific device or a specific service policy.</span></span>
+  optional: true
+  syntax:
+    content: 'SharedAccessKey?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.SharedAccessKeyName
+  name: SharedAccessKeyName
+  fullName: SharedAccessKeyName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="30eaa-114">用來連線到 Azure IoT 中樞的存取原則的名稱。</span><span class="sxs-lookup"><span data-stu-id="30eaa-114">Name of the access policy used to connect to the Azure IoT hub.</span></span> <span data-ttu-id="30eaa-115">只使用服務 SDK，未使用裝置 sdk (使用`DeviceId`改為)。</span><span class="sxs-lookup"><span data-stu-id="30eaa-115">used only in the case of the service SDK, unused with the Device SDK (which uses `DeviceId` instead).</span></span>
+  optional: true
+  syntax:
+    content: 'SharedAccessKeyName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.SharedAccessSignature
+  name: SharedAccessSignature
+  fullName: SharedAccessSignature
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="30eaa-116">共用的存取簽章會封裝在 IoT 中樞上的 「 裝置連線 」 權限。</span><span class="sxs-lookup"><span data-stu-id="30eaa-116">A shared access signature which encapsulates "device connect" permissions on an IoT hub.</span></span>
+  optional: true
+  syntax:
+    content: 'SharedAccessSignature?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.x509
+  name: x509
+  fullName: x509
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="30eaa-117">這個屬性才有裝置使用 x509 憑證來進行驗證，若有的話，會設定為 True。</span><span class="sxs-lookup"><span data-stu-id="30eaa-117">This property exists only if a device uses x509 certificates for authentication and if it exists, will be set to True.</span></span>
+  optional: true
+  syntax:
+    content: 'x509?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.ConnectionString
+  name: ConnectionString
+  spec.typeScript:
+  - name: ConnectionString
+    fullName: ConnectionString
+    uid: azure-iot-common.ConnectionString

@@ -1,0 +1,299 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b689168bdbe39b7bbe6c1af6f526770fde446576
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53663012"
+items:
+- uid: azure-batch.JobManagerTask
+  name: JobManagerTask
+  fullName: JobManagerTask
+  children:
+  - azure-batch.JobManagerTask.allowLowPriorityNode
+  - azure-batch.JobManagerTask.applicationPackageReferences
+  - azure-batch.JobManagerTask.authenticationTokenSettings
+  - azure-batch.JobManagerTask.commandLine
+  - azure-batch.JobManagerTask.constraints
+  - azure-batch.JobManagerTask.containerSettings
+  - azure-batch.JobManagerTask.displayName
+  - azure-batch.JobManagerTask.environmentSettings
+  - azure-batch.JobManagerTask.id
+  - azure-batch.JobManagerTask.killJobOnCompletion
+  - azure-batch.JobManagerTask.outputFiles
+  - azure-batch.JobManagerTask.resourceFiles
+  - azure-batch.JobManagerTask.runExclusive
+  - azure-batch.JobManagerTask.userIdentity
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="1edc1-101">建立作業時，作業管理員工作會自動啟動。</span><span class="sxs-lookup"><span data-stu-id="1edc1-101">The Job Manager task is automatically started when the job is created.</span></span> <span data-ttu-id="1edc1-102">Batch 服務會嘗試排程作業管理員工作之前工作中的任何其他工作。</span><span class="sxs-lookup"><span data-stu-id="1edc1-102">The Batch service tries to schedule the Job Manager task before any other tasks in the job.</span></span> <span data-ttu-id="1edc1-103">當縮小集區，Batch 服務會嘗試保留作業管理員工作的時間愈長愈 （也就是執行 「 一般的 」 工作會移除之前執行的作業管理員工作的節點的節點） 的執行所在的計算節點。</span><span class="sxs-lookup"><span data-stu-id="1edc1-103">When shrinking a pool, the Batch service tries to preserve compute nodes where Job Manager tasks are running for as long as possible (that is, nodes running 'normal' tasks are removed before nodes running Job Manager tasks).</span></span> <span data-ttu-id="1edc1-104">當作業管理員工作失敗，且必須重新啟動時，系統就會嘗試排程最高優先順序。</span><span class="sxs-lookup"><span data-stu-id="1edc1-104">When a Job Manager task fails and needs to be restarted, the system tries to schedule it at the highest priority.</span></span> <span data-ttu-id="1edc1-105">如果不沒有可用的任何閒置的節點，系統可能會終止正在執行的工作集區中的其中一個，並將它傳回給佇列中，以挪出空間，作業管理員工作，才能重新啟動。</span><span class="sxs-lookup"><span data-stu-id="1edc1-105">If there are no idle nodes available, the system may terminate one of the running tasks in the pool and return it to the queue in order to make room for the Job Manager task to restart.</span></span> <span data-ttu-id="1edc1-106">請注意，在一項作業的作業管理員工作不會不優先於其他作業中的工作。</span><span class="sxs-lookup"><span data-stu-id="1edc1-106">Note that a Job Manager task in one job does not have priority over tasks in other jobs.</span></span> <span data-ttu-id="1edc1-107">在工作中，被觀察工作層級優先順序。</span><span class="sxs-lookup"><span data-stu-id="1edc1-107">Across jobs, only job level priorities are observed.</span></span> <span data-ttu-id="1edc1-108">例如，如果作業管理員在優先權 0 的工作，就必須重新啟動，它不會顯示優先權 1 工作的工作。</span><span class="sxs-lookup"><span data-stu-id="1edc1-108">For example, if a Job Manager in a priority 0 job needs to be restarted, it will not displace tasks of a priority 1 job.</span></span> <span data-ttu-id="1edc1-109">在計算節點上觸發復原作業時，批次會重試工作。</span><span class="sxs-lookup"><span data-stu-id="1edc1-109">Batch will retry tasks when a recovery operation is triggered on a compute node.</span></span> <span data-ttu-id="1edc1-110">復原作業的範例包括 （但不限於） 將狀況不良的計算節點重新開機或計算節點消失，因為主機失敗時。</span><span class="sxs-lookup"><span data-stu-id="1edc1-110">Examples of recovery operations include (but are not limited to) when an unhealthy compute node is rebooted or a compute node disappeared due to host failure.</span></span> <span data-ttu-id="1edc1-111">因為復原作業在獨立的而且不會納入 maxTaskRetryCount 會重試。</span><span class="sxs-lookup"><span data-stu-id="1edc1-111">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="1edc1-112">即使 maxTaskRetryCount 為 0，因為復原作業內部重試可能會發生。</span><span class="sxs-lookup"><span data-stu-id="1edc1-112">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="1edc1-113">因為這個緣故，所有工作都應該具有等冪性。</span><span class="sxs-lookup"><span data-stu-id="1edc1-113">Because of this, all tasks should be idempotent.</span></span> <span data-ttu-id="1edc1-114">這表示工作需要容許正在中斷並重新啟動而不會造成任何損毀或重複的資料。</span><span class="sxs-lookup"><span data-stu-id="1edc1-114">This means tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="1edc1-115">最佳做法長時間執行的工作是使用某種形式的檢查點。</span><span class="sxs-lookup"><span data-stu-id="1edc1-115">The best practice for long running tasks is to use some form of checkpointing.</span></span>
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.allowLowPriorityNode
+  name: allowLowPriorityNode
+  fullName: allowLowPriorityNode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-116">預設值為 true。</span><span class="sxs-lookup"><span data-stu-id="1edc1-116">The default value is true.</span></span>
+  optional: true
+  syntax:
+    content: 'allowLowPriorityNode?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.applicationPackageReferences
+  name: applicationPackageReferences
+  fullName: applicationPackageReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-117">應用程式封裝會下載並部署到共用目錄，而不將工作目錄的工作。</span><span class="sxs-lookup"><span data-stu-id="1edc1-117">Application packages are downloaded and deployed to a shared directory, not the task working directory.</span></span> <span data-ttu-id="1edc1-118">因此，如果所參考的套件已在計算節點上，而是最新狀態，則不會被重新下載;會使用計算節點上現有的複本。</span><span class="sxs-lookup"><span data-stu-id="1edc1-118">Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used.</span></span> <span data-ttu-id="1edc1-119">如果參考的應用程式套件無法安裝，例如因為封裝已被刪除，或因為下載失敗，則工作會失敗。</span><span class="sxs-lookup"><span data-stu-id="1edc1-119">If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-batch.ApplicationPackageReference[]
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.authenticationTokenSettings
+  name: authenticationTokenSettings
+  fullName: authenticationTokenSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-120">如果設定這個屬性，則 Batch 服務會提供可用來驗證批次服務作業，而不需要帳戶存取金鑰驗證權杖的工作。</span><span class="sxs-lookup"><span data-stu-id="1edc1-120">If this property is set, the Batch service provides the task with an authentication token which can be used to authenticate Batch service operations without requiring an account access key.</span></span> <span data-ttu-id="1edc1-121">提供的語彙基元是透過 AZ_BATCH_AUTHENTICATION_TOKEN 環境變數。</span><span class="sxs-lookup"><span data-stu-id="1edc1-121">The token is provided via the AZ_BATCH_AUTHENTICATION_TOKEN environment variable.</span></span> <span data-ttu-id="1edc1-122">工作可以執行使用權杖的作業會視設定而定。</span><span class="sxs-lookup"><span data-stu-id="1edc1-122">The operations that the task can carry out using the token depend on the settings.</span></span> <span data-ttu-id="1edc1-123">例如，工作可以要求作業的權限，才能將其他工作新增至作業中，或檢查的作業，或在作業下的其他工作的狀態。</span><span class="sxs-lookup"><span data-stu-id="1edc1-123">For example, a task can request job permissions in order to add other tasks to the job, or check the status of the job or of other tasks under the job.</span></span>
+  optional: true
+  syntax:
+    content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+    return:
+      type:
+      - azure-batch.AuthenticationTokenSettings
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-124">命令列不會在殼層中執行，因此無法利用 shell 功能，例如環境變數擴充。</span><span class="sxs-lookup"><span data-stu-id="1edc1-124">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="1edc1-125">如果您想要利用這類功能，您應該叫用命令列中的殼層並不會使用"cmd /c MyCommand"在 Windows 或 「 / bin/sh-c MyCommand 」 在 Linux 中。</span><span class="sxs-lookup"><span data-stu-id="1edc1-125">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="1edc1-126">如果命令列參考檔案路徑，它應該使用相對路徑 （相對於工作工作目錄），或使用批次提供的環境變數 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。</span><span class="sxs-lookup"><span data-stu-id="1edc1-126">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'constraints?: TaskConstraints'
+    return:
+      type:
+      - azure-batch.TaskConstraints
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-127">如果會執行這項工作的集區有設定 containerConfiguration，這必須設定以及。</span><span class="sxs-lookup"><span data-stu-id="1edc1-127">If the pool that will run this task has containerConfiguration set, this must be set as well.</span></span> <span data-ttu-id="1edc1-128">如果會執行這項工作的集區未設定 containerConfiguration，這不能設定。</span><span class="sxs-lookup"><span data-stu-id="1edc1-128">If the pool that will run this task doesn't have containerConfiguration set, this must not be set.</span></span> <span data-ttu-id="1edc1-129">時指定此參數，AZ_BATCH_NODE_ROOT_DIR （在節點上的 Azure Batch 根目錄） 下方的所有目錄以遞迴方式都對應至容器，所有的工作環境變數會都對應至容器，且工作命令列在容器中執行。</span><span class="sxs-lookup"><span data-stu-id="1edc1-129">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.displayName
+  name: displayName
+  fullName: displayName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-130">它不需要是唯一可以包含任何 Unicode 字元，最大長度為 1024年。</span><span class="sxs-lookup"><span data-stu-id="1edc1-130">It need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+  optional: true
+  syntax:
+    content: 'displayName?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-131">識別碼可包含英數字元，包括連字號及底線的任意組合，而且不能包含超過 64 個字元。</span><span class="sxs-lookup"><span data-stu-id="1edc1-131">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span>
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.killJobOnCompletion
+  name: killJobOnCompletion
+  fullName: killJobOnCompletion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-132">如果為 true，作業管理員工作完成時，Batch 服務標記為作業完成。</span><span class="sxs-lookup"><span data-stu-id="1edc1-132">If true, when the Job Manager task completes, the Batch service marks the job as complete.</span></span> <span data-ttu-id="1edc1-133">如果 （除了作業解除） 之外，這次仍在執行任何工作，這些工作將會終止。</span><span class="sxs-lookup"><span data-stu-id="1edc1-133">If any tasks are still running at this time (other than Job Release), those tasks are terminated.</span></span> <span data-ttu-id="1edc1-134">如果為 false，作業管理員工作完成並不會影響作業狀態。</span><span class="sxs-lookup"><span data-stu-id="1edc1-134">If false, the completion of the Job Manager task does not affect the job status.</span></span> <span data-ttu-id="1edc1-135">在此情況下，您應該使用 onAllTasksComplete 屬性來終止作業，或者具有用戶端或使用者明確終止作業。</span><span class="sxs-lookup"><span data-stu-id="1edc1-135">In this case, you should either use the onAllTasksComplete attribute to terminate the job, or have a client or user terminate the job explicitly.</span></span> <span data-ttu-id="1edc1-136">這個範例是，如果作業管理員會建立一組工作，但在執行，則會採用任何進一步的角色。</span><span class="sxs-lookup"><span data-stu-id="1edc1-136">An example of this is if the Job Manager creates a set of tasks but then takes no further role in their execution.</span></span> <span data-ttu-id="1edc1-137">預設值為 true。</span><span class="sxs-lookup"><span data-stu-id="1edc1-137">The default value is true.</span></span> <span data-ttu-id="1edc1-138">如果您使用的 onAllTasksComplete 和 onTaskFailure 屬性控制作業的存留期，以及使用作業管理員工作只為建立工作的作業 （不是以監視進度），然後務必將 「 killjoboncompletion 」 設定為 false。</span><span class="sxs-lookup"><span data-stu-id="1edc1-138">If you are using the onAllTasksComplete and onTaskFailure attributes to control job lifetime, and using the Job Manager task only to create the tasks for the job (not to monitor progress), then it is important to set killJobOnCompletion to false.</span></span>
+  optional: true
+  syntax:
+    content: 'killJobOnCompletion?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.outputFiles
+  name: outputFiles
+  fullName: outputFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-139">對於多重執行個體的工作，將只上傳檔案的主要工作執行於計算節點。</span><span class="sxs-lookup"><span data-stu-id="1edc1-139">For multi-instance tasks, the files will only be uploaded from the compute node on which the primary task is executed.</span></span>
+  optional: true
+  syntax:
+    content: 'outputFiles?: OutputFile[]'
+    return:
+      type:
+      - azure-batch.OutputFile[]
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="1edc1-140">這個項目底下所列的檔案位於工作的工作目錄。</span><span class="sxs-lookup"><span data-stu-id="1edc1-140">Files listed under this element are located in the task's working directory.</span></span>
+
+    <span data-ttu-id="1edc1-141">沒有資源檔清單的最大大小。</span><span class="sxs-lookup"><span data-stu-id="1edc1-141">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="1edc1-142">當超過大小上限時，則要求會失敗，並回應錯誤程式碼會比較 RequestEntityTooLarge。</span><span class="sxs-lookup"><span data-stu-id="1edc1-142">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="1edc1-143">如果發生這種情況，就必須降低的 ResourceFiles 集合的大小。</span><span class="sxs-lookup"><span data-stu-id="1edc1-143">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="1edc1-144">這可以使用.zip 檔、 應用程式套件或 Docker 容器來達成。</span><span class="sxs-lookup"><span data-stu-id="1edc1-144">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.runExclusive
+  name: runExclusive
+  fullName: runExclusive
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-145">如果為 true，沒有其他工作會針對相同的計算節點上執行，只要作業管理員正在執行。</span><span class="sxs-lookup"><span data-stu-id="1edc1-145">If true, no other tasks will run on the same compute node for as long as the Job Manager is running.</span></span> <span data-ttu-id="1edc1-146">如果為 false，其他工作可以同時執行作業管理員與計算節點上。</span><span class="sxs-lookup"><span data-stu-id="1edc1-146">If false, other tasks can run simultaneously with the Job Manager on a compute node.</span></span> <span data-ttu-id="1edc1-147">作業管理員工作通常不利於節點的並行工作限制，所以這只適用於節點允許多個並行的工作。</span><span class="sxs-lookup"><span data-stu-id="1edc1-147">The Job Manager task counts normally against the node's concurrent task limit, so this is only relevant if the node allows multiple concurrent tasks.</span></span> <span data-ttu-id="1edc1-148">預設值為 true。</span><span class="sxs-lookup"><span data-stu-id="1edc1-148">The default value is true.</span></span>
+  optional: true
+  syntax:
+    content: 'runExclusive?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="1edc1-149">如果省略，則工作可唯一的非系統管理使用者身分執行工作。</span><span class="sxs-lookup"><span data-stu-id="1edc1-149">If omitted, the task runs as a non-administrative user unique to the task.</span></span>
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+references:
+- uid: azure-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.AuthenticationTokenSettings
+  name: AuthenticationTokenSettings
+  spec.typeScript:
+  - name: AuthenticationTokenSettings
+    fullName: AuthenticationTokenSettings
+    uid: azure-batch.AuthenticationTokenSettings
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  spec.typeScript:
+  - name: TaskConstraints
+    fullName: TaskConstraints
+    uid: azure-batch.TaskConstraints
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.OutputFile[]
+  name: OutputFile[]
+  spec.typeScript:
+  - name: OutputFile
+    fullName: OutputFile
+    uid: azure-batch.OutputFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity
