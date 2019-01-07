@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0ad49539905ab6480d3da4a3d778658b8a960169
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52024972"
+items:
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo
+  name: DeployedStatelessServiceInstanceDetailInfo
+  fullName: DeployedStatelessServiceInstanceDetailInfo
+  children:
+  - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+  - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="ef331-101">執行程式碼封裝中的無狀態執行個體的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ef331-101">Information about a stateless instance running in a code package.</span></span> <span data-ttu-id="ef331-102">請注意 DeployedServiceReplicaQueryResult 將包含重複的資料，例如 ServiceKind、 ServiceName、 PartitionId 和 InstanceId。</span><span class="sxs-lookup"><span data-stu-id="ef331-102">Note that DeployedServiceReplicaQueryResult will contain duplicate data like ServiceKind, ServiceName, PartitionId and InstanceId.</span></span>
+  extends:
+    name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+  name: deployedServiceReplicaQueryResult
+  fullName: deployedServiceReplicaQueryResult
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ef331-103">節點上所部署的無狀態服務執行個體的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ef331-103">Information about a stateless service instance deployed on a node.</span></span>
+  optional: true
+  syntax:
+    content: 'deployedServiceReplicaQueryResult?: DeployedStatelessServiceInstanceInfo'
+    return:
+      type:
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ef331-104">無狀態服務執行個體的識別碼。</span><span class="sxs-lookup"><span data-stu-id="ef331-104">Id of a stateless service instance.</span></span> <span data-ttu-id="ef331-105">Service Fabric 會使用 InstanceId 來唯一識別的無狀態服務分割區的執行個體。</span><span class="sxs-lookup"><span data-stu-id="ef331-105">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="ef331-106">它是資料分割內唯一的並不會變更執行個體的存留期。</span><span class="sxs-lookup"><span data-stu-id="ef331-106">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="ef331-107">如果在相同或不同的節點上，執行個體已容錯移轉，它會取得不同值的執行個體識別碼。</span><span class="sxs-lookup"><span data-stu-id="ef331-107">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  name: DeployedServiceReplicaDetailInfo
+  spec.typeScript:
+  - name: DeployedServiceReplicaDetailInfo
+    fullName: DeployedServiceReplicaDetailInfo
+    uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
+  name: DeployedStatelessServiceInstanceInfo
+  spec.typeScript:
+  - name: DeployedStatelessServiceInstanceInfo
+    fullName: DeployedStatelessServiceInstanceInfo
+    uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
