@@ -1,0 +1,167 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8c0855b5752ea34dec83e7991e32c88757d548a3
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55048089"
+items:
+- uid: '@azure/arm-network.VirtualNetworkTap'
+  name: VirtualNetworkTap
+  fullName: VirtualNetworkTap
+  children:
+  - '@azure/arm-network.VirtualNetworkTap.destinationLoadBalancerFrontEndIPConfiguration'
+  - '@azure/arm-network.VirtualNetworkTap.destinationNetworkInterfaceIPConfiguration'
+  - '@azure/arm-network.VirtualNetworkTap.destinationPort'
+  - '@azure/arm-network.VirtualNetworkTap.etag'
+  - '@azure/arm-network.VirtualNetworkTap.networkInterfaceTapConfigurations'
+  - '@azure/arm-network.VirtualNetworkTap.provisioningState'
+  - '@azure/arm-network.VirtualNetworkTap.resourceGuid'
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="c7b0b-101">Virtual Network Tap 的資源</span><span class="sxs-lookup"><span data-stu-id="c7b0b-101">Virtual Network Tap resource</span></span>
+  extends:
+    name: '@azure/arm-network.Resource'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.VirtualNetworkTap.destinationLoadBalancerFrontEndIPConfiguration'
+  name: destinationLoadBalancerFrontEndIPConfiguration
+  fullName: destinationLoadBalancerFrontEndIPConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c7b0b-102">將會收到點選在內部負載平衡器的私人 IP 位址來參考</span><span class="sxs-lookup"><span data-stu-id="c7b0b-102">The reference to the private IP address on the internal Load Balancer that will receive the tap</span></span>
+  optional: true
+  syntax:
+    content: 'destinationLoadBalancerFrontEndIPConfiguration?: FrontendIPConfiguration'
+    return:
+      type:
+      - '@azure/arm-network.FrontendIPConfiguration'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.VirtualNetworkTap.destinationNetworkInterfaceIPConfiguration'
+  name: destinationNetworkInterfaceIPConfiguration
+  fullName: destinationNetworkInterfaceIPConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c7b0b-103">私人 IP 位址將會收到點選的收集器 nic 參考</span><span class="sxs-lookup"><span data-stu-id="c7b0b-103">The reference to the private IP Address of the collector nic that will receive the tap</span></span>
+  optional: true
+  syntax:
+    content: 'destinationNetworkInterfaceIPConfiguration?: NetworkInterfaceIPConfiguration'
+    return:
+      type:
+      - '@azure/arm-network.NetworkInterfaceIPConfiguration'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.VirtualNetworkTap.destinationPort'
+  name: destinationPort
+  fullName: destinationPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c7b0b-104">將會收到點選的流量 VXLAN 目的地連接埠。</span><span class="sxs-lookup"><span data-stu-id="c7b0b-104">The VXLAN destination port that will receive the tapped traffic.</span></span>
+  optional: true
+  syntax:
+    content: 'destinationPort?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.VirtualNetworkTap.etag'
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c7b0b-105">取得唯一的唯讀字串，每當更新資源，就會變更。</span><span class="sxs-lookup"><span data-stu-id="c7b0b-105">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
+  optional: true
+  syntax:
+    content: 'etag?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.VirtualNetworkTap.networkInterfaceTapConfigurations'
+  name: networkInterfaceTapConfigurations
+  fullName: networkInterfaceTapConfigurations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="c7b0b-106">指定需要要點選的網路介面 IP 設定的資源識別碼的清單。</span><span class="sxs-lookup"><span data-stu-id="c7b0b-106">Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.</span></span>
+
+    <span data-ttu-id="c7b0b-107">**注意：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="c7b0b-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+  optional: true
+  syntax:
+    content: 'networkInterfaceTapConfigurations?: NetworkInterfaceTapConfiguration[]'
+    return:
+      type:
+      - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.VirtualNetworkTap.provisioningState'
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="c7b0b-108">虛擬網路 tap 佈建狀態。</span><span class="sxs-lookup"><span data-stu-id="c7b0b-108">The provisioning state of the virtual network tap.</span></span> <span data-ttu-id="c7b0b-109">可能的值包括：「 更新 」、 「 刪除中 」，和 「 失敗 」。</span><span class="sxs-lookup"><span data-stu-id="c7b0b-109">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>
+
+    <span data-ttu-id="c7b0b-110">**注意：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="c7b0b-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+  optional: true
+  syntax:
+    content: 'provisioningState?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.VirtualNetworkTap.resourceGuid'
+  name: resourceGuid
+  fullName: resourceGuid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="c7b0b-111">虛擬網路點選的 resourceGuid 屬性。</span><span class="sxs-lookup"><span data-stu-id="c7b0b-111">The resourceGuid property of the virtual network tap.</span></span>
+
+    <span data-ttu-id="c7b0b-112">**注意：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="c7b0b-112">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+  optional: true
+  syntax:
+    content: 'resourceGuid?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+references:
+- uid: '@azure/arm-network.Resource'
+  name: Resource
+  spec.typeScript:
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/arm-network.Resource'
+- uid: '@azure/arm-network.FrontendIPConfiguration'
+  name: FrontendIPConfiguration
+  spec.typeScript:
+  - name: FrontendIPConfiguration
+    fullName: FrontendIPConfiguration
+    uid: '@azure/arm-network.FrontendIPConfiguration'
+- uid: '@azure/arm-network.NetworkInterfaceIPConfiguration'
+  name: NetworkInterfaceIPConfiguration
+  spec.typeScript:
+  - name: NetworkInterfaceIPConfiguration
+    fullName: NetworkInterfaceIPConfiguration
+    uid: '@azure/arm-network.NetworkInterfaceIPConfiguration'
+- uid: '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+  name: NetworkInterfaceTapConfiguration[]
+  spec.typeScript:
+  - name: NetworkInterfaceTapConfiguration
+    fullName: NetworkInterfaceTapConfiguration
+    uid: '@azure/arm-network.NetworkInterfaceTapConfiguration'
+  - name: '[]'
+    fullName: '[]'

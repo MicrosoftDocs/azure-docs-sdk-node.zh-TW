@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: a8794a7d36fbb3ffd77fc3fdf74b42ce3606c124
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: 23575bad44cf627157dbabe428b16e7ab7b9127c
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53691735"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55048059"
 items:
 - uid: '@azure/arm-network.NetworkManagementClient'
   name: NetworkManagementClient
@@ -22,6 +22,7 @@ items:
   - '@azure/arm-network.NetworkManagementClient.checkDnsNameAvailability_2'
   - '@azure/arm-network.NetworkManagementClient.checkDnsNameAvailability_1'
   - '@azure/arm-network.NetworkManagementClient.connectionMonitors'
+  - '@azure/arm-network.NetworkManagementClient.ddosCustomPolicies'
   - '@azure/arm-network.NetworkManagementClient.ddosProtectionPlans'
   - '@azure/arm-network.NetworkManagementClient.defaultSecurityRules'
   - '@azure/arm-network.NetworkManagementClient.expressRouteCircuitAuthorizations'
@@ -209,18 +210,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5493-101">檢查 cloudapp.azure.com 區域中的網域名稱是否可供使用。</span><span class="sxs-lookup"><span data-stu-id="b5493-101">Checks whether a domain name in the cloudapp.azure.com zone is available for use.</span></span>
+  summary: <span data-ttu-id="7d3aa-101">檢查 cloudapp.azure.com 區域中的網域名稱是否可供使用。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-101">Checks whether a domain name in the cloudapp.azure.com zone is available for use.</span></span>
   syntax:
     content: 'function checkDnsNameAvailability(location: string, domainNameLabel: string, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: location
       type:
       - string
-      description: <span data-ttu-id="b5493-102">網域名稱的位置。</span><span class="sxs-lookup"><span data-stu-id="b5493-102">The location of the domain name.</span></span>
+      description: <span data-ttu-id="7d3aa-102">網域名稱的位置。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-102">The location of the domain name.</span></span>
     - id: domainNameLabel
       type:
       - string
-      description: '<span data-ttu-id="b5493-103">要驗證的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="b5493-103">The domain name to be verified.</span></span> <span data-ttu-id="b5493-104">它必須符合下列規則運算式: ^ [a-z] [-a-za-z0-9-]{1,61}[-a-za-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="b5493-104">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
+      description: '<span data-ttu-id="7d3aa-103">要驗證的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-103">The domain name to be verified.</span></span> <span data-ttu-id="7d3aa-104">它必須符合下列規則運算式: ^ [a-z] [-a-za-z0-9-]{1,61}[-a-za-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-104">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -243,20 +244,20 @@ items:
     - id: location
       type:
       - string
-      description: <span data-ttu-id="b5493-105">網域名稱的位置。</span><span class="sxs-lookup"><span data-stu-id="b5493-105">The location of the domain name.</span></span>
+      description: <span data-ttu-id="7d3aa-105">網域名稱的位置。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-105">The location of the domain name.</span></span>
     - id: domainNameLabel
       type:
       - string
-      description: '<span data-ttu-id="b5493-106">要驗證的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="b5493-106">The domain name to be verified.</span></span> <span data-ttu-id="b5493-107">它必須符合下列規則運算式: ^ [a-z] [-a-za-z0-9-]{1,61}[-a-za-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="b5493-107">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
+      description: '<span data-ttu-id="7d3aa-106">要驗證的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-106">The domain name to be verified.</span></span> <span data-ttu-id="7d3aa-107">它必須符合下列規則運算式: ^ [a-z] [-a-za-z0-9-]{1,61}[-a-za-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-107">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
     - id: options
       type:
       - RequestOptionsBase
-      description: <span data-ttu-id="b5493-108">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="b5493-108">The optional parameters</span></span>
+      description: <span data-ttu-id="7d3aa-108">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="7d3aa-108">The optional parameters</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.DnsNameAvailabilityResult>
       description: >
-        <span data-ttu-id="b5493-109">回呼</span><span class="sxs-lookup"><span data-stu-id="b5493-109">The callback</span></span>
+        <span data-ttu-id="7d3aa-109">回呼</span><span class="sxs-lookup"><span data-stu-id="7d3aa-109">The callback</span></span>
     return:
       type:
       - Promise<Models.CheckDnsNameAvailabilityResponse>
@@ -274,16 +275,16 @@ items:
     - id: location
       type:
       - string
-      description: <span data-ttu-id="b5493-110">網域名稱的位置。</span><span class="sxs-lookup"><span data-stu-id="b5493-110">The location of the domain name.</span></span>
+      description: <span data-ttu-id="7d3aa-110">網域名稱的位置。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-110">The location of the domain name.</span></span>
     - id: domainNameLabel
       type:
       - string
-      description: '<span data-ttu-id="b5493-111">要驗證的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="b5493-111">The domain name to be verified.</span></span> <span data-ttu-id="b5493-112">它必須符合下列規則運算式: ^ [a-z] [-a-za-z0-9-]{1,61}[-a-za-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="b5493-112">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
+      description: '<span data-ttu-id="7d3aa-111">要驗證的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-111">The domain name to be verified.</span></span> <span data-ttu-id="7d3aa-112">它必須符合下列規則運算式: ^ [a-z] [-a-za-z0-9-]{1,61}[-a-za-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-112">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.DnsNameAvailabilityResult>
       description: >
-        <span data-ttu-id="b5493-113">回呼</span><span class="sxs-lookup"><span data-stu-id="b5493-113">The callback</span></span>
+        <span data-ttu-id="7d3aa-113">回呼</span><span class="sxs-lookup"><span data-stu-id="7d3aa-113">The callback</span></span>
     return:
       type:
       - Promise<Models.CheckDnsNameAvailabilityResponse>
@@ -301,6 +302,20 @@ items:
     return:
       type:
       - '@azure/arm-network.ConnectionMonitors'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkManagementClient.ddosCustomPolicies'
+  name: ddosCustomPolicies
+  fullName: ddosCustomPolicies
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'ddosCustomPolicies: DdosCustomPolicies'
+    return:
+      type:
+      - '@azure/arm-network.DdosCustomPolicies'
   package: '@azure/arm-network'
 - uid: '@azure/arm-network.NetworkManagementClient.ddosProtectionPlans'
   name: ddosProtectionPlans
@@ -714,18 +729,18 @@ items:
   type: constructor
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5493-114">初始化 NetworkManagementClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="b5493-114">Initializes a new instance of the NetworkManagementClient class.</span></span>
+  summary: <span data-ttu-id="7d3aa-114">初始化 NetworkManagementClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-114">Initializes a new instance of the NetworkManagementClient class.</span></span>
   syntax:
     content: 'new NetworkManagementClient(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.NetworkManagementClientOptions)'
     parameters:
     - id: credentials
       type:
       - ServiceClientCredentials
-      description: <span data-ttu-id="b5493-115">用戶端連線至 Azure 所需的認證。</span><span class="sxs-lookup"><span data-stu-id="b5493-115">Credentials needed for the client to connect to Azure.</span></span>
+      description: <span data-ttu-id="7d3aa-115">用戶端連線至 Azure 所需的認證。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-115">Credentials needed for the client to connect to Azure.</span></span>
     - id: subscriptionId
       type:
       - string
-      description: <span data-ttu-id="b5493-116">用來唯一識別 Microsoft Azure 訂用帳戶的訂用帳戶認證。</span><span class="sxs-lookup"><span data-stu-id="b5493-116">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="b5493-117">訂用帳戶識別碼會構成每個服務呼叫 URI 的一部分。</span><span class="sxs-lookup"><span data-stu-id="b5493-117">The subscription ID forms part of the URI for every service call.</span></span>
+      description: <span data-ttu-id="7d3aa-116">用來唯一識別 Microsoft Azure 訂用帳戶的訂用帳戶認證。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-116">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="7d3aa-117">訂用帳戶識別碼會構成每個服務呼叫 URI 的一部分。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-117">The subscription ID forms part of the URI for every service call.</span></span>
     - id: options
       type:
       - Models.NetworkManagementClientOptions
@@ -976,18 +991,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="b5493-118">讓支援的安全性提供者虛擬 wan。</span><span class="sxs-lookup"><span data-stu-id="b5493-118">Gives the supported security providers for the virtual wan.</span></span>
+  summary: <span data-ttu-id="7d3aa-118">讓支援的安全性提供者虛擬 wan。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-118">Gives the supported security providers for the virtual wan.</span></span>
   syntax:
     content: 'function supportedSecurityProviders(resourceGroupName: string, virtualWANName: string, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="b5493-119">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5493-119">The resource group name.</span></span>
+      description: <span data-ttu-id="7d3aa-119">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-119">The resource group name.</span></span>
     - id: virtualWANName
       type:
       - string
-      description: <span data-ttu-id="b5493-120">VirtualWAN 的名稱，為其支援提供者所需的安全性。</span><span class="sxs-lookup"><span data-stu-id="b5493-120">The name of the VirtualWAN for which supported security providers are needed.</span></span>
+      description: <span data-ttu-id="7d3aa-120">VirtualWAN 的名稱，為其支援提供者所需的安全性。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-120">The name of the VirtualWAN for which supported security providers are needed.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -1010,20 +1025,20 @@ items:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="b5493-121">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5493-121">The resource group name.</span></span>
+      description: <span data-ttu-id="7d3aa-121">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-121">The resource group name.</span></span>
     - id: virtualWANName
       type:
       - string
-      description: <span data-ttu-id="b5493-122">VirtualWAN 的名稱，為其支援提供者所需的安全性。</span><span class="sxs-lookup"><span data-stu-id="b5493-122">The name of the VirtualWAN for which supported security providers are needed.</span></span>
+      description: <span data-ttu-id="7d3aa-122">VirtualWAN 的名稱，為其支援提供者所需的安全性。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-122">The name of the VirtualWAN for which supported security providers are needed.</span></span>
     - id: options
       type:
       - RequestOptionsBase
-      description: <span data-ttu-id="b5493-123">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="b5493-123">The optional parameters</span></span>
+      description: <span data-ttu-id="7d3aa-123">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="7d3aa-123">The optional parameters</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.VirtualWanSecurityProviders>
       description: >
-        <span data-ttu-id="b5493-124">回呼</span><span class="sxs-lookup"><span data-stu-id="b5493-124">The callback</span></span>
+        <span data-ttu-id="7d3aa-124">回呼</span><span class="sxs-lookup"><span data-stu-id="7d3aa-124">The callback</span></span>
     return:
       type:
       - Promise<Models.SupportedSecurityProvidersResponse>
@@ -1041,16 +1056,16 @@ items:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="b5493-125">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="b5493-125">The resource group name.</span></span>
+      description: <span data-ttu-id="7d3aa-125">資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-125">The resource group name.</span></span>
     - id: virtualWANName
       type:
       - string
-      description: <span data-ttu-id="b5493-126">VirtualWAN 的名稱，為其支援提供者所需的安全性。</span><span class="sxs-lookup"><span data-stu-id="b5493-126">The name of the VirtualWAN for which supported security providers are needed.</span></span>
+      description: <span data-ttu-id="7d3aa-126">VirtualWAN 的名稱，為其支援提供者所需的安全性。</span><span class="sxs-lookup"><span data-stu-id="7d3aa-126">The name of the VirtualWAN for which supported security providers are needed.</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.VirtualWanSecurityProviders>
       description: >
-        <span data-ttu-id="b5493-127">回呼</span><span class="sxs-lookup"><span data-stu-id="b5493-127">The callback</span></span>
+        <span data-ttu-id="7d3aa-127">回呼</span><span class="sxs-lookup"><span data-stu-id="7d3aa-127">The callback</span></span>
     return:
       type:
       - Promise<Models.SupportedSecurityProvidersResponse>
@@ -1284,6 +1299,12 @@ references:
   - name: ConnectionMonitors
     fullName: ConnectionMonitors
     uid: '@azure/arm-network.ConnectionMonitors'
+- uid: '@azure/arm-network.DdosCustomPolicies'
+  name: DdosCustomPolicies
+  spec.typeScript:
+  - name: DdosCustomPolicies
+    fullName: DdosCustomPolicies
+    uid: '@azure/arm-network.DdosCustomPolicies'
 - uid: '@azure/arm-network.DdosProtectionPlans'
   name: DdosProtectionPlans
   spec.typeScript:
