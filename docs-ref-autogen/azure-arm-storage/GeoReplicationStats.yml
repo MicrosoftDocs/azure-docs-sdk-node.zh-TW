@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a9e6865351ab5e14c5d0996c49c3c1f865450494
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55061536"
+items:
+- uid: azure-arm-storage.GeoReplicationStats
+  name: GeoReplicationStats
+  fullName: GeoReplicationStats
+  children:
+  - azure-arm-storage.GeoReplicationStats.canFailover
+  - azure-arm-storage.GeoReplicationStats.lastSyncTime
+  - azure-arm-storage.GeoReplicationStats.status
+  langs:
+  - typeScript
+  type: interface
+  summary: 統計資料相關的儲存體帳戶的 Blob、 資料表、 佇列和檔案複寫服務。 儲存體帳戶啟用異地備援複寫時才可用。
+  package: azure-arm-storage
+- uid: azure-arm-storage.GeoReplicationStats.canFailover
+  name: canFailover
+  fullName: canFailover
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 布林值旗標，表示支援該帳戶的帳戶的容錯移轉。
+  optional: true
+  syntax:
+    content: 'canFailover?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.GeoReplicationStats.lastSyncTime
+  name: lastSyncTime
+  fullName: lastSyncTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    前面的所有主要寫入此 UTC 日期/時間值保證都可供讀取作業。 主要會寫入這個點後面的時間可能會或可能無法讀取。
+
+    項目可能是預設值，如果 LastSyncTime 的值不是可供使用，就可能發生此次要已離線，或是我們正在啟動程序中。
+  optional: true
+  syntax:
+    content: 'lastSyncTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-storage
+- uid: azure-arm-storage.GeoReplicationStats.status
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 次要位置的狀態。 可能的值為:-即時：表示次要位置是作用中且可運作。 啟動程序：表示從主要位置初始同步處理至次要位置是在進行中。第一次啟用複寫時，就會發生這種發生。 -無法使用：表示次要位置暫時無法使用。 可能的值包括：'Live'、 '啟動'，'無法使用'
+  optional: true
+  syntax:
+    content: 'status?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage

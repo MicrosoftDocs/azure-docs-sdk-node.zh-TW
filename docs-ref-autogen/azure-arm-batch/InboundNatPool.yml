@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6bb31056a0319191bc30fc016ad82b977d64a23e
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046502"
+items:
+- uid: azure-arm-batch.InboundNatPool
+  name: InboundNatPool
+  fullName: InboundNatPool
+  children:
+  - azure-arm-batch.InboundNatPool.backendPort
+  - azure-arm-batch.InboundNatPool.frontendPortRangeEnd
+  - azure-arm-batch.InboundNatPool.frontendPortRangeStart
+  - azure-arm-batch.InboundNatPool.name
+  - azure-arm-batch.InboundNatPool.networkSecurityGroupRules
+  - azure-arm-batch.InboundNatPool.protocol
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.backendPort
+  name: backendPort
+  fullName: backendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 這必須是唯一的批次集區。 除了如 22、 3389、 29876 和 29877 一樣保留，可接受的值會是 1 到 65535 之間。 如果任何保留會提供值，則要求會失敗並顯示 HTTP 狀態碼 400。
+  syntax:
+    content: 'backendPort: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.frontendPortRangeEnd
+  name: frontendPortRangeEnd
+  fullName: frontendPortRangeEnd
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 可接受的值範圍介於 1 到 65534，除了從 50000 到 55000 這保留供 Batch 服務的連接埠。 集區中的所有範圍必須不同，而且不能重疊。 如果要求失敗，HTTP 狀態碼 400 提供任何保留或重疊的值。
+  syntax:
+    content: 'frontendPortRangeEnd: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.frontendPortRangeStart
+  name: frontendPortRangeStart
+  fullName: frontendPortRangeStart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 可接受的值範圍介於 1 到 65534，除了從 50000 到 55000 這保留的連接埠。 集區中的所有範圍必須不同，而且不能重疊。 如果要求失敗，HTTP 狀態碼 400 提供任何保留或重疊的值。
+  syntax:
+    content: 'frontendPortRangeStart: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 名稱必須是唯一的批次集區中，可以包含字母、 數字、 底線、 句號和連字號。 名稱開頭必須是字母或數字，必須以字母、 數字或底線結尾，而且不能超過 77 個字元。  如果要求失敗，HTTP 狀態碼 400 提供任何無效的值。
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.networkSecurityGroupRules
+  name: networkSecurityGroupRules
+  fullName: networkSecurityGroupRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 您可以指定批次集區上的所有端點的規則數目上限是 25。 如果未不指定任何網路安全性群組規則，將建立預設規則允許指定 0,backendport 輸入的存取。 如果超過最大數目的網路安全性群組規則的要求會失敗，HTTP 狀態碼 400。
+  optional: true
+  syntax:
+    content: 'networkSecurityGroupRules?: NetworkSecurityGroupRule[]'
+    return:
+      type:
+      - azure-arm-batch.NetworkSecurityGroupRule[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.protocol
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 可能的值包括：' TCP'、 'UDP'
+  syntax:
+    content: 'protocol: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.NetworkSecurityGroupRule[]
+  name: NetworkSecurityGroupRule[]
+  spec.typeScript:
+  - name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    uid: azure-arm-batch.NetworkSecurityGroupRule
+  - name: '[]'
+    fullName: '[]'

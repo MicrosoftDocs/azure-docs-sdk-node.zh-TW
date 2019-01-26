@@ -1,27 +1,55 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8a4bc2ffa87d1fad8fe4c474a1a674e6ff29d270
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 5ba7cec2c5ee5bfbdeba23ae6c4573f2caadc182
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52104542"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55053639"
 items:
 - uid: azure-iot-provisioning-service.EnrollmentGroup
   name: EnrollmentGroup
   fullName: EnrollmentGroup
   children:
+  - azure-iot-provisioning-service.EnrollmentGroup.allocationPolicy
   - azure-iot-provisioning-service.EnrollmentGroup.attestation
   - azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
+  - azure-iot-provisioning-service.EnrollmentGroup.customAllocationDefinition
   - azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
   - azure-iot-provisioning-service.EnrollmentGroup.etag
   - azure-iot-provisioning-service.EnrollmentGroup.initialTwin
   - azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
+  - azure-iot-provisioning-service.EnrollmentGroup.iotHubs
   - azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
   - azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
+  - azure-iot-provisioning-service.EnrollmentGroup.reprovisionPolicy
   langs:
   - typeScript
   type: interface
   summary: 註冊群組物件。
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.allocationPolicy
+  name: allocationPolicy
+  fullName: allocationPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    此註冊群組的配置原則。 此原則會覆寫的租用戶層級配置原則。
+
+    - ' 雜湊 ':連結的 IoT 中樞同樣可能會有佈建給他們的裝置。
+
+    - ' geoLatency':裝置到 IoT 中樞佈建到裝置延遲最低。如果多個連結的 IoT 中樞會提供相同的最低延遲，佈建服務會雜湊裝置在這些中樞。
+
+    - 'static':指定所需的 IoT 中樞註冊清單中的優先順序高於服務等級的配置原則。
+
+    - 'custom':裝置佈建到 IoT 中樞，根據您自己的自訂邏輯。 佈建服務將裝置資訊傳遞至邏輯，並將邏輯傳回所需的 IoT 中樞，以及所需的初始設定。 我們建議使用 Azure Functions 來裝載您的邏輯。
+  optional: true
+  syntax:
+    content: 'allocationPolicy?: AllocationPolicyType'
+    return:
+      type:
+      - azure-iot-provisioning-service.AllocationPolicyType
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.attestation
   name: attestation
@@ -53,6 +81,21 @@ items:
     return:
       type:
       - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.customAllocationDefinition
+  name: customAllocationDefinition
+  fullName: customAllocationDefinition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 自訂配置定義。
+  optional: true
+  syntax:
+    content: 'customAllocationDefinition?: CustomAllocationDefinition'
+    return:
+      type:
+      - azure-iot-provisioning-service.CustomAllocationDefinition
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
   name: enrollmentGroupId
@@ -113,6 +156,20 @@ items:
       type:
       - string
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubs
+  name: iotHubs
+  fullName: iotHubs
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 可配置給這項資源中裝置的 IoT 中樞的名稱清單。 它必須是租用戶的 IoT 中樞的層級清單的子集。
+  syntax:
+    content: 'iotHubs: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
   name: lastUpdatedDateTimeUtc
   fullName: lastUpdatedDateTimeUtc
@@ -141,13 +198,40 @@ items:
       type:
       - azure-iot-provisioning-service.ProvisioningStatus
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.reprovisionPolicy
+  name: reprovisionPolicy
+  fullName: reprovisionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 重新佈建到 IoT 中樞註冊裝置時的行為。
+  optional: true
+  syntax:
+    content: 'reprovisionPolicy?: ReprovisionPolicy'
+    return:
+      type:
+      - azure-iot-provisioning-service.ReprovisionPolicy
+  package: azure-iot-provisioning-service
 references:
+- uid: azure-iot-provisioning-service.AllocationPolicyType
+  name: AllocationPolicyType
+  spec.typeScript:
+  - name: AllocationPolicyType
+    fullName: AllocationPolicyType
+    uid: azure-iot-provisioning-service.AllocationPolicyType
 - uid: azure-iot-provisioning-service.AttestationMechanism
   name: AttestationMechanism
   spec.typeScript:
   - name: AttestationMechanism
     fullName: AttestationMechanism
     uid: azure-iot-provisioning-service.AttestationMechanism
+- uid: azure-iot-provisioning-service.CustomAllocationDefinition
+  name: CustomAllocationDefinition
+  spec.typeScript:
+  - name: CustomAllocationDefinition
+    fullName: CustomAllocationDefinition
+    uid: azure-iot-provisioning-service.CustomAllocationDefinition
 - uid: azure-iot-provisioning-service.InitialTwin
   name: InitialTwin
   spec.typeScript:
@@ -160,3 +244,9 @@ references:
   - name: ProvisioningStatus
     fullName: ProvisioningStatus
     uid: azure-iot-provisioning-service.ProvisioningStatus
+- uid: azure-iot-provisioning-service.ReprovisionPolicy
+  name: ReprovisionPolicy
+  spec.typeScript:
+  - name: ReprovisionPolicy
+    fullName: ReprovisionPolicy
+    uid: azure-iot-provisioning-service.ReprovisionPolicy

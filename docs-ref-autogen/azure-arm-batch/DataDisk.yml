@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: aa68703453f331e36ff26d7b9358199b37436807
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057349"
+items:
+- uid: azure-arm-batch.DataDisk
+  name: DataDisk
+  fullName: DataDisk
+  children:
+  - azure-arm-batch.DataDisk.caching
+  - azure-arm-batch.DataDisk.diskSizeGB
+  - azure-arm-batch.DataDisk.lun
+  - azure-arm-batch.DataDisk.storageAccountType
+  langs:
+  - typeScript
+  type: interface
+  summary: 資料磁碟的設定，將會使用集區中的計算節點相關聯的資料磁碟。
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.caching
+  name: caching
+  fullName: caching
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    值為：
+
+
+    無-磁碟的快取模式會啟用。
+
+    readOnly-磁碟的快取模式為唯讀。
+
+    readWrite-磁碟的快取模式會讀取和寫入。
+
+
+    快取的預設值為 none。 如需快取選項的詳細資訊，請參閱： https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/。
+
+    可能的值包括：'None'、 'ReadOnly'，'ReadWrite'
+  optional: true
+  syntax:
+    content: 'caching?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.diskSizeGB
+  name: diskSizeGB
+  fullName: diskSizeGB
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'diskSizeGB: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.lun
+  name: lun
+  fullName: lun
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lun 已用來唯一識別每個資料磁碟。 如果連接多個磁碟，每個應該有不同的 lun。
+  syntax:
+    content: 'lun: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.storageAccountType
+  name: storageAccountType
+  fullName: storageAccountType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    如果省略，預設值是"Standard_LRS 」。 值為：
+
+
+    Standard_LRS-資料磁碟應該使用標準本地備援儲存體。
+
+    Premium_LRS-資料磁碟應該使用進階本地備援儲存體。 可能的值包括：' Standard_LRS'，'Premium_LRS'
+  optional: true
+  syntax:
+    content: 'storageAccountType?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
