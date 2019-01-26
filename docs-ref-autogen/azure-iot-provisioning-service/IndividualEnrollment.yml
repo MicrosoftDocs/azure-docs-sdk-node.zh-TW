@@ -1,30 +1,58 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: d71e8e2070d56e9dcb87a1815820a639315466aa
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: dc563637311679269cf905db007b0a3edb1e110d
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52045395"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55060321"
 items:
 - uid: azure-iot-provisioning-service.IndividualEnrollment
   name: IndividualEnrollment
   fullName: IndividualEnrollment
   children:
+  - azure-iot-provisioning-service.IndividualEnrollment.allocationPolicy
   - azure-iot-provisioning-service.IndividualEnrollment.attestation
   - azure-iot-provisioning-service.IndividualEnrollment.capabilities
   - azure-iot-provisioning-service.IndividualEnrollment.createdDateTimeUtc
+  - azure-iot-provisioning-service.IndividualEnrollment.customAllocationDefinition
   - azure-iot-provisioning-service.IndividualEnrollment.deviceId
   - azure-iot-provisioning-service.IndividualEnrollment.etag
   - azure-iot-provisioning-service.IndividualEnrollment.initialTwin
   - azure-iot-provisioning-service.IndividualEnrollment.iotHubHostName
+  - azure-iot-provisioning-service.IndividualEnrollment.iotHubs
   - azure-iot-provisioning-service.IndividualEnrollment.lastUpdatedDateTimeUtc
   - azure-iot-provisioning-service.IndividualEnrollment.provisioningStatus
   - azure-iot-provisioning-service.IndividualEnrollment.registrationId
   - azure-iot-provisioning-service.IndividualEnrollment.registrationState
+  - azure-iot-provisioning-service.IndividualEnrollment.reprovisionPolicy
   langs:
   - typeScript
   type: interface
-  summary: <span data-ttu-id="5c85f-101">個別的註冊記錄。</span><span class="sxs-lookup"><span data-stu-id="5c85f-101">The individual enrollment record.</span></span>
+  summary: <span data-ttu-id="cc690-101">個別的註冊記錄。</span><span class="sxs-lookup"><span data-stu-id="cc690-101">The individual enrollment record.</span></span>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.IndividualEnrollment.allocationPolicy
+  name: allocationPolicy
+  fullName: allocationPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="cc690-102">此個別註冊配置原則。</span><span class="sxs-lookup"><span data-stu-id="cc690-102">The allocation policy of this individual enrollment.</span></span> <span data-ttu-id="cc690-103">此原則會覆寫的租用戶層級配置原則。</span><span class="sxs-lookup"><span data-stu-id="cc690-103">This policy overrides the tenant-level allocation policy.</span></span>
+
+    - <span data-ttu-id="cc690-104">' 雜湊 ':連結的 IoT 中樞同樣可能會有佈建給他們的裝置。</span><span class="sxs-lookup"><span data-stu-id="cc690-104">'hashed': Linked IoT hubs are equally likely to have devices provisioned to them.</span></span>
+
+    - <span data-ttu-id="cc690-105">' geoLatency':裝置到 IoT 中樞佈建到裝置延遲最低。如果多個連結的 IoT 中樞會提供相同的最低延遲，佈建服務會雜湊裝置在這些中樞。</span><span class="sxs-lookup"><span data-stu-id="cc690-105">'geoLatency':  Devices are provisioned to an IoT hub with the lowest latency to the device.If multiple linked IoT hubs would provide the same lowest latency, the provisioning service hashes devices across those hubs.</span></span>
+
+    - <span data-ttu-id="cc690-106">'static':指定所需的 IoT 中樞註冊清單中的優先順序高於服務等級的配置原則。</span><span class="sxs-lookup"><span data-stu-id="cc690-106">'static' : Specification of the desired IoT hub in the enrollment list takes priority over the service-level allocation policy.</span></span>
+
+    - <span data-ttu-id="cc690-107">'custom':裝置佈建到 IoT 中樞，根據您自己的自訂邏輯。</span><span class="sxs-lookup"><span data-stu-id="cc690-107">'custom': Devices are provisioned to an IoT hub based on your own custom logic.</span></span> <span data-ttu-id="cc690-108">佈建服務將裝置資訊傳遞至邏輯，並將邏輯傳回所需的 IoT 中樞，以及所需的初始設定。</span><span class="sxs-lookup"><span data-stu-id="cc690-108">The provisioning service passes information about the device to the logic, and the logic returns the desired IoT hub as well as the desired initial configuration.</span></span> <span data-ttu-id="cc690-109">我們建議使用 Azure Functions 來裝載您的邏輯。</span><span class="sxs-lookup"><span data-stu-id="cc690-109">We recommend using Azure Functions to host your logic.</span></span>
+  optional: true
+  syntax:
+    content: 'allocationPolicy?: AllocationPolicyType'
+    return:
+      type:
+      - azure-iot-provisioning-service.AllocationPolicyType
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.IndividualEnrollment.attestation
   name: attestation
@@ -33,7 +61,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-102">與這個物件相關聯的安全性機制。</span><span class="sxs-lookup"><span data-stu-id="5c85f-102">The security mechanism associated with this object.</span></span>
+  summary: <span data-ttu-id="cc690-110">與這個物件相關聯的安全性機制。</span><span class="sxs-lookup"><span data-stu-id="cc690-110">The security mechanism associated with this object.</span></span>
   syntax:
     content: 'attestation: AttestationMechanism'
     return:
@@ -47,7 +75,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-103">將使用此註冊記錄佈建裝置的功能。</span><span class="sxs-lookup"><span data-stu-id="5c85f-103">The capabilities of the device that will be provisioned using this enrollment record.</span></span>
+  summary: <span data-ttu-id="cc690-111">將使用此註冊記錄佈建裝置的功能。</span><span class="sxs-lookup"><span data-stu-id="cc690-111">The capabilities of the device that will be provisioned using this enrollment record.</span></span>
   optional: true
   syntax:
     content: 'capabilities?: DeviceCapabilities'
@@ -62,12 +90,27 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-104">日期和時間，建立此物件。</span><span class="sxs-lookup"><span data-stu-id="5c85f-104">The date and time that this object was created.</span></span>
+  summary: <span data-ttu-id="cc690-112">日期和時間，建立此物件。</span><span class="sxs-lookup"><span data-stu-id="cc690-112">The date and time that this object was created.</span></span>
   syntax:
     content: 'createdDateTimeUtc: string'
     return:
       type:
       - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.IndividualEnrollment.customAllocationDefinition
+  name: customAllocationDefinition
+  fullName: customAllocationDefinition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="cc690-113">自訂配置定義。</span><span class="sxs-lookup"><span data-stu-id="cc690-113">Custom allocation definition.</span></span>
+  optional: true
+  syntax:
+    content: 'customAllocationDefinition?: CustomAllocationDefinition'
+    return:
+      type:
+      - azure-iot-provisioning-service.CustomAllocationDefinition
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.IndividualEnrollment.deviceId
   name: deviceId
@@ -77,9 +120,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="5c85f-105">（每個中樞） 要用於進行裝置註冊唯一的識別碼。</span><span class="sxs-lookup"><span data-stu-id="5c85f-105">The unique identifier (per hub) used for the device registration.</span></span>
+    <span data-ttu-id="cc690-114">（每個中樞） 要用於進行裝置註冊唯一的識別碼。</span><span class="sxs-lookup"><span data-stu-id="cc690-114">The unique identifier (per hub) used for the device registration.</span></span>
 
-    <span data-ttu-id="5c85f-106">如果這個物件使用 x509 證明，這個屬性應該是未定義。</span><span class="sxs-lookup"><span data-stu-id="5c85f-106">If this object is using x509 attestation, this property should be undefined.</span></span>
+    <span data-ttu-id="cc690-115">如果這個物件使用 x509 證明，這個屬性應該是未定義。</span><span class="sxs-lookup"><span data-stu-id="cc690-115">If this object is using x509 attestation, this property should be undefined.</span></span>
   syntax:
     content: 'deviceId: string'
     return:
@@ -93,7 +136,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-107">適合用來唯一識別特定產生這個物件用於在 CRUD 作業期間的不透明值。</span><span class="sxs-lookup"><span data-stu-id="5c85f-107">An opaque value suitable to uniquely identify a particular generation of this object for use during a CRUD operation.</span></span>
+  summary: <span data-ttu-id="cc690-116">適合用來唯一識別特定產生這個物件用於在 CRUD 作業期間的不透明值。</span><span class="sxs-lookup"><span data-stu-id="cc690-116">An opaque value suitable to uniquely identify a particular generation of this object for use during a CRUD operation.</span></span>
   syntax:
     content: 'etag: string'
     return:
@@ -107,7 +150,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-108">將在其佈建此裝置建立初始的對應項文件。</span><span class="sxs-lookup"><span data-stu-id="5c85f-108">The initial twin document that will be created for this device upon its provisioning.</span></span>
+  summary: <span data-ttu-id="cc690-117">將在其佈建此裝置建立初始的對應項文件。</span><span class="sxs-lookup"><span data-stu-id="cc690-117">The initial twin document that will be created for this device upon its provisioning.</span></span>
   syntax:
     content: 'initialTwin: InitialTwin'
     return:
@@ -121,12 +164,26 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-109">IoT 中樞將會與這個物件相關聯的裝置佈建的目的地。</span><span class="sxs-lookup"><span data-stu-id="5c85f-109">The IoT Hub that will be the destination of the provisioning for the device associated with this object.</span></span>
+  summary: <span data-ttu-id="cc690-118">IoT 中樞將會與這個物件相關聯的裝置佈建的目的地。</span><span class="sxs-lookup"><span data-stu-id="cc690-118">The IoT Hub that will be the destination of the provisioning for the device associated with this object.</span></span>
   syntax:
     content: 'iotHubHostName: string'
     return:
       type:
       - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.IndividualEnrollment.iotHubs
+  name: iotHubs
+  fullName: iotHubs
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="cc690-119">可配置給這項資源中裝置的 IoT 中樞的名稱清單。</span><span class="sxs-lookup"><span data-stu-id="cc690-119">The list of names of IoT hubs the device(s) in this resource can be allocated to.</span></span> <span data-ttu-id="cc690-120">它必須是租用戶的 IoT 中樞的層級清單的子集。</span><span class="sxs-lookup"><span data-stu-id="cc690-120">It must be a subset of tenant level list of IoT hubs.</span></span>
+  syntax:
+    content: 'iotHubs: string[]'
+    return:
+      type:
+      - string[]
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.IndividualEnrollment.lastUpdatedDateTimeUtc
   name: lastUpdatedDateTimeUtc
@@ -135,7 +192,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-110">日期和上次更新此註冊記錄的時間。</span><span class="sxs-lookup"><span data-stu-id="5c85f-110">The date and time that this enrollment record was last updated.</span></span>  <span data-ttu-id="5c85f-111">這可能包括更新或實際的註冊程序。</span><span class="sxs-lookup"><span data-stu-id="5c85f-111">This could include an update or an actual registration.</span></span>
+  summary: <span data-ttu-id="cc690-121">日期和上次更新此註冊記錄的時間。</span><span class="sxs-lookup"><span data-stu-id="cc690-121">The date and time that this enrollment record was last updated.</span></span>  <span data-ttu-id="cc690-122">這可能包括更新或實際的註冊程序。</span><span class="sxs-lookup"><span data-stu-id="cc690-122">This could include an update or an actual registration.</span></span>
   syntax:
     content: 'lastUpdatedDateTimeUtc: string'
     return:
@@ -149,7 +206,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-112">指出是否此註冊可用做為基礎的裝置佈建。</span><span class="sxs-lookup"><span data-stu-id="5c85f-112">Indicates whether this enrollment can be used as the basis for a device provisioning.</span></span>
+  summary: <span data-ttu-id="cc690-123">指出是否此註冊可用做為基礎的裝置佈建。</span><span class="sxs-lookup"><span data-stu-id="cc690-123">Indicates whether this enrollment can be used as the basis for a device provisioning.</span></span>
   syntax:
     content: 'provisioningStatus: ProvisioningStatus'
     return:
@@ -164,9 +221,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="5c85f-113">此物件的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="5c85f-113">A unique identifier for this object.</span></span>
+    <span data-ttu-id="cc690-124">此物件的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="cc690-124">A unique identifier for this object.</span></span>
 
-    <span data-ttu-id="5c85f-114">值為全部小寫的英數字元與內嵌`-`允許。</span><span class="sxs-lookup"><span data-stu-id="5c85f-114">The value is all lowercase alphanumeric with embedded `-` permitted.</span></span>
+    <span data-ttu-id="cc690-125">值為全部小寫的英數字元與內嵌`-`允許。</span><span class="sxs-lookup"><span data-stu-id="cc690-125">The value is all lowercase alphanumeric with embedded `-` permitted.</span></span>
   syntax:
     content: 'registrationId: string'
     return:
@@ -180,14 +237,35 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="5c85f-115">與這個物件相關聯的裝置註冊狀態。</span><span class="sxs-lookup"><span data-stu-id="5c85f-115">The state of the device registration associated with this object.</span></span>
+  summary: <span data-ttu-id="cc690-126">與這個物件相關聯的裝置註冊狀態。</span><span class="sxs-lookup"><span data-stu-id="cc690-126">The state of the device registration associated with this object.</span></span>
   syntax:
     content: 'registrationState: DeviceRegistrationState'
     return:
       type:
       - azure-iot-provisioning-service.DeviceRegistrationState
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.IndividualEnrollment.reprovisionPolicy
+  name: reprovisionPolicy
+  fullName: reprovisionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="cc690-127">重新佈建到 IoT 中樞註冊裝置時的行為。</span><span class="sxs-lookup"><span data-stu-id="cc690-127">The behavior when a device is re-provisioned to an IoT hub.</span></span>
+  optional: true
+  syntax:
+    content: 'reprovisionPolicy?: ReprovisionPolicy'
+    return:
+      type:
+      - azure-iot-provisioning-service.ReprovisionPolicy
+  package: azure-iot-provisioning-service
 references:
+- uid: azure-iot-provisioning-service.AllocationPolicyType
+  name: AllocationPolicyType
+  spec.typeScript:
+  - name: AllocationPolicyType
+    fullName: AllocationPolicyType
+    uid: azure-iot-provisioning-service.AllocationPolicyType
 - uid: azure-iot-provisioning-service.AttestationMechanism
   name: AttestationMechanism
   spec.typeScript:
@@ -200,6 +278,12 @@ references:
   - name: DeviceCapabilities
     fullName: DeviceCapabilities
     uid: azure-iot-provisioning-service.DeviceCapabilities
+- uid: azure-iot-provisioning-service.CustomAllocationDefinition
+  name: CustomAllocationDefinition
+  spec.typeScript:
+  - name: CustomAllocationDefinition
+    fullName: CustomAllocationDefinition
+    uid: azure-iot-provisioning-service.CustomAllocationDefinition
 - uid: azure-iot-provisioning-service.InitialTwin
   name: InitialTwin
   spec.typeScript:
@@ -218,3 +302,9 @@ references:
   - name: DeviceRegistrationState
     fullName: DeviceRegistrationState
     uid: azure-iot-provisioning-service.DeviceRegistrationState
+- uid: azure-iot-provisioning-service.ReprovisionPolicy
+  name: ReprovisionPolicy
+  spec.typeScript:
+  - name: ReprovisionPolicy
+    fullName: ReprovisionPolicy
+    uid: azure-iot-provisioning-service.ReprovisionPolicy
