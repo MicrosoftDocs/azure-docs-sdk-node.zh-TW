@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f5861517c1bb3444a6428cced6edae5bb0af8731
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55049329"
+items:
+- uid: azure-arm-batch.FixedScaleSettings
+  name: FixedScaleSettings
+  fullName: FixedScaleSettings
+  children:
+  - azure-arm-batch.FixedScaleSettings.nodeDeallocationOption
+  - azure-arm-batch.FixedScaleSettings.resizeTimeout
+  - azure-arm-batch.FixedScaleSettings.targetDedicatedNodes
+  - azure-arm-batch.FixedScaleSettings.targetLowPriorityNodes
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.nodeDeallocationOption
+  name: nodeDeallocationOption
+  fullName: nodeDeallocationOption
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果省略，預設值為 Requeue。 可能的值包括：'Requeue', 'Terminate', 'TaskCompletion', 'RetainedData'
+  optional: true
+  syntax:
+    content: 'nodeDeallocationOption?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.resizeTimeout
+  name: resizeTimeout
+  fullName: resizeTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 預設值為 15 分鐘。 逾時值使用 ISO 8601 格式。 例如，使用 PT10M 10 分鐘的時間。 最小值為 5 分鐘。 如果您指定的值少於 5 分鐘時，Batch 服務會拒絕並產生錯誤; 要求如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。
+  optional: true
+  syntax:
+    content: 'resizeTimeout?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.targetDedicatedNodes
+  name: targetDedicatedNodes
+  fullName: targetDedicatedNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 至少一個 targetDedicatedNodes，targetLowPriority 節點必須設定。
+  optional: true
+  syntax:
+    content: 'targetDedicatedNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.targetLowPriorityNodes
+  name: targetLowPriorityNodes
+  fullName: targetLowPriorityNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 至少一個 targetDedicatedNodes，targetLowPriority 節點必須設定。
+  optional: true
+  syntax:
+    content: 'targetLowPriorityNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch

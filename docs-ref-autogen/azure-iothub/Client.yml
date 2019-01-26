@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3f17a6a8af9e46f508d62ffa2f764af53b5043ca
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: 3fa73e6b39aa13478c9ab2e98f6d062ffddb3ae7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53678992"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057739"
 items:
 - uid: azure-iothub.Client
   name: Client
@@ -44,7 +44,7 @@ items:
       - 接聽來自裝置的檔案上傳通知。
     使用者應該建立新<xref:azure-iothub.Client>藉由呼叫其中一個 factory 方法的執行個體[fromConnectionString](xref:azure-iothub.Client.fromConnectionString)或是[fromSharedAccessSignature](xref:azure-iothub.Client.fromSharedAccessSignature)，以建立 IoT 中樞服務用戶端。
   extends:
-    name: any
+    name: azure-iothub.Client
   package: azure-iothub
 - uid: azure-iothub.Client.close_1
   name: close()
@@ -91,7 +91,7 @@ items:
       description: 封裝 「 裝置連線 」 的權限的 IoT 中樞連接字串。
     - id: transportCtor
       type:
-      - azure-iothub.Client.TransportCtor
+      - azure-iothub.Client.Client.TransportCtor
       description: ''
       optional: true
     return:
@@ -114,7 +114,7 @@ items:
       description: 共用的存取簽章會封裝在 IoT 中樞上的 「 服務連線 」 權限。
     - id: transportCtor
       type:
-      - azure-iothub.Client.TransportCtor
+      - azure-iothub.Client.Client.TransportCtor
       description: ''
       optional: true
     return:
@@ -375,6 +375,12 @@ items:
         SDK 也含有 2 個 「 內建 」 的原則：ExponentialBackoffWithJitter （預設值） 和 NoRetry （若要取消任何形式的重試）。 使用者也可以傳遞自己的物件，只要它會實作有 2 種方法:-shouldRetry(err:錯誤）： 布林值： 指出是否應該重試作業根據錯誤類型-nextRetryTimeout (retryCount： 數字，節流： 布林值): 數目： 傳回之前重試根據嘗試 （過去數 （以毫秒為單位） 的等待時間retryCount) 以及錯誤是否為節流錯誤的事實。
   package: azure-iothub
 references:
+- uid: azure-iothub.Client
+  name: Client
+  spec.typeScript:
+  - name: Client
+    fullName: Client
+    uid: azure-iothub.Client
 - uid: Callback<azure-iothub.Client.ServiceReceiver>
   name: ServiceReceiver>
   spec.typeScript:
@@ -491,18 +497,12 @@ references:
     uid: azure-iothub.ResultWithIncomingMessage
   - name: <MessageEnqueued>>
     fullName: <MessageEnqueued>>
-- uid: azure-iothub.Client.TransportCtor
+- uid: azure-iothub.Client.Client.TransportCtor
   name: TransportCtor
   spec.typeScript:
   - name: TransportCtor
     fullName: TransportCtor
-    uid: azure-iothub.Client.TransportCtor
-- uid: azure-iothub.Client
-  name: Client
-  spec.typeScript:
-  - name: Client
-    fullName: Client
-    uid: azure-iothub.Client
+    uid: azure-iothub.Client.Client.TransportCtor
 - uid: azure-iothub.Client.ServiceReceiver
   name: ServiceReceiver
 - uid: azure-iothub.Client.Transport

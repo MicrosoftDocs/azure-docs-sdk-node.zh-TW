@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: e5b87b187860e4c6909a800c9d9d3c6264e861da
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 2adf0926203f00d13978e76c648697c524f0208c
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52145143"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059229"
 items:
 - uid: azure-iot-provisioning-device.ProvisioningDeviceClient
   name: ProvisioningDeviceClient
@@ -17,14 +17,14 @@ items:
   summary: 用來與 Azure IoT 中樞裝置佈建服務進行通訊的用戶端物件。
   package: azure-iot-provisioning-device
 - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
-  name: create(string, string, X509ProvisioningTransport | TpmProvisioningTransport, X509SecurityClient | TpmSecurityClient)
+  name: create(string, string, X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport, X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient)
   children: []
   type: method
   langs:
   - typeScript
   summary: 建構用戶端物件可用來向 Azure 裝置佈建服務進行通訊。
   syntax:
-    content: 'static function create(provisioningHost: string, idScope: string, transport: X509ProvisioningTransport | TpmProvisioningTransport, securityClient: X509SecurityClient | TpmSecurityClient)'
+    content: 'static function create(provisioningHost: string, idScope: string, transport: X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport, securityClient: X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient)'
     parameters:
     - id: provisioningHost
       type:
@@ -36,28 +36,28 @@ items:
       description: 裝置佈建服務識別碼範圍。  可以在 Azure 入口網站中的 [概觀] 索引標籤的 [基本資訊] 區段中找到字串 ' 識別碼範圍 '
     - id: transport
       type:
-      - X509ProvisioningTransport | TpmProvisioningTransport
+      - X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport
       description: 建構函式來佈建的傳輸。  可以是下列其中之一： [azure iot-佈建-裝置-http。Http](xref:azure-iot-provisioning-device-http.Http) [-佈建-裝置-azure-iot-device-amqp。Amqp](xref:azure-iot-provisioning-device-amqp.Amqp) [-佈建-裝置-azure-iot-device-amqp。AmqpWs](xref:azure-iot-provisioning-device-amqp.AmqpWs) [azure-iot-佈建-裝置-mqtt。Mqtt](xref:azure-iot-provisioning-device-mqtt.Mqtt) [azure-iot-佈建-裝置-mqtt。MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)
     - id: securityClient
       type:
-      - azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
+      - azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
       description: >
         實作的安全性用戶端物件的執行個體[X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient)或[TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient)介面。
-
-        建議這些介面的實作包含[X509Security](xref:azure-iot-security-x509.X509Security)或[TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient)
+                                 [SymmetricKeySecurityClient](xref:azure-iot-provisioning-device%3ASymmetricKeySecurityClient)介面。
+        建議這些介面的實作包含[X509Security](xref:azure-iot-security-x509.X509Security)或是[TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient) [SymmetricKeySecurityClient](xref:azure-iot-security-symmetric-key.SymmetricKeySecurityClient)
     return:
       type:
       - azure-iot-provisioning-device.RegistrationClient
   package: azure-iot-provisioning-device
 references:
-- uid: azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
-  name: X509SecurityClient | TpmSecurityClient
+- uid: azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
+  name: X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
   spec.typeScript:
   - name: X509SecurityClient
     fullName: X509SecurityClient
     uid: azure-iot-provisioning-device.X509SecurityClient
-  - name: " | TpmSecurityClient"
-    fullName: " | TpmSecurityClient"
+  - name: " | TpmSecurityClient | SymmetricKeySecurityClient"
+    fullName: " | TpmSecurityClient | SymmetricKeySecurityClient"
 - uid: azure-iot-provisioning-device.RegistrationClient
   name: RegistrationClient
   spec.typeScript:
