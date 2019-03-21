@@ -6,16 +6,14 @@ ms.author: markgal
 manager: carmonm
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
-ms.openlocfilehash: bf3e66ac8341cebd28dee20b6370ed3e5fbfbfa0
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 9234285d32bc465eeb86d13514783e1de4e5ef1b
+ms.sourcegitcommit: 34172ad11850839ddd81d02841807e07f3761425
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52038210"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58052784"
 ---
 # <a name="azure-backup-modules-for-nodejs"></a>適用於 Node.js 的 Azure 備份模組
 
