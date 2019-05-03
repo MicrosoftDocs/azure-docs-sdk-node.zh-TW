@@ -29,4 +29,4 @@ ms.locfileid: "34220700"
 | **MongoDB** ||
 | [Azure 中的 Node.js 和 MongoDB Web 應用程式](https://azure.microsoft.com/resources/samples/meanjs/) | 您可以遵循本教學課程用於[在 Azure 中建置 Node.js 和 MongoDB web 應用程式](http://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app?toc=/azure/node/toc.json&bc=/azure/node/toc.json)的範例應用程式。 |
 | **SQL Database** ||
-| [Azure SQL Database︰使用 Node.js 連線及查詢資料](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 示範如何使用 Node.js 連線至 Azure SQL Database，然後從 Windows、Ubuntu Linux 和 Mac 平台使用 Transact-SQL 陳述式來查詢、插入、更新和刪除資料庫中的資料。 |
+| [Azure SQL Database︰使用 Node.js 連線及查詢資料](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 示範如何使用 Node.js 連線至 Azure SQL 資料庫，然後從 Windows、Ubuntu Linux 和 Mac 平台使用 Transact-SQL 陳述式來查詢、插入、更新和刪除資料庫中的資料。 |
