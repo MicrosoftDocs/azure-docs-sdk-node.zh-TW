@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.JobInputHttp
+    name: JobInputHttp
+    fullName: JobInputHttp
+    children:
+      - azure-arm-mediaservices.JobInputHttp.baseUri
+      - azure-arm-mediaservices.JobInputHttp.files
+      - azure-arm-mediaservices.JobInputHttp.label
+      - azure-arm-mediaservices.JobInputHttp.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 HTTPS 作業輸入。
+    extends:
+      name: azure-arm-mediaservices.JobInputClip
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.baseUri
+    name: baseUri
+    fullName: baseUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HTTPS 工作輸入的基底 URI。 它會串連提供的檔案名稱。 如果沒有基底 uri，則會假設所提供的檔案清單，要完整限定 uri。 最大長度 4000 個字元。
+    optional: true
+    syntax:
+      content: 'baseUri?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.files
+    name: files
+    fullName: files
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 檔案的清單。 JobInputHttp 的必要項。 最多 4000 個字元。
+    optional: true
+    syntax:
+      content: 'files?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 標籤指派給 JobInputClip，用來滿足轉換中使用的參考。 比方說，可以撰寫轉換，以便將標籤 'xyz' 的映像檔案，並將它套用到輸入視訊上覆疊編碼之前。 當提交作業，只有其中一個 JobInputs 應該是影像檔案，而且應該要有 'xyz' 的標籤。
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.JobInputClip
+    name: JobInputClip
+    spec.typeScript:
+      - name: JobInputClip
+        fullName: JobInputClip
+        uid: azure-arm-mediaservices.JobInputClip

@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-cognitiveservices-websearch.Computation
+    name: Computation
+    fullName: Computation
+    children:
+      - azure-cognitiveservices-websearch.Computation.expression
+      - azure-cognitiveservices-websearch.Computation.followUpQueries
+      - azure-cognitiveservices-websearch.Computation.id
+      - azure-cognitiveservices-websearch.Computation.value
+      - azure-cognitiveservices-websearch.Computation.webSearchUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: 定義運算式和其答案
+    extends:
+      name: azure-cognitiveservices-websearch.Answer
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.expression
+    name: expression
+    fullName: expression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 數學或轉換的運算式。 如果查詢包含要轉換的量值 （例如，公尺至英呎） 單位的要求，此欄位會包含從單位和值包含為單位。 如果查詢包含數學運算式，例如 2 + 2，此欄位包含運算式，而值包含答案。 請注意，可能會正規化的數學運算式。 比方說，如果此查詢是 sqrt(4^2+8^2)，正規化的運算式可能 sqrt((4^2)+(8^2))。 如果使用者的查詢是數學方面的問題和 Textdecoration 查詢參數會設定為 true，運算式的字串可能包含格式化標記。 比方說，如果使用者的查詢是 log(2)，正規化的運算式會包含下標標記。 如需詳細資訊，請參閱叫用反白顯示。
+    syntax:
+      content: 'expression: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.followUpQueries
+    name: followUpQueries
+    fullName: followUpQueries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'followUpQueries?: Query[]'
+      return:
+        type:
+          - 'azure-cognitiveservices-websearch.Query[]'
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 字串識別碼。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 運算式的解答。
+    syntax:
+      content: 'value: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.webSearchUrl
+    name: webSearchUrl
+    fullName: webSearchUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此項目的 URL 至 Bing 的搜尋結果。
+    optional: true
+    syntax:
+      content: 'webSearchUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+references:
+  - uid: azure-cognitiveservices-websearch.Answer
+    name: Answer
+    spec.typeScript:
+      - name: Answer
+        fullName: Answer
+        uid: azure-cognitiveservices-websearch.Answer
+  - uid: 'azure-cognitiveservices-websearch.Query[]'
+    name: 'Query[]'
+    spec.typeScript:
+      - name: Query
+        fullName: Query
+        uid: azure-cognitiveservices-websearch.Query
+      - name: '[]'
+        fullName: '[]'

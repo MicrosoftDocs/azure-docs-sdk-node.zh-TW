@@ -1,0 +1,212 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription
+    name: StatelessServiceUpdateDescription
+    fullName: StatelessServiceUpdateDescription
+    children:
+      - azure-servicefabric.StatelessServiceUpdateDescription.correlationScheme
+      - azure-servicefabric.StatelessServiceUpdateDescription.defaultMoveCost
+      - azure-servicefabric.StatelessServiceUpdateDescription.flags
+      - azure-servicefabric.StatelessServiceUpdateDescription.instanceCount
+      - azure-servicefabric.StatelessServiceUpdateDescription.loadMetrics
+      - azure-servicefabric.StatelessServiceUpdateDescription.placementConstraints
+      - azure-servicefabric.StatelessServiceUpdateDescription.scalingPolicies
+      - azure-servicefabric.StatelessServiceUpdateDescription.serviceKind
+      - azure-servicefabric.StatelessServiceUpdateDescription.servicePlacementPolicies
+    langs:
+      - typeScript
+    type: interface
+    summary: 說明無狀態服務的更新。
+    extends:
+      name: azure-servicefabric.ServiceUpdateDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.correlationScheme
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 相互關聯配置。
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceCorrelationDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.defaultMoveCost
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務移動成本。 可能的值包括：'Zero'、 'Low'、 'Medium'、 'High'
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.flags
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      旗標，指出是否已設定其他屬性。 每個相關聯的屬性對應至下面指定的旗標，如果設定，指出屬性是否有指定。
+      這個屬性可以是使用位元 'OR' 運算子取得的這些旗標的組合。
+      比方說，如果提供的值為 6 則 ReplicaRestartWaitDuration (2) 和 QuorumLossWaitDuration (4) 的旗標是設定。
+      - None-不會指出設定任何其他屬性。 值為零。
+      - TargetReplicaSetSize/InstanceCount-指出是否已設定的 TargetReplicaSetSize 屬性 （適用於具狀態服務） 或 （適用於無狀態服務） 的 InstanceCount 屬性。 值為 1。
+      - ReplicaRestartWaitDuration-表示屬性設定的 ReplicaRestartWaitDuration。 值為 2。
+      - QuorumLossWaitDuration-表示屬性設定的 QuorumLossWaitDuration。 值是
+      4.
+      - StandByReplicaKeepDuration-表示屬性設定的 StandByReplicaKeepDuration。 值為 8。
+      - MinReplicaSetSize-表示屬性設定的 MinReplicaSetSize。 值為 16。
+      - PlacementConstraints-表示屬性設定的 PlacementConstraints。 值為 32。
+      - PlacementPolicyList-表示 ServicePlacementPolicies 屬性設定。 值是
+      64.
+      - 相互關聯-表示 CorrelationScheme 屬性設定。 這個值是 128。
+      - 計量-表示 ServiceLoadMetrics 屬性設定。 值為 256。
+      - DefaultMoveCost-表示 DefaultMoveCost 屬性設定。 值為 512。
+      - ScalingPolicy-表示 ScalingPolicies 屬性設定。 值為 1024年。
+    optional: true
+    syntax:
+      content: 'flags?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.instanceCount
+    name: instanceCount
+    fullName: instanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 執行個體計數。
+    optional: true
+    syntax:
+      content: 'instanceCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.loadMetrics
+    name: loadMetrics
+    fullName: loadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務負載度量。
+    optional: true
+    syntax:
+      content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.placementConstraints
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 以字串表示的放置限制式。 放置條件約束是節點屬性上的布林運算式，可允許根據服務需求將服務限制在特定節點。 比方說，若要放置 NodeType 為 blue 的節點上以服務指定下列："NodeColor == blue)"。
+    optional: true
+    syntax:
+      content: 'placementConstraints?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.scalingPolicies
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此服務的調整原則。
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ScalingPolicyDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.servicePlacementPolicies
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務放置原則。
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceUpdateDescription
+    name: ServiceUpdateDescription
+    spec.typeScript:
+      - name: ServiceUpdateDescription
+        fullName: ServiceUpdateDescription
+        uid: azure-servicefabric.ServiceUpdateDescription
+  - uid: 'azure-servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: azure-servicefabric.ServiceCorrelationDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: azure-servicefabric.ServiceLoadMetricDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: azure-servicefabric.ScalingPolicyDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    name: 'ServicePlacementPolicyDescription[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription
+      - name: '[]'
+        fullName: '[]'

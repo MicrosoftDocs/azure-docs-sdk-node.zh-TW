@@ -1,0 +1,255 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo
+    name: DeployedStatefulServiceReplicaDetailInfo
+    fullName: DeployedStatefulServiceReplicaDetailInfo
+    children:
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperation
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.partitionId
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.reportedLoad
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceKind
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceName
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus
+    langs:
+      - typeScript
+    type: interface
+    summary: 執行中的程式碼封裝的具狀態複本的相關資訊。 請注意 DeployedServiceReplicaQueryResult 會包含重複的資料，例如 ServiceKind、 ServiceName、 PartitionId 和複本識別碼。
+    extends:
+      name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation
+    name: currentReplicatorOperation
+    fullName: currentReplicatorOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定複寫器目前正在執行的作業。 可能的值包括：''Invalid''、 ''None''、 ''Open''、 ''ChangeRole''、 ''UpdateEpoch''、 ''[關閉]''、 ''Abort''、 ''OnDataLoss''、 ''WaitForCatchup''，''Build'''
+    optional: true
+    syntax:
+      content: 'currentReplicatorOperation?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperation
+    name: currentServiceOperation
+    fullName: currentServiceOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定目前使用中的生命週期作業的具狀態服務複本或無狀態服務執行個體上。 可能的值包括：'Unknown'，'None'、 ' Open'，'ChangeRole'，'關閉'、 'Abort'
+    optional: true
+    syntax:
+      content: 'currentServiceOperation?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc
+    name: currentServiceOperationStartTimeUtc
+    fullName: currentServiceOperationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 目前的服務作業，以 UTC 格式的開始時間。
+    optional: true
+    syntax:
+      content: 'currentServiceOperationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult
+    name: deployedServiceReplicaQueryResult
+    fullName: deployedServiceReplicaQueryResult
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 具狀態服務複本節點上所部署的相關資訊。
+    optional: true
+    syntax:
+      content: 'deployedServiceReplicaQueryResult?: DeployedStatefulServiceReplicaInfo'
+      return:
+        type:
+          - azure-servicefabric.DeployedStatefulServiceReplicaInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 用來唯一識別資料分割的內部識別碼。 建立服務時，這會是隨機產生的 GUID。 分割區識別碼是唯一的而且不會變更服務的存留期。 如果相同的服務已刪除，並重新建立資料分割識別碼會相同。
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus
+    name: readStatus
+    fullName: readStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定資料分割的存取狀態。 可能的值包括：'Invalid'、 ' 授與 '，'ReconfigurationPending'、 'NotPrimary'、 'NoWriteQuorum'
+    optional: true
+    syntax:
+      content: 'readStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 具狀態服務複本的識別碼。 Service Fabric 會使用 ReplicaId 來唯一識別資料分割的複本。 它是資料分割內唯一的並不會變更複本的存留期。 如果複本卸除相同資料分割在相同節點上建立另一個複本，它會取得不同值的識別碼。有時候無狀態服務執行個體的識別碼也稱為複本識別碼。
+    optional: true
+    syntax:
+      content: 'replicaId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 金鑰值存放區相關資訊的複本。
+    optional: true
+    syntax:
+      content: 'replicaStatus?: KeyValueStoreReplicaStatus'
+      return:
+        type:
+          - azure-servicefabric.KeyValueStoreReplicaStatus
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus
+    name: replicatorStatus
+    fullName: replicatorStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      代表主要或次要複寫器狀態的基底類別。
+      包含 service fabric 複寫器，例如複寫/複製佇列使用量、 上次收到的認可時間戳記等相關資訊。
+    optional: true
+    syntax:
+      content: 'replicatorStatus?: ReplicatorStatus'
+      return:
+        type:
+          - azure-servicefabric.ReplicatorStatus
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.reportedLoad
+    name: reportedLoad
+    fullName: reportedLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 複本所報告的負載清單。
+    optional: true
+    syntax:
+      content: 'reportedLoad?: LoadMetricReportInfo[]'
+      return:
+        type:
+          - 'azure-servicefabric.LoadMetricReportInfo[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '完整階層名稱中使用的 URI 格式啟動的服務`fabric:`。'
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus
+    name: writeStatus
+    fullName: writeStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定資料分割的存取狀態。 可能的值包括：'Invalid'、 ' 授與 '，'ReconfigurationPending'、 'NotPrimary'、 'NoWriteQuorum'
+    optional: true
+    syntax:
+      content: 'writeStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+    name: DeployedServiceReplicaDetailInfo
+    spec.typeScript:
+      - name: DeployedServiceReplicaDetailInfo
+        fullName: DeployedServiceReplicaDetailInfo
+        uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+    name: DeployedStatefulServiceReplicaInfo
+    spec.typeScript:
+      - name: DeployedStatefulServiceReplicaInfo
+        fullName: DeployedStatefulServiceReplicaInfo
+        uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+  - uid: azure-servicefabric.KeyValueStoreReplicaStatus
+    name: KeyValueStoreReplicaStatus
+    spec.typeScript:
+      - name: KeyValueStoreReplicaStatus
+        fullName: KeyValueStoreReplicaStatus
+        uid: azure-servicefabric.KeyValueStoreReplicaStatus
+  - uid: azure-servicefabric.ReplicatorStatus
+    name: ReplicatorStatus
+    spec.typeScript:
+      - name: ReplicatorStatus
+        fullName: ReplicatorStatus
+        uid: azure-servicefabric.ReplicatorStatus
+  - uid: 'azure-servicefabric.LoadMetricReportInfo[]'
+    name: 'LoadMetricReportInfo[]'
+    spec.typeScript:
+      - name: LoadMetricReportInfo
+        fullName: LoadMetricReportInfo
+        uid: azure-servicefabric.LoadMetricReportInfo
+      - name: '[]'
+        fullName: '[]'

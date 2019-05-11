@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo
+    name: StatelessServiceInstanceInfo
+    fullName: StatelessServiceInstanceInfo
+    children:
+      - azure-servicefabric.StatelessServiceInstanceInfo.address
+      - azure-servicefabric.StatelessServiceInstanceInfo.healthState
+      - azure-servicefabric.StatelessServiceInstanceInfo.instanceId
+      - azure-servicefabric.StatelessServiceInstanceInfo.lastInBuildDurationInSeconds
+      - azure-servicefabric.StatelessServiceInstanceInfo.nodeName
+      - azure-servicefabric.StatelessServiceInstanceInfo.replicaStatus
+      - azure-servicefabric.StatelessServiceInstanceInfo.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表無狀態服務執行個體。 這包括識別、 狀態、 健康情況、 節點名稱、 執行時間，以及執行個體的其他詳細資料的相關資訊。
+    extends:
+      name: azure-servicefabric.ReplicaInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.address
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 正在接聽位址的複本。
+    optional: true
+    syntax:
+      content: 'address?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 無狀態服務執行個體的識別碼。 Service Fabric 會使用 InstanceId 來唯一識別的無狀態服務分割區的執行個體。 它是資料分割內唯一的並不會變更執行個體的存留期。 如果在相同或不同的節點上，執行個體已容錯移轉，它會取得不同值的執行個體識別碼。
+    optional: true
+    syntax:
+      content: 'instanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.lastInBuildDurationInSeconds
+    name: lastInBuildDurationInSeconds
+    fullName: lastInBuildDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 以秒為單位的建置期間的複本最後一個。
+    optional: true
+    syntax:
+      content: 'lastInBuildDurationInSeconds?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 節點的名稱。
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.replicaStatus
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務的複本狀態。 可能的值包括：' Invalid'、 'InBuild'，'待命 」，「 就緒 」，'下'、 '卸除'
+    optional: true
+    syntax:
+      content: 'replicaStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaInfo
+    name: ReplicaInfo
+    spec.typeScript:
+      - name: ReplicaInfo
+        fullName: ReplicaInfo
+        uid: azure-servicefabric.ReplicaInfo

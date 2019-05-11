@@ -1,0 +1,181 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-apimanagement.ProductContract
+    name: ProductContract
+    fullName: ProductContract
+    children:
+      - azure-arm-apimanagement.ProductContract.approvalRequired
+      - azure-arm-apimanagement.ProductContract.description
+      - azure-arm-apimanagement.ProductContract.displayName
+      - azure-arm-apimanagement.ProductContract.id
+      - azure-arm-apimanagement.ProductContract.name
+      - azure-arm-apimanagement.ProductContract.state
+      - azure-arm-apimanagement.ProductContract.subscriptionRequired
+      - azure-arm-apimanagement.ProductContract.subscriptionsLimit
+      - azure-arm-apimanagement.ProductContract.terms
+      - azure-arm-apimanagement.ProductContract.type
+    langs:
+      - typeScript
+    type: interface
+    summary: 產品詳細資料。
+    extends:
+      name: azure-arm-apimanagement.Resource
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.approvalRequired
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否需要訂用帳戶核准。 如果為 false，將會自動啟用訂閱後立即呼叫產品的 Api 的開發人員核准新的訂用帳戶。 如果為 true，系統管理員之前，必須手動核准訂用帳戶的開發人員可以任何一項產品的 Api。 可以表示 subscriptionRequired 屬性存在，且其值為 false 時，才可以。
+    optional: true
+    syntax:
+      content: 'approvalRequired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 產品描述。 可包含 HTML 格式標籤。
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 產品名稱。
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源識別碼。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源名稱。
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '不論是否已發佈產品。 已發行的產品都可以找到開發人員入口網站的使用者。 非已發行的產品都只有系統管理員可以看到。 產品的預設狀態是 notPublished。 可能的值包括: ''notPublished''，''發行'''
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.subscriptionRequired
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      是否需要產品訂用帳戶存取 Api 本產品中納入。 如果為 true，產品稱為 「 受保護 」 而且需要在產品中包含的 api 的要求，成功的有效訂用帳戶金鑰。 如果為 false，產品就是 [開啟]，並在產品中包含的 api 要求可以透過不需要訂用帳戶金鑰。
+      如果建立新的產品，其值會假設時省略屬性，則為 true。
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.subscriptionsLimit
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否訂用帳戶的使用者數目可以同時有對此產品。 設為 null 或省略可允許無限制每使用者訂用帳戶。 可以表示 subscriptionRequired 屬性存在，且其值為 false 時，才可以。
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.terms
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 產品使用規定。 嘗試訂閱產品的開發人員將會看到且必須接受這些使用規定，才能完成訂閱程序。
+    optional: true
+    syntax:
+      content: 'terms?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: API 管理資源的資源類型。
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+references:
+  - uid: azure-arm-apimanagement.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-apimanagement.Resource

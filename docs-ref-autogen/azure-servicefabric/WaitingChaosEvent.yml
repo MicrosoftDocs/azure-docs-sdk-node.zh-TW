@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.WaitingChaosEvent
+    name: WaitingChaosEvent
+    fullName: WaitingChaosEvent
+    children:
+      - azure-servicefabric.WaitingChaosEvent.kind
+      - azure-servicefabric.WaitingChaosEvent.reason
+      - azure-servicefabric.WaitingChaosEvent.timeStampUtc
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述當混亂正在等候叢集變成供判定為失敗，比方說，混亂會產生的事件可能會等待進行升級完成混亂。
+    extends:
+      name: azure-servicefabric.ChaosEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.reason
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 說明為什麼 WaitingChaosEvent 所產生，例如，因為叢集升級。
+    optional: true
+    syntax:
+      content: 'reason?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.timeStampUtc
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: UTC 時間戳記時產生這個混亂事件。
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ChaosEvent
+    name: ChaosEvent
+    spec.typeScript:
+      - name: ChaosEvent
+        fullName: ChaosEvent
+        uid: azure-servicefabric.ChaosEvent

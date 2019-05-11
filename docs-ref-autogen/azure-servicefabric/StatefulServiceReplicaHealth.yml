@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth
+    name: StatefulServiceReplicaHealth
+    fullName: StatefulServiceReplicaHealth
+    children:
+      - azure-servicefabric.StatefulServiceReplicaHealth.aggregatedHealthState
+      - azure-servicefabric.StatefulServiceReplicaHealth.healthEvents
+      - azure-servicefabric.StatefulServiceReplicaHealth.healthStatistics
+      - azure-servicefabric.StatefulServiceReplicaHealth.partitionId
+      - azure-servicefabric.StatefulServiceReplicaHealth.replicaId
+      - azure-servicefabric.StatefulServiceReplicaHealth.serviceKind
+      - azure-servicefabric.StatefulServiceReplicaHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      表示具狀態服務複本的健全狀況。
+      包含複本彙總健全狀況狀態、 健康情況事件和狀況不良的評估。
+    extends:
+      name: azure-servicefabric.ReplicaHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      代表計算由 Health Manager 實體的彙總健全狀況狀態 HealthState。
+      實體的健康狀態評估會反映報告上的實體和其子系 （如果有的話） 的所有事件。
+      彙總，即可套用所需的健全狀況原則。 可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 健康情況報告的事件實體清單。
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 顯示所有的子系類型之查詢的實體健全狀況統計資料。
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此複本所屬的資料分割識別碼。
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 具狀態服務複本的識別碼。 Service Fabric 會使用 ReplicaId 來唯一識別資料分割的複本。 它是資料分割內唯一的並不會變更複本的存留期。 如果複本卸除相同資料分割在相同節點上建立另一個複本，它會取得不同值的識別碼。有時候無狀態服務執行個體的識別碼也稱為複本識別碼。
+    optional: true
+    syntax:
+      content: 'replicaId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 顯示目前的彙總健全狀況狀態為何已傳回的健全狀況管理員狀況不良的評估。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaHealth
+    name: ReplicaHealth
+    spec.typeScript:
+      - name: ReplicaHealth
+        fullName: ReplicaHealth
+        uid: azure-servicefabric.ReplicaHealth
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'
