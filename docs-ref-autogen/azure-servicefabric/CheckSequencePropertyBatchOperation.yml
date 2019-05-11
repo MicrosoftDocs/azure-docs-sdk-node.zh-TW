@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.CheckSequencePropertyBatchOperation
+    name: CheckSequencePropertyBatchOperation
+    fullName: CheckSequencePropertyBatchOperation
+    children:
+      - azure-servicefabric.CheckSequencePropertyBatchOperation.kind
+      - azure-servicefabric.CheckSequencePropertyBatchOperation.propertyName
+      - azure-servicefabric.CheckSequencePropertyBatchOperation.sequenceNumber
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="2408b-101">比較屬性與 SequenceNumber 引數的序號。</span><span class="sxs-lookup"><span data-stu-id="2408b-101">Compares the Sequence Number of a property with the SequenceNumber argument.</span></span>
+      <span data-ttu-id="2408b-102">屬性的順序編號可以視為該屬性的版本。</span><span class="sxs-lookup"><span data-stu-id="2408b-102">A property's sequence number can be thought of as that property's version.</span></span>
+      <span data-ttu-id="2408b-103">每次修改屬性時，會增加序號。</span><span class="sxs-lookup"><span data-stu-id="2408b-103">Every time the property is modified, its sequence number is increased.</span></span>
+      <span data-ttu-id="2408b-104">屬性的中繼資料中，可以找到的序號。</span><span class="sxs-lookup"><span data-stu-id="2408b-104">The sequence number can be found in a property's metadata.</span></span>
+      <span data-ttu-id="2408b-105">如果序號不相等，比較將會失敗。</span><span class="sxs-lookup"><span data-stu-id="2408b-105">The comparison fails if the sequence numbers are not equal.</span></span>
+      <span data-ttu-id="2408b-106">針對批次中的 「 寫入 」 操作 CheckSequencePropertyBatchOperation 通常用來做前置條件。</span><span class="sxs-lookup"><span data-stu-id="2408b-106">CheckSequencePropertyBatchOperation is generally used as a precondition for the write operations in the batch.</span></span>
+      <span data-ttu-id="2408b-107">請注意，是否一個 PropertyBatchOperation PropertyBatch 中的失敗，整個批次失敗，而且無法認可交易的方式。</span><span class="sxs-lookup"><span data-stu-id="2408b-107">Note that if one PropertyBatchOperation in a PropertyBatch fails, the entire batch fails and cannot be committed in a transactional manner.</span></span>
+    extends:
+      name: azure-servicefabric.PropertyBatchOperation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckSequencePropertyBatchOperation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2408b-108">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="2408b-108">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckSequencePropertyBatchOperation.propertyName
+    name: propertyName
+    fullName: propertyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2408b-109">Service Fabric 屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="2408b-109">The name of the Service Fabric property.</span></span>
+    syntax:
+      content: 'propertyName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckSequencePropertyBatchOperation.sequenceNumber
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2408b-110">預期的序號。</span><span class="sxs-lookup"><span data-stu-id="2408b-110">The expected sequence number.</span></span>
+    syntax:
+      content: 'sequenceNumber: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PropertyBatchOperation
+    name: PropertyBatchOperation
+    spec.typeScript:
+      - name: PropertyBatchOperation
+        fullName: PropertyBatchOperation
+        uid: azure-servicefabric.PropertyBatchOperation
