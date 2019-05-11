@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.EventHealthEvaluation
+    name: EventHealthEvaluation
+    fullName: EventHealthEvaluation
+    children:
+      - azure-servicefabric.EventHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.EventHealthEvaluation.considerWarningAsError
+      - azure-servicefabric.EventHealthEvaluation.description
+      - azure-servicefabric.EventHealthEvaluation.kind
+      - azure-servicefabric.EventHealthEvaluation.unhealthyEvent
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      表示在實體回報 HealthEvent 的健康狀態評估。
+      評估實體的健康情況會導致錯誤或警告時，會傳回的健全狀況評估。
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.EventHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.EventHealthEvaluation.considerWarningAsError
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可指示是否將具有相同嚴重性的警告視為錯誤。 用來評估實體的健康原則中指定的欄位。
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.EventHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 健康情況評估，這代表評估程序的摘要描述。
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.EventHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.EventHealthEvaluation.unhealthyEvent
+    name: unhealthyEvent
+    fullName: unhealthyEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 代表具有額外的中繼資料新增健全狀況管理員回報健康狀態實體，例如叢集、 應用程式或節點的健康情況資訊。
+    optional: true
+    syntax:
+      content: 'unhealthyEvent?: HealthEvent'
+      return:
+        type:
+          - azure-servicefabric.HealthEvent
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: azure-servicefabric.HealthEvent
+    name: HealthEvent
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
