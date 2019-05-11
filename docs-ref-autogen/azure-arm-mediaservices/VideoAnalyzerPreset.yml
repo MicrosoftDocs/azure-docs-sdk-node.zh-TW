@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset
+    name: VideoAnalyzerPreset
+    fullName: VideoAnalyzerPreset
+    children:
+      - azure-arm-mediaservices.VideoAnalyzerPreset.audioLanguage
+      - azure-arm-mediaservices.VideoAnalyzerPreset.insightsToExtract
+      - azure-arm-mediaservices.VideoAnalyzerPreset.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: 影片的分析器，預設值來擷取音訊及視訊的深入解析 （豐富的中繼資料），並輸出 JSON 格式檔案。
+    extends:
+      name: azure-arm-mediaservices.AudioAnalyzerPreset
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.audioLanguage
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '使用 BCP-47 格式的 ''語言標記-地區'' 輸入中的音訊承載的語言 (例如: '' EN-US '')。  支援的語言清單會 （'' EN-US ''和'' EN-GB ''） 的英文、 西班牙文 （'' ES-ES ''和'' ES-MX ''）、 法文 (''fr-FR'')、 義大利文 ('' IT-IT '')、 日文 ('' JA-JP '')、 葡萄牙文 ('' PT-BR '')、 中文 ('' ZH-CN '')、 德文 ('' DE-DE '')、 阿拉伯文 （'' AR-EG ''和'' ar SY''）、 俄文 (''RU-RU '')、 印度文 ('' HI-IN '') 和韓文 ('' KO-KR '')。 如果您知道您的內容語言時，建議您加以指定。 如果未指定語言或將語言設為 Null，自動語言偵測會選擇偵測到的第一種語言，並使用選取的語言處理整個檔案。 這項語言偵測功能目前支援英文、 簡體中文、 法文、 德文、 義大利文、 日文、 西班牙文、 俄文和葡萄牙文。 目前不支援在偵測到第一個語言後，動態地切換語言。 自動偵測最適合搭配清楚明顯為語音的音訊錄製。 如果自動偵測，就無法找到的語言，轉譯會切換回 '' EN-US ''。 」'
+    optional: true
+    syntax:
+      content: 'audioLanguage?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.insightsToExtract
+    name: insightsToExtract
+    fullName: insightsToExtract
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要擷取的深入解析的型別。 如果未設定然後根據型別將所選取的內容。  如果只則只有音訊的深入解析會擷取，而只是視訊音訊內容。 可能的值包括：' AudioInsightsOnly'，'VideoInsightsOnly'，'AllInsights'
+    optional: true
+    syntax:
+      content: 'insightsToExtract?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.AudioAnalyzerPreset
+    name: AudioAnalyzerPreset
+    spec.typeScript:
+      - name: AudioAnalyzerPreset
+        fullName: AudioAnalyzerPreset
+        uid: azure-arm-mediaservices.AudioAnalyzerPreset

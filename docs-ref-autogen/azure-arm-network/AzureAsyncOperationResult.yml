@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-network.AzureAsyncOperationResult
+    name: AzureAsyncOperationResult
+    fullName: AzureAsyncOperationResult
+    children:
+      - azure-arm-network.AzureAsyncOperationResult.error
+      - azure-arm-network.AzureAsyncOperationResult.status
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      回應主體會包含指定的非同步作業，指出它已成功、 正在進行中，或已失敗的狀態。 請注意，此狀態取得作業狀態作業本身傳回的 HTTP 狀態碼有所區別。 如果非同步作業成功，回應主體會包含成功要求的 HTTP 狀態碼。
+      如果非同步作業失敗，回應主體會包含失敗的要求和錯誤資訊有關失敗的 HTTP 狀態碼。
+    package: azure-arm-network
+  - uid: azure-arm-network.AzureAsyncOperationResult.error
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的非同步作業期間發生錯誤的詳細資料。
+    optional: true
+    syntax:
+      content: 'error?: ErrorModel'
+      return:
+        type:
+          - azure-arm-network.ErrorModel
+    package: azure-arm-network
+  - uid: azure-arm-network.AzureAsyncOperationResult.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azure 的非同步作業的狀態。 可能的值包括：'InProgress'、 'Succeeded' 和 'Failed'。 可能的值包括：'InProgress'、 'Succeeded'，' Failed'
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+references:
+  - uid: azure-arm-network.ErrorModel
+    name: ErrorModel
+    spec.typeScript:
+      - name: ErrorModel
+        fullName: ErrorModel
+        uid: azure-arm-network.ErrorModel

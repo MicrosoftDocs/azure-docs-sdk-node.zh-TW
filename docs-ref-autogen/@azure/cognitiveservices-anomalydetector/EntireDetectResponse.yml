@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse'
+    name: EntireDetectResponse
+    fullName: EntireDetectResponse
+    children:
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.expectedValues'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isNegativeAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isPositiveAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.lowerMargins'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.period'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.upperMargins'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 EntireDetectResponse 的介面。
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.expectedValues'
+    name: expectedValues
+    fullName: expectedValues
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ExpectedValues 包含預期的值，針對每個輸入的點。 陣列的索引是與輸入數列一致。
+    syntax:
+      content: 'expectedValues: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isAnomaly'
+    name: isAnomaly
+    fullName: isAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsAnomaly 包含每個輸入點的異常屬性。 True 表示已偵測到異常負數或正數。 陣列的索引是與輸入數列一致。
+    syntax:
+      content: 'isAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isNegativeAnomaly'
+    name: isNegativeAnomaly
+    fullName: isNegativeAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsNegativeAnomaly 包含負數方向會針對每個輸入點的異常狀態。 True 表示負異常偵測。 負異常表示點被偵測為異常狀況，而且其真正的值小於符合預期。 陣列的索引是與輸入數列一致。
+    syntax:
+      content: 'isNegativeAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isPositiveAnomaly'
+    name: isPositiveAnomaly
+    fullName: isPositiveAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsPositiveAnomaly 包含異常狀態中的每個輸入點的正向。 True 表示正面的異常偵測。 正異常表示點被偵測為異常狀況，而且其真正的值大於符合預期。 陣列的索引是與輸入數列一致。
+    syntax:
+      content: 'isPositiveAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.lowerMargins'
+    name: lowerMargins
+    fullName: lowerMargins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: LowerMargins 包含每個輸入點的下方邊界。 LowerMargin 用來計算 lowerBoundary，等於 expectedValue-(100-marginScale) * lowerMargin。 可以標示界限之間的點，與用戶端在正常的。 陣列的索引是與輸入數列一致。
+    syntax:
+      content: 'lowerMargins: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 擷取的序列、 零則表示沒有循環性的模式，發現的頻率。
+    syntax:
+      content: 'period: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.upperMargins'
+    name: upperMargins
+    fullName: upperMargins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: UpperMargins 包含每個輸入點的上方邊界。 UpperMargin 用來計算 upperBoundary，等於 expectedValue + (100-marginScale) * upperMargin。 UpperBoundary 和 lowerBoundary，您可以篩選在回應中的異常狀況。 藉由調整 marginScale 值，您可以用戶端中，篩選較不重要的異常狀況。 陣列的索引是與輸入數列一致。
+    syntax:
+      content: 'upperMargins: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
