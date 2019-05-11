@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-cognitiveservices-websearch.Computation
+    name: Computation
+    fullName: Computation
+    children:
+      - azure-cognitiveservices-websearch.Computation.expression
+      - azure-cognitiveservices-websearch.Computation.followUpQueries
+      - azure-cognitiveservices-websearch.Computation.id
+      - azure-cognitiveservices-websearch.Computation.value
+      - azure-cognitiveservices-websearch.Computation.webSearchUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="01db3-101">定義運算式和其答案</span><span class="sxs-lookup"><span data-stu-id="01db3-101">Defines an expression and its answer</span></span>
+    extends:
+      name: azure-cognitiveservices-websearch.Answer
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.expression
+    name: expression
+    fullName: expression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="01db3-102">數學或轉換的運算式。</span><span class="sxs-lookup"><span data-stu-id="01db3-102">The math or conversion expression.</span></span> <span data-ttu-id="01db3-103">如果查詢包含要轉換的量值 （例如，公尺至英呎） 單位的要求，此欄位會包含從單位和值包含為單位。</span><span class="sxs-lookup"><span data-stu-id="01db3-103">If the query contains a request to convert units of measure (for example, meters to feet), this field contains the from units and value contains the to units.</span></span> <span data-ttu-id="01db3-104">如果查詢包含數學運算式，例如 2 + 2，此欄位包含運算式，而值包含答案。</span><span class="sxs-lookup"><span data-stu-id="01db3-104">If the query contains a mathematical expression such as 2+2, this field contains the expression and value contains the answer.</span></span> <span data-ttu-id="01db3-105">請注意，可能會正規化的數學運算式。</span><span class="sxs-lookup"><span data-stu-id="01db3-105">Note that mathematical expressions may be normalized.</span></span> <span data-ttu-id="01db3-106">比方說，如果此查詢是 sqrt(4^2+8^2)，正規化的運算式可能 sqrt((4^2)+(8^2))。</span><span class="sxs-lookup"><span data-stu-id="01db3-106">For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).</span></span> <span data-ttu-id="01db3-107">如果使用者的查詢是數學方面的問題和 Textdecoration 查詢參數會設定為 true，運算式的字串可能包含格式化標記。</span><span class="sxs-lookup"><span data-stu-id="01db3-107">If the user''s query is a math question and the textDecorations query parameter is set to true, the expression string may include formatting markers.</span></span> <span data-ttu-id="01db3-108">比方說，如果使用者的查詢是 log(2)，正規化的運算式會包含下標標記。</span><span class="sxs-lookup"><span data-stu-id="01db3-108">For example, if the user''s query is log(2), the normalized expression includes the subscript markers.</span></span> <span data-ttu-id="01db3-109">如需詳細資訊，請參閱叫用反白顯示。</span><span class="sxs-lookup"><span data-stu-id="01db3-109">For more information, see Hit Highlighting.</span></span>'
+    syntax:
+      content: 'expression: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.followUpQueries
+    name: followUpQueries
+    fullName: followUpQueries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'followUpQueries?: Query[]'
+      return:
+        type:
+          - 'azure-cognitiveservices-websearch.Query[]'
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="01db3-110">字串識別碼。</span><span class="sxs-lookup"><span data-stu-id="01db3-110">A String identifier.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="01db3-111">運算式的解答。</span><span class="sxs-lookup"><span data-stu-id="01db3-111">The expression's answer.</span></span>
+    syntax:
+      content: 'value: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.webSearchUrl
+    name: webSearchUrl
+    fullName: webSearchUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="01db3-112">此項目的 URL 至 Bing 的搜尋結果。</span><span class="sxs-lookup"><span data-stu-id="01db3-112">The URL To Bing's search result for this item.</span></span>
+    optional: true
+    syntax:
+      content: 'webSearchUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+references:
+  - uid: azure-cognitiveservices-websearch.Answer
+    name: Answer
+    spec.typeScript:
+      - name: Answer
+        fullName: Answer
+        uid: azure-cognitiveservices-websearch.Answer
+  - uid: 'azure-cognitiveservices-websearch.Query[]'
+    name: 'Query[]'
+    spec.typeScript:
+      - name: Query
+        fullName: Query
+        uid: azure-cognitiveservices-websearch.Query
+      - name: '[]'
+        fullName: '[]'

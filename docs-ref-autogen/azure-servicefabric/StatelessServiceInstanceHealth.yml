@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceInstanceHealth
+    name: StatelessServiceInstanceHealth
+    fullName: StatelessServiceInstanceHealth
+    children:
+      - azure-servicefabric.StatelessServiceInstanceHealth.aggregatedHealthState
+      - azure-servicefabric.StatelessServiceInstanceHealth.healthEvents
+      - azure-servicefabric.StatelessServiceInstanceHealth.healthStatistics
+      - azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+      - azure-servicefabric.StatelessServiceInstanceHealth.partitionId
+      - azure-servicefabric.StatelessServiceInstanceHealth.serviceKind
+      - azure-servicefabric.StatelessServiceInstanceHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="814cb-101">代表無狀態服務執行個體的健全狀況。</span><span class="sxs-lookup"><span data-stu-id="814cb-101">Represents the health of the stateless service instance.</span></span>
+      <span data-ttu-id="814cb-102">包含彙總的執行個體的健全狀況狀態、 健康情況事件和狀況不良的評估。</span><span class="sxs-lookup"><span data-stu-id="814cb-102">Contains the instance aggregated health state, the health events and the unhealthy evaluations.</span></span>
+    extends:
+      name: azure-servicefabric.ReplicaHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="814cb-103">代表計算由 Health Manager 實體的彙總健全狀況狀態 HealthState。</span><span class="sxs-lookup"><span data-stu-id="814cb-103">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>
+      <span data-ttu-id="814cb-104">實體的健康狀態評估會反映報告上的實體和其子系 （如果有的話） 的所有事件。</span><span class="sxs-lookup"><span data-stu-id="814cb-104">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+      <span data-ttu-id="814cb-105">彙總，即可套用所需的健全狀況原則。</span><span class="sxs-lookup"><span data-stu-id="814cb-105">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id="814cb-106">可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'</span><span class="sxs-lookup"><span data-stu-id="814cb-106">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="814cb-107">健康情況報告的事件實體清單。</span><span class="sxs-lookup"><span data-stu-id="814cb-107">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="814cb-108">顯示所有的子系類型之查詢的實體健全狀況統計資料。</span><span class="sxs-lookup"><span data-stu-id="814cb-108">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="814cb-109">無狀態服務執行個體的識別碼。</span><span class="sxs-lookup"><span data-stu-id="814cb-109">Id of a stateless service instance.</span></span> <span data-ttu-id="814cb-110">Service Fabric 會使用 InstanceId 來唯一識別的無狀態服務分割區的執行個體。</span><span class="sxs-lookup"><span data-stu-id="814cb-110">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="814cb-111">它是資料分割內唯一的並不會變更執行個體的存留期。</span><span class="sxs-lookup"><span data-stu-id="814cb-111">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="814cb-112">如果在相同或不同的節點上，執行個體已容錯移轉，它會取得不同值的執行個體識別碼。</span><span class="sxs-lookup"><span data-stu-id="814cb-112">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>'
+    optional: true
+    syntax:
+      content: 'instanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealth.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="814cb-113">此複本所屬的資料分割識別碼。</span><span class="sxs-lookup"><span data-stu-id="814cb-113">Id of the partition to which this replica belongs.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealth.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="814cb-114">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="814cb-114">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="814cb-115">顯示目前的彙總健全狀況狀態為何已傳回的健全狀況管理員狀況不良的評估。</span><span class="sxs-lookup"><span data-stu-id="814cb-115">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaHealth
+    name: ReplicaHealth
+    spec.typeScript:
+      - name: ReplicaHealth
+        fullName: ReplicaHealth
+        uid: azure-servicefabric.ReplicaHealth
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

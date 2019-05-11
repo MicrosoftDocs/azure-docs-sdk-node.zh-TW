@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthStateChunk
+    name: ReplicaHealthStateChunk
+    fullName: ReplicaHealthStateChunk
+    children:
+      - azure-servicefabric.ReplicaHealthStateChunk.healthState
+      - azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="86823-101">表示具狀態服務複本或無狀態服務執行個體的健康狀態區塊。</span><span class="sxs-lookup"><span data-stu-id="86823-101">Represents the health state chunk of a stateful service replica or a stateless service instance.</span></span>
+      <span data-ttu-id="86823-102">複本健全狀況狀態包含複本識別碼和其彙總健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="86823-102">The replica health state contains the replica ID and its aggregated health state.</span></span>
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86823-103">Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：''Invalid''、 ''Ok''、 ''Warning''、 ''Error''、 ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="86823-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86823-104">具狀態服務複本或無狀態服務執行個體的識別碼。</span><span class="sxs-lookup"><span data-stu-id="86823-104">Id of a stateful service replica or a stateless service instance.</span></span> <span data-ttu-id="86823-105">此識別碼可適用於具狀態與無狀態服務的查詢中。</span><span class="sxs-lookup"><span data-stu-id="86823-105">This ID is used in the queries that apply to both stateful and stateless services.</span></span> <span data-ttu-id="86823-106">Service Fabric 使用來唯一識別資料分割的具狀態服務或無狀態服務分割區的執行個體的複本。</span><span class="sxs-lookup"><span data-stu-id="86823-106">It is used by Service Fabric to uniquely identify a replica of a partition of a stateful service or an instance of a stateless service partition.</span></span> <span data-ttu-id="86823-107">它是資料分割內唯一的並不會變更的複本或執行個體的存留期。</span><span class="sxs-lookup"><span data-stu-id="86823-107">It is unique within a partition and does not change for the lifetime of the replica or the instance.</span></span> <span data-ttu-id="86823-108">如果具狀態複本卸除相同資料分割在相同節點上建立另一個複本，它會取得不同的值做為識別碼。</span><span class="sxs-lookup"><span data-stu-id="86823-108">If a stateful replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the ID.</span></span> <span data-ttu-id="86823-109">如果無狀態執行個體，會在相同或不同的節點上容錯移轉它會取得不同的值做為識別碼。</span><span class="sxs-lookup"><span data-stu-id="86823-109">If a stateless instance is failed over on the same or different node it will get a different value for the ID.</span></span>'
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk
