@@ -1,0 +1,130 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.Image
+    name: Image
+    fullName: Image
+    children:
+      - azure-arm-mediaservices.Image.keyFrameInterval
+      - azure-arm-mediaservices.Image.label
+      - azure-arm-mediaservices.Image.odatatype
+      - azure-arm-mediaservices.Image.range
+      - azure-arm-mediaservices.Image.start
+      - azure-arm-mediaservices.Image.step
+      - azure-arm-mediaservices.Image.stretchMode
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="5ad58-101">描述從輸入視訊中產生縮圖的基本內容</span><span class="sxs-lookup"><span data-stu-id="5ad58-101">Describes the basic properties for generating thumbnails from the input video</span></span>
+    extends:
+      name: azure-arm-mediaservices.Video
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Image.keyFrameInterval
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ad58-102">兩個主要畫面格，藉此定義圖片群組 (GOP) 之間的距離。</span><span class="sxs-lookup"><span data-stu-id="5ad58-102">The distance between two key frames, thereby defining a group of pictures (GOP).</span></span> <span data-ttu-id="5ad58-103">值應為非零整數範圍 [1，30] （秒），以 ISO 8601 格式指定。</span><span class="sxs-lookup"><span data-stu-id="5ad58-103">The value should be a non-zero integer in the range [1, 30] seconds, specified in ISO 8601 format.</span></span> <span data-ttu-id="5ad58-104">預設值為 2 秒 (PT2S)。</span><span class="sxs-lookup"><span data-stu-id="5ad58-104">The default is 2 seconds (PT2S).</span></span>'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Image.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ad58-105">轉碼器選擇性標籤。</span><span class="sxs-lookup"><span data-stu-id="5ad58-105">An optional label for the codec.</span></span> <span data-ttu-id="5ad58-106">標籤可用來控制 muxing 行為。</span><span class="sxs-lookup"><span data-stu-id="5ad58-106">The label can be used to control muxing behavior.</span></span>
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Image.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ad58-107">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="5ad58-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Image.range
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ad58-108">輸入影片要停止產生縮圖中的位置。</span><span class="sxs-lookup"><span data-stu-id="5ad58-108">The position in the input video at which to stop generating thumbnails.</span></span> <span data-ttu-id="5ad58-109">值可以是絕對的時間戳記 (ISO 8601，例如：PT5M30S 停止在 5 分鐘和 30 秒) 或框架計數 (比方說，300 300 的畫面格在停止) 或相對的值 （例如，100%)。</span><span class="sxs-lookup"><span data-stu-id="5ad58-109">The value can be in absolute timestamp (ISO 8601, e.g: PT5M30S to stop at 5 minutes and 30 seconds), or a frame count (For example, 300 to stop at the 300th frame), or a relative value (For example, 100%).</span></span>'
+    optional: true
+    syntax:
+      content: 'range?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Image.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ad58-110">輸入視訊從何處開始產生縮圖中的位置。</span><span class="sxs-lookup"><span data-stu-id="5ad58-110">The position in the input video from where to start generating thumbnails.</span></span> <span data-ttu-id="5ad58-111">值可以是絕對的時間戳記 (ISO 8601，例如：PT05S)，或框架計數 (例如，10 10 框架) 或相對的值 （例如，1%)。</span><span class="sxs-lookup"><span data-stu-id="5ad58-111">The value can be in absolute timestamp (ISO 8601, e.g: PT05S), or a frame count (For example, 10 for the 10th frame), or a relative value (For example, 1%).</span></span> <span data-ttu-id="5ad58-112">也支援的巨集 {Best} 時，它會告訴選取最佳的縮圖，從視訊的頭幾秒，編碼器。</span><span class="sxs-lookup"><span data-stu-id="5ad58-112">Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video.</span></span>'
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Image.step
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ad58-113">產生縮圖時間間隔。</span><span class="sxs-lookup"><span data-stu-id="5ad58-113">The intervals at which thumbnails are generated.</span></span> <span data-ttu-id="5ad58-114">值可以是絕對的時間戳記 (ISO 8601，例如：其中一個 PT05S 映像每隔 5 秒），或框架計數 (例如，30 每隔 30 個畫面) 或相對的值 （例如，1%)。</span><span class="sxs-lookup"><span data-stu-id="5ad58-114">The value can be in absolute timestamp (ISO 8601, e.g: PT05S for one image every 5 seconds), or a frame count (For example, 30 for every 30 frames), or a relative value (For example, 1%).</span></span>'
+    optional: true
+    syntax:
+      content: 'step?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Image.stretchMode
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ad58-115">調整大小模式-如何輸入的視訊會調整大小以符合所需的輸出解決方法。</span><span class="sxs-lookup"><span data-stu-id="5ad58-115">The resizing mode - how the input video will be resized to fit the desired output resolution(s).</span></span> <span data-ttu-id="5ad58-116">預設值是自動調整。</span><span class="sxs-lookup"><span data-stu-id="5ad58-116">Default is AutoSize.</span></span> <span data-ttu-id="5ad58-117">可能的值包括：''None''、 ''AutoSize''，''都會將 AutoFit''</span><span class="sxs-lookup"><span data-stu-id="5ad58-117">Possible values include: ''None'', ''AutoSize'', ''AutoFit''</span></span>'
+    optional: true
+    syntax:
+      content: 'stretchMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Video
+    name: Video
+    spec.typeScript:
+      - name: Video
+        fullName: Video
+        uid: azure-arm-mediaservices.Video

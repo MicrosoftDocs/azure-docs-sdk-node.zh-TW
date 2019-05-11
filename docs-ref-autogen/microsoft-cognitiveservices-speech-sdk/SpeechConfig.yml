@@ -1,0 +1,279 @@
+### YamlMime:UniversalReference
+items:
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    fullName: SpeechConfig
+    children:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy_1
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="9b0ab-101">語音組態。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-101">Speech configuration.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+    name: authorizationToken
+    fullName: authorizationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9b0ab-102">取得/設定的授權權杖。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-102">Gets/Sets the authorization token.</span></span>
+      <span data-ttu-id="9b0ab-103">注意：呼叫端必須確保授權權杖有效。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-103">Note: The caller needs to ensure that the authorization token is valid.</span></span> <span data-ttu-id="9b0ab-104">在授權權杖過期之前，呼叫者必須藉由呼叫這個 set 存取子，以新的有效權杖重新整理。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-104">Before the authorization token expires, the caller needs to refresh it by calling this setter with a new valid token.</span></span>
+    syntax:
+      content: 'public authorizationToken: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9b0ab-105">關閉設定。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-105">Closes the configuration.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9b0ab-106">取得/設定自訂的語音模型用於語音辨識的結束點識別碼。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-106">Gets/Sets the endpoint ID of a customized speech model that is used for speech recognition.</span></span>
+    syntax:
+      content: 'public endpointId: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+    name: 'fromAuthorizationToken(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="9b0ab-107">使用指定的初始授權權杖和區域中建立語音 factory 執行的個體。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-107">Creates an instance of the speech factory with specified initial authorization token and region.</span></span>
+      <span data-ttu-id="9b0ab-108">注意：呼叫端必須確保授權權杖有效。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-108">Note: The caller needs to ensure that the authorization token is valid.</span></span> <span data-ttu-id="9b0ab-109">在授權權杖過期之前，呼叫者必須藉由呼叫這個 set 存取子，以新的有效權杖重新整理。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-109">Before the authorization token expires, the caller needs to refresh it by calling this setter with a new valid token.</span></span>
+      <span data-ttu-id="9b0ab-110">注意：請使用衍生自您 LanguageUnderstanding 訂用帳戶金鑰，如果您想要使用意圖辨識器的權杖。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-110">Note: Please use a token derived from your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span> <span data-ttu-id="9b0ab-111">當建立新的辨識器時，會複製設定值，並不會將新的權杖值套用到已建立的辨識器。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-111">As configuration values are copied when creating a new recognizer, the new token value will not apply to recognizers that have already been created.</span></span> <span data-ttu-id="9b0ab-112">之前已建立的辨識器，您要設定對應的辨識器，以重新整理權杖的授權權杖。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-112">For recognizers that have been created before, you need to set authorization token of the corresponding recognizer to refresh the token.</span></span> <span data-ttu-id="9b0ab-113">否則，辨識器會辨識期間會發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-113">Otherwise, the recognizers will encounter errors during recognition.</span></span>
+    syntax:
+      content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+      parameters:
+        - id: authorizationToken
+          type:
+            - string
+          description: <span data-ttu-id="9b0ab-114">初始的授權權杖。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-114">The initial authorization token.</span></span>
+        - id: region
+          type:
+            - string
+          description: '<span data-ttu-id="9b0ab-115">區域名稱 (請參閱<a href="https://aka.ms/csspeech/region">區域頁面</a>)。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-115">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+    name: 'fromEndpoint(URL, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="9b0ab-116">建立語音設定的執行個體使用指定的端點和訂用帳戶金鑰。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-116">Creates an instance of the speech config with specified endpoint and subscription key.</span></span>
+      <span data-ttu-id="9b0ab-117">這個方法僅供使用者使用非標準的服務端點或參數。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-117">This method is intended only for users who use a non-standard service endpoint or parameters.</span></span>
+      <span data-ttu-id="9b0ab-118">注意：請如果您想要使用意圖辨識器，使用您 LanguageUnderstanding 訂用帳戶金鑰。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-118">Note: Please use your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
+      <span data-ttu-id="9b0ab-119">注意：指定端點 URL 中的查詢參數都沒有變更，即使它們由任何其他 Api 設定。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-119">Note: The query parameters specified in the endpoint URL are not changed, even if they are set by any other APIs.</span></span>
+      <span data-ttu-id="9b0ab-120">比方說，如果 uri 為查詢參數中未定義語言 」 語言 = DE-DE"，並且也設定了由 SpeechConfig.speechRecognitionLanguage ="EN-US"，在 uri 中的語言設定的優先順序，以及有效的語言是"DE-DE"。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-120">For example, if language is defined in the uri as query parameter "language=de-DE", and also set by SpeechConfig.speechRecognitionLanguage = "en-US", the language setting in uri takes precedence, and the effective language is "de-DE".</span></span> <span data-ttu-id="9b0ab-121">未指定端點中的參數可以由其他 Api 設定 URL。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-121">Only the parameters that are not specified in the endpoint URL can be set by other APIs.</span></span>
+      <span data-ttu-id="9b0ab-122">注意：若要使用 fromEndpoint 授權權杖，以在 fromEndpoint 方法中，subscriptionKey 傳遞空字串，，然後設定 authorizationToken = 建立 SpeechConfig 執行個體，若要使用的授權權杖中的 「 權杖 」。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-122">Note: To use authorization token with fromEndpoint, pass an empty string to the subscriptionKey in the fromEndpoint method, and then set authorizationToken="token" on the created SpeechConfig instance to use the authorization token.</span></span>
+    syntax:
+      content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+      parameters:
+        - id: endpoint
+          type:
+            - URL
+          description: <span data-ttu-id="9b0ab-123">若要連接到服務端點。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-123">The service endpoint to connect to.</span></span>
+        - id: subscriptionKey
+          type:
+            - string
+          description: <span data-ttu-id="9b0ab-124">訂用帳戶金鑰。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-124">The subscription key.</span></span>
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+    name: 'fromSubscription(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="9b0ab-125">藉由傳遞 subscriptionKey 和服務的區域傳回 SpeechConfig 靜態執行個體。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-125">Static instance of SpeechConfig returned by passing subscriptionKey and service region.</span></span>
+      <span data-ttu-id="9b0ab-126">注意：請如果您想要使用意圖辨識器，使用您 LanguageUnderstanding 訂用帳戶金鑰。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-126">Note: Please use your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
+    syntax:
+      content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+      parameters:
+        - id: subscriptionKey
+          type:
+            - string
+          description: <span data-ttu-id="9b0ab-127">訂用帳戶金鑰。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-127">The subscription key.</span></span>
+        - id: region
+          type:
+            - string
+          description: '<span data-ttu-id="9b0ab-128">區域名稱 (請參閱<a href="https://aka.ms/csspeech/region">區域頁面</a>)。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-128">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+    name: 'getProperty(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9b0ab-129">傳回目前的任意屬性的值。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-129">Returns the current value of an arbitrary property.</span></span>
+    syntax:
+      content: 'function getProperty(name: string, def?: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="9b0ab-130">要查詢之屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-130">The name of the property to query.</span></span>
+        - id: def
+          type:
+            - string
+          description: <span data-ttu-id="9b0ab-131">不知道要在案例中，傳回屬性的值。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-131">The value to return in case the property is not known.</span></span>
+          optional: true
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+    name: outputFormat
+    fullName: outputFormat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9b0ab-132">取得/設定輸出格式。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-132">Gets/Sets the output format.</span></span>
+    syntax:
+      content: 'public outputFormat: OutputFormat'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.OutputFormat
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+    name: 'setProperty(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9b0ab-133">設定的任意屬性。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-133">Sets an arbitrary property.</span></span>
+    syntax:
+      content: 'function setProperty(name: string, value: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="9b0ab-134">要設定之屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-134">The name of the property to set.</span></span>
+        - id: value
+          type:
+            - string
+          description: |
+            <span data-ttu-id="9b0ab-135">屬性的新值。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-135">The new value of the property.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy
+    name: 'setProxy(string, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="9b0ab-136">設定 proxy 設定。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-136">Sets the proxy configuration.</span></span>
+      <span data-ttu-id="9b0ab-137">在 Node.js 環境中才相關。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-137">Only relevant in Node.js environments.</span></span>
+      <span data-ttu-id="9b0ab-138">1.4.0 版中新增。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-138">Added in version 1.4.0.</span></span>
+    syntax:
+      content: 'function setProxy(proxyHostName: string, proxyPort: number)'
+      parameters:
+        - id: proxyHostName
+          type:
+            - string
+          description: <span data-ttu-id="9b0ab-139">Proxy 伺服器的主機名稱。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-139">The host name of the proxy server.</span></span>
+        - id: proxyPort
+          type:
+            - number
+          description: |
+            <span data-ttu-id="9b0ab-140">Proxy 伺服器的連接埠號碼。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-140">The port number of the proxy server.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy_1
+    name: 'setProxy(string, number, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="9b0ab-141">設定 proxy 設定。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-141">Sets the proxy configuration.</span></span>
+      <span data-ttu-id="9b0ab-142">在 Node.js 環境中才相關。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-142">Only relevant in Node.js environments.</span></span>
+      <span data-ttu-id="9b0ab-143">1.4.0 版中新增。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-143">Added in version 1.4.0.</span></span>
+    syntax:
+      content: 'function setProxy(proxyHostName: string, proxyPort: number, proxyUserName: string, proxyPassword: string)'
+      parameters:
+        - id: proxyHostName
+          type:
+            - string
+          description: '<span data-ttu-id="9b0ab-144">主應用程式 proxy 伺服器名稱，而不需要的通訊協定配置 (http://)</span><span class="sxs-lookup"><span data-stu-id="9b0ab-144">The host name of the proxy server, without the protocol scheme (http://)</span></span>'
+        - id: proxyPort
+          type:
+            - number
+          description: ''
+        - id: proxyUserName
+          type:
+            - string
+          description: <span data-ttu-id="9b0ab-145">Proxy 伺服器的使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-145">The user name of the proxy server.</span></span>
+        - id: proxyPassword
+          type:
+            - string
+          description: |
+            <span data-ttu-id="9b0ab-146">Proxy 伺服器的密碼。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-146">The password of the proxy server.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+    name: speechRecognitionLanguage
+    fullName: speechRecognitionLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9b0ab-147">取得/設定的輸入的語言。</span><span class="sxs-lookup"><span data-stu-id="9b0ab-147">Gets/Sets the input language.</span></span>
+    syntax:
+      content: 'public speechRecognitionLanguage: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+    name: OutputFormat
+    spec.typeScript:
+      - name: OutputFormat
+        fullName: OutputFormat
+        uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    spec.typeScript:
+      - name: SpeechConfig
+        fullName: SpeechConfig
+        uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig

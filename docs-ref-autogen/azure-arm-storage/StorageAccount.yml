@@ -1,0 +1,481 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-storage.StorageAccount
+    name: StorageAccount
+    fullName: StorageAccount
+    children:
+      - azure-arm-storage.StorageAccount.accessTier
+      - azure-arm-storage.StorageAccount.creationTime
+      - azure-arm-storage.StorageAccount.customDomain
+      - azure-arm-storage.StorageAccount.enableAzureFilesAadIntegration
+      - azure-arm-storage.StorageAccount.enableHttpsTrafficOnly
+      - azure-arm-storage.StorageAccount.encryption
+      - azure-arm-storage.StorageAccount.failoverInProgress
+      - azure-arm-storage.StorageAccount.geoReplicationStats
+      - azure-arm-storage.StorageAccount.id
+      - azure-arm-storage.StorageAccount.identity
+      - azure-arm-storage.StorageAccount.isHnsEnabled
+      - azure-arm-storage.StorageAccount.kind
+      - azure-arm-storage.StorageAccount.lastGeoFailoverTime
+      - azure-arm-storage.StorageAccount.location
+      - azure-arm-storage.StorageAccount.name
+      - azure-arm-storage.StorageAccount.networkRuleSet
+      - azure-arm-storage.StorageAccount.primaryEndpoints
+      - azure-arm-storage.StorageAccount.primaryLocation
+      - azure-arm-storage.StorageAccount.provisioningState
+      - azure-arm-storage.StorageAccount.secondaryEndpoints
+      - azure-arm-storage.StorageAccount.secondaryLocation
+      - azure-arm-storage.StorageAccount.sku
+      - azure-arm-storage.StorageAccount.statusOfPrimary
+      - azure-arm-storage.StorageAccount.statusOfSecondary
+      - azure-arm-storage.StorageAccount.tags
+      - azure-arm-storage.StorageAccount.type
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="5ee90-101">存储帐户。</span><span class="sxs-lookup"><span data-stu-id="5ee90-101">The storage account.</span></span>
+    extends:
+      name: azure-arm-storage.TrackedResource
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.accessTier
+    name: accessTier
+    fullName: accessTier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="5ee90-102">所需的儲存體帳戶，其中類型 = BlobStorage。</span><span class="sxs-lookup"><span data-stu-id="5ee90-102">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id="5ee90-103">存取層，用於計費。</span><span class="sxs-lookup"><span data-stu-id="5ee90-103">The access tier used for billing.</span></span>
+      <span data-ttu-id="5ee90-104">可能的值包括：「 熱 」，' 非經常性存取 '</span><span class="sxs-lookup"><span data-stu-id="5ee90-104">Possible values include: 'Hot', 'Cool'</span></span>
+    optional: true
+    syntax:
+      content: 'accessTier?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.creationTime
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-105">取得以 utc 表示的建立日期和時間的儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="5ee90-105">Gets the creation date and time of the storage account in UTC.</span></span>
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.customDomain
+    name: customDomain
+    fullName: customDomain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-106">取得自訂網域指派給此儲存體帳戶的使用者。</span><span class="sxs-lookup"><span data-stu-id="5ee90-106">Gets the custom domain the user assigned to this storage account.</span></span>
+    optional: true
+    syntax:
+      content: 'customDomain?: CustomDomain'
+      return:
+        type:
+          - azure-arm-storage.CustomDomain
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.enableAzureFilesAadIntegration
+    name: enableAzureFilesAadIntegration
+    fullName: enableAzureFilesAadIntegration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-107">如果 Azure 檔案 AAD 整合讓 SMB 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="5ee90-107">Enables Azure Files AAD Integration for SMB if sets to true.</span></span>
+    optional: true
+    syntax:
+      content: 'enableAzureFilesAadIntegration?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.enableHttpsTrafficOnly
+    name: enableHttpsTrafficOnly
+    fullName: enableHttpsTrafficOnly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-108">如果允許 https 流量只能連到儲存體服務設定為 true。</span><span class="sxs-lookup"><span data-stu-id="5ee90-108">Allows https traffic only to storage service if sets to true.</span></span>
+    optional: true
+    syntax:
+      content: 'enableHttpsTrafficOnly?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.encryption
+    name: encryption
+    fullName: encryption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee90-109">取得帳戶的加密設定。</span><span class="sxs-lookup"><span data-stu-id="5ee90-109">Gets the encryption settings on the account.</span></span> <span data-ttu-id="5ee90-110">如果未指定，此帳戶是未加密。</span><span class="sxs-lookup"><span data-stu-id="5ee90-110">If unspecified, the account is unencrypted.</span></span>'
+    optional: true
+    syntax:
+      content: 'encryption?: Encryption'
+      return:
+        type:
+          - azure-arm-storage.Encryption
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.failoverInProgress
+    name: failoverInProgress
+    fullName: failoverInProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee90-111">如果容錯移轉正在進行中，此值會是 true，否則它會是 null。</span><span class="sxs-lookup"><span data-stu-id="5ee90-111">If the failover is in progress, the value will be true, otherwise, it will be null.</span></span>'
+    optional: true
+    syntax:
+      content: 'failoverInProgress?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.geoReplicationStats
+    name: geoReplicationStats
+    fullName: geoReplicationStats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-112">地理複寫統計資料</span><span class="sxs-lookup"><span data-stu-id="5ee90-112">Geo Replication Stats</span></span>
+    optional: true
+    syntax:
+      content: 'geoReplicationStats?: GeoReplicationStats'
+      return:
+        type:
+          - azure-arm-storage.GeoReplicationStats
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee90-113">資源的完整的資源識別碼。</span><span class="sxs-lookup"><span data-stu-id="5ee90-113">Fully qualified resource Id for the resource.</span></span> <span data-ttu-id="5ee90-114">Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</span><span class="sxs-lookup"><span data-stu-id="5ee90-114">Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.identity
+    name: identity
+    fullName: identity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-115">資源的身分識別。</span><span class="sxs-lookup"><span data-stu-id="5ee90-115">The identity of the resource.</span></span>
+    optional: true
+    syntax:
+      content: 'identity?: Identity'
+      return:
+        type:
+          - azure-arm-storage.Identity
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.isHnsEnabled
+    name: isHnsEnabled
+    fullName: isHnsEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-116">如果已啟用的帳戶 HierarchicalNamespace 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="5ee90-116">Account HierarchicalNamespace enabled if sets to true.</span></span>
+    optional: true
+    syntax:
+      content: 'isHnsEnabled?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee90-117">取得類型。</span><span class="sxs-lookup"><span data-stu-id="5ee90-117">Gets the Kind.</span></span> <span data-ttu-id="5ee90-118">可能的值包括：''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span><span class="sxs-lookup"><span data-stu-id="5ee90-118">Possible values include: ''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span></span>'
+    optional: true
+    syntax:
+      content: 'kind?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.lastGeoFailoverTime
+    name: lastGeoFailoverTime
+    fullName: lastGeoFailoverTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-119">取得最新的執行個體的容錯移轉至次要位置的時間戳記。</span><span class="sxs-lookup"><span data-stu-id="5ee90-119">Gets the timestamp of the most recent instance of a failover to the secondary location.</span></span> <span data-ttu-id="5ee90-120">會保留最新時間戳記。</span><span class="sxs-lookup"><span data-stu-id="5ee90-120">Only the most recent timestamp is retained.</span></span> <span data-ttu-id="5ee90-121">如果從未已容錯移轉執行個體，不會傳回這個項目。</span><span class="sxs-lookup"><span data-stu-id="5ee90-121">This element is not returned if there has never been a failover instance.</span></span> <span data-ttu-id="5ee90-122">只有 accountType 為 Standard_GRS 或 Standard_RAGRS。</span><span class="sxs-lookup"><span data-stu-id="5ee90-122">Only available if the accountType is Standard_GRS or Standard_RAGRS.</span></span>
+    optional: true
+    syntax:
+      content: 'lastGeoFailoverTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-123">資源所在地理位置</span><span class="sxs-lookup"><span data-stu-id="5ee90-123">The geo-location where the resource lives</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-124">資源的名稱</span><span class="sxs-lookup"><span data-stu-id="5ee90-124">The name of the resource</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.networkRuleSet
+    name: networkRuleSet
+    fullName: networkRuleSet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-125">網路規則集</span><span class="sxs-lookup"><span data-stu-id="5ee90-125">Network rule set</span></span>
+    optional: true
+    syntax:
+      content: 'networkRuleSet?: NetworkRuleSet'
+      return:
+        type:
+          - azure-arm-storage.NetworkRuleSet
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.primaryEndpoints
+    name: primaryEndpoints
+    fullName: primaryEndpoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="5ee90-126">取得用來執行擷取公用 blob、 佇列或資料表物件的 Url。</span><span class="sxs-lookup"><span data-stu-id="5ee90-126">Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object.</span></span>
+      <span data-ttu-id="5ee90-127">請注意，Standard_ZRS 和 Premium_LRS 帳戶只會傳回 blob 端點。</span><span class="sxs-lookup"><span data-stu-id="5ee90-127">Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.</span></span>
+    optional: true
+    syntax:
+      content: 'primaryEndpoints?: Endpoints'
+      return:
+        type:
+          - azure-arm-storage.Endpoints
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.primaryLocation
+    name: primaryLocation
+    fullName: primaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-128">取得儲存體帳戶的主要資料中心位置。</span><span class="sxs-lookup"><span data-stu-id="5ee90-128">Gets the location of the primary data center for the storage account.</span></span>
+    optional: true
+    syntax:
+      content: 'primaryLocation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee90-129">在呼叫作業時，取得儲存體帳戶的狀態。</span><span class="sxs-lookup"><span data-stu-id="5ee90-129">Gets the status of the storage account at the time the operation was called.</span></span> <span data-ttu-id="5ee90-130">可能的值包括：''建立''，''ResolvingDNS''，'' Succeeded''</span><span class="sxs-lookup"><span data-stu-id="5ee90-130">Possible values include: ''Creating'', ''ResolvingDNS'', ''Succeeded''</span></span>'
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.secondaryEndpoints
+    name: secondaryEndpoints
+    fullName: secondaryEndpoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee90-131">取得用來執行擷取公用 blob、 佇列或資料表物件，從次要位置的儲存體帳戶的 Url。</span><span class="sxs-lookup"><span data-stu-id="5ee90-131">Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account.</span></span> <span data-ttu-id="5ee90-132">只有 SKU 名稱為 Standard_RAGRS。</span><span class="sxs-lookup"><span data-stu-id="5ee90-132">Only available if the SKU name is Standard_RAGRS.</span></span>'
+    optional: true
+    syntax:
+      content: 'secondaryEndpoints?: Endpoints'
+      return:
+        type:
+          - azure-arm-storage.Endpoints
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.secondaryLocation
+    name: secondaryLocation
+    fullName: secondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-133">取得儲存體帳戶的異地複寫的次要位置。</span><span class="sxs-lookup"><span data-stu-id="5ee90-133">Gets the location of the geo-replicated secondary for the storage account.</span></span> <span data-ttu-id="5ee90-134">只有 accountType 為 Standard_GRS 或 Standard_RAGRS。</span><span class="sxs-lookup"><span data-stu-id="5ee90-134">Only available if the accountType is Standard_GRS or Standard_RAGRS.</span></span>
+    optional: true
+    syntax:
+      content: 'secondaryLocation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-135">取得 SKU。</span><span class="sxs-lookup"><span data-stu-id="5ee90-135">Gets the SKU.</span></span>
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - azure-arm-storage.Sku
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.statusOfPrimary
+    name: statusOfPrimary
+    fullName: statusOfPrimary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee90-136">取得指出是否可以或無法使用主要位置的儲存體帳戶的狀態。</span><span class="sxs-lookup"><span data-stu-id="5ee90-136">Gets the status indicating whether the primary location of the storage account is available or unavailable.</span></span> <span data-ttu-id="5ee90-137">可能的值包括: ''available''、 ''無法使用''</span><span class="sxs-lookup"><span data-stu-id="5ee90-137">Possible values include: ''available'', ''unavailable''</span></span>'
+    optional: true
+    syntax:
+      content: 'statusOfPrimary?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.statusOfSecondary
+    name: statusOfSecondary
+    fullName: statusOfSecondary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee90-138">取得指出是否可以或無法使用次要位置的儲存體帳戶的狀態。</span><span class="sxs-lookup"><span data-stu-id="5ee90-138">Gets the status indicating whether the secondary location of the storage account is available or unavailable.</span></span> <span data-ttu-id="5ee90-139">只有使用 SKU 名稱是否 Standard_GRS 或 Standard_RAGRS。</span><span class="sxs-lookup"><span data-stu-id="5ee90-139">Only available if the SKU name is Standard_GRS or Standard_RAGRS.</span></span> <span data-ttu-id="5ee90-140">可能的值包括: ''available''、 ''無法使用''</span><span class="sxs-lookup"><span data-stu-id="5ee90-140">Possible values include: ''available'', ''unavailable''</span></span>'
+    optional: true
+    syntax:
+      content: 'statusOfSecondary?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-141">資源標籤。</span><span class="sxs-lookup"><span data-stu-id="5ee90-141">Resource tags.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-storage
+  - uid: azure-arm-storage.StorageAccount.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee90-142">資源類型。</span><span class="sxs-lookup"><span data-stu-id="5ee90-142">The type of the resource.</span></span> <span data-ttu-id="5ee90-143">例如-microsoft.compute/virtualmachines 或 microsoft.storage/storageaccounts。</span><span class="sxs-lookup"><span data-stu-id="5ee90-143">Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+references:
+  - uid: azure-arm-storage.TrackedResource
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: azure-arm-storage.TrackedResource
+  - uid: azure-arm-storage.CustomDomain
+    name: CustomDomain
+    spec.typeScript:
+      - name: CustomDomain
+        fullName: CustomDomain
+        uid: azure-arm-storage.CustomDomain
+  - uid: azure-arm-storage.Encryption
+    name: Encryption
+    spec.typeScript:
+      - name: Encryption
+        fullName: Encryption
+        uid: azure-arm-storage.Encryption
+  - uid: azure-arm-storage.GeoReplicationStats
+    name: GeoReplicationStats
+    spec.typeScript:
+      - name: GeoReplicationStats
+        fullName: GeoReplicationStats
+        uid: azure-arm-storage.GeoReplicationStats
+  - uid: azure-arm-storage.Identity
+    name: Identity
+    spec.typeScript:
+      - name: Identity
+        fullName: Identity
+        uid: azure-arm-storage.Identity
+  - uid: azure-arm-storage.NetworkRuleSet
+    name: NetworkRuleSet
+    spec.typeScript:
+      - name: NetworkRuleSet
+        fullName: NetworkRuleSet
+        uid: azure-arm-storage.NetworkRuleSet
+  - uid: azure-arm-storage.Endpoints
+    name: Endpoints
+    spec.typeScript:
+      - name: Endpoints
+        fullName: Endpoints
+        uid: azure-arm-storage.Endpoints
+  - uid: azure-arm-storage.Sku
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: azure-arm-storage.Sku
