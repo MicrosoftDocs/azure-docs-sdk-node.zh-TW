@@ -1,0 +1,544 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-batch.Pool
+    name: Pool
+    fullName: Pool
+    children:
+      - azure-arm-batch.Pool.allocationState
+      - azure-arm-batch.Pool.allocationStateTransitionTime
+      - azure-arm-batch.Pool.applicationLicenses
+      - azure-arm-batch.Pool.applicationPackages
+      - azure-arm-batch.Pool.autoScaleRun
+      - azure-arm-batch.Pool.certificates
+      - azure-arm-batch.Pool.creationTime
+      - azure-arm-batch.Pool.currentDedicatedNodes
+      - azure-arm-batch.Pool.currentLowPriorityNodes
+      - azure-arm-batch.Pool.deploymentConfiguration
+      - azure-arm-batch.Pool.displayName
+      - azure-arm-batch.Pool.etag
+      - azure-arm-batch.Pool.id
+      - azure-arm-batch.Pool.interNodeCommunication
+      - azure-arm-batch.Pool.lastModified
+      - azure-arm-batch.Pool.maxTasksPerNode
+      - azure-arm-batch.Pool.metadata
+      - azure-arm-batch.Pool.name
+      - azure-arm-batch.Pool.networkConfiguration
+      - azure-arm-batch.Pool.provisioningState
+      - azure-arm-batch.Pool.provisioningStateTransitionTime
+      - azure-arm-batch.Pool.resizeOperationStatus
+      - azure-arm-batch.Pool.scaleSettings
+      - azure-arm-batch.Pool.startTask
+      - azure-arm-batch.Pool.taskSchedulingPolicy
+      - azure-arm-batch.Pool.type
+      - azure-arm-batch.Pool.userAccounts
+      - azure-arm-batch.Pool.vmSize
+    langs:
+      - typeScript
+    type: interface
+    summary: 包含集區的相關資訊。
+    extends:
+      name: azure-arm-batch.ProxyResource
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.allocationState
+    name: allocationState
+    fullName: allocationState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可能的值包括：' 穩定 '，'因為重新調整'、 'Stopping'
+    optional: true
+    syntax:
+      content: 'allocationState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.allocationStateTransitionTime
+    name: allocationStateTransitionTime
+    fullName: allocationStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'allocationStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.applicationLicenses
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 應用程式授權份必須是可用的批次服務應用程式授權的子集。 如果這不支援要求授權時，建立集區將會失敗。
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.applicationPackages
+    name: applicationPackages
+    fullName: applicationPackages
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 應用程式套件的變更會影響所有新的計算節點加入集區，但不是會影響集區中已經有，直到重新啟動或重新安裝映像的計算節點。
+    optional: true
+    syntax:
+      content: 'applicationPackages?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-arm-batch.ApplicationPackageReference[]'
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.autoScaleRun
+    name: autoScaleRun
+    fullName: autoScaleRun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果集區會自動調整，也就是將使用 autoScaleSettings 僅會設定這個屬性。
+    optional: true
+    syntax:
+      content: 'autoScaleRun?: AutoScaleRun'
+      return:
+        type:
+          - azure-arm-batch.AutoScaleRun
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.certificates
+    name: certificates
+    fullName: certificates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '針對 Windows 計算節點，Batch 服務會安裝憑證至指定的憑證存放區和位置。 對於 Linux 計算節點，憑證會儲存在目錄內工作工作目錄和環境變數的 AZ_BATCH_CERTIFICATES_DIR 提供給此位置的查詢工作。 與 ''remoteUser'' 的可見性的憑證，建立 ''certs'' 目錄中使用者的主目錄 (例如，/home/ {使用者-名稱} / certs) 和憑證會放在該目錄。'
+    optional: true
+    syntax:
+      content: 'certificates?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-arm-batch.CertificateReference[]'
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.creationTime
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.currentDedicatedNodes
+    name: currentDedicatedNodes
+    fullName: currentDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'currentDedicatedNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.currentLowPriorityNodes
+    name: currentLowPriorityNodes
+    fullName: currentLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'currentLowPriorityNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.deploymentConfiguration
+    name: deploymentConfiguration
+    fullName: deploymentConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 使用 CloudServiceConfiguration 指定應該使用 Azure 雲端服務 (PaaS)，而 VirtualMachineConfiguration 使用 Azure 虛擬機器 (IaaS) 會建立節點。
+    optional: true
+    syntax:
+      content: 'deploymentConfiguration?: DeploymentConfiguration'
+      return:
+        type:
+          - azure-arm-batch.DeploymentConfiguration
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 不需要是唯一的顯示名稱，並可包含任何 Unicode 字元，最大長度為 1024年。
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 並行處理陳述式所使用之資源的 ETag。
+    optional: true
+    syntax:
+      content: 'etag?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源的識別碼。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.interNodeCommunication
+    name: interNodeCommunication
+    fullName: interNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      這會在其的節點可以指派給集區的限制。 啟用此值可減少集區中配置所要求的節點數目的機會。
+      如果未指定，這個值會預設為 'Disabled'。 可能的值包括：' Enabled'，'Disabled'
+    optional: true
+    syntax:
+      content: 'interNodeCommunication?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.lastModified
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這是在變更集區層級資料，例如 targetDedicatedNodes 或 autoScaleSettings，最後一次。 它不會不會考量在節點層級的變更，例如變更狀態的計算節點。
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.maxTasksPerNode
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch 服務不會將任何意義指派給中繼資料;它只是使用使用者程式碼。
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-arm-batch.MetadataItem[]'
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源名稱。
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - azure-arm-batch.NetworkConfiguration
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可能的值包括：「 成功 」、 「 刪除中 」
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.provisioningStateTransitionTime
+    name: provisioningStateTransitionTime
+    fullName: provisioningStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'provisioningStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.resizeOperationStatus
+    name: resizeOperationStatus
+    fullName: resizeOperationStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'resizeOperationStatus?: ResizeOperationStatus'
+      return:
+        type:
+          - azure-arm-batch.ResizeOperationStatus
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.scaleSettings
+    name: scaleSettings
+    fullName: scaleSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'scaleSettings?: ScaleSettings'
+      return:
+        type:
+          - azure-arm-batch.ScaleSettings
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在修補程式 （更新） 作業中，這個屬性可以設為空物件，移除集區中的啟動工作。
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-arm-batch.StartTask
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.taskSchedulingPolicy
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - azure-arm-batch.TaskSchedulingPolicy
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源類型。
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.userAccounts
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - 'azure-arm-batch.UserAccount[]'
+    package: azure-arm-batch
+  - uid: azure-arm-batch.Pool.vmSize
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '如需詳細資訊可用大小的虛擬機器的雲端服務集區 （使用 cloudServiceConfiguration 建立的集區，） 大小的雲端服務 (http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/)。 Batch 支援 ExtraSmall 以外的所有雲端服務 VM 大小。 如需詳細資訊可用 VM 大小使用映像市集中的虛擬機器 （使用 virtualMachineConfiguration 建立的集區） 的集區大小的虛擬機器 (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/)或虛擬機器 (Windows) 的大小 (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch 支援 STANDARD_A0 和進階儲存體 （STANDARD_GS、 STANDARD_DS 和 STANDARD_DSV2 系列） 以外的所有 Azure VM 大小。'
+    optional: true
+    syntax:
+      content: 'vmSize?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-batch
+references:
+  - uid: azure-arm-batch.ProxyResource
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: azure-arm-batch.ProxyResource
+  - uid: 'azure-arm-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-arm-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-arm-batch.AutoScaleRun
+    name: AutoScaleRun
+    spec.typeScript:
+      - name: AutoScaleRun
+        fullName: AutoScaleRun
+        uid: azure-arm-batch.AutoScaleRun
+  - uid: 'azure-arm-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-arm-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-arm-batch.DeploymentConfiguration
+    name: DeploymentConfiguration
+    spec.typeScript:
+      - name: DeploymentConfiguration
+        fullName: DeploymentConfiguration
+        uid: azure-arm-batch.DeploymentConfiguration
+  - uid: 'azure-arm-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-arm-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-arm-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: azure-arm-batch.NetworkConfiguration
+  - uid: azure-arm-batch.ResizeOperationStatus
+    name: ResizeOperationStatus
+    spec.typeScript:
+      - name: ResizeOperationStatus
+        fullName: ResizeOperationStatus
+        uid: azure-arm-batch.ResizeOperationStatus
+  - uid: azure-arm-batch.ScaleSettings
+    name: ScaleSettings
+    spec.typeScript:
+      - name: ScaleSettings
+        fullName: ScaleSettings
+        uid: azure-arm-batch.ScaleSettings
+  - uid: azure-arm-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-arm-batch.StartTask
+  - uid: azure-arm-batch.TaskSchedulingPolicy
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: azure-arm-batch.TaskSchedulingPolicy
+  - uid: 'azure-arm-batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: azure-arm-batch.UserAccount
+      - name: '[]'
+        fullName: '[]'

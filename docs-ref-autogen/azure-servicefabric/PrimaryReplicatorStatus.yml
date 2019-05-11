@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PrimaryReplicatorStatus
+    name: PrimaryReplicatorStatus
+    fullName: PrimaryReplicatorStatus
+    children:
+      - azure-servicefabric.PrimaryReplicatorStatus.kind
+      - azure-servicefabric.PrimaryReplicatorStatus.remoteReplicators
+      - azure-servicefabric.PrimaryReplicatorStatus.replicationQueueStatus
+    langs:
+      - typeScript
+    type: interface
+    summary: 在主要角色中運作時，請提供 Service Fabric 複寫器的相關統計資料。
+    extends:
+      name: azure-servicefabric.ReplicatorStatus
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PrimaryReplicatorStatus.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PrimaryReplicatorStatus.remoteReplicators
+    name: remoteReplicators
+    fullName: remoteReplicators
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 所有作用中和閒置次要複寫器主要所知的狀態。
+    optional: true
+    syntax:
+      content: 'remoteReplicators?: RemoteReplicatorStatus[]'
+      return:
+        type:
+          - 'azure-servicefabric.RemoteReplicatorStatus[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PrimaryReplicatorStatus.replicationQueueStatus
+    name: replicationQueueStatus
+    fullName: replicationQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在主要複寫器上的複寫佇列的詳細資料。
+    optional: true
+    syntax:
+      content: 'replicationQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - azure-servicefabric.ReplicatorQueueStatus
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicatorStatus
+    name: ReplicatorStatus
+    spec.typeScript:
+      - name: ReplicatorStatus
+        fullName: ReplicatorStatus
+        uid: azure-servicefabric.ReplicatorStatus
+  - uid: 'azure-servicefabric.RemoteReplicatorStatus[]'
+    name: 'RemoteReplicatorStatus[]'
+    spec.typeScript:
+      - name: RemoteReplicatorStatus
+        fullName: RemoteReplicatorStatus
+        uid: azure-servicefabric.RemoteReplicatorStatus
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.ReplicatorQueueStatus
+    name: ReplicatorQueueStatus
+    spec.typeScript:
+      - name: ReplicatorQueueStatus
+        fullName: ReplicatorQueueStatus
+        uid: azure-servicefabric.ReplicatorQueueStatus

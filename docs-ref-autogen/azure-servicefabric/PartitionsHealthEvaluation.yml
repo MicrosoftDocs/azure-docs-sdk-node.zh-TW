@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PartitionsHealthEvaluation
+    name: PartitionsHealthEvaluation
+    fullName: PartitionsHealthEvaluation
+    children:
+      - azure-servicefabric.PartitionsHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.PartitionsHealthEvaluation.description
+      - azure-servicefabric.PartitionsHealthEvaluation.kind
+      - azure-servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService
+      - azure-servicefabric.PartitionsHealthEvaluation.totalCount
+      - azure-servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: '表示資料分割的健全狀況評估的一項服務，其中包含每個會影響目前的彙總健全狀況狀態的狀況不良資料分割的健康情況評估。 評估服務健康狀態] 和 [彙總健全狀況狀態為錯誤或警告時，可以傳回。'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 健康情況評估，這代表評估程序的摘要描述。
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 允許從 ServiceTypeHealthPolicy 最大的百分比狀況不良的分割區，每個服務。
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 從健康狀態存放區的服務分割區的總數。
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 狀況不良的評估，導致的彙總健全狀況狀態的清單。 包含所有受影響的彙總的健康情況不良 PartitionHealthEvaluation。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

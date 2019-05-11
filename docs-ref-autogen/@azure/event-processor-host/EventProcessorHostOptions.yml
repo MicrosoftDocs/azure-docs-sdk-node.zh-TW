@@ -1,0 +1,337 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions'
+    name: EventProcessorHostOptions
+    fullName: EventProcessorHostOptions
+    children:
+      - '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+      - '@azure/event-processor-host.EventProcessorHostOptions.consumerGroup'
+      - '@azure/event-processor-host.EventProcessorHostOptions.dataTransformer'
+      - '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+      - '@azure/event-processor-host.EventProcessorHostOptions.eventHubPath'
+      - '@azure/event-processor-host.EventProcessorHostOptions.fastScanInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.initialOffset'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseDuration'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseRenewInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.onEphError'
+      - '@azure/event-processor-host.EventProcessorHostOptions.slowScanInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.startupScanDelay'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageBlobPrefix'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+      - '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+      - '@azure/event-processor-host.EventProcessorHostOptions.userAgent'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述可供建立 EventProcessorHost 的選擇性參數。
+    extends:
+      name: '@azure/event-processor-host.FromConnectionStringOptions'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+    name: checkpointManager
+    fullName: checkpointManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {CheckpointManager}[checkpointManager]若要管理檢查點管理員。
+      預設值： ** `AzureStorageCheckpointLeaseManager` **。
+    optional: true
+    syntax:
+      content: 'checkpointManager?: CheckpointManager'
+      return:
+        type:
+          - '@azure/event-processor-host.CheckpointManager'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.consumerGroup'
+    name: consumerGroup
+    fullName: consumerGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[consumerGroup]事件中樞內的取用者群組名稱。 預設值： ** `"$default"` **。'
+    optional: true
+    syntax:
+      content: 'consumerGroup?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{DataTransformer}[dataTransformer]將用來編碼和解碼已傳送和接收的訊息分別資料轉換程式。 如果未提供，則我們將使用 DefaultDataTransformer。 預設轉換程式應該處理大部分的情況。 此選項必須僅用於特殊情況。'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+    name: eventHubConnectionString
+    fullName: eventHubConnectionString
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[eventHubConnectionString]接收來自事件中樞的連接字串。 範例："Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key".'
+    optional: true
+    syntax:
+      content: 'eventHubConnectionString?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubPath'
+    name: eventHubPath
+    fullName: eventHubPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[eventHubPath]事件中樞名稱。 這是選擇性的事件中樞連接字串包含 EntityPath = 中樞-名稱否則會擲回錯誤。'
+    optional: true
+    syntax:
+      content: 'eventHubPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.fastScanInterval'
+    name: fastScanInterval
+    fullName: fastScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {number}[fastScanInterval]掃描可用的磁碟分割，快慢之間有兩個可能的間隔時間。 快速 （短） 間隔** `in seconds` **掃描中的租用竊取已發生，升級更快的重新平衡之後使用。
+      預設值： ** `3`秒**。
+    optional: true
+    syntax:
+      content: 'fastScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.initialOffset'
+    name: initialOffset
+    fullName: initialOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '這只是 {EventPosition} initialOffset 則建立接收者後正在第一次，並在 blob 中沒有檢查點資料時使用。 此選項才會有效請務必提供新的主機名稱，從未使用過。'
+    optional: true
+    syntax:
+      content: 'initialOffset?: EventPosition'
+      return:
+        type:
+          - EventPosition
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseDuration'
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{number}[leaseDuration]租用的持續時間** `in seconds` **除非更新到期之前。 預設值： ** `30`秒**，最小值： ** `15`秒**，最大值： ** `60`秒**。'
+    optional: true
+    syntax:
+      content: 'leaseDuration?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+    name: leaseManager
+    fullName: leaseManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{LeaseManager}[LeaseManager]若要管理的租用管理員。 預設值： ** `AzureStorageCheckpointLeaseManager` **。'
+    optional: true
+    syntax:
+      content: 'leaseManager?: LeaseManager'
+      return:
+        type:
+          - '@azure/event-processor-host.LeaseManager'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseRenewInterval'
+    name: leaseRenewInterval
+    fullName: leaseRenewInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {number}[leaseRenewInterval]睡眠間隔** `in seconds` **掃描間隔。
+      預設值： ** `10`秒**。
+
+      可讓租用管理員實作指定 PartitionManager 頻率應該掃描租用並更新它們。 若要重新發佈 neodpověděl včas 租用，主機會停止運作之後，建議相對較短的間隔，例如十秒。 很明顯地，它應該小於一半的租用期長度，以防止意外到期。
+    optional: true
+    syntax:
+      content: 'leaseRenewInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.onEphError'
+    name: onEphError
+    fullName: onEphError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {OnEphError}[onEphError]可供接收通知的一般錯誤的錯誤處理常式。
+
+      錯誤可能發生在處理來自特定的事件中樞分割區的事件時傳遞給`onError`中所提供的處理常式`start()`方法。 在管理資料分割或資料分割的租用時在錯誤發生時的情況下，會呼叫此處理常式。
+    optional: true
+    syntax:
+      content: 'onEphError?: OnEphError'
+      return:
+        type:
+          - '@azure/event-processor-host.OnEphError'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.slowScanInterval'
+    name: slowScanInterval
+    fullName: slowScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{number}[slowScanInterval]緩慢 (long) 的時間間隔** `in seconds` **掃描中的租用竊取並未發生，以減少不必要的掃描時系統處於穩定狀態之後使用。 預設值： ** `5`秒**。'
+    optional: true
+    syntax:
+      content: 'slowScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.startupScanDelay'
+    name: startupScanDelay
+    fullName: startupScanDelay
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{number}[startupScanDelay]延遲時間** `in seconds` **之間可用的資料分割的第一次的掃描和第二個。 這是啟動最佳化可變成可見到其他主機，並藉此取得更精確的主機數目計數在系統中，才能嘗試估計其應該擁有多少個資料分割的個別主機的一部分。 預設值： ** `30`秒**。'
+    optional: true
+    syntax:
+      content: 'startupScanDelay?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageBlobPrefix'
+    name: storageBlobPrefix
+    fullName: storageBlobPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[storageBlobPrefix]命名的儲存體容器內的 blob 時使用的前置詞。'
+    optional: true
+    syntax:
+      content: 'storageBlobPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+    name: storageConnectionString
+    fullName: storageConnectionString
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[storageConnectionString]租用和檢查點所使用的 Azure 儲存體帳戶連接字串。 Example "DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net"'
+    optional: true
+    syntax:
+      content: 'storageConnectionString?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+    name: storageContainerName
+    fullName: storageContainerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[storageContainerName]使用內建的租用和檢查點管理員 」 的 azure 儲存體容器名稱。'
+    optional: true
+    syntax:
+      content: 'storageContainerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+    name: tokenProvider
+    fullName: tokenProvider
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{TokenProvider}[tokenProvider]提供驗證權杖的權杖提供者介面的執行個體。 預設值： ** `SasTokenProvider` **。'
+    optional: true
+    syntax:
+      content: 'tokenProvider?: TokenProvider'
+      return:
+        type:
+          - TokenProvider
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[userAgent]使用者代理程式需要附加至內建的使用者代理字串。'
+    optional: true
+    syntax:
+      content: 'userAgent?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions'
+    name: FromConnectionStringOptions
+    spec.typeScript:
+      - name: FromConnectionStringOptions
+        fullName: FromConnectionStringOptions
+        uid: '@azure/event-processor-host.FromConnectionStringOptions'
+  - uid: '@azure/event-processor-host.CheckpointManager'
+    name: CheckpointManager
+    spec.typeScript:
+      - name: CheckpointManager
+        fullName: CheckpointManager
+        uid: '@azure/event-processor-host.CheckpointManager'
+  - uid: '@azure/event-processor-host.LeaseManager'
+    name: LeaseManager
+    spec.typeScript:
+      - name: LeaseManager
+        fullName: LeaseManager
+        uid: '@azure/event-processor-host.LeaseManager'
+  - uid: '@azure/event-processor-host.OnEphError'
+    name: OnEphError
+    spec.typeScript:
+      - name: OnEphError
+        fullName: OnEphError
+        uid: '@azure/event-processor-host.OnEphError'

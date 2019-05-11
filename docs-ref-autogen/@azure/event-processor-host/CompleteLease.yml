@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.CompleteLease'
+    name: CompleteLease
+    fullName: CompleteLease
+    children:
+      - '@azure/event-processor-host.CompleteLease.constructor'
+      - '@azure/event-processor-host.CompleteLease.epoch'
+      - '@azure/event-processor-host.CompleteLease.getInfo'
+      - '@azure/event-processor-host.CompleteLease.incrementEpoch'
+      - '@azure/event-processor-host.CompleteLease.isOwned'
+      - '@azure/event-processor-host.CompleteLease.isOwnedBy'
+      - '@azure/event-processor-host.CompleteLease.owner'
+      - '@azure/event-processor-host.CompleteLease.partitionId'
+    langs:
+      - typeScript
+    type: class
+    summary: 描述完整的租用。
+    extends:
+      name: '@azure/event-processor-host.BaseLease'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.constructor'
+    name: CompleteLease(CompleteLeaseInfo)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立使用期的執行個體。
+    syntax:
+      content: 'new CompleteLease(info: CompleteLeaseInfo)'
+      parameters:
+        - id: info
+          type:
+            - '@azure/event-processor-host.CompleteLeaseInfo'
+          description: |
+            租用資訊中。
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.epoch'
+    name: epoch
+    fullName: epoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{number} epoch epoch(time) 的租用，您可以使用它來判斷競爭的節點之間的資料分割的最新的擁有者的值。'
+    syntax:
+      content: 'epoch: number'
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.getInfo'
+    name: getInfo()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得租用資訊。
+    syntax:
+      content: function getInfo()
+      parameters: []
+      return:
+        type:
+          - '@azure/event-processor-host.CompleteLeaseInfo'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.incrementEpoch'
+    name: incrementEpoch()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Epoch 值遞增 1。
+    syntax:
+      content: function incrementEpoch()
+      parameters: []
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.isOwned'
+    name: isOwned
+    fullName: isOwned
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{布林} isOwned 指出擁有使用期。 `true` 如果它擁有人;`false`否則。'
+    syntax:
+      content: 'isOwned: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.isOwnedBy'
+    name: isOwnedBy(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 比較對 this.owner possibleOwner
+    syntax:
+      content: 'function isOwnedBy(possibleOwner: string)'
+      parameters:
+        - id: possibleOwner
+          type:
+            - string
+          description: 要檢查的擁有者名稱。
+      return:
+        type:
+          - boolean
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.owner'
+    name: owner
+    fullName: owner
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string} 擁有者的分割區的主機擁有者。'
+    syntax:
+      content: 'owner: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string} partitionId 相關聯的 partitionId 的保留期。'
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.BaseLease'
+    name: BaseLease
+    spec.typeScript:
+      - name: BaseLease
+        fullName: BaseLease
+        uid: '@azure/event-processor-host.BaseLease'
+  - uid: '@azure/event-processor-host.CompleteLeaseInfo'
+    name: CompleteLeaseInfo
+    spec.typeScript:
+      - name: CompleteLeaseInfo
+        fullName: CompleteLeaseInfo
+        uid: '@azure/event-processor-host.CompleteLeaseInfo'

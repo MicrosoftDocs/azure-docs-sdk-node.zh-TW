@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+items:
+  - uid: durable-functions.IFunctionContext
+    name: IFunctionContext
+    fullName: IFunctionContext
+    children:
+      - durable-functions.IFunctionContext.bindingData
+      - durable-functions.IFunctionContext.bindingDefinitions
+      - durable-functions.IFunctionContext.bindings
+      - durable-functions.IFunctionContext.df
+      - durable-functions.IFunctionContext.done
+      - durable-functions.IFunctionContext.executionContext
+      - durable-functions.IFunctionContext.invocationId
+      - durable-functions.IFunctionContext.log
+      - durable-functions.IFunctionContext.req
+      - durable-functions.IFunctionContext.res
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: Context
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindingData
+    name: bindingData
+    fullName: bindingData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 觸發程序中繼資料和函式引動過程資料。
+    syntax:
+      content: 'bindingData: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindingDefinitions
+    name: bindingDefinitions
+    fullName: bindingDefinitions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 您的函式使用 function.json 中所定義的繫結。
+    syntax:
+      content: 'bindingDefinitions: BindingDefinition[]'
+      return:
+        type:
+          - 'BindingDefinition[]'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindings
+    name: bindings
+    fullName: bindings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 輸入和 function.json 中定義繫結的資料，觸發程序。 此物件上的屬性以動態方式產生和名為 function.json 中的"name"屬性為基礎。
+    syntax:
+      content: 'bindings: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.df
+    name: df
+    fullName: df
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'df: DurableOrchestrationContext'
+      return:
+        type:
+          - durable-functions.DurableOrchestrationContext
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.done
+    name: 'done(Error | string | null, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 回呼函式，以告知執行階段已完成您的程式碼。 如果您的函式是同步的您必須呼叫 context.done 結尾的執行。 如果您的函式是非同步的您不應該使用這個回呼。
+    syntax:
+      content: 'function done(err?: Error | string | null, result?: any)'
+      parameters:
+        - id: err
+          type:
+            - Error | string | null
+          description: 使用者定義將傳回給執行階段錯誤。 如果有的話，將會失敗函式執行。
+          optional: true
+        - id: result
+          type:
+            - any
+          description: |
+            物件，包含輸出繫結的資料。 `result` 將傳遞至 JSON.stringify 除非它是字串、 緩衝區、 ArrayBufferView 或數字。
+          optional: true
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.executionContext
+    name: executionContext
+    fullName: executionContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 函式執行中繼資料。
+    syntax:
+      content: 'executionContext: ExecutionContext'
+      return:
+        type:
+          - ExecutionContext
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.invocationId
+    name: invocationId
+    fullName: invocationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 每次函式叫用的唯一 GUID。
+    syntax:
+      content: 'invocationId: string'
+      return:
+        type:
+          - string
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.log
+    name: log
+    fullName: log
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可讓您撰寫資料流函式記錄。 直接呼叫，可讓您撰寫資料流預設追蹤層級的函式記錄。
+    syntax:
+      content: 'log: Logger'
+      return:
+        type:
+          - Logger
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.req
+    name: req
+    fullName: req
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HTTP 要求的物件。 使用 HTTP 繫結時提供給您的函式。
+    optional: true
+    syntax:
+      content: 'req?: HttpRequest'
+      return:
+        type:
+          - HttpRequest
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.res
+    name: res
+    fullName: res
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HTTP 回應物件。 使用 HTTP 繫結時提供給您的函式。
+    optional: true
+    syntax:
+      content: 'res?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+references:
+  - uid: durable-functions.DurableOrchestrationContext
+    name: DurableOrchestrationContext
+    spec.typeScript:
+      - name: DurableOrchestrationContext
+        fullName: DurableOrchestrationContext
+        uid: durable-functions.DurableOrchestrationContext

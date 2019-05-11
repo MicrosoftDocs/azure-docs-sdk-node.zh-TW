@@ -1,0 +1,410 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sb.SBQueue
+    name: SBQueue
+    fullName: SBQueue
+    children:
+      - azure-arm-sb.SBQueue.accessedAt
+      - azure-arm-sb.SBQueue.autoDeleteOnIdle
+      - azure-arm-sb.SBQueue.countDetails
+      - azure-arm-sb.SBQueue.createdAt
+      - azure-arm-sb.SBQueue.deadLetteringOnMessageExpiration
+      - azure-arm-sb.SBQueue.defaultMessageTimeToLive
+      - azure-arm-sb.SBQueue.duplicateDetectionHistoryTimeWindow
+      - azure-arm-sb.SBQueue.enableBatchedOperations
+      - azure-arm-sb.SBQueue.enableExpress
+      - azure-arm-sb.SBQueue.enablePartitioning
+      - azure-arm-sb.SBQueue.forwardDeadLetteredMessagesTo
+      - azure-arm-sb.SBQueue.forwardTo
+      - azure-arm-sb.SBQueue.id
+      - azure-arm-sb.SBQueue.lockDuration
+      - azure-arm-sb.SBQueue.maxDeliveryCount
+      - azure-arm-sb.SBQueue.maxSizeInMegabytes
+      - azure-arm-sb.SBQueue.messageCount
+      - azure-arm-sb.SBQueue.name
+      - azure-arm-sb.SBQueue.requiresDuplicateDetection
+      - azure-arm-sb.SBQueue.requiresSession
+      - azure-arm-sb.SBQueue.sizeInBytes
+      - azure-arm-sb.SBQueue.status
+      - azure-arm-sb.SBQueue.type
+      - azure-arm-sb.SBQueue.updatedAt
+    langs:
+      - typeScript
+    type: interface
+    summary: 佇列資源的描述。
+    extends:
+      name: azure-arm-sb.Resource
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.accessedAt
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 上次傳送一則訊息或最後一次發生此佇列接收要求。
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.autoDeleteOnIdle
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ISO 8061 timeSpan 閒置間隔過後自動刪除佇列。 最小持續期間為 5 分鐘。
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.countDetails
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 訊息計數詳細資料。
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - azure-arm-sb.MessageCountDetails
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.createdAt
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 建立訊息的確切時間。
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.deadLetteringOnMessageExpiration
+    name: deadLetteringOnMessageExpiration
+    fullName: deadLetteringOnMessageExpiration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 值，指出訊息過期時，此佇列是否有寄不出信件的支援。
+    optional: true
+    syntax:
+      content: 'deadLetteringOnMessageExpiration?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.defaultMessageTimeToLive
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ISO 8601 即時值的預設訊息時間範圍。 這是訊息到期之前，從服務匯流排傳送此訊息的持續時間。 這是當訊息本身未設定 TimeToLive 時所使用的預設值。
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.duplicateDetectionHistoryTimeWindow
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 定義重複偵測記錄的持續時間的 ISO 8601 時間範圍結構。 預設值是 10 分鐘。
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enableBatchedOperations
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 值，指出是否啟用伺服器端批次的作業。
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enableExpress
+    name: enableExpress
+    fullName: enableExpress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 值，指出是否啟用 Express 的實體。 快速佇列會保留寫入永續性儲存體之前，暫時在記憶體中的訊息。
+    optional: true
+    syntax:
+      content: 'enableExpress?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enablePartitioning
+    name: enablePartitioning
+    fullName: enablePartitioning
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 值，指出佇列是否為分割到多個訊息代理人。
+    optional: true
+    syntax:
+      content: 'enablePartitioning?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.forwardDeadLetteredMessagesTo
+    name: forwardDeadLetteredMessagesTo
+    fullName: forwardDeadLetteredMessagesTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 訊息轉送目的寄不出信件佇列/主題名稱
+    optional: true
+    syntax:
+      content: 'forwardDeadLetteredMessagesTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.forwardTo
+    name: forwardTo
+    fullName: forwardTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 若要將訊息轉送的佇列/主題名稱
+    optional: true
+    syntax:
+      content: 'forwardTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源 ID
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.lockDuration
+    name: lockDuration
+    fullName: lockDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 查看鎖定; 的 ISO 8601 時間範圍持續時間也就是針對其他接收者鎖定訊息的時間長度。 使用者能夠為 LockDuration 的最大值為 5 分鐘;預設值為 1 分鐘。
+    optional: true
+    syntax:
+      content: 'lockDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.maxDeliveryCount
+    name: maxDeliveryCount
+    fullName: maxDeliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 最大傳遞計數。 訊息會在這個傳遞次數後自動寄不出。 預設值為 10。
+    optional: true
+    syntax:
+      content: 'maxDeliveryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.maxSizeInMegabytes
+    name: maxSizeInMegabytes
+    fullName: maxSizeInMegabytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這是針對佇列而配置的記憶體大小以 mb 為單位，佇列的大小上限。 預設值為 1024年。
+    optional: true
+    syntax:
+      content: 'maxSizeInMegabytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.messageCount
+    name: messageCount
+    fullName: messageCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在佇列中的訊息數目。
+    optional: true
+    syntax:
+      content: 'messageCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源名稱
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.requiresDuplicateDetection
+    name: requiresDuplicateDetection
+    fullName: requiresDuplicateDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 值，指出此佇列是否需要重複偵測。
+    optional: true
+    syntax:
+      content: 'requiresDuplicateDetection?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.requiresSession
+    name: requiresSession
+    fullName: requiresSession
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 值，指出佇列是否支援工作階段的概念。
+    optional: true
+    syntax:
+      content: 'requiresSession?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.sizeInBytes
+    name: sizeInBytes
+    fullName: sizeInBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 佇列，以位元組為單位的大小。
+    optional: true
+    syntax:
+      content: 'sizeInBytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 列舉可能的值為訊息實體的狀態。 可能的值包括：'Active'、 ' Disabled'，'還原'、 'SendDisabled'，'ReceiveDisabled'，'建立'，'刪除'、 '重新命名'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源類型
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.updatedAt
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 更新訊息的確切時間。
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+references:
+  - uid: azure-arm-sb.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-sb.Resource
+  - uid: azure-arm-sb.MessageCountDetails
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: azure-arm-sb.MessageCountDetails

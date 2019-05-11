@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthEvaluation
+    name: ReplicaHealthEvaluation
+    fullName: ReplicaHealthEvaluation
+    children:
+      - azure-servicefabric.ReplicaHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.ReplicaHealthEvaluation.description
+      - azure-servicefabric.ReplicaHealthEvaluation.kind
+      - azure-servicefabric.ReplicaHealthEvaluation.partitionId
+      - azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+      - azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示健全狀況評估的複本，其中包含相關的資料和健康狀態存放區用來評估健康情況的演算法資訊。 評估的彙總健全狀況狀態是錯誤或警告時，才傳回。
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 健康情況評估，這代表評估程序的摘要描述。
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 複本所屬的資料分割識別碼。
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 具狀態服務複本或無狀態服務執行個體的識別碼。 此識別碼可適用於具狀態與無狀態服務的查詢中。 Service Fabric 使用來唯一識別資料分割的具狀態服務或無狀態服務分割區的執行個體的複本。 它是資料分割內唯一的並不會變更的複本或執行個體的存留期。 如果具狀態複本卸除相同資料分割在相同節點上建立另一個複本，它會取得不同的值做為識別碼。 如果無狀態執行個體，會在相同或不同的節點上容錯移轉它會取得不同的值做為識別碼。
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      狀況不良的評估，導致複本的目前彙總健全狀況狀態的清單。
+      狀況不良的評估的類型可以是 EventHealthEvaluation。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'
