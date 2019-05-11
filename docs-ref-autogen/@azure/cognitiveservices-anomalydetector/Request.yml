@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.Request'
+    name: Request
+    fullName: Request
+    children:
+      - '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+      - '@azure/cognitiveservices-anomalydetector.Request.granularity'
+      - '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+      - '@azure/cognitiveservices-anomalydetector.Request.period'
+      - '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+      - '@azure/cognitiveservices-anomalydetector.Request.series'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表要求的介面。
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+    name: customInterval
+    fullName: customInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '自訂間隔用來設定非標準的時間間隔，比方說，如果序列是 5 分鐘，要求可以設定為 {」 資料粒度 」:"討論"、"customInterval 」: 5}。'
+    optional: true
+    syntax:
+      content: 'customInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.granularity'
+    name: granularity
+    fullName: granularity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '只能是一年、 月、 每週、 每日、 每小時或討論。 資料粒度用於確認輸入的數列是否有效。 可能的值包括: ''年''、 ''月''、 ''每週''、 '' 每天''、 ''每小時''、 ''討論'''
+    syntax:
+      content: 'granularity: Granularity'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Granularity'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+    name: maxAnomalyRatio
+    fullName: maxAnomalyRatio
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 選擇性引數，進階模型參數，時間序列中的最大的異常狀況比率。
+    optional: true
+    syntax:
+      content: 'maxAnomalyRatio?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 選擇性的引數，時間序列的週期性值。 如果值為 null 或未顯示，API 將會自動決定該期間。
+    optional: true
+    syntax:
+      content: 'period?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+    name: sensitivity
+    fullName: sensitivity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 選用的引數，進階模型的參數，介於 0-99 之間的值是愈低、 較大的邊界值會的表示將會接受較少的異常狀況。
+    optional: true
+    syntax:
+      content: 'sensitivity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.series'
+    name: series
+    fullName: series
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 時間序列資料點。 點應該依照遞增順序來比對的異常偵測結果的時間戳記。 如果資料的排序不正確或重複的時間戳記，將無法運作的 API。 在此情況下，會傳回錯誤訊息。
+    syntax:
+      content: 'series: Point[]'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Point[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+references:
+  - uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+    name: Granularity
+    spec.typeScript:
+      - name: Granularity
+        fullName: Granularity
+        uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+  - uid: '@azure/cognitiveservices-anomalydetector.Point[]'
+    name: 'Point[]'
+    spec.typeScript:
+      - name: Point
+        fullName: Point
+        uid: '@azure/cognitiveservices-anomalydetector.Point'
+      - name: '[]'
+        fullName: '[]'

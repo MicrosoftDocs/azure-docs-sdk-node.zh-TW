@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+items:
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+    name: PushAudioInputStream
+    fullName: PushAudioInputStream
+    children:
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.close
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.create
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.createPullStream
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.createPushStream
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.write
+    langs:
+      - typeScript
+    type: class
+    summary: 表示記憶體已備份的推播音訊輸入資料流用於自訂的音訊輸入組態。
+    extends:
+      name: microsoft-cognitiveservices-speech-sdk.AudioInputStream
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.close
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 關閉資料流。
+    syntax:
+      content: function close()
+      parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.create
+    name: create(AudioStreamFormat)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立記憶體支援 PushAudioInputStream 與指定的音訊格式。
+    syntax:
+      content: 'static function create(format?: AudioStreamFormat)'
+      parameters:
+        - id: format
+          type:
+            - microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+          description: 將推播音訊資料流的 write （） 方法 (目前只支援 16 kHz 16 位元 mono PCM) 寫入音訊中的音訊資料格式。
+          optional: true
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.createPullStream
+    name: 'createPullStream(PullAudioInputStreamCallback, AudioStreamFormat)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立委派 read （） 和 close （） 方法的指定的回呼介面給 PullAudioInputStream。
+    syntax:
+      content: 'static function createPullStream(callback: PullAudioInputStreamCallback, format?: AudioStreamFormat)'
+      parameters:
+        - id: callback
+          type:
+            - microsoft-cognitiveservices-speech-sdk.PullAudioInputStreamCallback
+          description: 音訊輸入的自訂物件，衍生自 PullAudioInputStreamCallback
+        - id: format
+          type:
+            - microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+          description: 在音訊會傳回從回呼的 read （） 方法 (目前只支援 16 kHz 16 位元 mono PCM) 的音訊資料格式。
+          optional: true
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.PullAudioInputStream
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.createPushStream
+    name: createPushStream(AudioStreamFormat)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立記憶體支援 PushAudioInputStream 與指定的音訊格式。
+    syntax:
+      content: 'static function createPushStream(format?: AudioStreamFormat)'
+      parameters:
+        - id: format
+          type:
+            - microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+          description: 將推播音訊資料流的 write （） 方法 (目前只支援 16 kHz 16 位元 mono PCM) 寫入音訊中的音訊資料格式。
+          optional: true
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.write
+    name: write(ArrayBuffer)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 寫入指定藉由將內部資料的複本的音訊資料。
+    syntax:
+      content: 'function write(dataBuffer: ArrayBuffer)'
+      parameters:
+        - id: dataBuffer
+          type:
+            - ArrayBuffer
+          description: |
+            音訊的緩衝區，其中此函式就會複製。
+    package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.AudioInputStream
+    name: AudioInputStream
+    spec.typeScript:
+      - name: AudioInputStream
+        fullName: AudioInputStream
+        uid: microsoft-cognitiveservices-speech-sdk.AudioInputStream
+  - uid: microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+    name: AudioStreamFormat
+    spec.typeScript:
+      - name: AudioStreamFormat
+        fullName: AudioStreamFormat
+        uid: microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+    name: PushAudioInputStream
+    spec.typeScript:
+      - name: PushAudioInputStream
+        fullName: PushAudioInputStream
+        uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+  - uid: microsoft-cognitiveservices-speech-sdk.PullAudioInputStreamCallback
+    name: PullAudioInputStreamCallback
+    spec.typeScript:
+      - name: PullAudioInputStreamCallback
+        fullName: PullAudioInputStreamCallback
+        uid: microsoft-cognitiveservices-speech-sdk.PullAudioInputStreamCallback
+  - uid: microsoft-cognitiveservices-speech-sdk.PullAudioInputStream
+    name: PullAudioInputStream
+    spec.typeScript:
+      - name: PullAudioInputStream
+        fullName: PullAudioInputStream
+        uid: microsoft-cognitiveservices-speech-sdk.PullAudioInputStream

@@ -1,0 +1,173 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationHealth
+    name: ApplicationHealth
+    fullName: ApplicationHealth
+    children:
+      - azure-servicefabric.ApplicationHealth.aggregatedHealthState
+      - azure-servicefabric.ApplicationHealth.deployedApplicationHealthStates
+      - azure-servicefabric.ApplicationHealth.healthEvents
+      - azure-servicefabric.ApplicationHealth.healthStatistics
+      - azure-servicefabric.ApplicationHealth.name
+      - azure-servicefabric.ApplicationHealth.serviceHealthStates
+      - azure-servicefabric.ApplicationHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表應用程式的健全狀況。 包含應用程式彙總健全狀況狀態，以及服務和已部署的應用程式健全狀況狀態。
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      代表計算由 Health Manager 實體的彙總健全狀況狀態 HealthState。
+      實體的健康狀態評估會反映報告上的實體和其子系 （如果有的話） 的所有事件。
+      彙總，即可套用所需的健全狀況原則。 可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealth.deployedApplicationHealthStates
+    name: deployedApplicationHealthStates
+    fullName: deployedApplicationHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 部署所發現的健康狀態存放區中的應用程式健全狀況狀態。
+    optional: true
+    syntax:
+      content: 'deployedApplicationHealthStates?: DeployedApplicationHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.DeployedApplicationHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 健康情況報告的事件實體清單。
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 顯示所有的子系類型之查詢的實體健全狀況統計資料。
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealth.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '應用程式名稱包括 '' fabric:''URI 配置的完整應用程式名稱。'
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealth.serviceHealthStates
+    name: serviceHealthStates
+    fullName: serviceHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 中的服務健全狀況狀態所發現的健康狀態存放區。
+    optional: true
+    syntax:
+      content: 'serviceHealthStates?: ServiceHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 顯示目前的彙總健全狀況狀態為何已傳回的健全狀況管理員狀況不良的評估。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.DeployedApplicationHealthState[]'
+    name: 'DeployedApplicationHealthState[]'
+    spec.typeScript:
+      - name: DeployedApplicationHealthState
+        fullName: DeployedApplicationHealthState
+        uid: azure-servicefabric.DeployedApplicationHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.ServiceHealthState[]'
+    name: 'ServiceHealthState[]'
+    spec.typeScript:
+      - name: ServiceHealthState
+        fullName: ServiceHealthState
+        uid: azure-servicefabric.ServiceHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

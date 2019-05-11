@@ -1,0 +1,2062 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-storage.BlobContainers
+    name: BlobContainers
+    fullName: BlobContainers
+    children:
+      - azure-arm-storage.BlobContainers.clearLegalHold
+      - azure-arm-storage.BlobContainers.clearLegalHold_2
+      - azure-arm-storage.BlobContainers.clearLegalHold_1
+      - azure-arm-storage.BlobContainers.clearLegalHoldWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.create
+      - azure-arm-storage.BlobContainers.create_2
+      - azure-arm-storage.BlobContainers.create_1
+      - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.createWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.deleteImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.deleteMethod
+      - azure-arm-storage.BlobContainers.deleteMethod_2
+      - azure-arm-storage.BlobContainers.deleteMethod_1
+      - azure-arm-storage.BlobContainers.deleteMethodWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.extendImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.extendImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.extendImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.extendImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.get
+      - azure-arm-storage.BlobContainers.get_2
+      - azure-arm-storage.BlobContainers.get_1
+      - azure-arm-storage.BlobContainers.getImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.getImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.getImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.getImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.getWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.lease
+      - azure-arm-storage.BlobContainers.lease_2
+      - azure-arm-storage.BlobContainers.lease_1
+      - azure-arm-storage.BlobContainers.leaseWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.list
+      - azure-arm-storage.BlobContainers.list_2
+      - azure-arm-storage.BlobContainers.list_1
+      - azure-arm-storage.BlobContainers.listWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.lockImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.lockImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.lockImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.lockImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.setLegalHold
+      - azure-arm-storage.BlobContainers.setLegalHold_2
+      - azure-arm-storage.BlobContainers.setLegalHold_1
+      - azure-arm-storage.BlobContainers.setLegalHoldWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.update
+      - azure-arm-storage.BlobContainers.update_2
+      - azure-arm-storage.BlobContainers.update_1
+      - azure-arm-storage.BlobContainers.updateWithHttpOperationResponse
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.clearLegalHold
+    name: 'clearLegalHold(string, string, string, string[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 清除法律保留標記。 清除相同或不存在的標記會導致等冪作業。 ClearLegalHold 清除只在要求中指定標記。
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: tags
+          type:
+            - 'string[]'
+          description: |
+            每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.clearLegalHold_2
+    name: 'clearLegalHold(string, string, string, string[], Object, ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 清除法律保留標記。 清除相同或不存在的標記會導致等冪作業。 ClearLegalHold 清除只在要求中指定標記。
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: tags
+          type:
+            - 'string[]'
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LegalHold>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.clearLegalHold_1
+    name: 'clearLegalHold(string, string, string, string[], ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 清除法律保留標記。 清除相同或不存在的標記會導致等冪作業。 ClearLegalHold 清除只在要求中指定標記。
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: tags
+          type:
+            - 'string[]'
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LegalHold>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.clearLegalHoldWithHttpOperationResponse
+    name: 'clearLegalHoldWithHttpOperationResponse(string, string, string, string[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 清除法律保留標記。 清除相同或不存在的標記會導致等冪作業。 ClearLegalHold 清除只在要求中指定標記。
+    syntax:
+      content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: tags
+          type:
+            - 'string[]'
+          description: |
+            每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.create
+    name: 'create(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 要求本文所述，請建立新的容器，指定帳戶下。 容器資源包含中繼資料和容器的屬性。 它不包含容器的 blob 清單。
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.create_2
+    name: 'create(string, string, string, Object, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 要求本文所述，請建立新的容器，指定帳戶下。 容器資源包含中繼資料和容器的屬性。 它不包含容器的 blob 清單。
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.create_1
+    name: 'create(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 要求本文所述，請建立新的容器，指定帳戶下。 容器資源包含中繼資料和容器的屬性。 它不包含容器的 blob 清單。
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立或更新的解除鎖定的不變性原則。 如果指定，但不是需要這項作業，會接受 ETag 的 If-match。
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: |
+            不變性的期間之後建立原則之後，以天為單位的容器中的 blob。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_2
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立或更新的解除鎖定的不變性原則。 如果指定，但不是需要這項作業，會接受 ETag 的 If-match。
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_1
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立或更新的解除鎖定的不變性原則。 如果指定，但不是需要這項作業，會接受 ETag 的 If-match。
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicyWithHttpOperationResponse
+    name: 'createOrUpdateImmutabilityPolicyWithHttpOperationResponse(string, string, string, number, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立或更新的解除鎖定的不變性原則。 如果指定，但不是需要這項作業，會接受 ETag 的 If-match。
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: |
+            不變性的期間之後建立原則之後，以天為單位的容器中的 blob。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createWithHttpOperationResponse
+    name: 'createWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 要求本文所述，請建立新的容器，指定帳戶下。 容器資源包含中繼資料和容器的屬性。 它不包含容器的 blob 清單。
+    syntax:
+      content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy
+    name: 'deleteImmutabilityPolicy(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 中止解除鎖定的不變性原則。 刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。 如果比對中的 ETag 是需要這項作業。 刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: ifMatch
+          type:
+            - string
+          description: |
+            不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_2
+    name: 'deleteImmutabilityPolicy(string, string, string, string, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 中止解除鎖定的不變性原則。 刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。 如果比對中的 ETag 是需要這項作業。 刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_1
+    name: 'deleteImmutabilityPolicy(string, string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 中止解除鎖定的不變性原則。 刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。 如果比對中的 ETag 是需要這項作業。 刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicyWithHttpOperationResponse
+    name: 'deleteImmutabilityPolicyWithHttpOperationResponse(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 中止解除鎖定的不變性原則。 刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。 如果比對中的 ETag 是需要這項作業。 刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。
+    syntax:
+      content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: ifMatch
+          type:
+            - string
+          description: |
+            不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteMethod
+    name: 'deleteMethod(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除指定的容器，其帳戶下。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteMethod_2
+    name: 'deleteMethod(string, string, string, Object, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除指定的容器，其帳戶下。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteMethod_1
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除指定的容器，其帳戶下。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteMethodWithHttpOperationResponse
+    name: 'deleteMethodWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除指定的容器，其帳戶下。
+    syntax:
+      content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<void>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。 唯一允許的鎖定原則的動作將會此動作。 如果比對中的 ETag 是需要這項作業。
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: ifMatch
+          type:
+            - string
+          description: |
+            不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: |
+            不變性的期間之後建立原則之後，以天為單位的容器中的 blob。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy_2
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。 唯一允許的鎖定原則的動作將會此動作。 如果比對中的 ETag 是需要這項作業。
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy_1
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。 唯一允許的鎖定原則的動作將會此動作。 如果比對中的 ETag 是需要這項作業。
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicyWithHttpOperationResponse
+    name: 'extendImmutabilityPolicyWithHttpOperationResponse(string, string, string, string, number, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。 唯一允許的鎖定原則的動作將會此動作。 如果比對中的 ETag 是需要這項作業。
+    syntax:
+      content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: ifMatch
+          type:
+            - string
+          description: |
+            不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: |
+            不變性的期間之後建立原則之後，以天為單位的容器中的 blob。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.get
+    name: 'get(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得指定容器的屬性。
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.get_2
+    name: 'get(string, string, string, Object, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得指定容器的屬性。
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.get_1
+    name: 'get(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得指定容器的屬性。
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy
+    name: 'getImmutabilityPolicy(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy_2
+    name: 'getImmutabilityPolicy(string, string, string, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy_1
+    name: 'getImmutabilityPolicy(string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getImmutabilityPolicyWithHttpOperationResponse
+    name: 'getImmutabilityPolicyWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。
+    syntax:
+      content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getWithHttpOperationResponse
+    name: 'getWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得指定容器的屬性。
+    syntax:
+      content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lease
+    name: 'lease(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 租用容器 」 作業會建立和管理的容器刪除作業的鎖定。 鎖定持續時間的範圍是 15 到 60 秒，也可以設為無限。
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.LeaseContainerResponse>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lease_2
+    name: 'lease(string, string, string, Object, ServiceCallback<LeaseContainerResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 租用容器 」 作業會建立和管理的容器刪除作業的鎖定。 鎖定持續時間的範圍是 15 到 60 秒，也可以設為無限。
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<LeaseContainerResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LeaseContainerResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LeaseContainerResponse>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lease_1
+    name: 'lease(string, string, string, ServiceCallback<LeaseContainerResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 租用容器 」 作業會建立和管理的容器刪除作業的鎖定。 鎖定持續時間的範圍是 15 到 60 秒，也可以設為無限。
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<LeaseContainerResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LeaseContainerResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LeaseContainerResponse>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.leaseWithHttpOperationResponse
+    name: 'leaseWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 租用容器 」 作業會建立和管理的容器刪除作業的鎖定。 鎖定持續時間的範圍是 15 到 60 秒，也可以設為無限。
+    syntax:
+      content: 'function leaseWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.LeaseContainerResponse>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.list
+    name: 'list(string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有容器，並不支援的前置詞，例如資料平面。 也 SRP 今天不會傳回接續 token。
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ListContainerItems>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.list_2
+    name: 'list(string, string, Object, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有容器，並不支援的前置詞，例如資料平面。 也 SRP 今天不會傳回接續 token。
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ListContainerItems>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ListContainerItems>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.list_1
+    name: 'list(string, string, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有容器，並不支援的前置詞，例如資料平面。 也 SRP 今天不會傳回接續 token。
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ListContainerItems>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ListContainerItems>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.listWithHttpOperationResponse
+    name: 'listWithHttpOperationResponse(string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有容器，並不支援的前置詞，例如資料平面。 也 SRP 今天不會傳回接續 token。
+    syntax:
+      content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ListContainerItems>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy
+    name: 'lockImmutabilityPolicy(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 將不變性原則設定已鎖定狀態。 唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。 如果比對中的 ETag 是需要這項作業。
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: ifMatch
+          type:
+            - string
+          description: |
+            不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy_2
+    name: 'lockImmutabilityPolicy(string, string, string, string, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 將不變性原則設定已鎖定狀態。 唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。 如果比對中的 ETag 是需要這項作業。
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy_1
+    name: 'lockImmutabilityPolicy(string, string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 將不變性原則設定已鎖定狀態。 唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。 如果比對中的 ETag 是需要這項作業。
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicyWithHttpOperationResponse
+    name: 'lockImmutabilityPolicyWithHttpOperationResponse(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 將不變性原則設定已鎖定狀態。 唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。 如果比對中的 ETag 是需要這項作業。
+    syntax:
+      content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: ifMatch
+          type:
+            - string
+          description: |
+            不是變性原則更新的實體狀態 (ETag) 版本。 值為"*"可用來套用作業，只有當不變性原則已經存在。 如果省略，則這項作業會一律套用。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.setLegalHold
+    name: 'setLegalHold(string, string, string, string[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 集的法律保留標記。 等冪作業中設定相同的標記結果。 SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: tags
+          type:
+            - 'string[]'
+          description: |
+            每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.setLegalHold_2
+    name: 'setLegalHold(string, string, string, string[], Object, ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 集的法律保留標記。 等冪作業中設定相同的標記結果。 SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: tags
+          type:
+            - 'string[]'
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LegalHold>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.setLegalHold_1
+    name: 'setLegalHold(string, string, string, string[], ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 集的法律保留標記。 等冪作業中設定相同的標記結果。 SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: tags
+          type:
+            - 'string[]'
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LegalHold>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.setLegalHoldWithHttpOperationResponse
+    name: 'setLegalHoldWithHttpOperationResponse(string, string, string, string[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 集的法律保留標記。 等冪作業中設定相同的標記結果。 SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。
+    syntax:
+      content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: tags
+          type:
+            - 'string[]'
+          description: |
+            每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.update
+    name: 'update(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 要求本文中所指定的更新容器屬性。 在要求中未提及的屬性將會維持不變。 如果指定的容器不存在，更新將會失敗。
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.update_2
+    name: 'update(string, string, string, Object, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 要求本文中所指定的更新容器屬性。 在要求中未提及的屬性將會維持不變。 如果指定的容器不存在，更新將會失敗。
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.update_1
+    name: 'update(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 要求本文中所指定的更新容器屬性。 在要求中未提及的屬性將會維持不變。 如果指定的容器不存在，更新將會失敗。
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.updateWithHttpOperationResponse
+    name: 'updateWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 要求本文中所指定的更新容器屬性。 在要求中未提及的屬性將會維持不變。 如果指定的容器不存在，更新將會失敗。
+    syntax:
+      content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            使用者的訂用帳戶內的資源群組名稱。 名稱不區分大小寫。
+        - id: accountName
+          type:
+            - string
+          description: |
+            指定的資源群組內的儲存體帳戶名稱。 儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。
+        - id: containerName
+          type:
+            - string
+          description: |
+            指定的儲存體帳戶內的 blob 容器名稱。 Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。
+            每個虛線 （-） 字元必須立即前面和後面接著字母或數字。
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+    package: azure-arm-storage
+references:
+  - uid: Promise<azure-arm-storage.LegalHold>
+    name: LegalHold>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: LegalHold
+        fullName: LegalHold
+        uid: azure-arm-storage.LegalHold
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.LegalHold>
+    name: LegalHold>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LegalHold
+        fullName: LegalHold
+        uid: azure-arm-storage.LegalHold
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+    name: LegalHold>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: LegalHold
+        fullName: LegalHold
+        uid: azure-arm-storage.LegalHold
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-arm-storage.BlobContainer>
+    name: BlobContainer>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: BlobContainer
+        fullName: BlobContainer
+        uid: azure-arm-storage.BlobContainer
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.BlobContainer>
+    name: BlobContainer>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BlobContainer
+        fullName: BlobContainer
+        uid: azure-arm-storage.BlobContainer
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-arm-storage.ImmutabilityPolicy>
+    name: ImmutabilityPolicy>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ImmutabilityPolicy
+        fullName: ImmutabilityPolicy
+        uid: azure-arm-storage.ImmutabilityPolicy
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+    name: ImmutabilityPolicy>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ImmutabilityPolicy
+        fullName: ImmutabilityPolicy
+        uid: azure-arm-storage.ImmutabilityPolicy
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    name: ImmutabilityPolicy>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: ImmutabilityPolicy
+        fullName: ImmutabilityPolicy
+        uid: azure-arm-storage.ImmutabilityPolicy
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+    name: BlobContainer>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: BlobContainer
+        fullName: BlobContainer
+        uid: azure-arm-storage.BlobContainer
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-arm-storage.LeaseContainerResponse>
+    name: LeaseContainerResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: LeaseContainerResponse
+        fullName: LeaseContainerResponse
+        uid: azure-arm-storage.LeaseContainerResponse
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.LeaseContainerResponse>
+    name: LeaseContainerResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LeaseContainerResponse
+        fullName: LeaseContainerResponse
+        uid: azure-arm-storage.LeaseContainerResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.LeaseContainerResponse>>
+    name: LeaseContainerResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: LeaseContainerResponse
+        fullName: LeaseContainerResponse
+        uid: azure-arm-storage.LeaseContainerResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-arm-storage.ListContainerItems>
+    name: ListContainerItems>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ListContainerItems
+        fullName: ListContainerItems
+        uid: azure-arm-storage.ListContainerItems
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.ListContainerItems>
+    name: ListContainerItems>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListContainerItems
+        fullName: ListContainerItems
+        uid: azure-arm-storage.ListContainerItems
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.ListContainerItems>>
+    name: ListContainerItems>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: ListContainerItems
+        fullName: ListContainerItems
+        uid: azure-arm-storage.ListContainerItems
+      - name: '>>'
+        fullName: '>>'

@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationHealthState
+    name: ApplicationHealthState
+    fullName: ApplicationHealthState
+    children:
+      - azure-servicefabric.ApplicationHealthState.aggregatedHealthState
+      - azure-servicefabric.ApplicationHealthState.name
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示應用程式，其中包含應用程式識別碼和彙總健全狀況狀態的健全狀況狀態。
+    extends:
+      name: azure-servicefabric.EntityHealthState
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthState.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthState.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '應用程式名稱包括 '' fabric:''URI 配置的完整應用程式名稱。'
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthState
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: azure-servicefabric.EntityHealthState

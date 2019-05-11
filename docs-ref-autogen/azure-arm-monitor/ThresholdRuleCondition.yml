@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.ThresholdRuleCondition
+    name: ThresholdRuleCondition
+    fullName: ThresholdRuleCondition
+    children:
+      - azure-arm-monitor.ThresholdRuleCondition.dataSource
+      - azure-arm-monitor.ThresholdRuleCondition.odatatype
+      - azure-arm-monitor.ThresholdRuleCondition.operator
+      - azure-arm-monitor.ThresholdRuleCondition.threshold
+      - azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+      - azure-arm-monitor.ThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: 規則條件，根據超出閾值的度量。
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 從中此規則會收集其資料資源。 此類型的型別 RuleMetricDataSource 一律為資料來源。
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.operator
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用來比較資料與臨界值的運算子。 可能的值包括：'GreaterThan'、 'GreaterThanOrEqual'、 'LessThan'、 'LessThanOrEqual'
+    syntax:
+      content: 'operator: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.threshold
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 啟動警示臨界值。
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      時間彙總運算子中。 如何收集的資料應該隨著時間結合。
+      預設值是標準的 PrimaryAggregationType。 可能的值包括：'Average'、 'Minimum'、 'Maximum'，' Total'，'Last'
+    optional: true
+    syntax:
+      content: 'timeAggregation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這段期間 （以 ISO 8601 持續時間格式），用來監視警示活動，根據臨界值。 如果指定，則它必須是介於 5 分鐘到 1 天。
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

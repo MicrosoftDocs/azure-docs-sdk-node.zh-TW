@@ -1,0 +1,154 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.PngImage
+    name: PngImage
+    fullName: PngImage
+    children:
+      - azure-arm-mediaservices.PngImage.keyFrameInterval
+      - azure-arm-mediaservices.PngImage.label
+      - azure-arm-mediaservices.PngImage.layers
+      - azure-arm-mediaservices.PngImage.odatatype
+      - azure-arm-mediaservices.PngImage.range
+      - azure-arm-mediaservices.PngImage.start
+      - azure-arm-mediaservices.PngImage.step
+      - azure-arm-mediaservices.PngImage.stretchMode
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述用於產生一系列從輸入視訊的 PNG 影像的屬性。
+    extends:
+      name: azure-arm-mediaservices.Image
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.keyFrameInterval
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '兩個主要畫面格，藉此定義圖片群組 (GOP) 之間的距離。 值應為非零整數範圍 [1，30] （秒），以 ISO 8601 格式指定。 預設值為 2 秒 (PT2S)。'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 轉碼器選擇性標籤。 標籤可用來控制 muxing 行為。
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.layers
+    name: layers
+    fullName: layers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 由編碼器產生的輸出 PNG 影像圖層的集合。
+    optional: true
+    syntax:
+      content: 'layers?: PngLayer[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.PngLayer[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.range
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 輸入影片要停止產生縮圖中的位置。 值可以是絕對的時間戳記 (ISO 8601，例如：PT5M30S 停止在 5 分鐘和 30 秒) 或框架計數 (比方說，300 300 的畫面格在停止) 或相對的值 （例如，100%)。
+    optional: true
+    syntax:
+      content: 'range?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '輸入視訊從何處開始產生縮圖中的位置。 值可以是絕對的時間戳記 (ISO 8601，例如：PT05S)，或框架計數 (例如，10 10 框架) 或相對的值 （例如，1%)。 也支援的巨集 {Best} 時，它會告訴選取最佳的縮圖，從視訊的頭幾秒，編碼器。'
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.step
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 產生縮圖時間間隔。 值可以是絕對的時間戳記 (ISO 8601，例如：其中一個 PT05S 映像每隔 5 秒），或框架計數 (例如，30 每隔 30 個畫面) 或相對的值 （例如，1%)。
+    optional: true
+    syntax:
+      content: 'step?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.stretchMode
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 調整大小模式-如何輸入的視訊會調整大小以符合所需的輸出解決方法。 預設值是自動調整。 可能的值包括：'None'、 'AutoSize'，'都會將 AutoFit'
+    optional: true
+    syntax:
+      content: 'stretchMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Image
+    name: Image
+    spec.typeScript:
+      - name: Image
+        fullName: Image
+        uid: azure-arm-mediaservices.Image
+  - uid: 'azure-arm-mediaservices.PngLayer[]'
+    name: 'PngLayer[]'
+    spec.typeScript:
+      - name: PngLayer
+        fullName: PngLayer
+        uid: azure-arm-mediaservices.PngLayer
+      - name: '[]'
+        fullName: '[]'
