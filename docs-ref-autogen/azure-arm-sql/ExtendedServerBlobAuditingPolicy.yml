@@ -1,0 +1,244 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy
+    name: ExtendedServerBlobAuditingPolicy
+    fullName: ExtendedServerBlobAuditingPolicy
+    children:
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.auditActionsAndGroups
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.id
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.isAzureMonitorTargetEnabled
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.isStorageSecondaryKeyInUse
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.name
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.predicateExpression
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.retentionDays
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.state
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountAccessKey
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountSubscriptionId
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageEndpoint
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.type
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ad41a-101">擴充的伺服器 blob 稽核原則。</span><span class="sxs-lookup"><span data-stu-id="ad41a-101">An extended server blob auditing policy.</span></span>
+    extends:
+      name: azure-arm-sql.ProxyResource
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.auditActionsAndGroups
+    name: auditActionsAndGroups
+    fullName: auditActionsAndGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="ad41a-102">指定要稽核的動作群組和動作。</span><span class="sxs-lookup"><span data-stu-id="ad41a-102">Specifies the Actions-Groups and Actions to audit.</span></span>
+      <span data-ttu-id="ad41a-103">下列組合是一組建議的動作群組，以使用-這將會稽核所有查詢和資料庫，以及成功和失敗的登入執行的預存程序：</span><span class="sxs-lookup"><span data-stu-id="ad41a-103">The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:</span></span>
+
+      <span data-ttu-id="ad41a-104">BATCH_COMPLETED_GROUP，SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP，FAILED_DATABASE_AUTHENTICATION_GROUP。</span><span class="sxs-lookup"><span data-stu-id="ad41a-104">BATCH_COMPLETED_GROUP, SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP.</span></span>
+
+      <span data-ttu-id="ad41a-105">這上面組合也是預設會啟用稽核從 Azure 入口網站時設定的集合。</span><span class="sxs-lookup"><span data-stu-id="ad41a-105">This above combination is also the set that is configured by default when enabling auditing from the Azure portal.</span></span>
+
+      <span data-ttu-id="ad41a-106">若要稽核的支援的動作群組 (請注意： 選擇涵蓋稽核需求的特定群組。</span><span class="sxs-lookup"><span data-stu-id="ad41a-106">The supported action groups to audit are (note: choose only specific groups that cover your auditing needs.</span></span> <span data-ttu-id="ad41a-107">使用不必要的群組可能會導致非常大量的稽核記錄）：</span><span class="sxs-lookup"><span data-stu-id="ad41a-107">Using unnecessary groups could lead to very large quantities of audit records):</span></span>
+
+      <span data-ttu-id="ad41a-108">APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP</span><span class="sxs-lookup"><span data-stu-id="ad41a-108">APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP</span></span>
+
+      <span data-ttu-id="ad41a-109">這種群組需涵蓋所有的 sql 陳述式和預存程序針對資料庫執行，而且不應搭配其他群組，這會導致重複的稽核記錄檔。</span><span class="sxs-lookup"><span data-stu-id="ad41a-109">These are groups that cover all sql statements and stored procedures executed against the database, and should not be used in combination with other groups as this will result in duplicate audit logs.</span></span>
+
+      <span data-ttu-id="ad41a-110">如需詳細資訊，請參閱 <<c0> [ 資料庫層級稽核動作群組](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups)。</span><span class="sxs-lookup"><span data-stu-id="ad41a-110">For more information, see [Database-Level Audit Action Groups](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).</span></span>
+
+      <span data-ttu-id="ad41a-111">資料庫稽核原則，針對特定的動作也可以是指定 （請注意，不能指定伺服器稽核原則的動作）。</span><span class="sxs-lookup"><span data-stu-id="ad41a-111">For Database auditing policy, specific Actions can also be specified (note that Actions cannot be specified for Server auditing policy).</span></span> <span data-ttu-id="ad41a-112">若要稽核的支援的動作是：選取更新插入刪除執行接收參考</span><span class="sxs-lookup"><span data-stu-id="ad41a-112">The supported actions to audit are: SELECT UPDATE INSERT DELETE EXECUTE RECEIVE REFERENCES</span></span>
+
+      <span data-ttu-id="ad41a-113">一般的形式來定義要稽核的動作是: {action} ON {物件} 由 {主體}</span><span class="sxs-lookup"><span data-stu-id="ad41a-113">The general form for defining an action to be audited is: {action} ON {object} BY {principal}</span></span>
+
+      <span data-ttu-id="ad41a-114">請注意，<object>上述的格式可以參考的物件，例如資料表、 檢視或預存程序，或整個資料庫或結構描述。</span><span class="sxs-lookup"><span data-stu-id="ad41a-114">Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema.</span></span> <span data-ttu-id="ad41a-115">後者的情況下，資料庫的形式:: {db_name} 和結構描述:: {schema_name} 可分別用。</span><span class="sxs-lookup"><span data-stu-id="ad41a-115">For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.</span></span>
+
+      <span data-ttu-id="ad41a-116">例如：選取上 dbo.myTable 公用，來選取在 DATABASE::myDatabase SCHEMA::mySchema 大眾的公用 SELECT</span><span class="sxs-lookup"><span data-stu-id="ad41a-116">For example: SELECT on dbo.myTable by public SELECT on DATABASE::myDatabase by public SELECT on SCHEMA::mySchema by public</span></span>
+
+      <span data-ttu-id="ad41a-117">如需詳細資訊，請參閱[資料庫層級稽核動作](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)</span><span class="sxs-lookup"><span data-stu-id="ad41a-117">For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)</span></span>
+    optional: true
+    syntax:
+      content: 'auditActionsAndGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ad41a-118">資源識別碼。</span><span class="sxs-lookup"><span data-stu-id="ad41a-118">Resource ID.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.isAzureMonitorTargetEnabled
+    name: isAzureMonitorTargetEnabled
+    fullName: isAzureMonitorTargetEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |+
+      <span data-ttu-id="ad41a-119">指定是否要將稽核事件傳送至 Azure 監視器。</span><span class="sxs-lookup"><span data-stu-id="ad41a-119">Specifies whether audit events are sent to Azure Monitor.</span></span>
+      <span data-ttu-id="ad41a-120">若要將事件傳送至 Azure 監視器中，指定 'State' 為 'Enabled' 和 'IsAzureMonitorTargetEnabled' 為 true。</span><span class="sxs-lookup"><span data-stu-id="ad41a-120">In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.</span></span>
+      <span data-ttu-id="ad41a-121">當使用 REST API 設定稽核，應該也建立與 'SQLSecurityAuditEvents' 在資料庫上的診斷記錄類別的診斷設定。</span><span class="sxs-lookup"><span data-stu-id="ad41a-121">When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.</span></span>
+      <span data-ttu-id="ad41a-122">請注意，伺服器層級稽核，您應該使用為 {databaseName} 的 'master' 資料庫。</span><span class="sxs-lookup"><span data-stu-id="ad41a-122">Note that for server level audit you should use the 'master' database as {databaseName}.</span></span>
+
+      <span data-ttu-id="ad41a-123">診斷設定的 URI 格式：PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview</span><span class="sxs-lookup"><span data-stu-id="ad41a-123">Diagnostic Settings URI format: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview</span></span>
+
+      <span data-ttu-id="ad41a-124">如需詳細資訊，請參閱 <<c0> [ 診斷設定 REST API](https://go.microsoft.com/fwlink/?linkid=2033207)或[診斷設定 PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)</span><span class="sxs-lookup"><span data-stu-id="ad41a-124">For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207) or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)</span></span>
+
+    optional: true
+    syntax:
+      content: 'isAzureMonitorTargetEnabled?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.isStorageSecondaryKeyInUse
+    name: isStorageSecondaryKeyInUse
+    fullName: isStorageSecondaryKeyInUse
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ad41a-125">指定 storageAccountAccessKey 值是否為儲存體的次要金鑰。</span><span class="sxs-lookup"><span data-stu-id="ad41a-125">Specifies whether storageAccountAccessKey value is the storage's secondary key.</span></span>
+    optional: true
+    syntax:
+      content: 'isStorageSecondaryKeyInUse?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ad41a-126">資源名稱。</span><span class="sxs-lookup"><span data-stu-id="ad41a-126">Resource name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.predicateExpression
+    name: predicateExpression
+    fullName: predicateExpression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ad41a-127">指定條件的 where 子句時建立稽核。</span><span class="sxs-lookup"><span data-stu-id="ad41a-127">Specifies condition of where clause when creating an audit.</span></span>
+    optional: true
+    syntax:
+      content: 'predicateExpression?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.retentionDays
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ad41a-128">指定儲存體帳戶中會記錄在稽核中保留的天數。</span><span class="sxs-lookup"><span data-stu-id="ad41a-128">Specifies the number of days to keep in the audit logs in the storage account.</span></span>
+    optional: true
+    syntax:
+      content: 'retentionDays?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ad41a-129">指定原則的狀態。</span><span class="sxs-lookup"><span data-stu-id="ad41a-129">Specifies the state of the policy.</span></span> <span data-ttu-id="ad41a-130">如果已啟用狀態，不需要 storageEndpoint 或 isAzureMonitorTargetEnabled。</span><span class="sxs-lookup"><span data-stu-id="ad41a-130">If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.</span></span> <span data-ttu-id="ad41a-131">可能的值包括：'' Enabled''，''Disabled''</span><span class="sxs-lookup"><span data-stu-id="ad41a-131">Possible values include: ''Enabled'', ''Disabled''</span></span>'
+    syntax:
+      content: 'state: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountAccessKey
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ad41a-132">指定的稽核儲存體帳戶的識別碼索引鍵。</span><span class="sxs-lookup"><span data-stu-id="ad41a-132">Specifies the identifier key of the auditing storage account.</span></span> <span data-ttu-id="ad41a-133">如果已啟用狀態和 storageEndpoint，storageAccountAccessKey 需要。</span><span class="sxs-lookup"><span data-stu-id="ad41a-133">If state is Enabled and storageEndpoint is specified, storageAccountAccessKey is required.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountSubscriptionId
+    name: storageAccountSubscriptionId
+    fullName: storageAccountSubscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ad41a-134">指定 blob 儲存體訂用帳戶識別碼。</span><span class="sxs-lookup"><span data-stu-id="ad41a-134">Specifies the blob storage subscription Id.</span></span>
+    optional: true
+    syntax:
+      content: 'storageAccountSubscriptionId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageEndpoint
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ad41a-135">指定 blob 儲存體端點 (例如https://MyAccount.blob.core.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="ad41a-135">Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).</span></span> <span data-ttu-id="ad41a-136">如果已啟用狀態，storageEndpoint 是必要的。</span><span class="sxs-lookup"><span data-stu-id="ad41a-136">If state is Enabled, storageEndpoint is required.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ad41a-137">資源類型。</span><span class="sxs-lookup"><span data-stu-id="ad41a-137">Resource type.</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+references:
+  - uid: azure-arm-sql.ProxyResource
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: azure-arm-sql.ProxyResource

@@ -1,0 +1,301 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient'
+    name: AnomalyDetectorClient
+    fullName: AnomalyDetectorClient
+    children:
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.constructor'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.credentials'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.endpoint'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.entireDetect'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.entireDetect_2'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.entireDetect_1'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.lastDetect'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.lastDetect_2'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.lastDetect_1'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.sendOperationRequest'
+      - '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.sendRequest'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClientContext'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.constructor'
+    name: 'AnomalyDetectorClient(ServiceClientCredentials, string, msRest.ServiceClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="673f7-101">初始化 AnomalyDetectorClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="673f7-101">Initializes a new instance of the AnomalyDetectorClient class.</span></span>
+    syntax:
+      content: 'new AnomalyDetectorClient(credentials: ServiceClientCredentials, endpoint: string, options?: msRest.ServiceClientOptions)'
+      parameters:
+        - id: credentials
+          type:
+            - ServiceClientCredentials
+          description: <span data-ttu-id="673f7-102">用來唯一識別用戶端的訂用帳戶的訂用帳戶認證。</span><span class="sxs-lookup"><span data-stu-id="673f7-102">Subscription credentials which uniquely identify client subscription.</span></span>
+        - id: endpoint
+          type:
+            - string
+          description: '<span data-ttu-id="673f7-103">支援認知服務端點 (通訊協定和主機名稱，例如： https://westus2.api.cognitive.microsoft.com)。</span><span class="sxs-lookup"><span data-stu-id="673f7-103">Supported Cognitive Services endpoints (protocol and hostname, for example: https://westus2.api.cognitive.microsoft.com).</span></span>'
+        - id: options
+          type:
+            - msRest.ServiceClientOptions
+          description: ''
+          optional: true
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.credentials'
+    name: credentials
+    fullName: credentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'credentials: ServiceClientCredentials'
+      return:
+        type:
+          - ServiceClientCredentials
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.endpoint'
+    name: endpoint
+    fullName: endpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'endpoint: string'
+      return:
+        type:
+          - string
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.entireDetect'
+    name: 'entireDetect(Request, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="673f7-104">此作業會產生使用整個系列的模型，使用相同的模型偵測到的每個點。</span><span class="sxs-lookup"><span data-stu-id="673f7-104">This operation generates a model using an entire series, each point is detected with the same model.</span></span> <span data-ttu-id="673f7-105">使用此方法，在某個時點前後的點用來判斷它是否為異常狀況。</span><span class="sxs-lookup"><span data-stu-id="673f7-105">With this method, points before and after a certain point are used to determine whether it is an anomaly.</span></span> <span data-ttu-id="673f7-106">時間序列的整體狀態時，整個偵測可讓使用者。</span><span class="sxs-lookup"><span data-stu-id="673f7-106">The entire detection can give user an overall status of the time series.</span></span>'
+    syntax:
+      content: 'function entireDetect(body: Request, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/cognitiveservices-anomalydetector.Request'
+          description: <span data-ttu-id="673f7-107">時間序列點，如有需要的期間。</span><span class="sxs-lookup"><span data-stu-id="673f7-107">Time series points and period if needed.</span></span> <span data-ttu-id="673f7-108">進階的模型參數也可以設定在要求中。</span><span class="sxs-lookup"><span data-stu-id="673f7-108">Advanced model parameters can also be set in the request.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EntireDetectResponse2>
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.entireDetect_2'
+    name: 'entireDetect(Request, RequestOptionsBase, ServiceCallback<EntireDetectResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function entireDetect(body: Request, options: RequestOptionsBase, callback: ServiceCallback<EntireDetectResponse>)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/cognitiveservices-anomalydetector.Request'
+          description: <span data-ttu-id="673f7-109">時間序列點，如有需要的期間。</span><span class="sxs-lookup"><span data-stu-id="673f7-109">Time series points and period if needed.</span></span> <span data-ttu-id="673f7-110">進階的模型參數也可以設定在要求中。</span><span class="sxs-lookup"><span data-stu-id="673f7-110">Advanced model parameters can also be set in the request.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="673f7-111">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="673f7-111">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-anomalydetector.EntireDetectResponse>
+          description: |
+            <span data-ttu-id="673f7-112">回呼</span><span class="sxs-lookup"><span data-stu-id="673f7-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EntireDetectResponse2>
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.entireDetect_1'
+    name: 'entireDetect(Request, ServiceCallback<EntireDetectResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function entireDetect(body: Request, callback: ServiceCallback<EntireDetectResponse>)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/cognitiveservices-anomalydetector.Request'
+          description: <span data-ttu-id="673f7-113">時間序列點，如有需要的期間。</span><span class="sxs-lookup"><span data-stu-id="673f7-113">Time series points and period if needed.</span></span> <span data-ttu-id="673f7-114">進階的模型參數也可以設定在要求中。</span><span class="sxs-lookup"><span data-stu-id="673f7-114">Advanced model parameters can also be set in the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-anomalydetector.EntireDetectResponse>
+          description: |
+            <span data-ttu-id="673f7-115">回呼</span><span class="sxs-lookup"><span data-stu-id="673f7-115">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EntireDetectResponse2>
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.lastDetect'
+    name: 'lastDetect(Request, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="673f7-116">這項作業會產生模型，使用最新點。</span><span class="sxs-lookup"><span data-stu-id="673f7-116">This operation generates a model using points before the latest one.</span></span> <span data-ttu-id="673f7-117">使用此方法，只有歷程記錄的點用來判斷目標點是否為異常狀況。</span><span class="sxs-lookup"><span data-stu-id="673f7-117">With this method, only historical points are used to determine whether the target point is an anomaly.</span></span> <span data-ttu-id="673f7-118">偵測作業的最新點會比對商務計量的即時監視的案例。</span><span class="sxs-lookup"><span data-stu-id="673f7-118">The latest point detecting operation matches the scenario of real-time monitoring of business metrics.</span></span>'
+    syntax:
+      content: 'function lastDetect(body: Request, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/cognitiveservices-anomalydetector.Request'
+          description: <span data-ttu-id="673f7-119">時間序列點，如有需要的期間。</span><span class="sxs-lookup"><span data-stu-id="673f7-119">Time series points and period if needed.</span></span> <span data-ttu-id="673f7-120">進階的模型參數也可以設定在要求中。</span><span class="sxs-lookup"><span data-stu-id="673f7-120">Advanced model parameters can also be set in the request.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.LastDetectResponse2>
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.lastDetect_2'
+    name: 'lastDetect(Request, RequestOptionsBase, ServiceCallback<LastDetectResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lastDetect(body: Request, options: RequestOptionsBase, callback: ServiceCallback<LastDetectResponse>)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/cognitiveservices-anomalydetector.Request'
+          description: <span data-ttu-id="673f7-121">時間序列點，如有需要的期間。</span><span class="sxs-lookup"><span data-stu-id="673f7-121">Time series points and period if needed.</span></span> <span data-ttu-id="673f7-122">進階的模型參數也可以設定在要求中。</span><span class="sxs-lookup"><span data-stu-id="673f7-122">Advanced model parameters can also be set in the request.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="673f7-123">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="673f7-123">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-anomalydetector.LastDetectResponse>
+          description: |
+            <span data-ttu-id="673f7-124">回呼</span><span class="sxs-lookup"><span data-stu-id="673f7-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.LastDetectResponse2>
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.lastDetect_1'
+    name: 'lastDetect(Request, ServiceCallback<LastDetectResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lastDetect(body: Request, callback: ServiceCallback<LastDetectResponse>)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/cognitiveservices-anomalydetector.Request'
+          description: <span data-ttu-id="673f7-125">時間序列點，如有需要的期間。</span><span class="sxs-lookup"><span data-stu-id="673f7-125">Time series points and period if needed.</span></span> <span data-ttu-id="673f7-126">進階的模型參數也可以設定在要求中。</span><span class="sxs-lookup"><span data-stu-id="673f7-126">Advanced model parameters can also be set in the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-anomalydetector.LastDetectResponse>
+          description: |
+            <span data-ttu-id="673f7-127">回呼</span><span class="sxs-lookup"><span data-stu-id="673f7-127">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.LastDetectResponse2>
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.sendOperationRequest'
+    name: 'sendOperationRequest(OperationArguments, OperationSpec, ServiceCallback<any>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="673f7-128">傳送 HTTP 要求使用提供的 OperationSpec 填入。</span><span class="sxs-lookup"><span data-stu-id="673f7-128">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    syntax:
+      content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: <span data-ttu-id="673f7-129">HTTP 要求的樣板化的值就會填入從引數。</span><span class="sxs-lookup"><span data-stu-id="673f7-129">The arguments that the HTTP request's templated values will be populated from.</span></span>
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: <span data-ttu-id="673f7-130">要用來填入 httpRequest OperationSpec。</span><span class="sxs-lookup"><span data-stu-id="673f7-130">The OperationSpec to use to populate the httpRequest.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<any>
+          description: |
+            <span data-ttu-id="673f7-131">要在收到回應時呼叫的回呼。</span><span class="sxs-lookup"><span data-stu-id="673f7-131">The callback to call when the response is received.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClient.sendRequest'
+    name: sendRequest(RequestPrepareOptions | WebResource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="673f7-132">傳送提供的 httpRequest。</span><span class="sxs-lookup"><span data-stu-id="673f7-132">Send the provided httpRequest.</span></span>
+    syntax:
+      content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
+      parameters:
+        - id: options
+          type:
+            - RequestPrepareOptions | WebResource
+          description: ''
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/cognitiveservices-anomalydetector'
+references:
+  - uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClientContext'
+    name: AnomalyDetectorClientContext
+    spec.typeScript:
+      - name: AnomalyDetectorClientContext
+        fullName: AnomalyDetectorClientContext
+        uid: '@azure/cognitiveservices-anomalydetector.AnomalyDetectorClientContext'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request'
+    name: Request
+    spec.typeScript:
+      - name: Request
+        fullName: Request
+        uid: '@azure/cognitiveservices-anomalydetector.Request'
+  - uid: ServiceCallback<@azure/cognitiveservices-anomalydetector.EntireDetectResponse>
+    name: EntireDetectResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: EntireDetectResponse
+        fullName: EntireDetectResponse
+        uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-anomalydetector.LastDetectResponse>
+    name: LastDetectResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LastDetectResponse
+        fullName: LastDetectResponse
+        uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse'
+      - name: '>'
+        fullName: '>'

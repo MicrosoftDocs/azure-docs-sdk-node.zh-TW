@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.CompleteLease'
+    name: CompleteLease
+    fullName: CompleteLease
+    children:
+      - '@azure/event-processor-host.CompleteLease.constructor'
+      - '@azure/event-processor-host.CompleteLease.epoch'
+      - '@azure/event-processor-host.CompleteLease.getInfo'
+      - '@azure/event-processor-host.CompleteLease.incrementEpoch'
+      - '@azure/event-processor-host.CompleteLease.isOwned'
+      - '@azure/event-processor-host.CompleteLease.isOwnedBy'
+      - '@azure/event-processor-host.CompleteLease.owner'
+      - '@azure/event-processor-host.CompleteLease.partitionId'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="d08e1-101">描述完整的租用。</span><span class="sxs-lookup"><span data-stu-id="d08e1-101">Describes a Complete Lease.</span></span>
+    extends:
+      name: '@azure/event-processor-host.BaseLease'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.constructor'
+    name: CompleteLease(CompleteLeaseInfo)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d08e1-102">建立使用期的執行個體。</span><span class="sxs-lookup"><span data-stu-id="d08e1-102">Creates an instance of the Lease.</span></span>
+    syntax:
+      content: 'new CompleteLease(info: CompleteLeaseInfo)'
+      parameters:
+        - id: info
+          type:
+            - '@azure/event-processor-host.CompleteLeaseInfo'
+          description: |
+            <span data-ttu-id="d08e1-103">租用資訊中。</span><span class="sxs-lookup"><span data-stu-id="d08e1-103">The Lease info.</span></span>
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.epoch'
+    name: epoch
+    fullName: epoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d08e1-104">{number} epoch epoch(time) 的租用，您可以使用它來判斷競爭的節點之間的資料分割的最新的擁有者的值。</span><span class="sxs-lookup"><span data-stu-id="d08e1-104">{number} epoch The epoch(time) of the lease, which is a value you can use to determine the most recent owner of a partition between competing nodes.</span></span>'
+    syntax:
+      content: 'epoch: number'
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.getInfo'
+    name: getInfo()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d08e1-105">取得租用資訊。</span><span class="sxs-lookup"><span data-stu-id="d08e1-105">Gets the lease information.</span></span>
+    syntax:
+      content: function getInfo()
+      parameters: []
+      return:
+        type:
+          - '@azure/event-processor-host.CompleteLeaseInfo'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.incrementEpoch'
+    name: incrementEpoch()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d08e1-106">Epoch 值遞增 1。</span><span class="sxs-lookup"><span data-stu-id="d08e1-106">Increments the value of epoch by 1.</span></span>
+    syntax:
+      content: function incrementEpoch()
+      parameters: []
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.isOwned'
+    name: isOwned
+    fullName: isOwned
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d08e1-107">{布林} isOwned 指出擁有使用期。</span><span class="sxs-lookup"><span data-stu-id="d08e1-107">{boolean} isOwned Indicates wether the lease is owned.</span></span> <span data-ttu-id="d08e1-108">`true` 如果它擁有人;`false`否則。</span><span class="sxs-lookup"><span data-stu-id="d08e1-108">`true` if it is owned by someone; `false` otherwise.</span></span>'
+    syntax:
+      content: 'isOwned: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.isOwnedBy'
+    name: isOwnedBy(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d08e1-109">比較對 this.owner possibleOwner</span><span class="sxs-lookup"><span data-stu-id="d08e1-109">Compares possibleOwner against this.owner</span></span>
+    syntax:
+      content: 'function isOwnedBy(possibleOwner: string)'
+      parameters:
+        - id: possibleOwner
+          type:
+            - string
+          description: <span data-ttu-id="d08e1-110">要檢查的擁有者名稱。</span><span class="sxs-lookup"><span data-stu-id="d08e1-110">The owner name to check.</span></span>
+      return:
+        type:
+          - boolean
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.owner'
+    name: owner
+    fullName: owner
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d08e1-111">{string} 擁有者的分割區的主機擁有者。</span><span class="sxs-lookup"><span data-stu-id="d08e1-111">{string} owner The host owner for the partition.</span></span>'
+    syntax:
+      content: 'owner: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.CompleteLease.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d08e1-112">{string} partitionId 相關聯的 partitionId 的保留期。</span><span class="sxs-lookup"><span data-stu-id="d08e1-112">{string} partitionId The associated partitionId for which the lease is held.</span></span>'
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.BaseLease'
+    name: BaseLease
+    spec.typeScript:
+      - name: BaseLease
+        fullName: BaseLease
+        uid: '@azure/event-processor-host.BaseLease'
+  - uid: '@azure/event-processor-host.CompleteLeaseInfo'
+    name: CompleteLeaseInfo
+    spec.typeScript:
+      - name: CompleteLeaseInfo
+        fullName: CompleteLeaseInfo
+        uid: '@azure/event-processor-host.CompleteLeaseInfo'
