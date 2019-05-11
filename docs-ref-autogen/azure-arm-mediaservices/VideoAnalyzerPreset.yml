@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset
+    name: VideoAnalyzerPreset
+    fullName: VideoAnalyzerPreset
+    children:
+      - azure-arm-mediaservices.VideoAnalyzerPreset.audioLanguage
+      - azure-arm-mediaservices.VideoAnalyzerPreset.insightsToExtract
+      - azure-arm-mediaservices.VideoAnalyzerPreset.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="f672e-101">影片的分析器，預設值來擷取音訊及視訊的深入解析 （豐富的中繼資料），並輸出 JSON 格式檔案。</span><span class="sxs-lookup"><span data-stu-id="f672e-101">A video analyzer preset that extracts insights (rich metadata) from both audio and video, and outputs a JSON format file.</span></span>'
+    extends:
+      name: azure-arm-mediaservices.AudioAnalyzerPreset
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.audioLanguage
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f672e-102">使用 BCP-47 格式的 ''語言標記-地區'' 輸入中的音訊承載的語言 (例如: '' EN-US '')。</span><span class="sxs-lookup"><span data-stu-id="f672e-102">The language for the audio payload in the input using the BCP-47 format of ''language tag-region'' (e.g: ''en-US'').</span></span>  <span data-ttu-id="f672e-103">支援的語言清單會 （'' EN-US ''和'' EN-GB ''） 的英文、 西班牙文 （'' ES-ES ''和'' ES-MX ''）、 法文 (''fr-FR'')、 義大利文 ('' IT-IT '')、 日文 ('' JA-JP '')、 葡萄牙文 ('' PT-BR '')、 中文 ('' ZH-CN '')、 德文 ('' DE-DE '')、 阿拉伯文 （'' AR-EG ''和'' ar SY''）、 俄文 (''RU-RU '')、 印度文 ('' HI-IN '') 和韓文 ('' KO-KR '')。</span><span class="sxs-lookup"><span data-stu-id="f672e-103">The list of supported languages are English (''en-US'' and ''en-GB''), Spanish (''es-ES'' and ''es-MX''), French (''fr-FR''), Italian (''it-IT''), Japanese (''ja-JP''), Portuguese (''pt-BR''), Chinese (''zh-CN''), German (''de-DE''), Arabic (''ar-EG'' and ''ar-SY''), Russian (''ru-RU''), Hindi (''hi-IN''), and Korean (''ko-KR'').</span></span> <span data-ttu-id="f672e-104">如果您知道您的內容語言時，建議您加以指定。</span><span class="sxs-lookup"><span data-stu-id="f672e-104">If you know the language of your content, it is recommended that you specify it.</span></span> <span data-ttu-id="f672e-105">如果未指定語言或將語言設為 Null，自動語言偵測會選擇偵測到的第一種語言，並使用選取的語言處理整個檔案。</span><span class="sxs-lookup"><span data-stu-id="f672e-105">If the language isn''t specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file.</span></span> <span data-ttu-id="f672e-106">這項語言偵測功能目前支援英文、 簡體中文、 法文、 德文、 義大利文、 日文、 西班牙文、 俄文和葡萄牙文。</span><span class="sxs-lookup"><span data-stu-id="f672e-106">This language detection feature currently supports English, Chinese, French, German, Italian, Japanese, Spanish, Russian, and Portuguese.</span></span> <span data-ttu-id="f672e-107">目前不支援在偵測到第一個語言後，動態地切換語言。</span><span class="sxs-lookup"><span data-stu-id="f672e-107">It does not currently support dynamically switching between languages after the first language is detected.</span></span> <span data-ttu-id="f672e-108">自動偵測最適合搭配清楚明顯為語音的音訊錄製。</span><span class="sxs-lookup"><span data-stu-id="f672e-108">The automatic detection works best with audio recordings with clearly discernable speech.</span></span> <span data-ttu-id="f672e-109">如果自動偵測，就無法找到的語言，轉譯會切換回 '' EN-US ''。 」</span><span class="sxs-lookup"><span data-stu-id="f672e-109">If automatic detection fails to find the language, transcription would fallback to ''en-US''."</span></span>'
+    optional: true
+    syntax:
+      content: 'audioLanguage?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.insightsToExtract
+    name: insightsToExtract
+    fullName: insightsToExtract
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f672e-110">要擷取的深入解析的型別。</span><span class="sxs-lookup"><span data-stu-id="f672e-110">The type of insights to be extracted.</span></span> <span data-ttu-id="f672e-111">如果未設定然後根據型別將所選取的內容。</span><span class="sxs-lookup"><span data-stu-id="f672e-111">If not set then based on the content the type will selected.</span></span>  <span data-ttu-id="f672e-112">如果只則只有音訊的深入解析會擷取，而只是視訊音訊內容。</span><span class="sxs-lookup"><span data-stu-id="f672e-112">If the content is audio only then only audio insights are extracted and if it is video only.</span></span> <span data-ttu-id="f672e-113">可能的值包括：'' AudioInsightsOnly''，''VideoInsightsOnly''，''AllInsights''</span><span class="sxs-lookup"><span data-stu-id="f672e-113">Possible values include: ''AudioInsightsOnly'', ''VideoInsightsOnly'', ''AllInsights''</span></span>'
+    optional: true
+    syntax:
+      content: 'insightsToExtract?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f672e-114">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="f672e-114">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.AudioAnalyzerPreset
+    name: AudioAnalyzerPreset
+    spec.typeScript:
+      - name: AudioAnalyzerPreset
+        fullName: AudioAnalyzerPreset
+        uid: azure-arm-mediaservices.AudioAnalyzerPreset

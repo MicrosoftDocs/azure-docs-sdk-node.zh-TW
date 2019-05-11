@@ -1,0 +1,20 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.AuthOptions
+    name: AuthOptions
+    fullName: AuthOptions
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: |2+
+       <span data-ttu-id="f94dc-101">驗證選項 clientId-用戶端識別碼指派給您的應用程式的 Azure Active Directory 授權單位-開發人員可以選擇傳送授權單位，預設值為""(TODO:待具有機構與討論 Pm-直到此註解是預留位置） validateAuthority-用來開啟/關閉的授權單位驗證。</span><span class="sxs-lookup"><span data-stu-id="f94dc-101">Authentication Options clientId                    - Client ID assigned to your app by Azure Active Directory authority                   - Developer can choose to send an authority, defaults to " " (TODO: Follow up with the authority discussion with the PMs - Until then this comment is a placeholder) validateAuthority           - Used to turn authority validation on/off.</span></span> <span data-ttu-id="f94dc-102">當設為 true （預設值），MSAL 會比較針對已知代表語式正確的授權單位的 Url 範本的應用程式的授權單位。</span><span class="sxs-lookup"><span data-stu-id="f94dc-102">When set to true (default), MSAL will compare the application's authority against well-known URLs templates representing well-formed authorities.</span></span>
+      <span data-ttu-id="f94dc-103">在執行階段，以避免顯示驗證提示，惡意的頁面從 MSAL 取得授權單位時，它是很有用。</span><span class="sxs-lookup"><span data-stu-id="f94dc-103">It is useful when the authority is obtained at run time to prevent MSAL from displaying authentication prompts from malicious pages.</span></span>
+      <span data-ttu-id="f94dc-104">redirectUri-重新導向 URI 的應用程式，這必須與相同應用程式註冊入口網站中的值。</span><span class="sxs-lookup"><span data-stu-id="f94dc-104">redirectUri                 - The redirect URI of the application, this should be same as the value in the application registration portal.</span></span>
+      <span data-ttu-id="f94dc-105">預設值為 `window.location.href`。</span><span class="sxs-lookup"><span data-stu-id="f94dc-105">Defaults to `window.location.href`.</span></span>
+      <span data-ttu-id="f94dc-106">postLogoutRedirectUri-將使用者重新導向到這個位置在登出後使用。</span><span class="sxs-lookup"><span data-stu-id="f94dc-106">postLogoutRedirectUri       - Used to redirect the user to this location after logout.</span></span> <span data-ttu-id="f94dc-107">預設值為 `window.location.href`。</span><span class="sxs-lookup"><span data-stu-id="f94dc-107">Defaults to `window.location.href`.</span></span>
+      <span data-ttu-id="f94dc-108">狀態-用來傳送驗證要求 navigateToLoginRequestUrl-用來關閉預設巡覽至起始頁，登入之後的狀態參數。</span><span class="sxs-lookup"><span data-stu-id="f94dc-108">state                       - Use to send the state parameter with authentication request navigateToLoginRequestUrl   - Used to turn off default navigation to start page after login.</span></span> <span data-ttu-id="f94dc-109">預設值為 true。</span><span class="sxs-lookup"><span data-stu-id="f94dc-109">Default is true.</span></span> <span data-ttu-id="f94dc-110">這僅用於重新導向流程。</span><span class="sxs-lookup"><span data-stu-id="f94dc-110">This is used only for redirect flows.</span></span>
+
+    syntax:
+      content: 'type AuthOptions = { authority:string, clientId:string, navigateToLoginRequestUrl:boolean, postLogoutRedirectUri:Object, redirectUri:Object, validateAuthority:boolean }'
+    package: msal
