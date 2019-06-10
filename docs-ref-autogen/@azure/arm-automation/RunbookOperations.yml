@@ -1,0 +1,819 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-automation.RunbookOperations'
+    name: RunbookOperations
+    fullName: RunbookOperations
+    children:
+      - '@azure/arm-automation.RunbookOperations.beginPublish'
+      - '@azure/arm-automation.RunbookOperations.createOrUpdate'
+      - '@azure/arm-automation.RunbookOperations.createOrUpdate_2'
+      - '@azure/arm-automation.RunbookOperations.createOrUpdate_1'
+      - '@azure/arm-automation.RunbookOperations.deleteMethod'
+      - '@azure/arm-automation.RunbookOperations.deleteMethod_2'
+      - '@azure/arm-automation.RunbookOperations.deleteMethod_1'
+      - '@azure/arm-automation.RunbookOperations.get'
+      - '@azure/arm-automation.RunbookOperations.get_2'
+      - '@azure/arm-automation.RunbookOperations.get_1'
+      - '@azure/arm-automation.RunbookOperations.getContent'
+      - '@azure/arm-automation.RunbookOperations.getContent_2'
+      - '@azure/arm-automation.RunbookOperations.getContent_1'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccount'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccount_2'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccount_1'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext_2'
+      - '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext_1'
+      - '@azure/arm-automation.RunbookOperations.publish'
+      - '@azure/arm-automation.RunbookOperations.constructor'
+      - '@azure/arm-automation.RunbookOperations.update'
+      - '@azure/arm-automation.RunbookOperations.update_2'
+      - '@azure/arm-automation.RunbookOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="a0598-101">此類別代表 RunbookOperations。</span><span class="sxs-lookup"><span data-stu-id="a0598-101">Class representing a RunbookOperations.</span></span>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.beginPublish'
+    name: 'beginPublish(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-102">發行 runbook 草稿。</span><span class="sxs-lookup"><span data-stu-id="a0598-102">Publish runbook draft.</span></span>
+    syntax:
+      content: 'function beginPublish(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-103">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-103">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-104">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-104">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-105">提供發行 runbook 作業的參數。</span><span class="sxs-lookup"><span data-stu-id="a0598-105">The parameters supplied to the publish runbook operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, RunbookCreateOrUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-106">建立 runbook 的 runbook 名稱所識別。</span><span class="sxs-lookup"><span data-stu-id="a0598-106">Create the runbook identified by runbook name.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookCreateOrUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-107">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-107">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-108">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-108">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-109">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-109">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+          description: '<span data-ttu-id="a0598-110">Runbook 建立或更新的參數。</span><span class="sxs-lookup"><span data-stu-id="a0598-110">The create or update parameters for runbook.</span></span> <span data-ttu-id="a0598-111">已發佈的 runbook 或 draft，這不能兩者都提供其中一個內容的連結。</span><span class="sxs-lookup"><span data-stu-id="a0598-111">Provide either content link for a published runbook or draft, not both.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookCreateOrUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, RunbookCreateOrUpdateParameters, RequestOptionsBase, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookCreateOrUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-112">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-112">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-113">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-113">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-114">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-114">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+          description: '<span data-ttu-id="a0598-115">Runbook 建立或更新的參數。</span><span class="sxs-lookup"><span data-stu-id="a0598-115">The create or update parameters for runbook.</span></span> <span data-ttu-id="a0598-116">已發佈的 runbook 或 draft，這不能兩者都提供其中一個內容的連結。</span><span class="sxs-lookup"><span data-stu-id="a0598-116">Provide either content link for a published runbook or draft, not both.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a0598-117">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a0598-117">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="a0598-118">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookCreateOrUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, RunbookCreateOrUpdateParameters, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookCreateOrUpdateParameters, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-119">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-119">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-120">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-120">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-121">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-121">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+          description: '<span data-ttu-id="a0598-122">Runbook 建立或更新的參數。</span><span class="sxs-lookup"><span data-stu-id="a0598-122">The create or update parameters for runbook.</span></span> <span data-ttu-id="a0598-123">已發佈的 runbook 或 draft，這不能兩者都提供其中一個內容的連結。</span><span class="sxs-lookup"><span data-stu-id="a0598-123">Provide either content link for a published runbook or draft, not both.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="a0598-124">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookCreateOrUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-125">依名稱刪除 runbook。</span><span class="sxs-lookup"><span data-stu-id="a0598-125">Delete the runbook by name.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-126">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-126">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-127">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-127">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-128">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-128">The runbook name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, automationAccountName: string, runbookName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-129">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-129">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-130">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-130">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-131">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-131">The runbook name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a0598-132">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a0598-132">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a0598-133">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-133">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, automationAccountName: string, runbookName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-134">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-134">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-135">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-135">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-136">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-136">The runbook name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a0598-137">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-137">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-138">擷取 runbook 的 runbook 名稱所識別。</span><span class="sxs-lookup"><span data-stu-id="a0598-138">Retrieve the runbook identified by runbook name.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-139">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-139">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-140">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-140">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-141">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-141">The runbook name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, runbookName: string, options: RequestOptionsBase, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-142">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-142">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-143">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-143">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-144">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-144">The runbook name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a0598-145">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a0598-145">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="a0598-146">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-146">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, runbookName: string, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-147">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-147">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-148">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-148">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-149">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-149">The runbook name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="a0598-150">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-150">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.getContent'
+    name: 'getContent(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-151">擷取 runbook 的 runbook 名稱所識別的內容。</span><span class="sxs-lookup"><span data-stu-id="a0598-151">Retrieve the content of runbook identified by runbook name.</span></span>
+    syntax:
+      content: 'function getContent(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-152">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-152">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-153">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-153">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-154">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-154">The runbook name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookGetContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.getContent_2'
+    name: 'getContent(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getContent(resourceGroupName: string, automationAccountName: string, runbookName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-155">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-155">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-156">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-156">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-157">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-157">The runbook name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a0598-158">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a0598-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a0598-159">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookGetContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.getContent_1'
+    name: 'getContent(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getContent(resourceGroupName: string, automationAccountName: string, runbookName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-160">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-160">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-161">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-161">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-162">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-162">The runbook name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a0598-163">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-163">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookGetContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccount'
+    name: 'listByAutomationAccount(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-164">擷取 runbook 的清單。</span><span class="sxs-lookup"><span data-stu-id="a0598-164">Retrieve a list of runbooks.</span></span>
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-165">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-165">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-166">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-166">The name of the automation account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccount_2'
+    name: 'listByAutomationAccount(string, string, RequestOptionsBase, ServiceCallback<RunbookListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, options: RequestOptionsBase, callback: ServiceCallback<RunbookListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-167">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-167">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-168">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-168">The name of the automation account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a0598-169">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a0598-169">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.RunbookListResult>
+          description: |
+            <span data-ttu-id="a0598-170">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccount_1'
+    name: 'listByAutomationAccount(string, string, ServiceCallback<RunbookListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, callback: ServiceCallback<RunbookListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-171">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-171">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-172">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-172">The name of the automation account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.RunbookListResult>
+          description: |
+            <span data-ttu-id="a0598-173">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext'
+    name: 'listByAutomationAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-174">擷取 runbook 的清單。</span><span class="sxs-lookup"><span data-stu-id="a0598-174">Retrieve a list of runbooks.</span></span>
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a0598-175">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a0598-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext_2'
+    name: 'listByAutomationAccountNext(string, RequestOptionsBase, ServiceCallback<RunbookListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RunbookListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a0598-176">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a0598-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a0598-177">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a0598-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.RunbookListResult>
+          description: |
+            <span data-ttu-id="a0598-178">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.listByAutomationAccountNext_1'
+    name: 'listByAutomationAccountNext(string, ServiceCallback<RunbookListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, callback: ServiceCallback<RunbookListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a0598-179">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a0598-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.RunbookListResult>
+          description: |
+            <span data-ttu-id="a0598-180">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.publish'
+    name: 'publish(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-181">發行 runbook 草稿。</span><span class="sxs-lookup"><span data-stu-id="a0598-181">Publish runbook draft.</span></span>
+    syntax:
+      content: 'function publish(resourceGroupName: string, automationAccountName: string, runbookName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-182">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-182">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-183">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-183">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-184">提供發行 runbook 作業的參數。</span><span class="sxs-lookup"><span data-stu-id="a0598-184">The parameters supplied to the publish runbook operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookPublishResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.constructor'
+    name: RunbookOperations(AutomationClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-185">建立 RunbookOperations。</span><span class="sxs-lookup"><span data-stu-id="a0598-185">Create a RunbookOperations.</span></span>
+    syntax:
+      content: 'new RunbookOperations(client: AutomationClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-automation.AutomationClientContext'
+          description: |
+            <span data-ttu-id="a0598-186">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="a0598-186">Reference to the service client.</span></span>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.update'
+    name: 'update(string, string, string, RunbookUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a0598-187">請更新 runbook 名稱所識別的 runbook。</span><span class="sxs-lookup"><span data-stu-id="a0598-187">Update the runbook identified by runbook name.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-188">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-188">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-189">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-189">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-190">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-190">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookUpdateParameters'
+          description: <span data-ttu-id="a0598-191">更新 runbook 的參數。</span><span class="sxs-lookup"><span data-stu-id="a0598-191">The update parameters for runbook.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RunbookUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.update_2'
+    name: 'update(string, string, string, RunbookUpdateParameters, RequestOptionsBase, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-192">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-192">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-193">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-193">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-194">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-194">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookUpdateParameters'
+          description: <span data-ttu-id="a0598-195">更新 runbook 的參數。</span><span class="sxs-lookup"><span data-stu-id="a0598-195">The update parameters for runbook.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a0598-196">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a0598-196">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="a0598-197">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-197">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookUpdateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.RunbookOperations.update_1'
+    name: 'update(string, string, string, RunbookUpdateParameters, ServiceCallback<Runbook>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, automationAccountName: string, runbookName: string, parameters: RunbookUpdateParameters, callback: ServiceCallback<Runbook>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-198">Azure 資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-198">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-199">自動化帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-199">The name of the automation account.</span></span>
+        - id: runbookName
+          type:
+            - string
+          description: <span data-ttu-id="a0598-200">Runbook 名稱。</span><span class="sxs-lookup"><span data-stu-id="a0598-200">The runbook name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.RunbookUpdateParameters'
+          description: <span data-ttu-id="a0598-201">更新 runbook 的參數。</span><span class="sxs-lookup"><span data-stu-id="a0598-201">The update parameters for runbook.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Runbook>
+          description: |
+            <span data-ttu-id="a0598-202">回呼</span><span class="sxs-lookup"><span data-stu-id="a0598-202">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RunbookUpdateResponse>
+    package: '@azure/arm-automation'
+references:
+  - uid: '@azure/arm-automation.AutomationClientContext'
+    name: AutomationClientContext
+    spec.typeScript:
+      - name: AutomationClientContext
+        fullName: AutomationClientContext
+        uid: '@azure/arm-automation.AutomationClientContext'
+  - uid: '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+    name: RunbookCreateOrUpdateParameters
+    spec.typeScript:
+      - name: RunbookCreateOrUpdateParameters
+        fullName: RunbookCreateOrUpdateParameters
+        uid: '@azure/arm-automation.RunbookCreateOrUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-automation.Runbook>
+    name: Runbook>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Runbook
+        fullName: Runbook
+        uid: '@azure/arm-automation.Runbook'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-automation.RunbookListResult>
+    name: RunbookListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RunbookListResult
+        fullName: RunbookListResult
+        uid: '@azure/arm-automation.RunbookListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-automation.RunbookUpdateParameters'
+    name: RunbookUpdateParameters
+    spec.typeScript:
+      - name: RunbookUpdateParameters
+        fullName: RunbookUpdateParameters
+        uid: '@azure/arm-automation.RunbookUpdateParameters'

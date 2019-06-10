@@ -1,0 +1,1119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Endpoints'
+    name: Endpoints
+    fullName: Endpoints
+    children:
+      - '@azure/arm-cdn.Endpoints.beginCreate'
+      - '@azure/arm-cdn.Endpoints.beginDeleteMethod'
+      - '@azure/arm-cdn.Endpoints.beginLoadContent'
+      - '@azure/arm-cdn.Endpoints.beginPurgeContent'
+      - '@azure/arm-cdn.Endpoints.beginStart'
+      - '@azure/arm-cdn.Endpoints.beginStop'
+      - '@azure/arm-cdn.Endpoints.beginUpdate'
+      - '@azure/arm-cdn.Endpoints.create'
+      - '@azure/arm-cdn.Endpoints.deleteMethod'
+      - '@azure/arm-cdn.Endpoints.constructor'
+      - '@azure/arm-cdn.Endpoints.get'
+      - '@azure/arm-cdn.Endpoints.get_2'
+      - '@azure/arm-cdn.Endpoints.get_1'
+      - '@azure/arm-cdn.Endpoints.listByProfile'
+      - '@azure/arm-cdn.Endpoints.listByProfile_2'
+      - '@azure/arm-cdn.Endpoints.listByProfile_1'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext_2'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext_1'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage_2'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage_1'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext_2'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext_1'
+      - '@azure/arm-cdn.Endpoints.loadContent'
+      - '@azure/arm-cdn.Endpoints.purgeContent'
+      - '@azure/arm-cdn.Endpoints.start'
+      - '@azure/arm-cdn.Endpoints.stop'
+      - '@azure/arm-cdn.Endpoints.update'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain_2'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="a66fe-101">此類別代表的端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-101">Class representing a Endpoints.</span></span>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginCreate'
+    name: 'beginCreate(string, string, string, Endpoint, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a66fe-102">使用指定的端點名稱在指定的訂用帳戶、 資源群組和設定檔中建立新的 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-102">Creates a new CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, profileName: string, endpointName: string, endpoint: Endpoint, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-103">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-103">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-104">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-104">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-105">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-105">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: endpoint
+          type:
+            - '@azure/arm-cdn.Endpoint'
+          description: <span data-ttu-id="a66fe-106">端點屬性</span><span class="sxs-lookup"><span data-stu-id="a66fe-106">Endpoint properties</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a66fe-107">刪除現有的 CDN 端點下指定的訂用帳戶、 資源群組和設定檔指定的端點名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-107">Deletes an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-108">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-108">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-109">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-109">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-110">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-110">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginLoadContent'
+    name: 'beginLoadContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-111">預先載入到 CDN 的內容。</span><span class="sxs-lookup"><span data-stu-id="a66fe-111">Pre-loads a content to CDN.</span></span> <span data-ttu-id="a66fe-112">適用於 Verizon 設定檔。</span><span class="sxs-lookup"><span data-stu-id="a66fe-112">Available for Verizon Profiles.</span></span>
+    syntax:
+      content: 'function beginLoadContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-113">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-113">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-114">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-114">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-115">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-115">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: <span data-ttu-id="a66fe-116">要載入內容的路徑。</span><span class="sxs-lookup"><span data-stu-id="a66fe-116">The path to the content to be loaded.</span></span> <span data-ttu-id="a66fe-117">路徑應為 origin 的相對檔案 URL。</span><span class="sxs-lookup"><span data-stu-id="a66fe-117">Path should be a relative file URL of the origin.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginPurgeContent'
+    name: 'beginPurgeContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-118">從 CDN 移除內容。</span><span class="sxs-lookup"><span data-stu-id="a66fe-118">Removes a content from CDN.</span></span>
+    syntax:
+      content: 'function beginPurgeContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-119">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-119">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-120">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-120">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-121">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-121">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: <span data-ttu-id="a66fe-122">若要清除內容的路徑。</span><span class="sxs-lookup"><span data-stu-id="a66fe-122">The path to the content to be purged.</span></span> <span data-ttu-id="a66fe-123">可以描述的檔案路徑或萬用字元目錄。</span><span class="sxs-lookup"><span data-stu-id="a66fe-123">Can describe a file path or a wild card directory.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginStart'
+    name: 'beginStart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-124">啟動現有的 CDN 端點上已停止的狀態。</span><span class="sxs-lookup"><span data-stu-id="a66fe-124">Starts an existing CDN endpoint that is on a stopped state.</span></span>
+    syntax:
+      content: 'function beginStart(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-125">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-125">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-126">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-126">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-127">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-127">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginStop'
+    name: 'beginStop(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-128">停止執行的現有 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-128">Stops an existing running CDN endpoint.</span></span>
+    syntax:
+      content: 'function beginStop(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-129">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-129">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-130">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-130">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-131">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-131">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginUpdate'
+    name: 'beginUpdate(string, string, string, EndpointUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a66fe-132">使用指定的端點名稱在指定的訂用帳戶、 資源群組和設定檔中更新現有的 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-132">Updates an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span> <span data-ttu-id="a66fe-133">只有 「 標記 」 和 「 原始主機標頭，都可以更新之後建立的端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-133">Only tags and Origin HostHeader can be updated after creating an endpoint.</span></span> <span data-ttu-id="a66fe-134">若要更新的原始來源，使用更新的原始作業。</span><span class="sxs-lookup"><span data-stu-id="a66fe-134">To update origins, use the Update Origin operation.</span></span> <span data-ttu-id="a66fe-135">若要更新自訂網域，請使用更新的自訂網域作業。</span><span class="sxs-lookup"><span data-stu-id="a66fe-135">To update custom domains, use the Update Custom Domain operation.</span></span>'
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, profileName: string, endpointName: string, endpointUpdateProperties: EndpointUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-136">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-136">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-137">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-137">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-138">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-138">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: endpointUpdateProperties
+          type:
+            - '@azure/arm-cdn.EndpointUpdateParameters'
+          description: <span data-ttu-id="a66fe-139">端點更新內容</span><span class="sxs-lookup"><span data-stu-id="a66fe-139">Endpoint update properties</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.create'
+    name: 'create(string, string, string, Endpoint, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a66fe-140">使用指定的端點名稱在指定的訂用帳戶、 資源群組和設定檔中建立新的 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-140">Creates a new CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function create(resourceGroupName: string, profileName: string, endpointName: string, endpoint: Endpoint, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-141">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-141">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-142">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-142">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-143">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-143">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: endpoint
+          type:
+            - '@azure/arm-cdn.Endpoint'
+          description: <span data-ttu-id="a66fe-144">端點屬性</span><span class="sxs-lookup"><span data-stu-id="a66fe-144">Endpoint properties</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsCreateResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a66fe-145">刪除現有的 CDN 端點下指定的訂用帳戶、 資源群組和設定檔指定的端點名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-145">Deletes an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-146">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-146">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-147">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-147">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-148">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-148">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.constructor'
+    name: Endpoints(CdnManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-149">建立端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-149">Create a Endpoints.</span></span>
+    syntax:
+      content: 'new Endpoints(client: CdnManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cdn.CdnManagementClientContext'
+          description: |
+            <span data-ttu-id="a66fe-150">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="a66fe-150">Reference to the service client.</span></span>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a66fe-151">取得與指定的端點名稱在指定的訂用帳戶、 資源群組和設定檔下現有的 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-151">Gets an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span>'
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-152">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-152">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-153">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-153">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-154">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-154">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Endpoint>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, options: RequestOptionsBase, callback: ServiceCallback<Endpoint>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-155">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-155">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-156">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-156">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-157">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-157">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a66fe-158">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a66fe-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Endpoint>
+          description: |
+            <span data-ttu-id="a66fe-159">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get_1'
+    name: 'get(string, string, string, ServiceCallback<Endpoint>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<Endpoint>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-160">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-160">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-161">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-161">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-162">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-162">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Endpoint>
+          description: |
+            <span data-ttu-id="a66fe-163">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-163">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile'
+    name: 'listByProfile(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-164">列出現有的 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-164">Lists existing CDN endpoints.</span></span>
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-165">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-165">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-166">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-166">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile_2'
+    name: 'listByProfile(string, string, RequestOptionsBase, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-167">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-167">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-168">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-168">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a66fe-169">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a66fe-169">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            <span data-ttu-id="a66fe-170">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile_1'
+    name: 'listByProfile(string, string, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-171">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-171">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-172">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-172">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            <span data-ttu-id="a66fe-173">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext'
+    name: 'listByProfileNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-174">列出現有的 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-174">Lists existing CDN endpoints.</span></span>
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-175">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a66fe-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext_2'
+    name: 'listByProfileNext(string, RequestOptionsBase, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-176">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a66fe-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a66fe-177">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a66fe-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            <span data-ttu-id="a66fe-178">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext_1'
+    name: 'listByProfileNext(string, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-179">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a66fe-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            <span data-ttu-id="a66fe-180">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage'
+    name: 'listResourceUsage(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-181">檢查的配額和使用量的地理篩選條件和指定的端點下的自訂網域。</span><span class="sxs-lookup"><span data-stu-id="a66fe-181">Checks the quota and usage of geo filters and custom domains under the given endpoint.</span></span>
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-182">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-182">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-183">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-183">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-184">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-184">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage_2'
+    name: 'listResourceUsage(string, string, string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-185">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-185">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-186">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-186">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-187">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-187">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a66fe-188">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a66fe-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="a66fe-189">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage_1'
+    name: 'listResourceUsage(string, string, string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-190">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-190">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-191">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-191">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-192">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-192">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="a66fe-193">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext'
+    name: 'listResourceUsageNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-194">檢查的配額和使用量的地理篩選條件和指定的端點下的自訂網域。</span><span class="sxs-lookup"><span data-stu-id="a66fe-194">Checks the quota and usage of geo filters and custom domains under the given endpoint.</span></span>
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-195">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a66fe-195">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext_2'
+    name: 'listResourceUsageNext(string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-196">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a66fe-196">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a66fe-197">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a66fe-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="a66fe-198">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext_1'
+    name: 'listResourceUsageNext(string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-199">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a66fe-199">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="a66fe-200">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-200">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.loadContent'
+    name: 'loadContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-201">預先載入到 CDN 的內容。</span><span class="sxs-lookup"><span data-stu-id="a66fe-201">Pre-loads a content to CDN.</span></span> <span data-ttu-id="a66fe-202">適用於 Verizon 設定檔。</span><span class="sxs-lookup"><span data-stu-id="a66fe-202">Available for Verizon Profiles.</span></span>
+    syntax:
+      content: 'function loadContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-203">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-203">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-204">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-204">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-205">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-205">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: <span data-ttu-id="a66fe-206">要載入內容的路徑。</span><span class="sxs-lookup"><span data-stu-id="a66fe-206">The path to the content to be loaded.</span></span> <span data-ttu-id="a66fe-207">路徑應為 origin 的相對檔案 URL。</span><span class="sxs-lookup"><span data-stu-id="a66fe-207">Path should be a relative file URL of the origin.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.purgeContent'
+    name: 'purgeContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-208">從 CDN 移除內容。</span><span class="sxs-lookup"><span data-stu-id="a66fe-208">Removes a content from CDN.</span></span>
+    syntax:
+      content: 'function purgeContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-209">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-209">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-210">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-210">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-211">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-211">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: <span data-ttu-id="a66fe-212">若要清除內容的路徑。</span><span class="sxs-lookup"><span data-stu-id="a66fe-212">The path to the content to be purged.</span></span> <span data-ttu-id="a66fe-213">可以描述的檔案路徑或萬用字元目錄。</span><span class="sxs-lookup"><span data-stu-id="a66fe-213">Can describe a file path or a wild card directory.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.start'
+    name: 'start(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-214">啟動現有的 CDN 端點上已停止的狀態。</span><span class="sxs-lookup"><span data-stu-id="a66fe-214">Starts an existing CDN endpoint that is on a stopped state.</span></span>
+    syntax:
+      content: 'function start(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-215">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-215">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-216">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-216">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-217">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-217">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsStartResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.stop'
+    name: 'stop(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-218">停止執行的現有 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-218">Stops an existing running CDN endpoint.</span></span>
+    syntax:
+      content: 'function stop(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-219">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-219">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-220">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-220">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-221">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-221">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsStopResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.update'
+    name: 'update(string, string, string, EndpointUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="a66fe-222">使用指定的端點名稱在指定的訂用帳戶、 資源群組和設定檔中更新現有的 CDN 端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-222">Updates an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.</span></span> <span data-ttu-id="a66fe-223">只有 「 標記 」 和 「 原始主機標頭，都可以更新之後建立的端點。</span><span class="sxs-lookup"><span data-stu-id="a66fe-223">Only tags and Origin HostHeader can be updated after creating an endpoint.</span></span> <span data-ttu-id="a66fe-224">若要更新的原始來源，使用更新的原始作業。</span><span class="sxs-lookup"><span data-stu-id="a66fe-224">To update origins, use the Update Origin operation.</span></span> <span data-ttu-id="a66fe-225">若要更新自訂網域，請使用更新的自訂網域作業。</span><span class="sxs-lookup"><span data-stu-id="a66fe-225">To update custom domains, use the Update Custom Domain operation.</span></span>'
+    syntax:
+      content: 'function update(resourceGroupName: string, profileName: string, endpointName: string, endpointUpdateProperties: EndpointUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-226">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-226">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-227">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-227">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-228">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-228">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: endpointUpdateProperties
+          type:
+            - '@azure/arm-cdn.EndpointUpdateParameters'
+          description: <span data-ttu-id="a66fe-229">端點更新內容</span><span class="sxs-lookup"><span data-stu-id="a66fe-229">Endpoint update properties</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsUpdateResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain'
+    name: 'validateCustomDomain(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a66fe-230">驗證自訂網域對應，以確保它會對應到正確的 CDN 端點，在 DNS 中。</span><span class="sxs-lookup"><span data-stu-id="a66fe-230">Validates the custom domain mapping to ensure it maps to the correct CDN endpoint in DNS.</span></span>
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-231">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-231">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-232">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-232">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-233">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-233">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: hostName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-234">自訂網域主機名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-234">The host name of the custom domain.</span></span> <span data-ttu-id="a66fe-235">必須是網域名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-235">Must be a domain name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain_2'
+    name: 'validateCustomDomain(string, string, string, string, RequestOptionsBase, ServiceCallback<ValidateCustomDomainOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, options: RequestOptionsBase, callback: ServiceCallback<ValidateCustomDomainOutput>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-236">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-236">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-237">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-237">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-238">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-238">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: hostName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-239">自訂網域主機名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-239">The host name of the custom domain.</span></span> <span data-ttu-id="a66fe-240">必須是網域名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-240">Must be a domain name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a66fe-241">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="a66fe-241">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+          description: |
+            <span data-ttu-id="a66fe-242">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-242">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain_1'
+    name: 'validateCustomDomain(string, string, string, string, ServiceCallback<ValidateCustomDomainOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, callback: ServiceCallback<ValidateCustomDomainOutput>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-243">Azure 訂用帳戶內的資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-243">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-244">這是唯一的資源群組內的 CDN 設定檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-244">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: endpointName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-245">這是全域唯一的設定檔端點的名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-245">Name of the endpoint under the profile which is unique globally.</span></span>
+        - id: hostName
+          type:
+            - string
+          description: <span data-ttu-id="a66fe-246">自訂網域主機名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-246">The host name of the custom domain.</span></span> <span data-ttu-id="a66fe-247">必須是網域名稱。</span><span class="sxs-lookup"><span data-stu-id="a66fe-247">Must be a domain name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+          description: |
+            <span data-ttu-id="a66fe-248">回呼</span><span class="sxs-lookup"><span data-stu-id="a66fe-248">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.CdnManagementClientContext'
+    name: CdnManagementClientContext
+    spec.typeScript:
+      - name: CdnManagementClientContext
+        fullName: CdnManagementClientContext
+        uid: '@azure/arm-cdn.CdnManagementClientContext'
+  - uid: '@azure/arm-cdn.Endpoint'
+    name: Endpoint
+    spec.typeScript:
+      - name: Endpoint
+        fullName: Endpoint
+        uid: '@azure/arm-cdn.Endpoint'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters'
+    name: EndpointUpdateParameters
+    spec.typeScript:
+      - name: EndpointUpdateParameters
+        fullName: EndpointUpdateParameters
+        uid: '@azure/arm-cdn.EndpointUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-cdn.Endpoint>
+    name: Endpoint>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Endpoint
+        fullName: Endpoint
+        uid: '@azure/arm-cdn.Endpoint'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.EndpointListResult>
+    name: EndpointListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: EndpointListResult
+        fullName: EndpointListResult
+        uid: '@azure/arm-cdn.EndpointListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+    name: ResourceUsageListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceUsageListResult
+        fullName: ResourceUsageListResult
+        uid: '@azure/arm-cdn.ResourceUsageListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+    name: ValidateCustomDomainOutput>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ValidateCustomDomainOutput
+        fullName: ValidateCustomDomainOutput
+        uid: '@azure/arm-cdn.ValidateCustomDomainOutput'
+      - name: '>'
+        fullName: '>'
