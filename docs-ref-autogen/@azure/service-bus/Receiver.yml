@@ -1,0 +1,278 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    fullName: Receiver
+    children:
+      - '@azure/service-bus.Receiver.close'
+      - '@azure/service-bus.Receiver.getMessageIterator'
+      - '@azure/service-bus.Receiver.isClosed'
+      - '@azure/service-bus.Receiver.isReceivingMessages'
+      - '@azure/service-bus.Receiver.receiveDeferredMessage'
+      - '@azure/service-bus.Receiver.receiveDeferredMessages'
+      - '@azure/service-bus.Receiver.receiveMessages'
+      - '@azure/service-bus.Receiver.receiveMode'
+      - '@azure/service-bus.Receiver.registerMessageHandler'
+      - '@azure/service-bus.Receiver.renewMessageLock'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      接收器類別可用來接收訊息，在批次，或藉由註冊處理常式。
+      使用`createReceiver`QueueClient 或 SubscriptionClient 來具現化，接收端上的函式。
+      接收器類別是在基礎 AMQP 接收者連結的抽象概念。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      關閉基礎 AMQP 接收者連結。
+      一旦關閉，接收者不能用於任何進一步的作業。
+      使用`createReceiver`QueueClient 或 SubscriptionClient 來具現化新的接收器上的函式
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.getMessageIterator'
+    name: getMessageIterator()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      取得非同步迭代器，透過訊息接收者。
+      如果有另一個接收作業在相同的接收端上進行，則會擲回錯誤。 如果您不確定是否有為另一個接收作業執行、 檢查`isReceivingMessages`接收器上的屬性。
+
+      如果迭代器不能超過一分鐘，擷取中的新訊息`undefined`會傳回。
+    syntax:
+      content: function getMessageIterator()
+      parameters: []
+      return:
+        type:
+          - AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 傳回`true`如果接收者已關閉。 這種情形是因為接收者本身已關閉，或用戶端，建立已關閉。
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.isReceivingMessages'
+    name: isReceivingMessages()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      指出是否將接收器目前接收訊息或不。
+      當它會傳回 true，新`registerMessageHandler()`或`receiveMessages()`無法進行呼叫。
+    syntax:
+      content: function isReceivingMessages()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveDeferredMessage'
+    name: receiveDeferredMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 傳回可解析成所識別的延後訊息的 promise 指定`sequenceNumber`。
+    syntax:
+      content: 'function receiveDeferredMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: 要接收訊息的序號。
+      return:
+        type:
+          - Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveDeferredMessages'
+    name: 'receiveDeferredMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 傳回可解析成陣列識別的延後訊息的 promise 藉由指定`sequenceNumbers`。
+    syntax:
+      content: 'function receiveDeferredMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: 要接收訊息的序號的陣列。
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveMessages'
+    name: 'receiveMessages(number, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      傳回可解析的訊息陣列的 promise 根據指定的計數及逾時透過 AMQP 接收者從佇列/訂用帳戶的連結。
+      如果有另一個接收作業在相同的接收端上進行，則會擲回錯誤。 如果您不確定是否有為另一個接收作業執行、 檢查`isReceivingMessages`接收器上的屬性。
+    syntax:
+      content: 'function receiveMessages(maxMessageCount: number, idleTimeoutInSeconds?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - number
+          description: 從佇列/訂用帳戶接收的訊息數目上限。
+        - id: idleTimeoutInSeconds
+          type:
+            - undefined | number
+          description: |-
+            最大等待時間 （秒），接收者應該等候接收第一個訊息。 如果此時不收到任何訊息時，傳回的承諾取得解析為空陣列。
+            - **預設值**:`60`秒。
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveMode'
+    name: receiveMode
+    fullName: receiveMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 表示此收件者的 receiveMode。
+    syntax:
+      content: 'receiveMode: ReceiveMode'
+      return:
+        type:
+          - '@azure/service-bus.ReceiveMode'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.registerMessageHandler'
+    name: 'registerMessageHandler(OnMessage, OnError, MessageHandlerOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      註冊處理常式來處理 AMQP 接收者連結上自佇列/訂閱訊息的內送資料流。
+      若要停止接收訊息，請呼叫`close()`接收器上。
+      如果有另一個接收作業在相同的接收端上進行，則會擲回錯誤。 如果您不確定是否有為另一個接收作業執行、 檢查`isReceivingMessages`接收器上的屬性。
+    syntax:
+      content: 'function registerMessageHandler(onMessage: OnMessage, onError: OnError, options?: MessageHandlerOptions)'
+      parameters:
+        - id: onMessage
+          type:
+            - '@azure/service-bus.OnMessage'
+          description: 處理每則傳入訊息的處理常式。
+        - id: onError
+          type:
+            - '@azure/service-bus.OnError'
+          description: 在接收或處理訊息時，就會發生任何錯誤處理常式。
+        - id: options
+          type:
+            - '@azure/service-bus.MessageHandlerOptions'
+          description: |
+            如果應該自動完成訊息，及/或有其鎖定會自動續訂的控制選項。 您可以控制應同時處理的訊息數目上限。 您也可以提供以秒為單位來表示的時間等待新訊息，再關閉接收者的逾時。
+          optional: true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.renewMessageLock'
+    name: renewMessageLock(string | ServiceBusMessage)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      佇列/訂用帳戶建立期間會更新訊息鎖定期間所指定。
+      - 檢查`lockedUntilUtc`上鎖定的到期的時間的訊息屬性。
+      - 如果訊息尚未採取實際 (使用`complete()`，`defer()`或`deadletter()`，然後才能在其鎖定到期，則傳回佇列/訂用帳戶中下一個訊息陸地接收作業。
+    syntax:
+      content: 'function renewMessageLock(lockTokenOrMessage: string | ServiceBusMessage)'
+      parameters:
+        - id: lockTokenOrMessage
+          type:
+            - string | @azure/service-bus.ServiceBusMessage
+          description: '`lockToken`訊息或訊息本身的屬性。'
+      return:
+        type:
+          - Promise<Date>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    name: ServiceBusMessage>
+    spec.typeScript:
+      - name: AsyncIterableIterator<
+        fullName: AsyncIterableIterator<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    name: ServiceBusMessage | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: ' | undefined>'
+        fullName: ' | undefined>'
+  - uid: 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    name: 'ServiceBusMessage[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/service-bus.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/service-bus.OnMessage'
+  - uid: '@azure/service-bus.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/service-bus.OnError'
+  - uid: '@azure/service-bus.MessageHandlerOptions'
+    name: MessageHandlerOptions
+    spec.typeScript:
+      - name: MessageHandlerOptions
+        fullName: MessageHandlerOptions
+        uid: '@azure/service-bus.MessageHandlerOptions'
+  - uid: string | @azure/service-bus.ServiceBusMessage
+    name: ServiceBusMessage
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'

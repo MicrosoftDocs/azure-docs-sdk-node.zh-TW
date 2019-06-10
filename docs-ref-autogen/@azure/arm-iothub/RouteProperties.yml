@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.RouteProperties'
+    name: RouteProperties
+    fullName: RouteProperties
+    children:
+      - '@azure/arm-iothub.RouteProperties.condition'
+      - '@azure/arm-iothub.RouteProperties.endpointNames'
+      - '@azure/arm-iothub.RouteProperties.isEnabled'
+      - '@azure/arm-iothub.RouteProperties.name'
+      - '@azure/arm-iothub.RouteProperties.source'
+    langs:
+      - typeScript
+    type: interface
+    summary: IoT 中樞將訊息路由至端點所用的路由規則的屬性。
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.condition'
+    name: condition
+    fullName: condition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '若要套用的路由規則會評估條件。 如果未不提供任何條件，則評估為 true 的預設值。 如需文法，請參閱： https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language'
+    optional: true
+    syntax:
+      content: 'condition?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.endpointNames'
+    name: endpointNames
+    fullName: endpointNames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 符合條件的訊息都會路由傳送的端點清單。 目前允許只有 1 個端點。
+    syntax:
+      content: 'endpointNames: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.isEnabled'
+    name: isEnabled
+    fullName: isEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用來指定是否要啟用的路由。
+    syntax:
+      content: 'isEnabled: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 路由的名稱。 名稱只能包含英數字元、 句號、 底線、 連字號、 最大長度為 64 個字元，而且必須是唯一。
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.source'
+    name: source
+    fullName: source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 路由規則會套用，例如裝置訊息的來源。 可能的值包括：' Invalid'、 '裝置訊息'、 'TwinChangeEvents'、 'DeviceLifecycleEvents'、 'DeviceJobLifecycleEvents'
+    syntax:
+      content: 'source: RoutingSource'
+      return:
+        type:
+          - '@azure/arm-iothub.RoutingSource'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.RoutingSource'
+    name: RoutingSource
+    spec.typeScript:
+      - name: RoutingSource
+        fullName: RoutingSource
+        uid: '@azure/arm-iothub.RoutingSource'
