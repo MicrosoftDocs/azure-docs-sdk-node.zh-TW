@@ -1,0 +1,383 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.Database'
+    name: Database
+    fullName: Database
+    children:
+      - '@azure/arm-cosmosdb.Database.constructor'
+      - '@azure/arm-cosmosdb.Database.listMetricDefinitions'
+      - '@azure/arm-cosmosdb.Database.listMetricDefinitions_2'
+      - '@azure/arm-cosmosdb.Database.listMetricDefinitions_1'
+      - '@azure/arm-cosmosdb.Database.listMetrics'
+      - '@azure/arm-cosmosdb.Database.listMetrics_2'
+      - '@azure/arm-cosmosdb.Database.listMetrics_1'
+      - '@azure/arm-cosmosdb.Database.listUsages_2'
+      - '@azure/arm-cosmosdb.Database.listUsages'
+      - '@azure/arm-cosmosdb.Database.listUsages_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 代表資料庫的類別。
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.constructor'
+    name: Database(CosmosDBManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立資料庫。
+    syntax:
+      content: 'new Database(client: CosmosDBManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetricDefinitions'
+    name: 'listMetricDefinitions(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 擷取給定資料庫的計量定義。
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, accountName: string, databaseRid: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricDefinitionsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetricDefinitions_2'
+    name: 'listMetricDefinitions(string, string, string, RequestOptionsBase, ServiceCallback<MetricDefinitionsListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, accountName: string, databaseRid: string, options: RequestOptionsBase, callback: ServiceCallback<MetricDefinitionsListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.MetricDefinitionsListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricDefinitionsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetricDefinitions_1'
+    name: 'listMetricDefinitions(string, string, string, ServiceCallback<MetricDefinitionsListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, accountName: string, databaseRid: string, callback: ServiceCallback<MetricDefinitionsListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.MetricDefinitionsListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricDefinitionsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetrics'
+    name: 'listMetrics(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 擷取由指定的篩選條件，指定的資料庫帳戶和資料庫的計量。
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, filter: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: filter
+          type:
+            - string
+          description: OData 篩選運算式，用來描述要傳回的度量資訊的子集。 可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。 支援的運算子是相等於
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetrics_2'
+    name: 'listMetrics(string, string, string, string, RequestOptionsBase, ServiceCallback<MetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, filter: string, options: RequestOptionsBase, callback: ServiceCallback<MetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: filter
+          type:
+            - string
+          description: OData 篩選運算式，用來描述要傳回的度量資訊的子集。 可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。 支援的運算子是相等於
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.MetricListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetrics_1'
+    name: 'listMetrics(string, string, string, string, ServiceCallback<MetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, filter: string, callback: ServiceCallback<MetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: filter
+          type:
+            - string
+          description: OData 篩選運算式，用來描述要傳回的度量資訊的子集。 可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。 支援的運算子是相等於
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.MetricListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listUsages_2'
+    name: 'listUsages(string, string, string, DatabaseListUsagesOptionalParams, ServiceCallback<UsagesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, options: DatabaseListUsagesOptionalParams, callback: ServiceCallback<UsagesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: options
+          type:
+            - '@azure/arm-cosmosdb.DatabaseListUsagesOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.UsagesResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.DatabaseListUsagesResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listUsages'
+    name: 'listUsages(string, string, string, Models.DatabaseListUsagesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 擷取給定資料庫的使用方式 （最新的資料）。
+    syntax:
+      content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, options?: Models.DatabaseListUsagesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: options
+          type:
+            - Models.DatabaseListUsagesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabaseListUsagesResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listUsages_1'
+    name: 'listUsages(string, string, string, ServiceCallback<UsagesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, callback: ServiceCallback<UsagesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: databaseRid
+          type:
+            - string
+          description: Rid 的 cosmos DB 資料庫。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.UsagesResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.DatabaseListUsagesResponse>
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+    name: CosmosDBManagementClientContext
+    spec.typeScript:
+      - name: CosmosDBManagementClientContext
+        fullName: CosmosDBManagementClientContext
+        uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.MetricDefinitionsListResult>
+    name: MetricDefinitionsListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: MetricDefinitionsListResult
+        fullName: MetricDefinitionsListResult
+        uid: '@azure/arm-cosmosdb.MetricDefinitionsListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.MetricListResult>
+    name: MetricListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: MetricListResult
+        fullName: MetricListResult
+        uid: '@azure/arm-cosmosdb.MetricListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.UsagesResult>
+    name: UsagesResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: UsagesResult
+        fullName: UsagesResult
+        uid: '@azure/arm-cosmosdb.UsagesResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-cosmosdb.DatabaseListUsagesOptionalParams'
+    name: DatabaseListUsagesOptionalParams
+    spec.typeScript:
+      - name: DatabaseListUsagesOptionalParams
+        fullName: DatabaseListUsagesOptionalParams
+        uid: '@azure/arm-cosmosdb.DatabaseListUsagesOptionalParams'

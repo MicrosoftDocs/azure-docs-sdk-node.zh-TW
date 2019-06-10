@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    fullName: SessionReceiverOptions
+    children:
+      - '@azure/service-bus.SessionReceiverOptions.maxSessionAutoRenewLockDurationInSeconds'
+      - '@azure/service-bus.SessionReceiverOptions.sessionId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述傳遞給選項`createReceiver`方法時使用佇列/訂用帳戶已啟用的工作階段。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiverOptions.maxSessionAutoRenewLockDurationInSeconds'
+    name: maxSessionAutoRenewLockDurationInSeconds
+    fullName: maxSessionAutoRenewLockDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最大持續期限，以秒為單位，直到工作階段上的鎖定，這會由 sdk 自動更新。
+      - **預設值**:`300`秒 （5 分鐘）。
+      - **若要停用 autolock 續約**，將此設為`0`。
+    optional: true
+    syntax:
+      content: 'maxSessionAutoRenewLockDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiverOptions.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 需要接收訊息的工作階段的識別碼。 如果提供 null 或未定義，則服務匯流排會從可用的工作階段選擇隨機工作階段。
+    syntax:
+      content: 'sessionId: string | undefined'
+      return:
+        type:
+          - string | undefined
+    package: '@azure/service-bus'
