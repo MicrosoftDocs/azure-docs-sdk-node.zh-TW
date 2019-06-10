@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    fullName: ReceiveMode
+    children:
+      - '@azure/service-bus.ReceiveMode.peekLock'
+      - '@azure/service-bus.ReceiveMode.receiveAndDelete'
+    langs:
+      - typeScript
+    type: enum
+    summary: <span data-ttu-id="89902-101">接收到訊息模式。</span><span class="sxs-lookup"><span data-stu-id="89902-101">The mode in which messages should be received.</span></span> <span data-ttu-id="89902-102">2 種模式都`peekLock`和`receiveAndDelete`。</span><span class="sxs-lookup"><span data-stu-id="89902-102">The 2 modes are `peekLock` and `receiveAndDelete`.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceiveMode.peekLock'
+    name: peekLock
+    children: []
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="89902-103">一旦收到訊息時，在此模式中，則接收者會有在訊息上鎖定特定的持續時間。</span><span class="sxs-lookup"><span data-stu-id="89902-103">Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="89902-104">如果訊息不會安置此時，放入下一個擷取的服務匯流排接收作業。</span><span class="sxs-lookup"><span data-stu-id="89902-104">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>'
+    type: field
+    numericValue: 1
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceiveMode.receiveAndDelete'
+    name: receiveAndDelete
+    children: []
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="89902-105">從服務匯流排會自動移除在此模式中接收的訊息。</span><span class="sxs-lookup"><span data-stu-id="89902-105">Messages received in this mode get automatically removed from Service Bus.</span></span>
+    type: field
+    numericValue: 2
+    package: '@azure/service-bus'

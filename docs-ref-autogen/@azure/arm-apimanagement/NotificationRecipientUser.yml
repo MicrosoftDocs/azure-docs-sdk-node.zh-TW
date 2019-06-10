@@ -1,0 +1,491 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser'
+    name: NotificationRecipientUser
+    fullName: NotificationRecipientUser
+    children:
+      - '@azure/arm-apimanagement.NotificationRecipientUser.checkEntityExists'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.checkEntityExists_2'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.checkEntityExists_1'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.createOrUpdate'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.createOrUpdate_2'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.createOrUpdate_1'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.deleteMethod'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.deleteMethod_2'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.deleteMethod_1'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.listByNotification'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.listByNotification_2'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.listByNotification_1'
+      - '@azure/arm-apimanagement.NotificationRecipientUser.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="e92b3-101">此類別代表 NotificationRecipientUser。</span><span class="sxs-lookup"><span data-stu-id="e92b3-101">Class representing a NotificationRecipientUser.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.checkEntityExists'
+    name: 'checkEntityExists(string, string, Models.NotificationName, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e92b3-102">判斷通知收件者使用者已訂閱通知。</span><span class="sxs-lookup"><span data-stu-id="e92b3-102">Determine if the Notification Recipient User is subscribed to the notification.</span></span>
+    syntax:
+      content: 'function checkEntityExists(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-103">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-103">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-104">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-104">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-105">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-105">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-106">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-106">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-107">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-107">User identifier.</span></span> <span data-ttu-id="e92b3-108">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-108">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserCheckEntityExistsResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.checkEntityExists_2'
+    name: 'checkEntityExists(string, string, Models.NotificationName, string, RequestOptionsBase, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkEntityExists(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, options: RequestOptionsBase, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-109">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-109">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-110">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-110">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-111">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-111">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-112">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-112">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-113">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-113">User identifier.</span></span> <span data-ttu-id="e92b3-114">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-114">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e92b3-115">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e92b3-115">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            <span data-ttu-id="e92b3-116">回呼</span><span class="sxs-lookup"><span data-stu-id="e92b3-116">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserCheckEntityExistsResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.checkEntityExists_1'
+    name: 'checkEntityExists(string, string, Models.NotificationName, string, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkEntityExists(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-117">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-117">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-118">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-118">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-119">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-119">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-120">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-120">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-121">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-121">User identifier.</span></span> <span data-ttu-id="e92b3-122">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-122">Must be unique in the current API Management service instance.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            <span data-ttu-id="e92b3-123">回呼</span><span class="sxs-lookup"><span data-stu-id="e92b3-123">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserCheckEntityExistsResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.createOrUpdate'
+    name: 'createOrUpdate(string, string, Models.NotificationName, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e92b3-124">將通知的收件者清單中的 API 管理使用者。</span><span class="sxs-lookup"><span data-stu-id="e92b3-124">Adds the API Management User to the list of Recipients for the Notification.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-125">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-125">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-126">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-126">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-127">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-127">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-128">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-128">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-129">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-129">User identifier.</span></span> <span data-ttu-id="e92b3-130">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-130">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, Models.NotificationName, string, RequestOptionsBase, ServiceCallback<RecipientUserContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, options: RequestOptionsBase, callback: ServiceCallback<RecipientUserContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-131">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-131">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-132">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-132">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-133">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-133">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-134">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-134">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-135">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-135">User identifier.</span></span> <span data-ttu-id="e92b3-136">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-136">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e92b3-137">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e92b3-137">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.RecipientUserContract>
+          description: |
+            <span data-ttu-id="e92b3-138">回呼</span><span class="sxs-lookup"><span data-stu-id="e92b3-138">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, Models.NotificationName, string, ServiceCallback<RecipientUserContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, callback: ServiceCallback<RecipientUserContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-139">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-139">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-140">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-140">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-141">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-141">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-142">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-142">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-143">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-143">User identifier.</span></span> <span data-ttu-id="e92b3-144">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-144">Must be unique in the current API Management service instance.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.RecipientUserContract>
+          description: |
+            <span data-ttu-id="e92b3-145">回呼</span><span class="sxs-lookup"><span data-stu-id="e92b3-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.deleteMethod'
+    name: 'deleteMethod(string, string, Models.NotificationName, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="e92b3-146">從 [通知] 清單中移除 API 管理使用者。</span><span class="sxs-lookup"><span data-stu-id="e92b3-146">Removes the API Management user from the list of Notification.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-147">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-147">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-148">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-148">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-149">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-149">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-150">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-150">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-151">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-151">User identifier.</span></span> <span data-ttu-id="e92b3-152">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-152">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.deleteMethod_2'
+    name: 'deleteMethod(string, string, Models.NotificationName, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-153">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-153">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-154">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-154">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-155">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-155">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-156">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-156">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-157">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-157">User identifier.</span></span> <span data-ttu-id="e92b3-158">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-158">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e92b3-159">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e92b3-159">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="e92b3-160">回呼</span><span class="sxs-lookup"><span data-stu-id="e92b3-160">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.deleteMethod_1'
+    name: 'deleteMethod(string, string, Models.NotificationName, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, userId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-161">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-161">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-162">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-162">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-163">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-163">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-164">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-164">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: userId
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-165">使用者識別碼。</span><span class="sxs-lookup"><span data-stu-id="e92b3-165">User identifier.</span></span> <span data-ttu-id="e92b3-166">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e92b3-166">Must be unique in the current API Management service instance.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="e92b3-167">回呼</span><span class="sxs-lookup"><span data-stu-id="e92b3-167">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.listByNotification'
+    name: 'listByNotification(string, string, Models.NotificationName, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e92b3-168">取得通知訂閱的通知收件者使用者清單。</span><span class="sxs-lookup"><span data-stu-id="e92b3-168">Gets the list of the Notification Recipient User subscribed to the notification.</span></span>
+    syntax:
+      content: 'function listByNotification(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-169">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-169">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-170">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-170">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-171">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-171">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-172">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-172">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserListByNotificationResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.listByNotification_2'
+    name: 'listByNotification(string, string, Models.NotificationName, RequestOptionsBase, ServiceCallback<RecipientUserCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByNotification(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, options: RequestOptionsBase, callback: ServiceCallback<RecipientUserCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-173">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-173">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-174">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-174">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-175">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-175">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-176">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-176">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e92b3-177">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e92b3-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.RecipientUserCollection>
+          description: |
+            <span data-ttu-id="e92b3-178">回呼</span><span class="sxs-lookup"><span data-stu-id="e92b3-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserListByNotificationResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.listByNotification_1'
+    name: 'listByNotification(string, string, Models.NotificationName, ServiceCallback<RecipientUserCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByNotification(resourceGroupName: string, serviceName: string, notificationName: Models.NotificationName, callback: ServiceCallback<RecipientUserCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-179">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-179">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="e92b3-180">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="e92b3-180">The name of the API Management service.</span></span>
+        - id: notificationName
+          type:
+            - Models.NotificationName
+          description: '<span data-ttu-id="e92b3-181">通知名稱識別項。</span><span class="sxs-lookup"><span data-stu-id="e92b3-181">Notification Name Identifier.</span></span> <span data-ttu-id="e92b3-182">可能的值包括：''RequestPublisherNotificationMessage''、 ''PurchasePublisherNotificationMessage''、 ''NewApplicationNotificationMessage''、 密件副本''、 ''NewIssuePublisherNotificationMessage''、 ''AccountClosedPublisher''，''QuotaLimitApproachingPublisherNotificationMessage''</span><span class="sxs-lookup"><span data-stu-id="e92b3-182">Possible values include: ''RequestPublisherNotificationMessage'', ''PurchasePublisherNotificationMessage'', ''NewApplicationNotificationMessage'', ''BCC'', ''NewIssuePublisherNotificationMessage'', ''AccountClosedPublisher'', ''QuotaLimitApproachingPublisherNotificationMessage''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.RecipientUserCollection>
+          description: |
+            <span data-ttu-id="e92b3-183">回呼</span><span class="sxs-lookup"><span data-stu-id="e92b3-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.NotificationRecipientUserListByNotificationResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.NotificationRecipientUser.constructor'
+    name: NotificationRecipientUser(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e92b3-184">建立 NotificationRecipientUser。</span><span class="sxs-lookup"><span data-stu-id="e92b3-184">Create a NotificationRecipientUser.</span></span>
+    syntax:
+      content: 'new NotificationRecipientUser(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            <span data-ttu-id="e92b3-185">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="e92b3-185">Reference to the service client.</span></span>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-apimanagement.RecipientUserContract>
+    name: RecipientUserContract>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecipientUserContract
+        fullName: RecipientUserContract
+        uid: '@azure/arm-apimanagement.RecipientUserContract'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-apimanagement.RecipientUserCollection>
+    name: RecipientUserCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecipientUserCollection
+        fullName: RecipientUserCollection
+        uid: '@azure/arm-apimanagement.RecipientUserCollection'
+      - name: '>'
+        fullName: '>'

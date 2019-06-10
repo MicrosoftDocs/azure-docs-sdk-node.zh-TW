@@ -1,0 +1,222 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties'
+    name: AuthorizationServerContractBaseProperties
+    fullName: AuthorizationServerContractBaseProperties
+    children:
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.authorizationMethods'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.bearerTokenSendingMethods'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.clientAuthenticationMethod'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.clientSecret'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.defaultScope'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.description'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.resourceOwnerPassword'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.resourceOwnerUsername'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.supportState'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.tokenBodyParameters'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.tokenEndpoint'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="3f391-101">外部的 OAuth 授權伺服器的更新設定合約。</span><span class="sxs-lookup"><span data-stu-id="3f391-101">External OAuth authorization server Update settings contract.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.authorizationMethods'
+    name: authorizationMethods
+    fullName: authorizationMethods
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f391-102">授權端點所支援的 HTTP 動詞命令。</span><span class="sxs-lookup"><span data-stu-id="3f391-102">HTTP verbs supported by the authorization endpoint.</span></span> <span data-ttu-id="3f391-103">取得一律須存在。</span><span class="sxs-lookup"><span data-stu-id="3f391-103">GET must be always present.</span></span> <span data-ttu-id="3f391-104">POST 是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="3f391-104">POST is optional.</span></span>
+    optional: true
+    syntax:
+      content: 'authorizationMethods?: AuthorizationMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.AuthorizationMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.bearerTokenSendingMethods'
+    name: bearerTokenSendingMethods
+    fullName: bearerTokenSendingMethods
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f391-105">指定的機制來將存取權杖會傳遞至 API。</span><span class="sxs-lookup"><span data-stu-id="3f391-105">Specifies the mechanism by which access token is passed to the API.</span></span>
+    optional: true
+    syntax:
+      content: 'bearerTokenSendingMethods?: BearerTokenSendingMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.BearerTokenSendingMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.clientAuthenticationMethod'
+    name: clientAuthenticationMethod
+    fullName: clientAuthenticationMethod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3f391-106">此授權伺服器的權杖端點所支援的驗證方法。</span><span class="sxs-lookup"><span data-stu-id="3f391-106">Method of authentication supported by the token endpoint of this authorization server.</span></span>
+      <span data-ttu-id="3f391-107">可能的值為 Basic 和/或本文。</span><span class="sxs-lookup"><span data-stu-id="3f391-107">Possible values are Basic and/or Body.</span></span> <span data-ttu-id="3f391-108">指定主體時，用戶端認證和其他參數會傳遞應用程式/x-www-表單-urlencoded 格式在要求主體中。</span><span class="sxs-lookup"><span data-stu-id="3f391-108">When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.</span></span>
+    optional: true
+    syntax:
+      content: 'clientAuthenticationMethod?: ClientAuthenticationMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ClientAuthenticationMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.clientSecret'
+    name: clientSecret
+    fullName: clientSecret
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f391-109">向此授權伺服器註冊用戶端或應用程式的密碼。</span><span class="sxs-lookup"><span data-stu-id="3f391-109">Client or app secret registered with this authorization server.</span></span>
+    optional: true
+    syntax:
+      content: 'clientSecret?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.defaultScope'
+    name: defaultScope
+    fullName: defaultScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f391-110">存取權杖範圍要依預設將要求。</span><span class="sxs-lookup"><span data-stu-id="3f391-110">Access token scope that is going to be requested by default.</span></span> <span data-ttu-id="3f391-111">可以覆寫在 API 層級。</span><span class="sxs-lookup"><span data-stu-id="3f391-111">Can be overridden at the API level.</span></span> <span data-ttu-id="3f391-112">應提供的字串，包含以逗號分隔值格式。</span><span class="sxs-lookup"><span data-stu-id="3f391-112">Should be provided in the form of a string containing space-delimited values.</span></span>
+    optional: true
+    syntax:
+      content: 'defaultScope?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f391-113">授權伺服器的描述。</span><span class="sxs-lookup"><span data-stu-id="3f391-113">Description of the authorization server.</span></span> <span data-ttu-id="3f391-114">可包含 HTML 格式標記。</span><span class="sxs-lookup"><span data-stu-id="3f391-114">Can contain HTML formatting tags.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.resourceOwnerPassword'
+    name: resourceOwnerPassword
+    fullName: resourceOwnerPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f391-115">您可以選擇性地指定此授權伺服器支援資源擁有者密碼授與類型時。</span><span class="sxs-lookup"><span data-stu-id="3f391-115">Can be optionally specified when resource owner password grant type is supported by this authorization server.</span></span> <span data-ttu-id="3f391-116">預設資源擁有者密碼。</span><span class="sxs-lookup"><span data-stu-id="3f391-116">Default resource owner password.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceOwnerPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.resourceOwnerUsername'
+    name: resourceOwnerUsername
+    fullName: resourceOwnerUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f391-117">您可以選擇性地指定此授權伺服器支援資源擁有者密碼授與類型時。</span><span class="sxs-lookup"><span data-stu-id="3f391-117">Can be optionally specified when resource owner password grant type is supported by this authorization server.</span></span> <span data-ttu-id="3f391-118">預設資源擁有者使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="3f391-118">Default resource owner username.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceOwnerUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.supportState'
+    name: supportState
+    fullName: supportState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3f391-119">如果為 true，則授權伺服器會包含來自授權要求的狀態參數，其回應。</span><span class="sxs-lookup"><span data-stu-id="3f391-119">If true, authorization server will include state parameter from the authorization request to its response.</span></span> <span data-ttu-id="3f391-120">用戶端可以使用 state 參數，來提高通訊協定安全性。</span><span class="sxs-lookup"><span data-stu-id="3f391-120">Client may use state parameter to raise protocol security.</span></span>'
+    optional: true
+    syntax:
+      content: 'supportState?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.tokenBodyParameters'
+    name: tokenBodyParameters
+    fullName: tokenBodyParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3f391-121">表示為 JSON 的陣列，也就是物件的名稱和值的字串屬性，此授權伺服器的權杖端點所需的其他參數 {"name":"名稱值"、"value":"value"}。</span><span class="sxs-lookup"><span data-stu-id="3f391-121">Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.</span></span>'
+    optional: true
+    syntax:
+      content: 'tokenBodyParameters?: TokenBodyParameterContract[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.TokenBodyParameterContract[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.tokenEndpoint'
+    name: tokenEndpoint
+    fullName: tokenEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3f391-122">OAuth 權杖端點。</span><span class="sxs-lookup"><span data-stu-id="3f391-122">OAuth token endpoint.</span></span> <span data-ttu-id="3f391-123">包含所參考之實體的絕對 URI。</span><span class="sxs-lookup"><span data-stu-id="3f391-123">Contains absolute URI to entity being referenced.</span></span>
+    optional: true
+    syntax:
+      content: 'tokenEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.AuthorizationMethod[]'
+    name: 'AuthorizationMethod[]'
+    spec.typeScript:
+      - name: AuthorizationMethod
+        fullName: AuthorizationMethod
+        uid: '@azure/arm-apimanagement.AuthorizationMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.BearerTokenSendingMethod[]'
+    name: 'BearerTokenSendingMethod[]'
+    spec.typeScript:
+      - name: BearerTokenSendingMethod
+        fullName: BearerTokenSendingMethod
+        uid: '@azure/arm-apimanagement.BearerTokenSendingMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.ClientAuthenticationMethod[]'
+    name: 'ClientAuthenticationMethod[]'
+    spec.typeScript:
+      - name: ClientAuthenticationMethod
+        fullName: ClientAuthenticationMethod
+        uid: '@azure/arm-apimanagement.ClientAuthenticationMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.TokenBodyParameterContract[]'
+    name: 'TokenBodyParameterContract[]'
+    spec.typeScript:
+      - name: TokenBodyParameterContract
+        fullName: TokenBodyParameterContract
+        uid: '@azure/arm-apimanagement.TokenBodyParameterContract'
+      - name: '[]'
+        fullName: '[]'

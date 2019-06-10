@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.DiskUpdate'
+    name: DiskUpdate
+    fullName: DiskUpdate
+    children:
+      - '@azure/arm-compute.DiskUpdate.diskIOPSReadWrite'
+      - '@azure/arm-compute.DiskUpdate.diskMBpsReadWrite'
+      - '@azure/arm-compute.DiskUpdate.diskSizeGB'
+      - '@azure/arm-compute.DiskUpdate.encryptionSettingsCollection'
+      - '@azure/arm-compute.DiskUpdate.osType'
+      - '@azure/arm-compute.DiskUpdate.sku'
+      - '@azure/arm-compute.DiskUpdate.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ed812-101">磁碟更新資源。</span><span class="sxs-lookup"><span data-stu-id="ed812-101">Disk update resource.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskIOPSReadWrite'
+    name: diskIOPSReadWrite
+    fullName: diskIOPSReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed812-102">此磁碟; 允許的 IOPS 數目只可設定 UltraSSD 磁碟。</span><span class="sxs-lookup"><span data-stu-id="ed812-102">The number of IOPS allowed for this disk; only settable for UltraSSD disks.</span></span> <span data-ttu-id="ed812-103">一項作業可以傳輸 4 k 和 256 k 位元組之間。</span><span class="sxs-lookup"><span data-stu-id="ed812-103">One operation can transfer between 4k and 256k bytes.</span></span>
+    optional: true
+    syntax:
+      content: 'diskIOPSReadWrite?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskMBpsReadWrite'
+    name: diskMBpsReadWrite
+    fullName: diskMBpsReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ed812-104">此磁碟; 允許的頻寬只可設定 UltraSSD 磁碟。</span><span class="sxs-lookup"><span data-stu-id="ed812-104">The bandwidth allowed for this disk; only settable for UltraSSD disks.</span></span> <span data-ttu-id="ed812-105">MBps 表示數以百萬計的每秒的位元組-MB 以下使用的 10 的次方的 ISO 標記法。</span><span class="sxs-lookup"><span data-stu-id="ed812-105">MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskMBpsReadWrite?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ed812-106">如果 creationData.createOption 是空的此為必要欄位，並指出若要建立 VHD 的大小。</span><span class="sxs-lookup"><span data-stu-id="ed812-106">If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create.</span></span> <span data-ttu-id="ed812-107">如果此欄位進行更新或使用其他選項建立，它會指出一次調整大小。</span><span class="sxs-lookup"><span data-stu-id="ed812-107">If this field is present for updates or creation with other options, it indicates a resize.</span></span> <span data-ttu-id="ed812-108">如果磁碟未附加至執行中的 VM，且只能增加磁碟的大小，才允許調整大小。</span><span class="sxs-lookup"><span data-stu-id="ed812-108">Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk''s size.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ed812-109">使用的加密設定集合是 Azure 磁碟加密，可以包含每個磁碟或快照集的多個加密設定。</span><span class="sxs-lookup"><span data-stu-id="ed812-109">Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ed812-110">作業系統類型。</span><span class="sxs-lookup"><span data-stu-id="ed812-110">the Operating System type.</span></span> <span data-ttu-id="ed812-111">可能的值包括：''Windows'', ''Linux''</span><span class="sxs-lookup"><span data-stu-id="ed812-111">Possible values include: ''Windows'', ''Linux''</span></span>'
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: DiskSku'
+      return:
+        type:
+          - '@azure/arm-compute.DiskSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed812-112">資源標籤</span><span class="sxs-lookup"><span data-stu-id="ed812-112">Resource tags</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.DiskSku'
+    name: DiskSku
+    spec.typeScript:
+      - name: DiskSku
+        fullName: DiskSku
+        uid: '@azure/arm-compute.DiskSku'
