@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFile_1'
+    name: withAuthFile(LoginWithAuthFileOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      使用這個方法之前請安裝從 az cli https://github.com/Azure/azure-cli/releases。 然後執行`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`。
+      如果您想要建立預存程序針對不同的雲端/環境則請執行：
+      1. az 雲端清單
+      2. az 雲端設定 – n <name of the environment>
+      3. az ad sp 建立-針對-rbac-sdk 验证 > auth.json / / 建立 sp 與祕密**或**
+      3. az ad sp 建立-針對-rbac-建立憑證-sdk 驗證 > auth.json / / sp 使用憑證來建立服務主體已經建立時再登入使用服務主體的資訊：
+      4. az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId>
+      5. az 帳戶顯示-sdk 驗證 > auth.json 驗證使用驗證檔案中提供的服務主體資訊。 這個方法會從驗證檔案設定 subscriptionId 來提供環境變數的 options 參數或預設值"AZURE_SUBSCRIPTION_ID 」 中的使用者。
+    syntax:
+      content: 'function withAuthFile(options: LoginWithAuthFileOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+    name: LoginWithAuthFileOptions
+    spec.typeScript:
+      - name: LoginWithAuthFileOptions
+        fullName: LoginWithAuthFileOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    name: TokenCredentialsBase>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TokenCredentialsBase
+        fullName: TokenCredentialsBase
+        uid: '@azure/ms-rest-nodeauth.TokenCredentialsBase'
+      - name: '>'
+        fullName: '>'
