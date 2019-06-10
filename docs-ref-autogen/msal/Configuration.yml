@@ -7,7 +7,13 @@ items:
     langs:
       - typeScript
     type: type alias
-    summary: 組態物件
+    summary: |
+      若要設定 MSAL 及初始化 UserAgentApplication 使用組態物件。
+      此物件可讓您設定的 MSAL 功能的重要元素：
+      - 驗證： 這是您在其中設定驗證項目，例如 clientID，用於驗證 Microsoft 身分識別平台的授權單位
+      - 快取： 這是您用來設定快取位置，以及是否要將快取儲存在 cookie
+      - system： 這是您可以在其中設定記錄器，框架逾時等。
+      - framework： 這是您可以在其中設定 angular 的執行模式。 敬請期待此處推出。
     syntax:
-      content: 'type Configuration = { auth:AuthOptions, cache:CacheOptions, framework:FrameworkOptions, system:SystemOptions }'
+      content: 'type Configuration = { auth: AuthOptions, cache: CacheOptions, framework: FrameworkOptions, system: SystemOptions }'
     package: msal
