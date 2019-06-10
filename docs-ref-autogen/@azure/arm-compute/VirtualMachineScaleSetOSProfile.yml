@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile'
+    name: VirtualMachineScaleSetOSProfile
+    fullName: VirtualMachineScaleSetOSProfile
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminPassword'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminUsername'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.computerNamePrefix'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.customData'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.linuxConfiguration'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.secrets'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述虛擬機器擴展集 OS 設定檔。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminPassword'
+    name: adminPassword
+    fullName: adminPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定系統管理員帳戶的密碼。 <br><br> **最小長度 (Windows):** 8 個字元 <br><br> **最小長度 (Linux):** 6 個字元 <br><br> **最大長度 (Windows):** 123 個字元 <br><br> **最大長度 (Linux):** 72 個字元 <br><br>
+      **複雜性需求：** 需符合下列 4 中的 3 條件 <br> 具有較低的字元 <br>具有大小字元 <br> 有數字 <br> 具有特殊字元 (Regex match [\W_]) <br><br> **不允許的值：** 」abc@123"，"P@$$w0rd"，"P@ssw0rd"，"P@ssword123"，"Pa$ $word"，"pass@word1」，「 密碼 ！ 」、 「 Password1"、"Password22"、"iloveyou ！ 」 <br><br> 重設密碼，請參閱[如何重設遠端桌面服務或其在 Windows VM 的登入密碼](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> 重設根密碼，請參閱[管理使用者、 SSH，及檢查或修復 Azure Linux Vm 上使用 VMAccess 擴充功能的磁碟](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)
+    optional: true
+    syntax:
+      content: 'adminPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminUsername'
+    name: adminUsername
+    fullName: adminUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定系統管理員帳戶的名稱。 <br><br> **僅限 Windows 的限制：** 結尾不能 」。 」 <br><br> **不允許的值：** "administrator"、"admin"、"user"、"user1 身分"、"test"、"user2"、"test1"、"user3"、"admin1"，"1"、"123"，"a"、"actuser 」、 「 adm"、"admin2"、"aspnet 」、 「 備份 」、 「 主控台 」、"david"，"guest"、"john"、 「 擁有者 」、 「 根 」、 「 伺服器 」，「sql"、 「 支援 」、 「 support_388945a0"、"sys"、"test2"、"test3"、"user4"、"user5 」。 <br><br> **最小長度 (Linux):** 1 個字元 <br><br> **最大長度 (Linux):** 64 個字元 <br><br> **最大長度 (Windows):** 20 個字元  <br><br><li> 根存取 Linux VM，請參閱[在 Azure 中的 Linux 虛擬機器上使用根權限](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li>
+      如需內建的系統使用者不應在此欄位中的 Linux 上的清單，請參閱[選取適用於在 Azure 上 Linux 的使用者名稱](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+    optional: true
+    syntax:
+      content: 'adminUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.computerNamePrefix'
+    name: computerNamePrefix
+    fullName: computerNamePrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定電腦名稱前置詞的所有虛擬機器擴展集內。 電腦名稱前置詞必須是 1 到 15 個字元。
+    optional: true
+    syntax:
+      content: 'computerNamePrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.customData'
+    name: customData
+    fullName: customData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定自訂資料的 base-64 編碼的的字串。 Base-64 編碼的字串解碼成二進位陣列而儲存為虛擬機器上的檔案。 二進位陣列的長度上限是 65535 個位元組。 <br><br> 使用 cloud-init 為您的 VM，請參閱[使用 cloud-init 自訂 Linux VM 建立期間](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)'
+    optional: true
+    syntax:
+      content: 'customData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.linuxConfiguration'
+    name: linuxConfiguration
+    fullName: linuxConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定虛擬機器上的 Linux 作業系統設定。 <br><br>如需支援的 Linux 散發套件的清單，請參閱[Linux on azure 背書散發套件](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> 如需執行非背書散發套件，請參閱[非背書散發套件的資訊](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)。
+    optional: true
+    syntax:
+      content: 'linuxConfiguration?: LinuxConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.LinuxConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.secrets'
+    name: secrets
+    fullName: secrets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定應該安裝到虛擬機器擴展集內的憑證集。
+    optional: true
+    syntax:
+      content: 'secrets?: VaultSecretGroup[]'
+      return:
+        type:
+          - '@azure/arm-compute.VaultSecretGroup[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定虛擬機器上的 Windows 作業系統設定。
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WindowsConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    spec.typeScript:
+      - name: LinuxConfiguration
+        fullName: LinuxConfiguration
+        uid: '@azure/arm-compute.LinuxConfiguration'
+  - uid: '@azure/arm-compute.VaultSecretGroup[]'
+    name: 'VaultSecretGroup[]'
+    spec.typeScript:
+      - name: VaultSecretGroup
+        fullName: VaultSecretGroup
+        uid: '@azure/arm-compute.VaultSecretGroup'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/arm-compute.WindowsConfiguration'
