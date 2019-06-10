@@ -1,0 +1,953 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.BatchAccountOperations'
+    name: BatchAccountOperations
+    fullName: BatchAccountOperations
+    children:
+      - '@azure/arm-batch.BatchAccountOperations.constructor'
+      - '@azure/arm-batch.BatchAccountOperations.beginCreate'
+      - '@azure/arm-batch.BatchAccountOperations.beginDeleteMethod'
+      - '@azure/arm-batch.BatchAccountOperations.create'
+      - '@azure/arm-batch.BatchAccountOperations.deleteMethod'
+      - '@azure/arm-batch.BatchAccountOperations.get'
+      - '@azure/arm-batch.BatchAccountOperations.get_2'
+      - '@azure/arm-batch.BatchAccountOperations.get_1'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys_2'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys_1'
+      - '@azure/arm-batch.BatchAccountOperations.list'
+      - '@azure/arm-batch.BatchAccountOperations.list_2'
+      - '@azure/arm-batch.BatchAccountOperations.list_1'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_2'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_1'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_2'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_1'
+      - '@azure/arm-batch.BatchAccountOperations.listNext'
+      - '@azure/arm-batch.BatchAccountOperations.listNext_2'
+      - '@azure/arm-batch.BatchAccountOperations.listNext_1'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey_2'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey_1'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_2'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_1'
+      - '@azure/arm-batch.BatchAccountOperations.update'
+      - '@azure/arm-batch.BatchAccountOperations.update_2'
+      - '@azure/arm-batch.BatchAccountOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表 BatchAccountOperations。
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.constructor'
+    name: BatchAccountOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立 BatchAccountOperations。
+    syntax:
+      content: 'new BatchAccountOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.beginCreate'
+    name: 'beginCreate(string, string, BatchAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 使用指定的參數建立新的 Batch 帳戶。 現有的帳戶無法使用此 API 更新，而且應該改為更新 Batch 帳戶 API 的更新。
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: '必須是唯一的區域內的 Batch 帳戶名稱。 Batch 帳戶名稱必須是長度為 3 到 24 個字元之間，而且只能使用數字和小寫字母。 這個名稱用來存取 Batch 服務帳戶建立所在的區域中的 DNS 名稱的一部分。 例如： http://accountname.region.batch.azure.com/ 。'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountCreateParameters'
+          description: 帳戶建立的的其他參數。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除指定的 Batch 帳戶。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.create'
+    name: 'create(string, string, BatchAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 使用指定的參數建立新的 Batch 帳戶。 現有的帳戶無法使用此 API 更新，而且應該改為更新 Batch 帳戶 API 的更新。
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: '必須是唯一的區域內的 Batch 帳戶名稱。 Batch 帳戶名稱必須是長度為 3 到 24 個字元之間，而且只能使用數字和小寫字母。 這個名稱用來存取 Batch 服務帳戶建立所在的區域中的 DNS 名稱的一部分。 例如： http://accountname.region.batch.azure.com/ 。'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountCreateParameters'
+          description: 帳戶建立的的其他參數。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除指定的 Batch 帳戶。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得指定的 Batch 帳戶的相關資訊。
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get_1'
+    name: 'get(string, string, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys'
+    name: 'getKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 這項作業只適用於以 「 BatchService 」 的 poolAllocationMode 所建立的 Batch 帳戶。 建立 Batch 帳戶時使用的 「 UserSubscription 」 poolAllocationMode，如果用戶端無法使用存取金鑰進行驗證，而必須改為使用 Azure Active Directory。 在此情況下，取得索引鍵將會失敗。
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys_2'
+    name: 'getKeys(string, string, RequestOptionsBase, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys_1'
+    name: 'getKeys(string, string, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得訂用帳戶相關聯的批次帳戶的相關資訊。
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list_1'
+    name: list(ServiceCallback<BatchAccountListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得與指定的資源群組相關聯的批次帳戶的相關資訊。
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得與指定的資源群組相關聯的批次帳戶的相關資訊。
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得訂用帳戶相關聯的批次帳戶的相關資訊。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext_1'
+    name: 'listNext(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 重新產生 Batch 帳戶的指定的帳戶金鑰。
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: 若要重新產生帳戶金鑰的型別。 可能的值包括：' Primary'，「 次要 」
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey_2'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, RequestOptionsBase, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: 若要重新產生帳戶金鑰的型別。 可能的值包括：' Primary'，「 次要 」
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey_1'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: 若要重新產生帳戶金鑰的型別。 可能的值包括：' Primary'，「 次要 」
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys'
+    name: 'synchronizeAutoStorageKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 同步處理設定為指定的 Batch 帳戶的自動儲存體帳戶的存取金鑰。
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_2'
+    name: 'synchronizeAutoStorageKeys(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_1'
+    name: 'synchronizeAutoStorageKeys(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update'
+    name: 'update(string, string, BatchAccountUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新現有的 Batch 帳戶的屬性。
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: 帳戶更新的其他參數。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update_2'
+    name: 'update(string, string, BatchAccountUpdateParameters, RequestOptionsBase, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: 帳戶更新的其他參數。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update_1'
+    name: 'update(string, string, BatchAccountUpdateParameters, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: 帳戶更新的其他參數。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.BatchAccountCreateParameters'
+    name: BatchAccountCreateParameters
+    spec.typeScript:
+      - name: BatchAccountCreateParameters
+        fullName: BatchAccountCreateParameters
+        uid: '@azure/arm-batch.BatchAccountCreateParameters'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccount>
+    name: BatchAccount>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccount
+        fullName: BatchAccount
+        uid: '@azure/arm-batch.BatchAccount'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+    name: BatchAccountKeys>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccountKeys
+        fullName: BatchAccountKeys
+        uid: '@azure/arm-batch.BatchAccountKeys'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+    name: BatchAccountListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccountListResult
+        fullName: BatchAccountListResult
+        uid: '@azure/arm-batch.BatchAccountListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.BatchAccountUpdateParameters'
+    name: BatchAccountUpdateParameters
+    spec.typeScript:
+      - name: BatchAccountUpdateParameters
+        fullName: BatchAccountUpdateParameters
+        uid: '@azure/arm-batch.BatchAccountUpdateParameters'

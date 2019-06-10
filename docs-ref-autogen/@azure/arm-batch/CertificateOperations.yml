@@ -1,0 +1,685 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.CertificateOperations'
+    name: CertificateOperations
+    fullName: CertificateOperations
+    children:
+      - '@azure/arm-batch.CertificateOperations.beginCreate'
+      - '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+      - '@azure/arm-batch.CertificateOperations.constructor'
+      - '@azure/arm-batch.CertificateOperations.create'
+      - '@azure/arm-batch.CertificateOperations.deleteMethod'
+      - '@azure/arm-batch.CertificateOperations.get'
+      - '@azure/arm-batch.CertificateOperations.get_2'
+      - '@azure/arm-batch.CertificateOperations.get_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+      - '@azure/arm-batch.CertificateOperations.update_2'
+      - '@azure/arm-batch.CertificateOperations.update'
+      - '@azure/arm-batch.CertificateOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表 CertificateOperations。
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginCreate'
+    name: 'beginCreate(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立新的憑證，在指定的帳戶。
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateBeginCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: 建立憑證的其他參數。
+        - id: options
+          type:
+            - Models.CertificateBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除指定的憑證。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion'
+    name: 'cancelDeletion(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 如果您嘗試刪除正由集區的憑證，或計算節點時，憑證的狀態變更為刪除失敗。 如果您決定您想要繼續使用憑證，您可以使用這項作業，若要將憑證的狀態設回 作用中。 如果您想要刪除憑證，您不需要在刪除失敗之後執行這項作業。 您必須確定任何資源，不使用憑證，然後您可以再試一次刪除憑證。
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+    name: 'cancelDeletion(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+    name: 'cancelDeletion(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.constructor'
+    name: CertificateOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立 CertificateOperations。
+    syntax:
+      content: 'new CertificateOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.create'
+    name: 'create(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 建立新的憑證，在指定的帳戶。
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: 建立憑證的其他參數。
+        - id: options
+          type:
+            - Models.CertificateCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除指定的憑證。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得指定的憑證相關資訊。
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+    name: 'listByBatchAccount(string, string, CertificateListByBatchAccountOptionalParams, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options: CertificateListByBatchAccountOptionalParams, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+    name: 'listByBatchAccount(string, string, Models.CertificateListByBatchAccountOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有指定的帳戶中的憑證。
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options?: Models.CertificateListByBatchAccountOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: options
+          type:
+            - Models.CertificateListByBatchAccountOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+    name: 'listByBatchAccount(string, string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+    name: 'listByBatchAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有指定的帳戶中的憑證。
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+    name: 'listByBatchAccountNext(string, RequestOptionsBase, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+    name: 'listByBatchAccountNext(string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_2'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, CertificateUpdateOptionalParams, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options: CertificateUpdateOptionalParams, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: 憑證更新的實體。
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateUpdateOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新現有憑證的屬性。
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: 憑證更新的實體。
+        - id: options
+          type:
+            - Models.CertificateUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_1'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含 Batch 帳戶的資源群組名稱。
+        - id: accountName
+          type:
+            - string
+          description: Batch 帳戶的名稱。
+        - id: certificateName
+          type:
+            - string
+          description: 憑證識別碼。 這必須由演算法和憑證指紋，兩者以破折號，分隔，而且必須符合要求中的憑證資料。 例如 SHA1 a3d1c5 時。
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: 憑證更新的實體。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+    name: CertificateCreateOrUpdateParameters
+    spec.typeScript:
+      - name: CertificateCreateOrUpdateParameters
+        fullName: CertificateCreateOrUpdateParameters
+        uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-batch.Certificate>
+    name: Certificate>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Certificate
+        fullName: Certificate
+        uid: '@azure/arm-batch.Certificate'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+    name: ListCertificatesResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListCertificatesResult
+        fullName: ListCertificatesResult
+        uid: '@azure/arm-batch.ListCertificatesResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+    name: CertificateListByBatchAccountOptionalParams
+    spec.typeScript:
+      - name: CertificateListByBatchAccountOptionalParams
+        fullName: CertificateListByBatchAccountOptionalParams
+        uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+  - uid: '@azure/arm-batch.CertificateUpdateOptionalParams'
+    name: CertificateUpdateOptionalParams
+    spec.typeScript:
+      - name: CertificateUpdateOptionalParams
+        fullName: CertificateUpdateOptionalParams
+        uid: '@azure/arm-batch.CertificateUpdateOptionalParams'

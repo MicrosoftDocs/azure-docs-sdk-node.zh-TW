@@ -8,12 +8,11 @@ items:
       - typeScript
     type: type alias
     summary: |+
-      應用程式/架構特定的環境支援 isAngular-旗標設定為判斷它是否 Angular 的架構。 用來廣播語彙基元。 TODO： 釐清此相依性核心。
-      unprotectedResources-陣列的 URI 是受保護的資源。 MSAL 會附加到具有下列 URI 的連出要求的語彙基元。 預設值為 'null'。
-      protectedResourceMap-這對應的資源給 MSAL 用於自動附加在 web API 呼叫中的存取權杖的範圍。
-      單一的存取權杖取得資源。 因此您可以將特定的資源路徑，如下所示: {"https://graph.microsoft.com/v1.0/me」，["user.read"]}，或做為資源的應用程式 URL: {"https://graph.microsoft.com/」，["user.read"，"mail.send"]}。
-      這是必要的 CORS 呼叫。
+      應用程式/架構特定的環境支援
+      - isAngular-旗標來判斷它是否 Angular 的 Framework 設定。 MSAL 會使用此廣播語彙基元。 敬請期待此處： 釐清此相依性核心。
+      - unprotectedResources-陣列的 URI 是受保護的資源。 MSAL 會附加到具有下列 URI 的連出要求的語彙基元。 預設值為 'null'。
+      - protectedResourceMap-這對應的資源給 MSAL 用於自動附加在 web API 呼叫中的存取權杖的範圍。單一的存取權杖取得資源。 因此您可以將特定的資源路徑，如下所示: {"https://graph.microsoft.com/v1.0/me」，["user.read"]}，或做為資源的應用程式 URL: {"https://graph.microsoft.com/」，["user.read"，"mail.send"]}。 這是必要的 CORS 呼叫。
 
     syntax:
-      content: 'type FrameworkOptions = { isAngular:boolean, protectedResourceMap:Map<string>, unprotectedResources:Array<string> }'
+      content: 'type FrameworkOptions = { isAngular: boolean, protectedResourceMap: Map<string>, unprotectedResources: Array<string> }'
     package: msal

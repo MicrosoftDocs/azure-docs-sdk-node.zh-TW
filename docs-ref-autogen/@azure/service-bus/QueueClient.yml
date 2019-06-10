@@ -1,0 +1,246 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.QueueClient'
+    name: QueueClient
+    fullName: QueueClient
+    children:
+      - '@azure/service-bus.QueueClient.close'
+      - '@azure/service-bus.QueueClient.createReceiver'
+      - '@azure/service-bus.QueueClient.createReceiver_1'
+      - '@azure/service-bus.QueueClient.createSender'
+      - '@azure/service-bus.QueueClient.entityPath'
+      - '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+      - '@azure/service-bus.QueueClient.id'
+      - '@azure/service-bus.QueueClient.peek'
+      - '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      描述可讓服務匯流排佇列與互動的用戶端。
+      使用`createQueueClient`ServiceBusClient 物件具現化 QueueClient 函式
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      此用戶端所建立的傳送者/接收者關閉 AMQP 連結。
+      一旦關閉，QueueClient 和其寄件者/接收者都不可以用於任何進一步的作業。
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver'
+    name: createReceiver(ReceiveMode)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      建立接收者從佇列中沒有已啟用工作階段中接收訊息。
+      - 如果已存在此 QueueClient 開啟的接收者，就會擲回錯誤。
+      - 會擲回`InvalidOperationError`佇列是否已啟用工作階段 (在此情況下，使用此方法會採用此方法的多載`sessionOptions`引數)
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |
+            列舉，指出已接收訊息的模式。 可能的值包括：
+            - `ReceiveMode.peekLock`:一旦收到訊息時，在此模式中，則接收者會有在訊息上鎖定特定的持續時間。 如果訊息不會安置此時，放入下一個擷取的服務匯流排接收作業。
+            - `ReceiveMode.receiveAndDelete`:從服務匯流排會自動移除在此模式中接收的訊息。
+      return:
+        type:
+          - '@azure/service-bus.Receiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver_1'
+    name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      接收工作階段中的訊息啟用佇列，請建立接收者。 指定任何工作階段識別碼時，會使用可用的工作階段之間的隨機工作階段。
+      - 如果開啟的接收者已存在指定的工作階段識別碼，則會擲回錯誤。
+      - 會擲回`SessionCannotBeLockedError`如果佇列並沒有已啟用工作階段 (在此情況下未通過`sessionOptions`引數) 或服務匯流排不能夠取得的鎖定 （在一段時間後的情況下請嘗試） 工作階段
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode, sessionOptions: SessionReceiverOptions)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |-
+            列舉，指出已接收訊息的模式。 可能的值包括：
+            - `ReceiveMode.peekLock`:一旦收到訊息時，在此模式中，則接收者會有在訊息上鎖定特定的持續時間。 如果訊息不會安置此時，放入下一個擷取的服務匯流排接收作業。
+            - `ReceiveMode.receiveAndDelete`:從服務匯流排會自動移除在此模式中接收的訊息。
+        - id: sessionOptions
+          type:
+            - '@azure/service-bus.SessionReceiverOptions'
+          description: |
+            提供工作階段接收者 sessionId 和的自動鎖定更新期間的選項。
+      return:
+        type:
+          - '@azure/service-bus.SessionReceiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      建立要用於傳送訊息、 排程於稍後傳送的訊息和取消這類排程的訊息的寄件者。
+      - 如果已開啟的寄件者已存在此 QueueClient，則會擲回錯誤。
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 為其建立此用戶端的服務匯流排佇列路徑。
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+    name: getDeadLetterQueuePath(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      傳回指定之名稱所代表的佇列之對應寄不出信件佇列名稱。
+      使用這`createQueueClient`函式`ServiceBusClient`從寄不出信件佇列接收訊息的執行個體。
+    syntax:
+      content: 'static function getDeadLetterQueuePath(queueName: string)'
+      parameters:
+        - id: queueName
+          type:
+            - string
+          description: |
+            正在擷取其寄不出信件互相對應的名稱的佇列名稱
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此用戶端的唯一識別碼。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      擷取作用中訊息的下一個批次 （包括但不是停止傳送訊息延遲）。
+      - 第一次呼叫`peek()`會擷取第一個作用中的訊息。 每個後續的呼叫會擷取後續的訊息。
+      - 不同於`received`訊息，`peeked`訊息是訊息的唯讀版本。
+      它不能是`Completed/Abandoned/Deferred/Deadlettered`。 無法更新它的鎖定。
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      查看所需的作用中訊息數目 （包括但不是停止傳送訊息延遲） 從指定的序號。
+      - 不同於`received`訊息，`peeked`訊息是訊息的唯讀版本。
+      它不能是`Completed/Abandoned/Deferred/Deadlettered`。 無法更新它的鎖定。
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: 從中讀取訊息的序號。
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    spec.typeScript:
+      - name: Receiver
+        fullName: Receiver
+        uid: '@azure/service-bus.Receiver'
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    spec.typeScript:
+      - name: SessionReceiverOptions
+        fullName: SessionReceiverOptions
+        uid: '@azure/service-bus.SessionReceiverOptions'
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    spec.typeScript:
+      - name: SessionReceiver
+        fullName: SessionReceiver
+        uid: '@azure/service-bus.SessionReceiver'
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
