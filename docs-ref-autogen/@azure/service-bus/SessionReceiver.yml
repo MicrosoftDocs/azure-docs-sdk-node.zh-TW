@@ -1,0 +1,400 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    fullName: SessionReceiver
+    children:
+      - '@azure/service-bus.SessionReceiver.close'
+      - '@azure/service-bus.SessionReceiver.getMessageIterator'
+      - '@azure/service-bus.SessionReceiver.getState'
+      - '@azure/service-bus.SessionReceiver.isClosed'
+      - '@azure/service-bus.SessionReceiver.isReceivingMessages'
+      - '@azure/service-bus.SessionReceiver.peek'
+      - '@azure/service-bus.SessionReceiver.peekBySequenceNumber'
+      - '@azure/service-bus.SessionReceiver.receiveDeferredMessage'
+      - '@azure/service-bus.SessionReceiver.receiveDeferredMessages'
+      - '@azure/service-bus.SessionReceiver.receiveMessages'
+      - '@azure/service-bus.SessionReceiver.receiveMode'
+      - '@azure/service-bus.SessionReceiver.registerMessageHandler'
+      - '@azure/service-bus.SessionReceiver.renewSessionLock'
+      - '@azure/service-bus.SessionReceiver.sessionId'
+      - '@azure/service-bus.SessionReceiver.sessionLockedUntilUtc'
+      - '@azure/service-bus.SessionReceiver.setState'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="caedc-101">SessionReceiver 類別可用來啟用工作階段中接收訊息的佇列或訂用帳戶中批次，或藉由註冊處理常式。</span><span class="sxs-lookup"><span data-stu-id="caedc-101">The SessionReceiver class can be used to receive messages from a session enabled Queue or Subscription in a batch or by registering handlers.</span></span>
+      <span data-ttu-id="caedc-102">使用`createReceiver`QueueClient 或 SubscriptionClient SessionReceiver 具現化的函式。</span><span class="sxs-lookup"><span data-stu-id="caedc-102">Use the `createReceiver` function on the QueueClient or SubscriptionClient to instantiate a SessionReceiver.</span></span>
+      <span data-ttu-id="caedc-103">SessionReceiver 類別是在基礎 AMQP 接收者連結的抽象概念。</span><span class="sxs-lookup"><span data-stu-id="caedc-103">The SessionReceiver class is an abstraction over the underlying AMQP receiver link.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="caedc-104">關閉基礎 AMQP 接收者連結。</span><span class="sxs-lookup"><span data-stu-id="caedc-104">Closes the underlying AMQP receiver link.</span></span>
+      <span data-ttu-id="caedc-105">一旦關閉，接收者不能用於任何進一步的作業。</span><span class="sxs-lookup"><span data-stu-id="caedc-105">Once closed, the receiver cannot be used for any further operations.</span></span>
+      <span data-ttu-id="caedc-106">使用`createReceiver`QueueClient 或 SubscriptionClient 來具現化新的接收器上的函式</span><span class="sxs-lookup"><span data-stu-id="caedc-106">Use the `createReceiver` function on the QueueClient or SubscriptionClient to instantiate a new Receiver</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.getMessageIterator'
+    name: getMessageIterator()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="caedc-107">取得非同步迭代器，透過訊息接收者。</span><span class="sxs-lookup"><span data-stu-id="caedc-107">Gets an async iterator over messages from the receiver.</span></span>
+      <span data-ttu-id="caedc-108">如果有另一個接收作業在相同的接收端上進行，則會擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="caedc-108">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="caedc-109">如果您不確定是否有為另一個接收作業執行、 檢查`isReceivingMessages`接收器上的屬性。</span><span class="sxs-lookup"><span data-stu-id="caedc-109">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+
+      <span data-ttu-id="caedc-110">如果迭代器不能超過一分鐘，擷取中的新訊息`undefined`會傳回</span><span class="sxs-lookup"><span data-stu-id="caedc-110">If the iterator is not able to fetch a new message in over a minute, `undefined` will be returned</span></span>
+    syntax:
+      content: function getMessageIterator()
+      parameters: []
+      return:
+        type:
+          - AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.getState'
+    name: getState()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="caedc-111">取得工作階段的狀態。</span><span class="sxs-lookup"><span data-stu-id="caedc-111">Gets the state of the Session.</span></span> <span data-ttu-id="caedc-112">如需工作階段狀態的詳細資訊，請參閱[工作階段狀態](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)</span><span class="sxs-lookup"><span data-stu-id="caedc-112">For more on session states, see [Session State](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)</span></span>'
+    syntax:
+      content: function getState()
+      parameters: []
+      return:
+        type:
+          - Promise<any>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="caedc-113">傳回`true`如果接收者已關閉。</span><span class="sxs-lookup"><span data-stu-id="caedc-113">Returns `true` if the receiver is closed.</span></span> <span data-ttu-id="caedc-114">這種情形是因為接收者本身已關閉，或用戶端，建立已關閉。</span><span class="sxs-lookup"><span data-stu-id="caedc-114">This can happen either because the receiver itself has been closed or the client that created it has been closed.</span></span>
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.isReceivingMessages'
+    name: isReceivingMessages()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="caedc-115">指出是否將接收器目前接收訊息或不。</span><span class="sxs-lookup"><span data-stu-id="caedc-115">Indicates whether the receiver is currently receiving messages or not.</span></span>
+      <span data-ttu-id="caedc-116">當它會傳回 true，新`registerMessageHandler()`或`receiveMessages()`無法進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="caedc-116">When this returns true, new `registerMessageHandler()` or `receiveMessages()` calls cannot be made.</span></span>
+    syntax:
+      content: function isReceivingMessages()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="caedc-117">擷取作用中訊息的下一個批次 （包括但不是停止傳送訊息延遲） 目前的工作階段中。</span><span class="sxs-lookup"><span data-stu-id="caedc-117">Fetches the next batch of active messages (including deferred but not deadlettered messages) in the current session.</span></span>
+      - <span data-ttu-id="caedc-118">第一次呼叫`peek()`會擷取第一個作用中的訊息。</span><span class="sxs-lookup"><span data-stu-id="caedc-118">The first call to `peek()` fetches the first active message.</span></span> <span data-ttu-id="caedc-119">每個後續的呼叫會擷取後續的訊息。</span><span class="sxs-lookup"><span data-stu-id="caedc-119">Each subsequent call fetches the subsequent message.</span></span>
+      - <span data-ttu-id="caedc-120">不同於`received`訊息，`peeked`訊息是訊息的唯讀版本。</span><span class="sxs-lookup"><span data-stu-id="caedc-120">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="caedc-121">它不能是`Completed/Abandoned/Deferred/Deadlettered`。</span><span class="sxs-lookup"><span data-stu-id="caedc-121">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="caedc-122">無法更新它的鎖定。</span><span class="sxs-lookup"><span data-stu-id="caedc-122">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: <span data-ttu-id="caedc-123">若要查看的訊息數目上限。</span><span class="sxs-lookup"><span data-stu-id="caedc-123">The maximum number of messages to peek.</span></span> <span data-ttu-id="caedc-124">預設值`1`。</span><span class="sxs-lookup"><span data-stu-id="caedc-124">Default value `1`.</span></span>
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="caedc-125">查看所需的作用中訊息數目 （包括但不是停止傳送訊息延遲） 從目前的工作階段中指定的序號。</span><span class="sxs-lookup"><span data-stu-id="caedc-125">Peeks the desired number of active messages (including deferred but not deadlettered messages) from the specified sequence number in the current session.</span></span>
+      - <span data-ttu-id="caedc-126">不同於`received`訊息，`peeked`訊息是訊息的唯讀版本。</span><span class="sxs-lookup"><span data-stu-id="caedc-126">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="caedc-127">它不能是`Completed/Abandoned/Deferred/Deadlettered`。</span><span class="sxs-lookup"><span data-stu-id="caedc-127">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="caedc-128">無法更新它的鎖定。</span><span class="sxs-lookup"><span data-stu-id="caedc-128">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="caedc-129">從中讀取訊息的序號。</span><span class="sxs-lookup"><span data-stu-id="caedc-129">The sequence number from where to read the message.</span></span>
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveDeferredMessage'
+    name: receiveDeferredMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="caedc-130">傳回可解析成所識別的延後訊息的 promise 指定`sequenceNumber`。</span><span class="sxs-lookup"><span data-stu-id="caedc-130">Returns a promise that resolves to a deferred message identified by the given `sequenceNumber`.</span></span>
+    syntax:
+      content: 'function receiveDeferredMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="caedc-131">要接收訊息的序號。</span><span class="sxs-lookup"><span data-stu-id="caedc-131">The sequence number of the message that needs to be received.</span></span>
+      return:
+        type:
+          - Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveDeferredMessages'
+    name: 'receiveDeferredMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="caedc-132">傳回可解析成陣列識別的延後訊息的 promise 藉由指定`sequenceNumbers`。</span><span class="sxs-lookup"><span data-stu-id="caedc-132">Returns a promise that resolves to an array of deferred messages identified by given `sequenceNumbers`.</span></span>
+    syntax:
+      content: 'function receiveDeferredMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: <span data-ttu-id="caedc-133">要接收訊息的序號的陣列。</span><span class="sxs-lookup"><span data-stu-id="caedc-133">An array of sequence numbers for the messages that need to be received.</span></span>
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveMessages'
+    name: 'receiveMessages(number, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="caedc-134">傳回可解析的訊息陣列的 promise 根據指定的計數及逾時透過 AMQP 接收者從佇列/訂用帳戶的連結。</span><span class="sxs-lookup"><span data-stu-id="caedc-134">Returns a promise that resolves to an array of messages based on given count and timeout over an AMQP receiver link from a Queue/Subscription.</span></span>
+      <span data-ttu-id="caedc-135">如果有另一個接收作業在相同的接收端上進行，則會擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="caedc-135">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="caedc-136">如果您不確定是否有為另一個接收作業執行、 檢查`isReceivingMessages`接收器上的屬性。</span><span class="sxs-lookup"><span data-stu-id="caedc-136">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+    syntax:
+      content: 'function receiveMessages(maxMessageCount: number, maxWaitTimeInSeconds?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - number
+          description: <span data-ttu-id="caedc-137">從佇列/訂用帳戶接收的訊息數目上限。</span><span class="sxs-lookup"><span data-stu-id="caedc-137">The maximum number of messages to receive from Queue/Subscription.</span></span>
+        - id: maxWaitTimeInSeconds
+          type:
+            - undefined | number
+          description: |-
+            <span data-ttu-id="caedc-138">最大等待時間 （秒），接收者應該等候接收第一個訊息。</span><span class="sxs-lookup"><span data-stu-id="caedc-138">The maximum wait time in seconds for which the Receiver should wait to receive the first message.</span></span> <span data-ttu-id="caedc-139">如果此時不收到任何訊息時，傳回的承諾取得解析為空陣列。</span><span class="sxs-lookup"><span data-stu-id="caedc-139">If no message is received by this time, the returned promise gets resolved to an empty array.</span></span>
+            - <span data-ttu-id="caedc-140">**預設值**:`60`秒。</span><span class="sxs-lookup"><span data-stu-id="caedc-140">**Default**: `60` seconds.</span></span>
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveMode'
+    name: receiveMode
+    fullName: receiveMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="caedc-141">表示此收件者的 receiveMode。</span><span class="sxs-lookup"><span data-stu-id="caedc-141">Denotes receiveMode of this receiver.</span></span>
+    syntax:
+      content: 'receiveMode: ReceiveMode'
+      return:
+        type:
+          - '@azure/service-bus.ReceiveMode'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.registerMessageHandler'
+    name: 'registerMessageHandler(OnMessage, OnError, SessionMessageHandlerOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="caedc-142">註冊處理常式來處理 AMQP 接收者連結上自佇列/訂閱訊息的內送資料流。</span><span class="sxs-lookup"><span data-stu-id="caedc-142">Registers handlers to deal with the incoming stream of messages over an AMQP receiver link from a Queue/Subscription.</span></span>
+      <span data-ttu-id="caedc-143">若要停止接收訊息，請呼叫`close()`SessionReceiver 上。</span><span class="sxs-lookup"><span data-stu-id="caedc-143">To stop receiving messages, call `close()` on the SessionReceiver.</span></span>
+      <span data-ttu-id="caedc-144">如果有另一個接收作業在相同的接收端上進行，則會擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="caedc-144">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="caedc-145">如果您不確定是否有為另一個接收作業執行、 檢查`isReceivingMessages`接收器上的屬性。</span><span class="sxs-lookup"><span data-stu-id="caedc-145">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+    syntax:
+      content: 'function registerMessageHandler(onMessage: OnMessage, onError: OnError, options?: SessionMessageHandlerOptions)'
+      parameters:
+        - id: onMessage
+          type:
+            - '@azure/service-bus.OnMessage'
+          description: <span data-ttu-id="caedc-146">處理每則傳入訊息的處理常式。</span><span class="sxs-lookup"><span data-stu-id="caedc-146">Handler for processing each incoming message.</span></span>
+        - id: onError
+          type:
+            - '@azure/service-bus.OnError'
+          description: <span data-ttu-id="caedc-147">在接收或處理訊息時，就會發生任何錯誤處理常式。</span><span class="sxs-lookup"><span data-stu-id="caedc-147">Handler for any error that occurs while receiving or processing messages.</span></span>
+        - id: options
+          type:
+            - '@azure/service-bus.SessionMessageHandlerOptions'
+          description: |
+            <span data-ttu-id="caedc-148">若要控制是否應該自動完成訊息，或如果應該自動更新的工作階段上鎖定的選項。</span><span class="sxs-lookup"><span data-stu-id="caedc-148">Options to control whether messages should be automatically completed or if the lock on the session should be automatically renewed.</span></span> <span data-ttu-id="caedc-149">您可以控制應同時處理的訊息數目上限。</span><span class="sxs-lookup"><span data-stu-id="caedc-149">You can control the maximum number of messages that should be concurrently processed.</span></span> <span data-ttu-id="caedc-150">您也可以提供以秒為單位來表示的時間等待新訊息，再關閉接收者的逾時。</span><span class="sxs-lookup"><span data-stu-id="caedc-150">You can also provide a timeout in seconds to denote the amount of time to wait for a new message before closing the receiver.</span></span>
+          optional: true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.renewSessionLock'
+    name: renewSessionLock()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="caedc-151">佇列/訂用帳戶建立期間，在所指定的持續時間的工作階段更新鎖定。</span><span class="sxs-lookup"><span data-stu-id="caedc-151">Renews the lock on the session for the duration as specified during the Queue/Subscription creation.</span></span>
+      - <span data-ttu-id="caedc-152">檢查`sessionLockedUntilUtc`上鎖定的到期的時間的 SessionReceiver 屬性。</span><span class="sxs-lookup"><span data-stu-id="caedc-152">Check the `sessionLockedUntilUtc` property on the SessionReceiver for the time when the lock expires.</span></span>
+      - <span data-ttu-id="caedc-153">當工作階段上的鎖定到期時</span><span class="sxs-lookup"><span data-stu-id="caedc-153">When the lock on the session expires</span></span>
+          - <span data-ttu-id="caedc-154">可以使用此收件者不收到任何訊息</span><span class="sxs-lookup"><span data-stu-id="caedc-154">No more messages can be received using this receiver</span></span>
+          - <span data-ttu-id="caedc-155">如果訊息尚未採取實際 (使用`complete()`，`defer()`或`deadletter()`，在工作階段之前鎖定到期，然後傳回佇列/訂用帳戶中下一個訊息陸地接收作業。</span><span class="sxs-lookup"><span data-stu-id="caedc-155">If a message is not settled (using either `complete()`, `defer()` or `deadletter()`, before the session lock expires, then the message lands back in the Queue/Subscription for the next receive operation.</span></span>
+    syntax:
+      content: function renewSessionLock()
+      parameters: []
+      return:
+        type:
+          - Promise<Date>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="caedc-156">此收件者將從其接收訊息的工作階段識別碼。</span><span class="sxs-lookup"><span data-stu-id="caedc-156">The id of the session from which this receiver will receive messages.</span></span>
+      <span data-ttu-id="caedc-157">直到 AMQP 接收者連結已成功設定工作階段，則會傳回未定義。</span><span class="sxs-lookup"><span data-stu-id="caedc-157">Will return undefined until a AMQP receiver link has been successfully set up for the session.</span></span>
+    syntax:
+      content: 'sessionId: string | undefined'
+      return:
+        type:
+          - string | undefined
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.sessionLockedUntilUtc'
+    name: sessionLockedUntilUtc
+    fullName: sessionLockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="caedc-158">時間-utc 時區到哪一個工作階段已被鎖定。</span><span class="sxs-lookup"><span data-stu-id="caedc-158">The time in UTC until which the session is locked.</span></span>
+      <span data-ttu-id="caedc-159">每次`renewSessionLock()`是呼叫，這次會更新為目前時間加上所指定的鎖定持續時間在佇列/訂用帳戶建立期間。</span><span class="sxs-lookup"><span data-stu-id="caedc-159">Everytime `renewSessionLock()` is called, this time gets updated to current time plus the lock duration as specified during the Queue/Subscription creation.</span></span>
+
+      <span data-ttu-id="caedc-160">直到 AMQP 接收者連結已成功設定工作階段，則會傳回未定義。</span><span class="sxs-lookup"><span data-stu-id="caedc-160">Will return undefined until a AMQP receiver link has been successfully set up for the session.</span></span>
+    syntax:
+      content: 'sessionLockedUntilUtc: Date | undefined'
+      return:
+        type:
+          - Date | undefined
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.setState'
+    name: setState(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="caedc-161">在工作階段上設定的狀態。</span><span class="sxs-lookup"><span data-stu-id="caedc-161">Sets the state on the Session.</span></span> <span data-ttu-id="caedc-162">如需工作階段狀態的詳細資訊，請參閱[工作階段狀態](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)</span><span class="sxs-lookup"><span data-stu-id="caedc-162">For more on session states, see [Session State](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)</span></span>'
+    syntax:
+      content: 'function setState(state: any)'
+      parameters:
+        - id: state
+          type:
+            - any
+          description: |
+            <span data-ttu-id="caedc-163">必須設定狀態。</span><span class="sxs-lookup"><span data-stu-id="caedc-163">The state that needs to be set.</span></span>
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    name: ServiceBusMessage>
+    spec.typeScript:
+      - name: AsyncIterableIterator<
+        fullName: AsyncIterableIterator<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '>'
+        fullName: '>'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    name: ServiceBusMessage | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: ' | undefined>'
+        fullName: ' | undefined>'
+  - uid: 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    name: 'ServiceBusMessage[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/service-bus.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/service-bus.OnMessage'
+  - uid: '@azure/service-bus.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/service-bus.OnError'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions'
+    name: SessionMessageHandlerOptions
+    spec.typeScript:
+      - name: SessionMessageHandlerOptions
+        fullName: SessionMessageHandlerOptions
+        uid: '@azure/service-bus.SessionMessageHandlerOptions'
