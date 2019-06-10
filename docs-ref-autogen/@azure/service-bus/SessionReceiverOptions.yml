@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    fullName: SessionReceiverOptions
+    children:
+      - '@azure/service-bus.SessionReceiverOptions.maxSessionAutoRenewLockDurationInSeconds'
+      - '@azure/service-bus.SessionReceiverOptions.sessionId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8e768-101">描述傳遞給選項`createReceiver`方法時使用佇列/訂用帳戶已啟用的工作階段。</span><span class="sxs-lookup"><span data-stu-id="8e768-101">Describes the options passed to the `createReceiver` method when using a Queue/Subscription that has sessions enabled.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiverOptions.maxSessionAutoRenewLockDurationInSeconds'
+    name: maxSessionAutoRenewLockDurationInSeconds
+    fullName: maxSessionAutoRenewLockDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8e768-102">最大持續期限，以秒為單位，直到工作階段上的鎖定，這會由 sdk 自動更新。</span><span class="sxs-lookup"><span data-stu-id="8e768-102">The maximum duration in seconds until which, the lock on the session will be renewed automatically by the sdk.</span></span>
+      - <span data-ttu-id="8e768-103">**預設值**:`300`秒 （5 分鐘）。</span><span class="sxs-lookup"><span data-stu-id="8e768-103">**Default**: `300` seconds (5 minutes).</span></span>
+      - <span data-ttu-id="8e768-104">**若要停用 autolock 續約**，將此設為`0`。</span><span class="sxs-lookup"><span data-stu-id="8e768-104">**To disable autolock renewal**, set this to `0`.</span></span>
+    optional: true
+    syntax:
+      content: 'maxSessionAutoRenewLockDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiverOptions.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8e768-105">需要接收訊息的工作階段的識別碼。</span><span class="sxs-lookup"><span data-stu-id="8e768-105">The id of the session from which messages need to be received.</span></span> <span data-ttu-id="8e768-106">如果提供 null 或未定義，則服務匯流排會從可用的工作階段選擇隨機工作階段。</span><span class="sxs-lookup"><span data-stu-id="8e768-106">If null or undefined is provided, Service Bus chooses a random session from available sessions.</span></span>'
+    syntax:
+      content: 'sessionId: string | undefined'
+      return:
+        type:
+          - string | undefined
+    package: '@azure/service-bus'
