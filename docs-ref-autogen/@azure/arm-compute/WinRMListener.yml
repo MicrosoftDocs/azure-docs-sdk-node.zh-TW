@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WinRMListener'
+    name: WinRMListener
+    fullName: WinRMListener
+    children:
+      - '@azure/arm-compute.WinRMListener.certificateUrl'
+      - '@azure/arm-compute.WinRMListener.protocol'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述通訊協定和 Windows 遠端管理的接聽程式的憑證指紋
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      這是憑證已上傳至金鑰保存庫的祕密的 URL。 將祕密新增至金鑰保存庫，請參閱[金鑰或密碼加入金鑰保存庫](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add)。 在此情況下，您的憑證必須是 Base64 編碼的下列 JSON 物件的編碼在 utf-8 中： <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定接聽程式通訊的協定。 <br><br> 可能的值包括： <br>**http** <br><br>
+      **https**。 可能的值包括：' Http'、 'Https'
+    optional: true
+    syntax:
+      content: 'protocol?: ProtocolTypes'
+      return:
+        type:
+          - '@azure/arm-compute.ProtocolTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ProtocolTypes'
+    name: ProtocolTypes
+    spec.typeScript:
+      - name: ProtocolTypes
+        fullName: ProtocolTypes
+        uid: '@azure/arm-compute.ProtocolTypes'

@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    fullName: LinuxConfiguration
+    children:
+      - '@azure/arm-compute.LinuxConfiguration.disablePasswordAuthentication'
+      - '@azure/arm-compute.LinuxConfiguration.provisionVMAgent'
+      - '@azure/arm-compute.LinuxConfiguration.ssh'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      指定虛擬機器上的 Linux 作業系統設定。 <br><br>如需支援的 Linux 散發套件的清單，請參閱[Linux on azure 背書散發套件](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> 如需執行非背書散發套件，請參閱[非背書散發套件的資訊](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.disablePasswordAuthentication'
+    name: disablePasswordAuthentication
+    fullName: disablePasswordAuthentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定是否應該停用密碼驗證。
+    optional: true
+    syntax:
+      content: 'disablePasswordAuthentication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.provisionVMAgent'
+    name: provisionVMAgent
+    fullName: provisionVMAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指出是否應該在虛擬機器上佈建虛擬機器代理程式。 <br><br>
+      當要求主體中未指定這個屬性時，預設行為是將它設定為 true。  這可確保以便將延伸模組可以新增至 VM 之後，會在 VM 上安裝 VM 代理程式。
+    optional: true
+    syntax:
+      content: 'provisionVMAgent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.ssh'
+    name: ssh
+    fullName: ssh
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定 Linux OS 的 SSH 金鑰組態。
+    optional: true
+    syntax:
+      content: 'ssh?: SshConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.SshConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.SshConfiguration'
+    name: SshConfiguration
+    spec.typeScript:
+      - name: SshConfiguration
+        fullName: SshConfiguration
+        uid: '@azure/arm-compute.SshConfiguration'

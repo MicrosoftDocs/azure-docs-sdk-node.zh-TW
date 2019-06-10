@@ -45,23 +45,23 @@ items:
           - string
     package: '@azure/cognitiveservices-qnamaker'
   - uid: '@azure/cognitiveservices-qnamaker.QnAMakerClientContext.constructor'
-    name: 'QnAMakerClientContext(string, ServiceClientCredentials, msRest.ServiceClientOptions)'
+    name: 'QnAMakerClientContext(ServiceClientCredentials, string, msRest.ServiceClientOptions)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: 初始化 QnAMakerClientContext 類別的新執行個體。
     syntax:
-      content: 'new QnAMakerClientContext(endpoint: string, credentials: ServiceClientCredentials, options?: msRest.ServiceClientOptions)'
+      content: 'new QnAMakerClientContext(credentials: ServiceClientCredentials, endpoint: string, options?: msRest.ServiceClientOptions)'
       parameters:
-        - id: endpoint
-          type:
-            - string
-          description: '支援認知服務端點 (通訊協定和主機名稱，例如： https://westus.api.cognitive.microsoft.com)。'
         - id: credentials
           type:
             - ServiceClientCredentials
           description: 用來唯一識別用戶端的訂用帳戶的訂用帳戶認證。
+        - id: endpoint
+          type:
+            - string
+          description: '支援認知服務端點 (通訊協定和主機名稱，例如： https://westus.api.cognitive.microsoft.com)。'
         - id: options
           type:
             - msRest.ServiceClientOptions
