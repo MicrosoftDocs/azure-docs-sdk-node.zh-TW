@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk'
+    name: VirtualMachineScaleSetDataDisk
+    fullName: VirtualMachineScaleSetDataDisk
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.caching'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.createOption'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.diskSizeGB'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.lun'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.managedDisk'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.name'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述虛擬機器擴展集的資料磁碟。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定快取的需求。 <br><br> 可能的值包括： <br><br> **None** <br><br>
+      **唯讀** <br><br> **讀寫** <br><br> 預設值：**無標準儲存體。針對進階儲存體的 ReadOnly**。 可能的值包括：'None'、 'ReadOnly'，'ReadWrite'
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '[建立] 選項。 可能的值包括：''FromImage''、 ''Empty''，「 附加 」'
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 請指定空的資料磁碟的大小 （gb）。 此元素可用來覆寫的虛擬機器映像的磁碟大小。 <br><br> 這個值不能大於 1023 GB
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定資料磁碟的邏輯單元編號。 這個值用來識別在 VM 內的資料磁碟，並因此必須是唯一的每個資料磁碟連結至 VM。
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 受控的磁碟的參數。
+    optional: true
+    syntax:
+      content: 'managedDisk?: VirtualMachineScaleSetManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 磁碟的名稱。
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定 writeAccelerator 是否應該啟用或停用磁碟上。
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    name: VirtualMachineScaleSetManagedDiskParameters
+    spec.typeScript:
+      - name: VirtualMachineScaleSetManagedDiskParameters
+        fullName: VirtualMachineScaleSetManagedDiskParameters
+        uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
