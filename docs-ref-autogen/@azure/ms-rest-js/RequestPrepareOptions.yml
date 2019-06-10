@@ -1,0 +1,340 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions'
+    name: RequestPrepareOptions
+    fullName: RequestPrepareOptions
+    children:
+      - '@azure/ms-rest-js.RequestPrepareOptions.abortSignal'
+      - '@azure/ms-rest-js.RequestPrepareOptions.baseUrl'
+      - '@azure/ms-rest-js.RequestPrepareOptions.body'
+      - '@azure/ms-rest-js.RequestPrepareOptions.bodyIsStream'
+      - '@azure/ms-rest-js.RequestPrepareOptions.deserializationMapper'
+      - '@azure/ms-rest-js.RequestPrepareOptions.disableClientRequestId'
+      - '@azure/ms-rest-js.RequestPrepareOptions.disableJsonStringifyOnBody'
+      - '@azure/ms-rest-js.RequestPrepareOptions.formData'
+      - '@azure/ms-rest-js.RequestPrepareOptions.headers'
+      - '@azure/ms-rest-js.RequestPrepareOptions.mappers'
+      - '@azure/ms-rest-js.RequestPrepareOptions.method'
+      - '@azure/ms-rest-js.RequestPrepareOptions.onDownloadProgress'
+      - '@azure/ms-rest-js.RequestPrepareOptions.onUploadProgress'
+      - '@azure/ms-rest-js.RequestPrepareOptions.pathParameters'
+      - '@azure/ms-rest-js.RequestPrepareOptions.pathTemplate'
+      - '@azure/ms-rest-js.RequestPrepareOptions.queryParameters'
+      - '@azure/ms-rest-js.RequestPrepareOptions.serializationMapper'
+      - '@azure/ms-rest-js.RequestPrepareOptions.url'
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.abortSignal'
+    name: abortSignal
+    fullName: abortSignal
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type:
+          - '@azure/ms-rest-js.AbortSignalLike'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.baseUrl'
+    name: baseUrl
+    fullName: baseUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '要求的基底 url。 預設值是: 「https://management.azure.com"。 這是只能搭配 pathTemplate 適用。 如果您要提供 options.url 它會預期您提供的完整 url。'
+    optional: true
+    syntax:
+      content: 'baseUrl?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要求本文。 它可以是任何類型。 如果不是資料流，這個值將會序列化。
+    optional: true
+    syntax:
+      content: 'body?: any'
+      return:
+        type:
+          - any
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.bodyIsStream'
+    name: bodyIsStream
+    fullName: bodyIsStream
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指出是否要求本文是資料流 （適用於檔案上傳案例）。
+    optional: true
+    syntax:
+      content: 'bodyIsStream?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.deserializationMapper'
+    name: deserializationMapper
+    fullName: deserializationMapper
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 提供有關如何還原序列化回應主體的資訊。
+    optional: true
+    syntax:
+      content: 'deserializationMapper?: object'
+      return:
+        type:
+          - object
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.disableClientRequestId'
+    name: disableClientRequestId
+    fullName: disableClientRequestId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 何時設定為 true，指示用戶端未設定新的 Guid() 「 x-ms-用戶端-」 標頭。
+    optional: true
+    syntax:
+      content: 'disableClientRequestId?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.disableJsonStringifyOnBody'
+    name: disableJsonStringifyOnBody
+    fullName: disableJsonStringifyOnBody
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 表示這個方法是否應該 json.stringify （） 的要求主體。 預設值： false。
+    optional: true
+    syntax:
+      content: 'disableJsonStringifyOnBody?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.formData'
+    name: formData
+    fullName: formData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'formData?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.headers'
+    name: headers
+    fullName: headers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要套用到要求的要求標頭的字典。
+      這裡的重點是"標頭-name"和值是"標頭-value"。 標頭值必須是字串類型。
+       - ContentType 必須提供的索引鍵名稱為"Content-type"。 預設值為"application/json;charset = utf-8"。
+       - 「 傳輸編碼 」 設定為預設的 「 區塊 」 如果"options.bodyIsStream 」 設定為 true。
+       - 「 內容類型 」 預設情況下設為"application/octet-stream"如果"options.bodyIsStream 」 設定為 true。
+       - 「 接受語言 」 預設設定為"EN-US"
+       - "x ms-用戶端-要求識別碼 」 預設設定為新的 Guid。 若要產生要求的 guid，請設定 options.disableClientRequestId 」 為 true
+    optional: true
+    syntax:
+      content: 'headers?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.mappers'
+    name: mappers
+    fullName: mappers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '對應程式可能會使用 [de] 序列化時的字典。'
+    optional: true
+    syntax:
+      content: 'mappers?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.method'
+    name: method
+    fullName: method
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HTTP 要求方法。 有效值為"GET"、"PUT"、"HEAD"、 「 刪除 」、 「 選項 」、"POST"，或 「 修補 」。
+    syntax:
+      content: 'method: HttpMethods'
+      return:
+        type:
+          - '@azure/ms-rest-js.HttpMethods'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.onDownloadProgress'
+    name: onDownloadProgress
+    fullName: onDownloadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - '(progress: TransferProgressEvent) => void'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.onUploadProgress'
+    name: onUploadProgress
+    fullName: onUploadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - '(progress: TransferProgressEvent) => void'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.pathParameters'
+    name: pathParameters
+    fullName: pathParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要取代 pathTemplate 中實際值的路徑參數的字典。
+      這裡的重點是"路徑-參數-name"和值是 「 路徑-參數-值 」。
+      「 路徑-參數-值 」 可以屬於型別"string"，或它可以是 「 物件 」 類型。
+      當您想要跳過 url 編碼，則應該使用 「 物件 」 格式。 在使用物件格式時，物件必須具有一個名為值，提供 「 路徑-參數-值 」 屬性。
+      範例：
+         - 路徑-參數-值 「 物件 」 格式: {"路徑-參數-name": {值: 「 路徑-參數-值 」，skipUrlEncoding: true}}
+         - 路徑-參數-值格式為"string": {"路徑-參數-name":"路徑-參數-value"}。
+    optional: true
+    syntax:
+      content: 'pathParameters?: [key: string]: function'
+      return:
+        type:
+          - '[key: string]: function'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.pathTemplate'
+    name: pathTemplate
+    fullName: pathTemplate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      路徑範本要求的 url。 請提供 「 url 」，或提供"pathTemplate 」 中的選項物件。 這兩個選項是互斥的。
+      範例:"/ subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}"
+    optional: true
+    syntax:
+      content: 'pathTemplate?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.queryParameters'
+    name: queryParameters
+    fullName: queryParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要附加至 url，其中 「 金鑰 」 是 「 查詢-參數-名稱 」 和 「 值 」 的查詢參數的字典是 「 查詢-參數-值 」。
+      「 查詢-參數-值 」 可以屬於型別"string"，或它可以是 「 物件 」 類型。
+      當您想要跳過 url 編碼，則應該使用 「 物件 」 格式。 在使用物件格式時，物件必須具有一個名為值，提供 「 查詢-參數-值 」 屬性。
+      範例：
+         - 查詢-參數-「 物件 」 格式值: {"查詢-參數-name": {值: 「 查詢-參數-值 」，skipUrlEncoding: true}}
+         - 查詢-參數-值格式為"string": {"查詢-參數-name":"查詢-參數-value"}。
+      注意：「 如果 options.url 已經有一些查詢參數，然後 options.queryParameters 中提供的值會附加至 url。
+    optional: true
+    syntax:
+      content: 'queryParameters?: [key: string]: function'
+      return:
+        type:
+          - '[key: string]: function'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.serializationMapper'
+    name: serializationMapper
+    fullName: serializationMapper
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 提供如何序列化要求主體的相關資訊。
+    optional: true
+    syntax:
+      content: 'serializationMapper?: Mapper'
+      return:
+        type:
+          - '@azure/ms-rest-js.Mapper'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要求 url。 它可能會或可能不需要在它的查詢參數。 請提供 「 url 」，或提供"pathTemplate 」 中的選項物件。 這兩個選項是互斥的。
+    optional: true
+    syntax:
+      content: 'url?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+references:
+  - uid: '@azure/ms-rest-js.AbortSignalLike'
+    name: AbortSignalLike
+    spec.typeScript:
+      - name: AbortSignalLike
+        fullName: AbortSignalLike
+        uid: '@azure/ms-rest-js.AbortSignalLike'
+  - uid: '@azure/ms-rest-js.HttpMethods'
+    name: HttpMethods
+    spec.typeScript:
+      - name: HttpMethods
+        fullName: HttpMethods
+        uid: '@azure/ms-rest-js.HttpMethods'
+  - uid: '@azure/ms-rest-js.Mapper'
+    name: Mapper
+    spec.typeScript:
+      - name: Mapper
+        fullName: Mapper
+        uid: '@azure/ms-rest-js.Mapper'

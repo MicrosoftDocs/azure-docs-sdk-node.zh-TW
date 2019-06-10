@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.NetworkRuleSet'
+    name: NetworkRuleSet
+    fullName: NetworkRuleSet
+    children:
+      - '@azure/arm-keyvault.NetworkRuleSet.bypass'
+      - '@azure/arm-keyvault.NetworkRuleSet.defaultAction'
+      - '@azure/arm-keyvault.NetworkRuleSet.ipRules'
+      - '@azure/arm-keyvault.NetworkRuleSet.virtualNetworkRules'
+    langs:
+      - typeScript
+    type: interface
+    summary: 一組規則來控管的保存庫的網路存取範圍。
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.bypass'
+    name: bypass
+    fullName: bypass
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 會告知哪些流量可以略過網路規則。 這可以是 '所需的 AzureServices' None'。  如果未指定 預設值是 '所需的 AzureServices'。 可能的值包括：'所需的 AzureServices'、 'None'
+    optional: true
+    syntax:
+      content: 'bypass?: NetworkRuleBypassOptions'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleBypassOptions'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.defaultAction'
+    name: defaultAction
+    fullName: defaultAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 沒有從 ipRules 和 virtualNetworkRules 比對的規則時的預設動作。 這只能用於之後略過屬性已經過評估。 可能的值包括：'Allow'、 '拒絕'
+    optional: true
+    syntax:
+      content: 'defaultAction?: NetworkRuleAction'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleAction'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.ipRules'
+    name: ipRules
+    fullName: ipRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IP 位址規則的清單。
+    optional: true
+    syntax:
+      content: 'ipRules?: IPRule[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.IPRule[]'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.virtualNetworkRules'
+    name: virtualNetworkRules
+    fullName: virtualNetworkRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 虛擬網路規則的清單。
+    optional: true
+    syntax:
+      content: 'virtualNetworkRules?: VirtualNetworkRule[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.VirtualNetworkRule[]'
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.NetworkRuleBypassOptions'
+    name: NetworkRuleBypassOptions
+    spec.typeScript:
+      - name: NetworkRuleBypassOptions
+        fullName: NetworkRuleBypassOptions
+        uid: '@azure/arm-keyvault.NetworkRuleBypassOptions'
+  - uid: '@azure/arm-keyvault.NetworkRuleAction'
+    name: NetworkRuleAction
+    spec.typeScript:
+      - name: NetworkRuleAction
+        fullName: NetworkRuleAction
+        uid: '@azure/arm-keyvault.NetworkRuleAction'
+  - uid: '@azure/arm-keyvault.IPRule[]'
+    name: 'IPRule[]'
+    spec.typeScript:
+      - name: IPRule
+        fullName: IPRule
+        uid: '@azure/arm-keyvault.IPRule'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-keyvault.VirtualNetworkRule[]'
+    name: 'VirtualNetworkRule[]'
+    spec.typeScript:
+      - name: VirtualNetworkRule
+        fullName: VirtualNetworkRule
+        uid: '@azure/arm-keyvault.VirtualNetworkRule'
+      - name: '[]'
+        fullName: '[]'
