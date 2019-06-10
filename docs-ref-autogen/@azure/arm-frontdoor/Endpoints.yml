@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-frontdoor.Endpoints'
+    name: Endpoints
+    fullName: Endpoints
+    children:
+      - '@azure/arm-frontdoor.Endpoints.beginPurgeContent'
+      - '@azure/arm-frontdoor.Endpoints.constructor'
+      - '@azure/arm-frontdoor.Endpoints.purgeContent'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表的端點。
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.Endpoints.beginPurgeContent'
+    name: 'beginPurgeContent(string, string, PurgeParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 從前端移除內容。
+    syntax:
+      content: 'function beginPurgeContent(resourceGroupName: string, frontDoorName: string, contentFilePaths: PurgeParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 訂用帳戶內的資源群組的名稱。
+        - id: frontDoorName
+          type:
+            - string
+          description: 前門也就是全域唯一的名稱。
+        - id: contentFilePaths
+          type:
+            - '@azure/arm-frontdoor.PurgeParameters'
+          description: 若要清除內容的路徑。 路徑可以是完整的 URL，例如 '/ /pictures/city.png' 以移除單一檔案或目錄的萬用字元，例如 ' /pictures/ *' 以移除目錄中的所有資料夾和檔案。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.Endpoints.constructor'
+    name: Endpoints(FrontDoorManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立端點。
+    syntax:
+      content: 'new Endpoints(client: FrontDoorManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.Endpoints.purgeContent'
+    name: 'purgeContent(string, string, PurgeParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 從前端移除內容。
+    syntax:
+      content: 'function purgeContent(resourceGroupName: string, frontDoorName: string, contentFilePaths: PurgeParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 訂用帳戶內的資源群組的名稱。
+        - id: frontDoorName
+          type:
+            - string
+          description: 前門也就是全域唯一的名稱。
+        - id: contentFilePaths
+          type:
+            - '@azure/arm-frontdoor.PurgeParameters'
+          description: 若要清除內容的路徑。 路徑可以是完整的 URL，例如 '/ /pictures/city.png' 以移除單一檔案或目錄的萬用字元，例如 ' /pictures/ *' 以移除目錄中的所有資料夾和檔案。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-frontdoor'
+references:
+  - uid: '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+    name: FrontDoorManagementClientContext
+    spec.typeScript:
+      - name: FrontDoorManagementClientContext
+        fullName: FrontDoorManagementClientContext
+        uid: '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+  - uid: '@azure/arm-frontdoor.PurgeParameters'
+    name: PurgeParameters
+    spec.typeScript:
+      - name: PurgeParameters
+        fullName: PurgeParameters
+        uid: '@azure/arm-frontdoor.PurgeParameters'
