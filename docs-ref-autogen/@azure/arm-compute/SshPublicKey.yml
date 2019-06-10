@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.SshPublicKey'
+    name: SshPublicKey
+    fullName: SshPublicKey
+    children:
+      - '@azure/arm-compute.SshPublicKey.keyData'
+      - '@azure/arm-compute.SshPublicKey.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: 包含公用金鑰所在的 Linux VM 上 SSH 憑證公開金鑰和路徑的相關資訊。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.keyData'
+    name: keyData
+    fullName: keyData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'SSH 公開金鑰憑證用來向 VM 透過 ssh。 索引鍵必須至少為 2048年位元和 ssh rsa 格式。 <br><br> 建立 ssh 金鑰，請參閱[Linux 和 Mac 上的建立 SSH 金鑰在 Azure 中 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)。'
+    optional: true
+    syntax:
+      content: 'keyData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定完整路徑上建立 ssh 公用金鑰儲存所在的 VM。 如果檔案已經存在，指定索引鍵會附加至檔案。 範例： /home/user/.ssh/authorized_keys
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
