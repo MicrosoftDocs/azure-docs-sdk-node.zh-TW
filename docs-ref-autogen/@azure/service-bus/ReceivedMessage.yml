@@ -1,0 +1,483 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceivedMessage'
+    name: ReceivedMessage
+    fullName: ReceivedMessage
+    children:
+      - '@azure/service-bus.ReceivedMessage.abandon'
+      - '@azure/service-bus.ReceivedMessage.body'
+      - '@azure/service-bus.ReceivedMessage.complete'
+      - '@azure/service-bus.ReceivedMessage.contentType'
+      - '@azure/service-bus.ReceivedMessage.correlationId'
+      - '@azure/service-bus.ReceivedMessage.deadLetter'
+      - '@azure/service-bus.ReceivedMessage.deadLetterSource'
+      - '@azure/service-bus.ReceivedMessage.defer'
+      - '@azure/service-bus.ReceivedMessage.deliveryCount'
+      - '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+      - '@azure/service-bus.ReceivedMessage.label'
+      - '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+      - '@azure/service-bus.ReceivedMessage.lockToken'
+      - '@azure/service-bus.ReceivedMessage.messageId'
+      - '@azure/service-bus.ReceivedMessage.partitionKey'
+      - '@azure/service-bus.ReceivedMessage.replyTo'
+      - '@azure/service-bus.ReceivedMessage.replyToSessionId'
+      - '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.sequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.sessionId'
+      - '@azure/service-bus.ReceivedMessage.timeToLive'
+      - '@azure/service-bus.ReceivedMessage.to'
+      - '@azure/service-bus.ReceivedMessage.userProperties'
+      - '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="dccdb-101">描述從服務匯流排接收的訊息。</span><span class="sxs-lookup"><span data-stu-id="dccdb-101">Describes the message received from Service Bus.</span></span>
+    extends:
+      name: '@azure/service-bus.ReceivedMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.abandon'
+    name: 'abandon(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="dccdb-102">接收者在訊息上保留的鎖定已放開滑鼠時，讓訊息可一次在服務匯流排，另一個接收作業。</span><span class="sxs-lookup"><span data-stu-id="dccdb-102">The lock held on the message by the receiver is let go, making the message available again in Service Bus for another receive operation.</span></span>'
+    syntax:
+      content: 'function abandon(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            <span data-ttu-id="dccdb-103">要修改時放棄訊息之訊息的屬性。</span><span class="sxs-lookup"><span data-stu-id="dccdb-103">The properties of the message to modify while abandoning the message.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="dccdb-104">需要傳送或接收訊息內文。</span><span class="sxs-lookup"><span data-stu-id="dccdb-104">The message body that needs to be sent or is received.</span></span>
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.complete'
+    name: complete()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="dccdb-105">從服務匯流排中移除訊息。</span><span class="sxs-lookup"><span data-stu-id="dccdb-105">Removes the message from Service Bus.</span></span>
+    syntax:
+      content: function complete()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-106">訊息內容型別。</span><span class="sxs-lookup"><span data-stu-id="dccdb-106">The content type of the message.</span></span> <span data-ttu-id="dccdb-107">選擇性地說明訊息的承載 RFC2045，第 5 節，例如"application/json"的格式的描述項。</span><span class="sxs-lookup"><span data-stu-id="dccdb-107">Optionally describes the payload of the message, with a descriptor following the format of RFC2045, Section 5, for example "application/json".</span></span>'
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-108">相互關聯識別碼，可讓應用程式以供相互關聯，例如，反映正要回覆之訊息的 MessageId，指定訊息的內容。</span><span class="sxs-lookup"><span data-stu-id="dccdb-108">The correlation identifier that allows an application to specify a context for the message for the purposes of correlation, for example reflecting the MessageId of a message that is being replied to.</span></span>
+      <span data-ttu-id="dccdb-109">請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="dccdb-109">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetter'
+    name: deadLetter(DeadLetterOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="dccdb-110">將訊息移至寄不出信件子佇列。</span><span class="sxs-lookup"><span data-stu-id="dccdb-110">Moves the message to the deadletter sub-queue.</span></span> <span data-ttu-id="dccdb-111">若要接收 deadletted 訊息，建立新 QueueClient/SubscriptionClient 使用寄不出信件子佇列的路徑。</span><span class="sxs-lookup"><span data-stu-id="dccdb-111">To receive a deadletted message, create a new QueueClient/SubscriptionClient using the path for the deadletter sub-queue.</span></span>'
+    syntax:
+      content: 'function deadLetter(options?: DeadLetterOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/service-bus.DeadLetterOptions'
+          description: |
+            <span data-ttu-id="dccdb-112">可供時拒絕訊息的寄不出信件選項。</span><span class="sxs-lookup"><span data-stu-id="dccdb-112">The DeadLetter options that can be provided while rejecting the message.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-113">{string}[deadLetterSource]此訊息之前已加入佇列，這是寄不出的訂用帳戶之佇列的名稱。</span><span class="sxs-lookup"><span data-stu-id="dccdb-113">{string} [deadLetterSource] The name of the queue or subscription that this message was enqueued on, before it was deadlettered.</span></span> <span data-ttu-id="dccdb-114">只會設定於已成為無效信件且後續會從無效信件佇列自動轉送到另一個實體的訊息中。</span><span class="sxs-lookup"><span data-stu-id="dccdb-114">Only set in messages that have been dead-lettered and subsequently auto-forwarded from the dead-letter queue to another entity.</span></span> <span data-ttu-id="dccdb-115">指示其中訊息已成為無效信件的實體。</span><span class="sxs-lookup"><span data-stu-id="dccdb-115">Indicates the entity in which the message was dead-lettered.</span></span>'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.defer'
+    name: 'defer(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="dccdb-116">會延後訊息的處理。</span><span class="sxs-lookup"><span data-stu-id="dccdb-116">Defers the processing of the message.</span></span> <span data-ttu-id="dccdb-117">儲存`sequenceNumber`訊息，以接收該訊息一次在未來使用的`receiveDeferredMessage`方法。</span><span class="sxs-lookup"><span data-stu-id="dccdb-117">Save the `sequenceNumber` of the message, in order to receive it message again in the future using the `receiveDeferredMessage` method.</span></span>'
+    syntax:
+      content: 'function defer(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            <span data-ttu-id="dccdb-118">若要修改延後訊息時訊息的屬性</span><span class="sxs-lookup"><span data-stu-id="dccdb-118">The properties of the message to modify while deferring the message</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-119">針對此訊息嘗試進行的傳遞次數。</span><span class="sxs-lookup"><span data-stu-id="dccdb-119">Number of deliveries that have been attempted for this message.</span></span> <span data-ttu-id="dccdb-120">當訊息鎖定到期，或使用明確放棄訊息，計數會漸增`abandon()`訊息上的方法。</span><span class="sxs-lookup"><span data-stu-id="dccdb-120">The count is incremented when a message lock expires, or the message is explicitly abandoned using the `abandon()` method on the message.</span></span>'
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-121">訊息的原始的順序號碼。</span><span class="sxs-lookup"><span data-stu-id="dccdb-121">The original sequence number of the message.</span></span> <span data-ttu-id="dccdb-122">對於已自動轉送的訊息，此屬性會反映訊息原始提交時首次指派給訊息的序號。</span><span class="sxs-lookup"><span data-stu-id="dccdb-122">For messages that have been auto-forwarded, this property reflects the sequence number that had first been assigned to the message at its original point of submission.</span></span>'
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="dccdb-123">UTC 時刻的訊息已接受並儲存在服務匯流排。</span><span class="sxs-lookup"><span data-stu-id="dccdb-123">The UTC instant at which the message has been accepted and stored in Service Bus.</span></span>
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-124">由於到期而將訊息標示為移除且無法再從實體中擷取的 UTC 時刻。</span><span class="sxs-lookup"><span data-stu-id="dccdb-124">The UTC instant at which the message is marked for removal and no longer available for retrieval from the entity due to expiration.</span></span> <span data-ttu-id="dccdb-125">這個屬性從訊息中的 2 個其他屬性計算： `enqueuedTimeUtc`  +  `timeToLive`。</span><span class="sxs-lookup"><span data-stu-id="dccdb-125">This property is computed from 2 other properties on the message: `enqueuedTimeUtc` + `timeToLive`.</span></span>'
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-126">應用程式專用標籤。</span><span class="sxs-lookup"><span data-stu-id="dccdb-126">The application specific label.</span></span> <span data-ttu-id="dccdb-127">這個屬性可讓應用程式，以指出要在標準化接收者的訊息的目的。</span><span class="sxs-lookup"><span data-stu-id="dccdb-127">This property enables the application to indicate the purpose of the message to the receiver in a standardized.</span></span> <span data-ttu-id="dccdb-128">方式，類似於電子郵件主旨列。</span><span class="sxs-lookup"><span data-stu-id="dccdb-128">fashion, similar to an email subject line.</span></span> <span data-ttu-id="dccdb-129">對應的 AMQP 屬性是"subject"。</span><span class="sxs-lookup"><span data-stu-id="dccdb-129">The mapped AMQP property is "subject".</span></span>'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-130">在佇列/訂用帳戶中，鎖定則訊息會保留截止的 UTC 時刻。</span><span class="sxs-lookup"><span data-stu-id="dccdb-130">The UTC instant until which the message is held locked in the queue/subscription.</span></span>
+      <span data-ttu-id="dccdb-131">當鎖定到期時，`deliveryCount`會遞增，訊息就再次可供擷取。</span><span class="sxs-lookup"><span data-stu-id="dccdb-131">When the lock expires, the `deliveryCount` is incremented and the message is again available for retrieval.</span></span>
+      - <span data-ttu-id="dccdb-132">在收到訊息時，不適用`ReceiveMode.receiveAndDelete`模式。</span><span class="sxs-lookup"><span data-stu-id="dccdb-132">Not applicable when the message is received in `ReceiveMode.receiveAndDelete` mode.</span></span>
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-133">鎖定權杖是鎖定中，訊息代理程式所持有的參考`ReceiveMode.PeekLock`模式。</span><span class="sxs-lookup"><span data-stu-id="dccdb-133">The lock token is a reference to the lock that is being held by the broker in `ReceiveMode.PeekLock` mode.</span></span> <span data-ttu-id="dccdb-134">鎖定會在內部使用選定訊息中所述[更詳細的產品文件](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)</span><span class="sxs-lookup"><span data-stu-id="dccdb-134">Locks are used internally settle messages as explained in the [product documentation in more detail](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)</span></span>
+      - <span data-ttu-id="dccdb-135">在收到訊息時，不適用`ReceiveMode.receiveAndDelete`模式。</span><span class="sxs-lookup"><span data-stu-id="dccdb-135">Not applicable when the message is received in `ReceiveMode.receiveAndDelete` mode.</span></span>
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-136">訊息識別碼是應用程式定義的值，可唯一識別訊息及其承載。</span><span class="sxs-lookup"><span data-stu-id="dccdb-136">The message identifier is an application-defined value that uniquely identifies the message and its payload.</span></span>
+
+      <span data-ttu-id="dccdb-137">注意：不允許使用不是整數的數字。</span><span class="sxs-lookup"><span data-stu-id="dccdb-137">Note: Numbers that are not whole integers are not allowed.</span></span>
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-138">傳送訊息至分割的實體資料分割索引鍵。</span><span class="sxs-lookup"><span data-stu-id="dccdb-138">The partition key for sending a message to a partitioned entity.</span></span>
+      <span data-ttu-id="dccdb-139">最大長度為 128 個字元。</span><span class="sxs-lookup"><span data-stu-id="dccdb-139">Maximum length is 128 characters.</span></span> <span data-ttu-id="dccdb-140">針對[分割的實體](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning)，設定此值可將相關訊息指派到相同的內部資料分割，如此便能正確記錄提交順序。</span><span class="sxs-lookup"><span data-stu-id="dccdb-140">For [partitioned entities](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), setting this value enables assigning related messages to the same internal partition, so that submission sequence order is correctly recorded.</span></span> <span data-ttu-id="dccdb-141">資料分割會由雜湊函式透過此值來選擇，無法直接選擇。</span><span class="sxs-lookup"><span data-stu-id="dccdb-141">The partition is chosen by a hash function over this value and cannot be chosen directly.</span></span>
+      - <span data-ttu-id="dccdb-142">對於工作階段感知的實體，`sessionId`屬性會覆寫此值。</span><span class="sxs-lookup"><span data-stu-id="dccdb-142">For session-aware entities, the `sessionId` property overrides this value.</span></span>
+      - <span data-ttu-id="dccdb-143">對於非分割實體，將忽略資料分割索引鍵</span><span class="sxs-lookup"><span data-stu-id="dccdb-143">For non partitioned entities, partition key will be ignored</span></span>
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-144">若要將回覆傳送給實體的位址。</span><span class="sxs-lookup"><span data-stu-id="dccdb-144">The address of an entity to send replies to.</span></span> <span data-ttu-id="dccdb-145">這個選擇性且由應用程式定義的值，乃是向訊息接收者表示回覆路徑的標準方法。</span><span class="sxs-lookup"><span data-stu-id="dccdb-145">This optional and application-defined value is a standard way to express a reply path to the receiver of the message.</span></span> <span data-ttu-id="dccdb-146">當傳送者預期收到回覆時，會將值設為預期回覆要送往的佇列或主題絕對或相對路徑。</span><span class="sxs-lookup"><span data-stu-id="dccdb-146">When a sender expects a reply, it sets the value to the absolute or relative path of the queue or topic it expects the reply to be sent to.</span></span> <span data-ttu-id="dccdb-147">請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="dccdb-147">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-148">工作階段識別項加強`replyTo`位址。</span><span class="sxs-lookup"><span data-stu-id="dccdb-148">The session identifier augmenting the `replyTo` address.</span></span>
+      <span data-ttu-id="dccdb-149">最大長度為 128 個字元。</span><span class="sxs-lookup"><span data-stu-id="dccdb-149">Maximum length is 128 characters.</span></span> <span data-ttu-id="dccdb-150">此值會擴大 ReplyTo 資訊，並且指定它應該傳送到回覆實體時針對回覆設定 SessionId。</span><span class="sxs-lookup"><span data-stu-id="dccdb-150">This value augments the ReplyTo information and specifies which SessionId should be set for the reply when sent to the reply entity.</span></span>
+      <span data-ttu-id="dccdb-151">請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="dccdb-151">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-152">日期和時間-utc 時區的訊息將會加入佇列中。</span><span class="sxs-lookup"><span data-stu-id="dccdb-152">The date and time in UTC at which the message will be enqueued.</span></span> <span data-ttu-id="dccdb-153">這個屬性傳回的時間-utc 時區;設定屬性時，所提供的日期時間值也必須以 utc 格式。</span><span class="sxs-lookup"><span data-stu-id="dccdb-153">This property returns the time in UTC; when setting the property, the supplied DateTime value must also be in UTC.</span></span> <span data-ttu-id="dccdb-154">這個值是延遲的訊息傳送。</span><span class="sxs-lookup"><span data-stu-id="dccdb-154">This value is for delayed message sending.</span></span>
+      <span data-ttu-id="dccdb-155">它會利用延遲傳送至特定的時間，以在未來的訊息。</span><span class="sxs-lookup"><span data-stu-id="dccdb-155">It is utilized to delay messages sending to a specific time in the future.</span></span> <span data-ttu-id="dccdb-156">訊息加入佇列時間並不表示訊息會傳送一次。</span><span class="sxs-lookup"><span data-stu-id="dccdb-156">Message enqueuing time does not mean that the message will be sent at the same time.</span></span> <span data-ttu-id="dccdb-157">它會取得已加入佇列，但實際的傳送時間取決於佇列的工作負載和其狀態。</span><span class="sxs-lookup"><span data-stu-id="dccdb-157">It will get enqueued, but the actual sending time depends on the queue's workload and its state.</span></span>
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-158">服務匯流排指派給訊息的唯一號碼。</span><span class="sxs-lookup"><span data-stu-id="dccdb-158">The unique number assigned to a message by Service Bus.</span></span>
+      <span data-ttu-id="dccdb-159">序號是指派給訊息的唯一 64 位元整數，會由訊息代理程式和函式所接收並儲存，以作為真正的識別碼。</span><span class="sxs-lookup"><span data-stu-id="dccdb-159">The sequence number is a unique 64-bit integer assigned to a message as it is accepted and stored by the broker and functions as its true identifier.</span></span> <span data-ttu-id="dccdb-160">對於分割的實體，最前面的 16 位元會反映分割區識別碼。</span><span class="sxs-lookup"><span data-stu-id="dccdb-160">For partitioned entities, the topmost 16 bits reflect the partition identifier.</span></span> <span data-ttu-id="dccdb-161">序號會單純地增加。</span><span class="sxs-lookup"><span data-stu-id="dccdb-161">Sequence numbers monotonically increase.</span></span>
+      <span data-ttu-id="dccdb-162">它們會在 48 - 64 位元範圍用盡時回復為 0。</span><span class="sxs-lookup"><span data-stu-id="dccdb-162">They roll over to 0 when the 48-64 bit range is exhausted.</span></span>
+
+      <span data-ttu-id="dccdb-163">**最大的安全整數**Javascript 目前支援的`2^53 - 1`。</span><span class="sxs-lookup"><span data-stu-id="dccdb-163">**Max safe integer** that Javascript currently supports is `2^53 - 1`.</span></span> <span data-ttu-id="dccdb-164">序號是 AMQP`Long`類型可以是最多 64 位元。</span><span class="sxs-lookup"><span data-stu-id="dccdb-164">The sequence number is an AMQP `Long` type which can be upto 64 bits long.</span></span> <span data-ttu-id="dccdb-165">若要代表我們使用名為媒體櫃[long.js](https://github.com/dcodeIO/long.js)。</span><span class="sxs-lookup"><span data-stu-id="dccdb-165">To represent that we are using a library named [long.js](https://github.com/dcodeIO/long.js).</span></span> <span data-ttu-id="dccdb-166">我們希望客戶能夠使用\*\* `Long` \*\*此程式庫所匯出的型別。</span><span class="sxs-lookup"><span data-stu-id="dccdb-166">We expect customers to use the **`Long`** type exported by this library.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-167">工作階段感知的實體的工作階段識別碼。</span><span class="sxs-lookup"><span data-stu-id="dccdb-167">The session identifier for a session-aware entity.</span></span> <span data-ttu-id="dccdb-168">最大長度為 128 個字元。</span><span class="sxs-lookup"><span data-stu-id="dccdb-168">Maximum length is 128 characters.</span></span> <span data-ttu-id="dccdb-169">對於工作階段感知的實體，這個應用程式定義的值會指定訊息的工作階段關係。</span><span class="sxs-lookup"><span data-stu-id="dccdb-169">For session-aware entities, this application-defined value specifies the session affiliation of the message.</span></span> <span data-ttu-id="dccdb-170">具有相同工作階段識別碼的訊息會受限於摘要鎖定，並且能夠確實地依序處理和分離信號。</span><span class="sxs-lookup"><span data-stu-id="dccdb-170">Messages with the same session identifier are subject to summary locking and enable exact in-order processing and demultiplexing.</span></span> <span data-ttu-id="dccdb-171">對於非工作階段感知的實體，則會忽略此值。</span><span class="sxs-lookup"><span data-stu-id="dccdb-171">For session-unaware entities, this value is ignored.</span></span>
+      <span data-ttu-id="dccdb-172">[訊息工作階段](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions)。</span><span class="sxs-lookup"><span data-stu-id="dccdb-172">[Message Sessions](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).</span></span>
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-173">訊息的存留時間值。</span><span class="sxs-lookup"><span data-stu-id="dccdb-173">The message’s time to live value.</span></span> <span data-ttu-id="dccdb-174">這個值是訊息到期之前的相對持續時間、 從即時訊息接受並儲存訊息代理程式，因為在擷取`enqueuedTimeUtc`。</span><span class="sxs-lookup"><span data-stu-id="dccdb-174">This value is the relative duration after which the message expires, starting from the instant the message has been accepted and stored by the broker, as captured in `enqueuedTimeUtc`.</span></span> <span data-ttu-id="dccdb-175">未明確設定時，所使用的值是相對的佇列或主題 DefaultTimeToLive。</span><span class="sxs-lookup"><span data-stu-id="dccdb-175">When not set explicitly, the assumed value is the DefaultTimeToLive for the respective queue or topic.</span></span> <span data-ttu-id="dccdb-176">訊息層級`timeToLive`值長度不能比實體的 DefaultTimeToLive 設定，而且以無訊息方式調整如果是這樣。</span><span class="sxs-lookup"><span data-stu-id="dccdb-176">A message-level `timeToLive` value cannot be longer than the entity''s DefaultTimeToLive setting and it is silently adjusted if it does.</span></span> <span data-ttu-id="dccdb-177">請參閱[到期](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration)。</span><span class="sxs-lookup"><span data-stu-id="dccdb-177">See [Expiration](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).</span></span>'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dccdb-178">[到] 地址。</span><span class="sxs-lookup"><span data-stu-id="dccdb-178">The "to" address.</span></span> <span data-ttu-id="dccdb-179">這個屬性乃是保留以供日後路由傳送案例使用，訊息代理程式目前會忽略這個屬性。</span><span class="sxs-lookup"><span data-stu-id="dccdb-179">This property is reserved for future use in routing scenarios and presently ignored by the broker itself.</span></span> <span data-ttu-id="dccdb-180">應用程式可以使用此值，在規則驅動[自動轉送鏈結](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding)案例，以指出預期的邏輯目的地的訊息。</span><span class="sxs-lookup"><span data-stu-id="dccdb-180">Applications can use this value in rule-driven [auto-forward chaining](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scenarios to indicate the intended logical destination of the message.</span></span>'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="dccdb-181">應用程式特定的屬性可以用於自訂的訊息中繼資料。</span><span class="sxs-lookup"><span data-stu-id="dccdb-181">The application specific properties which can be used for custom message metadata.</span></span>
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dccdb-182">將訊息傳送到實體，透過資料分割的傳輸佇列資料分割索引鍵。</span><span class="sxs-lookup"><span data-stu-id="dccdb-182">The partition key for sending a message into an entity via a partitioned transfer queue.</span></span> <span data-ttu-id="dccdb-183">最大長度為 128 個字元。</span><span class="sxs-lookup"><span data-stu-id="dccdb-183">Maximum length is 128 characters.</span></span> <span data-ttu-id="dccdb-184">如果透過傳輸佇列的交易範圍內傳送一則訊息，這個值會選取傳輸佇列資料分割：這是功能上相當於`partitionKey`屬性和可確保訊息會保留一起並循序時才傳送。</span><span class="sxs-lookup"><span data-stu-id="dccdb-184">If a message is sent via a transfer queue in the scope of a transaction, this value selects the transfer queue partition: This is functionally equivalent to `partitionKey` property and ensures that messages are kept together and in order as they are transferred.</span></span>
+      <span data-ttu-id="dccdb-185">請參閱[傳輸，透過傳送](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via)。</span><span class="sxs-lookup"><span data-stu-id="dccdb-185">See [Transfers and Send Via](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).</span></span>
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceivedMessageInfo'
+    name: ReceivedMessageInfo
+    spec.typeScript:
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+  - uid: '@azure/service-bus.DeadLetterOptions'
+    name: DeadLetterOptions
+    spec.typeScript:
+      - name: DeadLetterOptions
+        fullName: DeadLetterOptions
+        uid: '@azure/service-bus.DeadLetterOptions'
