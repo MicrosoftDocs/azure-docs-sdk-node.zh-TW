@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    fullName: RollingUpgradePolicy
+    children:
+      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    langs:
+      - typeScript
+    type: interface
+    summary: 執行輪流升級時所使用的設定參數。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    name: maxBatchInstancePercent
+    fullName: maxBatchInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 將會同時升級一個批次中輪流升級的總虛擬機器執行個體的最大百分比。 因為這是最大值，狀況不良的執行個體之前或之後的批次中可能會導致執行個體的百分比，以確保較高的可靠性降低批次中。 此參數的預設值為 20%。
+    optional: true
+    syntax:
+      content: 'maxBatchInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+    name: maxUnhealthyInstancePercent
+    fullName: maxUnhealthyInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 總計的虛擬機器中的執行個體可以同時狀況不良，因為升級，或要尋找處於狀況不良狀態的虛擬機器健康狀態檢查之前中止輪流升級的擴展集最大百分比。 在啟動任何批次之前，將會檢查這個條件約束。 此參數的預設值為 20%。
+    optional: true
+    syntax:
+      content: 'maxUnhealthyInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+    name: maxUnhealthyUpgradedInstancePercent
+    fullName: maxUnhealthyUpgradedInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 升級的虛擬機器執行個體處於狀況不良的狀態可找到的最大百分比。 每個批次升級後，將會發生這項檢查。 如果曾經超過這個百分比，輪流更新就會中止。 此參數的預設值為 20%。
+    optional: true
+    syntax:
+      content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    name: pauseTimeBetweenBatches
+    fullName: pauseTimeBetweenBatches
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 之間的等待時間完成一個批次中的所有虛擬機器的更新，以及啟動下一個批次。 持續時間應指定採用 ISO 8601 格式。 預設值為 0 秒 (PT0S)。
+    optional: true
+    syntax:
+      content: 'pauseTimeBetweenBatches?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
