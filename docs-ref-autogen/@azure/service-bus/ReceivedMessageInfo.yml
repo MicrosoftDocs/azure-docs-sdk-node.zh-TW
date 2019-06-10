@@ -1,0 +1,399 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceivedMessageInfo'
+    name: ReceivedMessageInfo
+    fullName: ReceivedMessageInfo
+    children:
+      - '@azure/service-bus.ReceivedMessageInfo.body'
+      - '@azure/service-bus.ReceivedMessageInfo.contentType'
+      - '@azure/service-bus.ReceivedMessageInfo.correlationId'
+      - '@azure/service-bus.ReceivedMessageInfo.deadLetterSource'
+      - '@azure/service-bus.ReceivedMessageInfo.deliveryCount'
+      - '@azure/service-bus.ReceivedMessageInfo.enqueuedSequenceNumber'
+      - '@azure/service-bus.ReceivedMessageInfo.enqueuedTimeUtc'
+      - '@azure/service-bus.ReceivedMessageInfo.expiresAtUtc'
+      - '@azure/service-bus.ReceivedMessageInfo.label'
+      - '@azure/service-bus.ReceivedMessageInfo.lockedUntilUtc'
+      - '@azure/service-bus.ReceivedMessageInfo.lockToken'
+      - '@azure/service-bus.ReceivedMessageInfo.messageId'
+      - '@azure/service-bus.ReceivedMessageInfo.partitionKey'
+      - '@azure/service-bus.ReceivedMessageInfo.replyTo'
+      - '@azure/service-bus.ReceivedMessageInfo.replyToSessionId'
+      - '@azure/service-bus.ReceivedMessageInfo.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ReceivedMessageInfo.sequenceNumber'
+      - '@azure/service-bus.ReceivedMessageInfo.sessionId'
+      - '@azure/service-bus.ReceivedMessageInfo.timeToLive'
+      - '@azure/service-bus.ReceivedMessageInfo.to'
+      - '@azure/service-bus.ReceivedMessageInfo.userProperties'
+      - '@azure/service-bus.ReceivedMessageInfo.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="e0428-101">說明 預覽作業期間收到來自服務匯流排的訊息，並因此無法安置。</span><span class="sxs-lookup"><span data-stu-id="e0428-101">Describes the message received from Service Bus during peek operations and so cannot be settled.</span></span>
+    extends:
+      name: '@azure/service-bus.SendableMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0428-102">需要傳送或接收訊息內文。</span><span class="sxs-lookup"><span data-stu-id="e0428-102">The message body that needs to be sent or is received.</span></span>
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-103">訊息內容型別。</span><span class="sxs-lookup"><span data-stu-id="e0428-103">The content type of the message.</span></span> <span data-ttu-id="e0428-104">選擇性地說明訊息的承載 RFC2045，第 5 節，例如"application/json"的格式的描述項。</span><span class="sxs-lookup"><span data-stu-id="e0428-104">Optionally describes the payload of the message, with a descriptor following the format of RFC2045, Section 5, for example "application/json".</span></span>'
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-105">相互關聯識別碼，可讓應用程式以供相互關聯，例如，反映正要回覆之訊息的 MessageId，指定訊息的內容。</span><span class="sxs-lookup"><span data-stu-id="e0428-105">The correlation identifier that allows an application to specify a context for the message for the purposes of correlation, for example reflecting the MessageId of a message that is being replied to.</span></span>
+      <span data-ttu-id="e0428-106">請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="e0428-106">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-107">{string}[deadLetterSource]此訊息之前已加入佇列，這是寄不出的訂用帳戶之佇列的名稱。</span><span class="sxs-lookup"><span data-stu-id="e0428-107">{string} [deadLetterSource] The name of the queue or subscription that this message was enqueued on, before it was deadlettered.</span></span> <span data-ttu-id="e0428-108">只會設定於已成為無效信件且後續會從無效信件佇列自動轉送到另一個實體的訊息中。</span><span class="sxs-lookup"><span data-stu-id="e0428-108">Only set in messages that have been dead-lettered and subsequently auto-forwarded from the dead-letter queue to another entity.</span></span> <span data-ttu-id="e0428-109">指示其中訊息已成為無效信件的實體。</span><span class="sxs-lookup"><span data-stu-id="e0428-109">Indicates the entity in which the message was dead-lettered.</span></span>'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-110">針對此訊息嘗試進行的傳遞次數。</span><span class="sxs-lookup"><span data-stu-id="e0428-110">Number of deliveries that have been attempted for this message.</span></span> <span data-ttu-id="e0428-111">當訊息鎖定到期，或使用明確放棄訊息，計數會漸增`abandon()`訊息上的方法。</span><span class="sxs-lookup"><span data-stu-id="e0428-111">The count is incremented when a message lock expires, or the message is explicitly abandoned using the `abandon()` method on the message.</span></span>'
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-112">訊息的原始的順序號碼。</span><span class="sxs-lookup"><span data-stu-id="e0428-112">The original sequence number of the message.</span></span> <span data-ttu-id="e0428-113">對於已自動轉送的訊息，此屬性會反映訊息原始提交時首次指派給訊息的序號。</span><span class="sxs-lookup"><span data-stu-id="e0428-113">For messages that have been auto-forwarded, this property reflects the sequence number that had first been assigned to the message at its original point of submission.</span></span>'
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0428-114">UTC 時刻的訊息已接受並儲存在服務匯流排。</span><span class="sxs-lookup"><span data-stu-id="e0428-114">The UTC instant at which the message has been accepted and stored in Service Bus.</span></span>
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-115">由於到期而將訊息標示為移除且無法再從實體中擷取的 UTC 時刻。</span><span class="sxs-lookup"><span data-stu-id="e0428-115">The UTC instant at which the message is marked for removal and no longer available for retrieval from the entity due to expiration.</span></span> <span data-ttu-id="e0428-116">這個屬性從訊息中的 2 個其他屬性計算： `enqueuedTimeUtc`  +  `timeToLive`。</span><span class="sxs-lookup"><span data-stu-id="e0428-116">This property is computed from 2 other properties on the message: `enqueuedTimeUtc` + `timeToLive`.</span></span>'
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-117">應用程式專用標籤。</span><span class="sxs-lookup"><span data-stu-id="e0428-117">The application specific label.</span></span> <span data-ttu-id="e0428-118">這個屬性可讓應用程式，以指出要在標準化接收者的訊息的目的。</span><span class="sxs-lookup"><span data-stu-id="e0428-118">This property enables the application to indicate the purpose of the message to the receiver in a standardized.</span></span> <span data-ttu-id="e0428-119">方式，類似於電子郵件主旨列。</span><span class="sxs-lookup"><span data-stu-id="e0428-119">fashion, similar to an email subject line.</span></span> <span data-ttu-id="e0428-120">對應的 AMQP 屬性是"subject"。</span><span class="sxs-lookup"><span data-stu-id="e0428-120">The mapped AMQP property is "subject".</span></span>'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-121">在佇列/訂用帳戶中，鎖定則訊息會保留截止的 UTC 時刻。</span><span class="sxs-lookup"><span data-stu-id="e0428-121">The UTC instant until which the message is held locked in the queue/subscription.</span></span>
+      <span data-ttu-id="e0428-122">當鎖定到期時，`deliveryCount`會遞增，訊息就再次可供擷取。</span><span class="sxs-lookup"><span data-stu-id="e0428-122">When the lock expires, the `deliveryCount` is incremented and the message is again available for retrieval.</span></span>
+      - <span data-ttu-id="e0428-123">在收到訊息時，不適用`ReceiveMode.receiveAndDelete`模式。</span><span class="sxs-lookup"><span data-stu-id="e0428-123">Not applicable when the message is received in `ReceiveMode.receiveAndDelete` mode.</span></span>
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-124">鎖定權杖是鎖定中，訊息代理程式所持有的參考`ReceiveMode.PeekLock`模式。</span><span class="sxs-lookup"><span data-stu-id="e0428-124">The lock token is a reference to the lock that is being held by the broker in `ReceiveMode.PeekLock` mode.</span></span> <span data-ttu-id="e0428-125">鎖定會在內部使用選定訊息中所述[更詳細的產品文件](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)</span><span class="sxs-lookup"><span data-stu-id="e0428-125">Locks are used internally settle messages as explained in the [product documentation in more detail](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)</span></span>
+      - <span data-ttu-id="e0428-126">在收到訊息時，不適用`ReceiveMode.receiveAndDelete`模式。</span><span class="sxs-lookup"><span data-stu-id="e0428-126">Not applicable when the message is received in `ReceiveMode.receiveAndDelete` mode.</span></span>
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-127">訊息識別碼是應用程式定義的值，可唯一識別訊息及其承載。</span><span class="sxs-lookup"><span data-stu-id="e0428-127">The message identifier is an application-defined value that uniquely identifies the message and its payload.</span></span>
+
+      <span data-ttu-id="e0428-128">注意：不允許使用不是整數的數字。</span><span class="sxs-lookup"><span data-stu-id="e0428-128">Note: Numbers that are not whole integers are not allowed.</span></span>
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-129">傳送訊息至分割的實體資料分割索引鍵。</span><span class="sxs-lookup"><span data-stu-id="e0428-129">The partition key for sending a message to a partitioned entity.</span></span>
+      <span data-ttu-id="e0428-130">最大長度為 128 個字元。</span><span class="sxs-lookup"><span data-stu-id="e0428-130">Maximum length is 128 characters.</span></span> <span data-ttu-id="e0428-131">針對[分割的實體](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning)，設定此值可將相關訊息指派到相同的內部資料分割，如此便能正確記錄提交順序。</span><span class="sxs-lookup"><span data-stu-id="e0428-131">For [partitioned entities](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), setting this value enables assigning related messages to the same internal partition, so that submission sequence order is correctly recorded.</span></span> <span data-ttu-id="e0428-132">資料分割會由雜湊函式透過此值來選擇，無法直接選擇。</span><span class="sxs-lookup"><span data-stu-id="e0428-132">The partition is chosen by a hash function over this value and cannot be chosen directly.</span></span>
+      - <span data-ttu-id="e0428-133">對於工作階段感知的實體，`sessionId`屬性會覆寫此值。</span><span class="sxs-lookup"><span data-stu-id="e0428-133">For session-aware entities, the `sessionId` property overrides this value.</span></span>
+      - <span data-ttu-id="e0428-134">對於非分割實體，將忽略資料分割索引鍵</span><span class="sxs-lookup"><span data-stu-id="e0428-134">For non partitioned entities, partition key will be ignored</span></span>
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-135">若要將回覆傳送給實體的位址。</span><span class="sxs-lookup"><span data-stu-id="e0428-135">The address of an entity to send replies to.</span></span> <span data-ttu-id="e0428-136">這個選擇性且由應用程式定義的值，乃是向訊息接收者表示回覆路徑的標準方法。</span><span class="sxs-lookup"><span data-stu-id="e0428-136">This optional and application-defined value is a standard way to express a reply path to the receiver of the message.</span></span> <span data-ttu-id="e0428-137">當傳送者預期收到回覆時，會將值設為預期回覆要送往的佇列或主題絕對或相對路徑。</span><span class="sxs-lookup"><span data-stu-id="e0428-137">When a sender expects a reply, it sets the value to the absolute or relative path of the queue or topic it expects the reply to be sent to.</span></span> <span data-ttu-id="e0428-138">請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="e0428-138">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-139">工作階段識別項加強`replyTo`位址。</span><span class="sxs-lookup"><span data-stu-id="e0428-139">The session identifier augmenting the `replyTo` address.</span></span>
+      <span data-ttu-id="e0428-140">最大長度為 128 個字元。</span><span class="sxs-lookup"><span data-stu-id="e0428-140">Maximum length is 128 characters.</span></span> <span data-ttu-id="e0428-141">此值會擴大 ReplyTo 資訊，並且指定它應該傳送到回覆實體時針對回覆設定 SessionId。</span><span class="sxs-lookup"><span data-stu-id="e0428-141">This value augments the ReplyTo information and specifies which SessionId should be set for the reply when sent to the reply entity.</span></span>
+      <span data-ttu-id="e0428-142">請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="e0428-142">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-143">日期和時間-utc 時區的訊息將會加入佇列中。</span><span class="sxs-lookup"><span data-stu-id="e0428-143">The date and time in UTC at which the message will be enqueued.</span></span> <span data-ttu-id="e0428-144">這個屬性傳回的時間-utc 時區;設定屬性時，所提供的日期時間值也必須以 utc 格式。</span><span class="sxs-lookup"><span data-stu-id="e0428-144">This property returns the time in UTC; when setting the property, the supplied DateTime value must also be in UTC.</span></span> <span data-ttu-id="e0428-145">這個值是延遲的訊息傳送。</span><span class="sxs-lookup"><span data-stu-id="e0428-145">This value is for delayed message sending.</span></span>
+      <span data-ttu-id="e0428-146">它會利用延遲傳送至特定的時間，以在未來的訊息。</span><span class="sxs-lookup"><span data-stu-id="e0428-146">It is utilized to delay messages sending to a specific time in the future.</span></span> <span data-ttu-id="e0428-147">訊息加入佇列時間並不表示訊息會傳送一次。</span><span class="sxs-lookup"><span data-stu-id="e0428-147">Message enqueuing time does not mean that the message will be sent at the same time.</span></span> <span data-ttu-id="e0428-148">它會取得已加入佇列，但實際的傳送時間取決於佇列的工作負載和其狀態。</span><span class="sxs-lookup"><span data-stu-id="e0428-148">It will get enqueued, but the actual sending time depends on the queue's workload and its state.</span></span>
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-149">服務匯流排指派給訊息的唯一號碼。</span><span class="sxs-lookup"><span data-stu-id="e0428-149">The unique number assigned to a message by Service Bus.</span></span>
+      <span data-ttu-id="e0428-150">序號是指派給訊息的唯一 64 位元整數，會由訊息代理程式和函式所接收並儲存，以作為真正的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e0428-150">The sequence number is a unique 64-bit integer assigned to a message as it is accepted and stored by the broker and functions as its true identifier.</span></span> <span data-ttu-id="e0428-151">對於分割的實體，最前面的 16 位元會反映分割區識別碼。</span><span class="sxs-lookup"><span data-stu-id="e0428-151">For partitioned entities, the topmost 16 bits reflect the partition identifier.</span></span> <span data-ttu-id="e0428-152">序號會單純地增加。</span><span class="sxs-lookup"><span data-stu-id="e0428-152">Sequence numbers monotonically increase.</span></span>
+      <span data-ttu-id="e0428-153">它們會在 48 - 64 位元範圍用盡時回復為 0。</span><span class="sxs-lookup"><span data-stu-id="e0428-153">They roll over to 0 when the 48-64 bit range is exhausted.</span></span>
+
+      <span data-ttu-id="e0428-154">**最大的安全整數**Javascript 目前支援的`2^53 - 1`。</span><span class="sxs-lookup"><span data-stu-id="e0428-154">**Max safe integer** that Javascript currently supports is `2^53 - 1`.</span></span> <span data-ttu-id="e0428-155">序號是 AMQP`Long`類型可以是最多 64 位元。</span><span class="sxs-lookup"><span data-stu-id="e0428-155">The sequence number is an AMQP `Long` type which can be upto 64 bits long.</span></span> <span data-ttu-id="e0428-156">若要代表我們使用名為媒體櫃[long.js](https://github.com/dcodeIO/long.js)。</span><span class="sxs-lookup"><span data-stu-id="e0428-156">To represent that we are using a library named [long.js](https://github.com/dcodeIO/long.js).</span></span> <span data-ttu-id="e0428-157">我們希望客戶能夠使用\*\* `Long` \*\*此程式庫所匯出的型別。</span><span class="sxs-lookup"><span data-stu-id="e0428-157">We expect customers to use the **`Long`** type exported by this library.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-158">工作階段感知的實體的工作階段識別碼。</span><span class="sxs-lookup"><span data-stu-id="e0428-158">The session identifier for a session-aware entity.</span></span> <span data-ttu-id="e0428-159">最大長度為 128 個字元。</span><span class="sxs-lookup"><span data-stu-id="e0428-159">Maximum length is 128 characters.</span></span> <span data-ttu-id="e0428-160">對於工作階段感知的實體，這個應用程式定義的值會指定訊息的工作階段關係。</span><span class="sxs-lookup"><span data-stu-id="e0428-160">For session-aware entities, this application-defined value specifies the session affiliation of the message.</span></span> <span data-ttu-id="e0428-161">具有相同工作階段識別碼的訊息會受限於摘要鎖定，並且能夠確實地依序處理和分離信號。</span><span class="sxs-lookup"><span data-stu-id="e0428-161">Messages with the same session identifier are subject to summary locking and enable exact in-order processing and demultiplexing.</span></span> <span data-ttu-id="e0428-162">對於非工作階段感知的實體，則會忽略此值。</span><span class="sxs-lookup"><span data-stu-id="e0428-162">For session-unaware entities, this value is ignored.</span></span>
+      <span data-ttu-id="e0428-163">[訊息工作階段](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions)。</span><span class="sxs-lookup"><span data-stu-id="e0428-163">[Message Sessions](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).</span></span>
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-164">訊息的存留時間值。</span><span class="sxs-lookup"><span data-stu-id="e0428-164">The message’s time to live value.</span></span> <span data-ttu-id="e0428-165">這個值是訊息到期之前的相對持續時間、 從即時訊息接受並儲存訊息代理程式，因為在擷取`enqueuedTimeUtc`。</span><span class="sxs-lookup"><span data-stu-id="e0428-165">This value is the relative duration after which the message expires, starting from the instant the message has been accepted and stored by the broker, as captured in `enqueuedTimeUtc`.</span></span> <span data-ttu-id="e0428-166">未明確設定時，所使用的值是相對的佇列或主題 DefaultTimeToLive。</span><span class="sxs-lookup"><span data-stu-id="e0428-166">When not set explicitly, the assumed value is the DefaultTimeToLive for the respective queue or topic.</span></span> <span data-ttu-id="e0428-167">訊息層級`timeToLive`值長度不能比實體的 DefaultTimeToLive 設定，而且以無訊息方式調整如果是這樣。</span><span class="sxs-lookup"><span data-stu-id="e0428-167">A message-level `timeToLive` value cannot be longer than the entity''s DefaultTimeToLive setting and it is silently adjusted if it does.</span></span> <span data-ttu-id="e0428-168">請參閱[到期](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration)。</span><span class="sxs-lookup"><span data-stu-id="e0428-168">See [Expiration](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).</span></span>'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0428-169">[到] 地址。</span><span class="sxs-lookup"><span data-stu-id="e0428-169">The "to" address.</span></span> <span data-ttu-id="e0428-170">這個屬性乃是保留以供日後路由傳送案例使用，訊息代理程式目前會忽略這個屬性。</span><span class="sxs-lookup"><span data-stu-id="e0428-170">This property is reserved for future use in routing scenarios and presently ignored by the broker itself.</span></span> <span data-ttu-id="e0428-171">應用程式可以使用此值，在規則驅動[自動轉送鏈結](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding)案例，以指出預期的邏輯目的地的訊息。</span><span class="sxs-lookup"><span data-stu-id="e0428-171">Applications can use this value in rule-driven [auto-forward chaining](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scenarios to indicate the intended logical destination of the message.</span></span>'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0428-172">應用程式特定的屬性可以用於自訂的訊息中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e0428-172">The application specific properties which can be used for custom message metadata.</span></span>
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e0428-173">將訊息傳送到實體，透過資料分割的傳輸佇列資料分割索引鍵。</span><span class="sxs-lookup"><span data-stu-id="e0428-173">The partition key for sending a message into an entity via a partitioned transfer queue.</span></span> <span data-ttu-id="e0428-174">最大長度為 128 個字元。</span><span class="sxs-lookup"><span data-stu-id="e0428-174">Maximum length is 128 characters.</span></span> <span data-ttu-id="e0428-175">如果透過傳輸佇列的交易範圍內傳送一則訊息，這個值會選取傳輸佇列資料分割：這是功能上相當於`partitionKey`屬性和可確保訊息會保留一起並循序時才傳送。</span><span class="sxs-lookup"><span data-stu-id="e0428-175">If a message is sent via a transfer queue in the scope of a transaction, this value selects the transfer queue partition: This is functionally equivalent to `partitionKey` property and ensures that messages are kept together and in order as they are transferred.</span></span>
+      <span data-ttu-id="e0428-176">請參閱[傳輸，透過傳送](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via)。</span><span class="sxs-lookup"><span data-stu-id="e0428-176">See [Transfers and Send Via](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).</span></span>
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
