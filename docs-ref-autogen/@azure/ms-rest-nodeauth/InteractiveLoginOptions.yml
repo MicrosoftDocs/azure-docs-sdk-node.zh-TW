@@ -1,0 +1,140 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions'
+    name: InteractiveLoginOptions
+    fullName: InteractiveLoginOptions
+    children:
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.clientId'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.domain'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.environment'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.language'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenAudience'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenCache'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.userCodeResponseLogger'
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: '@azure/ms-rest-nodeauth.LoginWithUsernamePasswordOptions'
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.clientId'
+    name: clientId
+    fullName: clientId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[clientId]-active directory 應用程式用戶端識別碼。請參閱[適用於.Net 的 Active Directory 快速入門](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/)的範例。'
+    optional: true
+    syntax:
+      content: 'clientId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.domain'
+    name: domain
+    fullName: domain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[網域]-包含此應用程式的網域或租用戶識別碼。 預設值為 「 通用 」。'
+    optional: true
+    syntax:
+      content: 'domain?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.environment'
+    name: environment
+    fullName: environment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{AzureEnvironment}[環境]-向 Azure 環境。'
+    optional: true
+    syntax:
+      content: 'environment?: Environment'
+      return:
+        type:
+          - Environment
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.language'
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[語言]指定如何將訊息當地語系化為語言的程式碼。 預設值"en-我們"。'
+    optional: true
+    syntax:
+      content: 'language?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenAudience'
+    name: tokenAudience
+    fullName: tokenAudience
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {TokenAudience}[tokenAudience]-要求權杖的對象。 有效值為 '圖形'，'batch' 或任何其他資源例如 'https://vault.azure.net/'。
+      如果 tokenAudience '圖形' 則網域應該也提供和其值不應該預設 '常見' 租用戶。 它必須是字串 （最好能採用 guid 格式）。
+    optional: true
+    syntax:
+      content: 'tokenAudience?: TokenAudience'
+      return:
+        type:
+          - '@azure/ms-rest-nodeauth.TokenAudience'
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenCache'
+    name: tokenCache
+    fullName: tokenCache
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{TokenCache}[tokenCache]-權杖快取。 預設值為 MemoryCache 從 adal。'
+    optional: true
+    syntax:
+      content: 'tokenCache?: adal.TokenCache'
+      return:
+        type:
+          - adal.TokenCache
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.userCodeResponseLogger'
+    name: userCodeResponseLogger
+    fullName: userCodeResponseLogger
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{物件 | 函式}[userCodeResponseLogger]互動式登入所需的使用者程式碼的回應訊息記錄的記錄器。 當指定這個選項是 usercode 回應訊息將不會記錄至主控台。'
+    optional: true
+    syntax:
+      content: 'userCodeResponseLogger?: any'
+      return:
+        type:
+          - any
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithUsernamePasswordOptions'
+    name: LoginWithUsernamePasswordOptions
+    spec.typeScript:
+      - name: LoginWithUsernamePasswordOptions
+        fullName: LoginWithUsernamePasswordOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithUsernamePasswordOptions'
+  - uid: '@azure/ms-rest-nodeauth.TokenAudience'
+    name: TokenAudience
+    spec.typeScript:
+      - name: TokenAudience
+        fullName: TokenAudience
+        uid: '@azure/ms-rest-nodeauth.TokenAudience'
