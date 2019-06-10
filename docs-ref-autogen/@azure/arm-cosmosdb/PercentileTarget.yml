@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.PercentileTarget'
+    name: PercentileTarget
+    fullName: PercentileTarget
+    children:
+      - '@azure/arm-cosmosdb.PercentileTarget.listMetrics'
+      - '@azure/arm-cosmosdb.PercentileTarget.listMetrics_2'
+      - '@azure/arm-cosmosdb.PercentileTarget.listMetrics_1'
+      - '@azure/arm-cosmosdb.PercentileTarget.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表 PercentileTarget。
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileTarget.listMetrics'
+    name: 'listMetrics(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 擷取由指定的篩選條件，指定的帳戶的目標區域的計量。 此 url 是只能針對 PBS 和複寫延遲資料
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, targetRegion: string, filter: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: targetRegion
+          type:
+            - string
+          description: 資料會寫入至其中的目標區域。 Cosmos DB 區域中，文字和每個字之間的空格以大寫。
+        - id: filter
+          type:
+            - string
+          description: OData 篩選運算式，用來描述要傳回的度量資訊的子集。 可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。 支援的運算子是相等於
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PercentileTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileTarget.listMetrics_2'
+    name: 'listMetrics(string, string, string, string, RequestOptionsBase, ServiceCallback<PercentileMetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, targetRegion: string, filter: string, options: RequestOptionsBase, callback: ServiceCallback<PercentileMetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: targetRegion
+          type:
+            - string
+          description: 資料會寫入至其中的目標區域。 Cosmos DB 區域中，文字和每個字之間的空格以大寫。
+        - id: filter
+          type:
+            - string
+          description: OData 篩選運算式，用來描述要傳回的度量資訊的子集。 可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。 支援的運算子是相等於
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PercentileTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileTarget.listMetrics_1'
+    name: 'listMetrics(string, string, string, string, ServiceCallback<PercentileMetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, targetRegion: string, filter: string, callback: ServiceCallback<PercentileMetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組的名稱。
+        - id: accountName
+          type:
+            - string
+          description: Cosmos DB 資料庫帳戶名稱。
+        - id: targetRegion
+          type:
+            - string
+          description: 資料會寫入至其中的目標區域。 Cosmos DB 區域中，文字和每個字之間的空格以大寫。
+        - id: filter
+          type:
+            - string
+          description: OData 篩選運算式，用來描述要傳回的度量資訊的子集。 可篩選的參數是 name.value (名稱的度量，可以有一個或多個名稱)，startTime、 endTime 及 timeGrain。 支援的運算子是相等於
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PercentileTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileTarget.constructor'
+    name: PercentileTarget(CosmosDBManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立 PercentileTarget。
+    syntax:
+      content: 'new PercentileTarget(client: CosmosDBManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+    name: CosmosDBManagementClientContext
+    spec.typeScript:
+      - name: CosmosDBManagementClientContext
+        fullName: CosmosDBManagementClientContext
+        uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+    name: PercentileMetricListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PercentileMetricListResult
+        fullName: PercentileMetricListResult
+        uid: '@azure/arm-cosmosdb.PercentileMetricListResult'
+      - name: '>'
+        fullName: '>'

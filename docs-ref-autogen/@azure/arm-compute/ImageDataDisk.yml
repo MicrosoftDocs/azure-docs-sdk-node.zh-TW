@@ -1,0 +1,143 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.ImageDataDisk'
+    name: ImageDataDisk
+    fullName: ImageDataDisk
+    children:
+      - '@azure/arm-compute.ImageDataDisk.blobUri'
+      - '@azure/arm-compute.ImageDataDisk.caching'
+      - '@azure/arm-compute.ImageDataDisk.diskSizeGB'
+      - '@azure/arm-compute.ImageDataDisk.lun'
+      - '@azure/arm-compute.ImageDataDisk.managedDisk'
+      - '@azure/arm-compute.ImageDataDisk.snapshot'
+      - '@azure/arm-compute.ImageDataDisk.storageAccountType'
+    langs:
+      - typeScript
+    type: interface
+    summary: 說明資料磁碟。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.blobUri'
+    name: blobUri
+    fullName: blobUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 虛擬硬碟中。
+    optional: true
+    syntax:
+      content: 'blobUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定快取的需求。 <br><br> 可能的值包括： <br><br> **None** <br><br>
+      **唯讀** <br><br> **讀寫** <br><br> 預設值：**無標準儲存體。針對進階儲存體的 ReadOnly**。 可能的值包括：'None'、 'ReadOnly'，'ReadWrite'
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定空的資料磁碟的大小 （gb）。 此元素可用來覆寫中的虛擬機器映像磁碟的名稱。 <br><br> 這個值不能大於 1023 GB
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定資料磁碟的邏輯單元編號。 這個值用來識別在 VM 內的資料磁碟，並因此必須是唯一的每個資料磁碟連結至 VM。
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ManagedDisk。
+    optional: true
+    syntax:
+      content: 'managedDisk?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.snapshot'
+    name: snapshot
+    fullName: snapshot
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 快照集。
+    optional: true
+    syntax:
+      content: 'snapshot?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.storageAccountType'
+    name: storageAccountType
+    fullName: storageAccountType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定的受控磁碟的儲存體帳戶類型。 注意：UltraSSD_LRS 僅適用於資料磁碟，它不能具有 OS 磁碟。 可能的值包括：''Standard_LRS'', ''Premium_LRS'', ''StandardSSD_LRS'', ''UltraSSD_LRS'''
+    optional: true
+    syntax:
+      content: 'storageAccountType?: StorageAccountTypes'
+      return:
+        type:
+          - '@azure/arm-compute.StorageAccountTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.StorageAccountTypes'
+    name: StorageAccountTypes
+    spec.typeScript:
+      - name: StorageAccountTypes
+        fullName: StorageAccountTypes
+        uid: '@azure/arm-compute.StorageAccountTypes'
