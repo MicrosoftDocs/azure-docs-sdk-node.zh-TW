@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.ImageStorageProfile'
+    name: ImageStorageProfile
+    fullName: ImageStorageProfile
+    children:
+      - '@azure/arm-compute.ImageStorageProfile.dataDisks'
+      - '@azure/arm-compute.ImageStorageProfile.osDisk'
+      - '@azure/arm-compute.ImageStorageProfile.zoneResilient'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述儲存體設定檔。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageStorageProfile.dataDisks'
+    name: dataDisks
+    fullName: dataDisks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定用來將資料磁碟新增至虛擬機器的參數。 <br><br> 如需有關磁碟的詳細資訊，請參閱 <<c0> [ 關於 Azure 虛擬機器的磁碟和 Vhd](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)。'
+    optional: true
+    syntax:
+      content: 'dataDisks?: ImageDataDisk[]'
+      return:
+        type:
+          - '@azure/arm-compute.ImageDataDisk[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageStorageProfile.osDisk'
+    name: osDisk
+    fullName: osDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定虛擬機器所使用的作業系統磁碟的相關資訊。 <br><br>
+      如需有關磁碟的詳細資訊，請參閱 <<c0> [ 關於 Azure 虛擬機器的磁碟和 Vhd](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)。
+    optional: true
+    syntax:
+      content: 'osDisk?: ImageOSDisk'
+      return:
+        type:
+          - '@azure/arm-compute.ImageOSDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageStorageProfile.zoneResilient'
+    name: zoneResilient
+    fullName: zoneResilient
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定影像是否區域復原。 預設值為 false。 僅在提供區域備援儲存體 (ZRS) 的區域，就可以建立區域復原映像。
+    optional: true
+    syntax:
+      content: 'zoneResilient?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ImageDataDisk[]'
+    name: 'ImageDataDisk[]'
+    spec.typeScript:
+      - name: ImageDataDisk
+        fullName: ImageDataDisk
+        uid: '@azure/arm-compute.ImageDataDisk'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.ImageOSDisk'
+    name: ImageOSDisk
+    spec.typeScript:
+      - name: ImageOSDisk
+        fullName: ImageOSDisk
+        uid: '@azure/arm-compute.ImageOSDisk'

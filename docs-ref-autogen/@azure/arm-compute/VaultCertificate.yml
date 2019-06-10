@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VaultCertificate'
+    name: VaultCertificate
+    fullName: VaultCertificate
+    children:
+      - '@azure/arm-compute.VaultCertificate.certificateStore'
+      - '@azure/arm-compute.VaultCertificate.certificateUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述在金鑰保存庫中的單一憑證參考與此憑證應該位於 VM 上的位置。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateStore'
+    name: certificateStore
+    fullName: certificateStore
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 適用於 Windows Vm，指定憑證應加入的虛擬機器上的憑證存放區。 指定的憑證存放區是以隱含方式 LocalMachine 帳戶中。 <br><br>針對 Linux Vm，將憑證檔案放 /var/lib/waagent 目錄、 檔名底下&lt;UppercaseThumbprint&gt;.crt x509 憑證檔案並&lt;UppercaseThumbprint&gt;.prv私用的索引鍵。 這兩個檔案都.pem 格式。
+    optional: true
+    syntax:
+      content: 'certificateStore?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      這是憑證已上傳至金鑰保存庫的祕密的 URL。 將祕密新增至金鑰保存庫，請參閱[金鑰或密碼加入金鑰保存庫](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add)。 在此情況下，您的憑證必須是 Base64 編碼的下列 JSON 物件的編碼在 utf-8 中： <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

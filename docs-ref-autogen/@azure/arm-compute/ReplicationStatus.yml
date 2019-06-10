@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.ReplicationStatus'
+    name: ReplicationStatus
+    fullName: ReplicationStatus
+    children:
+      - '@azure/arm-compute.ReplicationStatus.aggregatedState'
+      - '@azure/arm-compute.ReplicationStatus.summary'
+    langs:
+      - typeScript
+    type: interface
+    summary: 這是資源庫映像版本的複寫狀態。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ReplicationStatus.aggregatedState'
+    name: aggregatedState
+    fullName: aggregatedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      這是依據所有區域的複寫狀態旗標的彙總的複寫狀態。
+      可能的值包括：'Unknown'，'InProgress'、 '已完成，顯示 「 失敗 」**附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'aggregatedState?: AggregatedReplicationState'
+      return:
+        type:
+          - '@azure/arm-compute.AggregatedReplicationState'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ReplicationStatus.summary'
+    name: summary
+    fullName: summary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      這是針對每個區域的複寫狀態的摘要。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'summary?: RegionalReplicationStatus[]'
+      return:
+        type:
+          - '@azure/arm-compute.RegionalReplicationStatus[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AggregatedReplicationState'
+    name: AggregatedReplicationState
+    spec.typeScript:
+      - name: AggregatedReplicationState
+        fullName: AggregatedReplicationState
+        uid: '@azure/arm-compute.AggregatedReplicationState'
+  - uid: '@azure/arm-compute.RegionalReplicationStatus[]'
+    name: 'RegionalReplicationStatus[]'
+    spec.typeScript:
+      - name: RegionalReplicationStatus
+        fullName: RegionalReplicationStatus
+        uid: '@azure/arm-compute.RegionalReplicationStatus'
+      - name: '[]'
+        fullName: '[]'
