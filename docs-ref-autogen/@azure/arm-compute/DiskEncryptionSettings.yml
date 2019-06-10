@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.DiskEncryptionSettings'
+    name: DiskEncryptionSettings
+    fullName: DiskEncryptionSettings
+    children:
+      - '@azure/arm-compute.DiskEncryptionSettings.diskEncryptionKey'
+      - '@azure/arm-compute.DiskEncryptionSettings.enabled'
+      - '@azure/arm-compute.DiskEncryptionSettings.keyEncryptionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述磁碟的加密設定
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskEncryptionSettings.diskEncryptionKey'
+    name: diskEncryptionKey
+    fullName: diskEncryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定磁碟加密金鑰，也就是金鑰保存庫密碼的位置。
+    optional: true
+    syntax:
+      content: 'diskEncryptionKey?: KeyVaultSecretReference'
+      return:
+        type:
+          - '@azure/arm-compute.KeyVaultSecretReference'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskEncryptionSettings.enabled'
+    name: enabled
+    fullName: enabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定是否應該在虛擬機器上啟用磁碟加密。
+    optional: true
+    syntax:
+      content: 'enabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskEncryptionSettings.keyEncryptionKey'
+    name: keyEncryptionKey
+    fullName: keyEncryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 金鑰保存庫中指定的金鑰加密金鑰的位置。
+    optional: true
+    syntax:
+      content: 'keyEncryptionKey?: KeyVaultKeyReference'
+      return:
+        type:
+          - '@azure/arm-compute.KeyVaultKeyReference'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.KeyVaultSecretReference'
+    name: KeyVaultSecretReference
+    spec.typeScript:
+      - name: KeyVaultSecretReference
+        fullName: KeyVaultSecretReference
+        uid: '@azure/arm-compute.KeyVaultSecretReference'
+  - uid: '@azure/arm-compute.KeyVaultKeyReference'
+    name: KeyVaultKeyReference
+    spec.typeScript:
+      - name: KeyVaultKeyReference
+        fullName: KeyVaultKeyReference
+        uid: '@azure/arm-compute.KeyVaultKeyReference'
