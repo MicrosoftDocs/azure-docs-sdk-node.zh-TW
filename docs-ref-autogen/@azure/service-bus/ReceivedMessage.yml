@@ -1,0 +1,483 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceivedMessage'
+    name: ReceivedMessage
+    fullName: ReceivedMessage
+    children:
+      - '@azure/service-bus.ReceivedMessage.abandon'
+      - '@azure/service-bus.ReceivedMessage.body'
+      - '@azure/service-bus.ReceivedMessage.complete'
+      - '@azure/service-bus.ReceivedMessage.contentType'
+      - '@azure/service-bus.ReceivedMessage.correlationId'
+      - '@azure/service-bus.ReceivedMessage.deadLetter'
+      - '@azure/service-bus.ReceivedMessage.deadLetterSource'
+      - '@azure/service-bus.ReceivedMessage.defer'
+      - '@azure/service-bus.ReceivedMessage.deliveryCount'
+      - '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+      - '@azure/service-bus.ReceivedMessage.label'
+      - '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+      - '@azure/service-bus.ReceivedMessage.lockToken'
+      - '@azure/service-bus.ReceivedMessage.messageId'
+      - '@azure/service-bus.ReceivedMessage.partitionKey'
+      - '@azure/service-bus.ReceivedMessage.replyTo'
+      - '@azure/service-bus.ReceivedMessage.replyToSessionId'
+      - '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.sequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.sessionId'
+      - '@azure/service-bus.ReceivedMessage.timeToLive'
+      - '@azure/service-bus.ReceivedMessage.to'
+      - '@azure/service-bus.ReceivedMessage.userProperties'
+      - '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述從服務匯流排接收的訊息。
+    extends:
+      name: '@azure/service-bus.ReceivedMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.abandon'
+    name: 'abandon(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 接收者在訊息上保留的鎖定已放開滑鼠時，讓訊息可一次在服務匯流排，另一個接收作業。
+    syntax:
+      content: 'function abandon(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            要修改時放棄訊息之訊息的屬性。
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 需要傳送或接收訊息內文。
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.complete'
+    name: complete()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 從服務匯流排中移除訊息。
+    syntax:
+      content: function complete()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 訊息內容型別。 選擇性地說明訊息的承載 RFC2045，第 5 節，例如"application/json"的格式的描述項。
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      相互關聯識別碼，可讓應用程式以供相互關聯，例如，反映正要回覆之訊息的 MessageId，指定訊息的內容。
+      請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetter'
+    name: deadLetter(DeadLetterOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 將訊息移至寄不出信件子佇列。 若要接收 deadletted 訊息，建立新 QueueClient/SubscriptionClient 使用寄不出信件子佇列的路徑。
+    syntax:
+      content: 'function deadLetter(options?: DeadLetterOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/service-bus.DeadLetterOptions'
+          description: |
+            可供時拒絕訊息的寄不出信件選項。
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string}[deadLetterSource]此訊息之前已加入佇列，這是寄不出的訂用帳戶之佇列的名稱。 只會設定於已成為無效信件且後續會從無效信件佇列自動轉送到另一個實體的訊息中。 指示其中訊息已成為無效信件的實體。'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.defer'
+    name: 'defer(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 會延後訊息的處理。 儲存`sequenceNumber`訊息，以接收該訊息一次在未來使用的`receiveDeferredMessage`方法。
+    syntax:
+      content: 'function defer(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            若要修改延後訊息時訊息的屬性
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 針對此訊息嘗試進行的傳遞次數。 當訊息鎖定到期，或使用明確放棄訊息，計數會漸增`abandon()`訊息上的方法。
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 訊息的原始的順序號碼。 對於已自動轉送的訊息，此屬性會反映訊息原始提交時首次指派給訊息的序號。
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: UTC 時刻的訊息已接受並儲存在服務匯流排。
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 由於到期而將訊息標示為移除且無法再從實體中擷取的 UTC 時刻。 這個屬性從訊息中的 2 個其他屬性計算： `enqueuedTimeUtc`  +  `timeToLive`。
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 應用程式專用標籤。 這個屬性可讓應用程式，以指出要在標準化接收者的訊息的目的。 方式，類似於電子郵件主旨列。 對應的 AMQP 屬性是"subject"。
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      在佇列/訂用帳戶中，鎖定則訊息會保留截止的 UTC 時刻。
+      當鎖定到期時，`deliveryCount`會遞增，訊息就再次可供擷取。
+      - 在收到訊息時，不適用`ReceiveMode.receiveAndDelete`模式。
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      鎖定權杖是鎖定中，訊息代理程式所持有的參考`ReceiveMode.PeekLock`模式。 鎖定會在內部使用選定訊息中所述[更詳細的產品文件](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)
+      - 在收到訊息時，不適用`ReceiveMode.receiveAndDelete`模式。
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      訊息識別碼是應用程式定義的值，可唯一識別訊息及其承載。
+
+      注意：不允許使用不是整數的數字。
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      傳送訊息至分割的實體資料分割索引鍵。
+      最大長度為 128 個字元。 針對[分割的實體](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning)，設定此值可將相關訊息指派到相同的內部資料分割，如此便能正確記錄提交順序。 資料分割會由雜湊函式透過此值來選擇，無法直接選擇。
+      - 對於工作階段感知的實體，`sessionId`屬性會覆寫此值。
+      - 對於非分割實體，將忽略資料分割索引鍵
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '若要將回覆傳送給實體的位址。 這個選擇性且由應用程式定義的值，乃是向訊息接收者表示回覆路徑的標準方法。 當傳送者預期收到回覆時，會將值設為預期回覆要送往的佇列或主題絕對或相對路徑。 請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      工作階段識別項加強`replyTo`位址。
+      最大長度為 128 個字元。 此值會擴大 ReplyTo 資訊，並且指定它應該傳送到回覆實體時針對回覆設定 SessionId。
+      請參閱[訊息路由和相互關聯](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      日期和時間-utc 時區的訊息將會加入佇列中。 這個屬性傳回的時間-utc 時區;設定屬性時，所提供的日期時間值也必須以 utc 格式。 這個值是延遲的訊息傳送。
+      它會利用延遲傳送至特定的時間，以在未來的訊息。 訊息加入佇列時間並不表示訊息會傳送一次。 它會取得已加入佇列，但實際的傳送時間取決於佇列的工作負載和其狀態。
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      服務匯流排指派給訊息的唯一號碼。
+      序號是指派給訊息的唯一 64 位元整數，會由訊息代理程式和函式所接收並儲存，以作為真正的識別碼。 對於分割的實體，最前面的 16 位元會反映分割區識別碼。 序號會單純地增加。
+      它們會在 48 - 64 位元範圍用盡時回復為 0。
+
+      **最大的安全整數**Javascript 目前支援的`2^53 - 1`。 序號是 AMQP`Long`類型可以是最多 64 位元。 若要代表我們使用名為媒體櫃[long.js](https://github.com/dcodeIO/long.js)。 我們希望客戶能夠使用** `Long` **此程式庫所匯出的型別。
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      工作階段感知的實體的工作階段識別碼。 最大長度為 128 個字元。 對於工作階段感知的實體，這個應用程式定義的值會指定訊息的工作階段關係。 具有相同工作階段識別碼的訊息會受限於摘要鎖定，並且能夠確實地依序處理和分離信號。 對於非工作階段感知的實體，則會忽略此值。
+      [訊息工作階段](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions)。
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '訊息的存留時間值。 這個值是訊息到期之前的相對持續時間、 從即時訊息接受並儲存訊息代理程式，因為在擷取`enqueuedTimeUtc`。 未明確設定時，所使用的值是相對的佇列或主題 DefaultTimeToLive。 訊息層級`timeToLive`值長度不能比實體的 DefaultTimeToLive 設定，而且以無訊息方式調整如果是這樣。 請參閱[到期](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration)。'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '[到] 地址。 這個屬性乃是保留以供日後路由傳送案例使用，訊息代理程式目前會忽略這個屬性。 應用程式可以使用此值，在規則驅動[自動轉送鏈結](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding)案例，以指出預期的邏輯目的地的訊息。'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 應用程式特定的屬性可以用於自訂的訊息中繼資料。
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      將訊息傳送到實體，透過資料分割的傳輸佇列資料分割索引鍵。 最大長度為 128 個字元。 如果透過傳輸佇列的交易範圍內傳送一則訊息，這個值會選取傳輸佇列資料分割：這是功能上相當於`partitionKey`屬性和可確保訊息會保留一起並循序時才傳送。
+      請參閱[傳輸，透過傳送](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via)。
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceivedMessageInfo'
+    name: ReceivedMessageInfo
+    spec.typeScript:
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+  - uid: '@azure/service-bus.DeadLetterOptions'
+    name: DeadLetterOptions
+    spec.typeScript:
+      - name: DeadLetterOptions
+        fullName: DeadLetterOptions
+        uid: '@azure/service-bus.DeadLetterOptions'
