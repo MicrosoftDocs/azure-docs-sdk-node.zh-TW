@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFile_1'
+    name: withAuthFile(LoginWithAuthFileOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="d1ccc-101">使用這個方法之前請安裝從 az cli https://github.com/Azure/azure-cli/releases。</span><span class="sxs-lookup"><span data-stu-id="d1ccc-101">Before using this method please install az cli from https://github.com/Azure/azure-cli/releases.</span></span> <span data-ttu-id="d1ccc-102">然後執行`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`。</span><span class="sxs-lookup"><span data-stu-id="d1ccc-102">Then execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span></span>
+      <span data-ttu-id="d1ccc-103">如果您想要建立預存程序針對不同的雲端/環境則請執行：</span><span class="sxs-lookup"><span data-stu-id="d1ccc-103">If you want to create the sp for a different cloud/environment then please execute:</span></span>
+      1. <span data-ttu-id="d1ccc-104">az 雲端清單</span><span class="sxs-lookup"><span data-stu-id="d1ccc-104">az cloud list</span></span>
+      2. <span data-ttu-id="d1ccc-105">az 雲端設定 – n <name of the environment></span><span class="sxs-lookup"><span data-stu-id="d1ccc-105">az cloud set –n <name of the environment></span></span>
+      3. <span data-ttu-id="d1ccc-106">az ad sp 建立-針對-rbac-sdk 验证 > auth.json / / 建立 sp 與祕密**或**</span><span class="sxs-lookup"><span data-stu-id="d1ccc-106">az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**</span></span>
+      3. <span data-ttu-id="d1ccc-107">az ad sp 建立-針對-rbac-建立憑證-sdk 驗證 > auth.json / / sp 使用憑證來建立服務主體已經建立時再登入使用服務主體的資訊：</span><span class="sxs-lookup"><span data-stu-id="d1ccc-107">az ad sp create-for-rbac --create-cert --sdk-auth > auth.json // create sp with certificate If the service principal is already created then login with service principal info:</span></span>
+      4. <span data-ttu-id="d1ccc-108">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span><span class="sxs-lookup"><span data-stu-id="d1ccc-108">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span></span>
+      5. <span data-ttu-id="d1ccc-109">az 帳戶顯示-sdk 驗證 > auth.json 驗證使用驗證檔案中提供的服務主體資訊。</span><span class="sxs-lookup"><span data-stu-id="d1ccc-109">az account show --sdk-auth > auth.json Authenticates using the service principal information provided in the auth file.</span></span> <span data-ttu-id="d1ccc-110">這個方法會從驗證檔案設定 subscriptionId 來提供環境變數的 options 參數或預設值"AZURE_SUBSCRIPTION_ID 」 中的使用者。</span><span class="sxs-lookup"><span data-stu-id="d1ccc-110">This method will set the subscriptionId from the auth file to the user provided environment variable in the options parameter or the default "AZURE_SUBSCRIPTION_ID".</span></span>
+    syntax:
+      content: 'function withAuthFile(options: LoginWithAuthFileOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+    name: LoginWithAuthFileOptions
+    spec.typeScript:
+      - name: LoginWithAuthFileOptions
+        fullName: LoginWithAuthFileOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    name: TokenCredentialsBase>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TokenCredentialsBase
+        fullName: TokenCredentialsBase
+        uid: '@azure/ms-rest-nodeauth.TokenCredentialsBase'
+      - name: '>'
+        fullName: '>'
