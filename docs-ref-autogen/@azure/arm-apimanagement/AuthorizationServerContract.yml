@@ -1,0 +1,367 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract'
+    name: AuthorizationServerContract
+    fullName: AuthorizationServerContract
+    children:
+      - '@azure/arm-apimanagement.AuthorizationServerContract.authorizationEndpoint'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.authorizationMethods'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.bearerTokenSendingMethods'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.clientAuthenticationMethod'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.clientId'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.clientRegistrationEndpoint'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.clientSecret'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.defaultScope'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.description'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.displayName'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.grantTypes'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.id'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.name'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.resourceOwnerPassword'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.resourceOwnerUsername'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.supportState'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.tokenBodyParameters'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.tokenEndpoint'
+      - '@azure/arm-apimanagement.AuthorizationServerContract.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: 外部 OAuth 授權伺服器設定。
+    extends:
+      name: '@azure/arm-apimanagement.Resource'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.authorizationEndpoint'
+    name: authorizationEndpoint
+    fullName: authorizationEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'OAuth 授權端點。 請參閱 http://tools.ietf.org/html/rfc6749#section-3.2。'
+    syntax:
+      content: 'authorizationEndpoint: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.authorizationMethods'
+    name: authorizationMethods
+    fullName: authorizationMethods
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 授權端點所支援的 HTTP 動詞命令。 取得一律須存在。 POST 是選擇性的。
+    optional: true
+    syntax:
+      content: 'authorizationMethods?: AuthorizationMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.AuthorizationMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.bearerTokenSendingMethods'
+    name: bearerTokenSendingMethods
+    fullName: bearerTokenSendingMethods
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的機制來將存取權杖會傳遞至 API。
+    optional: true
+    syntax:
+      content: 'bearerTokenSendingMethods?: BearerTokenSendingMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.BearerTokenSendingMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.clientAuthenticationMethod'
+    name: clientAuthenticationMethod
+    fullName: clientAuthenticationMethod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此授權伺服器的權杖端點所支援的驗證方法。
+      可能的值為 Basic 和/或本文。 指定主體時，用戶端認證和其他參數會傳遞應用程式/x-www-表單-urlencoded 格式在要求主體中。
+    optional: true
+    syntax:
+      content: 'clientAuthenticationMethod?: ClientAuthenticationMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ClientAuthenticationMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.clientId'
+    name: clientId
+    fullName: clientId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 向此授權伺服器註冊用戶端或應用程式的識別碼。
+    syntax:
+      content: 'clientId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.clientRegistrationEndpoint'
+    name: clientRegistrationEndpoint
+    fullName: clientRegistrationEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 選擇性的參考來執行此授權伺服器的用戶端或應用程式註冊所在的頁面。 包含所參考之實體的絕對 URL。
+    syntax:
+      content: 'clientRegistrationEndpoint: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.clientSecret'
+    name: clientSecret
+    fullName: clientSecret
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 向此授權伺服器註冊用戶端或應用程式的密碼。
+    optional: true
+    syntax:
+      content: 'clientSecret?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.defaultScope'
+    name: defaultScope
+    fullName: defaultScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 存取權杖範圍要依預設將要求。 可以覆寫在 API 層級。 應提供的字串，包含以逗號分隔值格式。
+    optional: true
+    syntax:
+      content: 'defaultScope?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 授權伺服器的描述。 可包含 HTML 格式標記。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 方便使用的授權伺服器的名稱。
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.grantTypes'
+    name: grantTypes
+    fullName: grantTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 授權授與，讓用戶端要求存取權杖的形式。
+    syntax:
+      content: 'grantTypes: GrantType[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.GrantType[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源識別碼。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源名稱。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.resourceOwnerPassword'
+    name: resourceOwnerPassword
+    fullName: resourceOwnerPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 您可以選擇性地指定此授權伺服器支援資源擁有者密碼授與類型時。 預設資源擁有者密碼。
+    optional: true
+    syntax:
+      content: 'resourceOwnerPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.resourceOwnerUsername'
+    name: resourceOwnerUsername
+    fullName: resourceOwnerUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 您可以選擇性地指定此授權伺服器支援資源擁有者密碼授與類型時。 預設資源擁有者使用者名稱。
+    optional: true
+    syntax:
+      content: 'resourceOwnerUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.supportState'
+    name: supportState
+    fullName: supportState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果為 true，則授權伺服器會包含來自授權要求的狀態參數，其回應。 用戶端可以使用 state 參數，來提高通訊協定安全性。
+    optional: true
+    syntax:
+      content: 'supportState?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.tokenBodyParameters'
+    name: tokenBodyParameters
+    fullName: tokenBodyParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '表示為 JSON 的陣列，也就是物件的名稱和值的字串屬性，此授權伺服器的權杖端點所需的其他參數 {"name":"名稱值"、"value":"value"}。'
+    optional: true
+    syntax:
+      content: 'tokenBodyParameters?: TokenBodyParameterContract[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.TokenBodyParameterContract[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.tokenEndpoint'
+    name: tokenEndpoint
+    fullName: tokenEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: OAuth 權杖端點。 包含所參考之實體的絕對 URI。
+    optional: true
+    syntax:
+      content: 'tokenEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContract.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      API 管理資源的資源類型。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-apimanagement.Resource'
+  - uid: '@azure/arm-apimanagement.AuthorizationMethod[]'
+    name: 'AuthorizationMethod[]'
+    spec.typeScript:
+      - name: AuthorizationMethod
+        fullName: AuthorizationMethod
+        uid: '@azure/arm-apimanagement.AuthorizationMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.BearerTokenSendingMethod[]'
+    name: 'BearerTokenSendingMethod[]'
+    spec.typeScript:
+      - name: BearerTokenSendingMethod
+        fullName: BearerTokenSendingMethod
+        uid: '@azure/arm-apimanagement.BearerTokenSendingMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.ClientAuthenticationMethod[]'
+    name: 'ClientAuthenticationMethod[]'
+    spec.typeScript:
+      - name: ClientAuthenticationMethod
+        fullName: ClientAuthenticationMethod
+        uid: '@azure/arm-apimanagement.ClientAuthenticationMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.GrantType[]'
+    name: 'GrantType[]'
+    spec.typeScript:
+      - name: GrantType
+        fullName: GrantType
+        uid: '@azure/arm-apimanagement.GrantType'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.TokenBodyParameterContract[]'
+    name: 'TokenBodyParameterContract[]'
+    spec.typeScript:
+      - name: TokenBodyParameterContract
+        fullName: TokenBodyParameterContract
+        uid: '@azure/arm-apimanagement.TokenBodyParameterContract'
+      - name: '[]'
+        fullName: '[]'

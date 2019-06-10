@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: 端點的健康狀態資料
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 端點的識別碼
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '健全狀況狀態具有下列意義。 「 狀況良好 」 狀態會顯示端點已接受訊息，如預期般運作。 ''不良'' 的狀態會顯示端點不接受訊息，如預期般運作，並將資料傳送至這個端點的 IoT 中樞正在重試。 IoT 中樞已建立最終一致的健全狀況狀態時，將更新的狀況不良的端點狀態為狀況良好。 ''無作用'' 的狀態會顯示端點目前不接受訊息，IoT 中樞重試傳送訊息的 retrial 期間之後。 請參閱 IoT 中樞度量，以找出錯誤並監視端點的問題。 ''Unknown'' 的狀態會顯示 IoT 中樞仍未建立與端點的連線。 已傳遞到任何訊息或拒絕此端點。 可能的值包括: ''unknown''、 ''狀況良好''、 ''狀況不良，'' ''無效信件'''
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'

@@ -1,0 +1,429 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-advisor.Recommendations'
+    name: Recommendations
+    fullName: Recommendations
+    children:
+      - '@azure/arm-advisor.Recommendations.generate'
+      - '@azure/arm-advisor.Recommendations.generate_2'
+      - '@azure/arm-advisor.Recommendations.generate_1'
+      - '@azure/arm-advisor.Recommendations.get'
+      - '@azure/arm-advisor.Recommendations.get_2'
+      - '@azure/arm-advisor.Recommendations.get_1'
+      - '@azure/arm-advisor.Recommendations.getGenerateStatus'
+      - '@azure/arm-advisor.Recommendations.getGenerateStatus_2'
+      - '@azure/arm-advisor.Recommendations.getGenerateStatus_1'
+      - '@azure/arm-advisor.Recommendations.list'
+      - '@azure/arm-advisor.Recommendations.list_2'
+      - '@azure/arm-advisor.Recommendations.list_1'
+      - '@azure/arm-advisor.Recommendations.listNext'
+      - '@azure/arm-advisor.Recommendations.listNext_2'
+      - '@azure/arm-advisor.Recommendations.listNext_1'
+      - '@azure/arm-advisor.Recommendations.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表的建議。
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.generate'
+    name: generate(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 起始訂用帳戶的建議產生或計算程序。 這項作業是非同步的。 Advisor 服務的快取中儲存產生的建議。
+    syntax:
+      content: 'function generate(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecommendationsGenerateResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.generate_2'
+    name: 'generate(RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function generate(options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.RecommendationsGenerateResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.generate_1'
+    name: generate(ServiceCallback<void>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function generate(callback: ServiceCallback<void>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.RecommendationsGenerateResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得快取的建議事項的詳細資料。
+    syntax:
+      content: 'function get(resourceUri: string, recommendationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: 建議適用於資源的完整的 Azure Resource Manager 識別碼。
+        - id: recommendationId
+          type:
+            - string
+          description: 建議的識別碼。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecommendationsGetResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<ResourceRecommendationBase>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceUri: string, recommendationId: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceRecommendationBase>)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: 建議適用於資源的完整的 Azure Resource Manager 識別碼。
+        - id: recommendationId
+          type:
+            - string
+          description: 建議的識別碼。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.ResourceRecommendationBase>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.RecommendationsGetResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.get_1'
+    name: 'get(string, string, ServiceCallback<ResourceRecommendationBase>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceUri: string, recommendationId: string, callback: ServiceCallback<ResourceRecommendationBase>)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: 建議適用於資源的完整的 Azure Resource Manager 識別碼。
+        - id: recommendationId
+          type:
+            - string
+          description: 建議的識別碼。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.ResourceRecommendationBase>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.RecommendationsGetResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.getGenerateStatus'
+    name: 'getGenerateStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '擷取建議產生或計算程序的狀態。 叫用這個 API 之後呼叫產生建議。 此 API 的 URI 會傳回回應標頭的 [位置] 欄位中。'
+    syntax:
+      content: 'function getGenerateStatus(operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: '作業識別碼，可從 [位置] 欄位在產生建議回應標頭。'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.getGenerateStatus_2'
+    name: 'getGenerateStatus(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getGenerateStatus(operationId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: '作業識別碼，可從 [位置] 欄位在產生建議回應標頭。'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.getGenerateStatus_1'
+    name: 'getGenerateStatus(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getGenerateStatus(operationId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: '作業識別碼，可從 [位置] 欄位在產生建議回應標頭。'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.list'
+    name: list(Models.RecommendationsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得快取的建議，訂用帳戶。 建議所產生，或藉由叫用 generateRecommendations 計算。
+    syntax:
+      content: 'function list(options?: Models.RecommendationsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.RecommendationsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecommendationsListResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.list_2'
+    name: 'list(RecommendationsListOptionalParams, ServiceCallback<ResourceRecommendationBaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RecommendationsListOptionalParams, callback: ServiceCallback<ResourceRecommendationBaseListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-advisor.RecommendationsListOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.ResourceRecommendationBaseListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.RecommendationsListResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.list_1'
+    name: list(ServiceCallback<ResourceRecommendationBaseListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ResourceRecommendationBaseListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.ResourceRecommendationBaseListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.RecommendationsListResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得快取的建議，訂用帳戶。 建議所產生，或藉由叫用 generateRecommendations 計算。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecommendationsListNextResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ResourceRecommendationBaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceRecommendationBaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.ResourceRecommendationBaseListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.RecommendationsListNextResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.listNext_1'
+    name: 'listNext(string, ServiceCallback<ResourceRecommendationBaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ResourceRecommendationBaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-advisor.ResourceRecommendationBaseListResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.RecommendationsListNextResponse>
+    package: '@azure/arm-advisor'
+  - uid: '@azure/arm-advisor.Recommendations.constructor'
+    name: Recommendations(AdvisorManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立建議。
+    syntax:
+      content: 'new Recommendations(client: AdvisorManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-advisor.AdvisorManagementClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-advisor'
+references:
+  - uid: '@azure/arm-advisor.AdvisorManagementClientContext'
+    name: AdvisorManagementClientContext
+    spec.typeScript:
+      - name: AdvisorManagementClientContext
+        fullName: AdvisorManagementClientContext
+        uid: '@azure/arm-advisor.AdvisorManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-advisor.ResourceRecommendationBase>
+    name: ResourceRecommendationBase>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceRecommendationBase
+        fullName: ResourceRecommendationBase
+        uid: '@azure/arm-advisor.ResourceRecommendationBase'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-advisor.ResourceRecommendationBaseListResult>
+    name: ResourceRecommendationBaseListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceRecommendationBaseListResult
+        fullName: ResourceRecommendationBaseListResult
+        uid: '@azure/arm-advisor.ResourceRecommendationBaseListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-advisor.RecommendationsListOptionalParams'
+    name: RecommendationsListOptionalParams
+    spec.typeScript:
+      - name: RecommendationsListOptionalParams
+        fullName: RecommendationsListOptionalParams
+        uid: '@azure/arm-advisor.RecommendationsListOptionalParams'
