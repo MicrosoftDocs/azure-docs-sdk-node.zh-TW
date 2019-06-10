@@ -1,0 +1,246 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.QueueClient'
+    name: QueueClient
+    fullName: QueueClient
+    children:
+      - '@azure/service-bus.QueueClient.close'
+      - '@azure/service-bus.QueueClient.createReceiver'
+      - '@azure/service-bus.QueueClient.createReceiver_1'
+      - '@azure/service-bus.QueueClient.createSender'
+      - '@azure/service-bus.QueueClient.entityPath'
+      - '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+      - '@azure/service-bus.QueueClient.id'
+      - '@azure/service-bus.QueueClient.peek'
+      - '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="85c0e-101">描述可讓服務匯流排佇列與互動的用戶端。</span><span class="sxs-lookup"><span data-stu-id="85c0e-101">Describes the client that allows interacting with a Service Bus Queue.</span></span>
+      <span data-ttu-id="85c0e-102">使用`createQueueClient`ServiceBusClient 物件具現化 QueueClient 函式</span><span class="sxs-lookup"><span data-stu-id="85c0e-102">Use the `createQueueClient` function on the ServiceBusClient object to instantiate a QueueClient</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="85c0e-103">此用戶端所建立的傳送者/接收者關閉 AMQP 連結。</span><span class="sxs-lookup"><span data-stu-id="85c0e-103">Closes all the AMQP links for sender/receivers created by this client.</span></span>
+      <span data-ttu-id="85c0e-104">一旦關閉，QueueClient 和其寄件者/接收者都不可以用於任何進一步的作業。</span><span class="sxs-lookup"><span data-stu-id="85c0e-104">Once closed, neither the QueueClient nor its sender/receivers can be used for any further operations.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver'
+    name: createReceiver(ReceiveMode)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="85c0e-105">建立接收者從佇列中沒有已啟用工作階段中接收訊息。</span><span class="sxs-lookup"><span data-stu-id="85c0e-105">Creates a Receiver for receiving messages from a Queue which does not have sessions enabled.</span></span>
+      - <span data-ttu-id="85c0e-106">如果已存在此 QueueClient 開啟的接收者，就會擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="85c0e-106">Throws error if an open receiver already exists for this QueueClient.</span></span>
+      - <span data-ttu-id="85c0e-107">會擲回`InvalidOperationError`佇列是否已啟用工作階段 (在此情況下，使用此方法會採用此方法的多載`sessionOptions`引數)</span><span class="sxs-lookup"><span data-stu-id="85c0e-107">Throws `InvalidOperationError` if the Queue has sessions enabled (in which case, use the overload of this method which takes `sessionOptions` argument)</span></span>
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |
+            <span data-ttu-id="85c0e-108">列舉，指出已接收訊息的模式。</span><span class="sxs-lookup"><span data-stu-id="85c0e-108">An enum indicating the mode in which messages should be received.</span></span> <span data-ttu-id="85c0e-109">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="85c0e-109">Possible values are:</span></span>
+            - <span data-ttu-id="85c0e-110">`ReceiveMode.peekLock`:一旦收到訊息時，在此模式中，則接收者會有在訊息上鎖定特定的持續時間。</span><span class="sxs-lookup"><span data-stu-id="85c0e-110">`ReceiveMode.peekLock`: Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="85c0e-111">如果訊息不會安置此時，放入下一個擷取的服務匯流排接收作業。</span><span class="sxs-lookup"><span data-stu-id="85c0e-111">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>
+            - <span data-ttu-id="85c0e-112">`ReceiveMode.receiveAndDelete`:從服務匯流排會自動移除在此模式中接收的訊息。</span><span class="sxs-lookup"><span data-stu-id="85c0e-112">`ReceiveMode.receiveAndDelete`: Messages received in this mode get automatically removed from Service Bus.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.Receiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver_1'
+    name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="85c0e-113">接收工作階段中的訊息啟用佇列，請建立接收者。</span><span class="sxs-lookup"><span data-stu-id="85c0e-113">Creates a Receiver for receiving messages from a session enabled Queue.</span></span> <span data-ttu-id="85c0e-114">指定任何工作階段識別碼時，會使用可用的工作階段之間的隨機工作階段。</span><span class="sxs-lookup"><span data-stu-id="85c0e-114">When no sessionId is given, a random session among the available sessions is used.</span></span>
+      - <span data-ttu-id="85c0e-115">如果開啟的接收者已存在指定的工作階段識別碼，則會擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="85c0e-115">Throws error if an open receiver already exists for given sessionId.</span></span>
+      - <span data-ttu-id="85c0e-116">會擲回`SessionCannotBeLockedError`如果佇列並沒有已啟用工作階段 (在此情況下未通過`sessionOptions`引數) 或服務匯流排不能夠取得的鎖定 （在一段時間後的情況下請嘗試） 工作階段</span><span class="sxs-lookup"><span data-stu-id="85c0e-116">Throws `SessionCannotBeLockedError` if the Queue does not have sessions enabled (in which case do not pass the `sessionOptions` argument) or if Service Bus is not able to get a lock on the session (in which case try again after some time)</span></span>
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode, sessionOptions: SessionReceiverOptions)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |-
+            <span data-ttu-id="85c0e-117">列舉，指出已接收訊息的模式。</span><span class="sxs-lookup"><span data-stu-id="85c0e-117">An enum indicating the mode in which messages should be received.</span></span> <span data-ttu-id="85c0e-118">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="85c0e-118">Possible values are:</span></span>
+            - <span data-ttu-id="85c0e-119">`ReceiveMode.peekLock`:一旦收到訊息時，在此模式中，則接收者會有在訊息上鎖定特定的持續時間。</span><span class="sxs-lookup"><span data-stu-id="85c0e-119">`ReceiveMode.peekLock`: Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="85c0e-120">如果訊息不會安置此時，放入下一個擷取的服務匯流排接收作業。</span><span class="sxs-lookup"><span data-stu-id="85c0e-120">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>
+            - <span data-ttu-id="85c0e-121">`ReceiveMode.receiveAndDelete`:從服務匯流排會自動移除在此模式中接收的訊息。</span><span class="sxs-lookup"><span data-stu-id="85c0e-121">`ReceiveMode.receiveAndDelete`: Messages received in this mode get automatically removed from Service Bus.</span></span>
+        - id: sessionOptions
+          type:
+            - '@azure/service-bus.SessionReceiverOptions'
+          description: |
+            <span data-ttu-id="85c0e-122">提供工作階段接收者 sessionId 和的自動鎖定更新期間的選項。</span><span class="sxs-lookup"><span data-stu-id="85c0e-122">Options to provide sessionId and duration of automatic lock renewal for the session receiver.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.SessionReceiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="85c0e-123">建立要用於傳送訊息、 排程於稍後傳送的訊息和取消這類排程的訊息的寄件者。</span><span class="sxs-lookup"><span data-stu-id="85c0e-123">Creates a Sender to be used for sending messages, scheduling messages to be sent at a later time and cancelling such scheduled messages.</span></span>
+      - <span data-ttu-id="85c0e-124">如果已開啟的寄件者已存在此 QueueClient，則會擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="85c0e-124">Throws error if an open sender already exists for this QueueClient.</span></span>
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="85c0e-125">為其建立此用戶端的服務匯流排佇列路徑。</span><span class="sxs-lookup"><span data-stu-id="85c0e-125">The path for the Service Bus Queue for which this client is created.</span></span>
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+    name: getDeadLetterQueuePath(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="85c0e-126">傳回指定之名稱所代表的佇列之對應寄不出信件佇列名稱。</span><span class="sxs-lookup"><span data-stu-id="85c0e-126">Returns the corresponding dead letter queue name for the queue represented by the given name.</span></span>
+      <span data-ttu-id="85c0e-127">使用這`createQueueClient`函式`ServiceBusClient`從寄不出信件佇列接收訊息的執行個體。</span><span class="sxs-lookup"><span data-stu-id="85c0e-127">Use this in the `createQueueClient` function on the `ServiceBusClient` instance to receive messages from a dead letter queue.</span></span>
+    syntax:
+      content: 'static function getDeadLetterQueuePath(queueName: string)'
+      parameters:
+        - id: queueName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="85c0e-128">正在擷取其寄不出信件互相對應的名稱的佇列名稱</span><span class="sxs-lookup"><span data-stu-id="85c0e-128">Name of the queue whose dead letter counterpart's name is being fetched</span></span>
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="85c0e-129">此用戶端的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="85c0e-129">A unique identifier for this client.</span></span>
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="85c0e-130">擷取作用中訊息的下一個批次 （包括但不是停止傳送訊息延遲）。</span><span class="sxs-lookup"><span data-stu-id="85c0e-130">Fetches the next batch of active messages (including deferred but not deadlettered messages).</span></span>
+      - <span data-ttu-id="85c0e-131">第一次呼叫`peek()`會擷取第一個作用中的訊息。</span><span class="sxs-lookup"><span data-stu-id="85c0e-131">The first call to `peek()` fetches the first active message.</span></span> <span data-ttu-id="85c0e-132">每個後續的呼叫會擷取後續的訊息。</span><span class="sxs-lookup"><span data-stu-id="85c0e-132">Each subsequent call fetches the subsequent message.</span></span>
+      - <span data-ttu-id="85c0e-133">不同於`received`訊息，`peeked`訊息是訊息的唯讀版本。</span><span class="sxs-lookup"><span data-stu-id="85c0e-133">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="85c0e-134">它不能是`Completed/Abandoned/Deferred/Deadlettered`。</span><span class="sxs-lookup"><span data-stu-id="85c0e-134">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="85c0e-135">無法更新它的鎖定。</span><span class="sxs-lookup"><span data-stu-id="85c0e-135">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="85c0e-136">查看所需的作用中訊息數目 （包括但不是停止傳送訊息延遲） 從指定的序號。</span><span class="sxs-lookup"><span data-stu-id="85c0e-136">Peeks the desired number of active messages (including deferred but not deadlettered messages) from the specified sequence number.</span></span>
+      - <span data-ttu-id="85c0e-137">不同於`received`訊息，`peeked`訊息是訊息的唯讀版本。</span><span class="sxs-lookup"><span data-stu-id="85c0e-137">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="85c0e-138">它不能是`Completed/Abandoned/Deferred/Deadlettered`。</span><span class="sxs-lookup"><span data-stu-id="85c0e-138">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="85c0e-139">無法更新它的鎖定。</span><span class="sxs-lookup"><span data-stu-id="85c0e-139">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="85c0e-140">從中讀取訊息的序號。</span><span class="sxs-lookup"><span data-stu-id="85c0e-140">The sequence number from where to read the message.</span></span>
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    spec.typeScript:
+      - name: Receiver
+        fullName: Receiver
+        uid: '@azure/service-bus.Receiver'
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    spec.typeScript:
+      - name: SessionReceiverOptions
+        fullName: SessionReceiverOptions
+        uid: '@azure/service-bus.SessionReceiverOptions'
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    spec.typeScript:
+      - name: SessionReceiver
+        fullName: SessionReceiver
+        uid: '@azure/service-bus.SessionReceiver'
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
