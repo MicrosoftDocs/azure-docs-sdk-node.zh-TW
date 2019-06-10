@@ -1,0 +1,386 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Endpoint'
+    name: Endpoint
+    fullName: Endpoint
+    children:
+      - '@azure/arm-cdn.Endpoint.contentTypesToCompress'
+      - '@azure/arm-cdn.Endpoint.deliveryPolicy'
+      - '@azure/arm-cdn.Endpoint.geoFilters'
+      - '@azure/arm-cdn.Endpoint.hostName'
+      - '@azure/arm-cdn.Endpoint.id'
+      - '@azure/arm-cdn.Endpoint.isCompressionEnabled'
+      - '@azure/arm-cdn.Endpoint.isHttpAllowed'
+      - '@azure/arm-cdn.Endpoint.isHttpsAllowed'
+      - '@azure/arm-cdn.Endpoint.location'
+      - '@azure/arm-cdn.Endpoint.name'
+      - '@azure/arm-cdn.Endpoint.optimizationType'
+      - '@azure/arm-cdn.Endpoint.originHostHeader'
+      - '@azure/arm-cdn.Endpoint.originPath'
+      - '@azure/arm-cdn.Endpoint.origins'
+      - '@azure/arm-cdn.Endpoint.probePath'
+      - '@azure/arm-cdn.Endpoint.provisioningState'
+      - '@azure/arm-cdn.Endpoint.queryStringCachingBehavior'
+      - '@azure/arm-cdn.Endpoint.resourceState'
+      - '@azure/arm-cdn.Endpoint.tags'
+      - '@azure/arm-cdn.Endpoint.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: CDN 端點會是包含組態資訊，例如來源、 通訊協定、 內容的快取和傳遞行為的 CDN 設定檔內的實體。 CDN 端點使用的 URL 格式<endpointname>。 azureedge.net。
+    extends:
+      name: '@azure/arm-cdn.TrackedResource'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.contentTypesToCompress'
+    name: contentTypesToCompress
+    fullName: contentTypesToCompress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 壓縮適用於的內容類型的清單。 值應該是有效的 MIME 類型。
+    optional: true
+    syntax:
+      content: 'contentTypesToCompress?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.deliveryPolicy'
+    name: deliveryPolicy
+    fullName: deliveryPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定要用於端點的傳遞規則的原則。
+    optional: true
+    syntax:
+      content: 'deliveryPolicy?: EndpointPropertiesUpdateParametersDeliveryPolicy'
+      return:
+        type:
+          - '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.geoFilters'
+    name: geoFilters
+    fullName: geoFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 定義使用者的地理存取 CDN 端點內的規則清單。 每個地區篩選至指定的路徑或內容，例如區塊 APAC 路徑 /pictures/ 定義存取規則
+    optional: true
+    syntax:
+      content: 'geoFilters?: GeoFilter[]'
+      return:
+        type:
+          - '@azure/arm-cdn.GeoFilter[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.hostName'
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '端點 {endpointName} 為結構化的主機名稱。{DNSZone}，例如 contoso.azureedge.net**附註：這個屬性不會序列化。它可以才會填入伺服器中。**'
+    optional: true
+    syntax:
+      content: 'hostName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源識別碼。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isCompressionEnabled'
+    name: isCompressionEnabled
+    fullName: isCompressionEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指出是否已在 CDN 上啟用內容的壓縮。 預設值為 false。 如果已啟用壓縮，將做為提供的內容壓縮，如果使用者要求壓縮的版本。 要求的內容時小於 1 個位元組或大於 1 MB，不會在 CDN 上壓縮內容。
+    optional: true
+    syntax:
+      content: 'isCompressionEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isHttpAllowed'
+    name: isHttpAllowed
+    fullName: isHttpAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指出是否在端點上允許 HTTP 流量。 預設值為 true。 必須允許至少一個通訊協定 （HTTP 或 HTTPS）。
+    optional: true
+    syntax:
+      content: 'isHttpAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isHttpsAllowed'
+    name: isHttpsAllowed
+    fullName: isHttpsAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指出是否在端點上允許 HTTPS 流量。 預設值為 true。 必須允許至少一個通訊協定 （HTTP 或 HTTPS）。
+    optional: true
+    syntax:
+      content: 'isHttpsAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源位置。
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源名稱。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.optimizationType'
+    name: optimizationType
+    fullName: optimizationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定哪些案例客戶想要這個 CDN 端點，以最佳化，例如下載，媒體服務。 CDN 可以使用這項資訊，來套用驅動最佳化的案例。 可能的值包括：'GeneralWebDelivery'、 'GeneralMediaStreaming'、 'VideoOnDemandMediaStreaming'、 'LargeFileDownload'、 'DynamicSiteAcceleration'
+    optional: true
+    syntax:
+      content: 'optimizationType?: OptimizationType'
+      return:
+        type:
+          - '@azure/arm-cdn.OptimizationType'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.originHostHeader'
+    name: originHostHeader
+    fullName: originHostHeader
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 傳送至每個要求原始主機標頭的值。 如果您保留空白，則要求主機名稱會決定此值。 Azure CDN 來源，例如 Web Apps、 Blob 儲存體和雲端服務需要以符合來源主機名稱，依預設此主機標頭值。
+    optional: true
+    syntax:
+      content: 'originHostHeader?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.originPath'
+    name: originPath
+    fullName: originPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CDN 可以使用來擷取內容，例如 contoso.cloudapp.net/originpath 原始伺服器上的目錄路徑。
+    optional: true
+    syntax:
+      content: 'originPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.origins'
+    name: origins
+    fullName: origins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 透過 CDN 傳遞內容的來源。
+    syntax:
+      content: 'origins: DeepCreatedOrigin[]'
+      return:
+        type:
+          - '@azure/arm-cdn.DeepCreatedOrigin[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.probePath'
+    name: probePath
+    fullName: probePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 裝載於可協助加速傳遞動態內容和 cdn 計算最佳路線的來源檔案路徑。 這是相對於原始路徑。
+    optional: true
+    syntax:
+      content: 'probePath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      佈建端點的狀態。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.queryStringCachingBehavior'
+    name: queryStringCachingBehavior
+    fullName: queryStringCachingBehavior
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 定義 CDN 如何快取包含查詢字串的要求。 快取，略過快取以避免要求包含查詢字串快取，或快取每個要求都有唯一的 URL 時，您可以忽略所有查詢字串。 可能的值包括：'IgnoreQueryString'、 'BypassCaching'、 'UseQueryString'、 'NotSet'
+    optional: true
+    syntax:
+      content: 'queryStringCachingBehavior?: QueryStringCachingBehavior'
+      return:
+        type:
+          - '@azure/arm-cdn.QueryStringCachingBehavior'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.resourceState'
+    name: resourceState
+    fullName: resourceState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源狀態的端點。 可能的值包括：'建立'，'刪除'，'Running'、 '啟動'，'停止'，'Stopping'**附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'resourceState?: EndpointResourceState'
+      return:
+        type:
+          - '@azure/arm-cdn.EndpointResourceState'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源標籤。
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源類型。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.TrackedResource'
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: '@azure/arm-cdn.TrackedResource'
+  - uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    name: EndpointPropertiesUpdateParametersDeliveryPolicy
+    spec.typeScript:
+      - name: EndpointPropertiesUpdateParametersDeliveryPolicy
+        fullName: EndpointPropertiesUpdateParametersDeliveryPolicy
+        uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+  - uid: '@azure/arm-cdn.GeoFilter[]'
+    name: 'GeoFilter[]'
+    spec.typeScript:
+      - name: GeoFilter
+        fullName: GeoFilter
+        uid: '@azure/arm-cdn.GeoFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.OptimizationType'
+    name: OptimizationType
+    spec.typeScript:
+      - name: OptimizationType
+        fullName: OptimizationType
+        uid: '@azure/arm-cdn.OptimizationType'
+  - uid: '@azure/arm-cdn.DeepCreatedOrigin[]'
+    name: 'DeepCreatedOrigin[]'
+    spec.typeScript:
+      - name: DeepCreatedOrigin
+        fullName: DeepCreatedOrigin
+        uid: '@azure/arm-cdn.DeepCreatedOrigin'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.QueryStringCachingBehavior'
+    name: QueryStringCachingBehavior
+    spec.typeScript:
+      - name: QueryStringCachingBehavior
+        fullName: QueryStringCachingBehavior
+        uid: '@azure/arm-cdn.QueryStringCachingBehavior'
+  - uid: '@azure/arm-cdn.EndpointResourceState'
+    name: EndpointResourceState
+    spec.typeScript:
+      - name: EndpointResourceState
+        fullName: EndpointResourceState
+        uid: '@azure/arm-cdn.EndpointResourceState'
