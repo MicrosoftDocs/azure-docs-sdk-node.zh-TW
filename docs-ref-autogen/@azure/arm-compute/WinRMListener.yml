@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WinRMListener'
+    name: WinRMListener
+    fullName: WinRMListener
+    children:
+      - '@azure/arm-compute.WinRMListener.certificateUrl'
+      - '@azure/arm-compute.WinRMListener.protocol'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="e9919-101">描述通訊協定和 Windows 遠端管理的接聽程式的憑證指紋</span><span class="sxs-lookup"><span data-stu-id="e9919-101">Describes Protocol and thumbprint of Windows Remote Management listener</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e9919-102">這是憑證已上傳至金鑰保存庫的祕密的 URL。</span><span class="sxs-lookup"><span data-stu-id="e9919-102">This is the URL of a certificate that has been uploaded to Key Vault as a secret.</span></span> <span data-ttu-id="e9919-103">將祕密新增至金鑰保存庫，請參閱[金鑰或密碼加入金鑰保存庫](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add)。</span><span class="sxs-lookup"><span data-stu-id="e9919-103">For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add).</span></span> <span data-ttu-id="e9919-104">在此情況下，您的憑證必須是 Base64 編碼的下列 JSON 物件的編碼在 utf-8 中：</span><span class="sxs-lookup"><span data-stu-id="e9919-104">In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8:</span></span> <br><br> <span data-ttu-id="e9919-105">{</span><span class="sxs-lookup"><span data-stu-id="e9919-105">{</span></span><br>  <span data-ttu-id="e9919-106">"data":"<Base64-encoded-certificate>",</span><span class="sxs-lookup"><span data-stu-id="e9919-106">"data":"<Base64-encoded-certificate>",</span></span><br>
+      <span data-ttu-id="e9919-107">"dataType":"pfx",</span><span class="sxs-lookup"><span data-stu-id="e9919-107">"dataType":"pfx",</span></span><br>  <span data-ttu-id="e9919-108">"password":"<pfx-file-password>"</span><span class="sxs-lookup"><span data-stu-id="e9919-108">"password":"<pfx-file-password>"</span></span><br><span data-ttu-id="e9919-109">}</span><span class="sxs-lookup"><span data-stu-id="e9919-109">}</span></span>
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e9919-110">指定接聽程式通訊的協定。</span><span class="sxs-lookup"><span data-stu-id="e9919-110">Specifies the protocol of listener.</span></span> <br><br> <span data-ttu-id="e9919-111">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="e9919-111">Possible values are:</span></span> <br><span data-ttu-id="e9919-112">**http**</span><span class="sxs-lookup"><span data-stu-id="e9919-112">**http**</span></span> <br><br>
+      <span data-ttu-id="e9919-113">**https**。</span><span class="sxs-lookup"><span data-stu-id="e9919-113">**https**.</span></span> <span data-ttu-id="e9919-114">可能的值包括：' Http'、 'Https'</span><span class="sxs-lookup"><span data-stu-id="e9919-114">Possible values include: 'Http', 'Https'</span></span>
+    optional: true
+    syntax:
+      content: 'protocol?: ProtocolTypes'
+      return:
+        type:
+          - '@azure/arm-compute.ProtocolTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ProtocolTypes'
+    name: ProtocolTypes
+    spec.typeScript:
+      - name: ProtocolTypes
+        fullName: ProtocolTypes
+        uid: '@azure/arm-compute.ProtocolTypes'
