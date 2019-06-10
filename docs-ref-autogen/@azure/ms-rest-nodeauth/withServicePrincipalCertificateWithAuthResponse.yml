@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withServicePrincipalCertificateWithAuthResponse'
+    name: 'withServicePrincipalCertificateWithAuthResponse(string, string, string, AzureTokenCredentialsOptions)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2d547-101">提供 ApplicationTokenCertificateCredentials 物件，以及跨所有適用的租用戶相關聯 servicePrinicpalId/clientId 的訂用帳戶的清單。</span><span class="sxs-lookup"><span data-stu-id="2d547-101">Provides an ApplicationTokenCertificateCredentials object and the list of subscriptions associated with that servicePrinicpalId/clientId across all the applicable tenants.</span></span>
+    syntax:
+      content: 'function withServicePrincipalCertificateWithAuthResponse(clientId: string, certificateStringOrFilePath: string, domain: string, options?: AzureTokenCredentialsOptions)'
+      parameters:
+        - id: clientId
+          type:
+            - string
+          description: |-
+            <span data-ttu-id="2d547-102">Active directory 應用程式用戶端識別碼也稱為 SPN （ServicePrincipal 名稱）。</span><span class="sxs-lookup"><span data-stu-id="2d547-102">The active directory application client id also known as the SPN (ServicePrincipal Name).</span></span>
+            <span data-ttu-id="2d547-103">請參閱[適用於.Net 的 Active Directory 快速入門](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/)的範例。</span><span class="sxs-lookup"><span data-stu-id="2d547-103">See [Active Directory Quickstart for .Net](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/) for an example.</span></span>
+        - id: certificateStringOrFilePath
+          type:
+            - string
+          description: |-
+            <span data-ttu-id="2d547-104">PEM 編碼的憑證和私密金鑰或.pem 檔案的絕對檔案路徑包含該資訊。</span><span class="sxs-lookup"><span data-stu-id="2d547-104">A PEM encoded certificate and private key OR an absolute filepath to the .pem file containing that information.</span></span> <span data-ttu-id="2d547-105">例如:</span><span class="sxs-lookup"><span data-stu-id="2d547-105">For example:</span></span>
+            - <span data-ttu-id="2d547-106">CertificateString:"---BEGIN PRIVATE KEY---\n<xxxxx>\n---END PRIVATE KEY---\n---BEGIN CERTIFICATE---\n<yyyyy>\n---END CERTIFICATE---\n 」</span><span class="sxs-lookup"><span data-stu-id="2d547-106">CertificateString: "-----BEGIN PRIVATE KEY-----\n<xxxxx>\n-----END PRIVATE KEY-----\n-----BEGIN CERTIFICATE-----\n<yyyyy>\n-----END CERTIFICATE-----\n"</span></span>
+            - <span data-ttu-id="2d547-107">CertificateFilePath:**絕對**.pem 檔案的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="2d547-107">CertificateFilePath: **Absolute** file path of the .pem file.</span></span>
+        - id: domain
+          type:
+            - string
+          description: <span data-ttu-id="2d547-108">包含此應用程式網域或租用戶識別碼。</span><span class="sxs-lookup"><span data-stu-id="2d547-108">The domain or tenant id containing this application.</span></span>
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+    name: AzureTokenCredentialsOptions
+    spec.typeScript:
+      - name: AzureTokenCredentialsOptions
+        fullName: AzureTokenCredentialsOptions
+        uid: '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: '@azure/ms-rest-nodeauth.AuthResponse'
+      - name: '>'
+        fullName: '>'
