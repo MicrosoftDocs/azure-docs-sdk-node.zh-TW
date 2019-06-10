@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.RuleDescription'
+    name: RuleDescription
+    fullName: RuleDescription
+    children:
+      - '@azure/service-bus.RuleDescription.action'
+      - '@azure/service-bus.RuleDescription.filter'
+      - '@azure/service-bus.RuleDescription.name'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="9d4e7-101">表示用來篩選內送訊息的訂用帳戶的訂用帳戶中的規則。</span><span class="sxs-lookup"><span data-stu-id="9d4e7-101">Represents a Rule on a Subscription that is used to filter the incoming message from the Subscription.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d4e7-102">如果訊息符合篩選條件運算式所執行的動作。</span><span class="sxs-lookup"><span data-stu-id="9d4e7-102">Action to perform if the message satisfies the filtering expression.</span></span>
+    optional: true
+    syntax:
+      content: 'action?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.filter'
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d4e7-103">篩選運算式，用來比對訊息。</span><span class="sxs-lookup"><span data-stu-id="9d4e7-103">Filter expression used to match messages.</span></span> <span data-ttu-id="9d4e7-104">支援 2 種類型：</span><span class="sxs-lookup"><span data-stu-id="9d4e7-104">Supports 2 types:</span></span>
+      - <span data-ttu-id="9d4e7-105">`string`:評估訊息的使用者定義的屬性和系統屬性的類似 SQL 的條件運算式。</span><span class="sxs-lookup"><span data-stu-id="9d4e7-105">`string`: SQL-like condition expression that is evaluated against the messages' user-defined properties and system properties.</span></span> <span data-ttu-id="9d4e7-106">所有系統屬性會都加上`sys.`條件運算式中。</span><span class="sxs-lookup"><span data-stu-id="9d4e7-106">All system properties will be prefixed with `sys.` in the condition expression.</span></span>
+      - <span data-ttu-id="9d4e7-107">`CorrelationFilter`:將使用篩選的屬性，以符合訊息屬性。</span><span class="sxs-lookup"><span data-stu-id="9d4e7-107">`CorrelationFilter`: Properties of the filter will be used to match with the message properties.</span></span>
+    optional: true
+    syntax:
+      content: 'filter?: string | CorrelationFilter'
+      return:
+        type:
+          - string | @azure/service-bus.CorrelationFilter
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d4e7-108">表示規則的名稱。</span><span class="sxs-lookup"><span data-stu-id="9d4e7-108">Represents the name of the rule.</span></span>
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: string | @azure/service-bus.CorrelationFilter
+    name: CorrelationFilter
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: CorrelationFilter
+        fullName: CorrelationFilter
+        uid: '@azure/service-bus.CorrelationFilter'
