@@ -1,0 +1,278 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.Snapshot'
+    name: Snapshot
+    fullName: Snapshot
+    children:
+      - '@azure/arm-compute.Snapshot.creationData'
+      - '@azure/arm-compute.Snapshot.diskSizeGB'
+      - '@azure/arm-compute.Snapshot.encryptionSettingsCollection'
+      - '@azure/arm-compute.Snapshot.hyperVGeneration'
+      - '@azure/arm-compute.Snapshot.id'
+      - '@azure/arm-compute.Snapshot.location'
+      - '@azure/arm-compute.Snapshot.managedBy'
+      - '@azure/arm-compute.Snapshot.name'
+      - '@azure/arm-compute.Snapshot.osType'
+      - '@azure/arm-compute.Snapshot.provisioningState'
+      - '@azure/arm-compute.Snapshot.sku'
+      - '@azure/arm-compute.Snapshot.tags'
+      - '@azure/arm-compute.Snapshot.timeCreated'
+      - '@azure/arm-compute.Snapshot.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a787e-101">快照集的資源。</span><span class="sxs-lookup"><span data-stu-id="a787e-101">Snapshot resource.</span></span>
+    extends:
+      name: '@azure/arm-compute.Resource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.creationData'
+    name: creationData
+    fullName: creationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a787e-102">磁碟的來源資訊。</span><span class="sxs-lookup"><span data-stu-id="a787e-102">Disk source information.</span></span> <span data-ttu-id="a787e-103">在建立磁碟後，就無法變更 CreationData 資訊。</span><span class="sxs-lookup"><span data-stu-id="a787e-103">CreationData information cannot be changed after the disk has been created.</span></span>
+    syntax:
+      content: 'creationData: CreationData'
+      return:
+        type:
+          - '@azure/arm-compute.CreationData'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a787e-104">如果 creationData.createOption 是空的此為必要欄位，並指出若要建立 VHD 的大小。</span><span class="sxs-lookup"><span data-stu-id="a787e-104">If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create.</span></span> <span data-ttu-id="a787e-105">如果此欄位進行更新或使用其他選項建立，它會指出一次調整大小。</span><span class="sxs-lookup"><span data-stu-id="a787e-105">If this field is present for updates or creation with other options, it indicates a resize.</span></span> <span data-ttu-id="a787e-106">如果磁碟未附加至執行中的 VM，且只能增加磁碟的大小，才允許調整大小。</span><span class="sxs-lookup"><span data-stu-id="a787e-106">Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk''s size.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a787e-107">使用的加密設定集合是 Azure 磁碟加密，可以包含每個磁碟或快照集的多個加密設定。</span><span class="sxs-lookup"><span data-stu-id="a787e-107">Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.hyperVGeneration'
+    name: hyperVGeneration
+    fullName: hyperVGeneration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a787e-108">Hypervisor 虛擬機器的世代。</span><span class="sxs-lookup"><span data-stu-id="a787e-108">The hypervisor generation of the Virtual Machine.</span></span> <span data-ttu-id="a787e-109">適用於僅限 OS 磁碟。</span><span class="sxs-lookup"><span data-stu-id="a787e-109">Applicable to OS disks only.</span></span> <span data-ttu-id="a787e-110">可能的值包括：'' V1''、 ''V2''</span><span class="sxs-lookup"><span data-stu-id="a787e-110">Possible values include: ''V1'', ''V2''</span></span>'
+    optional: true
+    syntax:
+      content: 'hyperVGeneration?: HyperVGeneration'
+      return:
+        type:
+          - '@azure/arm-compute.HyperVGeneration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a787e-111">資源識別碼**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="a787e-111">Resource Id **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a787e-112">資源位置</span><span class="sxs-lookup"><span data-stu-id="a787e-112">Resource location</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.managedBy'
+    name: managedBy
+    fullName: managedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a787e-113">未使用。</span><span class="sxs-lookup"><span data-stu-id="a787e-113">Unused.</span></span> <span data-ttu-id="a787e-114">一律是 Null。</span><span class="sxs-lookup"><span data-stu-id="a787e-114">Always Null.</span></span>
+      <span data-ttu-id="a787e-115">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="a787e-115">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'managedBy?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a787e-116">資源名稱**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="a787e-116">Resource name **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a787e-117">作業系統類型。</span><span class="sxs-lookup"><span data-stu-id="a787e-117">The Operating System type.</span></span> <span data-ttu-id="a787e-118">可能的值包括：''Windows'', ''Linux''</span><span class="sxs-lookup"><span data-stu-id="a787e-118">Possible values include: ''Windows'', ''Linux''</span></span>'
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a787e-119">磁碟佈建狀態。</span><span class="sxs-lookup"><span data-stu-id="a787e-119">The disk provisioning state.</span></span>
+      <span data-ttu-id="a787e-120">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="a787e-120">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: SnapshotSku'
+      return:
+        type:
+          - '@azure/arm-compute.SnapshotSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a787e-121">資源標籤</span><span class="sxs-lookup"><span data-stu-id="a787e-121">Resource tags</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.timeCreated'
+    name: timeCreated
+    fullName: timeCreated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a787e-122">建立磁碟時的時間。</span><span class="sxs-lookup"><span data-stu-id="a787e-122">The time when the disk was created.</span></span>
+      <span data-ttu-id="a787e-123">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="a787e-123">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'timeCreated?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a787e-124">資源類型**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="a787e-124">Resource type **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-compute.Resource'
+  - uid: '@azure/arm-compute.CreationData'
+    name: CreationData
+    spec.typeScript:
+      - name: CreationData
+        fullName: CreationData
+        uid: '@azure/arm-compute.CreationData'
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.HyperVGeneration'
+    name: HyperVGeneration
+    spec.typeScript:
+      - name: HyperVGeneration
+        fullName: HyperVGeneration
+        uid: '@azure/arm-compute.HyperVGeneration'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.SnapshotSku'
+    name: SnapshotSku
+    spec.typeScript:
+      - name: SnapshotSku
+        fullName: SnapshotSku
+        uid: '@azure/arm-compute.SnapshotSku'
