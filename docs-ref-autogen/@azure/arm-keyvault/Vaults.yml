@@ -1,0 +1,1391 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.Vaults'
+    name: Vaults
+    fullName: Vaults
+    children:
+      - '@azure/arm-keyvault.Vaults.beginCreateOrUpdate'
+      - '@azure/arm-keyvault.Vaults.beginPurgeDeleted'
+      - '@azure/arm-keyvault.Vaults.checkNameAvailability'
+      - '@azure/arm-keyvault.Vaults.checkNameAvailability_2'
+      - '@azure/arm-keyvault.Vaults.checkNameAvailability_1'
+      - '@azure/arm-keyvault.Vaults.createOrUpdate'
+      - '@azure/arm-keyvault.Vaults.deleteMethod'
+      - '@azure/arm-keyvault.Vaults.deleteMethod_2'
+      - '@azure/arm-keyvault.Vaults.deleteMethod_1'
+      - '@azure/arm-keyvault.Vaults.get'
+      - '@azure/arm-keyvault.Vaults.get_2'
+      - '@azure/arm-keyvault.Vaults.get_1'
+      - '@azure/arm-keyvault.Vaults.getDeleted'
+      - '@azure/arm-keyvault.Vaults.getDeleted_2'
+      - '@azure/arm-keyvault.Vaults.getDeleted_1'
+      - '@azure/arm-keyvault.Vaults.list'
+      - '@azure/arm-keyvault.Vaults.list_1'
+      - '@azure/arm-keyvault.Vaults.list_2'
+      - '@azure/arm-keyvault.Vaults.listByResourceGroup'
+      - '@azure/arm-keyvault.Vaults.listByResourceGroup_1'
+      - '@azure/arm-keyvault.Vaults.listByResourceGroup_2'
+      - '@azure/arm-keyvault.Vaults.listByResourceGroupNext'
+      - '@azure/arm-keyvault.Vaults.listByResourceGroupNext_2'
+      - '@azure/arm-keyvault.Vaults.listByResourceGroupNext_1'
+      - '@azure/arm-keyvault.Vaults.listBySubscription'
+      - '@azure/arm-keyvault.Vaults.listBySubscription_1'
+      - '@azure/arm-keyvault.Vaults.listBySubscription_2'
+      - '@azure/arm-keyvault.Vaults.listBySubscriptionNext'
+      - '@azure/arm-keyvault.Vaults.listBySubscriptionNext_2'
+      - '@azure/arm-keyvault.Vaults.listBySubscriptionNext_1'
+      - '@azure/arm-keyvault.Vaults.listDeleted'
+      - '@azure/arm-keyvault.Vaults.listDeleted_2'
+      - '@azure/arm-keyvault.Vaults.listDeleted_1'
+      - '@azure/arm-keyvault.Vaults.listDeletedNext'
+      - '@azure/arm-keyvault.Vaults.listDeletedNext_2'
+      - '@azure/arm-keyvault.Vaults.listDeletedNext_1'
+      - '@azure/arm-keyvault.Vaults.listNext'
+      - '@azure/arm-keyvault.Vaults.listNext_2'
+      - '@azure/arm-keyvault.Vaults.listNext_1'
+      - '@azure/arm-keyvault.Vaults.purgeDeleted'
+      - '@azure/arm-keyvault.Vaults.update'
+      - '@azure/arm-keyvault.Vaults.update_2'
+      - '@azure/arm-keyvault.Vaults.update_1'
+      - '@azure/arm-keyvault.Vaults.updateAccessPolicy'
+      - '@azure/arm-keyvault.Vaults.updateAccessPolicy_2'
+      - '@azure/arm-keyvault.Vaults.updateAccessPolicy_1'
+      - '@azure/arm-keyvault.Vaults.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="9814f-101">表示保存庫的類別。</span><span class="sxs-lookup"><span data-stu-id="9814f-101">Class representing a Vaults.</span></span>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, VaultCreateOrUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-102">建立或更新指定的訂用帳戶中的金鑰保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-102">Create or update a key vault in the specified subscription.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, vaultName: string, parameters: VaultCreateOrUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-103">伺服器所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-103">The name of the Resource Group to which the server belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-104">保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-104">Name of the vault</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-keyvault.VaultCreateOrUpdateParameters'
+          description: <span data-ttu-id="9814f-105">若要建立或更新的保存庫的參數</span><span class="sxs-lookup"><span data-stu-id="9814f-105">Parameters to create or update the vault</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.beginPurgeDeleted'
+    name: 'beginPurgeDeleted(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-106">永久刪除指定的保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-106">Permanently deletes the specified vault.</span></span> <span data-ttu-id="9814f-107">也稱為清除已刪除的 Azure 金鑰保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-107">aka Purges the deleted Azure key vault.</span></span>
+    syntax:
+      content: 'function beginPurgeDeleted(vaultName: string, location: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-108">虛刪除的保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-108">The name of the soft-deleted vault.</span></span>
+        - id: location
+          type:
+            - string
+          description: <span data-ttu-id="9814f-109">虛刪除的保存庫的位置。</span><span class="sxs-lookup"><span data-stu-id="9814f-109">The location of the soft-deleted vault.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.checkNameAvailability'
+    name: 'checkNameAvailability(VaultCheckNameAvailabilityParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-110">檢查保存庫名稱無效，而且尚未使用。</span><span class="sxs-lookup"><span data-stu-id="9814f-110">Checks that the vault name is valid and is not already in use.</span></span>
+    syntax:
+      content: 'function checkNameAvailability(vaultName: VaultCheckNameAvailabilityParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - '@azure/arm-keyvault.VaultCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="9814f-111">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-111">The name of the vault.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsCheckNameAvailabilityResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.checkNameAvailability_2'
+    name: 'checkNameAvailability(VaultCheckNameAvailabilityParameters, RequestOptionsBase, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(vaultName: VaultCheckNameAvailabilityParameters, options: RequestOptionsBase, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: vaultName
+          type:
+            - '@azure/arm-keyvault.VaultCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="9814f-112">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-112">The name of the vault.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-113">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.CheckNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="9814f-114">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsCheckNameAvailabilityResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.checkNameAvailability_1'
+    name: 'checkNameAvailability(VaultCheckNameAvailabilityParameters, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(vaultName: VaultCheckNameAvailabilityParameters, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: vaultName
+          type:
+            - '@azure/arm-keyvault.VaultCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="9814f-115">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-115">The name of the vault.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.CheckNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="9814f-116">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-116">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsCheckNameAvailabilityResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.createOrUpdate'
+    name: 'createOrUpdate(string, string, VaultCreateOrUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-117">建立或更新指定的訂用帳戶中的金鑰保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-117">Create or update a key vault in the specified subscription.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, vaultName: string, parameters: VaultCreateOrUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-118">伺服器所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-118">The name of the Resource Group to which the server belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-119">保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-119">Name of the vault</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-keyvault.VaultCreateOrUpdateParameters'
+          description: <span data-ttu-id="9814f-120">若要建立或更新的保存庫的參數</span><span class="sxs-lookup"><span data-stu-id="9814f-120">Parameters to create or update the vault</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsCreateOrUpdateResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-121">刪除指定的 Azure 金鑰保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-121">Deletes the specified Azure key vault.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, vaultName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-122">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-122">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-123">若要刪除的保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-123">The name of the vault to delete</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, vaultName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-124">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-124">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-125">若要刪除的保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-125">The name of the vault to delete</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-126">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-126">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="9814f-127">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-127">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, vaultName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-128">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-128">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-129">若要刪除的保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-129">The name of the vault to delete</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="9814f-130">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-130">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-131">取得指定的 Azure 金鑰保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-131">Gets the specified Azure key vault.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, vaultName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-132">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-132">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-133">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-133">The name of the vault.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsGetResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Vault>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, vaultName: string, options: RequestOptionsBase, callback: ServiceCallback<Vault>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-134">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-134">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-135">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-135">The name of the vault.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-136">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-136">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.Vault>
+          description: |
+            <span data-ttu-id="9814f-137">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-137">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsGetResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.get_1'
+    name: 'get(string, string, ServiceCallback<Vault>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, vaultName: string, callback: ServiceCallback<Vault>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-138">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-138">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-139">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-139">The name of the vault.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.Vault>
+          description: |
+            <span data-ttu-id="9814f-140">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-140">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsGetResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.getDeleted'
+    name: 'getDeleted(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-141">取得已刪除的 Azure 金鑰保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-141">Gets the deleted Azure key vault.</span></span>
+    syntax:
+      content: 'function getDeleted(vaultName: string, location: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-142">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-142">The name of the vault.</span></span>
+        - id: location
+          type:
+            - string
+          description: <span data-ttu-id="9814f-143">已刪除的保存庫的位置。</span><span class="sxs-lookup"><span data-stu-id="9814f-143">The location of the deleted vault.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsGetDeletedResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.getDeleted_2'
+    name: 'getDeleted(string, string, RequestOptionsBase, ServiceCallback<DeletedVault>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getDeleted(vaultName: string, location: string, options: RequestOptionsBase, callback: ServiceCallback<DeletedVault>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-144">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-144">The name of the vault.</span></span>
+        - id: location
+          type:
+            - string
+          description: <span data-ttu-id="9814f-145">已刪除的保存庫的位置。</span><span class="sxs-lookup"><span data-stu-id="9814f-145">The location of the deleted vault.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-146">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-146">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.DeletedVault>
+          description: |
+            <span data-ttu-id="9814f-147">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsGetDeletedResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.getDeleted_1'
+    name: 'getDeleted(string, string, ServiceCallback<DeletedVault>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getDeleted(vaultName: string, location: string, callback: ServiceCallback<DeletedVault>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-148">保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-148">The name of the vault.</span></span>
+        - id: location
+          type:
+            - string
+          description: <span data-ttu-id="9814f-149">已刪除的保存庫的位置。</span><span class="sxs-lookup"><span data-stu-id="9814f-149">The location of the deleted vault.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.DeletedVault>
+          description: |
+            <span data-ttu-id="9814f-150">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-150">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsGetDeletedResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.list'
+    name: list(Models.VaultsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-151">清單作業會取得訂用帳戶相關聯的保存庫的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9814f-151">The List operation gets information about the vaults associated with the subscription.</span></span>
+    syntax:
+      content: 'function list(options?: Models.VaultsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.VaultsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsListResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.list_1'
+    name: list(ServiceCallback<ResourceListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ResourceListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.ResourceListResult>
+          description: |
+            <span data-ttu-id="9814f-152">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.list_2'
+    name: 'list(VaultsListOptionalParams, ServiceCallback<ResourceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: VaultsListOptionalParams, callback: ServiceCallback<ResourceListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-keyvault.VaultsListOptionalParams'
+          description: <span data-ttu-id="9814f-153">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-153">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.ResourceListResult>
+          description: |
+            <span data-ttu-id="9814f-154">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.VaultsListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-155">在清單作業取得保存庫相關聯的訂用帳戶和指定的資源群組內的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9814f-155">The List operation gets information about the vaults associated with the subscription and within the specified resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.VaultsListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-156">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-156">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: options
+          type:
+            - Models.VaultsListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsListByResourceGroupResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<VaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<VaultListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-157">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-157">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultListResult>
+          description: |
+            <span data-ttu-id="9814f-158">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListByResourceGroupResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, VaultsListByResourceGroupOptionalParams, ServiceCallback<VaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: VaultsListByResourceGroupOptionalParams, callback: ServiceCallback<VaultListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-159">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-159">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-keyvault.VaultsListByResourceGroupOptionalParams'
+          description: <span data-ttu-id="9814f-160">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-160">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultListResult>
+          description: |
+            <span data-ttu-id="9814f-161">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListByResourceGroupResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-162">在清單作業取得保存庫相關聯的訂用帳戶和指定的資源群組內的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9814f-162">The List operation gets information about the vaults associated with the subscription and within the specified resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-163">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-163">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsListByResourceGroupNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<VaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<VaultListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-164">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-164">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-165">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-165">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultListResult>
+          description: |
+            <span data-ttu-id="9814f-166">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListByResourceGroupNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<VaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<VaultListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-167">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-167">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultListResult>
+          description: |
+            <span data-ttu-id="9814f-168">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListByResourceGroupNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listBySubscription'
+    name: listBySubscription(Models.VaultsListBySubscriptionOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-169">清單作業會取得訂用帳戶相關聯的保存庫的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9814f-169">The List operation gets information about the vaults associated with the subscription.</span></span>
+    syntax:
+      content: 'function listBySubscription(options?: Models.VaultsListBySubscriptionOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.VaultsListBySubscriptionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsListBySubscriptionResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listBySubscription_1'
+    name: listBySubscription(ServiceCallback<VaultListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscription(callback: ServiceCallback<VaultListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultListResult>
+          description: |
+            <span data-ttu-id="9814f-170">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListBySubscriptionResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listBySubscription_2'
+    name: 'listBySubscription(VaultsListBySubscriptionOptionalParams, ServiceCallback<VaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscription(options: VaultsListBySubscriptionOptionalParams, callback: ServiceCallback<VaultListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-keyvault.VaultsListBySubscriptionOptionalParams'
+          description: <span data-ttu-id="9814f-171">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-171">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultListResult>
+          description: |
+            <span data-ttu-id="9814f-172">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListBySubscriptionResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listBySubscriptionNext'
+    name: 'listBySubscriptionNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-173">清單作業會取得訂用帳戶相關聯的保存庫的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9814f-173">The List operation gets information about the vaults associated with the subscription.</span></span>
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-174">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-174">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsListBySubscriptionNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listBySubscriptionNext_2'
+    name: 'listBySubscriptionNext(string, RequestOptionsBase, ServiceCallback<VaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<VaultListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-175">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-176">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-176">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultListResult>
+          description: |
+            <span data-ttu-id="9814f-177">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListBySubscriptionNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listBySubscriptionNext_1'
+    name: 'listBySubscriptionNext(string, ServiceCallback<VaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, callback: ServiceCallback<VaultListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-178">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-178">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultListResult>
+          description: |
+            <span data-ttu-id="9814f-179">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-179">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListBySubscriptionNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listDeleted'
+    name: listDeleted(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-180">取得訂用帳戶中的已刪除的保存庫的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9814f-180">Gets information about the deleted vaults in a subscription.</span></span>
+    syntax:
+      content: 'function listDeleted(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsListDeletedResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listDeleted_2'
+    name: 'listDeleted(RequestOptionsBase, ServiceCallback<DeletedVaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listDeleted(options: RequestOptionsBase, callback: ServiceCallback<DeletedVaultListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-181">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-181">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.DeletedVaultListResult>
+          description: |
+            <span data-ttu-id="9814f-182">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListDeletedResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listDeleted_1'
+    name: listDeleted(ServiceCallback<DeletedVaultListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listDeleted(callback: ServiceCallback<DeletedVaultListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.DeletedVaultListResult>
+          description: |
+            <span data-ttu-id="9814f-183">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListDeletedResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listDeletedNext'
+    name: 'listDeletedNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-184">取得訂用帳戶中的已刪除的保存庫的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9814f-184">Gets information about the deleted vaults in a subscription.</span></span>
+    syntax:
+      content: 'function listDeletedNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-185">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-185">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsListDeletedNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listDeletedNext_2'
+    name: 'listDeletedNext(string, RequestOptionsBase, ServiceCallback<DeletedVaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listDeletedNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<DeletedVaultListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-186">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-186">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-187">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-187">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.DeletedVaultListResult>
+          description: |
+            <span data-ttu-id="9814f-188">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListDeletedNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listDeletedNext_1'
+    name: 'listDeletedNext(string, ServiceCallback<DeletedVaultListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listDeletedNext(nextPageLink: string, callback: ServiceCallback<DeletedVaultListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-189">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-189">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.DeletedVaultListResult>
+          description: |
+            <span data-ttu-id="9814f-190">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-190">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListDeletedNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-191">清單作業會取得訂用帳戶相關聯的保存庫的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9814f-191">The List operation gets information about the vaults associated with the subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-192">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsListNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ResourceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-193">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-194">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-194">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.ResourceListResult>
+          description: |
+            <span data-ttu-id="9814f-195">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.listNext_1'
+    name: 'listNext(string, ServiceCallback<ResourceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ResourceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9814f-196">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="9814f-196">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.ResourceListResult>
+          description: |
+            <span data-ttu-id="9814f-197">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-197">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsListNextResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.purgeDeleted'
+    name: 'purgeDeleted(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-198">永久刪除指定的保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-198">Permanently deletes the specified vault.</span></span> <span data-ttu-id="9814f-199">也稱為清除已刪除的 Azure 金鑰保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-199">aka Purges the deleted Azure key vault.</span></span>
+    syntax:
+      content: 'function purgeDeleted(vaultName: string, location: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-200">虛刪除的保存庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-200">The name of the soft-deleted vault.</span></span>
+        - id: location
+          type:
+            - string
+          description: <span data-ttu-id="9814f-201">虛刪除的保存庫的位置。</span><span class="sxs-lookup"><span data-stu-id="9814f-201">The location of the soft-deleted vault.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.update'
+    name: 'update(string, string, VaultPatchParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-202">更新指定的訂用帳戶中的金鑰保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-202">Update a key vault in the specified subscription.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, vaultName: string, parameters: VaultPatchParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-203">伺服器所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-203">The name of the Resource Group to which the server belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-204">保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-204">Name of the vault</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-keyvault.VaultPatchParameters'
+          description: <span data-ttu-id="9814f-205">若要修補的保存庫的參數</span><span class="sxs-lookup"><span data-stu-id="9814f-205">Parameters to patch the vault</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsUpdateResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.update_2'
+    name: 'update(string, string, VaultPatchParameters, RequestOptionsBase, ServiceCallback<Vault>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, vaultName: string, parameters: VaultPatchParameters, options: RequestOptionsBase, callback: ServiceCallback<Vault>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-206">伺服器所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-206">The name of the Resource Group to which the server belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-207">保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-207">Name of the vault</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-keyvault.VaultPatchParameters'
+          description: <span data-ttu-id="9814f-208">若要修補的保存庫的參數</span><span class="sxs-lookup"><span data-stu-id="9814f-208">Parameters to patch the vault</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-209">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-209">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.Vault>
+          description: |
+            <span data-ttu-id="9814f-210">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-210">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsUpdateResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.update_1'
+    name: 'update(string, string, VaultPatchParameters, ServiceCallback<Vault>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, vaultName: string, parameters: VaultPatchParameters, callback: ServiceCallback<Vault>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-211">伺服器所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-211">The name of the Resource Group to which the server belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-212">保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-212">Name of the vault</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-keyvault.VaultPatchParameters'
+          description: <span data-ttu-id="9814f-213">若要修補的保存庫的參數</span><span class="sxs-lookup"><span data-stu-id="9814f-213">Parameters to patch the vault</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.Vault>
+          description: |
+            <span data-ttu-id="9814f-214">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-214">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsUpdateResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.updateAccessPolicy'
+    name: 'updateAccessPolicy(string, string, Models.AccessPolicyUpdateKind, VaultAccessPolicyParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-215">更新指定的訂用帳戶中的金鑰保存庫中的存取原則。</span><span class="sxs-lookup"><span data-stu-id="9814f-215">Update access policies in a key vault in the specified subscription.</span></span>
+    syntax:
+      content: 'function updateAccessPolicy(resourceGroupName: string, vaultName: string, operationKind: Models.AccessPolicyUpdateKind, parameters: VaultAccessPolicyParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-216">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-216">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-217">保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-217">Name of the vault</span></span>
+        - id: operationKind
+          type:
+            - Models.AccessPolicyUpdateKind
+          description: '<span data-ttu-id="9814f-218">作業名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-218">Name of the operation.</span></span> <span data-ttu-id="9814f-219">可能的值包括: ''add''、 ''replace''、 ''remove''</span><span class="sxs-lookup"><span data-stu-id="9814f-219">Possible values include: ''add'', ''replace'', ''remove''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-keyvault.VaultAccessPolicyParameters'
+          description: <span data-ttu-id="9814f-220">若要合併至保存庫的存取原則</span><span class="sxs-lookup"><span data-stu-id="9814f-220">Access policy to merge into the vault</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VaultsUpdateAccessPolicyResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.updateAccessPolicy_2'
+    name: 'updateAccessPolicy(string, string, Models.AccessPolicyUpdateKind, VaultAccessPolicyParameters, RequestOptionsBase, ServiceCallback<VaultAccessPolicyParameters>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateAccessPolicy(resourceGroupName: string, vaultName: string, operationKind: Models.AccessPolicyUpdateKind, parameters: VaultAccessPolicyParameters, options: RequestOptionsBase, callback: ServiceCallback<VaultAccessPolicyParameters>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-221">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-221">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-222">保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-222">Name of the vault</span></span>
+        - id: operationKind
+          type:
+            - Models.AccessPolicyUpdateKind
+          description: '<span data-ttu-id="9814f-223">作業名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-223">Name of the operation.</span></span> <span data-ttu-id="9814f-224">可能的值包括: ''add''、 ''replace''、 ''remove''</span><span class="sxs-lookup"><span data-stu-id="9814f-224">Possible values include: ''add'', ''replace'', ''remove''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-keyvault.VaultAccessPolicyParameters'
+          description: <span data-ttu-id="9814f-225">若要合併至保存庫的存取原則</span><span class="sxs-lookup"><span data-stu-id="9814f-225">Access policy to merge into the vault</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9814f-226">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="9814f-226">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultAccessPolicyParameters>
+          description: |
+            <span data-ttu-id="9814f-227">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-227">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsUpdateAccessPolicyResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.updateAccessPolicy_1'
+    name: 'updateAccessPolicy(string, string, Models.AccessPolicyUpdateKind, VaultAccessPolicyParameters, ServiceCallback<VaultAccessPolicyParameters>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateAccessPolicy(resourceGroupName: string, vaultName: string, operationKind: Models.AccessPolicyUpdateKind, parameters: VaultAccessPolicyParameters, callback: ServiceCallback<VaultAccessPolicyParameters>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-228">保存庫所屬的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-228">The name of the Resource Group to which the vault belongs.</span></span>
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="9814f-229">保存庫名稱</span><span class="sxs-lookup"><span data-stu-id="9814f-229">Name of the vault</span></span>
+        - id: operationKind
+          type:
+            - Models.AccessPolicyUpdateKind
+          description: '<span data-ttu-id="9814f-230">作業名稱。</span><span class="sxs-lookup"><span data-stu-id="9814f-230">Name of the operation.</span></span> <span data-ttu-id="9814f-231">可能的值包括: ''add''、 ''replace''、 ''remove''</span><span class="sxs-lookup"><span data-stu-id="9814f-231">Possible values include: ''add'', ''replace'', ''remove''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-keyvault.VaultAccessPolicyParameters'
+          description: <span data-ttu-id="9814f-232">若要合併至保存庫的存取原則</span><span class="sxs-lookup"><span data-stu-id="9814f-232">Access policy to merge into the vault</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-keyvault.VaultAccessPolicyParameters>
+          description: |
+            <span data-ttu-id="9814f-233">回呼</span><span class="sxs-lookup"><span data-stu-id="9814f-233">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VaultsUpdateAccessPolicyResponse>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.Vaults.constructor'
+    name: Vaults(KeyVaultManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9814f-234">建立保存庫。</span><span class="sxs-lookup"><span data-stu-id="9814f-234">Create a Vaults.</span></span>
+    syntax:
+      content: 'new Vaults(client: KeyVaultManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-keyvault.KeyVaultManagementClientContext'
+          description: |
+            <span data-ttu-id="9814f-235">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="9814f-235">Reference to the service client.</span></span>
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.KeyVaultManagementClientContext'
+    name: KeyVaultManagementClientContext
+    spec.typeScript:
+      - name: KeyVaultManagementClientContext
+        fullName: KeyVaultManagementClientContext
+        uid: '@azure/arm-keyvault.KeyVaultManagementClientContext'
+  - uid: '@azure/arm-keyvault.VaultCreateOrUpdateParameters'
+    name: VaultCreateOrUpdateParameters
+    spec.typeScript:
+      - name: VaultCreateOrUpdateParameters
+        fullName: VaultCreateOrUpdateParameters
+        uid: '@azure/arm-keyvault.VaultCreateOrUpdateParameters'
+  - uid: '@azure/arm-keyvault.VaultCheckNameAvailabilityParameters'
+    name: VaultCheckNameAvailabilityParameters
+    spec.typeScript:
+      - name: VaultCheckNameAvailabilityParameters
+        fullName: VaultCheckNameAvailabilityParameters
+        uid: '@azure/arm-keyvault.VaultCheckNameAvailabilityParameters'
+  - uid: ServiceCallback<@azure/arm-keyvault.CheckNameAvailabilityResult>
+    name: CheckNameAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckNameAvailabilityResult
+        fullName: CheckNameAvailabilityResult
+        uid: '@azure/arm-keyvault.CheckNameAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-keyvault.Vault>
+    name: Vault>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Vault
+        fullName: Vault
+        uid: '@azure/arm-keyvault.Vault'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-keyvault.DeletedVault>
+    name: DeletedVault>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DeletedVault
+        fullName: DeletedVault
+        uid: '@azure/arm-keyvault.DeletedVault'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-keyvault.ResourceListResult>
+    name: ResourceListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceListResult
+        fullName: ResourceListResult
+        uid: '@azure/arm-keyvault.ResourceListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-keyvault.VaultsListOptionalParams'
+    name: VaultsListOptionalParams
+    spec.typeScript:
+      - name: VaultsListOptionalParams
+        fullName: VaultsListOptionalParams
+        uid: '@azure/arm-keyvault.VaultsListOptionalParams'
+  - uid: ServiceCallback<@azure/arm-keyvault.VaultListResult>
+    name: VaultListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VaultListResult
+        fullName: VaultListResult
+        uid: '@azure/arm-keyvault.VaultListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-keyvault.VaultsListByResourceGroupOptionalParams'
+    name: VaultsListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: VaultsListByResourceGroupOptionalParams
+        fullName: VaultsListByResourceGroupOptionalParams
+        uid: '@azure/arm-keyvault.VaultsListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-keyvault.VaultsListBySubscriptionOptionalParams'
+    name: VaultsListBySubscriptionOptionalParams
+    spec.typeScript:
+      - name: VaultsListBySubscriptionOptionalParams
+        fullName: VaultsListBySubscriptionOptionalParams
+        uid: '@azure/arm-keyvault.VaultsListBySubscriptionOptionalParams'
+  - uid: ServiceCallback<@azure/arm-keyvault.DeletedVaultListResult>
+    name: DeletedVaultListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DeletedVaultListResult
+        fullName: DeletedVaultListResult
+        uid: '@azure/arm-keyvault.DeletedVaultListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-keyvault.VaultPatchParameters'
+    name: VaultPatchParameters
+    spec.typeScript:
+      - name: VaultPatchParameters
+        fullName: VaultPatchParameters
+        uid: '@azure/arm-keyvault.VaultPatchParameters'
+  - uid: '@azure/arm-keyvault.VaultAccessPolicyParameters'
+    name: VaultAccessPolicyParameters
+    spec.typeScript:
+      - name: VaultAccessPolicyParameters
+        fullName: VaultAccessPolicyParameters
+        uid: '@azure/arm-keyvault.VaultAccessPolicyParameters'
+  - uid: ServiceCallback<@azure/arm-keyvault.VaultAccessPolicyParameters>
+    name: VaultAccessPolicyParameters>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VaultAccessPolicyParameters
+        fullName: VaultAccessPolicyParameters
+        uid: '@azure/arm-keyvault.VaultAccessPolicyParameters'
+      - name: '>'
+        fullName: '>'
