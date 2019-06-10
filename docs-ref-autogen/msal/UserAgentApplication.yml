@@ -15,8 +15,6 @@ items:
       - msal.UserAgentApplication.getLoginInProgress
       - msal.UserAgentApplication.getPostLogoutRedirectUri
       - msal.UserAgentApplication.getRedirectUri
-      - msal.UserAgentApplication.handleRedirectCallback_1
-      - msal.UserAgentApplication.handleRedirectCallback
       - msal.UserAgentApplication.loginPopup
       - msal.UserAgentApplication.loginRedirect
       - msal.UserAgentApplication.logout
@@ -24,7 +22,8 @@ items:
     langs:
       - typeScript
     type: class
-    summary: '<span data-ttu-id="0c785-101">UserAgentApplication 類別：<xref:UserAgentApplication> 物件執行個體，開發人員可以使用來進行 loginXX OR acquireTokenXX 函式</span><span class="sxs-lookup"><span data-stu-id="0c785-101">UserAgentApplication class : <xref:UserAgentApplication> Object Instance that the developer can use to make loginXX OR acquireTokenXX functions</span></span>'
+    summary: |
+      <span data-ttu-id="056b9-101">UserAgentApplication 類別物件的執行個體，開發人員可用來讓 loginXX OR acquireTokenXX 函式</span><span class="sxs-lookup"><span data-stu-id="056b9-101">UserAgentApplication class Object Instance that the developer can use to make loginXX OR acquireTokenXX functions</span></span>
     package: msal
   - uid: msal.UserAgentApplication.acquireTokenPopup
     name: acquireTokenPopup(AuthenticationParameters)
@@ -32,7 +31,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c785-102">當您想要為您的 API，透過在使用者的瀏覽器中開啟快顯視窗中取得 access_token 的使用</span><span class="sxs-lookup"><span data-stu-id="0c785-102">Use when you want to obtain an access_token for your API via opening a popup window in the user's browser</span></span>
+    summary: <span data-ttu-id="056b9-102">當您想要為您的 API，透過在使用者的瀏覽器中開啟快顯視窗中取得 access_token 的使用</span><span class="sxs-lookup"><span data-stu-id="056b9-102">Use when you want to obtain an access_token for your API via opening a popup window in the user's browser</span></span>
     syntax:
       content: 'function acquireTokenPopup(request: AuthenticationParameters)'
       parameters:
@@ -50,7 +49,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c785-103">您想要取得為您的 API 的 access_token，將使用者重新導向至授權端點時使用。</span><span class="sxs-lookup"><span data-stu-id="0c785-103">Used when you want to obtain an access_token for your API by redirecting the user to the authorization endpoint.</span></span>
+    summary: <span data-ttu-id="056b9-103">當您想要取得為您的 API 的 access_token，藉由將使用者的瀏覽器視窗中重新導向至授權端點時使用。</span><span class="sxs-lookup"><span data-stu-id="056b9-103">Use when you want to obtain an access_token for your API by redirecting the user's browser window to the authorization endpoint.</span></span>
     syntax:
       content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
       parameters:
@@ -66,7 +65,7 @@ items:
     langs:
       - typeScript
     summary: |
-      <span data-ttu-id="0c785-104">使用此函數來取得語彙基元，每個對 API 進行呼叫之前 / 資源提供者 MSAL 傳回的快取的權杖可用時，或它所傳送的 STS 要求，以取得新權杖使用隱藏的 iframe。</span><span class="sxs-lookup"><span data-stu-id="0c785-104">Use this function to obtain a token before every call to the API / resource provider MSAL return's a cached token when available Or it send's a request to the STS to obtain a new token using a hidden iframe.</span></span>
+      <span data-ttu-id="056b9-104">使用此函數來取得語彙基元，每個對 API 進行呼叫之前 / 資源提供者 MSAL 傳回的快取的權杖可用時，或它所傳送的 STS 要求，以取得新權杖使用隱藏的 iframe。</span><span class="sxs-lookup"><span data-stu-id="056b9-104">Use this function to obtain a token before every call to the API / resource provider MSAL return's a cached token when available Or it send's a request to the STS to obtain a new token using a hidden iframe.</span></span>
     syntax:
       content: 'function acquireTokenSilent(request: AuthenticationParameters)'
       parameters:
@@ -85,11 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: |-
-      <span data-ttu-id="0c785-105">傳回授權單位，其中授權單位是 URL，表示可以使用 MSAL 取得權杖的目錄</span><span class="sxs-lookup"><span data-stu-id="0c785-105">returns the authority, where authority is a URL indicating the directory that MSAL can use to obtain tokens</span></span>
-      - <span data-ttu-id="0c785-106">在 Azure AD 中，這個屬性是 URL，表示 MSAL 用來取得的權杖的形式就是 Azure active directory https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt;如果您的應用程式會支援帳戶，一個組織的目錄中，「 Enter_the_Tenant_Info_Here"值取代租用戶識別碼或租用戶名稱 (例如 contoso.microsoft.com) 如果您的應用程式支援任何組織的目錄中的帳戶、 組織以取代"Enter_the_Tenant_Info_Here"值，如果您的應用程式支援在任何組織的目錄和個人 Microsoft 帳戶的帳戶，取代"Enter_the_Tenant_Info_使用一般的 here"值。</span><span class="sxs-lookup"><span data-stu-id="0c785-106">In Azure AD, this attribute is a URL indicating the Azure active directory that MSAL uses to obtain tokens It is of the form https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt; If your application supports Accounts in one organizational directory, replace "Enter_the_Tenant_Info_Here" value with the Tenant Id or Tenant name (for example, contoso.microsoft.com) If your application supports Accounts in any organizational directory, replace "Enter_the_Tenant_Info_Here" value with organizations If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace "Enter_the_Tenant_Info_Here" value with common.</span></span>
-      <span data-ttu-id="0c785-107">若要限制支援個人 Microsoft 帳戶，取代"Enter_the_Tenant_Info_Here 」 值取用者。</span><span class="sxs-lookup"><span data-stu-id="0c785-107">To restrict support to Personal Microsoft accounts only, replace "Enter_the_Tenant_Info_Here" value with consumers.</span></span>
-      - <span data-ttu-id="0c785-108">在 Azure B2C 中，它是 https://&lt;執行個體&gt;/tfp/&lt;租用戶&gt;/<policyName>/</span><span class="sxs-lookup"><span data-stu-id="0c785-108">In Azure B2C, it is of the form https://&lt;instance&gt;/tfp/&lt;tenant&gt;/<policyName>/</span></span>
+    summary: <span data-ttu-id="056b9-105">若要管理授權單位 URL 的方法。</span><span class="sxs-lookup"><span data-stu-id="056b9-105">Method to manage the authority URL.</span></span>
     syntax:
       content: 'authority: string'
       return:
@@ -102,7 +97,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c785-109">帶正負號帳戶 （來自帳戶物件建立時的登入） 或 null 時傳回不找到任何狀態</span><span class="sxs-lookup"><span data-stu-id="0c785-109">Returns the signed in account (received from an account object created at the time of login) or null when no state is found</span></span>
+    summary: <span data-ttu-id="056b9-106">帶正負號帳戶 （帳戶物件建立時的成功登入） 或 null 時傳回不找到任何狀態</span><span class="sxs-lookup"><span data-stu-id="056b9-106">Returns the signed in account (the account object is created at the time of successful login) or null when no state is found</span></span>
     syntax:
       content: function getAccount()
       parameters: []
@@ -116,7 +111,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c785-110">用來篩選所有快取的項目並傳回一份根據 homeAccountIdentifier 唯一的帳戶。</span><span class="sxs-lookup"><span data-stu-id="0c785-110">Used to filter all cached items and return a list of unique accounts based on homeAccountIdentifier.</span></span>
+    summary: <span data-ttu-id="056b9-107">使用根據 homeAccountIdentifier MSAL 快取中取得一份唯一的帳戶。</span><span class="sxs-lookup"><span data-stu-id="056b9-107">Use to get a list of unique accounts in MSAL cache based on homeAccountIdentifier.</span></span>
     syntax:
       content: function getAllAccounts()
       parameters: []
@@ -130,7 +125,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c785-111">傳回的授權單位執行個體</span><span class="sxs-lookup"><span data-stu-id="0c785-111">returns the authority instance</span></span>
+    summary: <span data-ttu-id="056b9-108">取得目前的授權單位執行個體從 MSAL 組態物件</span><span class="sxs-lookup"><span data-stu-id="056b9-108">Get the current authority instance from the MSAL configuration object</span></span>
     syntax:
       content: function getAuthorityInstance()
       parameters: []
@@ -144,7 +139,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="0c785-112">若要取得目前使用<xref:Configuration>msal 的物件</span><span class="sxs-lookup"><span data-stu-id="0c785-112">Use to get the current <xref:Configuration> object in MSAL</span></span>'
+    summary: '<span data-ttu-id="056b9-109">若要取得目前使用<xref:Configuration>msal 的物件</span><span class="sxs-lookup"><span data-stu-id="056b9-109">Use to get the current <xref:Configuration> object in MSAL</span></span>'
     syntax:
       content: function getCurrentConfiguration()
       parameters: []
@@ -158,7 +153,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c785-113">傳回布林值旗標，以利通知，如果登入正在進行中的開發人員</span><span class="sxs-lookup"><span data-stu-id="0c785-113">Return boolean flag to developer to help inform if login is in progress</span></span>
+    summary: <span data-ttu-id="056b9-110">傳回布林值旗標，以利通知，如果登入正在進行中的開發人員</span><span class="sxs-lookup"><span data-stu-id="056b9-110">Return boolean flag to developer to help inform if login is in progress</span></span>
     syntax:
       content: function getLoginInProgress()
       parameters: []
@@ -173,8 +168,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="0c785-114">使用取得文章登出重新導向 uri 在 MSAL 或 null 設定。</span><span class="sxs-lookup"><span data-stu-id="0c785-114">Use to get the post logout redirect uri configured in MSAL or null.</span></span>
-      <span data-ttu-id="0c785-115">評估 postLogoutredirectUri 是否函式，否則只會傳回其值。</span><span class="sxs-lookup"><span data-stu-id="0c785-115">Evaluates postLogoutredirectUri if its a function, otherwise simply returns its value.</span></span>
+      <span data-ttu-id="056b9-111">使用取得文章登出重新導向 uri 在 MSAL 或 null 設定。</span><span class="sxs-lookup"><span data-stu-id="056b9-111">Use to get the post logout redirect uri configured in MSAL or null.</span></span>
+      <span data-ttu-id="056b9-112">評估 postLogoutredirectUri 是否函式，否則只會傳回其值。</span><span class="sxs-lookup"><span data-stu-id="056b9-112">Evaluates postLogoutredirectUri if its a function, otherwise simply returns its value.</span></span>
     syntax:
       content: function getPostLogoutRedirectUri()
       parameters: []
@@ -189,8 +184,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="0c785-116">使用此選項，以取得在 MSAL 或 null 設定重新導向 uri。</span><span class="sxs-lookup"><span data-stu-id="0c785-116">Use to get the redirect uri configured in MSAL or null.</span></span>
-      <span data-ttu-id="0c785-117">評估 redirectUri 是否函式，否則只會傳回其值。</span><span class="sxs-lookup"><span data-stu-id="0c785-117">Evaluates redirectUri if its a function, otherwise simply returns its value.</span></span>
+      <span data-ttu-id="056b9-113">使用此選項，以取得在 MSAL 或 null 設定重新導向 uri。</span><span class="sxs-lookup"><span data-stu-id="056b9-113">Use to get the redirect uri configured in MSAL or null.</span></span>
+      <span data-ttu-id="056b9-114">評估 redirectUri 是否函式，否則只會傳回其值。</span><span class="sxs-lookup"><span data-stu-id="056b9-114">Evaluates redirectUri if its a function, otherwise simply returns its value.</span></span>
     syntax:
       content: function getRedirectUri()
       parameters: []
@@ -198,47 +193,13 @@ items:
         type:
           - string
     package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback_1
-    name: handleRedirectCallback(authResponseCallback)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="0c785-118">設定重新導向流程，以傳回成功或錯誤物件的回呼函式。</span><span class="sxs-lookup"><span data-stu-id="0c785-118">Sets the callback functions for the redirect flow to send back the success or error object.</span></span>
-    syntax:
-      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
-      parameters:
-        - id: authCallback
-          type:
-            - authResponseCallback
-          description: ''
-    package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback
-    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="0c785-119">設定重新導向流程，以傳回成功或錯誤物件的回呼函式。</span><span class="sxs-lookup"><span data-stu-id="0c785-119">Sets the callback functions for the redirect flow to send back the success or error object.</span></span>
-    syntax:
-      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
-      parameters:
-        - id: tokenReceivedCallback
-          type:
-            - tokenReceivedCallback
-          description: ''
-        - id: errorReceivedCallback
-          type:
-            - errorReceivedCallback
-          description: ''
-    package: msal
   - uid: msal.UserAgentApplication.loginPopup
     name: loginPopup(AuthenticationParameters)
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c785-120">使用時起始登入程序，透過在使用者的瀏覽器中開啟快顯視窗</span><span class="sxs-lookup"><span data-stu-id="0c785-120">Use when initiating the login process via opening a popup window in the user's browser</span></span>
+    summary: <span data-ttu-id="056b9-115">使用時起始登入程序，透過在使用者的瀏覽器中開啟快顯視窗</span><span class="sxs-lookup"><span data-stu-id="056b9-115">Use when initiating the login process via opening a popup window in the user's browser</span></span>
     syntax:
       content: 'function loginPopup(request?: AuthenticationParameters)'
       parameters:
@@ -257,7 +218,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c785-121">起始登入程序的使用者的瀏覽器重新導向至授權端點時使用。</span><span class="sxs-lookup"><span data-stu-id="0c785-121">Use when initiating the login process by redirecting the user's browser to the authorization endpoint.</span></span>
+    summary: <span data-ttu-id="056b9-116">起始登入程序的使用者的瀏覽器重新導向至授權端點時使用。</span><span class="sxs-lookup"><span data-stu-id="056b9-116">Use when initiating the login process by redirecting the user's browser to the authorization endpoint.</span></span>
     syntax:
       content: 'function loginRedirect(request?: AuthenticationParameters)'
       parameters:
@@ -274,8 +235,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="0c785-122">用來登出目前的使用者，並將使用者重新導向至 postLogoutRedirectUri。</span><span class="sxs-lookup"><span data-stu-id="0c785-122">Used to log out the current user, and redirect the user to the postLogoutRedirectUri.</span></span>
-      <span data-ttu-id="0c785-123">預設行為是將使用者重新導向至`window.location.href`。</span><span class="sxs-lookup"><span data-stu-id="0c785-123">Defaults behaviour is to redirect the user to `window.location.href`.</span></span>
+      <span data-ttu-id="056b9-117">使用要登出目前的使用者，並將使用者重新導向至 postLogoutRedirectUri。</span><span class="sxs-lookup"><span data-stu-id="056b9-117">Use to log out the current user, and redirect the user to the postLogoutRedirectUri.</span></span>
+      <span data-ttu-id="056b9-118">預設行為是將使用者重新導向至`window.location.href`。</span><span class="sxs-lookup"><span data-stu-id="056b9-118">Default behaviour is to redirect the user to `window.location.href`.</span></span>
     syntax:
       content: function logout()
       parameters: []
@@ -286,7 +247,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: '<span data-ttu-id="0c785-124">建構函式<xref:UserAgentApplication>這是為了可以具現化的物件<xref:UserAgentApplication>物件</span><span class="sxs-lookup"><span data-stu-id="0c785-124">Constructor for the <xref:UserAgentApplication> object This is to be able to instantiate the <xref:UserAgentApplication> object</span></span>'
+    summary: ''
     syntax:
       content: 'new UserAgentApplication(configuration: Configuration)'
       parameters:
@@ -294,7 +255,7 @@ items:
           type:
             - msal.Configuration
           description: |
-            <span data-ttu-id="0c785-125">MSAL UserAgentApplication 執行個體的物件</span><span class="sxs-lookup"><span data-stu-id="0c785-125">object for the MSAL UserAgentApplication instance</span></span>
+            <span data-ttu-id="056b9-119">MSAL UserAgentApplication 執行個體的物件</span><span class="sxs-lookup"><span data-stu-id="056b9-119">object for the MSAL UserAgentApplication instance</span></span>
     package: msal
 references:
   - uid: msal.Configuration
