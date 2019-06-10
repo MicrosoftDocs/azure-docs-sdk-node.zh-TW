@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk'
+    name: VirtualMachineScaleSetDataDisk
+    fullName: VirtualMachineScaleSetDataDisk
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.caching'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.createOption'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.diskSizeGB'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.lun'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.managedDisk'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.name'
+      - '@azure/arm-compute.VirtualMachineScaleSetDataDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="b2f6e-101">描述虛擬機器擴展集的資料磁碟。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-101">Describes a virtual machine scale set data disk.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b2f6e-102">指定快取的需求。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-102">Specifies the caching requirements.</span></span> <br><br> <span data-ttu-id="b2f6e-103">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="b2f6e-103">Possible values are:</span></span> <br><br> <span data-ttu-id="b2f6e-104">**None**</span><span class="sxs-lookup"><span data-stu-id="b2f6e-104">**None**</span></span> <br><br>
+      <span data-ttu-id="b2f6e-105">**唯讀**</span><span class="sxs-lookup"><span data-stu-id="b2f6e-105">**ReadOnly**</span></span> <br><br> <span data-ttu-id="b2f6e-106">**讀寫**</span><span class="sxs-lookup"><span data-stu-id="b2f6e-106">**ReadWrite**</span></span> <br><br> <span data-ttu-id="b2f6e-107">預設值：**無標準儲存體。針對進階儲存體的 ReadOnly**。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-107">Default: **None for Standard storage. ReadOnly for Premium storage**.</span></span> <span data-ttu-id="b2f6e-108">可能的值包括：'None'、 'ReadOnly'，'ReadWrite'</span><span class="sxs-lookup"><span data-stu-id="b2f6e-108">Possible values include: 'None', 'ReadOnly', 'ReadWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b2f6e-109">[建立] 選項。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-109">The create option.</span></span> <span data-ttu-id="b2f6e-110">可能的值包括：''FromImage''、 ''Empty''，「 附加 」</span><span class="sxs-lookup"><span data-stu-id="b2f6e-110">Possible values include: ''FromImage'', ''Empty'', ''Attach''</span></span>'
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b2f6e-111">請指定空的資料磁碟的大小 （gb）。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-111">Specifies the size of an empty data disk in gigabytes.</span></span> <span data-ttu-id="b2f6e-112">此元素可用來覆寫的虛擬機器映像的磁碟大小。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-112">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="b2f6e-113">這個值不能大於 1023 GB</span><span class="sxs-lookup"><span data-stu-id="b2f6e-113">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b2f6e-114">指定資料磁碟的邏輯單元編號。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-114">Specifies the logical unit number of the data disk.</span></span> <span data-ttu-id="b2f6e-115">這個值用來識別在 VM 內的資料磁碟，並因此必須是唯一的每個資料磁碟連結至 VM。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-115">This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.</span></span>
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b2f6e-116">受控的磁碟的參數。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-116">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: VirtualMachineScaleSetManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b2f6e-117">磁碟的名稱。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-117">The disk name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetDataDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b2f6e-118">指定 writeAccelerator 是否應該啟用或停用磁碟上。</span><span class="sxs-lookup"><span data-stu-id="b2f6e-118">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    name: VirtualMachineScaleSetManagedDiskParameters
+    spec.typeScript:
+      - name: VirtualMachineScaleSetManagedDiskParameters
+        fullName: VirtualMachineScaleSetManagedDiskParameters
+        uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'

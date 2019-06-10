@@ -1,0 +1,1171 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs'
+    name: VirtualMachineScaleSetVMs
+    fullName: VirtualMachineScaleSetVMs
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeallocate'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeleteMethod'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPerformMaintenance'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPowerOff'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRedeploy'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimage'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimageAll'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRestart'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRunCommand'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginStart'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginUpdate'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.deallocate'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.deleteMethod'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.get'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.get_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.get_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.list'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.list_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.list_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.performMaintenance'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.powerOff'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.redeploy'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.reimage'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.reimageAll'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.restart'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.runCommand'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.start'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.update'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="b5ce4-101">此類別代表 VirtualMachineScaleSetVMs。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-101">Class representing a VirtualMachineScaleSetVMs.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeallocate'
+    name: 'beginDeallocate(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-102">解除配置 VM 擴展集內的特定虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-102">Deallocates a specific virtual machine in a VM scale set.</span></span> <span data-ttu-id="b5ce4-103">關閉虛擬機器，並釋放它所使用的計算資源。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-103">Shuts down the virtual machine and releases the compute resources it uses.</span></span> <span data-ttu-id="b5ce4-104">一旦取消配置時不會計費這部虛擬機器的計算資源。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-104">You are not billed for the compute resources of this virtual machine once it is deallocated.</span></span>
+    syntax:
+      content: 'function beginDeallocate(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-105">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-105">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-106">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-106">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-107">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-107">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-108">刪除虛擬機器從 VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-108">Deletes a virtual machine from a VM scale set.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-109">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-109">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-110">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-110">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-111">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-111">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPerformMaintenance'
+    name: 'beginPerformMaintenance(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-112">VM 擴展集內的虛擬機器上執行維護。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-112">Performs maintenance on a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginPerformMaintenance(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-113">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-113">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-114">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-114">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-115">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-115">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPowerOff'
+    name: 'beginPowerOff(string, string, string, Models.VirtualMachineScaleSetVMsBeginPowerOffOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="b5ce4-116">若要關閉 （停止） 中的虛擬機器的 VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-116">Power off (stop) a virtual machine in a VM scale set.</span></span> <span data-ttu-id="b5ce4-117">請注意，資源仍會附加，而且您會取得支付的資源。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-117">Note that resources are still attached and you are getting charged for the resources.</span></span> <span data-ttu-id="b5ce4-118">相反地，使用解除配置釋放資源，並避免產生費用。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-118">Instead, use deallocate to release resources and avoid charges.</span></span>'
+    syntax:
+      content: 'function beginPowerOff(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: Models.VirtualMachineScaleSetVMsBeginPowerOffOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-119">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-119">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-120">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-120">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-121">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-121">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsBeginPowerOffOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRedeploy'
+    name: 'beginRedeploy(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-122">重新部署 VM 擴展集中虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-122">Redeploys a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginRedeploy(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-123">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-123">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-124">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-124">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-125">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-125">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimage'
+    name: 'beginReimage(string, string, string, Models.VirtualMachineScaleSetVMsBeginReimageOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-126">重新安裝映像 （將作業系統升級） 特定的虛擬機器，VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-126">Reimages (upgrade the operating system) a specific virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginReimage(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: Models.VirtualMachineScaleSetVMsBeginReimageOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-127">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-127">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-128">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-128">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-129">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-129">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsBeginReimageOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimageAll'
+    name: 'beginReimageAll(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="b5ce4-130">可讓您重新安裝映像 （包括資料磁碟） 的所有磁碟中的 VM 擴展集執行個體。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-130">Allows you to re-image all the disks ( including data disks ) in the a VM scale set instance.</span></span>
+      <span data-ttu-id="b5ce4-131">受控磁碟才支援此作業。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-131">This operation is only supported for managed disks.</span></span>
+    syntax:
+      content: 'function beginReimageAll(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-132">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-132">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-133">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-133">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-134">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-134">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRestart'
+    name: 'beginRestart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-135">重新啟動虛擬機器，VM 擴展集內。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-135">Restarts a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginRestart(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-136">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-136">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-137">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-137">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-138">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-138">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRunCommand'
+    name: 'beginRunCommand(string, string, string, RunCommandInput, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-139">VM 擴展集內的虛擬機器上執行命令。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-139">Run command on a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginRunCommand(resourceGroupName: string, vmScaleSetName: string, instanceId: string, parameters: RunCommandInput, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-140">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-140">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-141">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-141">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-142">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-142">The instance ID of the virtual machine.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.RunCommandInput'
+          description: '<span data-ttu-id="b5ce4-143">提供 [執行] 命令作業給參數。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-143">Parameters supplied to the Run command operation.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginStart'
+    name: 'beginStart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-144">啟動虛擬機器，VM 擴展集內。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-144">Starts a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginStart(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-145">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-145">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-146">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-146">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-147">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-147">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginUpdate'
+    name: 'beginUpdate(string, string, string, VirtualMachineScaleSetVM, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-148">更新 VM 擴展集的虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-148">Updates a virtual machine of a VM scale set.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, vmScaleSetName: string, instanceId: string, parameters: VirtualMachineScaleSetVM, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-149">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-149">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-150">建立或更新 VM 擴展集擴充功能應該放置於何處的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-150">The name of the VM scale set where the extension should be create or updated.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-151">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-151">The instance ID of the virtual machine.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.VirtualMachineScaleSetVM'
+          description: <span data-ttu-id="b5ce4-152">更新虛擬機器擴展集 VM 作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-152">Parameters supplied to the Update Virtual Machine Scale Sets VM operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.deallocate'
+    name: 'deallocate(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-153">解除配置 VM 擴展集內的特定虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-153">Deallocates a specific virtual machine in a VM scale set.</span></span> <span data-ttu-id="b5ce4-154">關閉虛擬機器，並釋放它所使用的計算資源。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-154">Shuts down the virtual machine and releases the compute resources it uses.</span></span> <span data-ttu-id="b5ce4-155">一旦取消配置時不會計費這部虛擬機器的計算資源。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-155">You are not billed for the compute resources of this virtual machine once it is deallocated.</span></span>
+    syntax:
+      content: 'function deallocate(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-156">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-156">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-157">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-157">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-158">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-158">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-159">刪除虛擬機器從 VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-159">Deletes a virtual machine from a VM scale set.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-160">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-160">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-161">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-161">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-162">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-162">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-163">取得虛擬機器從 VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-163">Gets a virtual machine from a VM scale set.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-164">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-164">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-165">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-165">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-166">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-166">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<VirtualMachineScaleSetVM>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineScaleSetVM>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-167">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-167">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-168">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-168">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-169">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-169">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5ce4-170">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="b5ce4-170">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
+          description: |
+            <span data-ttu-id="b5ce4-171">回呼</span><span class="sxs-lookup"><span data-stu-id="b5ce4-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get_1'
+    name: 'get(string, string, string, ServiceCallback<VirtualMachineScaleSetVM>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, vmScaleSetName: string, instanceId: string, callback: ServiceCallback<VirtualMachineScaleSetVM>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-172">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-172">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-173">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-173">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-174">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-174">The instance ID of the virtual machine.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
+          description: |
+            <span data-ttu-id="b5ce4-175">回呼</span><span class="sxs-lookup"><span data-stu-id="b5ce4-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView'
+    name: 'getInstanceView(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-176">取得虛擬機器的狀態從 VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-176">Gets the status of a virtual machine from a VM scale set.</span></span>
+    syntax:
+      content: 'function getInstanceView(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-177">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-177">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-178">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-178">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-179">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-179">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_2'
+    name: 'getInstanceView(string, string, string, RequestOptionsBase, ServiceCallback<VirtualMachineScaleSetVMInstanceView>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getInstanceView(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineScaleSetVMInstanceView>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-180">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-180">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-181">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-181">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-182">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-182">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5ce4-183">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="b5ce4-183">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
+          description: |
+            <span data-ttu-id="b5ce4-184">回呼</span><span class="sxs-lookup"><span data-stu-id="b5ce4-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_1'
+    name: 'getInstanceView(string, string, string, ServiceCallback<VirtualMachineScaleSetVMInstanceView>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getInstanceView(resourceGroupName: string, vmScaleSetName: string, instanceId: string, callback: ServiceCallback<VirtualMachineScaleSetVMInstanceView>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-185">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-185">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-186">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-186">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-187">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-187">The instance ID of the virtual machine.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
+          description: |
+            <span data-ttu-id="b5ce4-188">回呼</span><span class="sxs-lookup"><span data-stu-id="b5ce4-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list'
+    name: 'list(string, string, Models.VirtualMachineScaleSetVMsListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-189">取得一份所有虛擬機器中的 VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-189">Gets a list of all virtual machines in a VM scale sets.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, virtualMachineScaleSetName: string, options?: Models.VirtualMachineScaleSetVMsListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-190">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-190">The name of the resource group.</span></span>
+        - id: virtualMachineScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-191">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-191">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list_1'
+    name: 'list(string, string, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, virtualMachineScaleSetName: string, callback: ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-192">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-192">The name of the resource group.</span></span>
+        - id: virtualMachineScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-193">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-193">The name of the VM scale set.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+          description: |
+            <span data-ttu-id="b5ce4-194">回呼</span><span class="sxs-lookup"><span data-stu-id="b5ce4-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list_2'
+    name: 'list(string, string, VirtualMachineScaleSetVMsListOptionalParams, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, virtualMachineScaleSetName: string, options: VirtualMachineScaleSetVMsListOptionalParams, callback: ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-195">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-195">The name of the resource group.</span></span>
+        - id: virtualMachineScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-196">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-196">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-compute.VirtualMachineScaleSetVMsListOptionalParams'
+          description: <span data-ttu-id="b5ce4-197">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="b5ce4-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+          description: |
+            <span data-ttu-id="b5ce4-198">回呼</span><span class="sxs-lookup"><span data-stu-id="b5ce4-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-199">取得一份所有虛擬機器中的 VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-199">Gets a list of all virtual machines in a VM scale sets.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-200">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-200">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-201">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-201">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5ce4-202">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="b5ce4-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+          description: |
+            <span data-ttu-id="b5ce4-203">回呼</span><span class="sxs-lookup"><span data-stu-id="b5ce4-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_1'
+    name: 'listNext(string, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-204">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-204">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+          description: |
+            <span data-ttu-id="b5ce4-205">回呼</span><span class="sxs-lookup"><span data-stu-id="b5ce4-205">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.performMaintenance'
+    name: 'performMaintenance(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-206">VM 擴展集內的虛擬機器上執行維護。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-206">Performs maintenance on a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function performMaintenance(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-207">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-207">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-208">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-208">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-209">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-209">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.powerOff'
+    name: 'powerOff(string, string, string, Models.VirtualMachineScaleSetVMsPowerOffOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="b5ce4-210">若要關閉 （停止） 中的虛擬機器的 VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-210">Power off (stop) a virtual machine in a VM scale set.</span></span> <span data-ttu-id="b5ce4-211">請注意，資源仍會附加，而且您會取得支付的資源。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-211">Note that resources are still attached and you are getting charged for the resources.</span></span> <span data-ttu-id="b5ce4-212">相反地，使用解除配置釋放資源，並避免產生費用。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-212">Instead, use deallocate to release resources and avoid charges.</span></span>'
+    syntax:
+      content: 'function powerOff(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: Models.VirtualMachineScaleSetVMsPowerOffOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-213">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-213">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-214">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-214">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-215">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-215">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsPowerOffOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.redeploy'
+    name: 'redeploy(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-216">重新部署 VM 擴展集中虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-216">Redeploys a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function redeploy(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-217">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-217">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-218">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-218">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-219">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-219">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.reimage'
+    name: 'reimage(string, string, string, Models.VirtualMachineScaleSetVMsReimageOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-220">重新安裝映像 （將作業系統升級） 特定的虛擬機器，VM 擴展集。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-220">Reimages (upgrade the operating system) a specific virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function reimage(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: Models.VirtualMachineScaleSetVMsReimageOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-221">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-221">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-222">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-222">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-223">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-223">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsReimageOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.reimageAll'
+    name: 'reimageAll(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="b5ce4-224">可讓您重新安裝映像 （包括資料磁碟） 的所有磁碟中的 VM 擴展集執行個體。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-224">Allows you to re-image all the disks ( including data disks ) in the a VM scale set instance.</span></span>
+      <span data-ttu-id="b5ce4-225">受控磁碟才支援此作業。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-225">This operation is only supported for managed disks.</span></span>
+    syntax:
+      content: 'function reimageAll(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-226">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-226">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-227">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-227">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-228">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-228">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.restart'
+    name: 'restart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-229">重新啟動虛擬機器，VM 擴展集內。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-229">Restarts a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function restart(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-230">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-230">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-231">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-231">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-232">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-232">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.runCommand'
+    name: 'runCommand(string, string, string, RunCommandInput, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-233">VM 擴展集內的虛擬機器上執行命令。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-233">Run command on a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function runCommand(resourceGroupName: string, vmScaleSetName: string, instanceId: string, parameters: RunCommandInput, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-234">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-234">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-235">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-235">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-236">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-236">The instance ID of the virtual machine.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.RunCommandInput'
+          description: '<span data-ttu-id="b5ce4-237">提供 [執行] 命令作業給參數。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-237">Parameters supplied to the Run command operation.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsRunCommandResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.start'
+    name: 'start(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-238">啟動虛擬機器，VM 擴展集內。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-238">Starts a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function start(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-239">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-239">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-240">VM 擴展集的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-240">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-241">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-241">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.update'
+    name: 'update(string, string, string, VirtualMachineScaleSetVM, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-242">更新 VM 擴展集的虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-242">Updates a virtual machine of a VM scale set.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, vmScaleSetName: string, instanceId: string, parameters: VirtualMachineScaleSetVM, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-243">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-243">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-244">建立或更新 VM 擴展集擴充功能應該放置於何處的名稱。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-244">The name of the VM scale set where the extension should be create or updated.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="b5ce4-245">虛擬機器執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-245">The instance ID of the virtual machine.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.VirtualMachineScaleSetVM'
+          description: <span data-ttu-id="b5ce4-246">更新虛擬機器擴展集 VM 作業提供的參數。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-246">Parameters supplied to the Update Virtual Machine Scale Sets VM operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.constructor'
+    name: VirtualMachineScaleSetVMs(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5ce4-247">建立 VirtualMachineScaleSetVMs。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-247">Create a VirtualMachineScaleSetVMs.</span></span>
+    syntax:
+      content: 'new VirtualMachineScaleSetVMs(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            <span data-ttu-id="b5ce4-248">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="b5ce4-248">Reference to the service client.</span></span>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.RunCommandInput'
+    name: RunCommandInput
+    spec.typeScript:
+      - name: RunCommandInput
+        fullName: RunCommandInput
+        uid: '@azure/arm-compute.RunCommandInput'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
+    name: VirtualMachineScaleSetVM
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVM
+        fullName: VirtualMachineScaleSetVM
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
+  - uid: ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
+    name: VirtualMachineScaleSetVM>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualMachineScaleSetVM
+        fullName: VirtualMachineScaleSetVM
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
+    name: VirtualMachineScaleSetVMInstanceView>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualMachineScaleSetVMInstanceView
+        fullName: VirtualMachineScaleSetVMInstanceView
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMInstanceView'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+    name: VirtualMachineScaleSetVMListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualMachineScaleSetVMListResult
+        fullName: VirtualMachineScaleSetVMListResult
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsListOptionalParams'
+    name: VirtualMachineScaleSetVMsListOptionalParams
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMsListOptionalParams
+        fullName: VirtualMachineScaleSetVMsListOptionalParams
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMsListOptionalParams'

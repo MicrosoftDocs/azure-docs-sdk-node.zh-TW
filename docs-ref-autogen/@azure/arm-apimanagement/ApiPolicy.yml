@@ -1,0 +1,597 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ApiPolicy'
+    name: ApiPolicy
+    fullName: ApiPolicy
+    children:
+      - '@azure/arm-apimanagement.ApiPolicy.constructor'
+      - '@azure/arm-apimanagement.ApiPolicy.createOrUpdate_2'
+      - '@azure/arm-apimanagement.ApiPolicy.createOrUpdate'
+      - '@azure/arm-apimanagement.ApiPolicy.createOrUpdate_1'
+      - '@azure/arm-apimanagement.ApiPolicy.deleteMethod'
+      - '@azure/arm-apimanagement.ApiPolicy.deleteMethod_2'
+      - '@azure/arm-apimanagement.ApiPolicy.deleteMethod_1'
+      - '@azure/arm-apimanagement.ApiPolicy.get_2'
+      - '@azure/arm-apimanagement.ApiPolicy.get'
+      - '@azure/arm-apimanagement.ApiPolicy.get_1'
+      - '@azure/arm-apimanagement.ApiPolicy.getEntityTag'
+      - '@azure/arm-apimanagement.ApiPolicy.getEntityTag_2'
+      - '@azure/arm-apimanagement.ApiPolicy.getEntityTag_1'
+      - '@azure/arm-apimanagement.ApiPolicy.listByApi'
+      - '@azure/arm-apimanagement.ApiPolicy.listByApi_2'
+      - '@azure/arm-apimanagement.ApiPolicy.listByApi_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="0febe-101">此類別代表 ApiPolicy。</span><span class="sxs-lookup"><span data-stu-id="0febe-101">Class representing a ApiPolicy.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.constructor'
+    name: ApiPolicy(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0febe-102">建立 ApiPolicy。</span><span class="sxs-lookup"><span data-stu-id="0febe-102">Create a ApiPolicy.</span></span>
+    syntax:
+      content: 'new ApiPolicy(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            <span data-ttu-id="0febe-103">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="0febe-103">Reference to the service client.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, PolicyContract, ApiPolicyCreateOrUpdateOptionalParams, ServiceCallback<PolicyContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: PolicyContract, options: ApiPolicyCreateOrUpdateOptionalParams, callback: ServiceCallback<PolicyContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-104">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-104">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-105">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-105">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-106">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-106">API revision identifier.</span></span> <span data-ttu-id="0febe-107">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-107">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-108">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-108">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.PolicyContract'
+          description: <span data-ttu-id="0febe-109">要套用的原則內容。</span><span class="sxs-lookup"><span data-stu-id="0febe-109">The policy contents to apply.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-apimanagement.ApiPolicyCreateOrUpdateOptionalParams'
+          description: <span data-ttu-id="0febe-110">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0febe-110">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+          description: |
+            <span data-ttu-id="0febe-111">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-111">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiPolicyCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, PolicyContract, Models.ApiPolicyCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0febe-112">建立或更新 API 原則組態。</span><span class="sxs-lookup"><span data-stu-id="0febe-112">Creates or updates policy configuration for the API.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: PolicyContract, options?: Models.ApiPolicyCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-113">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-113">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-114">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-114">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-115">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-115">API revision identifier.</span></span> <span data-ttu-id="0febe-116">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-116">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-117">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-117">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.PolicyContract'
+          description: <span data-ttu-id="0febe-118">要套用的原則內容。</span><span class="sxs-lookup"><span data-stu-id="0febe-118">The policy contents to apply.</span></span>
+        - id: options
+          type:
+            - Models.ApiPolicyCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiPolicyCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, PolicyContract, ServiceCallback<PolicyContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: PolicyContract, callback: ServiceCallback<PolicyContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-119">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-119">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-120">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-120">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-121">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-121">API revision identifier.</span></span> <span data-ttu-id="0febe-122">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-122">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-123">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-123">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.PolicyContract'
+          description: <span data-ttu-id="0febe-124">要套用的原則內容。</span><span class="sxs-lookup"><span data-stu-id="0febe-124">The policy contents to apply.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+          description: |
+            <span data-ttu-id="0febe-125">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-125">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiPolicyCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0febe-126">刪除 api 的原則設定。</span><span class="sxs-lookup"><span data-stu-id="0febe-126">Deletes the policy configuration at the Api.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-127">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-127">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-128">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-128">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-129">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-129">API revision identifier.</span></span> <span data-ttu-id="0febe-130">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-130">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-131">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-131">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="0febe-132">實體的 ETag。</span><span class="sxs-lookup"><span data-stu-id="0febe-132">ETag of the Entity.</span></span> <span data-ttu-id="0febe-133">ETag 應該符合的 GET 要求標頭回應中目前實體狀態，或它應該是 \* 無條件的更新。</span><span class="sxs-lookup"><span data-stu-id="0febe-133">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-134">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-134">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-135">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-135">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-136">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-136">API revision identifier.</span></span> <span data-ttu-id="0febe-137">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-137">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-138">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-138">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="0febe-139">實體的 ETag。</span><span class="sxs-lookup"><span data-stu-id="0febe-139">ETag of the Entity.</span></span> <span data-ttu-id="0febe-140">ETag 應該符合的 GET 要求標頭回應中目前實體狀態，或它應該是 \* 無條件的更新。</span><span class="sxs-lookup"><span data-stu-id="0febe-140">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0febe-141">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0febe-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="0febe-142">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-143">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-143">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-144">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-144">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-145">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-145">API revision identifier.</span></span> <span data-ttu-id="0febe-146">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-146">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-147">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-147">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="0febe-148">實體的 ETag。</span><span class="sxs-lookup"><span data-stu-id="0febe-148">ETag of the Entity.</span></span> <span data-ttu-id="0febe-149">ETag 應該符合的 GET 要求標頭回應中目前實體狀態，或它應該是 \* 無條件的更新。</span><span class="sxs-lookup"><span data-stu-id="0febe-149">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="0febe-150">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-150">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.get_2'
+    name: 'get(string, string, string, ApiPolicyGetOptionalParams, ServiceCallback<PolicyContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, options: ApiPolicyGetOptionalParams, callback: ServiceCallback<PolicyContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-151">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-151">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-152">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-152">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-153">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-153">API revision identifier.</span></span> <span data-ttu-id="0febe-154">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-154">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-155">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-155">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-apimanagement.ApiPolicyGetOptionalParams'
+          description: <span data-ttu-id="0febe-156">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0febe-156">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+          description: |
+            <span data-ttu-id="0febe-157">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.get'
+    name: 'get(string, string, string, Models.ApiPolicyGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0febe-158">在 API 層級取得的原則組態。</span><span class="sxs-lookup"><span data-stu-id="0febe-158">Get the policy configuration at the API level.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, options?: Models.ApiPolicyGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-159">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-159">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-160">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-160">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-161">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-161">API revision identifier.</span></span> <span data-ttu-id="0febe-162">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-162">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-163">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-163">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - Models.ApiPolicyGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.get_1'
+    name: 'get(string, string, string, ServiceCallback<PolicyContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, callback: ServiceCallback<PolicyContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-164">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-164">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-165">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-165">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-166">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-166">API revision identifier.</span></span> <span data-ttu-id="0febe-167">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-167">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-168">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-168">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+          description: |
+            <span data-ttu-id="0febe-169">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-169">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.getEntityTag'
+    name: 'getEntityTag(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0febe-170">取得識別碼所指定的 API 原則的實體狀態 (Etag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0febe-170">Gets the entity state (Etag) version of the API policy specified by its identifier.</span></span>
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-171">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-171">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-172">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-172">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-173">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-173">API revision identifier.</span></span> <span data-ttu-id="0febe-174">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-174">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-175">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-175">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.getEntityTag_2'
+    name: 'getEntityTag(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-176">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-176">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-177">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-177">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-178">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-178">API revision identifier.</span></span> <span data-ttu-id="0febe-179">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-179">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-180">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-180">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0febe-181">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0febe-181">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="0febe-182">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.getEntityTag_1'
+    name: 'getEntityTag(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-183">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-183">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-184">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-184">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-185">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-185">API revision identifier.</span></span> <span data-ttu-id="0febe-186">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-186">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-187">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-187">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="0febe-188">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.listByApi'
+    name: 'listByApi(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0febe-189">在 API 層級取得的原則組態。</span><span class="sxs-lookup"><span data-stu-id="0febe-189">Get the policy configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-190">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-190">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-191">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-191">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-192">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-192">API revision identifier.</span></span> <span data-ttu-id="0febe-193">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-193">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-194">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-194">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiPolicyListByApiResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.listByApi_2'
+    name: 'listByApi(string, string, string, RequestOptionsBase, ServiceCallback<PolicyCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-195">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-195">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-196">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-196">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-197">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-197">API revision identifier.</span></span> <span data-ttu-id="0febe-198">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-198">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-199">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-199">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0febe-200">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0febe-200">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyCollection>
+          description: |
+            <span data-ttu-id="0febe-201">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-201">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiPolicyListByApiResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.listByApi_1'
+    name: 'listByApi(string, string, string, ServiceCallback<PolicyCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, callback: ServiceCallback<PolicyCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-202">資源群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-202">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0febe-203">API 管理服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="0febe-203">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="0febe-204">API 的修訂識別碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-204">API revision identifier.</span></span> <span data-ttu-id="0febe-205">必須是在目前的 API 管理服務執行個體中是唯一的。</span><span class="sxs-lookup"><span data-stu-id="0febe-205">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="0febe-206">非目前修訂; rev = n，其中 n 是修訂編號的尾碼。</span><span class="sxs-lookup"><span data-stu-id="0febe-206">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyCollection>
+          description: |
+            <span data-ttu-id="0febe-207">回呼</span><span class="sxs-lookup"><span data-stu-id="0febe-207">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiPolicyListByApiResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: '@azure/arm-apimanagement.PolicyContract'
+    name: PolicyContract
+    spec.typeScript:
+      - name: PolicyContract
+        fullName: PolicyContract
+        uid: '@azure/arm-apimanagement.PolicyContract'
+  - uid: ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+    name: PolicyContract>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyContract
+        fullName: PolicyContract
+        uid: '@azure/arm-apimanagement.PolicyContract'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.ApiPolicyCreateOrUpdateOptionalParams'
+    name: ApiPolicyCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: ApiPolicyCreateOrUpdateOptionalParams
+        fullName: ApiPolicyCreateOrUpdateOptionalParams
+        uid: '@azure/arm-apimanagement.ApiPolicyCreateOrUpdateOptionalParams'
+  - uid: '@azure/arm-apimanagement.ApiPolicyGetOptionalParams'
+    name: ApiPolicyGetOptionalParams
+    spec.typeScript:
+      - name: ApiPolicyGetOptionalParams
+        fullName: ApiPolicyGetOptionalParams
+        uid: '@azure/arm-apimanagement.ApiPolicyGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-apimanagement.PolicyCollection>
+    name: PolicyCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyCollection
+        fullName: PolicyCollection
+        uid: '@azure/arm-apimanagement.PolicyCollection'
+      - name: '>'
+        fullName: '>'
