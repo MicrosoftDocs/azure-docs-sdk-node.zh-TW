@@ -1,0 +1,460 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.EventData'
+    name: EventData
+    fullName: EventData
+    children:
+      - '@azure/arm-monitor.EventData.authorization'
+      - '@azure/arm-monitor.EventData.caller'
+      - '@azure/arm-monitor.EventData.category'
+      - '@azure/arm-monitor.EventData.claims'
+      - '@azure/arm-monitor.EventData.correlationId'
+      - '@azure/arm-monitor.EventData.description'
+      - '@azure/arm-monitor.EventData.eventDataId'
+      - '@azure/arm-monitor.EventData.eventName'
+      - '@azure/arm-monitor.EventData.eventTimestamp'
+      - '@azure/arm-monitor.EventData.httpRequest'
+      - '@azure/arm-monitor.EventData.id'
+      - '@azure/arm-monitor.EventData.level'
+      - '@azure/arm-monitor.EventData.operationId'
+      - '@azure/arm-monitor.EventData.operationName'
+      - '@azure/arm-monitor.EventData.properties'
+      - '@azure/arm-monitor.EventData.resourceGroupName'
+      - '@azure/arm-monitor.EventData.resourceId'
+      - '@azure/arm-monitor.EventData.resourceProviderName'
+      - '@azure/arm-monitor.EventData.resourceType'
+      - '@azure/arm-monitor.EventData.status'
+      - '@azure/arm-monitor.EventData.submissionTimestamp'
+      - '@azure/arm-monitor.EventData.subscriptionId'
+      - '@azure/arm-monitor.EventData.subStatus'
+      - '@azure/arm-monitor.EventData.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="4342c-101">Azure 的事件記錄檔項目都屬於型別 EventData</span><span class="sxs-lookup"><span data-stu-id="4342c-101">The Azure event log entries are of type EventData</span></span>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.authorization'
+    name: authorization
+    fullName: authorization
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-102">寄件者的授權資訊。</span><span class="sxs-lookup"><span data-stu-id="4342c-102">The sender authorization information.</span></span>
+      <span data-ttu-id="4342c-103">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'authorization?: SenderAuthorization'
+      return:
+        type:
+          - '@azure/arm-monitor.SenderAuthorization'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.caller'
+    name: caller
+    fullName: caller
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-104">已執行作業、 UPN 宣告或 SPN 宣告可用性為基礎之使用者的電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="4342c-104">the email address of the user who has performed the operation, the UPN claim or SPN claim based on availability.</span></span>
+      <span data-ttu-id="4342c-105">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-105">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'caller?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.category'
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-106">事件類別目錄中。</span><span class="sxs-lookup"><span data-stu-id="4342c-106">the event category.</span></span>
+      <span data-ttu-id="4342c-107">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'category?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.claims'
+    name: claims
+    fullName: claims
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-108">若要識別 ARM 的權限的機碼值組。</span><span class="sxs-lookup"><span data-stu-id="4342c-108">key value pairs to identify ARM permissions.</span></span>
+      <span data-ttu-id="4342c-109">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'claims?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-110">相互關聯識別碼，通常是 GUID 字串格式。</span><span class="sxs-lookup"><span data-stu-id="4342c-110">the correlation Id, usually a GUID in the string format.</span></span> <span data-ttu-id="4342c-111">相互關聯識別碼會屬於相同 uber 操作事件之間共用。</span><span class="sxs-lookup"><span data-stu-id="4342c-111">The correlation Id is shared among the events that belong to the same uber operation.</span></span>
+      <span data-ttu-id="4342c-112">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-112">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'correlationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-113">事件的描述。</span><span class="sxs-lookup"><span data-stu-id="4342c-113">the description of the event.</span></span>
+      <span data-ttu-id="4342c-114">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventDataId'
+    name: eventDataId
+    fullName: eventDataId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-115">事件資料識別碼。這是事件的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="4342c-115">the event data Id. This is a unique identifier for an event.</span></span>
+      <span data-ttu-id="4342c-116">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-116">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'eventDataId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventName'
+    name: eventName
+    fullName: eventName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-117">事件名稱。</span><span class="sxs-lookup"><span data-stu-id="4342c-117">the event name.</span></span> <span data-ttu-id="4342c-118">此值不應該與 OperationName 混淆。</span><span class="sxs-lookup"><span data-stu-id="4342c-118">This value should not be confused with OperationName.</span></span> <span data-ttu-id="4342c-119">實際上，OperationName 可能更能吸引使用者。</span><span class="sxs-lookup"><span data-stu-id="4342c-119">For practical purposes, OperationName might be more appealing to end users.</span></span>
+      <span data-ttu-id="4342c-120">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-120">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'eventName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventTimestamp'
+    name: eventTimestamp
+    fullName: eventTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-121">處理事件對應之要求的 Azure 服務產生事件時的時間戳記。</span><span class="sxs-lookup"><span data-stu-id="4342c-121">the timestamp of when the event was generated by the Azure service processing the request corresponding the event.</span></span> <span data-ttu-id="4342c-122">它採用 ISO 8601 格式。</span><span class="sxs-lookup"><span data-stu-id="4342c-122">It in ISO 8601 format.</span></span>
+      <span data-ttu-id="4342c-123">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-123">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'eventTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.httpRequest'
+    name: httpRequest
+    fullName: httpRequest
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-124">HTTP 要求資訊。</span><span class="sxs-lookup"><span data-stu-id="4342c-124">the HTTP request info.</span></span> <span data-ttu-id="4342c-125">通常包括 'clientRequestId'、 'clientIpAddress' （起始事件之使用者的 IP 位址） 和 'method' (例如 PUT HTTP 方法)。</span><span class="sxs-lookup"><span data-stu-id="4342c-125">Usually includes the 'clientRequestId', 'clientIpAddress' (IP address of the user who initiated the event) and 'method' (HTTP method e.g. PUT).</span></span>
+      <span data-ttu-id="4342c-126">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-126">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'httpRequest?: HttpRequestInfo'
+      return:
+        type:
+          - '@azure/arm-monitor.HttpRequestInfo'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-127">此事件所需的 RBAC 的 ARM 識別碼。</span><span class="sxs-lookup"><span data-stu-id="4342c-127">the Id of this event as required by ARM for RBAC.</span></span> <span data-ttu-id="4342c-128">它包含 EventDataID 和時間戳記資訊。</span><span class="sxs-lookup"><span data-stu-id="4342c-128">It contains the EventDataID and a timestamp information.</span></span>
+      <span data-ttu-id="4342c-129">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-129">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.level'
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4342c-130">事件層級。</span><span class="sxs-lookup"><span data-stu-id="4342c-130">the event level.</span></span> <span data-ttu-id="4342c-131">可能的值包括：''Critical''，''Error''、 ''Warning''，''參考的''、 ''Verbose''**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-131">Possible values include: ''Critical'', ''Error'', ''Warning'', ''Informational'', ''Verbose'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'level?: EventLevel'
+      return:
+        type:
+          - '@azure/arm-monitor.EventLevel'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.operationId'
+    name: operationId
+    fullName: operationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-132">這通常是對應至單一作業的事件之間共用的 GUID。</span><span class="sxs-lookup"><span data-stu-id="4342c-132">It is usually a GUID shared among the events corresponding to single operation.</span></span> <span data-ttu-id="4342c-133">此值不應該與事件名稱混淆。</span><span class="sxs-lookup"><span data-stu-id="4342c-133">This value should not be confused with EventName.</span></span>
+      <span data-ttu-id="4342c-134">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-134">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'operationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.operationName'
+    name: operationName
+    fullName: operationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-135">作業名稱。</span><span class="sxs-lookup"><span data-stu-id="4342c-135">the operation name.</span></span>
+      <span data-ttu-id="4342c-136">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-136">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'operationName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.properties'
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-137">< 索引鍵，值 > 組組 （通常是字典 < 字串，字串 >），其中包含有關事件的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="4342c-137">the set of <Key, Value> pairs (usually a Dictionary<String, String>) that includes details about the event.</span></span>
+      <span data-ttu-id="4342c-138">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-138">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'properties?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceGroupName'
+    name: resourceGroupName
+    fullName: resourceGroupName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-139">受影響資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="4342c-139">the resource group name of the impacted resource.</span></span>
+      <span data-ttu-id="4342c-140">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-140">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'resourceGroupName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceId'
+    name: resourceId
+    fullName: resourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-141">資源 uri 可唯一識別造成此事件的資源。</span><span class="sxs-lookup"><span data-stu-id="4342c-141">the resource uri that uniquely identifies the resource that caused this event.</span></span>
+      <span data-ttu-id="4342c-142">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-142">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'resourceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceProviderName'
+    name: resourceProviderName
+    fullName: resourceProviderName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-143">受影響資源的資源提供者名稱。</span><span class="sxs-lookup"><span data-stu-id="4342c-143">the resource provider name of the impacted resource.</span></span>
+      <span data-ttu-id="4342c-144">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-144">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'resourceProviderName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceType'
+    name: resourceType
+    fullName: resourceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4342c-145">資源類型**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-145">the resource type **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'resourceType?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-146">字串，描述作業的狀態。</span><span class="sxs-lookup"><span data-stu-id="4342c-146">a string describing the status of the operation.</span></span> <span data-ttu-id="4342c-147">一些典型的值為：啟動、 進行中、 成功、 失敗、 已解決。</span><span class="sxs-lookup"><span data-stu-id="4342c-147">Some typical values are: Started, In progress, Succeeded, Failed, Resolved.</span></span>
+      <span data-ttu-id="4342c-148">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-148">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'status?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.submissionTimestamp'
+    name: submissionTimestamp
+    fullName: submissionTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-149">當事件變成可透過此 API 查詢的時間戳記。</span><span class="sxs-lookup"><span data-stu-id="4342c-149">the timestamp of when the event became available for querying via this API.</span></span> <span data-ttu-id="4342c-150">它是以 ISO 8601 格式。</span><span class="sxs-lookup"><span data-stu-id="4342c-150">It is in ISO 8601 format.</span></span> <span data-ttu-id="4342c-151">此值不應該混淆的 eventTimestamp。</span><span class="sxs-lookup"><span data-stu-id="4342c-151">This value should not be confused eventTimestamp.</span></span> <span data-ttu-id="4342c-152">因為可能會有事件的發生時間與事件提交至 Azure 記錄基礎結構的時間之間的延遲。</span><span class="sxs-lookup"><span data-stu-id="4342c-152">As there might be a delay between the occurrence time of the event, and the time that the event is submitted to the Azure logging infrastructure.</span></span>
+      <span data-ttu-id="4342c-153">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-153">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'submissionTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.subscriptionId'
+    name: subscriptionId
+    fullName: subscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4342c-154">Azure 訂用帳戶識別碼通常是 GUID。</span><span class="sxs-lookup"><span data-stu-id="4342c-154">the Azure subscription Id usually a GUID.</span></span>
+      <span data-ttu-id="4342c-155">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-155">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'subscriptionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.subStatus'
+    name: subStatus
+    fullName: subStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4342c-156">事件子狀態。</span><span class="sxs-lookup"><span data-stu-id="4342c-156">the event sub status.</span></span> <span data-ttu-id="4342c-157">大部分的情況下，包含時，這會擷取 REST 呼叫的 HTTP 狀態碼。</span><span class="sxs-lookup"><span data-stu-id="4342c-157">Most of the time, when included, this captures the HTTP status code of the REST call.</span></span> <span data-ttu-id="4342c-158">常見的值包括：正常 (HTTP 狀態碼:200)、已建立 (HTTP 狀態碼:201)、已接受 (HTTP 狀態碼:202)、無內容 (HTTP 狀態碼:204)，不正確的要求 (HTTP 狀態碼：400)、找不到 (HTTP 狀態碼:404)、衝突 (HTTP 狀態碼:409)、內部伺服器錯誤 (HTTP 狀態碼:500)，服務無法使用 (HTTP 狀態碼： 503)、 閘道逾時 (HTTP 狀態碼：504)**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-158">Common values are: OK (HTTP Status Code: 200), Created (HTTP Status Code: 201), Accepted (HTTP Status Code: 202), No Content (HTTP Status Code: 204), Bad Request(HTTP Status Code: 400), Not Found (HTTP Status Code: 404), Conflict (HTTP Status Code: 409), Internal Server Error (HTTP Status Code: 500), Service Unavailable (HTTP Status Code:503), Gateway Timeout (HTTP Status Code: 504) **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'subStatus?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4342c-159">Azure 租用戶識別碼**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="4342c-159">the Azure tenant Id **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.SenderAuthorization'
+    name: SenderAuthorization
+    spec.typeScript:
+      - name: SenderAuthorization
+        fullName: SenderAuthorization
+        uid: '@azure/arm-monitor.SenderAuthorization'
+  - uid: '@azure/arm-monitor.LocalizableString'
+    name: LocalizableString
+    spec.typeScript:
+      - name: LocalizableString
+        fullName: LocalizableString
+        uid: '@azure/arm-monitor.LocalizableString'
+  - uid: '@azure/arm-monitor.HttpRequestInfo'
+    name: HttpRequestInfo
+    spec.typeScript:
+      - name: HttpRequestInfo
+        fullName: HttpRequestInfo
+        uid: '@azure/arm-monitor.HttpRequestInfo'
+  - uid: '@azure/arm-monitor.EventLevel'
+    name: EventLevel
+    spec.typeScript:
+      - name: EventLevel
+        fullName: EventLevel
+        uid: '@azure/arm-monitor.EventLevel'
