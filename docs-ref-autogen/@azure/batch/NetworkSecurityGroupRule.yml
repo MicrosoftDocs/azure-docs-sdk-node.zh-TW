@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkSecurityGroupRule'
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - '@azure/batch.NetworkSecurityGroupRule.access'
+      - '@azure/batch.NetworkSecurityGroupRule.priority'
+      - '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8ae54-101">代表 NetworkSecurityGroupRule 的介面。</span><span class="sxs-lookup"><span data-stu-id="8ae54-101">An interface representing NetworkSecurityGroupRule.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.access'
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8ae54-102">指定 IP 位址、 子網路範圍或標記應採取的動作。</span><span class="sxs-lookup"><span data-stu-id="8ae54-102">The action that should be taken for a specified IP address, subnet range or tag.</span></span> <span data-ttu-id="8ae54-103">可能的值包括: ''allow''、 ''拒絕''</span><span class="sxs-lookup"><span data-stu-id="8ae54-103">Possible values include: ''allow'', ''deny''</span></span>'
+    syntax:
+      content: 'access: NetworkSecurityGroupRuleAccess'
+      return:
+        type:
+          - '@azure/batch.NetworkSecurityGroupRuleAccess'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8ae54-104">此規則的優先順序。</span><span class="sxs-lookup"><span data-stu-id="8ae54-104">The priority for this rule.</span></span> <span data-ttu-id="8ae54-105">集區中的優先順序必須是唯一的而且會依照優先順序進行評估。</span><span class="sxs-lookup"><span data-stu-id="8ae54-105">Priorities within a pool must be unique and are evaluated in order of priority.</span></span> <span data-ttu-id="8ae54-106">編號愈低，優先順序就愈高。</span><span class="sxs-lookup"><span data-stu-id="8ae54-106">The lower the number the higher the priority.</span></span> <span data-ttu-id="8ae54-107">例如，規則可以指定 150、 250 和 350 的順序編號。</span><span class="sxs-lookup"><span data-stu-id="8ae54-107">For example, rules could be specified with order numbers of 150, 250, and 350.</span></span> <span data-ttu-id="8ae54-108">150 個訂單號碼的規則優先於順序為 250 的規則。</span><span class="sxs-lookup"><span data-stu-id="8ae54-108">The rule with the order number of 150 takes precedence over the rule that has an order of 250.</span></span> <span data-ttu-id="8ae54-109">允許的優先順序是 150 到 3500。</span><span class="sxs-lookup"><span data-stu-id="8ae54-109">Allowed priorities are 150 to 3500.</span></span> <span data-ttu-id="8ae54-110">如果要求失敗，HTTP 狀態碼 400 提供任何保留或重複的值。</span><span class="sxs-lookup"><span data-stu-id="8ae54-110">If any reserved or duplicate values are provided the request fails with HTTP status code 400.</span></span>'
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8ae54-111">來源位址首碼或標籤来符合的規則。</span><span class="sxs-lookup"><span data-stu-id="8ae54-111">The source address prefix or tag to match for the rule.</span></span> <span data-ttu-id="8ae54-112">有效值為單一 IP 位址 (亦即 10.10.10.10)、ip)、 IP 子網路 (也就是 192.168.1.0/24)、 預設標籤，或 \* （用於所有位址）。</span><span class="sxs-lookup"><span data-stu-id="8ae54-112">Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or \* (for all addresses).</span></span>
+      <span data-ttu-id="8ae54-113">如果任何其他值會提供要求失敗，HTTP 狀態碼 400。</span><span class="sxs-lookup"><span data-stu-id="8ae54-113">If any other values are provided the request fails with HTTP status code 400.</span></span>
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
+    name: NetworkSecurityGroupRuleAccess
+    spec.typeScript:
+      - name: NetworkSecurityGroupRuleAccess
+        fullName: NetworkSecurityGroupRuleAccess
+        uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
