@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CertificateReference'
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - '@azure/batch.CertificateReference.storeLocation'
+      - '@azure/batch.CertificateReference.storeName'
+      - '@azure/batch.CertificateReference.thumbprint'
+      - '@azure/batch.CertificateReference.thumbprintAlgorithm'
+      - '@azure/batch.CertificateReference.visibility'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 CertificateReference 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeLocation'
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要將憑證安裝在計算節點上的憑證存放區位置。 預設值為 currentuser。 只適用於集區的 Windows 節點 （也就是使用 cloudServiceConfiguration 建立的或使用 virtualMachineConfiguration 使用 Windows 映像參考） 設定這個屬性。 對於 Linux 計算節點，憑證會儲存在目錄內工作工作目錄和環境變數的 AZ_BATCH_CERTIFICATES_DIR 提供給此位置的查詢工作。 與 'remoteUser' 的可見性的憑證，建立 'certs' 目錄中使用者的主目錄 (例如，/home/ {使用者-名稱} / certs) 和憑證會放在該目錄。
+      可能的值包括: 'currentUser'，'localMachine'
+    optional: true
+    syntax:
+      content: 'storeLocation?: CertificateStoreLocation'
+      return:
+        type:
+          - '@azure/batch.CertificateStoreLocation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeName'
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要將憑證安裝在計算節點上的憑證存放區名稱。
+      只適用於集區的 Windows 節點 （也就是使用 cloudServiceConfiguration 建立的或使用 virtualMachineConfiguration 使用 Windows 映像參考） 設定這個屬性。 常見的存放區名稱包括：My，根，CA、 信任、 不允許、 TrustedPeople、 TrustedPublisher、 AuthRoot、 通訊錄，但任何自訂存放區名稱也可用。 預設值是我。
+    optional: true
+    syntax:
+      content: 'storeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprint'
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 憑證的指紋。
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprintAlgorithm'
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 與相關聯的憑證指紋演算法。 這必須是 sha1。
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.visibility'
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在計算節點上的哪些使用者帳戶，應該可以存取憑證的私用資料。 您可以在此集合中指定一個以上的可見性。 預設為所有帳戶。
+    optional: true
+    syntax:
+      content: 'visibility?: CertificateVisibility[]'
+      return:
+        type:
+          - '@azure/batch.CertificateVisibility[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateStoreLocation'
+    name: CertificateStoreLocation
+    spec.typeScript:
+      - name: CertificateStoreLocation
+        fullName: CertificateStoreLocation
+        uid: '@azure/batch.CertificateStoreLocation'
+  - uid: '@azure/batch.CertificateVisibility[]'
+    name: 'CertificateVisibility[]'
+    spec.typeScript:
+      - name: CertificateVisibility
+        fullName: CertificateVisibility
+        uid: '@azure/batch.CertificateVisibility'
+      - name: '[]'
+        fullName: '[]'
