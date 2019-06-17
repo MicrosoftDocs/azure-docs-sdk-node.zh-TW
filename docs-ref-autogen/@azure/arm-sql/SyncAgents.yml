@@ -1,0 +1,757 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.SyncAgents'
+    name: SyncAgents
+    fullName: SyncAgents
+    children:
+      - '@azure/arm-sql.SyncAgents.beginCreateOrUpdate'
+      - '@azure/arm-sql.SyncAgents.beginDeleteMethod'
+      - '@azure/arm-sql.SyncAgents.createOrUpdate'
+      - '@azure/arm-sql.SyncAgents.deleteMethod'
+      - '@azure/arm-sql.SyncAgents.generateKey'
+      - '@azure/arm-sql.SyncAgents.generateKey_2'
+      - '@azure/arm-sql.SyncAgents.generateKey_1'
+      - '@azure/arm-sql.SyncAgents.get'
+      - '@azure/arm-sql.SyncAgents.get_2'
+      - '@azure/arm-sql.SyncAgents.get_1'
+      - '@azure/arm-sql.SyncAgents.listByServer'
+      - '@azure/arm-sql.SyncAgents.listByServer_2'
+      - '@azure/arm-sql.SyncAgents.listByServer_1'
+      - '@azure/arm-sql.SyncAgents.listByServerNext'
+      - '@azure/arm-sql.SyncAgents.listByServerNext_2'
+      - '@azure/arm-sql.SyncAgents.listByServerNext_1'
+      - '@azure/arm-sql.SyncAgents.listLinkedDatabases'
+      - '@azure/arm-sql.SyncAgents.listLinkedDatabases_2'
+      - '@azure/arm-sql.SyncAgents.listLinkedDatabases_1'
+      - '@azure/arm-sql.SyncAgents.listLinkedDatabasesNext'
+      - '@azure/arm-sql.SyncAgents.listLinkedDatabasesNext_2'
+      - '@azure/arm-sql.SyncAgents.listLinkedDatabasesNext_1'
+      - '@azure/arm-sql.SyncAgents.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="d66b3-101">此類別代表 SyncAgents。</span><span class="sxs-lookup"><span data-stu-id="d66b3-101">Class representing a SyncAgents.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, SyncAgent, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-102">建立或更新同步處理代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-102">Creates or updates a sync agent.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, syncAgentName: string, parameters: SyncAgent, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-103">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-104">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-105">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-105">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-106">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-106">The name of the sync agent.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.SyncAgent'
+          description: <span data-ttu-id="d66b3-107">要求的同步處理代理程式資源狀態。</span><span class="sxs-lookup"><span data-stu-id="d66b3-107">The requested sync agent resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-108">刪除同步代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-108">Deletes a sync agent.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, syncAgentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-109">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-110">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-111">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-111">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-112">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-112">The name of the sync agent.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, SyncAgent, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-113">建立或更新同步處理代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-113">Creates or updates a sync agent.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, syncAgentName: string, parameters: SyncAgent, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-114">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-114">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-115">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-115">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-116">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-116">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-117">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-117">The name of the sync agent.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.SyncAgent'
+          description: <span data-ttu-id="d66b3-118">要求的同步處理代理程式資源狀態。</span><span class="sxs-lookup"><span data-stu-id="d66b3-118">The requested sync agent resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SyncAgentsCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-119">刪除同步代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-119">Deletes a sync agent.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, syncAgentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-120">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-120">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-121">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-121">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-122">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-122">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-123">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-123">The name of the sync agent.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.generateKey'
+    name: 'generateKey(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-124">產生的同步處理代理程式金鑰。</span><span class="sxs-lookup"><span data-stu-id="d66b3-124">Generates a sync agent key.</span></span>
+    syntax:
+      content: 'function generateKey(resourceGroupName: string, serverName: string, syncAgentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-125">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-125">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-126">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-126">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-127">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-127">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-128">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-128">The name of the sync agent.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SyncAgentsGenerateKeyResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.generateKey_2'
+    name: 'generateKey(string, string, string, RequestOptionsBase, ServiceCallback<SyncAgentKeyProperties>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function generateKey(resourceGroupName: string, serverName: string, syncAgentName: string, options: RequestOptionsBase, callback: ServiceCallback<SyncAgentKeyProperties>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-129">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-130">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-131">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-131">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-132">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-132">The name of the sync agent.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d66b3-133">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d66b3-133">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentKeyProperties>
+          description: |
+            <span data-ttu-id="d66b3-134">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-134">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsGenerateKeyResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.generateKey_1'
+    name: 'generateKey(string, string, string, ServiceCallback<SyncAgentKeyProperties>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function generateKey(resourceGroupName: string, serverName: string, syncAgentName: string, callback: ServiceCallback<SyncAgentKeyProperties>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-135">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-135">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-136">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-136">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-137">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-137">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-138">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-138">The name of the sync agent.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentKeyProperties>
+          description: |
+            <span data-ttu-id="d66b3-139">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsGenerateKeyResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-140">取得同步代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-140">Gets a sync agent.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, syncAgentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-141">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-141">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-142">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-142">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-143">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-143">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-144">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-144">The name of the sync agent.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SyncAgentsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<SyncAgent>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, syncAgentName: string, options: RequestOptionsBase, callback: ServiceCallback<SyncAgent>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-145">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-145">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-146">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-146">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-147">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-147">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-148">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-148">The name of the sync agent.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d66b3-149">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d66b3-149">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgent>
+          description: |
+            <span data-ttu-id="d66b3-150">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-150">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.get_1'
+    name: 'get(string, string, string, ServiceCallback<SyncAgent>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, syncAgentName: string, callback: ServiceCallback<SyncAgent>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-151">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-151">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-152">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-152">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-153">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-153">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-154">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-154">The name of the sync agent.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgent>
+          description: |
+            <span data-ttu-id="d66b3-155">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-155">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listByServer'
+    name: 'listByServer(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-156">列出同步在伺服器中的代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-156">Lists sync agents in a server.</span></span>
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-157">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-157">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-158">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-158">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-159">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-159">The name of the server on which the sync agent is hosted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SyncAgentsListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listByServer_2'
+    name: 'listByServer(string, string, RequestOptionsBase, ServiceCallback<SyncAgentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options: RequestOptionsBase, callback: ServiceCallback<SyncAgentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-160">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-160">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-161">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-161">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-162">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-162">The name of the server on which the sync agent is hosted.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d66b3-163">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d66b3-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentListResult>
+          description: |
+            <span data-ttu-id="d66b3-164">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listByServer_1'
+    name: 'listByServer(string, string, ServiceCallback<SyncAgentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<SyncAgentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-165">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-165">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-166">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-166">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-167">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-167">The name of the server on which the sync agent is hosted.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentListResult>
+          description: |
+            <span data-ttu-id="d66b3-168">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listByServerNext'
+    name: 'listByServerNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-169">列出同步在伺服器中的代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-169">Lists sync agents in a server.</span></span>
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-170">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="d66b3-170">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SyncAgentsListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listByServerNext_2'
+    name: 'listByServerNext(string, RequestOptionsBase, ServiceCallback<SyncAgentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<SyncAgentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-171">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="d66b3-171">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d66b3-172">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d66b3-172">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentListResult>
+          description: |
+            <span data-ttu-id="d66b3-173">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listByServerNext_1'
+    name: 'listByServerNext(string, ServiceCallback<SyncAgentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, callback: ServiceCallback<SyncAgentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-174">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="d66b3-174">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentListResult>
+          description: |
+            <span data-ttu-id="d66b3-175">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listLinkedDatabases'
+    name: 'listLinkedDatabases(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-176">列出資料庫連結同步代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-176">Lists databases linked to a sync agent.</span></span>
+    syntax:
+      content: 'function listLinkedDatabases(resourceGroupName: string, serverName: string, syncAgentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-177">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-177">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-178">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-178">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-179">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-179">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-180">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-180">The name of the sync agent.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SyncAgentsListLinkedDatabasesResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listLinkedDatabases_2'
+    name: 'listLinkedDatabases(string, string, string, RequestOptionsBase, ServiceCallback<SyncAgentLinkedDatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listLinkedDatabases(resourceGroupName: string, serverName: string, syncAgentName: string, options: RequestOptionsBase, callback: ServiceCallback<SyncAgentLinkedDatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-181">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-182">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-183">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-183">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-184">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-184">The name of the sync agent.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d66b3-185">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d66b3-185">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentLinkedDatabaseListResult>
+          description: |
+            <span data-ttu-id="d66b3-186">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-186">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsListLinkedDatabasesResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listLinkedDatabases_1'
+    name: 'listLinkedDatabases(string, string, string, ServiceCallback<SyncAgentLinkedDatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listLinkedDatabases(resourceGroupName: string, serverName: string, syncAgentName: string, callback: ServiceCallback<SyncAgentLinkedDatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-187">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-187">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="d66b3-188">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="d66b3-188">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-189">同步代理程式裝載所在的伺服器名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-189">The name of the server on which the sync agent is hosted.</span></span>
+        - id: syncAgentName
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-190">同步代理程式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d66b3-190">The name of the sync agent.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentLinkedDatabaseListResult>
+          description: |
+            <span data-ttu-id="d66b3-191">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-191">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsListLinkedDatabasesResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listLinkedDatabasesNext'
+    name: 'listLinkedDatabasesNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-192">列出資料庫連結同步代理程式。</span><span class="sxs-lookup"><span data-stu-id="d66b3-192">Lists databases linked to a sync agent.</span></span>
+    syntax:
+      content: 'function listLinkedDatabasesNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-193">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="d66b3-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SyncAgentsListLinkedDatabasesNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listLinkedDatabasesNext_2'
+    name: 'listLinkedDatabasesNext(string, RequestOptionsBase, ServiceCallback<SyncAgentLinkedDatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listLinkedDatabasesNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<SyncAgentLinkedDatabaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-194">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="d66b3-194">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d66b3-195">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d66b3-195">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentLinkedDatabaseListResult>
+          description: |
+            <span data-ttu-id="d66b3-196">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsListLinkedDatabasesNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.listLinkedDatabasesNext_1'
+    name: 'listLinkedDatabasesNext(string, ServiceCallback<SyncAgentLinkedDatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listLinkedDatabasesNext(nextPageLink: string, callback: ServiceCallback<SyncAgentLinkedDatabaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="d66b3-197">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="d66b3-197">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.SyncAgentLinkedDatabaseListResult>
+          description: |
+            <span data-ttu-id="d66b3-198">回呼</span><span class="sxs-lookup"><span data-stu-id="d66b3-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SyncAgentsListLinkedDatabasesNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncAgents.constructor'
+    name: SyncAgents(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d66b3-199">建立 SyncAgents。</span><span class="sxs-lookup"><span data-stu-id="d66b3-199">Create a SyncAgents.</span></span>
+    syntax:
+      content: 'new SyncAgents(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="d66b3-200">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="d66b3-200">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.SyncAgent'
+    name: SyncAgent
+    spec.typeScript:
+      - name: SyncAgent
+        fullName: SyncAgent
+        uid: '@azure/arm-sql.SyncAgent'
+  - uid: ServiceCallback<@azure/arm-sql.SyncAgentKeyProperties>
+    name: SyncAgentKeyProperties>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SyncAgentKeyProperties
+        fullName: SyncAgentKeyProperties
+        uid: '@azure/arm-sql.SyncAgentKeyProperties'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.SyncAgent>
+    name: SyncAgent>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SyncAgent
+        fullName: SyncAgent
+        uid: '@azure/arm-sql.SyncAgent'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.SyncAgentListResult>
+    name: SyncAgentListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SyncAgentListResult
+        fullName: SyncAgentListResult
+        uid: '@azure/arm-sql.SyncAgentListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.SyncAgentLinkedDatabaseListResult>
+    name: SyncAgentLinkedDatabaseListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SyncAgentLinkedDatabaseListResult
+        fullName: SyncAgentLinkedDatabaseListResult
+        uid: '@azure/arm-sql.SyncAgentLinkedDatabaseListResult'
+      - name: '>'
+        fullName: '>'
