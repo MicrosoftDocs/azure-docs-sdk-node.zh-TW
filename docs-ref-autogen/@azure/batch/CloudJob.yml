@@ -1,0 +1,482 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudJob'
+    name: CloudJob
+    fullName: CloudJob
+    children:
+      - '@azure/batch.CloudJob.commonEnvironmentSettings'
+      - '@azure/batch.CloudJob.constraints'
+      - '@azure/batch.CloudJob.creationTime'
+      - '@azure/batch.CloudJob.displayName'
+      - '@azure/batch.CloudJob.eTag'
+      - '@azure/batch.CloudJob.executionInfo'
+      - '@azure/batch.CloudJob.id'
+      - '@azure/batch.CloudJob.jobManagerTask'
+      - '@azure/batch.CloudJob.jobPreparationTask'
+      - '@azure/batch.CloudJob.jobReleaseTask'
+      - '@azure/batch.CloudJob.lastModified'
+      - '@azure/batch.CloudJob.metadata'
+      - '@azure/batch.CloudJob.networkConfiguration'
+      - '@azure/batch.CloudJob.onAllTasksComplete'
+      - '@azure/batch.CloudJob.onTaskFailure'
+      - '@azure/batch.CloudJob.poolInfo'
+      - '@azure/batch.CloudJob.previousState'
+      - '@azure/batch.CloudJob.previousStateTransitionTime'
+      - '@azure/batch.CloudJob.priority'
+      - '@azure/batch.CloudJob.state'
+      - '@azure/batch.CloudJob.stateTransitionTime'
+      - '@azure/batch.CloudJob.stats'
+      - '@azure/batch.CloudJob.url'
+      - '@azure/batch.CloudJob.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 CloudJob 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      常見的環境變數設定清單。 這些環境變數已為工作 （包括作業管理員、 作業準備和作業解除工作） 中的所有工作。
+      個別的工作，可以覆寫這裡指定使用不同的值指定相同的設定名稱的環境設定。
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業執行條件約束。
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作的建立時間。
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作的顯示名稱。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作的 ETag。 這是不透明的字串。 您可以使用它來偵測工作是否已變更，要求之間。 特別是，您可以是 etag，當更新作業，以指定您的變更應該沒有其他人已經在同時修改作業時，才會生效。
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.executionInfo'
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業執行資訊。
+    optional: true
+    syntax:
+      content: 'executionInfo?: JobExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.JobExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 字串，可唯一識別帳戶內工作。 識別碼是保留大小寫和區分大小寫 （也就是說，您可能沒有在帳戶內兩個只有大小寫不同的識別碼）。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業開始時，要啟動的作業管理員工作的詳細資料。
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業準備工作。 作業準備工作是在作業的任何其他工作之前，每個節點上執行的特殊工作。
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業解除工作。 作業解除工作會在結束時執行的作業已執行之作業的任何其他工作的每個節點上的特殊工作。
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 上次修改作業的時間。 這是最後一次的變更作業層級資料，例如工作狀態或優先順序。 它不會不納入工作層級的變更，例如新增新的工作或工作變更狀態。
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 做為中繼資料作業相關聯的名稱 / 值組清單。 Batch 服務不會將任何意義指派給中繼資料;它只是使用使用者程式碼。
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 網路組態工作。
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      自批次服務作業中的所有工作都處於已完成的狀態時，應採取的動作。
+      預設值為 noaction。 可能的值包括: 'noAction'，'terminateJob'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '自批次服務在作業中的任何工作失敗時，應採取的動作。 工作會被視為已失敗，如果包含 failureInfo。 如果在工作完成之後耗盡重試計數，以非零結束代碼，則設定 failureInfo 或如果啟動工作時發生錯誤，例如由於資源檔案下載錯誤。 預設值為 noaction。 可能的值包括: ''noAction''，''performExitOptionsJobAction'''
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 與作業相關聯的集區設定。
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '先前的作業狀態。 未設定這個屬性，如果工作處於其初始作用中狀態。 可能的值包括: ''active''、 ''停用''，''disabled''，''啟用''，''終止，'' ''已完成，「 刪除中 」'
+    optional: true
+    syntax:
+      content: 'previousState?: JobState'
+      return:
+        type:
+          - '@azure/batch.JobState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作進入其先前的狀態時間。 未設定這個屬性，如果工作處於其初始作用中狀態。
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業的優先順序。 優先順序值的範圍可以從-1000年到 1000，-1000年表示最低優先順序，1000年表示最高的優先順序。 預設值為 0。
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '作業的目前狀態。 可能的值包括: ''active''、 ''停用''，''disabled''，''啟用''，''終止，'' ''已完成，「 刪除中 」'
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/batch.JobState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作進入其目前狀態的時間。
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業的整個存留期資源使用量統計資料。 CloudJob 擷取包括 'stats' 屬性，則 expand 子句時，才會填入這個屬性否則，它是 null。 統計資料可能無法立即使用。 Batch 服務會執行定期彙總的統計資料。 典型的延遲是大約 30 分鐘的時間。
+    optional: true
+    syntax:
+      content: 'stats?: JobStatistics'
+      return:
+        type:
+          - '@azure/batch.JobStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業的 URL。
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否在作業中的工作也可以定義相依性，彼此。 預設值為 false。
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    spec.typeScript:
+      - name: JobExecutionInformation
+        fullName: JobExecutionInformation
+        uid: '@azure/batch.JobExecutionInformation'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
+  - uid: '@azure/batch.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/batch.JobState'
+  - uid: '@azure/batch.JobStatistics'
+    name: JobStatistics
+    spec.typeScript:
+      - name: JobStatistics
+        fullName: JobStatistics
+        uid: '@azure/batch.JobStatistics'
