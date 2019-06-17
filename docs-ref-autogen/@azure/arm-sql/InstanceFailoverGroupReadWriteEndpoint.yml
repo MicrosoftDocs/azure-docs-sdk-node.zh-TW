@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint'
+    name: InstanceFailoverGroupReadWriteEndpoint
+    fullName: InstanceFailoverGroupReadWriteEndpoint
+    children:
+      - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverPolicy'
+      - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    langs:
+      - typeScript
+    type: interface
+    summary: 讀寫容錯移轉群組執行個體的端點。
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverPolicy'
+    name: failoverPolicy
+    fullName: failoverPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 容錯移轉群組讀寫端點容錯移轉原則。 如果 failoverPolicy 為 自動 failoverWithDataLossGracePeriodMinutes 是必要的。 可能的值包括：' Manual'，'Automatic'
+    syntax:
+      content: 'failoverPolicy: ReadWriteEndpointFailoverPolicy'
+      return:
+        type:
+          - '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    name: failoverWithDataLossGracePeriodMinutes
+    fullName: failoverWithDataLossGracePeriodMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資料遺失的容錯移轉之前的寬限期會嘗試讀取寫入端點。 如果 failoverPolicy 為 自動 failoverWithDataLossGracePeriodMinutes 是必要的。
+    optional: true
+    syntax:
+      content: 'failoverWithDataLossGracePeriodMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    name: ReadWriteEndpointFailoverPolicy
+    spec.typeScript:
+      - name: ReadWriteEndpointFailoverPolicy
+        fullName: ReadWriteEndpointFailoverPolicy
+        uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'

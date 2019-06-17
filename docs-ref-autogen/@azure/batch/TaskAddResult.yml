@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskAddResult'
+    name: TaskAddResult
+    fullName: TaskAddResult
+    children:
+      - '@azure/batch.TaskAddResult.error'
+      - '@azure/batch.TaskAddResult.eTag'
+      - '@azure/batch.TaskAddResult.lastModified'
+      - '@azure/batch.TaskAddResult.location'
+      - '@azure/batch.TaskAddResult.status'
+      - '@azure/batch.TaskAddResult.taskId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 TaskAddResult 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.error'
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 嘗試將工作時所發生的錯誤。
+    optional: true
+    syntax:
+      content: 'error?: BatchError'
+      return:
+        type:
+          - '@azure/batch.BatchError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作中，如果工作已成功加入 ETag。 您可以使用這個來偵測工作是否已變更，要求之間。 特別是，您可以傳遞的 ETag 與更新工作要求，以指定您的變更應該沒有其他人已經在同時修改作業時，才會生效。
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 上次修改工作的時間。
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作中，如果工作已成功加入的 URL。
+    optional: true
+    syntax:
+      content: 'location?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '新增工作要求的狀態。 可能的值包括: ''success''、 ''clientError''、 ''serverError'''
+    syntax:
+      content: 'status: TaskAddStatus'
+      return:
+        type:
+          - '@azure/batch.TaskAddStatus'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這是結果之工作識別碼。
+    syntax:
+      content: 'taskId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchError'
+    name: BatchError
+    spec.typeScript:
+      - name: BatchError
+        fullName: BatchError
+        uid: '@azure/batch.BatchError'
+  - uid: '@azure/batch.TaskAddStatus'
+    name: TaskAddStatus
+    spec.typeScript:
+      - name: TaskAddStatus
+        fullName: TaskAddStatus
+        uid: '@azure/batch.TaskAddStatus'

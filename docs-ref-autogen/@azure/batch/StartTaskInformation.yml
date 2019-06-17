@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.StartTaskInformation'
+    name: StartTaskInformation
+    fullName: StartTaskInformation
+    children:
+      - '@azure/batch.StartTaskInformation.containerInfo'
+      - '@azure/batch.StartTaskInformation.endTime'
+      - '@azure/batch.StartTaskInformation.exitCode'
+      - '@azure/batch.StartTaskInformation.failureInfo'
+      - '@azure/batch.StartTaskInformation.lastRetryTime'
+      - '@azure/batch.StartTaskInformation.result'
+      - '@azure/batch.StartTaskInformation.retryCount'
+      - '@azure/batch.StartTaskInformation.startTime'
+      - '@azure/batch.StartTaskInformation.state'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 StartTaskInformation 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作執行的容器的相關資訊。 只有當工作的內容中執行容器時，才設定這個屬性。
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      啟動工作停止執行的時間。 這是最新的結束時間執行的啟動工作中，如果執行已完成 （即使執行失敗且重試已暫止）。
+      這個項目不存在，如果啟動工作目前正在執行。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在 啟動工作命令列上指定的程式結束代碼。 啟動工作處於已完成狀態時，才設定這個屬性。 一般情況下，處理程序的結束代碼會反映該處理程序的應用程式開發人員所實作的特定慣例。 如果您使用的結束代碼值在您的程式碼中進行決策時，務必知道您的應用程式處理序所使用的結束程式碼慣例。 不過，如果批次服務會終止 （因為逾時或透過 API 的使用者終止） 啟動工作可能會看到作業系統定義的結束代碼。
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 描述工作失敗，如果有任何資訊。 工作處於已完成狀態時，才會設定此屬性，而且發生失敗。
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.lastRetryTime'
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 最近一次重試工作開始執行。 這個項目才會顯示出來重試工作 （也就是 retryCount 為非零值）。 如果有的話，這通常是與 startTime，相同，但如果工作重新啟動後重試; 以外的原因可能會不同比方說，如果在重試期間重新啟動計算節點，然後在更新 startTime，但 lastRetryTime 不是。
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '工作執行的結果。 如果值 「 失敗 」，失敗的詳細資訊可以找到 failureInfo 屬性中。 可能的值包括: 「 成功 」、 「 失敗 」'
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch 服務已重試工作的次數。 工作應用程式失敗 （非零結束代碼） 會重試，前置處理的錯誤 （無法執行工作），而且不會重試檔案上傳錯誤。 Batch 服務會重試工作，直到指定的條件約束的限制。
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 啟動工作開始執行的時間。 每次重新啟動或重試工作時，這個值會重設 （也就是這是最新的啟動工作開始的時間執行）。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '在計算節點上啟動工作的狀態。 可能的值包括: 「 執行中 」，[已完成]'
+    syntax:
+      content: 'state: StartTaskState'
+      return:
+        type:
+          - '@azure/batch.StartTaskState'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.StartTaskState'
+    name: StartTaskState
+    spec.typeScript:
+      - name: StartTaskState
+        fullName: StartTaskState
+        uid: '@azure/batch.StartTaskState'
