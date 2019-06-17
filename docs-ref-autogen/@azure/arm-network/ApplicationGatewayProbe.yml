@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '探查的相對路徑。 有效路徑的開頭 ''/''。 探查會傳送到<Protocol>://<host>:<port><path>'
+    summary: '探查的相對路徑。 有效路徑的開頭 ''/''。 探查會傳送到<Protocol>://<host>:<port><path>。'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -161,6 +162,21 @@ items:
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 自訂連接埠將用於探查的後端伺服器。 有效值的範圍從 1 到 65535。 在未設定，從 http 連接埠的情況下會使用設定。 這個屬性僅適用於 Standard_v2 和 WAF_v2。
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol
