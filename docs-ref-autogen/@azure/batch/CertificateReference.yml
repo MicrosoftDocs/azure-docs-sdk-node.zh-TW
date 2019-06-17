@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CertificateReference'
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - '@azure/batch.CertificateReference.storeLocation'
+      - '@azure/batch.CertificateReference.storeName'
+      - '@azure/batch.CertificateReference.thumbprint'
+      - '@azure/batch.CertificateReference.thumbprintAlgorithm'
+      - '@azure/batch.CertificateReference.visibility'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a01c6-101">代表 CertificateReference 的介面。</span><span class="sxs-lookup"><span data-stu-id="a01c6-101">An interface representing CertificateReference.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeLocation'
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a01c6-102">要將憑證安裝在計算節點上的憑證存放區位置。</span><span class="sxs-lookup"><span data-stu-id="a01c6-102">The location of the certificate store on the compute node into which to install the certificate.</span></span> <span data-ttu-id="a01c6-103">預設值為 currentuser。</span><span class="sxs-lookup"><span data-stu-id="a01c6-103">The default value is currentuser.</span></span> <span data-ttu-id="a01c6-104">只適用於集區的 Windows 節點 （也就是使用 cloudServiceConfiguration 建立的或使用 virtualMachineConfiguration 使用 Windows 映像參考） 設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="a01c6-104">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id="a01c6-105">對於 Linux 計算節點，憑證會儲存在目錄內工作工作目錄和環境變數的 AZ_BATCH_CERTIFICATES_DIR 提供給此位置的查詢工作。</span><span class="sxs-lookup"><span data-stu-id="a01c6-105">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="a01c6-106">與 'remoteUser' 的可見性的憑證，建立 'certs' 目錄中使用者的主目錄 (例如，/home/ {使用者-名稱} / certs) 和憑證會放在該目錄。</span><span class="sxs-lookup"><span data-stu-id="a01c6-106">For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>
+      <span data-ttu-id="a01c6-107">可能的值包括: 'currentUser'，'localMachine'</span><span class="sxs-lookup"><span data-stu-id="a01c6-107">Possible values include: 'currentUser', 'localMachine'</span></span>
+    optional: true
+    syntax:
+      content: 'storeLocation?: CertificateStoreLocation'
+      return:
+        type:
+          - '@azure/batch.CertificateStoreLocation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeName'
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a01c6-108">要將憑證安裝在計算節點上的憑證存放區名稱。</span><span class="sxs-lookup"><span data-stu-id="a01c6-108">The name of the certificate store on the compute node into which to install the certificate.</span></span>
+      <span data-ttu-id="a01c6-109">只適用於集區的 Windows 節點 （也就是使用 cloudServiceConfiguration 建立的或使用 virtualMachineConfiguration 使用 Windows 映像參考） 設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="a01c6-109">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id="a01c6-110">常見的存放區名稱包括：My，根，CA、 信任、 不允許、 TrustedPeople、 TrustedPublisher、 AuthRoot、 通訊錄，但任何自訂存放區名稱也可用。</span><span class="sxs-lookup"><span data-stu-id="a01c6-110">Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used.</span></span> <span data-ttu-id="a01c6-111">預設值是我。</span><span class="sxs-lookup"><span data-stu-id="a01c6-111">The default value is My.</span></span>
+    optional: true
+    syntax:
+      content: 'storeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprint'
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a01c6-112">憑證的指紋。</span><span class="sxs-lookup"><span data-stu-id="a01c6-112">The thumbprint of the certificate.</span></span>
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprintAlgorithm'
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a01c6-113">與相關聯的憑證指紋演算法。</span><span class="sxs-lookup"><span data-stu-id="a01c6-113">The algorithm with which the thumbprint is associated.</span></span> <span data-ttu-id="a01c6-114">這必須是 sha1。</span><span class="sxs-lookup"><span data-stu-id="a01c6-114">This must be sha1.</span></span>
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.visibility'
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a01c6-115">在計算節點上的哪些使用者帳戶，應該可以存取憑證的私用資料。</span><span class="sxs-lookup"><span data-stu-id="a01c6-115">Which user accounts on the compute node should have access to the private data of the certificate.</span></span> <span data-ttu-id="a01c6-116">您可以在此集合中指定一個以上的可見性。</span><span class="sxs-lookup"><span data-stu-id="a01c6-116">You can specify more than one visibility in this collection.</span></span> <span data-ttu-id="a01c6-117">預設為所有帳戶。</span><span class="sxs-lookup"><span data-stu-id="a01c6-117">The default is all accounts.</span></span>
+    optional: true
+    syntax:
+      content: 'visibility?: CertificateVisibility[]'
+      return:
+        type:
+          - '@azure/batch.CertificateVisibility[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateStoreLocation'
+    name: CertificateStoreLocation
+    spec.typeScript:
+      - name: CertificateStoreLocation
+        fullName: CertificateStoreLocation
+        uid: '@azure/batch.CertificateStoreLocation'
+  - uid: '@azure/batch.CertificateVisibility[]'
+    name: 'CertificateVisibility[]'
+    spec.typeScript:
+      - name: CertificateVisibility
+        fullName: CertificateVisibility
+        uid: '@azure/batch.CertificateVisibility'
+      - name: '[]'
+        fullName: '[]'
