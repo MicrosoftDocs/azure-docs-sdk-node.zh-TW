@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter'
+    name: PoolEnableAutoScaleParameter
+    fullName: PoolEnableAutoScaleParameter
+    children:
+      - '@azure/batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 PoolEnableAutoScaleParameter 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 自動調整集區大小，根據自動調整公式的時間間隔。 預設值為 15 分鐘。 最小和最大值會分別為 5 分鐘和 168 小時。 如果您指定的值超過 5 分鐘或更高 168 小時，Batch 服務會拒絕具有無效的屬性值錯誤; 要求如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。 如果您指定新的間隔，然後將會停止現有的自動調整評估排程，並新增的自動調整評估排程就會啟動，其所發出此要求的時間的開始時間。
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '集區中的計算節點所需數目的公式。 套用至集區之前，公式會檢查有效性。 如果公式無效，Batch 服務會拒絕要求，並詳細的錯誤資訊。 如需指定此公式的詳細資訊，請參閱 < 自動調整中的計算節點的 Azure Batch 集區 (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)。'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

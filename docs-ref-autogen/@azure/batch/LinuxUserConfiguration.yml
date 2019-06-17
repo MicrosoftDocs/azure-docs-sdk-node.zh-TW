@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.LinuxUserConfiguration'
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - '@azure/batch.LinuxUserConfiguration.gid'
+      - '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+      - '@azure/batch.LinuxUserConfiguration.uid'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 LinuxUserConfiguration 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.gid'
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 使用者帳戶的群組識別碼。 必須指定 uid 與 gid 屬性，搭配或不完全。 如果未指定的基礎作業系統系統將會挑選 gid。
+    optional: true
+    syntax:
+      content: 'gid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: SSH 私密金鑰的使用者帳戶。 私用金鑰的長度不能受到密碼保護。 私密金鑰用來自動設定非對稱金鑰型的驗證適用於 ssh 連線集區的 enableInterNodeCommunication 屬性為 true （會忽略如果 enableInterNodeCommunication 為 false） 時，Linux 集區中的節點之間。 做法是將金鑰組放入使用者的.ssh 目錄中。 如果沒有指定，則無密碼 SSH 未設定 （完成使用者的.ssh 目錄中的任何修改） 的節點之間。
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.uid'
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 使用者帳戶的使用者識別碼。 必須指定 uid 與 gid 屬性，搭配或不完全。 如果未指定的基礎作業系統系統將會挑選 uid。
+    optional: true
+    syntax:
+      content: 'uid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
