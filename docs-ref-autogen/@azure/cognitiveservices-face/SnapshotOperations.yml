@@ -1,0 +1,666 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations'
+    name: SnapshotOperations
+    fullName: SnapshotOperations
+    children:
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表 SnapshotOperations。
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply'
+    name: 'apply(string, string, Models.SnapshotApplyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      提交作業，以套用至目前的訂用帳戶的快照集。 每個快照集，只有中訂用帳戶中的快照集-applyScope 包含 Take 可以套用它。<br />
+      快照集介面是提供給使用者來備份和還原他們的臉部資料從一個面訂用帳戶，到另一個，在相同區域內或跨區域。 工作流程包含兩個階段，快照集-攜帶至建立來源物件的複本，並將它儲存為快照集，然後呼叫快照集的使用者第一次呼叫-套用於貼上到目標訂用帳戶的快照集。 快照集會儲存在集中位置 （每個 Azure 的執行個體），以便它們可以套用跨帳戶和區域。<br />
+      套用快照集是非同步作業。 從回應標頭，以用於 OperationStatus-Get 追蹤套用快照集的進度時的 「 作業-位置 」 欄位，可以取得作業識別碼。 目標物件識別碼會納入 OperationStatus-取得回應時的作業狀態為 「 成功 」 的 「 resourceLocation"欄位。<br />
+      套用時間的快照集的快照集物件中的人員和臉部項目數而定。
+      它可能正在進行中 （秒），或註冊為 1 小時 1,000,000 多個臉部的人員。<br />
+      會自動過期並由快照集建立後的 48 小時內清除快照集
+      - 需要。 因此目標訂用帳戶，才能套用自建立後的 48 小時內的快照集。<br />
+      套用快照集將不會封鎖對目標的任何其他作業的物件，不過它不建議，因為套用快照集期間無法保證其正確性。 套用快照集完成後，針對 目標物件的所有作業可以正常都運作。
+      快照集也包含來源物件，這表示目標訂用帳戶的快照集套用至不會需要重新訓練目標物件之前呼叫身分識別/FindSimilar 訓練結果。<br />
+      其中一個快照集時，可以套用多次以平行方式，支援目前只有 CreateNew 套用模式，這表示如果目標訂用帳戶已經包含的物件相同類型及使用相同的 objectId，套用作業將會失敗。 若要避免這類衝突的要求本文中，使用者可以指定"objectId"。<br />
+      * 免費層訂用帳戶配額：100 適用於每月作業數。
+      * S0 層訂用帳戶配額：100 套用每日的作業。
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options?: Models.SnapshotApplyOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: objectId
+          type:
+            - string
+          description: 要從快照集建立的使用者指定的目標物件識別碼。
+        - id: options
+          type:
+            - Models.SnapshotApplyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+    name: 'apply(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: objectId
+          type:
+            - string
+          description: 要從快照集建立的使用者指定的目標物件識別碼。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+    name: 'apply(string, string, SnapshotApplyOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options: SnapshotApplyOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: objectId
+          type:
+            - string
+          description: 要從快照集建立的使用者指定的目標物件識別碼。
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 刪除現有的快照集，根據 snapshotId。 也會刪除所有的物件資料和快照集的資訊。 只有來源訂用帳戶拍攝快照的人員可以刪除快照集。 如果使用者不會刪除與此 API 的快照集，快照集將仍會自動刪除在建立後的 48 小時內。
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get'
+    name: 'get(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 擷取快照集的相關資訊。 快照集只會花費，來源訂用帳戶的存取和快照集-花在 applyScope 中包含的目標訂用帳戶。
+    syntax:
+      content: 'function get(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+    name: 'get(string, RequestOptionsBase, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+    name: 'get(string, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+    name: 'getOperationStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 擷取 take/套用快照集作業的狀態。
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: 參考特定的 take/套用快照集作業的識別碼。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+    name: 'getOperationStatus(string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: 參考特定的 take/套用快照集作業的識別碼。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+    name: 'getOperationStatus(string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: 參考特定的 take/套用快照集作業的識別碼。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list'
+    name: list(Models.SnapshotListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有與相關的資訊，包括由使用者所執行的快照集或快照集，以套用至使用者的存取快照集 （快照集 applyScope 中包含訂用帳戶識別碼-需要）。
+    syntax:
+      content: 'function list(options?: Models.SnapshotListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.SnapshotListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+    name: 'list(ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+    name: 'list(SnapshotListOptionalParams, ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: SnapshotListOptionalParams, callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+    name: SnapshotOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立 SnapshotOperations。
+    syntax:
+      content: 'new SnapshotOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take'
+    name: 'take(Models.SnapshotObjectType, string, string[], Models.SnapshotTakeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      提交作業，以建立快照集的臉部清單、 大型的臉部清單、 人員群組或大型的人員群組與使用者指定的快照集類型、 來源物件識別碼，套用的範圍和選擇性的使用者資料。<br />
+      快照集介面是提供給使用者來備份和還原他們的臉部資料從一個面訂用帳戶，到另一個，在相同區域內或跨區域。 工作流程包含兩個階段，快照集-攜帶至建立來源物件的複本，並將它儲存為快照集，然後呼叫快照集的使用者第一次呼叫-套用於貼上到目標訂用帳戶的快照集。 快照集會儲存在集中位置 （每個 Azure 的執行個體），以便它們可以套用跨帳戶和區域。<br />
+      正在擷取快照是非同步作業。 從回應標頭，以用於 OperationStatus-取得追蹤的建立快照集進度時的 「 作業-位置 」 欄位，可以取得作業識別碼。 快照集識別碼會納入 OperationStatus-取得回應時的作業狀態為 「 成功 」 的 「 resourceLocation"欄位。<br />
+      花費時間的快照集取決於來源物件中的人員和臉部項目數目。 可能是以秒為單位，或數小時的多個臉部 1,000,000 的人員。<br />
+      會自動過期並由快照集建立後的 48 小時內清除快照集
+      - 需要。 使用者可以刪除使用快照集本身的刪除到期日之前的任何時間的快照集。<br />
+      取得特定物件的快照集並不會封鎖對物件的任何其他作業。 所有唯讀作業 （Get/清單和身分識別/FindSimilar/驗證） 可以如往常般進行。 所有可寫入的作業，包括新增/更新/刪除的來源物件或它的人員/臉部和訓練，它們是並未受到封鎖，但不是建議，因為可寫入的更新可能不會反映快照集上其製作過程。 採取的快照集完成後，所有的讀取和寫入作業可以正常運作。 快照集也會包含訓練結果的來源物件，這表示套用至不會需要重新訓練目標物件呼叫身分識別/FindSimilar 之前的快照集的目標訂用帳戶。<br />
+      * 免費層訂用帳戶配額：每個月 100 個 take 作業。
+      * S0 層訂用帳戶配額：100 個每日的 take 作業。
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options?: Models.SnapshotTakeOptionalParams)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '使用者指定的來源物件的型別，才會從快照集。 目前支援 FaceList、 PersonGroup、 LargeFaceList 和 LargePersonGroup。 可能的值包括：''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup'''
+        - id: objectId
+          type:
+            - string
+          description: 使用者指定的來源物件識別碼，才會從快照集。
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 使用者指定的快照集的目標臉部訂用帳戶識別碼的陣列。 每個快照集，只有中訂用帳戶中的快照集-applyScope 包含 Take 可以套用它。
+        - id: options
+          type:
+            - Models.SnapshotTakeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+    name: 'take(Models.SnapshotObjectType, string, string[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '使用者指定的來源物件的型別，才會從快照集。 目前支援 FaceList、 PersonGroup、 LargeFaceList 和 LargePersonGroup。 可能的值包括：''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup'''
+        - id: objectId
+          type:
+            - string
+          description: 使用者指定的來源物件識別碼，才會從快照集。
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 使用者指定的快照集的目標臉部訂用帳戶識別碼的陣列。 每個快照集，只有中訂用帳戶中的快照集-applyScope 包含 Take 可以套用它。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+    name: 'take(Models.SnapshotObjectType, string, string[], SnapshotTakeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options: SnapshotTakeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '使用者指定的來源物件的型別，才會從快照集。 目前支援 FaceList、 PersonGroup、 LargeFaceList 和 LargePersonGroup。 可能的值包括：''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup'''
+        - id: objectId
+          type:
+            - string
+          description: 使用者指定的來源物件識別碼，才會從快照集。
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 使用者指定的快照集的目標臉部訂用帳戶識別碼的陣列。 每個快照集，只有中訂用帳戶中的快照集-applyScope 包含 Take 可以套用它。
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update'
+    name: 'update(string, Models.SnapshotUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新快照集的資訊。 只有來源訂用帳戶使用者採用快照集可以更新快照集。
+    syntax:
+      content: 'function update(snapshotId: string, options?: Models.SnapshotUpdateOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: options
+          type:
+            - Models.SnapshotUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    name: 'update(string, SnapshotUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, options: SnapshotUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: 參考特定的快照集的識別碼。
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+    name: SnapshotApplyOptionalParams
+    spec.typeScript:
+      - name: SnapshotApplyOptionalParams
+        fullName: SnapshotApplyOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+    name: Snapshot>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/cognitiveservices-face.OperationStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+    name: 'Snapshot[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+    name: SnapshotListOptionalParams
+    spec.typeScript:
+      - name: SnapshotListOptionalParams
+        fullName: SnapshotListOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+    name: SnapshotTakeOptionalParams
+    spec.typeScript:
+      - name: SnapshotTakeOptionalParams
+        fullName: SnapshotTakeOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+    name: SnapshotUpdateOptionalParams
+    spec.typeScript:
+      - name: SnapshotUpdateOptionalParams
+        fullName: SnapshotUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'

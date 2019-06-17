@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    fullName: NodeRemoveParameter
+    children:
+      - '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+      - '@azure/batch.NodeRemoveParameter.nodeList'
+      - '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 NodeRemoveParameter 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+    name: nodeDeallocationOption
+    fullName: nodeDeallocationOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '決定要如何處理節點和其執行的工作之後它已入選為取消配置。 預設值為 requeue。 可能的值包括: ''requeue''、 ''terminate''、 ''taskCompletion''、 ''retainedData'''
+    optional: true
+    syntax:
+      content: 'nodeDeallocationOption?: ComputeNodeDeallocationOption'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeDeallocationOption'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeList'
+    name: nodeList
+    fullName: nodeList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 清單，其中包含從指定的集區中移除計算節點的識別碼。
+    syntax:
+      content: 'nodeList: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 移除計算節點集區逾時。 預設值為 15 分鐘。 最小值為 5 分鐘。 如果您指定的值少於 5 分鐘時，Batch 服務會傳回錯誤;如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ComputeNodeDeallocationOption'
+    name: ComputeNodeDeallocationOption
+    spec.typeScript:
+      - name: ComputeNodeDeallocationOption
+        fullName: ComputeNodeDeallocationOption
+        uid: '@azure/batch.ComputeNodeDeallocationOption'

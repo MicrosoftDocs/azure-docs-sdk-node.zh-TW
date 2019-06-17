@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeAgentSku'
+    name: NodeAgentSku
+    fullName: NodeAgentSku
+    children:
+      - '@azure/batch.NodeAgentSku.id'
+      - '@azure/batch.NodeAgentSku.osType'
+      - '@azure/batch.NodeAgentSku.verifiedImageReferences'
+    langs:
+      - typeScript
+    type: interface
+    summary: Batch 節點代理程式是在集區內，每個節點上執行，並提供命令和控制介面節點與 Batch 服務之間的程式。 節點代理程式對不同作業系統有不同的實作方式，稱為 SKU。
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 節點代理程式 SKU 識別碼。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      作業系統 （例如 Windows 或 Linux） 和節點代理程式 SKU 相容的類型。
+      可能的值包括: 'linux'，'windows'
+    optional: true
+    syntax:
+      content: 'osType?: OSType'
+      return:
+        type:
+          - '@azure/batch.OSType'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.verifiedImageReferences'
+    name: verifiedImageReferences
+    fullName: verifiedImageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 驗證與此節點代理程式 SKU 相容的 Azure Marketplace 映像的清單。 這個集合並不詳盡 （節點代理程式可能會與其他映像相容）。
+    optional: true
+    syntax:
+      content: 'verifiedImageReferences?: ImageReference[]'
+      return:
+        type:
+          - '@azure/batch.ImageReference[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.OSType'
+    name: OSType
+    spec.typeScript:
+      - name: OSType
+        fullName: OSType
+        uid: '@azure/batch.OSType'
+  - uid: '@azure/batch.ImageReference[]'
+    name: 'ImageReference[]'
+    spec.typeScript:
+      - name: ImageReference
+        fullName: ImageReference
+        uid: '@azure/batch.ImageReference'
+      - name: '[]'
+        fullName: '[]'
