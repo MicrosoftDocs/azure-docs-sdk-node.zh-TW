@@ -1,0 +1,218 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient'
+    name: SpellCheckClient
+    fullName: SpellCheckClient
+    children:
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.credentials'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.endpoint'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.sendOperationRequest'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.sendRequest'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.constructor'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker_1'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker_2'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: '@azure/cognitiveservices-spellcheck.SpellCheckClientContext'
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.credentials'
+    name: credentials
+    fullName: credentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'credentials: ServiceClientCredentials'
+      return:
+        type:
+          - ServiceClientCredentials
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.endpoint'
+    name: endpoint
+    fullName: endpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'endpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.sendOperationRequest'
+    name: 'sendOperationRequest(OperationArguments, OperationSpec, ServiceCallback<any>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2900a-101">傳送 HTTP 要求使用提供的 OperationSpec 填入。</span><span class="sxs-lookup"><span data-stu-id="2900a-101">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    syntax:
+      content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: <span data-ttu-id="2900a-102">HTTP 要求的樣板化的值就會填入從引數。</span><span class="sxs-lookup"><span data-stu-id="2900a-102">The arguments that the HTTP request's templated values will be populated from.</span></span>
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: <span data-ttu-id="2900a-103">要用來填入 httpRequest OperationSpec。</span><span class="sxs-lookup"><span data-stu-id="2900a-103">The OperationSpec to use to populate the httpRequest.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<any>
+          description: |
+            <span data-ttu-id="2900a-104">要在收到回應時呼叫的回呼。</span><span class="sxs-lookup"><span data-stu-id="2900a-104">The callback to call when the response is received.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.sendRequest'
+    name: sendRequest(RequestPrepareOptions | WebResource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2900a-105">傳送提供的 httpRequest。</span><span class="sxs-lookup"><span data-stu-id="2900a-105">Send the provided httpRequest.</span></span>
+    syntax:
+      content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
+      parameters:
+        - id: options
+          type:
+            - RequestPrepareOptions | WebResource
+          description: ''
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.constructor'
+    name: 'SpellCheckClient(ServiceClientCredentials, Models.SpellCheckClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2900a-106">初始化 SpellCheckClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="2900a-106">Initializes a new instance of the SpellCheckClient class.</span></span>
+    syntax:
+      content: 'new SpellCheckClient(credentials: ServiceClientCredentials, options?: Models.SpellCheckClientOptions)'
+      parameters:
+        - id: credentials
+          type:
+            - ServiceClientCredentials
+          description: <span data-ttu-id="2900a-107">用來唯一識別用戶端的訂用帳戶的訂用帳戶認證。</span><span class="sxs-lookup"><span data-stu-id="2900a-107">Subscription credentials which uniquely identify client subscription.</span></span>
+        - id: options
+          type:
+            - Models.SpellCheckClientOptions
+          description: ''
+          optional: true
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker'
+    name: 'spellChecker(string, Models.SpellCheckClientSpellCheckerOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function spellChecker(text: string, options?: Models.SpellCheckClientSpellCheckerOptionalParams)'
+      parameters:
+        - id: text
+          type:
+            - string
+          description: |-
+            <span data-ttu-id="2900a-108">要檢查拼字和文法錯誤的文字字串。</span><span class="sxs-lookup"><span data-stu-id="2900a-108">The text string to check for spelling and grammar errors.</span></span> <span data-ttu-id="2900a-109">文字字串、 preContextText 字串和 postContextText 字串的長度合計不能超過 10,000 個字元。</span><span class="sxs-lookup"><span data-stu-id="2900a-109">The combined length of the text string, preContextText string, and postContextText string may not exceed 10,000 characters.</span></span>
+            <span data-ttu-id="2900a-110">在 GET 要求的查詢字串，或 POST 要求主體中，您可以指定此參數。</span><span class="sxs-lookup"><span data-stu-id="2900a-110">You may specify this parameter in the query string of a GET request or in the body of a POST request.</span></span> <span data-ttu-id="2900a-111">查詢字串長度限制，因為您通常會使用 POST 要求除非您檢查只簡短的字串。</span><span class="sxs-lookup"><span data-stu-id="2900a-111">Because of the query string length limit, you'll typically use a POST request unless you're checking only short strings.</span></span>
+        - id: options
+          type:
+            - Models.SpellCheckClientSpellCheckerOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SpellCheckerResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker_1'
+    name: 'spellChecker(string, ServiceCallback<SpellCheck>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function spellChecker(text: string, callback: ServiceCallback<SpellCheck>)'
+      parameters:
+        - id: text
+          type:
+            - string
+          description: |-
+            <span data-ttu-id="2900a-112">要檢查拼字和文法錯誤的文字字串。</span><span class="sxs-lookup"><span data-stu-id="2900a-112">The text string to check for spelling and grammar errors.</span></span> <span data-ttu-id="2900a-113">文字字串、 preContextText 字串和 postContextText 字串的長度合計不能超過 10,000 個字元。</span><span class="sxs-lookup"><span data-stu-id="2900a-113">The combined length of the text string, preContextText string, and postContextText string may not exceed 10,000 characters.</span></span>
+            <span data-ttu-id="2900a-114">在 GET 要求的查詢字串，或 POST 要求主體中，您可以指定此參數。</span><span class="sxs-lookup"><span data-stu-id="2900a-114">You may specify this parameter in the query string of a GET request or in the body of a POST request.</span></span> <span data-ttu-id="2900a-115">查詢字串長度限制，因為您通常會使用 POST 要求除非您檢查只簡短的字串。</span><span class="sxs-lookup"><span data-stu-id="2900a-115">Because of the query string length limit, you'll typically use a POST request unless you're checking only short strings.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-spellcheck.SpellCheck>
+          description: |
+            <span data-ttu-id="2900a-116">回呼</span><span class="sxs-lookup"><span data-stu-id="2900a-116">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SpellCheckerResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker_2'
+    name: 'spellChecker(string, SpellCheckClientSpellCheckerOptionalParams, ServiceCallback<SpellCheck>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function spellChecker(text: string, options: SpellCheckClientSpellCheckerOptionalParams, callback: ServiceCallback<SpellCheck>)'
+      parameters:
+        - id: text
+          type:
+            - string
+          description: |-
+            <span data-ttu-id="2900a-117">要檢查拼字和文法錯誤的文字字串。</span><span class="sxs-lookup"><span data-stu-id="2900a-117">The text string to check for spelling and grammar errors.</span></span> <span data-ttu-id="2900a-118">文字字串、 preContextText 字串和 postContextText 字串的長度合計不能超過 10,000 個字元。</span><span class="sxs-lookup"><span data-stu-id="2900a-118">The combined length of the text string, preContextText string, and postContextText string may not exceed 10,000 characters.</span></span>
+            <span data-ttu-id="2900a-119">在 GET 要求的查詢字串，或 POST 要求主體中，您可以指定此參數。</span><span class="sxs-lookup"><span data-stu-id="2900a-119">You may specify this parameter in the query string of a GET request or in the body of a POST request.</span></span> <span data-ttu-id="2900a-120">查詢字串長度限制，因為您通常會使用 POST 要求除非您檢查只簡短的字串。</span><span class="sxs-lookup"><span data-stu-id="2900a-120">Because of the query string length limit, you'll typically use a POST request unless you're checking only short strings.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-spellcheck.SpellCheckClientSpellCheckerOptionalParams'
+          description: <span data-ttu-id="2900a-121">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="2900a-121">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-spellcheck.SpellCheck>
+          description: |
+            <span data-ttu-id="2900a-122">回呼</span><span class="sxs-lookup"><span data-stu-id="2900a-122">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SpellCheckerResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+references:
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClientContext'
+    name: SpellCheckClientContext
+    spec.typeScript:
+      - name: SpellCheckClientContext
+        fullName: SpellCheckClientContext
+        uid: '@azure/cognitiveservices-spellcheck.SpellCheckClientContext'
+  - uid: ServiceCallback<@azure/cognitiveservices-spellcheck.SpellCheck>
+    name: SpellCheck>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SpellCheck
+        fullName: SpellCheck
+        uid: '@azure/cognitiveservices-spellcheck.SpellCheck'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClientSpellCheckerOptionalParams'
+    name: SpellCheckClientSpellCheckerOptionalParams
+    spec.typeScript:
+      - name: SpellCheckClientSpellCheckerOptionalParams
+        fullName: SpellCheckClientSpellCheckerOptionalParams
+        uid: '@azure/cognitiveservices-spellcheck.SpellCheckClientSpellCheckerOptionalParams'
