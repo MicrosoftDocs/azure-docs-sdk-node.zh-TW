@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset'
+    name: FaceDetectorPreset
+    fullName: FaceDetectorPreset
+    children:
+      - '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+      - '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="afc51-101">描述要分析影片時用來偵測存在的所有臉部的所有設定。</span><span class="sxs-lookup"><span data-stu-id="afc51-101">Describes all the settings to be used when analyzing a video in order to detect all the faces present.</span></span>
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="afc51-102">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="afc51-102">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.FaceDetectorPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.FaceDetectorPreset"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    name: resolution
+    fullName: resolution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="afc51-103">指定分析您的影片時的最大解析度。</span><span class="sxs-lookup"><span data-stu-id="afc51-103">Specifies the maximum resolution at which your video is analyzed.</span></span> <span data-ttu-id="afc51-104">預設行為是"SourceResolution 」 這會讓繼續輸入視訊解析度其原始分析時。</span><span class="sxs-lookup"><span data-stu-id="afc51-104">The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed.</span></span>
+      <span data-ttu-id="afc51-105">使用 「 StandardDefinition 」 會重新調整輸入的視訊，同時維持適當的外觀比例的標準定義。</span><span class="sxs-lookup"><span data-stu-id="afc51-105">Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio.</span></span> <span data-ttu-id="afc51-106">它只會重新調整如果視訊的較高的解析度。</span><span class="sxs-lookup"><span data-stu-id="afc51-106">It will only resize if the video is of higher resolution.</span></span> <span data-ttu-id="afc51-107">比方說，會調整規模 640x360 之前處理 1920x1080 輸入。</span><span class="sxs-lookup"><span data-stu-id="afc51-107">For example, a 1920x1080 input would be scaled to 640x360 before processing.</span></span> <span data-ttu-id="afc51-108">切換至 「 StandardDefinition"會減少花費的時間來處理程序的高解析度影片。</span><span class="sxs-lookup"><span data-stu-id="afc51-108">Switching to "StandardDefinition" will reduce the time it takes to process high resolution video.</span></span> <span data-ttu-id="afc51-109">它也可能減少使用此元件的成本 (請參閱 https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics 如需詳細資訊)。</span><span class="sxs-lookup"><span data-stu-id="afc51-109">It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details).</span></span>
+      <span data-ttu-id="afc51-110">不過，可能無法偵測得到太小而無法調整大小的視訊中的臉部。</span><span class="sxs-lookup"><span data-stu-id="afc51-110">However, faces that end up being too small in the resized video may not be detected.</span></span> <span data-ttu-id="afc51-111">可能的值包括：' SourceResolution'，'StandardDefinition'</span><span class="sxs-lookup"><span data-stu-id="afc51-111">Possible values include: 'SourceResolution', 'StandardDefinition'</span></span>
+    optional: true
+    syntax:
+      content: 'resolution?: AnalysisResolution'
+      return:
+        type:
+          - '@azure/arm-mediaservices.AnalysisResolution'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.AnalysisResolution'
+    name: AnalysisResolution
+    spec.typeScript:
+      - name: AnalysisResolution
+        fullName: AnalysisResolution
+        uid: '@azure/arm-mediaservices.AnalysisResolution'
