@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    fullName: StartTask
+    children:
+      - '@azure/batch.StartTask.commandLine'
+      - '@azure/batch.StartTask.containerSettings'
+      - '@azure/batch.StartTask.environmentSettings'
+      - '@azure/batch.StartTask.maxTaskRetryCount'
+      - '@azure/batch.StartTask.resourceFiles'
+      - '@azure/batch.StartTask.userIdentity'
+      - '@azure/batch.StartTask.waitForSuccess'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="885de-101">在計算節點上觸發復原作業時，批次會重試工作。</span><span class="sxs-lookup"><span data-stu-id="885de-101">Batch will retry tasks when a recovery operation is triggered on a compute node.</span></span> <span data-ttu-id="885de-102">復原作業的範例包括 （但不限於） 將狀況不良的計算節點重新開機或計算節點消失，因為主機失敗時。</span><span class="sxs-lookup"><span data-stu-id="885de-102">Examples of recovery operations include (but are not limited to) when an unhealthy compute node is rebooted or a compute node disappeared due to host failure.</span></span> <span data-ttu-id="885de-103">因為復原作業在獨立的而且不會納入 maxTaskRetryCount 會重試。</span><span class="sxs-lookup"><span data-stu-id="885de-103">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="885de-104">即使 maxTaskRetryCount 為 0，因為復原作業內部重試可能會發生。</span><span class="sxs-lookup"><span data-stu-id="885de-104">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="885de-105">因為這個緣故，所有工作都應該具有等冪性。</span><span class="sxs-lookup"><span data-stu-id="885de-105">Because of this, all tasks should be idempotent.</span></span> <span data-ttu-id="885de-106">這表示工作需要容許正在中斷並重新啟動而不會造成任何損毀或重複的資料。</span><span class="sxs-lookup"><span data-stu-id="885de-106">This means tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="885de-107">最佳做法長時間執行的工作是使用某種形式的檢查點。</span><span class="sxs-lookup"><span data-stu-id="885de-107">The best practice for long running tasks is to use some form of checkpointing.</span></span> <span data-ttu-id="885de-108">在某些情況下啟動工作可能會重新執行，即使節點已不需要重新開機。</span><span class="sxs-lookup"><span data-stu-id="885de-108">In some cases the start task may be re-run even though the node was not rebooted.</span></span> <span data-ttu-id="885de-109">特別小心，以免建立 breakaway 程序，或安裝啟動啟動工作工作目錄中，從服務的啟動工作，因為這將會封鎖批次無法重新執行啟動工作。</span><span class="sxs-lookup"><span data-stu-id="885de-109">Special care should be taken to avoid start tasks which create breakaway process or install/launch services from the start task working directory, as this will block Batch from being able to re-run the start task.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="885de-110">啟動工作命令列。</span><span class="sxs-lookup"><span data-stu-id="885de-110">The command line of the start task.</span></span> <span data-ttu-id="885de-111">命令列不會在殼層中執行，因此無法利用 shell 功能，例如環境變數擴充。</span><span class="sxs-lookup"><span data-stu-id="885de-111">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="885de-112">如果您想要利用這類功能，您應該叫用命令列中的殼層並不會使用"cmd /c MyCommand"在 Windows 或 「 / bin/sh-c MyCommand 」 在 Linux 中。</span><span class="sxs-lookup"><span data-stu-id="885de-112">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="885de-113">如果命令列參考檔案路徑，它應該使用相對路徑 （相對於工作工作目錄），或使用批次提供的環境變數 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。</span><span class="sxs-lookup"><span data-stu-id="885de-113">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="885de-114">啟動工作執行所在的容器設定。</span><span class="sxs-lookup"><span data-stu-id="885de-114">The settings for the container under which the start task runs.</span></span> <span data-ttu-id="885de-115">時指定此參數，AZ_BATCH_NODE_ROOT_DIR （在節點上的 Azure Batch 根目錄） 下方的所有目錄以遞迴方式都對應至容器，所有的工作環境變數會都對應至容器，且工作命令列在容器中執行。</span><span class="sxs-lookup"><span data-stu-id="885de-115">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="885de-116">啟動工作的環境變數設定清單。</span><span class="sxs-lookup"><span data-stu-id="885de-116">A list of environment variable settings for the start task.</span></span>
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="885de-117">工作重試次數上限。</span><span class="sxs-lookup"><span data-stu-id="885de-117">The maximum number of times the task may be retried.</span></span> <span data-ttu-id="885de-118">如果工作的結束代碼不是零，Batch 服務會重試工作。</span><span class="sxs-lookup"><span data-stu-id="885de-118">The Batch service retries a task if its exit code is nonzero.</span></span> <span data-ttu-id="885de-119">請注意，這個值會特別控制重試次數。</span><span class="sxs-lookup"><span data-stu-id="885de-119">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="885de-120">Batch 服務會嘗試工作一次，然後可一直重試直到達此限制。</span><span class="sxs-lookup"><span data-stu-id="885de-120">The Batch service will try the task once, and may then retry up to this limit.</span></span> <span data-ttu-id="885de-121">例如，如果最大重試計數為 3，批次會嘗試工作最多 4 次 （一首次嘗試和重試 3 次）。</span><span class="sxs-lookup"><span data-stu-id="885de-121">For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries).</span></span>
+      <span data-ttu-id="885de-122">如果最大重試計數為 0，Batch 服務不會重試工作。</span><span class="sxs-lookup"><span data-stu-id="885de-122">If the maximum retry count is 0, the Batch service does not retry the task.</span></span> <span data-ttu-id="885de-123">如果最大重試計數為-1，Batch 服務的重試次數無限制的工作。</span><span class="sxs-lookup"><span data-stu-id="885de-123">If the maximum retry count is -1, the Batch service retries the task without limit.</span></span>
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="885de-124">Batch 服務時，就會下載到計算節點上，執行命令列之前的檔案清單。</span><span class="sxs-lookup"><span data-stu-id="885de-124">A list of files that the Batch service will download to the compute node before running the command line.</span></span>  <span data-ttu-id="885de-125">沒有資源檔清單的最大大小。</span><span class="sxs-lookup"><span data-stu-id="885de-125">There is a maximum size for the list of resource files.</span></span> <span data-ttu-id="885de-126">當超過大小上限時，則要求會失敗，並回應錯誤程式碼會比較 RequestEntityTooLarge。</span><span class="sxs-lookup"><span data-stu-id="885de-126">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="885de-127">如果發生這種情況，就必須降低的 ResourceFiles 集合的大小。</span><span class="sxs-lookup"><span data-stu-id="885de-127">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="885de-128">這可以使用.zip 檔、 應用程式套件或 Docker 容器來達成。</span><span class="sxs-lookup"><span data-stu-id="885de-128">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span> <span data-ttu-id="885de-129">這個項目底下所列的檔案位於工作的工作目錄。</span><span class="sxs-lookup"><span data-stu-id="885de-129">Files listed under this element are located in the task''s working directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="885de-130">啟動工作執行所在使用者的身分識別。</span><span class="sxs-lookup"><span data-stu-id="885de-130">The user identity under which the start task runs.</span></span> <span data-ttu-id="885de-131">如果省略，則工作可唯一的非系統管理使用者身分執行工作。</span><span class="sxs-lookup"><span data-stu-id="885de-131">If omitted, the task runs as a non-administrative user unique to the task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.waitForSuccess'
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="885de-132">Batch 服務應該等候啟動工作順利完成 (亦即，若要結束，結束代碼為 0) 排程計算節點上的任何工作之前。</span><span class="sxs-lookup"><span data-stu-id="885de-132">Whether the Batch service should wait for the start task to complete successfully (that is, to exit with exit code 0) before scheduling any tasks on the compute node.</span></span> <span data-ttu-id="885de-133">如果計算節點上的 true 和啟動工作失敗，Batch 服務會重試啟動工作，直到其最大重試計數 (maxTaskRetryCount)。</span><span class="sxs-lookup"><span data-stu-id="885de-133">If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount).</span></span> <span data-ttu-id="885de-134">如果工作仍未順利完成之後所有的重試，則 Batch 服務商標計算節點無法使用，且不會排定其工作。</span><span class="sxs-lookup"><span data-stu-id="885de-134">If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it.</span></span>
+      <span data-ttu-id="885de-135">透過節點狀態和失敗資訊詳細資料，可以偵測到此狀況。</span><span class="sxs-lookup"><span data-stu-id="885de-135">This condition can be detected via the node state and failure info details.</span></span> <span data-ttu-id="885de-136">如果為 false，批次服務將不會等候開始工作完成。</span><span class="sxs-lookup"><span data-stu-id="885de-136">If false, the Batch service will not wait for the start task to complete.</span></span> <span data-ttu-id="885de-137">在此情況下，其他工作可以開始執行啟動工作仍在執行中; 而計算節點上執行而且即使啟動工作失敗，新的工作將會繼續排程在節點上。</span><span class="sxs-lookup"><span data-stu-id="885de-137">In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node.</span></span> <span data-ttu-id="885de-138">預設值為 false。</span><span class="sxs-lookup"><span data-stu-id="885de-138">The default is false.</span></span>
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
