@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.AssessedMachines'
+    name: AssessedMachines
+    fullName: AssessedMachines
+    children:
+      - '@azure/arm-migrate.AssessedMachines.constructor'
+      - '@azure/arm-migrate.AssessedMachines.get'
+      - '@azure/arm-migrate.AssessedMachines.get_2'
+      - '@azure/arm-migrate.AssessedMachines.get_1'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment_2'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表 AssessedMachines。
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.constructor'
+    name: AssessedMachines(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立 AssessedMachines。
+    syntax:
+      content: 'new AssessedMachines(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得評定的電腦，其大小和成本 estimnate 已在指定的評估中評估。
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: assessedMachineName
+          type:
+            - string
+          description: 評定的電腦評估評量的唯一名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<AssessedMachine>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessedMachine>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: assessedMachineName
+          type:
+            - string
+          description: 評定的電腦評估評量的唯一名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachine>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<AssessedMachine>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, callback: ServiceCallback<AssessedMachine>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: assessedMachineName
+          type:
+            - string
+          description: 評定的電腦評估評量的唯一名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachine>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment'
+    name: 'listByAssessment(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      取得評估為指定評估的一部分的電腦清單。 會傳回 '評定的電腦' 做為模型區段中指定類型之物件的 json 陣列。
+      每當建立或更新評量時，它會在計算。 在這個階段，評估物件的 'status' 欄位會報告 '運算'。
+      在評估時在計算期間，已評定電腦的清單是空的這個呼叫會傳回任何評定的電腦。
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment_2'
+    name: 'listByAssessment(string, string, string, string, RequestOptionsBase, ServiceCallback<AssessedMachineResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessedMachineResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment_1'
+    name: 'listByAssessment(string, string, string, string, ServiceCallback<AssessedMachineResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<AssessedMachineResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessedMachine>
+    name: AssessedMachine>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessedMachine
+        fullName: AssessedMachine
+        uid: '@azure/arm-migrate.AssessedMachine'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+    name: AssessedMachineResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessedMachineResultList
+        fullName: AssessedMachineResultList
+        uid: '@azure/arm-migrate.AssessedMachineResultList'
+      - name: '>'
+        fullName: '>'
