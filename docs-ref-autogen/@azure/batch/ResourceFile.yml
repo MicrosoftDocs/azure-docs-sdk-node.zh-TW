@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ResourceFile'
+    name: ResourceFile
+    fullName: ResourceFile
+    children:
+      - '@azure/batch.ResourceFile.autoStorageContainerName'
+      - '@azure/batch.ResourceFile.blobPrefix'
+      - '@azure/batch.ResourceFile.fileMode'
+      - '@azure/batch.ResourceFile.filePath'
+      - '@azure/batch.ResourceFile.httpUrl'
+      - '@azure/batch.ResourceFile.storageContainerUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8f0f4-101">代表 ResourceFile 的介面。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-101">An interface representing ResourceFile.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.autoStorageContainerName'
+    name: autoStorageContainerName
+    fullName: autoStorageContainerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8f0f4-102">自動儲存體帳戶中儲存體容器名稱。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-102">The storage container name in the auto storage account.</span></span> <span data-ttu-id="8f0f4-103">AutoStorageContainerName、 storageContainerUrl 和 httpUrl 屬性互斥，且必須指定其中一個。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-103">The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoStorageContainerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.blobPrefix'
+    name: blobPrefix
+    fullName: blobPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8f0f4-104">從 Azure 儲存體容器下載 blob 時要使用 blob 前置詞。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-104">The blob prefix to use when downloading blobs from an Azure Storage container.</span></span> <span data-ttu-id="8f0f4-105">只將名稱開頭為指定的前置詞的 blob 將會下載。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-105">Only the blobs whose names begin with the specified prefix will be downloaded.</span></span> <span data-ttu-id="8f0f4-106">使用 autoStorageContainerName 或 storageContainerUrl 時才有效屬性。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-106">The property is valid only when autoStorageContainerName or storageContainerUrl is used.</span></span> <span data-ttu-id="8f0f4-107">部分檔案名稱或子目錄，可以使用此前置詞。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-107">This prefix can be a partial filename or a subdirectory.</span></span> <span data-ttu-id="8f0f4-108">如果未指定前置詞，將會下載容器中的所有檔案。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-108">If a prefix is not specified, all the files in the container will be downloaded.</span></span>'
+    optional: true
+    syntax:
+      content: 'blobPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.fileMode'
+    name: fileMode
+    fullName: fileMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8f0f4-109">八進位格式中的檔案權限模式屬性。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-109">The file permission mode attribute in octal format.</span></span> <span data-ttu-id="8f0f4-110">這個屬性僅適用於檔案下載到 Linux 計算節點。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-110">This property applies only to files being downloaded to Linux compute nodes.</span></span> <span data-ttu-id="8f0f4-111">如果您指定了如 resourceFile 這會下載到 Windows 節點，將會忽略它。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-111">It will be ignored if it is specified for a resourceFile which will be downloaded to a Windows node.</span></span> <span data-ttu-id="8f0f4-112">如果在 Linux 節點未指定此屬性，則預設值是 0770年會套用至檔案。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-112">If this property is not specified for a Linux node, then a default value of 0770 is applied to the file.</span></span>'
+    optional: true
+    syntax:
+      content: 'fileMode?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.filePath'
+    name: filePath
+    fullName: filePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8f0f4-113">若要下載的檔案，相對於工作的工作目錄的計算節點上的位置。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-113">The location on the compute node to which to download the file(s), relative to the task''s working directory.</span></span> <span data-ttu-id="8f0f4-114">指定 httpUrl 屬性，如果檔案路徑是必要，並描述檔案將會被下載，包括檔名的路徑。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-114">If the httpUrl property is specified, the filePath is required and describes the path which the file will be downloaded to, including the filename.</span></span> <span data-ttu-id="8f0f4-115">否則，指定 autoStorageContainerName 或 storageContainerUrl 屬性，如果檔案路徑是選擇性的要下載之檔案的目錄。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-115">Otherwise, if the autoStorageContainerName or storageContainerUrl property is specified, filePath is optional and is the directory to download the files to.</span></span> <span data-ttu-id="8f0f4-116">萬一其中檔案路徑做為目錄，將完整保留和附加至指定的檔案路徑的目錄已輸入的資料與相關聯的任何目錄結構。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-116">In the case where filePath is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory.</span></span> <span data-ttu-id="8f0f4-117">指定的相對路徑無法中斷工作的工作目錄 (例如藉由使用 ''..'')。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-117">The specified relative path cannot break out of the task''s working directory (for example by using ''..'').</span></span>'
+    optional: true
+    syntax:
+      content: 'filePath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.httpUrl'
+    name: httpUrl
+    fullName: httpUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8f0f4-118">要下載的檔案 URL。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-118">The URL of the file to download.</span></span> <span data-ttu-id="8f0f4-119">AutoStorageContainerName、 storageContainerUrl 和 httpUrl 屬性互斥，且必須指定其中一個。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-119">The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.</span></span> <span data-ttu-id="8f0f4-120">如果 URL 指向 Azure Blob 儲存體，它必須是可讀取使用匿名存取;也就是說，批次服務沒有任何認證下載 blob 時。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-120">If the URL points to Azure Blob Storage, it must be readable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob.</span></span> <span data-ttu-id="8f0f4-121">有兩種方式可取得這類 URL 在 Azure 儲存體 blob： 包含共用存取簽章 (SAS) 授與 blob 的讀取權限，或設定針對 blob 或其容器的 ACL 以允許公用存取。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-121">There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the blob, or set the ACL for the blob or its container to allow public access.</span></span>'
+    optional: true
+    syntax:
+      content: 'httpUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.storageContainerUrl'
+    name: storageContainerUrl
+    fullName: storageContainerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8f0f4-122">在 Azure Blob 儲存體的 blob 容器 URL。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-122">The URL of the blob container within Azure Blob Storage.</span></span> <span data-ttu-id="8f0f4-123">AutoStorageContainerName、 storageContainerUrl 和 httpUrl 屬性互斥，且必須指定其中一個。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-123">The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.</span></span> <span data-ttu-id="8f0f4-124">此 URL 必須可讀取且 listable 使用匿名存取;也就是說，Batch 服務不具有任何認證，從容器下載 blob 時。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-124">This URL must be readable and listable using anonymous access; that is, the Batch service does not present any credentials when downloading blobs from the container.</span></span> <span data-ttu-id="8f0f4-125">有兩種方式可取得這類 URL 在 Azure 儲存體容器： 包含共用存取簽章 (SAS) 授與容器的讀取和清單權限或設定容器 ACL，以允許公用存取。</span><span class="sxs-lookup"><span data-stu-id="8f0f4-125">There are two ways to get such a URL for a container in Azure storage: include a Shared Access Signature (SAS) granting read and list permissions on the container, or set the ACL for the container to allow public access.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
