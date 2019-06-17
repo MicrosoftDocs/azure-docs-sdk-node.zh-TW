@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+      - '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+      - '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    langs:
+      - typeScript
+    type: interface
+    summary: 多重執行個體工作通常會用來支援 MPI 工作。 在 MPI 案例中，如果任何子工作失敗 （例如因為透過非零結束代碼結束） 整個多重執行個體工作會失敗。 接著會終止並重試多重執行個體工作，直到觸及重試限制為止。
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch 服務會在執行協調命令列前下載的檔案清單。 一般資源檔和工作資源檔案之間的差異是一般資源檔下載為所有子工作，包括主要資料庫，而工作資源檔只會下載主要。 也請注意，這些資源檔不會下載到工作工作目錄中，但改為下載到工作根目錄 （工作目錄上方的一個目錄）。  沒有資源檔清單的最大大小。  當超過大小上限時，則要求會失敗，並回應錯誤程式碼會比較 RequestEntityTooLarge。 如果發生這種情況，就必須降低的 ResourceFiles 集合的大小。 這可以使用.zip 檔、 應用程式套件或 Docker 容器來達成。
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 命令列，使其能夠協調時的所有計算節點上執行的主要執行主要工作的命令。 一般協調命令列啟動背景服務，並確認服務已準備好處理節點間的訊息。
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作需要的計算節點數目。 如果省略，預設值為 1。
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'

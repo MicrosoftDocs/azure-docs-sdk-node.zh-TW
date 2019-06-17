@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - '@azure/batch.JobReleaseTask.commandLine'
+      - '@azure/batch.JobReleaseTask.containerSettings'
+      - '@azure/batch.JobReleaseTask.environmentSettings'
+      - '@azure/batch.JobReleaseTask.id'
+      - '@azure/batch.JobReleaseTask.maxWallClockTime'
+      - '@azure/batch.JobReleaseTask.resourceFiles'
+      - '@azure/batch.JobReleaseTask.retentionTime'
+      - '@azure/batch.JobReleaseTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      作業解除工作會執行作業結束時，因為下列其中一項：在使用者呼叫終止作業 API 或刪除作業 API 時作業仍在作用中、 達到工作的最大的牆上的時鐘時間條件約束時，作業是仍在作用中或作業的作業管理員工作完成，且作業已終止時工作管理er 完成。 在其中執行作業的工作和作業準備工作執行完成每個計算節點上執行作業解除工作。 如果您在計算節點執行作業準備工作，並不需要任何進一步的工作上執行的作業結束的工作之後，計算節點重新製作映像 （並因此作業準備工作不會重新執行），則作業解除工作不會不執行在該節點上。
+      如果計算節點重新開機作業解除工作仍在執行時，計算節點啟動時，會再次執行作業解除工作。 作業不會標示為完成，直到完成所有作業解除工作。 在背景執行作業解除工作。 它不會佔用排程的位置;也就是說，它不會計入集區上指定的 maxTasksPerNode 限制。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '作業解除工作的命令列。 命令列不會在殼層中執行，因此無法利用 shell 功能，例如環境變數擴充。 如果您想要利用這類功能，您應該叫用命令列中的殼層並不會使用"cmd /c MyCommand"在 Windows 或 「 / bin/sh-c MyCommand 」 在 Linux 中。 如果命令列參考檔案路徑，它應該使用相對路徑 （相對於工作工作目錄），或使用批次提供的環境變數 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業解除工作執行所在的容器設定。 時指定此參數，AZ_BATCH_NODE_ROOT_DIR （在節點上的 Azure Batch 根目錄） 下方的所有目錄以遞迴方式都對應至容器，所有的工作環境變數會都對應至容器，且工作命令列在容器中執行。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業解除工作的環境變數設定清單。
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 字串，可唯一識別作業內作業解除工作。 識別碼可包含英數字元，包括連字號及底線的任意組合，而且不能包含超過 64 個字元。 如果您未指定此屬性，Batch 服務會指派預設值是 'jobrelease'。 在作業中的任何其他工作可以不有相同的識別碼，作業解除工作。 如果您嘗試提交具有相同識別碼的工作，Batch 服務會拒絕要求，錯誤碼為 TaskIdSameAsJobReleaseTask;如果您直接呼叫 REST API，HTTP 狀態碼為 409 （衝突）。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 最大的經過時間，作業解除工作可能會執行指定的計算節點上，從開始計算的工作會啟動。 如果工作未完成的時間限制內，Batch 服務會將其終止。 預設值為 15 分鐘。 您不能指定超過 15 分鐘的逾時。 如果您這樣做，Batch 服務會拒絕它並產生錯誤;如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch 服務時，就會下載到計算節點上，執行命令列之前的檔案清單。  沒有資源檔清單的最大大小。  當超過大小上限時，則要求會失敗，並回應錯誤程式碼會比較 RequestEntityTooLarge。 如果發生這種情況，就必須降低的 ResourceFiles 集合的大小。 這可以使用.zip 檔、 應用程式套件或 Docker 容器來達成。 這個項目底下所列的檔案位於工作的工作目錄。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要保留作業解除工作在計算節點上的工作目錄的最小時間。
+      此時間之後，Batch 服務可能會刪除工作目錄和其所有內容。 預設值為 7 天、 工作目錄也就是會保留 7 天，除非移除計算節點，或刪除作業。
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業解除工作執行所在使用者的身分識別。 如果省略，則工作可唯一的非系統管理使用者身分執行工作。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
