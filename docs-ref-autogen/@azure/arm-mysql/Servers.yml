@@ -1,0 +1,479 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mysql.Servers'
+    name: Servers
+    fullName: Servers
+    children:
+      - '@azure/arm-mysql.Servers.beginCreate'
+      - '@azure/arm-mysql.Servers.beginDeleteMethod'
+      - '@azure/arm-mysql.Servers.beginUpdate'
+      - '@azure/arm-mysql.Servers.create'
+      - '@azure/arm-mysql.Servers.deleteMethod'
+      - '@azure/arm-mysql.Servers.get'
+      - '@azure/arm-mysql.Servers.get_2'
+      - '@azure/arm-mysql.Servers.get_1'
+      - '@azure/arm-mysql.Servers.list'
+      - '@azure/arm-mysql.Servers.list_2'
+      - '@azure/arm-mysql.Servers.list_1'
+      - '@azure/arm-mysql.Servers.listByResourceGroup'
+      - '@azure/arm-mysql.Servers.listByResourceGroup_2'
+      - '@azure/arm-mysql.Servers.listByResourceGroup_1'
+      - '@azure/arm-mysql.Servers.constructor'
+      - '@azure/arm-mysql.Servers.update'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="0d905-101">此類別代表伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-101">Class representing a Servers.</span></span>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.beginCreate'
+    name: 'beginCreate(string, string, ServerForCreate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="0d905-102">建立新的伺服器或更新現有的伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-102">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="0d905-103">[更新] 動作將會覆寫現有的伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-103">The update action will overwrite the existing server.</span></span>'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, serverName: string, parameters: ServerForCreate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-104">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-105">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-106">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-106">The name of the server.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-mysql.ServerForCreate'
+          description: <span data-ttu-id="0d905-107">用於建立或更新伺服器所需的參數。</span><span class="sxs-lookup"><span data-stu-id="0d905-107">The required parameters for creating or updating a server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d905-108">刪除伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-108">Deletes a server.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-109">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-110">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-111">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-111">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.beginUpdate'
+    name: 'beginUpdate(string, string, ServerUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d905-112">更新現有伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-112">Updates an existing server.</span></span> <span data-ttu-id="0d905-113">要求主體可以包含一個許多出現在一般的伺服器定義的屬性。</span><span class="sxs-lookup"><span data-stu-id="0d905-113">The request body can contain one to many of the properties present in the normal server definition.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, serverName: string, parameters: ServerUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-114">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-114">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-115">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-115">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-116">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-116">The name of the server.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-mysql.ServerUpdateParameters'
+          description: <span data-ttu-id="0d905-117">正在更新伺服器的必要的參數。</span><span class="sxs-lookup"><span data-stu-id="0d905-117">The required parameters for updating a server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.create'
+    name: 'create(string, string, ServerForCreate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="0d905-118">建立新的伺服器或更新現有的伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-118">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="0d905-119">[更新] 動作將會覆寫現有的伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-119">The update action will overwrite the existing server.</span></span>'
+    syntax:
+      content: 'function create(resourceGroupName: string, serverName: string, parameters: ServerForCreate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-120">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-120">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-121">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-121">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-122">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-122">The name of the server.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-mysql.ServerForCreate'
+          description: <span data-ttu-id="0d905-123">用於建立或更新伺服器所需的參數。</span><span class="sxs-lookup"><span data-stu-id="0d905-123">The required parameters for creating or updating a server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServersCreateResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d905-124">刪除伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-124">Deletes a server.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-125">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-125">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-126">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-126">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-127">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-127">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d905-128">取得伺服器的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="0d905-128">Gets information about a server.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-129">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-130">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-131">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-131">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServersGetResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Server>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, options: RequestOptionsBase, callback: ServiceCallback<Server>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-132">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-132">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-133">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-134">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-134">The name of the server.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0d905-135">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0d905-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-mysql.Server>
+          description: |
+            <span data-ttu-id="0d905-136">回呼</span><span class="sxs-lookup"><span data-stu-id="0d905-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServersGetResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.get_1'
+    name: 'get(string, string, ServiceCallback<Server>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, callback: ServiceCallback<Server>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-137">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-137">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-138">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-138">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-139">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-139">The name of the server.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-mysql.Server>
+          description: |
+            <span data-ttu-id="0d905-140">回呼</span><span class="sxs-lookup"><span data-stu-id="0d905-140">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServersGetResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d905-141">列出在指定的訂用帳戶中的所有伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-141">List all the servers in a given subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServersListResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<ServerListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<ServerListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0d905-142">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0d905-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-mysql.ServerListResult>
+          description: |
+            <span data-ttu-id="0d905-143">回呼</span><span class="sxs-lookup"><span data-stu-id="0d905-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServersListResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.list_1'
+    name: list(ServiceCallback<ServerListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ServerListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-mysql.ServerListResult>
+          description: |
+            <span data-ttu-id="0d905-144">回呼</span><span class="sxs-lookup"><span data-stu-id="0d905-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServersListResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d905-145">列出指定的資源群組中的所有伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-145">List all the servers in a given resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-146">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-146">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-147">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-147">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServersListByResourceGroupResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<ServerListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<ServerListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-148">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-148">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-149">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-149">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0d905-150">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0d905-150">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-mysql.ServerListResult>
+          description: |
+            <span data-ttu-id="0d905-151">回呼</span><span class="sxs-lookup"><span data-stu-id="0d905-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServersListByResourceGroupResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ServerListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ServerListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-152">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-152">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-153">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-153">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-mysql.ServerListResult>
+          description: |
+            <span data-ttu-id="0d905-154">回呼</span><span class="sxs-lookup"><span data-stu-id="0d905-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServersListByResourceGroupResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.constructor'
+    name: Servers(MySQLManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d905-155">建立伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-155">Create a Servers.</span></span>
+    syntax:
+      content: 'new Servers(client: MySQLManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-mysql.MySQLManagementClientContext'
+          description: |
+            <span data-ttu-id="0d905-156">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="0d905-156">Reference to the service client.</span></span>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.update'
+    name: 'update(string, string, ServerUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d905-157">更新現有伺服器。</span><span class="sxs-lookup"><span data-stu-id="0d905-157">Updates an existing server.</span></span> <span data-ttu-id="0d905-158">要求主體可以包含一個許多出現在一般的伺服器定義的屬性。</span><span class="sxs-lookup"><span data-stu-id="0d905-158">The request body can contain one to many of the properties present in the normal server definition.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, serverName: string, parameters: ServerUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-159">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-159">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0d905-160">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="0d905-160">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0d905-161">伺服器的名稱。</span><span class="sxs-lookup"><span data-stu-id="0d905-161">The name of the server.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-mysql.ServerUpdateParameters'
+          description: <span data-ttu-id="0d905-162">正在更新伺服器的必要的參數。</span><span class="sxs-lookup"><span data-stu-id="0d905-162">The required parameters for updating a server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServersUpdateResponse>
+    package: '@azure/arm-mysql'
+references:
+  - uid: '@azure/arm-mysql.MySQLManagementClientContext'
+    name: MySQLManagementClientContext
+    spec.typeScript:
+      - name: MySQLManagementClientContext
+        fullName: MySQLManagementClientContext
+        uid: '@azure/arm-mysql.MySQLManagementClientContext'
+  - uid: '@azure/arm-mysql.ServerForCreate'
+    name: ServerForCreate
+    spec.typeScript:
+      - name: ServerForCreate
+        fullName: ServerForCreate
+        uid: '@azure/arm-mysql.ServerForCreate'
+  - uid: '@azure/arm-mysql.ServerUpdateParameters'
+    name: ServerUpdateParameters
+    spec.typeScript:
+      - name: ServerUpdateParameters
+        fullName: ServerUpdateParameters
+        uid: '@azure/arm-mysql.ServerUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-mysql.Server>
+    name: Server>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Server
+        fullName: Server
+        uid: '@azure/arm-mysql.Server'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-mysql.ServerListResult>
+    name: ServerListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ServerListResult
+        fullName: ServerListResult
+        uid: '@azure/arm-mysql.ServerListResult'
+      - name: '>'
+        fullName: '>'

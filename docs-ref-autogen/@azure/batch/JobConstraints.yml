@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - '@azure/batch.JobConstraints.maxTaskRetryCount'
+      - '@azure/batch.JobConstraints.maxWallClockTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8f917-101">代表 JobConstraints 的介面。</span><span class="sxs-lookup"><span data-stu-id="8f917-101">An interface representing JobConstraints.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8f917-102">每個工作可能會重試的次數上限。</span><span class="sxs-lookup"><span data-stu-id="8f917-102">The maximum number of times each task may be retried.</span></span> <span data-ttu-id="8f917-103">如果工作的結束代碼不是零，Batch 服務會重試工作。</span><span class="sxs-lookup"><span data-stu-id="8f917-103">The Batch service retries a task if its exit code is nonzero.</span></span> <span data-ttu-id="8f917-104">請注意，這個值會特別控制重試次數。</span><span class="sxs-lookup"><span data-stu-id="8f917-104">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="8f917-105">Batch 服務會嘗試每項工作一次，然後再重試直到達此限制。</span><span class="sxs-lookup"><span data-stu-id="8f917-105">The Batch service will try each task once, and may then retry up to this limit.</span></span> <span data-ttu-id="8f917-106">例如，如果重試計數上限為 3，則 Batch 可嘗試工作最多 4 次 (一次首次嘗試，3 次重試)。</span><span class="sxs-lookup"><span data-stu-id="8f917-106">For example, if the maximum retry count is 3, Batch tries a task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="8f917-107">如果重試計數上限為 0，則 Batch 服務不會重試工作。</span><span class="sxs-lookup"><span data-stu-id="8f917-107">If the maximum retry count is 0, the Batch service does not retry tasks.</span></span> <span data-ttu-id="8f917-108">如果重試計數上限為 -1，則 Batch 服務會無限制地重試工作。</span><span class="sxs-lookup"><span data-stu-id="8f917-108">If the maximum retry count is -1, the Batch service retries tasks without limit.</span></span> <span data-ttu-id="8f917-109">預設值為 0 (不重試)。</span><span class="sxs-lookup"><span data-stu-id="8f917-109">The default value is 0 (no retries).</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8f917-110">從工作建立時開始計算，執行作業、 耗用時間上限。</span><span class="sxs-lookup"><span data-stu-id="8f917-110">The maximum elapsed time that the job may run, measured from the time the job is created.</span></span> <span data-ttu-id="8f917-111">如果作業沒有時間限制內完成，Batch 服務會終止它，並仍在執行任何工作。</span><span class="sxs-lookup"><span data-stu-id="8f917-111">If the job does not complete within the time limit, the Batch service terminates it and any tasks that are still running.</span></span> <span data-ttu-id="8f917-112">在此情況下，終止原因會是 MaxWallClockTimeExpiry。</span><span class="sxs-lookup"><span data-stu-id="8f917-112">In this case, the termination reason will be MaxWallClockTimeExpiry.</span></span>
+      <span data-ttu-id="8f917-113">如果未指定此屬性，沒有時間限制的作業可以執行多久。</span><span class="sxs-lookup"><span data-stu-id="8f917-113">If this property is not specified, there is no time limit on how long the job may run.</span></span>
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
