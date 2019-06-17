@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat'
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - '@azure/arm-mediaservices.MultiBitrateFormat.filenamePattern'
+      - '@azure/arm-mediaservices.MultiBitrateFormat.odatatype'
+      - '@azure/arm-mediaservices.MultiBitrateFormat.outputFiles'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="feefe-101">描述用於產生的對齊 GOP 的多位元速率檔案集合的屬性。</span><span class="sxs-lookup"><span data-stu-id="feefe-101">Describes the properties for producing a collection of GOP aligned multi-bitrate files.</span></span> <span data-ttu-id="feefe-102">預設行為是要產生一個輸出檔案，也就是所有總統搭配 muxed 每個視訊層。</span><span class="sxs-lookup"><span data-stu-id="feefe-102">The default behavior is to produce one output file for each video layer which is muxed together with all the audios.</span></span> <span data-ttu-id="feefe-103">藉由指定 outputFiles 集合，可以控制所產生的確切的輸出檔。</span><span class="sxs-lookup"><span data-stu-id="feefe-103">The exact output files produced can be controlled by specifying the outputFiles collection.</span></span>
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.filenamePattern'
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="feefe-104">產生的輸出檔案的檔案名稱的模式。</span><span class="sxs-lookup"><span data-stu-id="feefe-104">The pattern of the file names for the generated output files.</span></span> <span data-ttu-id="feefe-105">下列巨集支援的檔案名稱: {Basename}-{Extension} 的輸入視訊的基底名稱-這個格式的適當擴充功能。</span><span class="sxs-lookup"><span data-stu-id="feefe-105">The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format.</span></span> <span data-ttu-id="feefe-106">{Label}-指派給該轉碼器/圖層的標籤。</span><span class="sxs-lookup"><span data-stu-id="feefe-106">{Label} - The label assigned to the codec/layer.</span></span>
+      <span data-ttu-id="feefe-107">{Index} 位唯一索引的縮圖。</span><span class="sxs-lookup"><span data-stu-id="feefe-107">{Index} - A unique index for thumbnails.</span></span> <span data-ttu-id="feefe-108">僅適用於縮圖。</span><span class="sxs-lookup"><span data-stu-id="feefe-108">Only applicable to thumbnails.</span></span> <span data-ttu-id="feefe-109">{位元速率}-音訊/視訊位元速率。</span><span class="sxs-lookup"><span data-stu-id="feefe-109">{Bitrate} - The audio/video bitrate.</span></span> <span data-ttu-id="feefe-110">不適用於縮圖。</span><span class="sxs-lookup"><span data-stu-id="feefe-110">Not applicable to thumbnails.</span></span> <span data-ttu-id="feefe-111">{轉碼器}-音訊/視訊轉碼器的類型。</span><span class="sxs-lookup"><span data-stu-id="feefe-111">{Codec} - The type of the audio/video codec.</span></span> <span data-ttu-id="feefe-112">將摺疊 unsubstituted 的任何巨集，並將其從 檔案名稱中移除。</span><span class="sxs-lookup"><span data-stu-id="feefe-112">Any unsubstituted macros will be collapsed and removed from the filename.</span></span>
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="feefe-113">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="feefe-113">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.MultiBitrateFormat"'
+      return:
+        type:
+          - '"#Microsoft.Media.MultiBitrateFormat"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="feefe-114">產生的輸出檔的清單。</span><span class="sxs-lookup"><span data-stu-id="feefe-114">The list of output files to produce.</span></span>  <span data-ttu-id="feefe-115">在清單中的每個項目是一組的音訊和視訊圖層的標籤，以在 muxed 一起。</span><span class="sxs-lookup"><span data-stu-id="feefe-115">Each entry in the list is a set of audio and video layer labels to be muxed together .</span></span>
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OutputFile[]'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/arm-mediaservices.OutputFile'
+      - name: '[]'
+        fullName: '[]'
