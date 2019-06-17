@@ -1,0 +1,737 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/storage-datalake.PathOperations'
+    name: PathOperations
+    fullName: PathOperations
+    children:
+      - '@azure/storage-datalake.PathOperations.create'
+      - '@azure/storage-datalake.PathOperations.create_2'
+      - '@azure/storage-datalake.PathOperations.create_1'
+      - '@azure/storage-datalake.PathOperations.deleteMethod'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_2'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_1'
+      - '@azure/storage-datalake.PathOperations.getProperties'
+      - '@azure/storage-datalake.PathOperations.getProperties_2'
+      - '@azure/storage-datalake.PathOperations.getProperties_1'
+      - '@azure/storage-datalake.PathOperations.lease'
+      - '@azure/storage-datalake.PathOperations.lease_2'
+      - '@azure/storage-datalake.PathOperations.lease_1'
+      - '@azure/storage-datalake.PathOperations.list'
+      - '@azure/storage-datalake.PathOperations.list_2'
+      - '@azure/storage-datalake.PathOperations.list_1'
+      - '@azure/storage-datalake.PathOperations.constructor'
+      - '@azure/storage-datalake.PathOperations.read'
+      - '@azure/storage-datalake.PathOperations.read_2'
+      - '@azure/storage-datalake.PathOperations.read_1'
+      - '@azure/storage-datalake.PathOperations.update'
+      - '@azure/storage-datalake.PathOperations.update_2'
+      - '@azure/storage-datalake.PathOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表 PathOperations。
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create'
+    name: 'create(string, string, Models.PathCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      建立或重新命名檔案或目錄。    根據預設，目的地會覆寫，而且如果目的地已經存在，而且有租用的租用將會中斷。  此作業可支援條件式 HTTP 要求。  如需詳細資訊，請參閱 <<c0> [ 指定為 Blob 服務作業的條件式標頭](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。
+      如果目的地已經存在，就會失敗，使用條件式要求-If-none-match:"*"。
+    syntax:
+      content: 'function create(filesystem: string, path: string, options?: Models.PathCreateOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - Models.PathCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_2'
+    name: 'create(string, string, PathCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, options: PathCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathCreateOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_1'
+    name: 'create(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod'
+    name: 'deleteMethod(string, string, Models.PathDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '刪除檔案或目錄。 此作業可支援條件式 HTTP 要求。  如需詳細資訊，請參閱 <<c0> [ 指定為 Blob 服務作業的條件式標頭](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。'
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options?: Models.PathDeleteMethodOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - Models.PathDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_2'
+    name: 'deleteMethod(string, string, PathDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options: PathDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties'
+    name: 'getProperties(string, string, Models.PathGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      取得屬性的檔案或目錄，並選擇性地包含存取控制清單。
+      此作業可支援條件式 HTTP 要求。  如需詳細資訊，請參閱 <<c0> [ 指定為 Blob 服務作業的條件式標頭](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options?: Models.PathGetPropertiesOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - Models.PathGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_2'
+    name: 'getProperties(string, string, PathGetPropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options: PathGetPropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease'
+    name: 'lease(Models.PathLeaseAction, string, string, Models.PathLeaseOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '建立和管理的租用，來限制寫入及刪除路徑的存取權。 此作業可支援條件式 HTTP 要求。  如需詳細資訊，請參閱 <<c0> [ 指定為 Blob 服務作業的條件式標頭](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。'
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options?: Models.PathLeaseOptionalParams)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            有五個租用動作: 「 取得 」、 「 中斷 」、 「 變更 」、 「 續訂 」 和 「 發行 」。 使用 「 取得 」，並指定 「 x-ms-提議-租用-識別碼 」 和 「 x-ms-租用-持續時間 」 以取得新的租用。 使用 「 中斷 」 來中斷現有的租用。 當租用中斷時，租用中斷期被允許的停用，可以在檔案上執行中斷和版本以外的任何租用作業在這段期間。 當租用成功中斷時，回應會指出間隔以秒為單位，直到取得新的租用。 使用 「 變更 」，並指定目前的租用識別碼，在 「 x-ms-租用-識別碼 」 和 「 x-ms-提議-租用-識別碼 」 中新的租用識別碼，若要變更作用中租用的租用識別碼。 使用 [更新] 並指定 「 x-ms-租用-識別碼 」 來更新現有的租用。
+            使用 「 發行 」，並指定 「 x-ms-租用-識別碼 」 來釋放租用。 可能的值包括: '取得'、 'break'、 '變更'、 '更新 」、 「 發行 」
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - Models.PathLeaseOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_2'
+    name: 'lease(Models.PathLeaseAction, string, string, PathLeaseOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options: PathLeaseOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            有五個租用動作: 「 取得 」、 「 中斷 」、 「 變更 」、 「 續訂 」 和 「 發行 」。 使用 「 取得 」，並指定 「 x-ms-提議-租用-識別碼 」 和 「 x-ms-租用-持續時間 」 以取得新的租用。 使用 「 中斷 」 來中斷現有的租用。 當租用中斷時，租用中斷期被允許的停用，可以在檔案上執行中斷和版本以外的任何租用作業在這段期間。 當租用成功中斷時，回應會指出間隔以秒為單位，直到取得新的租用。 使用 「 變更 」，並指定目前的租用識別碼，在 「 x-ms-租用-識別碼 」 和 「 x-ms-提議-租用-識別碼 」 中新的租用識別碼，若要變更作用中租用的租用識別碼。 使用 [更新] 並指定 「 x-ms-租用-識別碼 」 來更新現有的租用。
+            使用 「 發行 」，並指定 「 x-ms-租用-識別碼 」 來釋放租用。 可能的值包括: '取得'、 'break'、 '變更'、 '更新 」、 「 發行 」
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathLeaseOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_1'
+    name: 'lease(Models.PathLeaseAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            有五個租用動作: 「 取得 」、 「 中斷 」、 「 變更 」、 「 續訂 」 和 「 發行 」。 使用 「 取得 」，並指定 「 x-ms-提議-租用-識別碼 」 和 「 x-ms-租用-持續時間 」 以取得新的租用。 使用 「 中斷 」 來中斷現有的租用。 當租用中斷時，租用中斷期被允許的停用，可以在檔案上執行中斷和版本以外的任何租用作業在這段期間。 當租用成功中斷時，回應會指出間隔以秒為單位，直到取得新的租用。 使用 「 變更 」，並指定目前的租用識別碼，在 「 x-ms-租用-識別碼 」 和 「 x-ms-提議-租用-識別碼 」 中新的租用識別碼，若要變更作用中租用的租用識別碼。 使用 [更新] 並指定 「 x-ms-租用-識別碼 」 來更新現有的租用。
+            使用 「 發行 」，並指定 「 x-ms-租用-識別碼 」 來釋放租用。 可能的值包括: '取得'、 'break'、 '變更'、 '更新 」、 「 發行 」
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list'
+    name: 'list(boolean, string, Models.PathListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出檔案系統路徑和其屬性。
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options?: Models.PathListOptionalParams)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: 若為"true"，則會列出所有的路徑;否則，會列出只能在檔案系統根目錄的路徑。  如果指定"directory"，則清單只會包含共用相同的根的路徑。
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。  值必須開頭和結尾以字母或數字，而且必須包含字母、 數字和虛線 （-） 字元。  不允許連續虛線。  所有的字母必須是小寫。  值必須介於 3 到 63 個字元之間。
+        - id: options
+          type:
+            - Models.PathListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_2'
+    name: 'list(boolean, string, PathListOptionalParams, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options: PathListOptionalParams, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: 若為"true"，則會列出所有的路徑;否則，會列出只能在檔案系統根目錄的路徑。  如果指定"directory"，則清單只會包含共用相同的根的路徑。
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。  值必須開頭和結尾以字母或數字，而且必須包含字母、 數字和虛線 （-） 字元。  不允許連續虛線。  所有的字母必須是小寫。  值必須介於 3 到 63 個字元之間。
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathListOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_1'
+    name: 'list(boolean, string, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: 若為"true"，則會列出所有的路徑;否則，會列出只能在檔案系統根目錄的路徑。  如果指定"directory"，則清單只會包含共用相同的根的路徑。
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。  值必須開頭和結尾以字母或數字，而且必須包含字母、 數字和虛線 （-） 字元。  不允許連續虛線。  所有的字母必須是小寫。  值必須介於 3 到 63 個字元之間。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.constructor'
+    name: PathOperations(DataLakeStorageClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立 PathOperations。
+    syntax:
+      content: 'new PathOperations(client: DataLakeStorageClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/storage-datalake.DataLakeStorageClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read'
+    name: 'read(string, string, Models.PathReadOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '讀取檔案的內容。  對於讀取作業，支援範圍要求。 此作業可支援條件式 HTTP 要求。  如需詳細資訊，請參閱 <<c0> [ 指定為 Blob 服務作業的條件式標頭](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。'
+    syntax:
+      content: 'function read(filesystem: string, path: string, options?: Models.PathReadOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - Models.PathReadOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_2'
+    name: 'read(string, string, PathReadOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, options: PathReadOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathReadOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_1'
+    name: 'read(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update'
+    name: 'update(Models.PathUpdateAction, string, string, Models.PathUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '要附加至檔案的資料上傳、 清除 （寫入） 先前上傳的資料至檔案、 設定屬性的檔案或目錄，或設定檔案或目錄的存取控制。 資料僅可以附加至檔案。 此作業可支援條件式 HTTP 要求。 如需詳細資訊，請參閱 <<c0> [ 指定為 Blob 服務作業的條件式標頭](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。'
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options?: Models.PathUpdateOptionalParams)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '動作必須是 「 附加 」 資料上傳至 「 清除 」 將先前上傳的資料排清至檔案時，「 setProperties 」 設定檔的屬性附加至檔案或目錄或 「 setAccessControl 」，若要設定擁有者，群組的權限，或存取控制清單檔案或目錄中。  請注意階層式命名空間必須可供該帳戶，才能使用存取控制。  也請注意，存取控制清單 (ACL) 包含擁有者，擁有群組的權限，而且是互斥的其他人，因此，x-ms-權限和 x ms acl 要求標頭。 可能的值包括: ''附加''、 ''清除''、 ''setProperties''、 ''setAccessControl'''
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - Models.PathUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_2'
+    name: 'update(Models.PathUpdateAction, string, string, PathUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options: PathUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '動作必須是 「 附加 」 資料上傳至 「 清除 」 將先前上傳的資料排清至檔案時，「 setProperties 」 設定檔的屬性附加至檔案或目錄或 「 setAccessControl 」，若要設定擁有者，群組的權限，或存取控制清單檔案或目錄中。  請注意階層式命名空間必須可供該帳戶，才能使用存取控制。  也請注意，存取控制清單 (ACL) 包含擁有者，擁有群組的權限，而且是互斥的其他人，因此，x-ms-權限和 x ms acl 要求標頭。 可能的值包括: ''附加''、 ''清除''、 ''setProperties''、 ''setAccessControl'''
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathUpdateOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_1'
+    name: 'update(Models.PathUpdateAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '動作必須是 「 附加 」 資料上傳至 「 清除 」 將先前上傳的資料排清至檔案時，「 setProperties 」 設定檔的屬性附加至檔案或目錄或 「 setAccessControl 」，若要設定擁有者，群組的權限，或存取控制清單檔案或目錄中。  請注意階層式命名空間必須可供該帳戶，才能使用存取控制。  也請注意，存取控制清單 (ACL) 包含擁有者，擁有群組的權限，而且是互斥的其他人，因此，x-ms-權限和 x ms acl 要求標頭。 可能的值包括: ''附加''、 ''清除''、 ''setProperties''、 ''setAccessControl'''
+        - id: filesystem
+          type:
+            - string
+          description: 檔案系統識別項。
+        - id: path
+          type:
+            - string
+          description: 檔案或目錄的路徑。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+references:
+  - uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+    name: DataLakeStorageClientContext
+    spec.typeScript:
+      - name: DataLakeStorageClientContext
+        fullName: DataLakeStorageClientContext
+        uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+  - uid: '@azure/storage-datalake.PathCreateOptionalParams'
+    name: PathCreateOptionalParams
+    spec.typeScript:
+      - name: PathCreateOptionalParams
+        fullName: PathCreateOptionalParams
+        uid: '@azure/storage-datalake.PathCreateOptionalParams'
+  - uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+    name: PathDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: PathDeleteMethodOptionalParams
+        fullName: PathDeleteMethodOptionalParams
+        uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+  - uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+    name: PathGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: PathGetPropertiesOptionalParams
+        fullName: PathGetPropertiesOptionalParams
+        uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+  - uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+    name: PathLeaseOptionalParams
+    spec.typeScript:
+      - name: PathLeaseOptionalParams
+        fullName: PathLeaseOptionalParams
+        uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+  - uid: ServiceCallback<@azure/storage-datalake.PathList>
+    name: PathList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PathList
+        fullName: PathList
+        uid: '@azure/storage-datalake.PathList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/storage-datalake.PathListOptionalParams'
+    name: PathListOptionalParams
+    spec.typeScript:
+      - name: PathListOptionalParams
+        fullName: PathListOptionalParams
+        uid: '@azure/storage-datalake.PathListOptionalParams'
+  - uid: '@azure/storage-datalake.PathReadOptionalParams'
+    name: PathReadOptionalParams
+    spec.typeScript:
+      - name: PathReadOptionalParams
+        fullName: PathReadOptionalParams
+        uid: '@azure/storage-datalake.PathReadOptionalParams'
+  - uid: '@azure/storage-datalake.PathUpdateOptionalParams'
+    name: PathUpdateOptionalParams
+    spec.typeScript:
+      - name: PathUpdateOptionalParams
+        fullName: PathUpdateOptionalParams
+        uid: '@azure/storage-datalake.PathUpdateOptionalParams'
