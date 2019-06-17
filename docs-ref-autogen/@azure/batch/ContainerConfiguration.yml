@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ContainerConfiguration'
+    name: ContainerConfiguration
+    fullName: ContainerConfiguration
+    children:
+      - '@azure/batch.ContainerConfiguration.containerImageNames'
+      - '@azure/batch.ContainerConfiguration.containerRegistries'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 ContainerConfiguration 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.ContainerConfiguration.containerImageNames'
+    name: containerImageNames
+    fullName: containerImageNames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 容器映像名稱的集合。 這是完整的映像參考，會指定為"docker pull"。 映像會使用源自預設 Docker 登錄除非替代登錄的完整映像。
+    optional: true
+    syntax:
+      content: 'containerImageNames?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ContainerConfiguration.containerRegistries'
+    name: containerRegistries
+    fullName: containerRegistries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可從中提取容器的其他私人登錄。 如果必須從需要認證的私人登錄下載任何映像，則這些認證必須提供以下。
+    optional: true
+    syntax:
+      content: 'containerRegistries?: ContainerRegistry[]'
+      return:
+        type:
+          - '@azure/batch.ContainerRegistry[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ContainerRegistry[]'
+    name: 'ContainerRegistry[]'
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: '@azure/batch.ContainerRegistry'
+      - name: '[]'
+        fullName: '[]'

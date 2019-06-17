@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobScheduleExecutionInformation'
+    name: JobScheduleExecutionInformation
+    fullName: JobScheduleExecutionInformation
+    children:
+      - '@azure/batch.JobScheduleExecutionInformation.endTime'
+      - '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+      - '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 JobScheduleExecutionInformation 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 排程的結束時間。 作業排程為 「 已完成狀態時，才設定這個屬性。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+    name: nextRunTime
+    fullName: nextRunTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 下一次將依據此排程建立當時的工作。 這個屬性才有意義的排程時處於作用中狀態時出現。 比方說，如果排程已停用，沒有任何作業會建立在 nextRunTime 除非啟用作業前。
+    optional: true
+    syntax:
+      content: 'nextRunTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    name: recentJob
+    fullName: recentJob
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 最近的工作，在 作業排程的相關資訊。 只有當至少一個作業已排程下執行時，才有這個屬性。
+    optional: true
+    syntax:
+      content: 'recentJob?: RecentJob'
+      return:
+        type:
+          - '@azure/batch.RecentJob'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.RecentJob'
+    name: RecentJob
+    spec.typeScript:
+      - name: RecentJob
+        fullName: RecentJob
+        uid: '@azure/batch.RecentJob'
