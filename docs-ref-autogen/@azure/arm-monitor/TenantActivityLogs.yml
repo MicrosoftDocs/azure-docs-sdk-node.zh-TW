@@ -1,0 +1,191 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.TenantActivityLogs'
+    name: TenantActivityLogs
+    fullName: TenantActivityLogs
+    children:
+      - '@azure/arm-monitor.TenantActivityLogs.list'
+      - '@azure/arm-monitor.TenantActivityLogs.list_1'
+      - '@azure/arm-monitor.TenantActivityLogs.list_2'
+      - '@azure/arm-monitor.TenantActivityLogs.listNext'
+      - '@azure/arm-monitor.TenantActivityLogs.listNext_2'
+      - '@azure/arm-monitor.TenantActivityLogs.listNext_1'
+      - '@azure/arm-monitor.TenantActivityLogs.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表 TenantActivityLogs。
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogs.list'
+    name: list(Models.TenantActivityLogsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得租用戶活動記錄檔。<br>適用於 API 來取得訂用帳戶的活動記錄檔的所有項目都適用於此 API （參數、 $filter 等）。<br>一件事就是此 API 未*不*擷取個別的訂用帳戶的租用戶，但只會呈現在租用戶層級所產生的記錄檔記錄。
+    syntax:
+      content: 'function list(options?: Models.TenantActivityLogsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.TenantActivityLogsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TenantActivityLogsListResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogs.list_1'
+    name: list(ServiceCallback<EventDataCollection>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<EventDataCollection>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-monitor.EventDataCollection>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.TenantActivityLogsListResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogs.list_2'
+    name: 'list(TenantActivityLogsListOptionalParams, ServiceCallback<EventDataCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: TenantActivityLogsListOptionalParams, callback: ServiceCallback<EventDataCollection>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-monitor.TenantActivityLogsListOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-monitor.EventDataCollection>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.TenantActivityLogsListResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogs.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得租用戶活動記錄檔。<br>適用於 API 來取得訂用帳戶的活動記錄檔的所有項目都適用於此 API （參數、 $filter 等）。<br>一件事就是此 API 未*不*擷取個別的訂用帳戶的租用戶，但只會呈現在租用戶層級所產生的記錄檔記錄。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TenantActivityLogsListNextResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogs.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<EventDataCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<EventDataCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-monitor.EventDataCollection>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.TenantActivityLogsListNextResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogs.listNext_1'
+    name: 'listNext(string, ServiceCallback<EventDataCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<EventDataCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 從清單作業前一次成功呼叫 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-monitor.EventDataCollection>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.TenantActivityLogsListNextResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogs.constructor'
+    name: TenantActivityLogs(MonitorManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立 TenantActivityLogs。
+    syntax:
+      content: 'new TenantActivityLogs(client: MonitorManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-monitor.MonitorManagementClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext'
+    name: MonitorManagementClientContext
+    spec.typeScript:
+      - name: MonitorManagementClientContext
+        fullName: MonitorManagementClientContext
+        uid: '@azure/arm-monitor.MonitorManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-monitor.EventDataCollection>
+    name: EventDataCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: EventDataCollection
+        fullName: EventDataCollection
+        uid: '@azure/arm-monitor.EventDataCollection'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams'
+    name: TenantActivityLogsListOptionalParams
+    spec.typeScript:
+      - name: TenantActivityLogsListOptionalParams
+        fullName: TenantActivityLogsListOptionalParams
+        uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams'

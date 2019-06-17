@@ -1,0 +1,717 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.Assessments'
+    name: Assessments
+    fullName: Assessments
+    children:
+      - '@azure/arm-migrate.Assessments.constructor'
+      - '@azure/arm-migrate.Assessments.create_2'
+      - '@azure/arm-migrate.Assessments.create'
+      - '@azure/arm-migrate.Assessments.create_1'
+      - '@azure/arm-migrate.Assessments.deleteMethod'
+      - '@azure/arm-migrate.Assessments.deleteMethod_2'
+      - '@azure/arm-migrate.Assessments.deleteMethod_1'
+      - '@azure/arm-migrate.Assessments.get'
+      - '@azure/arm-migrate.Assessments.get_2'
+      - '@azure/arm-migrate.Assessments.get_1'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl_2'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl_1'
+      - '@azure/arm-migrate.Assessments.listByGroup'
+      - '@azure/arm-migrate.Assessments.listByGroup_2'
+      - '@azure/arm-migrate.Assessments.listByGroup_1'
+      - '@azure/arm-migrate.Assessments.listByProject'
+      - '@azure/arm-migrate.Assessments.listByProject_2'
+      - '@azure/arm-migrate.Assessments.listByProject_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表評量。
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.constructor'
+    name: Assessments(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立評定。
+    syntax:
+      content: 'new Assessments(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create_2'
+    name: 'create(string, string, string, string, AssessmentsCreateOptionalParams, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: AssessmentsCreateOptionalParams, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create'
+    name: 'create(string, string, string, string, Models.AssessmentsCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      建立新的評估與指定之名稱和指定的設定。 由於評量在專案中的名稱會是唯一的 identiefier，如果評定已提供的名稱存在，則會更新現有的評估。
+      任何 PUT 作業時，產生在建立或更新評量，會導致 「 InProgress 」 狀態的評估。 這會指出欄位 'computationState' 評估物件。 在這段期間沒有其他的 PUT 作業將會允許該評估物件時，也不會刪除作業。 一旦評量計算已完成，'computationState' 欄位將會更新為 '準備'，而其他然後 PUT 或 DELETE 作業可能會發生在評量。
+
+      計算評估時，任何 PUT 將會導致 400-不正確的要求時發生錯誤。
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: Models.AssessmentsCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - Models.AssessmentsCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create_1'
+    name: 'create(string, string, string, string, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      從專案刪除評定。 機器會保留在評估中。 刪除不存在的評估會產生無作業。
+      評量會受到計算，以 'computationState' 欄位，無法刪除它。 任何這類的嘗試會傳回 400-不正確的要求。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得具有指定名稱的現有評估。 傳回的 json 物件的型別 '評估' 做為模型區段中指定。
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl'
+    name: 'getReportDownloadUrl(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得下載評定報表格式的 URL。
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl_2'
+    name: 'getReportDownloadUrl(string, string, string, string, RequestOptionsBase, ServiceCallback<DownloadUrl>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<DownloadUrl>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.DownloadUrl>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl_1'
+    name: 'getReportDownloadUrl(string, string, string, string, ServiceCallback<DownloadUrl>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<DownloadUrl>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: assessmentName
+          type:
+            - string
+          description: 在專案中的評量的唯一名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.DownloadUrl>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup'
+    name: 'listByGroup(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      取得指定的群組建立的所有評定。
+      會傳回 '評估' 做為模型區段中指定類型之物件的 json 陣列。
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup_2'
+    name: 'listByGroup(string, string, string, RequestOptionsBase, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup_1'
+    name: 'listByGroup(string, string, string, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: groupName
+          type:
+            - string
+          description: 在專案中之群組的唯一名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject'
+    name: 'listByProject(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      取得專案中建立的所有評定。
+      會傳回 '評估' 做為模型區段中指定類型之物件的 json 陣列。
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject_2'
+    name: 'listByProject(string, string, RequestOptionsBase, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject_1'
+    name: 'listByProject(string, string, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure 資源群組專案的名稱會是一部分。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate 專案的名稱。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.Assessment>
+    name: Assessment>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Assessment
+        fullName: Assessment
+        uid: '@azure/arm-migrate.Assessment'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+    name: AssessmentsCreateOptionalParams
+    spec.typeScript:
+      - name: AssessmentsCreateOptionalParams
+        fullName: AssessmentsCreateOptionalParams
+        uid: '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-migrate.DownloadUrl>
+    name: DownloadUrl>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DownloadUrl
+        fullName: DownloadUrl
+        uid: '@azure/arm-migrate.DownloadUrl'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+    name: AssessmentResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessmentResultList
+        fullName: AssessmentResultList
+        uid: '@azure/arm-migrate.AssessmentResultList'
+      - name: '>'
+        fullName: '>'
