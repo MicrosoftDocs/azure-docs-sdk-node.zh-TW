@@ -1,0 +1,650 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.Database'
+    name: Database
+    fullName: Database
+    children:
+      - '@azure/arm-sql.Database.catalogCollation'
+      - '@azure/arm-sql.Database.collation'
+      - '@azure/arm-sql.Database.createMode'
+      - '@azure/arm-sql.Database.creationDate'
+      - '@azure/arm-sql.Database.currentServiceObjectiveName'
+      - '@azure/arm-sql.Database.currentSku'
+      - '@azure/arm-sql.Database.databaseId'
+      - '@azure/arm-sql.Database.defaultSecondaryLocation'
+      - '@azure/arm-sql.Database.earliestRestoreDate'
+      - '@azure/arm-sql.Database.elasticPoolId'
+      - '@azure/arm-sql.Database.failoverGroupId'
+      - '@azure/arm-sql.Database.id'
+      - '@azure/arm-sql.Database.kind'
+      - '@azure/arm-sql.Database.licenseType'
+      - '@azure/arm-sql.Database.location'
+      - '@azure/arm-sql.Database.longTermRetentionBackupResourceId'
+      - '@azure/arm-sql.Database.managedBy'
+      - '@azure/arm-sql.Database.maxLogSizeBytes'
+      - '@azure/arm-sql.Database.maxSizeBytes'
+      - '@azure/arm-sql.Database.name'
+      - '@azure/arm-sql.Database.readScale'
+      - '@azure/arm-sql.Database.recoverableDatabaseId'
+      - '@azure/arm-sql.Database.recoveryServicesRecoveryPointId'
+      - '@azure/arm-sql.Database.requestedServiceObjectiveName'
+      - '@azure/arm-sql.Database.restorableDroppedDatabaseId'
+      - '@azure/arm-sql.Database.restorePointInTime'
+      - '@azure/arm-sql.Database.sampleName'
+      - '@azure/arm-sql.Database.sku'
+      - '@azure/arm-sql.Database.sourceDatabaseDeletionDate'
+      - '@azure/arm-sql.Database.sourceDatabaseId'
+      - '@azure/arm-sql.Database.status'
+      - '@azure/arm-sql.Database.tags'
+      - '@azure/arm-sql.Database.type'
+      - '@azure/arm-sql.Database.zoneRedundant'
+    langs:
+      - typeScript
+    type: interface
+    summary: 資料庫資源。
+    extends:
+      name: '@azure/arm-sql.TrackedResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.catalogCollation'
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '中繼資料目錄的定序。 可能的值包括：''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS'''
+    optional: true
+    syntax:
+      content: 'catalogCollation?: CatalogCollationType'
+      return:
+        type:
+          - '@azure/arm-sql.CatalogCollationType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資料庫定序。
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      指定建立資料庫的模式。
+      預設值： 建立規則的資料庫。
+
+      複製： 建立資料庫，以將現有的資料庫副本。 sourceDatabaseId 必須指定為來源資料庫的資源識別碼。
+
+      次要： 為現有資料庫的次要複本建立資料庫。 sourceDatabaseId 必須指定為現有的主要資料庫的資源識別碼。
+
+      PointInTimeRestore:藉由還原時間點備份的現有資料庫建立資料庫。 sourceDatabaseId 必須指定為現有的資料庫的資源識別碼，而且必須指定 restorePointInTime。
+
+      復原：建立資料庫還原的異地複寫的備份。 sourceDatabaseId 必須指定為要還原的可復原的資料庫資源識別碼。
+
+      還原：還原已刪除的資料庫備份建立的資料庫。 必須指定 sourceDatabaseId。 如果 sourceDatabaseId 是資料庫的原始資源識別碼，則必須指定 sourceDatabaseDeletionDate。 否則 sourceDatabaseId 必須是可還原的已卸除的資料庫資源識別碼，而且 sourceDatabaseDeletionDate 會被忽略。
+      restorePointInTime 也可以指定要從較早時間點還原的時間。
+
+      RestoreLongTermRetentionBackup:建立從長期保留保存庫還原的資料庫。 recoveryServicesRecoveryPointResourceId 必須指定為復原點的資源識別碼。
+
+      DataWarehouse 版本不支援複製，次要資料庫，且 RestoreLongTermRetentionBackup。 可能的值包括：'Default', 'Copy', 'Secondary', 'PointInTimeRestore', 'Restore', 'Recovery', 'RestoreExternalBackup', 'RestoreExternalBackupSecondary', 'RestoreLongTermRetentionBackup', 'OnlineSecondary'
+    optional: true
+    syntax:
+      content: 'createMode?: CreateMode'
+      return:
+        type:
+          - '@azure/arm-sql.CreateMode'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.creationDate'
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資料庫 （ISO8601 格式） 的建立日期。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.currentServiceObjectiveName'
+    name: currentServiceObjectiveName
+    fullName: currentServiceObjectiveName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      目前服務等級目標名稱的資料庫。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'currentServiceObjectiveName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.currentSku'
+    name: currentSku
+    fullName: currentSku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      名稱與 SKU 層。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'currentSku?: Sku'
+      return:
+        type:
+          - '@azure/arm-sql.Sku'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.databaseId'
+    name: databaseId
+    fullName: databaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資料庫的識別碼。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'databaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.defaultSecondaryLocation'
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此資料庫中的預設次要區域。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.earliestRestoreDate'
+    name: earliestRestoreDate
+    fullName: earliestRestoreDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此資料庫 （ISO8601 格式） 可還原這個記錄的最早開始日期和時間。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'earliestRestoreDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.elasticPoolId'
+    name: elasticPoolId
+    fullName: elasticPoolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 包含此資料庫的彈性集區資源識別碼。
+    optional: true
+    syntax:
+      content: 'elasticPoolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.failoverGroupId'
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此資料庫所屬的容錯移轉群組資源識別碼。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源識別碼。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      類型的資料庫。 這是用於 Azure 入口網站體驗的中繼資料。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'kind?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要套用此資料庫的授權類型。 可能的值包括：' LicenseIncluded'，'BasePrice'
+    optional: true
+    syntax:
+      content: 'licenseType?: DatabaseLicenseType'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseLicenseType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源位置。
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.longTermRetentionBackupResourceId'
+    name: longTermRetentionBackupResourceId
+    fullName: longTermRetentionBackupResourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 長期保留備份相關聯的資源識別項會建立此資料庫的作業。
+    optional: true
+    syntax:
+      content: 'longTermRetentionBackupResourceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.managedBy'
+    name: managedBy
+    fullName: managedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      管理資料庫的資源。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'managedBy?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.maxLogSizeBytes'
+    name: maxLogSizeBytes
+    fullName: maxLogSizeBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此資料庫的最大記錄大小。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'maxLogSizeBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.maxSizeBytes'
+    name: maxSizeBytes
+    fullName: maxSizeBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 以位元組為單位來表示資料庫的大小上限。
+    optional: true
+    syntax:
+      content: 'maxSizeBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源名稱。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.readScale'
+    name: readScale
+    fullName: readScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 唯讀路由的狀態。 如果啟用，已設定為在其連接字串中為 readonly 的應用程式意圖的連線可能會路由至相同區域中的唯讀次要複本。 可能的值包括：' Enabled'，'Disabled'
+    optional: true
+    syntax:
+      content: 'readScale?: DatabaseReadScale'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseReadScale'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.recoverableDatabaseId'
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可復原的資料庫與相關聯的資源識別項會建立此資料庫的作業。
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.recoveryServicesRecoveryPointId'
+    name: recoveryServicesRecoveryPointId
+    fullName: recoveryServicesRecoveryPointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源識別項與相關聯的復原點建立此資料庫的作業。
+    optional: true
+    syntax:
+      content: 'recoveryServicesRecoveryPointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.requestedServiceObjectiveName'
+    name: requestedServiceObjectiveName
+    fullName: requestedServiceObjectiveName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要求的服務等級目標名稱的資料庫。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'requestedServiceObjectiveName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.restorableDroppedDatabaseId'
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可還原的已卸除資料庫相關聯的資源識別項會建立此資料庫的作業。
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.restorePointInTime'
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定點的來源資料庫以建立新的資料庫要還原的時間 （ISO8601 格式）。
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.sampleName'
+    name: sampleName
+    fullName: sampleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 適用於當您建立此資料庫的範例結構描述名稱。 可能的值包括：' AdventureWorksLT'，'WideWorldImportersStd'，'WideWorldImportersFull'
+    optional: true
+    syntax:
+      content: 'sampleName?: SampleName'
+      return:
+        type:
+          - '@azure/arm-sql.SampleName'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 名稱與 SKU 層。
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-sql.Sku'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.sourceDatabaseDeletionDate'
+    name: sourceDatabaseDeletionDate
+    fullName: sourceDatabaseDeletionDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的資料庫已刪除的時間。
+    optional: true
+    syntax:
+      content: 'sourceDatabaseDeletionDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.sourceDatabaseId'
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 來源資料庫與相關聯的資源識別項會建立此資料庫的作業。
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '資料庫的狀態。 可能的值包括：[線上]，''還原''、 ''RecoveryPending''，''復原''，''懷疑''，''Offline''、 ''待命 」、 「 關閉 」、 ''EmergencyMode''、 ''不曾''，''複製''、 ''建立''、 ''無法存取''，''OfflineSecondary''，''暫停''，''暫停''，''繼續''、 ''調整'' **附註：這個屬性不會序列化。它可以才會填入伺服器中。**'
+    optional: true
+    syntax:
+      content: 'status?: DatabaseStatus'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseStatus'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 資源標籤。
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源類型。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.zoneRedundant'
+    name: zoneRedundant
+    fullName: zoneRedundant
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這個資料庫為區域備援，這表示此資料庫的複本會分散於多個可用性區域。
+    optional: true
+    syntax:
+      content: 'zoneRedundant?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.TrackedResource'
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: '@azure/arm-sql.TrackedResource'
+  - uid: '@azure/arm-sql.CatalogCollationType'
+    name: CatalogCollationType
+    spec.typeScript:
+      - name: CatalogCollationType
+        fullName: CatalogCollationType
+        uid: '@azure/arm-sql.CatalogCollationType'
+  - uid: '@azure/arm-sql.CreateMode'
+    name: CreateMode
+    spec.typeScript:
+      - name: CreateMode
+        fullName: CreateMode
+        uid: '@azure/arm-sql.CreateMode'
+  - uid: '@azure/arm-sql.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-sql.Sku'
+  - uid: '@azure/arm-sql.DatabaseLicenseType'
+    name: DatabaseLicenseType
+    spec.typeScript:
+      - name: DatabaseLicenseType
+        fullName: DatabaseLicenseType
+        uid: '@azure/arm-sql.DatabaseLicenseType'
+  - uid: '@azure/arm-sql.DatabaseReadScale'
+    name: DatabaseReadScale
+    spec.typeScript:
+      - name: DatabaseReadScale
+        fullName: DatabaseReadScale
+        uid: '@azure/arm-sql.DatabaseReadScale'
+  - uid: '@azure/arm-sql.SampleName'
+    name: SampleName
+    spec.typeScript:
+      - name: SampleName
+        fullName: SampleName
+        uid: '@azure/arm-sql.SampleName'
+  - uid: '@azure/arm-sql.DatabaseStatus'
+    name: DatabaseStatus
+    spec.typeScript:
+      - name: DatabaseStatus
+        fullName: DatabaseStatus
+        uid: '@azure/arm-sql.DatabaseStatus'
