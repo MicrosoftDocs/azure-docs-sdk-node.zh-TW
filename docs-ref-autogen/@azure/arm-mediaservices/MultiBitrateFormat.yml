@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat'
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - '@azure/arm-mediaservices.MultiBitrateFormat.filenamePattern'
+      - '@azure/arm-mediaservices.MultiBitrateFormat.odatatype'
+      - '@azure/arm-mediaservices.MultiBitrateFormat.outputFiles'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述用於產生的對齊 GOP 的多位元速率檔案集合的屬性。 預設行為是要產生一個輸出檔案，也就是所有總統搭配 muxed 每個視訊層。 藉由指定 outputFiles 集合，可以控制所產生的確切的輸出檔。
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.filenamePattern'
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      產生的輸出檔案的檔案名稱的模式。 下列巨集支援的檔案名稱: {Basename}-{Extension} 的輸入視訊的基底名稱-這個格式的適當擴充功能。 {Label}-指派給該轉碼器/圖層的標籤。
+      {Index} 位唯一索引的縮圖。 僅適用於縮圖。 {位元速率}-音訊/視訊位元速率。 不適用於縮圖。 {轉碼器}-音訊/視訊轉碼器的類型。 將摺疊 unsubstituted 的任何巨集，並將其從 檔案名稱中移除。
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.MultiBitrateFormat"'
+      return:
+        type:
+          - '"#Microsoft.Media.MultiBitrateFormat"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 產生的輸出檔的清單。  在清單中的每個項目是一組的音訊和視訊圖層的標籤，以在 muxed 一起。
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OutputFile[]'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/arm-mediaservices.OutputFile'
+      - name: '[]'
+        fullName: '[]'
