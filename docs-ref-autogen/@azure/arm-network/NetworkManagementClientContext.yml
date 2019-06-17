@@ -5,6 +5,7 @@ items:
     fullName: NetworkManagementClientContext
     children:
       - '@azure/arm-network.NetworkManagementClientContext.acceptLanguage'
+      - '@azure/arm-network.NetworkManagementClientContext.apiVersion'
       - '@azure/arm-network.NetworkManagementClientContext.beginLongRunningRequest'
       - '@azure/arm-network.NetworkManagementClientContext.credentials'
       - '@azure/arm-network.NetworkManagementClientContext.longRunningOperationRetryTimeout'
@@ -36,20 +37,35 @@ items:
         type:
           - string
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClientContext.apiVersion'
+    name: apiVersion
+    fullName: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'apiVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClientContext.beginLongRunningRequest'
     name: 'beginLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="d3499-101">（長時間執行作業） LRO 初始要求傳送，會提供方法來輪詢 LRO 及檢查是否已完成 LRO HttpLongRunningOperationResponse。</span><span class="sxs-lookup"><span data-stu-id="d3499-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="b80dd-101">（長時間執行作業） LRO 初始要求傳送，會提供方法來輪詢 LRO 及檢查是否已完成 LRO HttpLongRunningOperationResponse。</span><span class="sxs-lookup"><span data-stu-id="b80dd-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="d3499-102">要求物件</span><span class="sxs-lookup"><span data-stu-id="d3499-102">The request object</span></span>
+          description: <span data-ttu-id="b80dd-102">要求物件</span><span class="sxs-lookup"><span data-stu-id="b80dd-102">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -80,7 +96,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d3499-103">重試逾時秒數長時間執行作業。</span><span class="sxs-lookup"><span data-stu-id="d3499-103">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="d3499-104">預設值為 30。</span><span class="sxs-lookup"><span data-stu-id="d3499-104">Default value is 30.</span></span>
+    summary: <span data-ttu-id="b80dd-103">重試逾時秒數長時間執行作業。</span><span class="sxs-lookup"><span data-stu-id="b80dd-103">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="b80dd-104">預設值為 30。</span><span class="sxs-lookup"><span data-stu-id="b80dd-104">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -94,18 +110,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="d3499-105">初始化 NetworkManagementClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="d3499-105">Initializes a new instance of the NetworkManagementClient class.</span></span>
+    summary: <span data-ttu-id="b80dd-105">初始化 NetworkManagementClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="b80dd-105">Initializes a new instance of the NetworkManagementClient class.</span></span>
     syntax:
       content: 'new NetworkManagementClientContext(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.NetworkManagementClientOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: <span data-ttu-id="d3499-106">用戶端連線至 Azure 所需的認證。</span><span class="sxs-lookup"><span data-stu-id="d3499-106">Credentials needed for the client to connect to Azure.</span></span>
+          description: <span data-ttu-id="b80dd-106">用戶端連線至 Azure 所需的認證。</span><span class="sxs-lookup"><span data-stu-id="b80dd-106">Credentials needed for the client to connect to Azure.</span></span>
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="d3499-107">用來唯一識別 Microsoft Azure 訂用帳戶的訂用帳戶認證。</span><span class="sxs-lookup"><span data-stu-id="d3499-107">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="d3499-108">訂用帳戶識別碼會構成每個服務呼叫 URI 的一部分。</span><span class="sxs-lookup"><span data-stu-id="d3499-108">The subscription ID forms part of the URI for every service call.</span></span>
+          description: <span data-ttu-id="b80dd-107">用來唯一識別 Microsoft Azure 訂用帳戶的訂用帳戶認證。</span><span class="sxs-lookup"><span data-stu-id="b80dd-107">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="b80dd-108">訂用帳戶識別碼會構成每個服務呼叫 URI 的一部分。</span><span class="sxs-lookup"><span data-stu-id="b80dd-108">The subscription ID forms part of the URI for every service call.</span></span>
         - id: options
           type:
             - Models.NetworkManagementClientOptions
@@ -118,7 +134,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="d3499-109">從提供的 LROPollState 還原 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="d3499-109">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="d3499-110">這個方法可用來重新建立在不同的處理序或機器 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="d3499-110">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="b80dd-109">從提供的 LROPollState 還原 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="b80dd-109">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="b80dd-110">這個方法可用來重新建立在不同的處理序或機器 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="b80dd-110">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -136,14 +152,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="d3499-111">提供一個機制來提出要求，會輪詢，並提供最終的結果。</span><span class="sxs-lookup"><span data-stu-id="d3499-111">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    summary: <span data-ttu-id="b80dd-111">提供一個機制來提出要求，會輪詢，並提供最終的結果。</span><span class="sxs-lookup"><span data-stu-id="b80dd-111">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="d3499-112">要求物件</span><span class="sxs-lookup"><span data-stu-id="d3499-112">The request object</span></span>
+          description: <span data-ttu-id="b80dd-112">要求物件</span><span class="sxs-lookup"><span data-stu-id="b80dd-112">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -159,22 +175,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="d3499-113">（長時間執行作業） LRO 初始要求傳送，會提供方法來輪詢 LRO 及檢查是否已完成 LRO LROPoller。</span><span class="sxs-lookup"><span data-stu-id="d3499-113">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="b80dd-113">（長時間執行作業） LRO 初始要求傳送，會提供方法來輪詢 LRO 及檢查是否已完成 LRO LROPoller。</span><span class="sxs-lookup"><span data-stu-id="b80dd-113">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="d3499-114">作業的引數。</span><span class="sxs-lookup"><span data-stu-id="d3499-114">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="b80dd-114">作業的引數。</span><span class="sxs-lookup"><span data-stu-id="b80dd-114">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="d3499-115">作業規格。</span><span class="sxs-lookup"><span data-stu-id="d3499-115">The specification for the operation.</span></span>
+          description: <span data-ttu-id="b80dd-115">作業規格。</span><span class="sxs-lookup"><span data-stu-id="b80dd-115">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="d3499-116">提出要求時傳送的其他選項。</span><span class="sxs-lookup"><span data-stu-id="d3499-116">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="b80dd-116">提出要求時傳送的其他選項。</span><span class="sxs-lookup"><span data-stu-id="b80dd-116">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -186,23 +202,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="d3499-117">傳送 HTTP 要求使用提供的 OperationSpec 填入。</span><span class="sxs-lookup"><span data-stu-id="d3499-117">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    summary: <span data-ttu-id="b80dd-117">傳送 HTTP 要求使用提供的 OperationSpec 填入。</span><span class="sxs-lookup"><span data-stu-id="b80dd-117">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="d3499-118">HTTP 要求的樣板化的值就會填入從引數。</span><span class="sxs-lookup"><span data-stu-id="d3499-118">The arguments that the HTTP request's templated values will be populated from.</span></span>
+          description: <span data-ttu-id="b80dd-118">HTTP 要求的樣板化的值就會填入從引數。</span><span class="sxs-lookup"><span data-stu-id="b80dd-118">The arguments that the HTTP request's templated values will be populated from.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="d3499-119">要用來填入 httpRequest OperationSpec。</span><span class="sxs-lookup"><span data-stu-id="d3499-119">The OperationSpec to use to populate the httpRequest.</span></span>
+          description: <span data-ttu-id="b80dd-119">要用來填入 httpRequest OperationSpec。</span><span class="sxs-lookup"><span data-stu-id="b80dd-119">The OperationSpec to use to populate the httpRequest.</span></span>
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="d3499-120">要在收到回應時呼叫的回呼。</span><span class="sxs-lookup"><span data-stu-id="d3499-120">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="b80dd-120">要在收到回應時呼叫的回呼。</span><span class="sxs-lookup"><span data-stu-id="b80dd-120">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -214,7 +230,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="d3499-121">傳送提供的 httpRequest。</span><span class="sxs-lookup"><span data-stu-id="d3499-121">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="b80dd-121">傳送提供的 httpRequest。</span><span class="sxs-lookup"><span data-stu-id="b80dd-121">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:
