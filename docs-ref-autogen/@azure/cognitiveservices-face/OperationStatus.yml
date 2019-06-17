@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: 作業狀態的物件。 作業指的是非同步的後端工作包括建立快照集和套用快照集。
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '組合的說明時的 UTC 日期和時間字串時的作業 （需要或套用快照集） 要求。 例如 2018-12-25T11:41:02.2331413Z.'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '組合的 UTC 日期和時間字串，描述上次作業的時間 （採用或套用快照集） 會主動將資料移轉。 LastActionTime 將保留提高，直到作業完成為止。 例如 2018-12-25T11:51:27.8705696Z。'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 當作業失敗時顯示失敗的訊息 （當作業成功時略過）。
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 當作業成功成功時，取得作業的快照集的快照集識別碼將會包含在此欄位，並套用作業的快照集，以取得目標物件的路徑將會傳回此欄位中。
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      作業狀態： notstarted、 執行、 成功、 失敗。 如果在要求的作業，而等待執行時，狀態為 notstarted。 如果作業是在後端進行中，狀態為 running。 它說明了的狀態成功的表示作業順利完成，特別針對快照集擷取作業，快照集也採用，並準備好套用，而且套用作業的快照集，它會顯示目標物件已完成建立快照集和已備妥可使用。 狀態失敗通常發生在取得快照集時編輯的來源物件，或編輯的目標物件時套用快照集完成之前，請參閱檢查失敗原因的欄位 「 訊息 」。
+      可能的值包括: 'notstarted'，「 執行中 」、 「 成功 」、 「 失敗 」
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'

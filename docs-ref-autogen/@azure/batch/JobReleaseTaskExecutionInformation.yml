@@ -1,0 +1,178 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation'
+    name: JobReleaseTaskExecutionInformation
+    fullName: JobReleaseTaskExecutionInformation
+    children:
+      - '@azure/batch.JobReleaseTaskExecutionInformation.containerInfo'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.endTime'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.exitCode'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.failureInfo'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.result'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.startTime'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.state'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectory'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: 代表 JobReleaseTaskExecutionInformation 的介面。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作執行的容器的相關資訊。 只有當工作的內容中執行容器時，才設定這個屬性。
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業解除工作完成時間。 只有當工作處於已完成 」 狀態時，才設定這個屬性。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定工作命令列上的程式結束代碼。 只有當工作處於已完成狀態，則會傳回此參數。 處理程序的結束代碼會反映該處理程序的應用程式開發人員所實作的特定慣例。 如果您使用的結束代碼值在您的程式碼中進行決策時，務必知道您的應用程式處理序所使用的結束程式碼慣例。 請注意，可能也計算節點作業系統，例如強制終止處理程序時所產生的結束代碼。
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 描述工作失敗，如果有任何資訊。 工作處於已完成狀態時，才會設定此屬性，而且發生失敗。
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '工作執行的結果。 如果值 「 失敗 」，失敗的詳細資訊可以找到 failureInfo 屬性中。 可能的值包括: 「 成功 」、 「 失敗 」'
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 工作開始執行的時間。 如果已重新啟動或重試工作，則這是最近一次工作開始執行的時間。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '作業解除工作在計算節點上的目前狀態。 可能的值包括: 「 執行中 」，[已完成]'
+    syntax:
+      content: 'state: JobReleaseTaskState'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectory'
+    name: taskRootDirectory
+    fullName: taskRootDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業解除工作在計算節點上的根目錄。 您可以使用此路徑來擷取工作，例如記錄檔所建立的檔案。
+    optional: true
+    syntax:
+      content: 'taskRootDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl'
+    name: taskRootDirectoryUrl
+    fullName: taskRootDirectoryUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作業解除工作在計算節點上的根目錄 URL。
+    optional: true
+    syntax:
+      content: 'taskRootDirectoryUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.JobReleaseTaskState'
+    name: JobReleaseTaskState
+    spec.typeScript:
+      - name: JobReleaseTaskState
+        fullName: JobReleaseTaskState
+        uid: '@azure/batch.JobReleaseTaskState'
