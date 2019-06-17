@@ -1,0 +1,234 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.SubtaskInformation'
+    name: SubtaskInformation
+    fullName: SubtaskInformation
+    children:
+      - '@azure/batch.SubtaskInformation.containerInfo'
+      - '@azure/batch.SubtaskInformation.endTime'
+      - '@azure/batch.SubtaskInformation.exitCode'
+      - '@azure/batch.SubtaskInformation.failureInfo'
+      - '@azure/batch.SubtaskInformation.id'
+      - '@azure/batch.SubtaskInformation.nodeInfo'
+      - '@azure/batch.SubtaskInformation.previousState'
+      - '@azure/batch.SubtaskInformation.previousStateTransitionTime'
+      - '@azure/batch.SubtaskInformation.result'
+      - '@azure/batch.SubtaskInformation.startTime'
+      - '@azure/batch.SubtaskInformation.state'
+      - '@azure/batch.SubtaskInformation.stateTransitionTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="976a7-101">代表 SubtaskInformation 的介面。</span><span class="sxs-lookup"><span data-stu-id="976a7-101">An interface representing SubtaskInformation.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="976a7-102">工作執行的容器的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="976a7-102">Information about the container under which the task is executing.</span></span> <span data-ttu-id="976a7-103">只有當工作的內容中執行容器時，才設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="976a7-103">This property is set only if the task runs in a container context.</span></span>
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="976a7-104">子工作完成時間。</span><span class="sxs-lookup"><span data-stu-id="976a7-104">The time at which the subtask completed.</span></span> <span data-ttu-id="976a7-105">子工作處於已完成 」 狀態時，才設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="976a7-105">This property is set only if the subtask is in the Completed state.</span></span>
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="976a7-106">子工作命令列上指定的程式結束代碼。</span><span class="sxs-lookup"><span data-stu-id="976a7-106">The exit code of the program specified on the subtask command line.</span></span> <span data-ttu-id="976a7-107">子工作處於已完成狀態時，才設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="976a7-107">This property is set only if the subtask is in the completed state.</span></span> <span data-ttu-id="976a7-108">一般情況下，處理程序的結束代碼會反映該處理程序的應用程式開發人員所實作的特定慣例。</span><span class="sxs-lookup"><span data-stu-id="976a7-108">In general, the exit code for a process reflects the specific convention implemented by the application developer for that process.</span></span> <span data-ttu-id="976a7-109">如果您使用的結束代碼值在您的程式碼中進行決策時，務必知道您的應用程式處理序所使用的結束程式碼慣例。</span><span class="sxs-lookup"><span data-stu-id="976a7-109">If you use the exit code value to make decisions in your code, be sure that you know the exit code convention used by the application process.</span></span> <span data-ttu-id="976a7-110">不過，如果批次服務會終止 （因為逾時或透過 API 的使用者終止） 子工作可能會看到作業系統定義的結束代碼。</span><span class="sxs-lookup"><span data-stu-id="976a7-110">However, if the Batch service terminates the subtask (due to timeout, or user termination via the API) you may see an operating system-defined exit code.</span></span>'
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="976a7-111">描述工作失敗，如果有任何資訊。</span><span class="sxs-lookup"><span data-stu-id="976a7-111">Information describing the task failure, if any.</span></span> <span data-ttu-id="976a7-112">工作處於已完成狀態時，才會設定此屬性，而且發生失敗。</span><span class="sxs-lookup"><span data-stu-id="976a7-112">This property is set only if the task is in the completed state and encountered a failure.</span></span>'
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="976a7-113">子工作的識別碼。</span><span class="sxs-lookup"><span data-stu-id="976a7-113">The ID of the subtask.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.nodeInfo'
+    name: nodeInfo
+    fullName: nodeInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="976a7-114">子工作執行所在的計算節點的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="976a7-114">Information about the compute node on which the subtask ran.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeInfo?: ComputeNodeInformation'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="976a7-115">子工作先前的狀態。</span><span class="sxs-lookup"><span data-stu-id="976a7-115">The previous state of the subtask.</span></span> <span data-ttu-id="976a7-116">未設定這個屬性，如果子工作處於其初始的執行狀態。</span><span class="sxs-lookup"><span data-stu-id="976a7-116">This property is not set if the subtask is in its initial running state.</span></span> <span data-ttu-id="976a7-117">可能的值包括: ''準備''，''running''，''已完成''</span><span class="sxs-lookup"><span data-stu-id="976a7-117">Possible values include: ''preparing'', ''running'', ''completed''</span></span>'
+    optional: true
+    syntax:
+      content: 'previousState?: SubtaskState'
+      return:
+        type:
+          - '@azure/batch.SubtaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="976a7-118">子工作進入其先前狀態的時間。</span><span class="sxs-lookup"><span data-stu-id="976a7-118">The time at which the subtask entered its previous state.</span></span> <span data-ttu-id="976a7-119">未設定這個屬性，如果子工作處於其初始的執行狀態。</span><span class="sxs-lookup"><span data-stu-id="976a7-119">This property is not set if the subtask is in its initial running state.</span></span>
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="976a7-120">工作執行的結果。</span><span class="sxs-lookup"><span data-stu-id="976a7-120">The result of the task execution.</span></span> <span data-ttu-id="976a7-121">如果值 「 失敗 」，失敗的詳細資訊可以找到 failureInfo 屬性中。</span><span class="sxs-lookup"><span data-stu-id="976a7-121">If the value is ''failed'', then the details of the failure can be found in the failureInfo property.</span></span> <span data-ttu-id="976a7-122">可能的值包括: 「 成功 」、 「 失敗 」</span><span class="sxs-lookup"><span data-stu-id="976a7-122">Possible values include: ''success'', ''failure''</span></span>'
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="976a7-123">子工作開始執行的時間。</span><span class="sxs-lookup"><span data-stu-id="976a7-123">The time at which the subtask started running.</span></span> <span data-ttu-id="976a7-124">如果子工作已重新啟動或重試，這會是最新的子工作開始的時間執行。</span><span class="sxs-lookup"><span data-stu-id="976a7-124">If the subtask has been restarted or retried, this is the most recent time at which the subtask started running.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="976a7-125">子工作的目前狀態。</span><span class="sxs-lookup"><span data-stu-id="976a7-125">The current state of the subtask.</span></span> <span data-ttu-id="976a7-126">可能的值包括: ''準備''，''running''，''已完成''</span><span class="sxs-lookup"><span data-stu-id="976a7-126">Possible values include: ''preparing'', ''running'', ''completed''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: SubtaskState'
+      return:
+        type:
+          - '@azure/batch.SubtaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="976a7-127">子工作進入其目前狀態的時間。</span><span class="sxs-lookup"><span data-stu-id="976a7-127">The time at which the subtask entered its current state.</span></span>
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.ComputeNodeInformation'
+    name: ComputeNodeInformation
+    spec.typeScript:
+      - name: ComputeNodeInformation
+        fullName: ComputeNodeInformation
+        uid: '@azure/batch.ComputeNodeInformation'
+  - uid: '@azure/batch.SubtaskState'
+    name: SubtaskState
+    spec.typeScript:
+      - name: SubtaskState
+        fullName: SubtaskState
+        uid: '@azure/batch.SubtaskState'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
