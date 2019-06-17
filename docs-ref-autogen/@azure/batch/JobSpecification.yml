@@ -1,0 +1,285 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobSpecification'
+    name: JobSpecification
+    fullName: JobSpecification
+    children:
+      - '@azure/batch.JobSpecification.commonEnvironmentSettings'
+      - '@azure/batch.JobSpecification.constraints'
+      - '@azure/batch.JobSpecification.displayName'
+      - '@azure/batch.JobSpecification.jobManagerTask'
+      - '@azure/batch.JobSpecification.jobPreparationTask'
+      - '@azure/batch.JobSpecification.jobReleaseTask'
+      - '@azure/batch.JobSpecification.metadata'
+      - '@azure/batch.JobSpecification.networkConfiguration'
+      - '@azure/batch.JobSpecification.onAllTasksComplete'
+      - '@azure/batch.JobSpecification.onTaskFailure'
+      - '@azure/batch.JobSpecification.poolInfo'
+      - '@azure/batch.JobSpecification.priority'
+      - '@azure/batch.JobSpecification.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="83617-101">代表 JobSpecification 的介面。</span><span class="sxs-lookup"><span data-stu-id="83617-101">An interface representing JobSpecification.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83617-102">常見的環境變數設定清單。</span><span class="sxs-lookup"><span data-stu-id="83617-102">A list of common environment variable settings.</span></span> <span data-ttu-id="83617-103">這些環境變數已為依據此排程 （包括作業管理員、 作業準備和作業解除工作） 所建立的作業中的所有工作。</span><span class="sxs-lookup"><span data-stu-id="83617-103">These environment variables are set for all tasks in jobs created under this schedule (including the Job Manager, Job Preparation and Job Release tasks).</span></span> <span data-ttu-id="83617-104">個別的工作，可以覆寫這裡指定使用不同的值指定相同的設定名稱的環境設定。</span><span class="sxs-lookup"><span data-stu-id="83617-104">Individual tasks can override an environment setting specified here by specifying the same setting name with a different value.</span></span>'
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83617-105">依據此排程建立的工作執行條件約束。</span><span class="sxs-lookup"><span data-stu-id="83617-105">The execution constraints for jobs created under this schedule.</span></span>
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83617-106">依據此排程建立的工作顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="83617-106">The display name for jobs created under this schedule.</span></span> <span data-ttu-id="83617-107">名稱不需要是唯一，而且可以包含最大長度為 1024年的任何 Unicode 字元。</span><span class="sxs-lookup"><span data-stu-id="83617-107">The name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83617-108">依據此排程會啟動作業時，要啟動的作業管理員工作詳細資料。</span><span class="sxs-lookup"><span data-stu-id="83617-108">The details of a Job Manager task to be launched when a job is started under this schedule.</span></span> <span data-ttu-id="83617-109">如果作業未指定作業管理員工作，使用者必須明確將工作加入至使用工作 API 作業。</span><span class="sxs-lookup"><span data-stu-id="83617-109">If the job does not specify a Job Manager task, the user must explicitly add tasks to the job using the Task API.</span></span> <span data-ttu-id="83617-110">如果作業有指定作業管理員工作，Batch 服務會建立作業管理員工作，當工作建立時，就會嘗試將排程工作中的其他作業之前排程作業管理員工作。</span><span class="sxs-lookup"><span data-stu-id="83617-110">If the job does specify a Job Manager task, the Batch service creates the Job Manager task when the job is created, and will try to schedule the Job Manager task before scheduling other tasks in the job.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83617-111">依據此排程建立的工作作業準備工作。</span><span class="sxs-lookup"><span data-stu-id="83617-111">The Job Preparation task for jobs created under this schedule.</span></span> <span data-ttu-id="83617-112">如果作業有作業準備工作，Batch 服務會在該計算節點上啟動該作業的任何工作之前就計算節點上執行作業準備工作。</span><span class="sxs-lookup"><span data-stu-id="83617-112">If a job has a Job Preparation task, the Batch service will run the Job Preparation task on a compute node before starting any tasks of that job on that compute node.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83617-113">依據此排程建立的工作作業解除工作。</span><span class="sxs-lookup"><span data-stu-id="83617-113">The Job Release task for jobs created under this schedule.</span></span> <span data-ttu-id="83617-114">作業解除工作的主要目的是要復原到計算節點的作業準備工作所進行的變更。</span><span class="sxs-lookup"><span data-stu-id="83617-114">The primary purpose of the Job Release task is to undo changes to compute nodes made by the Job Preparation task.</span></span> <span data-ttu-id="83617-115">範例活動包括刪除本機檔案，或正在關閉作業準備工作所啟動的服務。</span><span class="sxs-lookup"><span data-stu-id="83617-115">Example activities include deleting local files, or shutting down services that were started as part of job preparation.</span></span> <span data-ttu-id="83617-116">若未同時指定作業的作業準備工作，不能指定作業解除工作。</span><span class="sxs-lookup"><span data-stu-id="83617-116">A Job Release task cannot be specified without also specifying a Job Preparation task for the job.</span></span> <span data-ttu-id="83617-117">Batch 服務會執行作業準備工作的計算節點上執行作業解除工作。</span><span class="sxs-lookup"><span data-stu-id="83617-117">The Batch service runs the Job Release task on the compute nodes that have run the Job Preparation task.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="83617-118">依據此排程做為中繼資料建立每個工作相關聯的名稱 / 值組清單。</span><span class="sxs-lookup"><span data-stu-id="83617-118">A list of name-value pairs associated with each job created under this schedule as metadata.</span></span>
+      <span data-ttu-id="83617-119">Batch 服務不會將任何意義指派給中繼資料;它只是使用使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="83617-119">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83617-120">網路組態工作。</span><span class="sxs-lookup"><span data-stu-id="83617-120">The network configuration for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83617-121">自批次服務建立依據此排程的作業中的所有工作都處於已完成的狀態時，應採取的動作。</span><span class="sxs-lookup"><span data-stu-id="83617-121">The action the Batch service should take when all tasks in a job created under this schedule are in the completed state.</span></span> <span data-ttu-id="83617-122">請注意，是否工作不包含任何工作，則所有工作都視為完成。</span><span class="sxs-lookup"><span data-stu-id="83617-122">Note that if a job contains no tasks, then all tasks are considered complete.</span></span> <span data-ttu-id="83617-123">與作業管理員工作，因此最常使用此選項如果您想要使用自動作業終止作業管理員而不需要，您應該一開始 onAllTasksComplete 設 noaction 並更新工作屬性，將 onAllTasksComplete 設定為 terminatejob，一旦您完成加入工作。</span><span class="sxs-lookup"><span data-stu-id="83617-123">This option is therefore most commonly used with a Job Manager task; if you want to use automatic job termination without a Job Manager, you should initially set onAllTasksComplete to noaction and update the job properties to set onAllTasksComplete to terminatejob once you have finished adding tasks.</span></span> <span data-ttu-id="83617-124">預設值為 noaction。</span><span class="sxs-lookup"><span data-stu-id="83617-124">The default is noaction.</span></span> <span data-ttu-id="83617-125">可能的值包括: ''noAction''，''terminateJob''</span><span class="sxs-lookup"><span data-stu-id="83617-125">Possible values include: ''noAction'', ''terminateJob''</span></span>'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83617-126">自批次服務建立依據此排程的作業中的任何工作失敗時，應採取的動作。</span><span class="sxs-lookup"><span data-stu-id="83617-126">The action the Batch service should take when any task fails in a job created under this schedule.</span></span> <span data-ttu-id="83617-127">工作會被視為已失敗，如果它失敗是否 failureInfo。</span><span class="sxs-lookup"><span data-stu-id="83617-127">A task is considered to have failed if it have failed if has a failureInfo.</span></span> <span data-ttu-id="83617-128">如果在工作完成之後耗盡重試計數，以非零結束代碼，則設定 failureInfo 或如果啟動工作時發生錯誤，例如由於資源檔案下載錯誤。</span><span class="sxs-lookup"><span data-stu-id="83617-128">A failureInfo is set if the task completes with a non-zero exit code after exhausting its retry count, or if there was an error starting the task, for example due to a resource file download error.</span></span> <span data-ttu-id="83617-129">預設值為 noaction。</span><span class="sxs-lookup"><span data-stu-id="83617-129">The default is noaction.</span></span> <span data-ttu-id="83617-130">可能的值包括: ''noAction''，''performExitOptionsJobAction''</span><span class="sxs-lookup"><span data-stu-id="83617-130">Possible values include: ''noAction'', ''performExitOptionsJobAction''</span></span>'
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83617-131">Batch 服務所執行之作業依據此排程建立的工作所在集區。</span><span class="sxs-lookup"><span data-stu-id="83617-131">The pool on which the Batch service runs the tasks of jobs created under this schedule.</span></span>
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83617-132">建立依據此排程的作業優先順序。</span><span class="sxs-lookup"><span data-stu-id="83617-132">The priority of jobs created under this schedule.</span></span> <span data-ttu-id="83617-133">優先順序值的範圍可以從-1000年到 1000，-1000年表示最低優先順序，1000年表示最高的優先順序。</span><span class="sxs-lookup"><span data-stu-id="83617-133">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="83617-134">預設值為 0。</span><span class="sxs-lookup"><span data-stu-id="83617-134">The default value is 0.</span></span> <span data-ttu-id="83617-135">預設會使用此優先順序的作業排程下的所有工作。</span><span class="sxs-lookup"><span data-stu-id="83617-135">This priority is used as the default for all jobs under the job schedule.</span></span> <span data-ttu-id="83617-136">您可以在它建立之後，使用更新作業的 API 來更新作業的優先順序。</span><span class="sxs-lookup"><span data-stu-id="83617-136">You can update a job''s priority after it has been created using by using the update job API.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83617-137">是否在作業中的工作也可以定義相依性，彼此。</span><span class="sxs-lookup"><span data-stu-id="83617-137">Whether tasks in the job can define dependencies on each other.</span></span> <span data-ttu-id="83617-138">預設值為 false。</span><span class="sxs-lookup"><span data-stu-id="83617-138">The default is false.</span></span>
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
