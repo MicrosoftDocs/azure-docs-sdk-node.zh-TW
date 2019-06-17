@@ -1,0 +1,1095 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-policy.PolicyAssignments'
+    name: PolicyAssignments
+    fullName: PolicyAssignments
+    children:
+      - '@azure/arm-policy.PolicyAssignments.create'
+      - '@azure/arm-policy.PolicyAssignments.create_2'
+      - '@azure/arm-policy.PolicyAssignments.create_1'
+      - '@azure/arm-policy.PolicyAssignments.createById'
+      - '@azure/arm-policy.PolicyAssignments.createById_2'
+      - '@azure/arm-policy.PolicyAssignments.createById_1'
+      - '@azure/arm-policy.PolicyAssignments.deleteById'
+      - '@azure/arm-policy.PolicyAssignments.deleteById_2'
+      - '@azure/arm-policy.PolicyAssignments.deleteById_1'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod_2'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod_1'
+      - '@azure/arm-policy.PolicyAssignments.get'
+      - '@azure/arm-policy.PolicyAssignments.get_2'
+      - '@azure/arm-policy.PolicyAssignments.get_1'
+      - '@azure/arm-policy.PolicyAssignments.getById'
+      - '@azure/arm-policy.PolicyAssignments.getById_2'
+      - '@azure/arm-policy.PolicyAssignments.getById_1'
+      - '@azure/arm-policy.PolicyAssignments.list'
+      - '@azure/arm-policy.PolicyAssignments.list_2'
+      - '@azure/arm-policy.PolicyAssignments.list_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResource'
+      - '@azure/arm-policy.PolicyAssignments.listForResource_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResource_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext_1'
+      - '@azure/arm-policy.PolicyAssignments.listNext'
+      - '@azure/arm-policy.PolicyAssignments.listNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listNext_1'
+      - '@azure/arm-policy.PolicyAssignments.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="8cd2e-101">此類別代表 PolicyAssignments。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-101">Class representing a PolicyAssignments.</span></span>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create'
+    name: 'create(string, string, PolicyAssignment, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-102">這項作業使用建立或更新原則指派名稱與指定的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-102">This operation creates or updates a policy assignment with the given scope and name.</span></span> <span data-ttu-id="8cd2e-103">原則指派套用至包含其範圍內的所有資源。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-103">Policy assignments apply to all resources contained within their scope.</span></span> <span data-ttu-id="8cd2e-104">例如，當您指派的資源群組範圍的原則，該原則會套用至群組中的所有資源。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-104">For example, when you assign a policy at resource group scope, that policy applies to all resources in the group.</span></span>'
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-105">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-105">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-106">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-106">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-107">原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-107">The name of the policy assignment.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: <span data-ttu-id="8cd2e-108">原則指派的參數。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-108">Parameters for the policy assignment.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create_2'
+    name: 'create(string, string, PolicyAssignment, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-109">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-109">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-110">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-110">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-111">原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-111">The name of the policy assignment.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: <span data-ttu-id="8cd2e-112">原則指派的參數。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-112">Parameters for the policy assignment.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-113">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-114">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create_1'
+    name: 'create(string, string, PolicyAssignment, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-115">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-115">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-116">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-116">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-117">原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-117">The name of the policy assignment.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: <span data-ttu-id="8cd2e-118">原則指派的參數。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-118">Parameters for the policy assignment.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-119">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-119">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById'
+    name: 'createById(string, PolicyAssignment, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-120">這項作業會建立或更新原則指派，並提供指定的識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-120">This operation creates or updates the policy assignment with the given ID.</span></span> <span data-ttu-id="8cd2e-121">對範圍的原則指派套用至包含在該範圍中的所有資源。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-121">Policy assignments made on a scope apply to all resources contained in that scope.</span></span> <span data-ttu-id="8cd2e-122">例如，當您將原則指派給資源群組的原則套用至群組中的所有資源。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-122">For example, when you assign a policy to a resource group that policy applies to all resources in the group.</span></span> <span data-ttu-id="8cd2e-123">原則指派識別碼具有下列格式: ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-123">Policy assignment IDs have this format: ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span> <span data-ttu-id="8cd2e-124">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-124">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''.</span></span>'
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-125">若要建立原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-125">The ID of the policy assignment to create.</span></span> <span data-ttu-id="8cd2e-126">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-126">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: <span data-ttu-id="8cd2e-127">原則指派的參數。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-127">Parameters for policy assignment.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById_2'
+    name: 'createById(string, PolicyAssignment, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-128">若要建立原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-128">The ID of the policy assignment to create.</span></span> <span data-ttu-id="8cd2e-129">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-129">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: <span data-ttu-id="8cd2e-130">原則指派的參數。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-130">Parameters for policy assignment.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-131">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-131">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-132">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-132">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById_1'
+    name: 'createById(string, PolicyAssignment, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-133">若要建立原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-133">The ID of the policy assignment to create.</span></span> <span data-ttu-id="8cd2e-134">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-134">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: <span data-ttu-id="8cd2e-135">原則指派的參數。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-135">Parameters for policy assignment.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-136">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById'
+    name: 'deleteById(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-137">此作業會刪除具有指定 ID 的原則</span><span class="sxs-lookup"><span data-stu-id="8cd2e-137">This operation deletes the policy with the given ID.</span></span> <span data-ttu-id="8cd2e-138">原則指派識別碼具有下列格式: ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-138">Policy assignment IDs have this format: ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span> <span data-ttu-id="8cd2e-139">{範圍} 有效的格式為: '' / providers/Microsoft.Management/managementGroups/{managementGroup}'' （管理群組），'' / 訂用帳戶 / {subscriptionId}'' （訂用帳戶），'' / {subscriptionId} /resourceGroups/ {resourceGroupName}'' （資源群組），或 '' / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'' （資源）。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-139">Valid formats for {scope} are: ''/providers/Microsoft.Management/managementGroups/{managementGroup}'' (management group), ''/subscriptions/{subscriptionId}'' (subscription), ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'' (resource group), or ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'' (resource).</span></span>'
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-140">要刪除的原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-140">The ID of the policy assignment to delete.</span></span> <span data-ttu-id="8cd2e-141">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-141">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById_2'
+    name: 'deleteById(string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-142">要刪除的原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-142">The ID of the policy assignment to delete.</span></span> <span data-ttu-id="8cd2e-143">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-143">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-144">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-144">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-145">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById_1'
+    name: 'deleteById(string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-146">要刪除的原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-146">The ID of the policy assignment to delete.</span></span> <span data-ttu-id="8cd2e-147">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-147">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-148">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-148">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-149">此作業會刪除原則指派，指定其名稱以及在其所建立的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-149">This operation deletes a policy assignment, given its name and the scope it was created in.</span></span> <span data-ttu-id="8cd2e-150">原則指派的範圍是其識別碼前面的部分 '' / providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-150">The scope of a policy assignment is the part of its ID preceding ''/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-151">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-151">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-152">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-152">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-153">若要刪除原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-153">The name of the policy assignment to delete.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-154">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-154">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-155">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-155">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-156">若要刪除原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-156">The name of the policy assignment to delete.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-157">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-157">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-158">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-159">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-159">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-160">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-160">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-161">若要刪除原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-161">The name of the policy assignment to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-162">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-163">此作業會擷取單一的原則指派，指定其名稱以及在建立它的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-163">This operation retrieves a single policy assignment, given its name and the scope it was created at.</span></span>'
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-164">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-164">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-165">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-165">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-166">若要取得原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-166">The name of the policy assignment to get.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-167">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-167">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-168">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-168">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-169">若要取得原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-169">The name of the policy assignment to get.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-170">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-170">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-171">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get_1'
+    name: 'get(string, string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-172">原則指派的範圍。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-172">The scope of the policy assignment.</span></span> <span data-ttu-id="8cd2e-173">有效的範圍如下： 管理群組 (格式: ''/ providers/Microsoft.Management/managementGroups/{managementGroup}'')，訂用帳戶 (格式:'' 訂用帳戶 / {subscriptionId}'')，資源群組 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}''，或資源 (格式: '' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''</span><span class="sxs-lookup"><span data-stu-id="8cd2e-173">Valid scopes are: management group (format: ''/providers/Microsoft.Management/managementGroups/{managementGroup}''), subscription (format: ''/subscriptions/{subscriptionId}''), resource group (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'', or resource (format: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}''</span></span>'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-174">若要取得原則指派的名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-174">The name of the policy assignment to get.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-175">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById'
+    name: 'getById(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8cd2e-176">此作業會擷取原則指派，並提供指定的識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-176">The operation retrieves the policy assignment with the given ID.</span></span> <span data-ttu-id="8cd2e-177">原則指派識別碼具有下列格式: '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-177">Policy assignment IDs have this format: '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'.</span></span>
+      <span data-ttu-id="8cd2e-178">有效的範圍如下： 管理群組 (格式: '/ providers/Microsoft.Management/managementGroups/{managementGroup}')，訂用帳戶 (格式:' 訂用帳戶 / {subscriptionId}')，資源群組 (格式: ' 訂用帳戶 / {subscriptionId} /resourceGroups / {resourceGroupName}'，或資源 (格式: ' 訂用帳戶 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-178">Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'.</span></span>
+    syntax:
+      content: 'function getById(policyAssignmentId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-179">若要取得原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-179">The ID of the policy assignment to get.</span></span> <span data-ttu-id="8cd2e-180">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-180">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById_2'
+    name: 'getById(string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getById(policyAssignmentId: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-181">若要取得原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-181">The ID of the policy assignment to get.</span></span> <span data-ttu-id="8cd2e-182">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-182">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-183">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-183">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-184">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById_1'
+    name: 'getById(string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getById(policyAssignmentId: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-185">若要取得原則指派識別碼。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-185">The ID of the policy assignment to get.</span></span> <span data-ttu-id="8cd2e-186">使用格式為 ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-186">Use the format ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            <span data-ttu-id="8cd2e-187">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-187">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list'
+    name: list(Models.PolicyAssignmentsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-188">此作業會擷取所有的原則指派指定的訂用帳戶相關聯的比對選擇性的指定 $filter 的清單。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-188">This operation retrieves the list of all policy assignments associated with the given subscription that match the optional given $filter.</span></span> <span data-ttu-id="8cd2e-189">$Filter 的有效值為: ''atscope （)'' 或 ''policyDefinitionId eq'' {value} ''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-189">Valid values for $filter are: ''atScope()'' or ''policyDefinitionId eq ''{value}''''.</span></span> <span data-ttu-id="8cd2e-190">如果未提供 $filter，未經篩選的清單包含所有訂用帳戶，包括適用於直接與相關聯的原則指派，或從管理群組，其中包含指定與訂用帳戶，以及任何套用至內含物件訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-190">If $filter is not provided, the unfiltered list includes all policy assignments associated with the subscription, including those that apply directly or from management groups that contain the given subscription, as well as any applied to objects contained within the subscription.</span></span> <span data-ttu-id="8cd2e-191">如果提供 $filter=atScope()，則傳回的清單會包含所有訂用帳戶，也就是除了套用到訂用帳戶內包含的物件未篩選的清單中的所有項目套用的原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-191">If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the subscription, which is everything in the unfiltered list except those applied to objects contained within the subscription.</span></span> <span data-ttu-id="8cd2e-192">如果 $filter = policyDefinitionId eq ''{value}''，傳回的清單包含套用至訂用帳戶及指派原則定義識別碼為 {value} 原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-192">If $filter=policyDefinitionId eq ''{value}'' is provided, the returned list includes only policy assignments that apply to the subscription and assign the policy definition whose id is {value}.</span></span>'
+    syntax:
+      content: 'function list(options?: Models.PolicyAssignmentsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list_2'
+    name: 'list(PolicyAssignmentsListOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: PolicyAssignmentsListOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+          description: <span data-ttu-id="8cd2e-193">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-193">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-194">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list_1'
+    name: list(ServiceCallback<PolicyAssignmentListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-195">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource'
+    name: 'listForResource(string, string, string, string, string, Models.PolicyAssignmentsListForResourceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8cd2e-196">此作業會擷取所有的原則指派指定的資源中指定的資源群組和訂用帳戶相關聯的比對選擇性的指定 $filter 的清單。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-196">This operation retrieves the list of all policy assignments associated with the specified resource in the given resource group and subscription that match the optional given $filter.</span></span>
+      <span data-ttu-id="8cd2e-197">$Filter 的有效值為: 'atscope （)' 或 'policyDefinitionId eq' {value} '。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-197">Valid values for $filter are: 'atScope()' or 'policyDefinitionId eq '{value}''.</span></span> <span data-ttu-id="8cd2e-198">如果未提供 $filter，未經篩選的清單會包含相關聯的資源，包括適用於直接使用或從所有包含範圍的詳細資訊，以及任何套用至內含資源的資源做的所有原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-198">If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource.</span></span> <span data-ttu-id="8cd2e-199">如果提供 $filter=atScope()，則傳回的清單包含所有的原則指派，將套用至資源，也就是除了套用至內含資源的資源未篩選的清單中的所有項目。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-199">If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource, which is everything in the unfiltered list except those applied to resources contained within the resource.</span></span> <span data-ttu-id="8cd2e-200">如果 $filter = policyDefinitionId eq '{value}'，傳回的清單包含套用至資源及指派原則定義識別碼為 {value} 原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-200">If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes only policy assignments that apply to the resource and assign the policy definition whose id is {value}.</span></span>
+      <span data-ttu-id="8cd2e-201">三個參數，加上的資源名稱用來識別特定的資源。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-201">Three parameters plus the resource name are used to identify a specific resource.</span></span> <span data-ttu-id="8cd2e-202">如果資源不是父代資源 （較常見的案例） 的一部分，父資源路徑不應提供 (或提供做為 ')。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-202">If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as '').</span></span> <span data-ttu-id="8cd2e-203">例如 web 應用程式無法指定為 ({resourceProviderNamespace} = = 'Microsoft.Web' {parentResourcePath} = = '、 {resourceType} = = '站台' {resourceName} = = 'MyWebApp')。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-203">For example a web app could be specified as ({resourceProviderNamespace} == 'Microsoft.Web', {parentResourcePath} == '', {resourceType} == 'sites', {resourceName} == 'MyWebApp').</span></span> <span data-ttu-id="8cd2e-204">如果資源是父資源的一部分，則應該提供所有參數。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-204">If the resource is part of a parent resource, then all parameters should be provided.</span></span> <span data-ttu-id="8cd2e-205">虛擬機器 DNS 名稱，例如無法指定為 ({resourceProviderNamespace} = = 'Microsoft.Compute'、 {parentResourcePath} = = ' virtualMachines/MyVirtualMachine '、 {resourceType} = = '，domainNames {resourceName} = = 'MyComputerName')。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-205">For example a virtual machine DNS name could be specified as ({resourceProviderNamespace} == 'Microsoft.Compute', {parentResourcePath} == 'virtualMachines/MyVirtualMachine', {resourceType} == 'domainNames', {resourceName} == 'MyComputerName').</span></span> <span data-ttu-id="8cd2e-206">方便的選擇，分別提供命名空間和類型名稱可同時提供兩者中的 {resourceType} 參數，格式: ({resourceProviderNamespace} = = '、 {parentResourcePath} = = '、 {resourceType} = = ' Microsoft.web/sites'、 {resourceName} = = 'MyWebApp')。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-206">A convenient alternative to providing the namespace and type name separately is to provide both in the {resourceType} parameter, format: ({resourceProviderNamespace} == '', {parentResourcePath} == '', {resourceType} == 'Microsoft.Web/sites', {resourceName} == 'MyWebApp').</span></span>
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, options?: Models.PolicyAssignmentsListForResourceOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-207">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-207">The name of the resource group containing the resource.</span></span>
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-208">資源提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-208">The namespace of the resource provider.</span></span> <span data-ttu-id="8cd2e-209">例如，虛擬機器的命名空間是 Microsoft.Compute （從 microsoft.compute/virtualmachines)</span><span class="sxs-lookup"><span data-stu-id="8cd2e-209">For example, the namespace of a virtual machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines)</span></span>'
+        - id: parentResourcePath
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-210">父資源路徑。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-210">The parent resource path.</span></span> <span data-ttu-id="8cd2e-211">如果沒有，請使用空字串。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-211">Use empty string if there is none.</span></span>
+        - id: resourceType
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-212">資源類型名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-212">The resource type name.</span></span> <span data-ttu-id="8cd2e-213">例如 web 應用程式的型別名稱為 'sites' （從 microsoft.web/sites)。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-213">For example the type name of a web app is 'sites' (from Microsoft.Web/sites).</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-214">資源名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-214">The name of the resource.</span></span>
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListForResourceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource_2'
+    name: 'listForResource(string, string, string, string, string, PolicyAssignmentsListForResourceOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, options: PolicyAssignmentsListForResourceOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-215">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-215">The name of the resource group containing the resource.</span></span>
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-216">資源提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-216">The namespace of the resource provider.</span></span> <span data-ttu-id="8cd2e-217">例如，虛擬機器的命名空間是 Microsoft.Compute （從 microsoft.compute/virtualmachines)</span><span class="sxs-lookup"><span data-stu-id="8cd2e-217">For example, the namespace of a virtual machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines)</span></span>'
+        - id: parentResourcePath
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-218">父資源路徑。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-218">The parent resource path.</span></span> <span data-ttu-id="8cd2e-219">如果沒有，請使用空字串。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-219">Use empty string if there is none.</span></span>
+        - id: resourceType
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-220">資源類型名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-220">The resource type name.</span></span> <span data-ttu-id="8cd2e-221">例如 web 應用程式的型別名稱為 'sites' （從 microsoft.web/sites)。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-221">For example the type name of a web app is 'sites' (from Microsoft.Web/sites).</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-222">資源名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-222">The name of the resource.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+          description: <span data-ttu-id="8cd2e-223">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-223">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-224">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-224">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource_1'
+    name: 'listForResource(string, string, string, string, string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-225">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-225">The name of the resource group containing the resource.</span></span>
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: '<span data-ttu-id="8cd2e-226">資源提供者命名空間。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-226">The namespace of the resource provider.</span></span> <span data-ttu-id="8cd2e-227">例如，虛擬機器的命名空間是 Microsoft.Compute （從 microsoft.compute/virtualmachines)</span><span class="sxs-lookup"><span data-stu-id="8cd2e-227">For example, the namespace of a virtual machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines)</span></span>'
+        - id: parentResourcePath
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-228">父資源路徑。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-228">The parent resource path.</span></span> <span data-ttu-id="8cd2e-229">如果沒有，請使用空字串。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-229">Use empty string if there is none.</span></span>
+        - id: resourceType
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-230">資源類型名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-230">The resource type name.</span></span> <span data-ttu-id="8cd2e-231">例如 web 應用程式的型別名稱為 'sites' （從 microsoft.web/sites)。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-231">For example the type name of a web app is 'sites' (from Microsoft.Web/sites).</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-232">資源名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-232">The name of the resource.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-233">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-233">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup'
+    name: 'listForResourceGroup(string, Models.PolicyAssignmentsListForResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-234">此作業會擷取所有的原則指派指定的資源群組中指定的訂用帳戶相關聯的比對選擇性的指定 $filter 的清單。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-234">This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter.</span></span> <span data-ttu-id="8cd2e-235">$Filter 的有效值為: ''atscope （)'' 或 ''policyDefinitionId eq'' {value} ''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-235">Valid values for $filter are: ''atScope()'' or ''policyDefinitionId eq ''{value}''''.</span></span> <span data-ttu-id="8cd2e-236">如果未提供 $filter，未經篩選的清單會包含所有相關聯的資源群組，包括直接套用，或從包含範圍，以及任何套用至資源群組內所含的資源為套用的原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-236">If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group.</span></span> <span data-ttu-id="8cd2e-237">如果提供 $filter=atScope()，則傳回的清單會包含所有套用至資源群組，也就是除了套用到資源群組內所包含的資源未篩選的清單中的所有內容的原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-237">If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group.</span></span> <span data-ttu-id="8cd2e-238">如果 $filter = policyDefinitionId eq ''{value}''，傳回的清單包含套用至資源群組及指派原則定義識別碼為 {value} 原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-238">If $filter=policyDefinitionId eq ''{value}'' is provided, the returned list includes only policy assignments that apply to the resource group and assign the policy definition whose id is {value}.</span></span>'
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, options?: Models.PolicyAssignmentsListForResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-239">包含原則指派的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-239">The name of the resource group that contains policy assignments.</span></span>
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListForResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup_2'
+    name: 'listForResourceGroup(string, PolicyAssignmentsListForResourceGroupOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, options: PolicyAssignmentsListForResourceGroupOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-240">包含原則指派的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-240">The name of the resource group that contains policy assignments.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'
+          description: <span data-ttu-id="8cd2e-241">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-241">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-242">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-242">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup_1'
+    name: 'listForResourceGroup(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-243">包含原則指派的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-243">The name of the resource group that contains policy assignments.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-244">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-244">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext'
+    name: 'listForResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-245">此作業會擷取所有的原則指派指定的資源群組中指定的訂用帳戶相關聯的比對選擇性的指定 $filter 的清單。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-245">This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter.</span></span> <span data-ttu-id="8cd2e-246">$Filter 的有效值為: ''atscope （)'' 或 ''policyDefinitionId eq'' {value} ''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-246">Valid values for $filter are: ''atScope()'' or ''policyDefinitionId eq ''{value}''''.</span></span> <span data-ttu-id="8cd2e-247">如果未提供 $filter，未經篩選的清單會包含所有相關聯的資源群組，包括直接套用，或從包含範圍，以及任何套用至資源群組內所含的資源為套用的原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-247">If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group.</span></span> <span data-ttu-id="8cd2e-248">如果提供 $filter=atScope()，則傳回的清單會包含所有套用至資源群組，也就是除了套用到資源群組內所包含的資源未篩選的清單中的所有內容的原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-248">If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group.</span></span> <span data-ttu-id="8cd2e-249">如果 $filter = policyDefinitionId eq ''{value}''，傳回的清單包含套用至資源群組及指派原則定義識別碼為 {value} 原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-249">If $filter=policyDefinitionId eq ''{value}'' is provided, the returned list includes only policy assignments that apply to the resource group and assign the policy definition whose id is {value}.</span></span>'
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-250">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-250">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_2'
+    name: 'listForResourceGroupNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-251">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-251">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-252">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-252">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-253">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-253">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_1'
+    name: 'listForResourceGroupNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-254">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-254">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-255">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-255">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext'
+    name: 'listForResourceNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8cd2e-256">此作業會擷取所有的原則指派指定的資源中指定的資源群組和訂用帳戶相關聯的比對選擇性的指定 $filter 的清單。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-256">This operation retrieves the list of all policy assignments associated with the specified resource in the given resource group and subscription that match the optional given $filter.</span></span>
+      <span data-ttu-id="8cd2e-257">$Filter 的有效值為: 'atscope （)' 或 'policyDefinitionId eq' {value} '。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-257">Valid values for $filter are: 'atScope()' or 'policyDefinitionId eq '{value}''.</span></span> <span data-ttu-id="8cd2e-258">如果未提供 $filter，未經篩選的清單會包含相關聯的資源，包括適用於直接使用或從所有包含範圍的詳細資訊，以及任何套用至內含資源的資源做的所有原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-258">If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource.</span></span> <span data-ttu-id="8cd2e-259">如果提供 $filter=atScope()，則傳回的清單包含所有的原則指派，將套用至資源，也就是除了套用至內含資源的資源未篩選的清單中的所有項目。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-259">If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource, which is everything in the unfiltered list except those applied to resources contained within the resource.</span></span> <span data-ttu-id="8cd2e-260">如果 $filter = policyDefinitionId eq '{value}'，傳回的清單包含套用至資源及指派原則定義識別碼為 {value} 原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-260">If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes only policy assignments that apply to the resource and assign the policy definition whose id is {value}.</span></span>
+      <span data-ttu-id="8cd2e-261">三個參數，加上的資源名稱用來識別特定的資源。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-261">Three parameters plus the resource name are used to identify a specific resource.</span></span> <span data-ttu-id="8cd2e-262">如果資源不是父代資源 （較常見的案例） 的一部分，父資源路徑不應提供 (或提供做為 ')。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-262">If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as '').</span></span> <span data-ttu-id="8cd2e-263">例如 web 應用程式無法指定為 ({resourceProviderNamespace} = = 'Microsoft.Web' {parentResourcePath} = = '、 {resourceType} = = '站台' {resourceName} = = 'MyWebApp')。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-263">For example a web app could be specified as ({resourceProviderNamespace} == 'Microsoft.Web', {parentResourcePath} == '', {resourceType} == 'sites', {resourceName} == 'MyWebApp').</span></span> <span data-ttu-id="8cd2e-264">如果資源是父資源的一部分，則應該提供所有參數。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-264">If the resource is part of a parent resource, then all parameters should be provided.</span></span> <span data-ttu-id="8cd2e-265">虛擬機器 DNS 名稱，例如無法指定為 ({resourceProviderNamespace} = = 'Microsoft.Compute'、 {parentResourcePath} = = ' virtualMachines/MyVirtualMachine '、 {resourceType} = = '，domainNames {resourceName} = = 'MyComputerName')。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-265">For example a virtual machine DNS name could be specified as ({resourceProviderNamespace} == 'Microsoft.Compute', {parentResourcePath} == 'virtualMachines/MyVirtualMachine', {resourceType} == 'domainNames', {resourceName} == 'MyComputerName').</span></span> <span data-ttu-id="8cd2e-266">方便的選擇，分別提供命名空間和類型名稱可同時提供兩者中的 {resourceType} 參數，格式: ({resourceProviderNamespace} = = '、 {parentResourcePath} = = '、 {resourceType} = = ' Microsoft.web/sites'、 {resourceName} = = 'MyWebApp')。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-266">A convenient alternative to providing the namespace and type name separately is to provide both in the {resourceType} parameter, format: ({resourceProviderNamespace} == '', {parentResourcePath} == '', {resourceType} == 'Microsoft.Web/sites', {resourceName} == 'MyWebApp').</span></span>
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-267">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-267">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext_2'
+    name: 'listForResourceNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-268">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-268">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-269">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-269">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-270">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-270">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext_1'
+    name: 'listForResourceNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-271">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-271">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-272">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-272">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8cd2e-273">此作業會擷取所有的原則指派指定的訂用帳戶相關聯的比對選擇性的指定 $filter 的清單。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-273">This operation retrieves the list of all policy assignments associated with the given subscription that match the optional given $filter.</span></span> <span data-ttu-id="8cd2e-274">$Filter 的有效值為: ''atscope （)'' 或 ''policyDefinitionId eq'' {value} ''。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-274">Valid values for $filter are: ''atScope()'' or ''policyDefinitionId eq ''{value}''''.</span></span> <span data-ttu-id="8cd2e-275">如果未提供 $filter，未經篩選的清單包含所有訂用帳戶，包括適用於直接與相關聯的原則指派，或從管理群組，其中包含指定與訂用帳戶，以及任何套用至內含物件訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-275">If $filter is not provided, the unfiltered list includes all policy assignments associated with the subscription, including those that apply directly or from management groups that contain the given subscription, as well as any applied to objects contained within the subscription.</span></span> <span data-ttu-id="8cd2e-276">如果提供 $filter=atScope()，則傳回的清單會包含所有訂用帳戶，也就是除了套用到訂用帳戶內包含的物件未篩選的清單中的所有項目套用的原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-276">If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the subscription, which is everything in the unfiltered list except those applied to objects contained within the subscription.</span></span> <span data-ttu-id="8cd2e-277">如果 $filter = policyDefinitionId eq ''{value}''，傳回的清單包含套用至訂用帳戶及指派原則定義識別碼為 {value} 原則指派。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-277">If $filter=policyDefinitionId eq ''{value}'' is provided, the returned list includes only policy assignments that apply to the subscription and assign the policy definition whose id is {value}.</span></span>'
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-278">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-278">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-279">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-279">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8cd2e-280">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="8cd2e-280">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-281">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-281">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext_1'
+    name: 'listNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="8cd2e-282">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-282">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            <span data-ttu-id="8cd2e-283">回呼</span><span class="sxs-lookup"><span data-stu-id="8cd2e-283">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.constructor'
+    name: PolicyAssignments(PolicyClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8cd2e-284">建立 PolicyAssignments。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-284">Create a PolicyAssignments.</span></span>
+    syntax:
+      content: 'new PolicyAssignments(client: PolicyClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-policy.PolicyClientContext'
+          description: |
+            <span data-ttu-id="8cd2e-285">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="8cd2e-285">Reference to the service client.</span></span>
+    package: '@azure/arm-policy'
+references:
+  - uid: '@azure/arm-policy.PolicyClientContext'
+    name: PolicyClientContext
+    spec.typeScript:
+      - name: PolicyClientContext
+        fullName: PolicyClientContext
+        uid: '@azure/arm-policy.PolicyClientContext'
+  - uid: '@azure/arm-policy.PolicyAssignment'
+    name: PolicyAssignment
+    spec.typeScript:
+      - name: PolicyAssignment
+        fullName: PolicyAssignment
+        uid: '@azure/arm-policy.PolicyAssignment'
+  - uid: ServiceCallback<@azure/arm-policy.PolicyAssignment>
+    name: PolicyAssignment>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyAssignment
+        fullName: PolicyAssignment
+        uid: '@azure/arm-policy.PolicyAssignment'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+    name: PolicyAssignmentListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyAssignmentListResult
+        fullName: PolicyAssignmentListResult
+        uid: '@azure/arm-policy.PolicyAssignmentListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+    name: PolicyAssignmentsListOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListOptionalParams
+        fullName: PolicyAssignmentsListOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+    name: PolicyAssignmentsListForResourceOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListForResourceOptionalParams
+        fullName: PolicyAssignmentsListForResourceOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'
+    name: PolicyAssignmentsListForResourceGroupOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListForResourceGroupOptionalParams
+        fullName: PolicyAssignmentsListForResourceGroupOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'
