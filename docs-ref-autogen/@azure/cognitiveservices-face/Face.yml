@@ -1,0 +1,706 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.Face'
+    name: Face
+    fullName: Face
+    children:
+      - '@azure/cognitiveservices-face.Face.detectWithStream_2'
+      - '@azure/cognitiveservices-face.Face.detectWithStream'
+      - '@azure/cognitiveservices-face.Face.detectWithStream_1'
+      - '@azure/cognitiveservices-face.Face.detectWithUrl_2'
+      - '@azure/cognitiveservices-face.Face.detectWithUrl'
+      - '@azure/cognitiveservices-face.Face.detectWithUrl_1'
+      - '@azure/cognitiveservices-face.Face.constructor'
+      - '@azure/cognitiveservices-face.Face.findSimilar_2'
+      - '@azure/cognitiveservices-face.Face.findSimilar'
+      - '@azure/cognitiveservices-face.Face.findSimilar_1'
+      - '@azure/cognitiveservices-face.Face.group'
+      - '@azure/cognitiveservices-face.Face.group_2'
+      - '@azure/cognitiveservices-face.Face.group_1'
+      - '@azure/cognitiveservices-face.Face.identify_2'
+      - '@azure/cognitiveservices-face.Face.identify'
+      - '@azure/cognitiveservices-face.Face.identify_1'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToFace'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToFace_2'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToFace_1'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToPerson_2'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToPerson'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToPerson_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 此類別代表表面。
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithStream_2'
+    name: 'detectWithStream(msRest.HttpRequestBody, FaceDetectWithStreamOptionalParams, ServiceCallback<DetectedFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectWithStream(image: msRest.HttpRequestBody, options: FaceDetectWithStreamOptionalParams, callback: ServiceCallback<DetectedFace[]>)'
+      parameters:
+        - id: image
+          type:
+            - msRest.HttpRequestBody
+          description: 影像資料流。
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceDetectWithStreamResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithStream'
+    name: 'detectWithStream(msRest.HttpRequestBody, Models.FaceDetectWithStreamOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 在映像，並傳回臉部位置，以及選擇性地 faceIds、 地標，與屬性，請偵測人臉。
+    syntax:
+      content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
+      parameters:
+        - id: image
+          type:
+            - msRest.HttpRequestBody
+          description: 影像資料流。
+        - id: options
+          type:
+            - Models.FaceDetectWithStreamOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceDetectWithStreamResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithStream_1'
+    name: 'detectWithStream(msRest.HttpRequestBody, ServiceCallback<DetectedFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectWithStream(image: msRest.HttpRequestBody, callback: ServiceCallback<DetectedFace[]>)'
+      parameters:
+        - id: image
+          type:
+            - msRest.HttpRequestBody
+          description: 影像資料流。
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceDetectWithStreamResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithUrl_2'
+    name: 'detectWithUrl(string, FaceDetectWithUrlOptionalParams, ServiceCallback<DetectedFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectWithUrl(url: string, options: FaceDetectWithUrlOptionalParams, callback: ServiceCallback<DetectedFace[]>)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: 可公開觸達之影像的 URL
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceDetectWithUrlResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithUrl'
+    name: 'detectWithUrl(string, Models.FaceDetectWithUrlOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      检测图像中的人脸，返回人脸矩形以及可选的 faceId、地标和属性。<br />
+      * 選擇性的參數，包括 faceId、 地標和屬性。 屬性包含年齡、 性別、 headPose、 微笑、 facialHair、 眼鏡、 表情、 線、 結構、 阻擋、 附屬應用程式、 模糊、 曝光度和雜訊。
+      * 已解壓縮的臉部功能，而不是實際的映像，將會儲存在伺服器上。 FaceId 是臉部功能識別碼，而且會用於[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[面臨-驗證](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [臉部
+      - 尋找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。 它會將偵測呼叫之後的 24 小時後過期。
+      * 較高的臉部影像品質表示較佳的偵測和辨識的精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      * JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。 允許的影像檔案大小是 1KB 從 6 MB。
+      * 其大小為 36 x 36 至 4096x4096 像素時，可偵測的臉部。 如果需要偵測的非常小，但清除臉孔，請嘗試輸入的影像看放大圖。
+      * 最多 64 臉部可以傳回映像。 臉部會從大到小的臉部矩形大小的項目。
+      * 臉部偵測器偏好正面和接近正面的臉部。 有一些臉部可能無法偵測到，例如非常大的臉部角度 （頭部姿勢） 或被阻擋，或錯誤的影像方向的情況。
+      * 屬性 （年齡、 性別、 headPose、 笑臉、 facialHair、 眼鏡、 表情、 線、 結構、 阻擋、 附屬應用程式、 模糊、 風險和雜訊） 可能不完全正確。 HeadPose 的字幅值會是保留的欄位，且一律會傳回 0。
+      * 會提供不同的 'recognitionModel' 值。 如果後續追蹤的作業，例如驗證]，[身分識別，尋找類似您需要，請使用 'recognitionModel' 參數指定辨識模型。 'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。 一旦指定，偵測到的 faceIds 會與指定的辨識模型相關聯。 更多的詳細資訊，請參閱[如何指定辨識模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+    syntax:
+      content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: 可公開觸達之影像的 URL
+        - id: options
+          type:
+            - Models.FaceDetectWithUrlOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceDetectWithUrlResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithUrl_1'
+    name: 'detectWithUrl(string, ServiceCallback<DetectedFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectWithUrl(url: string, callback: ServiceCallback<DetectedFace[]>)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: 可公開觸達之影像的 URL
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceDetectWithUrlResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.constructor'
+    name: Face(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 建立的臉部。
+    syntax:
+      content: 'new Face(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            服務用戶端的參考。
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.findSimilar_2'
+    name: 'findSimilar(string, FaceFindSimilarOptionalParams, ServiceCallback<SimilarFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function findSimilar(faceId: string, options: FaceFindSimilarOptionalParams, callback: ServiceCallback<SimilarFace[]>)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 其查詢臉部的 FaceId。 使用者必須呼叫臉部-偵測第一個取得有效的 faceId。 請注意，此 faceId 不會保存，而且將在到期偵測呼叫之後的 24 小時
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceFindSimilarOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceFindSimilarResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.findSimilar'
+    name: 'findSimilar(string, Models.FaceFindSimilarOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      给定查询人脸的 faceId，用于在 faceId 数组、人脸列表或大型人脸列表中搜索类似的人脸。 faceId 陣列會包含所建立的表面[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，這將會過期建立之後的 24 小時。 「 FaceListId 」 由[FaceList-建立](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b)包含 persistedFaceIds，將不會到期。 和"largeFaceListId 」 由[LargeFaceList-建立](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)包含 persistedFaceIds，也不會過期。 根據輸入傳回類似的臉部清單會包含 faceIds 或 persistedFaceIds 依相似度排序。
+      <br/>尋找類似有兩種使用模式、 「 matchPerson"和"matchFace 」。 「 matchPerson"是預設模式，它會嘗試使用內部的同一個人臨界值，以尋找可能是同一人的臉部。 最好在尋找已知其他相片的人員。 請注意，如果沒有面傳遞的內部臨界值，則會傳回空的清單。 同一個人的臨界值，並傳回還是排名相似臉部，會略過 」 matchFace 」 模式，否則即使的相似度。 它可以使用搜尋尋找名人外觀的情況。
+      <br/>相關聯的查詢臉部 faceId 'recognitionModel' 應該是 'recognitionModel' 目標 faceId 陣列、 臉部清單或大型的臉部清單所使用的相同。
+    syntax:
+      content: 'function findSimilar(faceId: string, options?: Models.FaceFindSimilarOptionalParams)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 其查詢臉部的 FaceId。 使用者必須呼叫臉部-偵測第一個取得有效的 faceId。 請注意，此 faceId 不會保存，而且將在到期偵測呼叫之後的 24 小時
+        - id: options
+          type:
+            - Models.FaceFindSimilarOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceFindSimilarResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.findSimilar_1'
+    name: 'findSimilar(string, ServiceCallback<SimilarFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function findSimilar(faceId: string, callback: ServiceCallback<SimilarFace[]>)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 其查詢臉部的 FaceId。 使用者必須呼叫臉部-偵測第一個取得有效的 faceId。 請注意，此 faceId 不會保存，而且將在到期偵測呼叫之後的 24 小時
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceFindSimilarResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.group'
+    name: 'group(string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      根据人脸相似性将候选人脸划分为组。<br />
+      * 一或多個脫離的臉部群組和 messyGroup 輸出。 臉部群組包含具有類似尋找，通常的同一個人的臉部。 臉部群組會依群組大小，也就是數字的臉部排名。 請注意屬於同一個人的臉部，可能會分成數個群組中的結果。
+      * MessyGroup 是特殊的臉部群組包含找不到任何類似的對應臉部，從原始表面的人臉。 如果所有臉部找不都到其對應項目，則 messyGroup 不會出現在結果中。
+      * 群組 API 最多需要至少 2 個候選項目所面臨到 1000 之間。 我們建議您嘗試[面臨-驗證](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)當您只有 2 的候選項目表面。
+      * 相關聯的查詢臉部 faceIds 'recognitionModel' 應相同。
+    syntax:
+      content: 'function group(faceIds: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 候選 faceId 的陣列建立臉部-偵測。 最大值是 1000年張人臉
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceGroupResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.group_2'
+    name: 'group(string[], RequestOptionsBase, ServiceCallback<GroupResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function group(faceIds: string[], options: RequestOptionsBase, callback: ServiceCallback<GroupResult>)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 候選 faceId 的陣列建立臉部-偵測。 最大值是 1000年張人臉
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.GroupResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceGroupResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.group_1'
+    name: 'group(string[], ServiceCallback<GroupResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function group(faceIds: string[], callback: ServiceCallback<GroupResult>)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 候選 faceId 的陣列建立臉部-偵測。 最大值是 1000年張人臉
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.GroupResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceGroupResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.identify_2'
+    name: 'identify(string[], FaceIdentifyOptionalParams, ServiceCallback<IdentifyResult[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function identify(faceIds: string[], options: FaceIdentifyOptionalParams, callback: ServiceCallback<IdentifyResult[]>)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: '查詢的陣列面臨 faceIds，由所面臨的-偵測。 每個臉部識別獨立。 有效的 faceIds 之間，則 [1，10 個]。'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceIdentifyOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceIdentifyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.identify'
+    name: 'identify(string[], Models.FaceIdentifyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      一对多的识别，用于在人员组或大型人员组中查找与特定查询人脸最接近的匹配项。
+      <br/> 每個臉部 faceIds 陣列中，臉部識別，則會計算查詢臉部與 （根據 personGroupId） 的人員群組中的所有臉部的相似性或大型的人員群組 （largePersonGroupId 所指定），並傳回該排名的臉部的候選借依相似度信心。 應該訓練人員大型群組/使用者群組，使它準備好進行識別。 請參閱中的其他資訊[PersonGroup-訓練](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249)並[LargePersonGroup-訓練](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4)。
+      <br/>
+      備註：<br />
+      * 此演算法可讓多個臉部獨立識別，在相同的要求，但最多 10 個臉部。
+      * [個人/大型群組員] 群組中的每個人可能會有多個臉部，但不是能超過 248 的臉部。
+      * 較高的臉部影像品質表示較佳的識別精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      * MaxNumOfCandidatesReturned 和 confidenceThreshold 會限制傳回的候選值數目。 如果完全沒有人會發現，傳回的候選項目就會是空的陣列。
+      * 請嘗試[臉部-尋找相似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)當您需要尋找類似的臉部，從臉部大型清單/臉部清單而不是個人的大型群組/使用者群組。
+      * 相關聯的查詢臉部 faceIds 'recognitionModel' 應該是 'recognitionModel' 的目標人員群組或大型的人員群組所使用的相同。
+    syntax:
+      content: 'function identify(faceIds: string[], options?: Models.FaceIdentifyOptionalParams)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: '查詢的陣列面臨 faceIds，由所面臨的-偵測。 每個臉部識別獨立。 有效的 faceIds 之間，則 [1，10 個]。'
+        - id: options
+          type:
+            - Models.FaceIdentifyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceIdentifyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.identify_1'
+    name: 'identify(string[], ServiceCallback<IdentifyResult[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function identify(faceIds: string[], callback: ServiceCallback<IdentifyResult[]>)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: '查詢的陣列面臨 faceIds，由所面臨的-偵測。 每個臉部識別獨立。 有效的 faceIds 之間，則 [1，10 個]。'
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceIdentifyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToFace'
+    name: 'verifyFaceToFace(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      验证两张人脸是否属于同一个人，或者一张人脸是否属于某一个人。
+      <br/>
+      備註：<br />
+      * 較高的臉部影像品質表示較佳的識別精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      * 容易精確度的案例中，請自行判斷可信度。
+      * 相關聯的查詢臉部 faceIds 'recognitionModel' 應該是 'recognitionModel' 目標臉部、 人員群組或大型的人員群組所使用的相同。
+    syntax:
+      content: 'function verifyFaceToFace(faceId1: string, faceId2: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: faceId1
+          type:
+            - string
+          description: faceId 的第一個的字體，來自臉部-偵測
+        - id: faceId2
+          type:
+            - string
+          description: 第二個臉部的 faceId 來自臉部-偵測
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToFaceResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToFace_2'
+    name: 'verifyFaceToFace(string, string, RequestOptionsBase, ServiceCallback<VerifyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function verifyFaceToFace(faceId1: string, faceId2: string, options: RequestOptionsBase, callback: ServiceCallback<VerifyResult>)'
+      parameters:
+        - id: faceId1
+          type:
+            - string
+          description: faceId 的第一個的字體，來自臉部-偵測
+        - id: faceId2
+          type:
+            - string
+          description: 第二個臉部的 faceId 來自臉部-偵測
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToFaceResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToFace_1'
+    name: 'verifyFaceToFace(string, string, ServiceCallback<VerifyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function verifyFaceToFace(faceId1: string, faceId2: string, callback: ServiceCallback<VerifyResult>)'
+      parameters:
+        - id: faceId1
+          type:
+            - string
+          description: faceId 的第一個的字體，來自臉部-偵測
+        - id: faceId2
+          type:
+            - string
+          description: 第二個臉部的 faceId 來自臉部-偵測
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToFaceResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToPerson_2'
+    name: 'verifyFaceToPerson(string, string, FaceVerifyFaceToPersonOptionalParams, ServiceCallback<VerifyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function verifyFaceToPerson(faceId: string, personId: string, options: FaceVerifyFaceToPersonOptionalParams, callback: ServiceCallback<VerifyResult>)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: FaceId 的字體，來自臉部-偵測
+        - id: personId
+          type:
+            - string
+          description: 指定特定人員人群組或大型的人員群組。 personId 建立 PersonGroup 親自-建立或 LargePersonGroup 個人所建立。
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceVerifyFaceToPersonOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToPersonResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToPerson'
+    name: 'verifyFaceToPerson(string, string, Models.FaceVerifyFaceToPersonOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 請確認是否兩張臉部是屬於同一個人。 比較臉部識別碼人員識別碼
+    syntax:
+      content: 'function verifyFaceToPerson(faceId: string, personId: string, options?: Models.FaceVerifyFaceToPersonOptionalParams)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: FaceId 的字體，來自臉部-偵測
+        - id: personId
+          type:
+            - string
+          description: 指定特定人員人群組或大型的人員群組。 personId 建立 PersonGroup 親自-建立或 LargePersonGroup 個人所建立。
+        - id: options
+          type:
+            - Models.FaceVerifyFaceToPersonOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToPersonResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToPerson_1'
+    name: 'verifyFaceToPerson(string, string, ServiceCallback<VerifyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function verifyFaceToPerson(faceId: string, personId: string, callback: ServiceCallback<VerifyResult>)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: FaceId 的字體，來自臉部-偵測
+        - id: personId
+          type:
+            - string
+          description: 指定特定人員人群組或大型的人員群組。 personId 建立 PersonGroup 親自-建立或 LargePersonGroup 個人所建立。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToPersonResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+    name: 'DetectedFace[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DetectedFace
+        fullName: DetectedFace
+        uid: '@azure/cognitiveservices-face.DetectedFace'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams'
+    name: FaceDetectWithStreamOptionalParams
+    spec.typeScript:
+      - name: FaceDetectWithStreamOptionalParams
+        fullName: FaceDetectWithStreamOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams'
+  - uid: '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams'
+    name: FaceDetectWithUrlOptionalParams
+    spec.typeScript:
+      - name: FaceDetectWithUrlOptionalParams
+        fullName: FaceDetectWithUrlOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
+    name: 'SimilarFace[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SimilarFace
+        fullName: SimilarFace
+        uid: '@azure/cognitiveservices-face.SimilarFace'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.FaceFindSimilarOptionalParams'
+    name: FaceFindSimilarOptionalParams
+    spec.typeScript:
+      - name: FaceFindSimilarOptionalParams
+        fullName: FaceFindSimilarOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceFindSimilarOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.GroupResult>
+    name: GroupResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GroupResult
+        fullName: GroupResult
+        uid: '@azure/cognitiveservices-face.GroupResult'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
+    name: 'IdentifyResult[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: IdentifyResult
+        fullName: IdentifyResult
+        uid: '@azure/cognitiveservices-face.IdentifyResult'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.FaceIdentifyOptionalParams'
+    name: FaceIdentifyOptionalParams
+    spec.typeScript:
+      - name: FaceIdentifyOptionalParams
+        fullName: FaceIdentifyOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceIdentifyOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+    name: VerifyResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VerifyResult
+        fullName: VerifyResult
+        uid: '@azure/cognitiveservices-face.VerifyResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-face.FaceVerifyFaceToPersonOptionalParams'
+    name: FaceVerifyFaceToPersonOptionalParams
+    spec.typeScript:
+      - name: FaceVerifyFaceToPersonOptionalParams
+        fullName: FaceVerifyFaceToPersonOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceVerifyFaceToPersonOptionalParams'
