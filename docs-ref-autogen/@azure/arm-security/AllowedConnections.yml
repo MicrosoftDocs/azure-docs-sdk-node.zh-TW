@@ -1,0 +1,423 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-security.AllowedConnections'
+    name: AllowedConnections
+    fullName: AllowedConnections
+    children:
+      - '@azure/arm-security.AllowedConnections.constructor'
+      - '@azure/arm-security.AllowedConnections.get'
+      - '@azure/arm-security.AllowedConnections.get_2'
+      - '@azure/arm-security.AllowedConnections.get_1'
+      - '@azure/arm-security.AllowedConnections.list'
+      - '@azure/arm-security.AllowedConnections.list_2'
+      - '@azure/arm-security.AllowedConnections.list_1'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegion'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegion_2'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegion_1'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegionNext'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegionNext_2'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegionNext_1'
+      - '@azure/arm-security.AllowedConnections.listNext'
+      - '@azure/arm-security.AllowedConnections.listNext_2'
+      - '@azure/arm-security.AllowedConnections.listNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="85965-101">此類別代表 AllowedConnections。</span><span class="sxs-lookup"><span data-stu-id="85965-101">Class representing a AllowedConnections.</span></span>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.constructor'
+    name: AllowedConnections(SecurityCenterContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="85965-102">建立 AllowedConnections。</span><span class="sxs-lookup"><span data-stu-id="85965-102">Create a AllowedConnections.</span></span>
+    syntax:
+      content: 'new AllowedConnections(client: SecurityCenterContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-security.SecurityCenterContext'
+          description: |
+            <span data-ttu-id="85965-103">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="85965-103">Reference to the service client.</span></span>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.get'
+    name: 'get(string, Models.ConnectionType, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="85965-104">取得所有可能與之間的流量訂用帳戶資源的位置，根據連接類型清單。</span><span class="sxs-lookup"><span data-stu-id="85965-104">Gets the list of all possible traffic between resources for the subscription and location, based on connection type.</span></span>'
+    syntax:
+      content: 'function get(resourceGroupName: string, connectionType: Models.ConnectionType, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="85965-105">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="85965-105">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="85965-106">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="85965-106">The name is case insensitive.</span></span>
+        - id: connectionType
+          type:
+            - Models.ConnectionType
+          description: '<span data-ttu-id="85965-107">允許的連線 （內部、 外部） 的型別。</span><span class="sxs-lookup"><span data-stu-id="85965-107">The type of allowed connections (Internal, External).</span></span> <span data-ttu-id="85965-108">可能的值包括：「 內部 」、 「 外部 」</span><span class="sxs-lookup"><span data-stu-id="85965-108">Possible values include: ''Internal'', ''External''</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsGetResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.get_2'
+    name: 'get(string, Models.ConnectionType, RequestOptionsBase, ServiceCallback<AllowedConnectionsResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, connectionType: Models.ConnectionType, options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="85965-109">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="85965-109">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="85965-110">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="85965-110">The name is case insensitive.</span></span>
+        - id: connectionType
+          type:
+            - Models.ConnectionType
+          description: '<span data-ttu-id="85965-111">允許的連線 （內部、 外部） 的型別。</span><span class="sxs-lookup"><span data-stu-id="85965-111">The type of allowed connections (Internal, External).</span></span> <span data-ttu-id="85965-112">可能的值包括：「 內部 」、 「 外部 」</span><span class="sxs-lookup"><span data-stu-id="85965-112">Possible values include: ''Internal'', ''External''</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="85965-113">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="85965-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsResource>
+          description: |
+            <span data-ttu-id="85965-114">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsGetResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.get_1'
+    name: 'get(string, Models.ConnectionType, ServiceCallback<AllowedConnectionsResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, connectionType: Models.ConnectionType, callback: ServiceCallback<AllowedConnectionsResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="85965-115">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="85965-115">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="85965-116">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="85965-116">The name is case insensitive.</span></span>
+        - id: connectionType
+          type:
+            - Models.ConnectionType
+          description: '<span data-ttu-id="85965-117">允許的連線 （內部、 外部） 的型別。</span><span class="sxs-lookup"><span data-stu-id="85965-117">The type of allowed connections (Internal, External).</span></span> <span data-ttu-id="85965-118">可能的值包括：「 內部 」、 「 外部 」</span><span class="sxs-lookup"><span data-stu-id="85965-118">Possible values include: ''Internal'', ''External''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsResource>
+          description: |
+            <span data-ttu-id="85965-119">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-119">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsGetResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="85965-120">取得訂用帳戶的資源之間的所有可能資料傳輸的清單</span><span class="sxs-lookup"><span data-stu-id="85965-120">Gets the list of all possible traffic between resources for the subscription</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="85965-121">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="85965-121">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="85965-122">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-122">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.list_1'
+    name: list(ServiceCallback<AllowedConnectionsList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="85965-123">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-123">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegion'
+    name: listByHomeRegion(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="85965-124">取得所有可能與之間的流量的訂用帳戶資源的位置清單。</span><span class="sxs-lookup"><span data-stu-id="85965-124">Gets the list of all possible traffic between resources for the subscription and location.</span></span>
+    syntax:
+      content: 'function listByHomeRegion(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegion_2'
+    name: 'listByHomeRegion(RequestOptionsBase, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByHomeRegion(options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="85965-125">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="85965-125">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="85965-126">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegion_1'
+    name: listByHomeRegion(ServiceCallback<AllowedConnectionsList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByHomeRegion(callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="85965-127">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-127">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegionNext'
+    name: 'listByHomeRegionNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="85965-128">取得所有可能與之間的流量的訂用帳戶資源的位置清單。</span><span class="sxs-lookup"><span data-stu-id="85965-128">Gets the list of all possible traffic between resources for the subscription and location.</span></span>
+    syntax:
+      content: 'function listByHomeRegionNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="85965-129">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="85965-129">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegionNext_2'
+    name: 'listByHomeRegionNext(string, RequestOptionsBase, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByHomeRegionNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="85965-130">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="85965-130">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="85965-131">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="85965-131">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="85965-132">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-132">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegionNext_1'
+    name: 'listByHomeRegionNext(string, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByHomeRegionNext(nextPageLink: string, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="85965-133">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="85965-133">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="85965-134">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-134">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="85965-135">取得訂用帳戶的資源之間的所有可能資料傳輸的清單</span><span class="sxs-lookup"><span data-stu-id="85965-135">Gets the list of all possible traffic between resources for the subscription</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="85965-136">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="85965-136">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="85965-137">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="85965-137">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="85965-138">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="85965-138">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="85965-139">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listNext_1'
+    name: 'listNext(string, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="85965-140">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="85965-140">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="85965-141">回呼</span><span class="sxs-lookup"><span data-stu-id="85965-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListNextResponse>
+    package: '@azure/arm-security'
+references:
+  - uid: '@azure/arm-security.SecurityCenterContext'
+    name: SecurityCenterContext
+    spec.typeScript:
+      - name: SecurityCenterContext
+        fullName: SecurityCenterContext
+        uid: '@azure/arm-security.SecurityCenterContext'
+  - uid: ServiceCallback<@azure/arm-security.AllowedConnectionsResource>
+    name: AllowedConnectionsResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AllowedConnectionsResource
+        fullName: AllowedConnectionsResource
+        uid: '@azure/arm-security.AllowedConnectionsResource'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+    name: AllowedConnectionsList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AllowedConnectionsList
+        fullName: AllowedConnectionsList
+        uid: '@azure/arm-security.AllowedConnectionsList'
+      - name: '>'
+        fullName: '>'

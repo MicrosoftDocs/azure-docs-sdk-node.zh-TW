@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    fullName: JobExecutionInformation
+    children:
+      - '@azure/batch.JobExecutionInformation.endTime'
+      - '@azure/batch.JobExecutionInformation.poolId'
+      - '@azure/batch.JobExecutionInformation.schedulingError'
+      - '@azure/batch.JobExecutionInformation.startTime'
+      - '@azure/batch.JobExecutionInformation.terminateReason'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ddb87-101">代表 JobExecutionInformation 的介面。</span><span class="sxs-lookup"><span data-stu-id="ddb87-101">An interface representing JobExecutionInformation.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ddb87-102">工作的完成時間。</span><span class="sxs-lookup"><span data-stu-id="ddb87-102">The completion time of the job.</span></span> <span data-ttu-id="ddb87-103">只有當工作處於已完成狀態時，才設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="ddb87-103">This property is set only if the job is in the completed state.</span></span>
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ddb87-104">指派給此作業的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="ddb87-104">The ID of the pool to which this job is assigned.</span></span> <span data-ttu-id="ddb87-105">此元素會包含實際的集區指派作業的位置。</span><span class="sxs-lookup"><span data-stu-id="ddb87-105">This element contains the actual pool where the job is assigned.</span></span> <span data-ttu-id="ddb87-106">當您從服務取得工作詳細資料時，當中也包含 poolInfo 項目，其中包含從集區組態資料，當新增或更新作業。</span><span class="sxs-lookup"><span data-stu-id="ddb87-106">When you get job details from the service, they also contain a poolInfo element, which contains the pool configuration data from when the job was added or updated.</span></span>
+      <span data-ttu-id="ddb87-107">該 poolInfo 項目也可能包含 poolId 項目。</span><span class="sxs-lookup"><span data-stu-id="ddb87-107">That poolInfo element may also contain a poolId element.</span></span> <span data-ttu-id="ddb87-108">若是如此，兩個識別碼都相同。</span><span class="sxs-lookup"><span data-stu-id="ddb87-108">If it does, the two IDs are the same.</span></span>
+      <span data-ttu-id="ddb87-109">如果不存在，表示自動集區上執行的工作和此屬性包含該自動集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="ddb87-109">If it does not, it means the job ran on an auto pool, and this property contains the ID of that auto pool.</span></span>
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.schedulingError'
+    name: schedulingError
+    fullName: schedulingError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ddb87-110">正在啟動工作的服務所發生任何錯誤的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="ddb87-110">Details of any error encountered by the service in starting the job.</span></span> <span data-ttu-id="ddb87-111">正在啟動工作的任何錯誤，則未設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="ddb87-111">This property is not set if there was no error starting the job.</span></span>
+    optional: true
+    syntax:
+      content: 'schedulingError?: JobSchedulingError'
+      return:
+        type:
+          - '@azure/batch.JobSchedulingError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ddb87-112">工作的開始時間。</span><span class="sxs-lookup"><span data-stu-id="ddb87-112">The start time of the job.</span></span> <span data-ttu-id="ddb87-113">這是作業的建立時間。</span><span class="sxs-lookup"><span data-stu-id="ddb87-113">This is the time at which the job was created.</span></span>
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.terminateReason'
+    name: terminateReason
+    fullName: terminateReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ddb87-114">結束字串，描述作業的原因。</span><span class="sxs-lookup"><span data-stu-id="ddb87-114">A string describing the reason the job ended.</span></span> <span data-ttu-id="ddb87-115">只有當工作處於已完成狀態時，才設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="ddb87-115">This property is set only if the job is in the completed state.</span></span> <span data-ttu-id="ddb87-116">如果批次服務將終止該作業，它會設定原因，如下所示：JMComplete-作業管理員工作完成，以及 「 killjoboncompletion 」 已設定為 true。</span><span class="sxs-lookup"><span data-stu-id="ddb87-116">If the Batch service terminates the job, it sets the reason as follows: JMComplete - the Job Manager task completed, and killJobOnCompletion was set to true.</span></span>
+      <span data-ttu-id="ddb87-117">MaxWallClockTimeExpiry-作業已達到其 maxWallClockTime 條件約束。</span><span class="sxs-lookup"><span data-stu-id="ddb87-117">MaxWallClockTimeExpiry - the job reached its maxWallClockTime constraint.</span></span> <span data-ttu-id="ddb87-118">TerminateJobSchedule</span><span class="sxs-lookup"><span data-stu-id="ddb87-118">TerminateJobSchedule</span></span>
+      - <span data-ttu-id="ddb87-119">工作排程的一部分執行，並排程終止。</span><span class="sxs-lookup"><span data-stu-id="ddb87-119">the job ran as part of a schedule, and the schedule terminated.</span></span> <span data-ttu-id="ddb87-120">AllTasksComplete-作業的 onAllTasksComplete 屬性設定為 terminatejob，並在作業中的所有工作都都完成。</span><span class="sxs-lookup"><span data-stu-id="ddb87-120">AllTasksComplete - the job's onAllTasksComplete attribute is set to terminatejob, and all tasks in the job are complete.</span></span>
+      <span data-ttu-id="ddb87-121">TaskFailed-作業的 onTaskFailure 屬性設定為 performExitOptionsJobAction 和失敗的結束條件指定的 terminatejob jobAction 作業中的工作。</span><span class="sxs-lookup"><span data-stu-id="ddb87-121">TaskFailed - the job's onTaskFailure attribute is set to performExitOptionsJobAction, and a task in the job failed with an exit condition that specified a jobAction of terminatejob.</span></span> <span data-ttu-id="ddb87-122">任何其他字串就是使用者定義的原因 '終止作業' 的作業呼叫中指定。</span><span class="sxs-lookup"><span data-stu-id="ddb87-122">Any other string is a user-defined reason specified in a call to the 'Terminate a job' operation.</span></span>
+    optional: true
+    syntax:
+      content: 'terminateReason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobSchedulingError'
+    name: JobSchedulingError
+    spec.typeScript:
+      - name: JobSchedulingError
+        fullName: JobSchedulingError
+        uid: '@azure/batch.JobSchedulingError'

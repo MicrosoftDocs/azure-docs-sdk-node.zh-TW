@@ -1,0 +1,731 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.Outputs'
+    name: Outputs
+    fullName: Outputs
+    children:
+      - '@azure/arm-streamanalytics.Outputs.beginTest'
+      - '@azure/arm-streamanalytics.Outputs.createOrReplace'
+      - '@azure/arm-streamanalytics.Outputs.createOrReplace_2'
+      - '@azure/arm-streamanalytics.Outputs.createOrReplace_1'
+      - '@azure/arm-streamanalytics.Outputs.deleteMethod'
+      - '@azure/arm-streamanalytics.Outputs.deleteMethod_2'
+      - '@azure/arm-streamanalytics.Outputs.deleteMethod_1'
+      - '@azure/arm-streamanalytics.Outputs.get'
+      - '@azure/arm-streamanalytics.Outputs.get_2'
+      - '@azure/arm-streamanalytics.Outputs.get_1'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJob'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJob_2'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJob_1'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext_2'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext_1'
+      - '@azure/arm-streamanalytics.Outputs.constructor'
+      - '@azure/arm-streamanalytics.Outputs.test'
+      - '@azure/arm-streamanalytics.Outputs.update'
+      - '@azure/arm-streamanalytics.Outputs.update_2'
+      - '@azure/arm-streamanalytics.Outputs.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="23be1-101">此類別代表輸出。</span><span class="sxs-lookup"><span data-stu-id="23be1-101">Class representing a Outputs.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.beginTest'
+    name: 'beginTest(string, string, string, Models.OutputsBeginTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-102">測試是否為輸出的資料來源連線，並可供 Azure Stream Analytics 服務。</span><span class="sxs-lookup"><span data-stu-id="23be1-102">Tests whether an output’s datasource is reachable and usable by the Azure Stream Analytics service.</span></span>
+    syntax:
+      content: 'function beginTest(resourceGroupName: string, jobName: string, outputName: string, options?: Models.OutputsBeginTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-103">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-104">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-105">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-105">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-106">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-106">The name of the output.</span></span>
+        - id: options
+          type:
+            - Models.OutputsBeginTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.createOrReplace'
+    name: 'createOrReplace(Output, string, string, string, Models.OutputsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-107">建立輸出，或取代現有的串流作業下的現有輸出。</span><span class="sxs-lookup"><span data-stu-id="23be1-107">Creates an output or replaces an already existing output under an existing streaming job.</span></span>
+    syntax:
+      content: 'function createOrReplace(output: Output, resourceGroupName: string, jobName: string, outputName: string, options?: Models.OutputsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="23be1-108">輸出會用來建立新的輸出，或取代現有串流作業下的定義。</span><span class="sxs-lookup"><span data-stu-id="23be1-108">The definition of the output that will be used to create a new output or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-109">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-110">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-111">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-111">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-112">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-112">The name of the output.</span></span>
+        - id: options
+          type:
+            - Models.OutputsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.createOrReplace_2'
+    name: 'createOrReplace(Output, string, string, string, OutputsCreateOrReplaceOptionalParams, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(output: Output, resourceGroupName: string, jobName: string, outputName: string, options: OutputsCreateOrReplaceOptionalParams, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="23be1-113">輸出會用來建立新的輸出，或取代現有串流作業下的定義。</span><span class="sxs-lookup"><span data-stu-id="23be1-113">The definition of the output that will be used to create a new output or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-114">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-114">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-115">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-115">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-116">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-116">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-117">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-117">The name of the output.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.OutputsCreateOrReplaceOptionalParams'
+          description: <span data-ttu-id="23be1-118">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="23be1-118">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="23be1-119">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-119">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.createOrReplace_1'
+    name: 'createOrReplace(Output, string, string, string, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(output: Output, resourceGroupName: string, jobName: string, outputName: string, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="23be1-120">輸出會用來建立新的輸出，或取代現有串流作業下的定義。</span><span class="sxs-lookup"><span data-stu-id="23be1-120">The definition of the output that will be used to create a new output or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-121">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-121">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-122">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-122">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-123">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-123">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-124">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-124">The name of the output.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="23be1-125">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-125">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-126">刪除串流工作的輸出。</span><span class="sxs-lookup"><span data-stu-id="23be1-126">Deletes an output from the streaming job.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, outputName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-127">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-127">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-128">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-128">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-129">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-129">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-130">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-130">The name of the output.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, outputName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-131">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-131">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-132">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-132">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-133">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-133">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-134">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-134">The name of the output.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="23be1-135">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="23be1-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="23be1-136">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-136">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, outputName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-137">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-137">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-138">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-138">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-139">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-139">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-140">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-140">The name of the output.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="23be1-141">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-141">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-142">取得指定輸出的相關詳細資料。</span><span class="sxs-lookup"><span data-stu-id="23be1-142">Gets details about the specified output.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, outputName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-143">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-143">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-144">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-144">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-145">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-145">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-146">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-146">The name of the output.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, outputName: string, options: RequestOptionsBase, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-147">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-147">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-148">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-148">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-149">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-149">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-150">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-150">The name of the output.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="23be1-151">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="23be1-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="23be1-152">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.get_1'
+    name: 'get(string, string, string, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, outputName: string, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-153">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-153">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-154">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-154">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-155">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-155">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-156">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-156">The name of the output.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="23be1-157">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJob'
+    name: 'listByStreamingJob(string, string, Models.OutputsListByStreamingJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-158">列出所有在指定的資料流工作輸出。</span><span class="sxs-lookup"><span data-stu-id="23be1-158">Lists all of the outputs under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options?: Models.OutputsListByStreamingJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-159">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-159">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-160">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-160">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-161">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-161">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.OutputsListByStreamingJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJob_2'
+    name: 'listByStreamingJob(string, string, OutputsListByStreamingJobOptionalParams, ServiceCallback<OutputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options: OutputsListByStreamingJobOptionalParams, callback: ServiceCallback<OutputListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-162">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-162">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-163">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-163">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-164">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-164">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.OutputsListByStreamingJobOptionalParams'
+          description: <span data-ttu-id="23be1-165">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="23be1-165">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+          description: |
+            <span data-ttu-id="23be1-166">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJob_1'
+    name: 'listByStreamingJob(string, string, ServiceCallback<OutputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, callback: ServiceCallback<OutputListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-167">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-167">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-168">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-168">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-169">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-169">The name of the streaming job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+          description: |
+            <span data-ttu-id="23be1-170">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext'
+    name: 'listByStreamingJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-171">列出所有在指定的資料流工作輸出。</span><span class="sxs-lookup"><span data-stu-id="23be1-171">Lists all of the outputs under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23be1-172">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="23be1-172">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext_2'
+    name: 'listByStreamingJobNext(string, RequestOptionsBase, ServiceCallback<OutputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<OutputListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23be1-173">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="23be1-173">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="23be1-174">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="23be1-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+          description: |
+            <span data-ttu-id="23be1-175">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext_1'
+    name: 'listByStreamingJobNext(string, ServiceCallback<OutputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, callback: ServiceCallback<OutputListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23be1-176">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="23be1-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+          description: |
+            <span data-ttu-id="23be1-177">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.constructor'
+    name: Outputs(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-178">建立輸出。</span><span class="sxs-lookup"><span data-stu-id="23be1-178">Create a Outputs.</span></span>
+    syntax:
+      content: 'new Outputs(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            <span data-ttu-id="23be1-179">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="23be1-179">Reference to the service client.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.test'
+    name: 'test(string, string, string, Models.OutputsTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-180">測試是否為輸出的資料來源連線，並可供 Azure Stream Analytics 服務。</span><span class="sxs-lookup"><span data-stu-id="23be1-180">Tests whether an output’s datasource is reachable and usable by the Azure Stream Analytics service.</span></span>
+    syntax:
+      content: 'function test(resourceGroupName: string, jobName: string, outputName: string, options?: Models.OutputsTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-181">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-182">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-183">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-183">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-184">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-184">The name of the output.</span></span>
+        - id: options
+          type:
+            - Models.OutputsTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsTestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.update'
+    name: 'update(Output, string, string, string, Models.OutputsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23be1-185">更新現有的輸出，在現有串流作業。</span><span class="sxs-lookup"><span data-stu-id="23be1-185">Updates an existing output under an existing streaming job.</span></span> <span data-ttu-id="23be1-186">這可以用來部分更新 （即</span><span class="sxs-lookup"><span data-stu-id="23be1-186">This can be used to partially update (ie.</span></span> <span data-ttu-id="23be1-187">更新一個或兩個屬性） 的輸出，而不會影響到其餘的作業或輸出的定義。</span><span class="sxs-lookup"><span data-stu-id="23be1-187">update one or two properties) an output without affecting the rest the job or output definition.</span></span>
+    syntax:
+      content: 'function update(output: Output, resourceGroupName: string, jobName: string, outputName: string, options?: Models.OutputsUpdateOptionalParams)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="23be1-188">輸出物件。</span><span class="sxs-lookup"><span data-stu-id="23be1-188">An Output object.</span></span> <span data-ttu-id="23be1-189">此處指定的屬性將會覆寫現有的輸出 （即中對應的屬性這些屬性將會更新）。</span><span class="sxs-lookup"><span data-stu-id="23be1-189">The properties specified here will overwrite the corresponding properties in the existing output (ie. Those properties will be updated).</span></span> <span data-ttu-id="23be1-190">這裡會設定為 null 的任何屬性表示現有的輸出中的對應屬性會維持不變，並不會變更此補充程式作業。</span><span class="sxs-lookup"><span data-stu-id="23be1-190">Any properties that are set to null here will mean that the corresponding property in the existing output will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-191">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-191">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-192">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-192">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-193">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-193">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-194">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-194">The name of the output.</span></span>
+        - id: options
+          type:
+            - Models.OutputsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.update_2'
+    name: 'update(Output, string, string, string, OutputsUpdateOptionalParams, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(output: Output, resourceGroupName: string, jobName: string, outputName: string, options: OutputsUpdateOptionalParams, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="23be1-195">輸出物件。</span><span class="sxs-lookup"><span data-stu-id="23be1-195">An Output object.</span></span> <span data-ttu-id="23be1-196">此處指定的屬性將會覆寫現有的輸出 （即中對應的屬性這些屬性將會更新）。</span><span class="sxs-lookup"><span data-stu-id="23be1-196">The properties specified here will overwrite the corresponding properties in the existing output (ie. Those properties will be updated).</span></span> <span data-ttu-id="23be1-197">這裡會設定為 null 的任何屬性表示現有的輸出中的對應屬性會維持不變，並不會變更此補充程式作業。</span><span class="sxs-lookup"><span data-stu-id="23be1-197">Any properties that are set to null here will mean that the corresponding property in the existing output will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-198">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-198">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-199">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-199">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-200">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-200">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-201">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-201">The name of the output.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.OutputsUpdateOptionalParams'
+          description: <span data-ttu-id="23be1-202">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="23be1-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="23be1-203">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.update_1'
+    name: 'update(Output, string, string, string, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(output: Output, resourceGroupName: string, jobName: string, outputName: string, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="23be1-204">輸出物件。</span><span class="sxs-lookup"><span data-stu-id="23be1-204">An Output object.</span></span> <span data-ttu-id="23be1-205">此處指定的屬性將會覆寫現有的輸出 （即中對應的屬性這些屬性將會更新）。</span><span class="sxs-lookup"><span data-stu-id="23be1-205">The properties specified here will overwrite the corresponding properties in the existing output (ie. Those properties will be updated).</span></span> <span data-ttu-id="23be1-206">這裡會設定為 null 的任何屬性表示現有的輸出中的對應屬性會維持不變，並不會變更此補充程式作業。</span><span class="sxs-lookup"><span data-stu-id="23be1-206">Any properties that are set to null here will mean that the corresponding property in the existing output will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-207">包含資源的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-207">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23be1-208">您可以從 Azure 資源管理員 API 或入口網站取得這個值。</span><span class="sxs-lookup"><span data-stu-id="23be1-208">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-209">串流工作的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-209">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="23be1-210">輸出的名稱。</span><span class="sxs-lookup"><span data-stu-id="23be1-210">The name of the output.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="23be1-211">回呼</span><span class="sxs-lookup"><span data-stu-id="23be1-211">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.Output'
+    name: Output
+    spec.typeScript:
+      - name: Output
+        fullName: Output
+        uid: '@azure/arm-streamanalytics.Output'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.Output>
+    name: Output>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Output
+        fullName: Output
+        uid: '@azure/arm-streamanalytics.Output'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.OutputsCreateOrReplaceOptionalParams'
+    name: OutputsCreateOrReplaceOptionalParams
+    spec.typeScript:
+      - name: OutputsCreateOrReplaceOptionalParams
+        fullName: OutputsCreateOrReplaceOptionalParams
+        uid: '@azure/arm-streamanalytics.OutputsCreateOrReplaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+    name: OutputListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OutputListResult
+        fullName: OutputListResult
+        uid: '@azure/arm-streamanalytics.OutputListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.OutputsListByStreamingJobOptionalParams'
+    name: OutputsListByStreamingJobOptionalParams
+    spec.typeScript:
+      - name: OutputsListByStreamingJobOptionalParams
+        fullName: OutputsListByStreamingJobOptionalParams
+        uid: '@azure/arm-streamanalytics.OutputsListByStreamingJobOptionalParams'
+  - uid: '@azure/arm-streamanalytics.OutputsUpdateOptionalParams'
+    name: OutputsUpdateOptionalParams
+    spec.typeScript:
+      - name: OutputsUpdateOptionalParams
+        fullName: OutputsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.OutputsUpdateOptionalParams'

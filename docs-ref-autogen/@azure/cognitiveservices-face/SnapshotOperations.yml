@@ -1,0 +1,666 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations'
+    name: SnapshotOperations
+    fullName: SnapshotOperations
+    children:
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="de732-101">此類別代表 SnapshotOperations。</span><span class="sxs-lookup"><span data-stu-id="de732-101">Class representing a SnapshotOperations.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply'
+    name: 'apply(string, string, Models.SnapshotApplyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="de732-102">提交作業，以套用至目前的訂用帳戶的快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-102">Submit an operation to apply a snapshot to current subscription.</span></span> <span data-ttu-id="de732-103">每個快照集，只有中訂用帳戶中的快照集-applyScope 包含 Take 可以套用它。</span><span class="sxs-lookup"><span data-stu-id="de732-103">For each snapshot, only subscriptions included in the applyScope of Snapshot - Take can apply it.</span></span><br />
+      <span data-ttu-id="de732-104">快照集介面是提供給使用者來備份和還原他們的臉部資料從一個面訂用帳戶，到另一個，在相同區域內或跨區域。</span><span class="sxs-lookup"><span data-stu-id="de732-104">The snapshot interfaces are for users to backup and restore their face data from one face subscription to another, inside same region or across regions.</span></span> <span data-ttu-id="de732-105">工作流程包含兩個階段，快照集-攜帶至建立來源物件的複本，並將它儲存為快照集，然後呼叫快照集的使用者第一次呼叫-套用於貼上到目標訂用帳戶的快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-105">The workflow contains two phases, user first calls Snapshot - Take to create a copy of the source object and store it as a snapshot, then calls Snapshot - Apply to paste the snapshot to target subscription.</span></span> <span data-ttu-id="de732-106">快照集會儲存在集中位置 （每個 Azure 的執行個體），以便它們可以套用跨帳戶和區域。</span><span class="sxs-lookup"><span data-stu-id="de732-106">The snapshots are stored in a centralized location (per Azure instance), so that they can be applied cross accounts and regions.</span></span><br />
+      <span data-ttu-id="de732-107">套用快照集是非同步作業。</span><span class="sxs-lookup"><span data-stu-id="de732-107">Applying snapshot is an asynchronous operation.</span></span> <span data-ttu-id="de732-108">從回應標頭，以用於 OperationStatus-Get 追蹤套用快照集的進度時的 「 作業-位置 」 欄位，可以取得作業識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-108">An operation id can be obtained from the "Operation-Location" field in response header, to be used in OperationStatus - Get for tracking the progress of applying the snapshot.</span></span> <span data-ttu-id="de732-109">目標物件識別碼會納入 OperationStatus-取得回應時的作業狀態為 「 成功 」 的 「 resourceLocation"欄位。</span><span class="sxs-lookup"><span data-stu-id="de732-109">The target object id will be included in the "resourceLocation" field in OperationStatus - Get response when the operation status is "succeeded".</span></span><br />
+      <span data-ttu-id="de732-110">套用時間的快照集的快照集物件中的人員和臉部項目數而定。</span><span class="sxs-lookup"><span data-stu-id="de732-110">Snapshot applying time depends on the number of person and face entries in the snapshot object.</span></span>
+      <span data-ttu-id="de732-111">它可能正在進行中 （秒），或註冊為 1 小時 1,000,000 多個臉部的人員。</span><span class="sxs-lookup"><span data-stu-id="de732-111">It could be in seconds, or up to 1 hour for 1,000,000 persons with multiple faces.</span></span><br />
+      <span data-ttu-id="de732-112">會自動過期並由快照集建立後的 48 小時內清除快照集</span><span class="sxs-lookup"><span data-stu-id="de732-112">Snapshots will be automatically expired and cleaned in 48 hours after it is created by Snapshot</span></span>
+      - <span data-ttu-id="de732-113">需要。</span><span class="sxs-lookup"><span data-stu-id="de732-113">Take.</span></span> <span data-ttu-id="de732-114">因此目標訂用帳戶，才能套用自建立後的 48 小時內的快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-114">So the target subscription is required to apply the snapshot in 48 hours since its creation.</span></span><br />
+      <span data-ttu-id="de732-115">套用快照集將不會封鎖對目標的任何其他作業的物件，不過它不建議，因為套用快照集期間無法保證其正確性。</span><span class="sxs-lookup"><span data-stu-id="de732-115">Applying a snapshot will not block any other operations against the target object, however it is not recommended because the correctness cannot be guaranteed during snapshot applying.</span></span> <span data-ttu-id="de732-116">套用快照集完成後，針對 目標物件的所有作業可以正常都運作。</span><span class="sxs-lookup"><span data-stu-id="de732-116">After snapshot applying is completed, all operations towards the target object can work as normal.</span></span>
+      <span data-ttu-id="de732-117">快照集也包含來源物件，這表示目標訂用帳戶的快照集套用至不會需要重新訓練目標物件之前呼叫身分識別/FindSimilar 訓練結果。</span><span class="sxs-lookup"><span data-stu-id="de732-117">Snapshot also includes the training results of the source object, which means target subscription the snapshot applied to does not need re-train the target object before calling Identify/FindSimilar.</span></span><br />
+      <span data-ttu-id="de732-118">其中一個快照集時，可以套用多次以平行方式，支援目前只有 CreateNew 套用模式，這表示如果目標訂用帳戶已經包含的物件相同類型及使用相同的 objectId，套用作業將會失敗。</span><span class="sxs-lookup"><span data-stu-id="de732-118">One snapshot can be applied multiple times in parallel, while currently only CreateNew apply mode is supported, which means the apply operation will fail if target subscription already contains an object of same type and using the same objectId.</span></span> <span data-ttu-id="de732-119">若要避免這類衝突的要求本文中，使用者可以指定"objectId"。</span><span class="sxs-lookup"><span data-stu-id="de732-119">Users can specify the "objectId" in request body to avoid such conflicts.</span></span><br />
+      * <span data-ttu-id="de732-120">免費層訂用帳戶配額：100 適用於每月作業數。</span><span class="sxs-lookup"><span data-stu-id="de732-120">Free-tier subscription quota: 100 apply operations per month.</span></span>
+      * <span data-ttu-id="de732-121">S0 層訂用帳戶配額：100 套用每日的作業。</span><span class="sxs-lookup"><span data-stu-id="de732-121">S0-tier subscription quota: 100 apply operations per day.</span></span>
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options?: Models.SnapshotApplyOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-122">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-122">Id referencing a particular snapshot.</span></span>
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="de732-123">要從快照集建立的使用者指定的目標物件識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-123">User specified target object id to be created from the snapshot.</span></span>
+        - id: options
+          type:
+            - Models.SnapshotApplyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+    name: 'apply(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-124">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-124">Id referencing a particular snapshot.</span></span>
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="de732-125">要從快照集建立的使用者指定的目標物件識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-125">User specified target object id to be created from the snapshot.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="de732-126">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+    name: 'apply(string, string, SnapshotApplyOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options: SnapshotApplyOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-127">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-127">Id referencing a particular snapshot.</span></span>
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="de732-128">要從快照集建立的使用者指定的目標物件識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-128">User specified target object id to be created from the snapshot.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+          description: <span data-ttu-id="de732-129">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="de732-129">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="de732-130">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="de732-131">刪除現有的快照集，根據 snapshotId。</span><span class="sxs-lookup"><span data-stu-id="de732-131">Delete an existing snapshot according to the snapshotId.</span></span> <span data-ttu-id="de732-132">也會刪除所有的物件資料和快照集的資訊。</span><span class="sxs-lookup"><span data-stu-id="de732-132">All object data and information in the snapshot will also be deleted.</span></span> <span data-ttu-id="de732-133">只有來源訂用帳戶拍攝快照的人員可以刪除快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-133">Only the source subscription who took the snapshot can delete the snapshot.</span></span> <span data-ttu-id="de732-134">如果使用者不會刪除與此 API 的快照集，快照集將仍會自動刪除在建立後的 48 小時內。</span><span class="sxs-lookup"><span data-stu-id="de732-134">If the user does not delete a snapshot with this API, the snapshot will still be automatically deleted in 48 hours after creation.</span></span>'
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-135">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-135">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-136">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-136">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="de732-137">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="de732-137">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="de732-138">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-138">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-139">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-139">Id referencing a particular snapshot.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="de732-140">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-140">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get'
+    name: 'get(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="de732-141">擷取快照集的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="de732-141">Retrieve information about a snapshot.</span></span> <span data-ttu-id="de732-142">快照集只會花費，來源訂用帳戶的存取和快照集-花在 applyScope 中包含的目標訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="de732-142">Snapshot is only accessible to the source subscription who took it, and target subscriptions included in the applyScope in Snapshot - Take.</span></span>'
+    syntax:
+      content: 'function get(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-143">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-143">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+    name: 'get(string, RequestOptionsBase, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-144">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-144">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="de732-145">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="de732-145">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            <span data-ttu-id="de732-146">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-146">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+    name: 'get(string, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-147">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-147">Id referencing a particular snapshot.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            <span data-ttu-id="de732-148">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-148">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+    name: 'getOperationStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="de732-149">擷取 take/套用快照集作業的狀態。</span><span class="sxs-lookup"><span data-stu-id="de732-149">Retrieve the status of a take/apply snapshot operation.</span></span>
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="de732-150">參考特定的 take/套用快照集作業的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-150">Id referencing a particular take/apply snapshot operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+    name: 'getOperationStatus(string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="de732-151">參考特定的 take/套用快照集作業的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-151">Id referencing a particular take/apply snapshot operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="de732-152">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="de732-152">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            <span data-ttu-id="de732-153">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+    name: 'getOperationStatus(string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="de732-154">參考特定的 take/套用快照集作業的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-154">Id referencing a particular take/apply snapshot operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            <span data-ttu-id="de732-155">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-155">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list'
+    name: list(Models.SnapshotListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="de732-156">列出所有與相關的資訊，包括由使用者所執行的快照集或快照集，以套用至使用者的存取快照集 （快照集 applyScope 中包含訂用帳戶識別碼-需要）。</span><span class="sxs-lookup"><span data-stu-id="de732-156">List all accessible snapshots with related information, including snapshots that were taken by the user, or snapshots to be applied to the user (subscription id was included in the applyScope in Snapshot - Take).</span></span>'
+    syntax:
+      content: 'function list(options?: Models.SnapshotListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.SnapshotListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+    name: 'list(ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            <span data-ttu-id="de732-157">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+    name: 'list(SnapshotListOptionalParams, ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: SnapshotListOptionalParams, callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+          description: <span data-ttu-id="de732-158">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="de732-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            <span data-ttu-id="de732-159">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+    name: SnapshotOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="de732-160">建立 SnapshotOperations。</span><span class="sxs-lookup"><span data-stu-id="de732-160">Create a SnapshotOperations.</span></span>
+    syntax:
+      content: 'new SnapshotOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            <span data-ttu-id="de732-161">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="de732-161">Reference to the service client.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take'
+    name: 'take(Models.SnapshotObjectType, string, string[], Models.SnapshotTakeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="de732-162">提交作業，以建立快照集的臉部清單、 大型的臉部清單、 人員群組或大型的人員群組與使用者指定的快照集類型、 來源物件識別碼，套用的範圍和選擇性的使用者資料。</span><span class="sxs-lookup"><span data-stu-id="de732-162">Submit an operation to take a snapshot of face list, large face list, person group or large person group, with user-specified snapshot type, source object id, apply scope and an optional user data.</span></span><br />
+      <span data-ttu-id="de732-163">快照集介面是提供給使用者來備份和還原他們的臉部資料從一個面訂用帳戶，到另一個，在相同區域內或跨區域。</span><span class="sxs-lookup"><span data-stu-id="de732-163">The snapshot interfaces are for users to backup and restore their face data from one face subscription to another, inside same region or across regions.</span></span> <span data-ttu-id="de732-164">工作流程包含兩個階段，快照集-攜帶至建立來源物件的複本，並將它儲存為快照集，然後呼叫快照集的使用者第一次呼叫-套用於貼上到目標訂用帳戶的快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-164">The workflow contains two phases, user first calls Snapshot - Take to create a copy of the source object and store it as a snapshot, then calls Snapshot - Apply to paste the snapshot to target subscription.</span></span> <span data-ttu-id="de732-165">快照集會儲存在集中位置 （每個 Azure 的執行個體），以便它們可以套用跨帳戶和區域。</span><span class="sxs-lookup"><span data-stu-id="de732-165">The snapshots are stored in a centralized location (per Azure instance), so that they can be applied cross accounts and regions.</span></span><br />
+      <span data-ttu-id="de732-166">正在擷取快照是非同步作業。</span><span class="sxs-lookup"><span data-stu-id="de732-166">Taking snapshot is an asynchronous operation.</span></span> <span data-ttu-id="de732-167">從回應標頭，以用於 OperationStatus-取得追蹤的建立快照集進度時的 「 作業-位置 」 欄位，可以取得作業識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-167">An operation id can be obtained from the "Operation-Location" field in response header, to be used in OperationStatus - Get for tracking the progress of creating the snapshot.</span></span> <span data-ttu-id="de732-168">快照集識別碼會納入 OperationStatus-取得回應時的作業狀態為 「 成功 」 的 「 resourceLocation"欄位。</span><span class="sxs-lookup"><span data-stu-id="de732-168">The snapshot id will be included in the "resourceLocation" field in OperationStatus - Get response when the operation status is "succeeded".</span></span><br />
+      <span data-ttu-id="de732-169">花費時間的快照集取決於來源物件中的人員和臉部項目數目。</span><span class="sxs-lookup"><span data-stu-id="de732-169">Snapshot taking time depends on the number of person and face entries in the source object.</span></span> <span data-ttu-id="de732-170">可能是以秒為單位，或數小時的多個臉部 1,000,000 的人員。</span><span class="sxs-lookup"><span data-stu-id="de732-170">It could be in seconds, or up to several hours for 1,000,000 persons with multiple faces.</span></span><br />
+      <span data-ttu-id="de732-171">會自動過期並由快照集建立後的 48 小時內清除快照集</span><span class="sxs-lookup"><span data-stu-id="de732-171">Snapshots will be automatically expired and cleaned in 48 hours after it is created by Snapshot</span></span>
+      - <span data-ttu-id="de732-172">需要。</span><span class="sxs-lookup"><span data-stu-id="de732-172">Take.</span></span> <span data-ttu-id="de732-173">使用者可以刪除使用快照集本身的刪除到期日之前的任何時間的快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-173">User can delete the snapshot using Snapshot - Delete by themselves any time before expiration.</span></span><br />
+      <span data-ttu-id="de732-174">取得特定物件的快照集並不會封鎖對物件的任何其他作業。</span><span class="sxs-lookup"><span data-stu-id="de732-174">Taking snapshot for a certain object will not block any other operations against the object.</span></span> <span data-ttu-id="de732-175">所有唯讀作業 （Get/清單和身分識別/FindSimilar/驗證） 可以如往常般進行。</span><span class="sxs-lookup"><span data-stu-id="de732-175">All read-only operations (Get/List and Identify/FindSimilar/Verify) can be conducted as usual.</span></span> <span data-ttu-id="de732-176">所有可寫入的作業，包括新增/更新/刪除的來源物件或它的人員/臉部和訓練，它們是並未受到封鎖，但不是建議，因為可寫入的更新可能不會反映快照集上其製作過程。</span><span class="sxs-lookup"><span data-stu-id="de732-176">For all writable operations, including Add/Update/Delete the source object or its persons/faces and Train, they are not blocked but not recommended because writable updates may not be reflected on the snapshot during its taking.</span></span> <span data-ttu-id="de732-177">採取的快照集完成後，所有的讀取和寫入作業可以正常運作。</span><span class="sxs-lookup"><span data-stu-id="de732-177">After snapshot taking is completed, all readable and writable operations can work as normal.</span></span> <span data-ttu-id="de732-178">快照集也會包含訓練結果的來源物件，這表示套用至不會需要重新訓練目標物件呼叫身分識別/FindSimilar 之前的快照集的目標訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="de732-178">Snapshot will also include the training results of the source object, which means target subscription the snapshot applied to does not need re-train the target object before calling Identify/FindSimilar.</span></span><br />
+      * <span data-ttu-id="de732-179">免費層訂用帳戶配額：每個月 100 個 take 作業。</span><span class="sxs-lookup"><span data-stu-id="de732-179">Free-tier subscription quota: 100 take operations per month.</span></span>
+      * <span data-ttu-id="de732-180">S0 層訂用帳戶配額：100 個每日的 take 作業。</span><span class="sxs-lookup"><span data-stu-id="de732-180">S0-tier subscription quota: 100 take operations per day.</span></span>
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options?: Models.SnapshotTakeOptionalParams)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '<span data-ttu-id="de732-181">使用者指定的來源物件的型別，才會從快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-181">User specified type for the source object to take snapshot from.</span></span> <span data-ttu-id="de732-182">目前支援 FaceList、 PersonGroup、 LargeFaceList 和 LargePersonGroup。</span><span class="sxs-lookup"><span data-stu-id="de732-182">Currently FaceList, PersonGroup, LargeFaceList and LargePersonGroup are supported.</span></span> <span data-ttu-id="de732-183">可能的值包括：''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span><span class="sxs-lookup"><span data-stu-id="de732-183">Possible values include: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span></span>'
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="de732-184">使用者指定的來源物件識別碼，才會從快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-184">User specified source object id to take snapshot from.</span></span>
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: '<span data-ttu-id="de732-185">使用者指定的快照集的目標臉部訂用帳戶識別碼的陣列。</span><span class="sxs-lookup"><span data-stu-id="de732-185">User specified array of target Face subscription ids for the snapshot.</span></span> <span data-ttu-id="de732-186">每個快照集，只有中訂用帳戶中的快照集-applyScope 包含 Take 可以套用它。</span><span class="sxs-lookup"><span data-stu-id="de732-186">For each snapshot, only subscriptions included in the applyScope of Snapshot - Take can apply it.</span></span>'
+        - id: options
+          type:
+            - Models.SnapshotTakeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+    name: 'take(Models.SnapshotObjectType, string, string[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '<span data-ttu-id="de732-187">使用者指定的來源物件的型別，才會從快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-187">User specified type for the source object to take snapshot from.</span></span> <span data-ttu-id="de732-188">目前支援 FaceList、 PersonGroup、 LargeFaceList 和 LargePersonGroup。</span><span class="sxs-lookup"><span data-stu-id="de732-188">Currently FaceList, PersonGroup, LargeFaceList and LargePersonGroup are supported.</span></span> <span data-ttu-id="de732-189">可能的值包括：''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span><span class="sxs-lookup"><span data-stu-id="de732-189">Possible values include: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span></span>'
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="de732-190">使用者指定的來源物件識別碼，才會從快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-190">User specified source object id to take snapshot from.</span></span>
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: '<span data-ttu-id="de732-191">使用者指定的快照集的目標臉部訂用帳戶識別碼的陣列。</span><span class="sxs-lookup"><span data-stu-id="de732-191">User specified array of target Face subscription ids for the snapshot.</span></span> <span data-ttu-id="de732-192">每個快照集，只有中訂用帳戶中的快照集-applyScope 包含 Take 可以套用它。</span><span class="sxs-lookup"><span data-stu-id="de732-192">For each snapshot, only subscriptions included in the applyScope of Snapshot - Take can apply it.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="de732-193">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+    name: 'take(Models.SnapshotObjectType, string, string[], SnapshotTakeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options: SnapshotTakeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: '<span data-ttu-id="de732-194">使用者指定的來源物件的型別，才會從快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-194">User specified type for the source object to take snapshot from.</span></span> <span data-ttu-id="de732-195">目前支援 FaceList、 PersonGroup、 LargeFaceList 和 LargePersonGroup。</span><span class="sxs-lookup"><span data-stu-id="de732-195">Currently FaceList, PersonGroup, LargeFaceList and LargePersonGroup are supported.</span></span> <span data-ttu-id="de732-196">可能的值包括：''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span><span class="sxs-lookup"><span data-stu-id="de732-196">Possible values include: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup''</span></span>'
+        - id: objectId
+          type:
+            - string
+          description: <span data-ttu-id="de732-197">使用者指定的來源物件識別碼，才會從快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-197">User specified source object id to take snapshot from.</span></span>
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: '<span data-ttu-id="de732-198">使用者指定的快照集的目標臉部訂用帳戶識別碼的陣列。</span><span class="sxs-lookup"><span data-stu-id="de732-198">User specified array of target Face subscription ids for the snapshot.</span></span> <span data-ttu-id="de732-199">每個快照集，只有中訂用帳戶中的快照集-applyScope 包含 Take 可以套用它。</span><span class="sxs-lookup"><span data-stu-id="de732-199">For each snapshot, only subscriptions included in the applyScope of Snapshot - Take can apply it.</span></span>'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+          description: <span data-ttu-id="de732-200">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="de732-200">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="de732-201">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-201">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update'
+    name: 'update(string, Models.SnapshotUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="de732-202">更新快照集的資訊。</span><span class="sxs-lookup"><span data-stu-id="de732-202">Update the information of a snapshot.</span></span> <span data-ttu-id="de732-203">只有來源訂用帳戶使用者採用快照集可以更新快照集。</span><span class="sxs-lookup"><span data-stu-id="de732-203">Only the source subscription who took the snapshot can update the snapshot.</span></span>
+    syntax:
+      content: 'function update(snapshotId: string, options?: Models.SnapshotUpdateOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-204">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-204">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - Models.SnapshotUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-205">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-205">Id referencing a particular snapshot.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="de732-206">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-206">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    name: 'update(string, SnapshotUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, options: SnapshotUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: <span data-ttu-id="de732-207">參考特定的快照集的識別碼。</span><span class="sxs-lookup"><span data-stu-id="de732-207">Id referencing a particular snapshot.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+          description: <span data-ttu-id="de732-208">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="de732-208">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="de732-209">回呼</span><span class="sxs-lookup"><span data-stu-id="de732-209">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+    name: SnapshotApplyOptionalParams
+    spec.typeScript:
+      - name: SnapshotApplyOptionalParams
+        fullName: SnapshotApplyOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+    name: Snapshot>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/cognitiveservices-face.OperationStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+    name: 'Snapshot[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+    name: SnapshotListOptionalParams
+    spec.typeScript:
+      - name: SnapshotListOptionalParams
+        fullName: SnapshotListOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+    name: SnapshotTakeOptionalParams
+    spec.typeScript:
+      - name: SnapshotTakeOptionalParams
+        fullName: SnapshotTakeOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+    name: SnapshotUpdateOptionalParams
+    spec.typeScript:
+      - name: SnapshotUpdateOptionalParams
+        fullName: SnapshotUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
