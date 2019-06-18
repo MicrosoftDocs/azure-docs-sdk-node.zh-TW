@@ -1,0 +1,1213 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.StorageAccounts'
+    name: StorageAccounts
+    fullName: StorageAccounts
+    children:
+      - '@azure/arm-storage.StorageAccounts.beginCreate'
+      - '@azure/arm-storage.StorageAccounts.beginFailover'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
+      - '@azure/arm-storage.StorageAccounts.create'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod_2'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod_1'
+      - '@azure/arm-storage.StorageAccounts.failover'
+      - '@azure/arm-storage.StorageAccounts.getProperties'
+      - '@azure/arm-storage.StorageAccounts.getProperties_1'
+      - '@azure/arm-storage.StorageAccounts.getProperties_2'
+      - '@azure/arm-storage.StorageAccounts.list'
+      - '@azure/arm-storage.StorageAccounts.list_2'
+      - '@azure/arm-storage.StorageAccounts.list_1'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
+      - '@azure/arm-storage.StorageAccounts.listKeys'
+      - '@azure/arm-storage.StorageAccounts.listKeys_2'
+      - '@azure/arm-storage.StorageAccounts.listKeys_1'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey_2'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
+      - '@azure/arm-storage.StorageAccounts.constructor'
+      - '@azure/arm-storage.StorageAccounts.update'
+      - '@azure/arm-storage.StorageAccounts.update_2'
+      - '@azure/arm-storage.StorageAccounts.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="f2668-101">此類別代表 StorageAccounts。</span><span class="sxs-lookup"><span data-stu-id="f2668-101">Class representing a StorageAccounts.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginCreate'
+    name: 'beginCreate(string, string, StorageAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="f2668-102">使用指定的參數，以非同步方式建立新的儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="f2668-102">Asynchronously creates a new storage account with the specified parameters.</span></span> <span data-ttu-id="f2668-103">如果已建立的帳戶，而且後續的建立要求發出不同的屬性，就會更新帳戶屬性。</span><span class="sxs-lookup"><span data-stu-id="f2668-103">If an account is already created and a subsequent create request is issued with different properties, the account properties will be updated.</span></span> <span data-ttu-id="f2668-104">如果已建立的帳戶，而且後續的建立或更新要求會發出具有完全相同的屬性集，則要求將會成功。</span><span class="sxs-lookup"><span data-stu-id="f2668-104">If an account is already created and a subsequent create or update request is issued with the exact same set of properties, the request will succeed.</span></span>'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-105">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-105">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-106">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-106">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-107">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-107">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-108">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-108">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountCreateParameters'
+          description: <span data-ttu-id="f2668-109">要建立的帳戶提供的參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-109">The parameters to provide for the created account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginFailover'
+    name: 'beginFailover(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-110">儲存體帳戶發生可用性問題時，可能會觸發容錯移轉要求。</span><span class="sxs-lookup"><span data-stu-id="f2668-110">Failover request can be triggered for a storage account in case of availability issues.</span></span> <span data-ttu-id="f2668-111">至次要 RA-GRS 帳戶的叢集，從儲存體帳戶的主要叢集發生容錯移轉。</span><span class="sxs-lookup"><span data-stu-id="f2668-111">The failover occurs from the storage account's primary cluster to secondary cluster for RA-GRS accounts.</span></span> <span data-ttu-id="f2668-112">次要叢集容錯移轉之後會變成主要複本。</span><span class="sxs-lookup"><span data-stu-id="f2668-112">The secondary cluster will become primary after failover.</span></span>
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-113">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-113">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-114">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-114">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-115">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-115">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-116">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-116">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability'
+    name: 'checkNameAvailability(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-117">檢查儲存體帳戶名稱無效，而且尚未使用。</span><span class="sxs-lookup"><span data-stu-id="f2668-117">Checks that the storage account name is valid and is not already in use.</span></span>
+    syntax:
+      content: 'function checkNameAvailability(name: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="f2668-118">儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-118">The storage account name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
+    name: 'checkNameAvailability(string, RequestOptionsBase, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, options: RequestOptionsBase, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="f2668-119">儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-119">The storage account name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-120">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-120">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="f2668-121">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-121">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
+    name: 'checkNameAvailability(string, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="f2668-122">儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-122">The storage account name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="f2668-123">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-123">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.create'
+    name: 'create(string, string, StorageAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="f2668-124">使用指定的參數，以非同步方式建立新的儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="f2668-124">Asynchronously creates a new storage account with the specified parameters.</span></span> <span data-ttu-id="f2668-125">如果已建立的帳戶，而且後續的建立要求發出不同的屬性，就會更新帳戶屬性。</span><span class="sxs-lookup"><span data-stu-id="f2668-125">If an account is already created and a subsequent create request is issued with different properties, the account properties will be updated.</span></span> <span data-ttu-id="f2668-126">如果已建立的帳戶，而且後續的建立或更新要求會發出具有完全相同的屬性集，則要求將會成功。</span><span class="sxs-lookup"><span data-stu-id="f2668-126">If an account is already created and a subsequent create or update request is issued with the exact same set of properties, the request will succeed.</span></span>'
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-127">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-127">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-128">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-128">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-129">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-129">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-130">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-130">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountCreateParameters'
+          description: <span data-ttu-id="f2668-131">要建立的帳戶提供的參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-131">The parameters to provide for the created account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsCreateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-132">刪除 Microsoft Azure 儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="f2668-132">Deletes a storage account in Microsoft Azure.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-133">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-133">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-134">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-134">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-135">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-135">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-136">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-136">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-137">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-137">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-138">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-138">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-139">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-139">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-140">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-140">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-141">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="f2668-142">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-143">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-143">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-144">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-144">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-145">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-145">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-146">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-146">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="f2668-147">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-147">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.failover'
+    name: 'failover(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-148">儲存體帳戶發生可用性問題時，可能會觸發容錯移轉要求。</span><span class="sxs-lookup"><span data-stu-id="f2668-148">Failover request can be triggered for a storage account in case of availability issues.</span></span> <span data-ttu-id="f2668-149">至次要 RA-GRS 帳戶的叢集，從儲存體帳戶的主要叢集發生容錯移轉。</span><span class="sxs-lookup"><span data-stu-id="f2668-149">The failover occurs from the storage account's primary cluster to secondary cluster for RA-GRS accounts.</span></span> <span data-ttu-id="f2668-150">次要叢集容錯移轉之後會變成主要複本。</span><span class="sxs-lookup"><span data-stu-id="f2668-150">The secondary cluster will become primary after failover.</span></span>
+    syntax:
+      content: 'function failover(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-151">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-151">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-152">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-152">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-153">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-153">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-154">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-154">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties'
+    name: 'getProperties(string, string, Models.StorageAccountsGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="f2668-155">傳回指定的儲存體帳戶，包括但不是限於名稱、 SKU 名稱、 位置和帳戶狀態的屬性。</span><span class="sxs-lookup"><span data-stu-id="f2668-155">Returns the properties for the specified storage account including but not limited to name, SKU name, location, and account status.</span></span> <span data-ttu-id="f2668-156">ListKeys 作業應該用來擷取儲存體金鑰。</span><span class="sxs-lookup"><span data-stu-id="f2668-156">The ListKeys operation should be used to retrieve storage keys.</span></span>'
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, options?: Models.StorageAccountsGetPropertiesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-157">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-157">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-158">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-158">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-159">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-159">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-160">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-160">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - Models.StorageAccountsGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-161">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-162">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-162">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-163">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-163">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-164">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-164">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="f2668-165">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties_2'
+    name: 'getProperties(string, string, StorageAccountsGetPropertiesOptionalParams, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, options: StorageAccountsGetPropertiesOptionalParams, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-166">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-166">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-167">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-167">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-168">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-168">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-169">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-169">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+          description: <span data-ttu-id="f2668-170">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-170">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="f2668-171">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-172">列出可用的訂用帳戶下所有儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="f2668-172">Lists all the storage accounts available under the subscription.</span></span> <span data-ttu-id="f2668-173">請注意，不會傳回儲存體金鑰;使用這個 ListKeys 作業。</span><span class="sxs-lookup"><span data-stu-id="f2668-173">Note that storage keys are not returned; use the ListKeys operation for this.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-174">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="f2668-175">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list_1'
+    name: list(ServiceCallback<StorageAccountListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="f2668-176">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS'
+    name: 'listAccountSAS(string, string, AccountSasParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-177">列出儲存體帳戶的 SAS 認證。</span><span class="sxs-lookup"><span data-stu-id="f2668-177">List SAS credentials of a storage account.</span></span>
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-178">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-178">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-179">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-179">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-180">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-180">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-181">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-181">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="f2668-182">要提供儲存體帳戶的清單 SAS 認證參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-182">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
+    name: 'listAccountSAS(string, string, AccountSasParameters, RequestOptionsBase, ServiceCallback<ListAccountSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options: RequestOptionsBase, callback: ServiceCallback<ListAccountSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-183">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-183">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-184">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-184">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-185">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-185">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-186">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-186">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="f2668-187">要提供儲存體帳戶的清單 SAS 認證參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-187">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-188">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+          description: |
+            <span data-ttu-id="f2668-189">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
+    name: 'listAccountSAS(string, string, AccountSasParameters, ServiceCallback<ListAccountSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, callback: ServiceCallback<ListAccountSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-190">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-190">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-191">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-191">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-192">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-192">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-193">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-193">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="f2668-194">要提供儲存體帳戶的清單 SAS 認證參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-194">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+          description: |
+            <span data-ttu-id="f2668-195">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-196">列出所有可用儲存體帳戶在指定的資源群組下。</span><span class="sxs-lookup"><span data-stu-id="f2668-196">Lists all the storage accounts available under the given resource group.</span></span> <span data-ttu-id="f2668-197">請注意，不會傳回儲存體金鑰;使用這個 ListKeys 作業。</span><span class="sxs-lookup"><span data-stu-id="f2668-197">Note that storage keys are not returned; use the ListKeys operation for this.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-198">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-198">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-199">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-199">The name is case insensitive.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-200">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-200">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-201">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-201">The name is case insensitive.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-202">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="f2668-203">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-204">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-204">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-205">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-205">The name is case insensitive.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="f2668-206">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-206">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys'
+    name: 'listKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-207">列出指定儲存體帳戶的存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="f2668-207">Lists the access keys for the specified storage account.</span></span>
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-208">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-208">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-209">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-209">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-210">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-210">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-211">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-211">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_2'
+    name: 'listKeys(string, string, RequestOptionsBase, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-212">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-212">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-213">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-213">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-214">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-214">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-215">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-215">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-216">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-216">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="f2668-217">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-217">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_1'
+    name: 'listKeys(string, string, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-218">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-218">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-219">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-219">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-220">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-220">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-221">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-221">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="f2668-222">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-222">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-223">列出特定資源的服務 SAS 認證。</span><span class="sxs-lookup"><span data-stu-id="f2668-223">List service SAS credentials of a specific resource.</span></span>
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-224">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-224">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-225">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-225">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-226">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-226">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-227">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-227">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="f2668-228">若要提供給清單服務 SAS 認證參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-228">The parameters to provide to list service SAS credentials.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, RequestOptionsBase, ServiceCallback<ListServiceSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options: RequestOptionsBase, callback: ServiceCallback<ListServiceSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-229">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-229">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-230">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-230">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-231">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-231">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-232">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-232">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="f2668-233">若要提供給清單服務 SAS 認證參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-233">The parameters to provide to list service SAS credentials.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-234">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-234">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+          description: |
+            <span data-ttu-id="f2668-235">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-235">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, ServiceCallback<ListServiceSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, callback: ServiceCallback<ListServiceSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-236">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-236">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-237">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-237">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-238">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-238">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-239">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-239">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="f2668-240">若要提供給清單服務 SAS 認證參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-240">The parameters to provide to list service SAS credentials.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+          description: |
+            <span data-ttu-id="f2668-241">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-241">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey'
+    name: 'regenerateKey(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-242">重新產生其中一個指定的儲存體帳戶存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="f2668-242">Regenerates one of the access keys for the specified storage account.</span></span>
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-243">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-243">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-244">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-244">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-245">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-245">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-246">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-246">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="f2668-247">想要重新產生，可能值的儲存體金鑰的名稱是 key1、 key2。</span><span class="sxs-lookup"><span data-stu-id="f2668-247">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_2'
+    name: 'regenerateKey(string, string, string, RequestOptionsBase, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-248">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-248">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-249">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-249">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-250">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-250">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-251">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-251">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="f2668-252">想要重新產生，可能值的儲存體金鑰的名稱是 key1、 key2。</span><span class="sxs-lookup"><span data-stu-id="f2668-252">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-253">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-253">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="f2668-254">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-254">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+    name: 'regenerateKey(string, string, string, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-255">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-255">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-256">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-256">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-257">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-257">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-258">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-258">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="f2668-259">想要重新產生，可能值的儲存體金鑰的名稱是 key1、 key2。</span><span class="sxs-lookup"><span data-stu-id="f2668-259">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="f2668-260">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-260">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
+    name: 'revokeUserDelegationKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-261">撤銷使用者委派的金鑰。</span><span class="sxs-lookup"><span data-stu-id="f2668-261">Revoke user delegation keys.</span></span>
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-262">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-262">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-263">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-263">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-264">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-264">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-265">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-265">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
+    name: 'revokeUserDelegationKeys(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-266">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-266">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-267">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-267">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-268">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-268">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-269">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-269">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-270">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-270">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="f2668-271">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-271">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
+    name: 'revokeUserDelegationKeys(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-272">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-272">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-273">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-273">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-274">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-274">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-275">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-275">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="f2668-276">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-276">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.constructor'
+    name: StorageAccounts(StorageManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f2668-277">建立 StorageAccounts。</span><span class="sxs-lookup"><span data-stu-id="f2668-277">Create a StorageAccounts.</span></span>
+    syntax:
+      content: 'new StorageAccounts(client: StorageManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-storage.StorageManagementClientContext'
+          description: |
+            <span data-ttu-id="f2668-278">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="f2668-278">Reference to the service client.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update'
+    name: 'update(string, string, StorageAccountUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="f2668-279">更新作業可用來更新 SKU、 加密、 存取層或儲存體帳戶的標記。</span><span class="sxs-lookup"><span data-stu-id="f2668-279">The update operation can be used to update the SKU, encryption, access tier, or tags for a storage account.</span></span> <span data-ttu-id="f2668-280">它也可以用來將帳戶對應至自訂網域。</span><span class="sxs-lookup"><span data-stu-id="f2668-280">It can also be used to map the account to a custom domain.</span></span> <span data-ttu-id="f2668-281">只有一個自訂網域支援每個儲存體帳戶;不支援自訂網域取代/變更。</span><span class="sxs-lookup"><span data-stu-id="f2668-281">Only one custom domain is supported per storage account; the replacement/change of custom domain is not supported.</span></span> <span data-ttu-id="f2668-282">若要取代舊的自訂網域，舊的值必須先清除/取消註冊可以設定新的值。</span><span class="sxs-lookup"><span data-stu-id="f2668-282">In order to replace an old custom domain, the old value must be cleared/unregistered before a new value can be set.</span></span> <span data-ttu-id="f2668-283">支援多個屬性更新。</span><span class="sxs-lookup"><span data-stu-id="f2668-283">The update of multiple properties is supported.</span></span> <span data-ttu-id="f2668-284">這個呼叫不會變更帳戶的儲存體金鑰。</span><span class="sxs-lookup"><span data-stu-id="f2668-284">This call does not change the storage keys for the account.</span></span> <span data-ttu-id="f2668-285">如果您想要變更儲存體帳戶金鑰，請使用 重新產生金鑰作業。</span><span class="sxs-lookup"><span data-stu-id="f2668-285">If you want to change the storage account keys, use the regenerate keys operation.</span></span> <span data-ttu-id="f2668-286">無法在建立之後變更的儲存體帳戶的名稱與位置。</span><span class="sxs-lookup"><span data-stu-id="f2668-286">The location and name of the storage account cannot be changed after creation.</span></span>'
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-287">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-287">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-288">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-288">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-289">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-289">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-290">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-290">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="f2668-291">要更新的帳戶提供的參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-291">The parameters to provide for the updated account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update_2'
+    name: 'update(string, string, StorageAccountUpdateParameters, RequestOptionsBase, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-292">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-292">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-293">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-293">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-294">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-294">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-295">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-295">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="f2668-296">要更新的帳戶提供的參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-296">The parameters to provide for the updated account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f2668-297">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f2668-297">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="f2668-298">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-298">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update_1'
+    name: 'update(string, string, StorageAccountUpdateParameters, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-299">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-299">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="f2668-300">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="f2668-300">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="f2668-301">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="f2668-301">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="f2668-302">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="f2668-302">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="f2668-303">要更新的帳戶提供的參數。</span><span class="sxs-lookup"><span data-stu-id="f2668-303">The parameters to provide for the updated account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="f2668-304">回呼</span><span class="sxs-lookup"><span data-stu-id="f2668-304">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.StorageManagementClientContext'
+    name: StorageManagementClientContext
+    spec.typeScript:
+      - name: StorageManagementClientContext
+        fullName: StorageManagementClientContext
+        uid: '@azure/arm-storage.StorageManagementClientContext'
+  - uid: '@azure/arm-storage.StorageAccountCreateParameters'
+    name: StorageAccountCreateParameters
+    spec.typeScript:
+      - name: StorageAccountCreateParameters
+        fullName: StorageAccountCreateParameters
+        uid: '@azure/arm-storage.StorageAccountCreateParameters'
+  - uid: ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+    name: CheckNameAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckNameAvailabilityResult
+        fullName: CheckNameAvailabilityResult
+        uid: '@azure/arm-storage.CheckNameAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccount>
+    name: StorageAccount>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccount
+        fullName: StorageAccount
+        uid: '@azure/arm-storage.StorageAccount'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+    name: StorageAccountsGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: StorageAccountsGetPropertiesOptionalParams
+        fullName: StorageAccountsGetPropertiesOptionalParams
+        uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+    name: StorageAccountListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccountListResult
+        fullName: StorageAccountListResult
+        uid: '@azure/arm-storage.StorageAccountListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.AccountSasParameters'
+    name: AccountSasParameters
+    spec.typeScript:
+      - name: AccountSasParameters
+        fullName: AccountSasParameters
+        uid: '@azure/arm-storage.AccountSasParameters'
+  - uid: ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+    name: ListAccountSasResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListAccountSasResponse
+        fullName: ListAccountSasResponse
+        uid: '@azure/arm-storage.ListAccountSasResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+    name: StorageAccountListKeysResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccountListKeysResult
+        fullName: StorageAccountListKeysResult
+        uid: '@azure/arm-storage.StorageAccountListKeysResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.ServiceSasParameters'
+    name: ServiceSasParameters
+    spec.typeScript:
+      - name: ServiceSasParameters
+        fullName: ServiceSasParameters
+        uid: '@azure/arm-storage.ServiceSasParameters'
+  - uid: ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+    name: ListServiceSasResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListServiceSasResponse
+        fullName: ListServiceSasResponse
+        uid: '@azure/arm-storage.ListServiceSasResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters'
+    name: StorageAccountUpdateParameters
+    spec.typeScript:
+      - name: StorageAccountUpdateParameters
+        fullName: StorageAccountUpdateParameters
+        uid: '@azure/arm-storage.StorageAccountUpdateParameters'

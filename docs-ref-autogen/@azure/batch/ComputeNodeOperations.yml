@@ -1,0 +1,1353 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ComputeNodeOperations'
+    name: ComputeNodeOperations
+    fullName: ComputeNodeOperations
+    children:
+      - '@azure/batch.ComputeNodeOperations.addUser_2'
+      - '@azure/batch.ComputeNodeOperations.addUser'
+      - '@azure/batch.ComputeNodeOperations.addUser_1'
+      - '@azure/batch.ComputeNodeOperations.constructor'
+      - '@azure/batch.ComputeNodeOperations.deleteUser_2'
+      - '@azure/batch.ComputeNodeOperations.deleteUser'
+      - '@azure/batch.ComputeNodeOperations.deleteUser_1'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling_2'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling_1'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling_2'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling_1'
+      - '@azure/batch.ComputeNodeOperations.get_2'
+      - '@azure/batch.ComputeNodeOperations.get'
+      - '@azure/batch.ComputeNodeOperations.get_1'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop_2'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop_1'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_2'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_1'
+      - '@azure/batch.ComputeNodeOperations.list_2'
+      - '@azure/batch.ComputeNodeOperations.list'
+      - '@azure/batch.ComputeNodeOperations.list_1'
+      - '@azure/batch.ComputeNodeOperations.listNext_2'
+      - '@azure/batch.ComputeNodeOperations.listNext'
+      - '@azure/batch.ComputeNodeOperations.listNext_1'
+      - '@azure/batch.ComputeNodeOperations.reboot_2'
+      - '@azure/batch.ComputeNodeOperations.reboot'
+      - '@azure/batch.ComputeNodeOperations.reboot_1'
+      - '@azure/batch.ComputeNodeOperations.reimage_2'
+      - '@azure/batch.ComputeNodeOperations.reimage'
+      - '@azure/batch.ComputeNodeOperations.reimage_1'
+      - '@azure/batch.ComputeNodeOperations.updateUser_2'
+      - '@azure/batch.ComputeNodeOperations.updateUser'
+      - '@azure/batch.ComputeNodeOperations.updateUser_1'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_2'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="114ea-101">此類別代表 ComputeNodeOperations。</span><span class="sxs-lookup"><span data-stu-id="114ea-101">Class representing a ComputeNodeOperations.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser_2'
+    name: 'addUser(string, string, ComputeNodeUser, ComputeNodeAddUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, options: ComputeNodeAddUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-102">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-102">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-103">您想要建立的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-103">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="114ea-104">要建立的使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="114ea-104">The user account to be created.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeAddUserOptionalParams'
+          description: <span data-ttu-id="114ea-105">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-105">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-106">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-106">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser'
+    name: 'addUser(string, string, ComputeNodeUser, Models.ComputeNodeAddUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="114ea-107">只有當它是在閒置或執行狀態時，才可以節點新增的使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="114ea-107">You can add a user account to a node only when it is in the idle or running state.</span></span>
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, options?: Models.ComputeNodeAddUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-108">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-108">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-109">您想要建立的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-109">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="114ea-110">要建立的使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="114ea-110">The user account to be created.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeAddUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser_1'
+    name: 'addUser(string, string, ComputeNodeUser, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-111">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-111">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-112">您想要建立的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-112">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="114ea-113">要建立的使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="114ea-113">The user account to be created.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-114">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.constructor'
+    name: ComputeNodeOperations(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="114ea-115">建立 ComputeNodeOperations。</span><span class="sxs-lookup"><span data-stu-id="114ea-115">Create a ComputeNodeOperations.</span></span>
+    syntax:
+      content: 'new ComputeNodeOperations(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            <span data-ttu-id="114ea-116">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="114ea-116">Reference to the service client.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser_2'
+    name: 'deleteUser(string, string, string, ComputeNodeDeleteUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, options: ComputeNodeDeleteUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-117">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-117">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-118">您想要刪除的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-118">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="114ea-119">若要刪除的使用者帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="114ea-119">The name of the user account to delete.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+          description: <span data-ttu-id="114ea-120">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-120">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-121">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-121">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser'
+    name: 'deleteUser(string, string, string, Models.ComputeNodeDeleteUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="114ea-122">只有在處於閒置或執行狀態時，才，您可以刪除使用者帳戶的節點。</span><span class="sxs-lookup"><span data-stu-id="114ea-122">You can delete a user account to a node only when it is in the idle or running state.</span></span>
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, options?: Models.ComputeNodeDeleteUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-123">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-123">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-124">您想要刪除的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-124">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="114ea-125">若要刪除的使用者帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="114ea-125">The name of the user account to delete.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeDeleteUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser_1'
+    name: 'deleteUser(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-126">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-126">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-127">您想要刪除的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-127">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="114ea-128">若要刪除的使用者帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="114ea-128">The name of the user account to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-129">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling_2'
+    name: 'disableScheduling(string, string, ComputeNodeDisableSchedulingOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, options: ComputeNodeDisableSchedulingOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-130">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-130">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-131">您要停用排程工作的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-131">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+          description: <span data-ttu-id="114ea-132">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-132">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-133">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-133">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling'
+    name: 'disableScheduling(string, string, Models.ComputeNodeDisableSchedulingOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="114ea-134">您可以停用工作排程在節點上，才會啟用其目前的排程狀態。</span><span class="sxs-lookup"><span data-stu-id="114ea-134">You can disable task scheduling on a node only if its current scheduling state is enabled.</span></span>
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, options?: Models.ComputeNodeDisableSchedulingOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-135">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-135">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-136">您要停用排程工作的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-136">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeDisableSchedulingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling_1'
+    name: 'disableScheduling(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-137">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-137">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-138">您要停用排程工作的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-138">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-139">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling_2'
+    name: 'enableScheduling(string, string, ComputeNodeEnableSchedulingOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, options: ComputeNodeEnableSchedulingOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-140">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-140">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-141">您要啟用排程工作的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-141">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+          description: <span data-ttu-id="114ea-142">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-143">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling'
+    name: 'enableScheduling(string, string, Models.ComputeNodeEnableSchedulingOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="114ea-144">您可以啟用工作排程在節點上，只有當目前的排程狀態已停用</span><span class="sxs-lookup"><span data-stu-id="114ea-144">You can enable task scheduling on a node only if its current scheduling state is disabled</span></span>
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, options?: Models.ComputeNodeEnableSchedulingOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-145">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-145">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-146">您要啟用排程工作的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-146">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeEnableSchedulingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling_1'
+    name: 'enableScheduling(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-147">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-147">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-148">您要啟用排程工作的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-148">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-149">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-149">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get_2'
+    name: 'get(string, string, ComputeNodeGetOptionalParams, ServiceCallback<ComputeNode>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, options: ComputeNodeGetOptionalParams, callback: ServiceCallback<ComputeNode>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-150">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-150">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-151">您想要取得相關資訊的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-151">The ID of the compute node that you want to get information about.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetOptionalParams'
+          description: <span data-ttu-id="114ea-152">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-152">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNode>
+          description: |
+            <span data-ttu-id="114ea-153">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get'
+    name: 'get(string, string, Models.ComputeNodeGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, options?: Models.ComputeNodeGetOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-154">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-154">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-155">您想要取得相關資訊的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-155">The ID of the compute node that you want to get information about.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get_1'
+    name: 'get(string, string, ServiceCallback<ComputeNode>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, callback: ServiceCallback<ComputeNode>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-156">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-156">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-157">您想要取得相關資訊的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-157">The ID of the compute node that you want to get information about.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNode>
+          description: |
+            <span data-ttu-id="114ea-158">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop_2'
+    name: 'getRemoteDesktop(string, string, ComputeNodeGetRemoteDesktopOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, options: ComputeNodeGetRemoteDesktopOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-159">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-159">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-160">您想要取得遠端桌面通訊協定檔案的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-160">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+          description: <span data-ttu-id="114ea-161">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-162">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop'
+    name: 'getRemoteDesktop(string, string, Models.ComputeNodeGetRemoteDesktopOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="114ea-163">您可以使用 RDP 檔案，以便存取節點之前，您必須在節點上建立使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="114ea-163">Before you can access a node by using the RDP file, you must create a user account on the node.</span></span>
+      <span data-ttu-id="114ea-164">此 API 僅在使用雲端服務設定建立的集區上叫用。</span><span class="sxs-lookup"><span data-stu-id="114ea-164">This API can only be invoked on pools created with a cloud service configuration.</span></span> <span data-ttu-id="114ea-165">使用虛擬機器組態建立的集區，請參閱 GetRemoteLoginSettings API。</span><span class="sxs-lookup"><span data-stu-id="114ea-165">For pools created with a virtual machine configuration, see the GetRemoteLoginSettings API.</span></span>
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, options?: Models.ComputeNodeGetRemoteDesktopOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-166">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-166">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-167">您想要取得遠端桌面通訊協定檔案的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-167">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetRemoteDesktopOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop_1'
+    name: 'getRemoteDesktop(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-168">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-168">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-169">您想要取得遠端桌面通訊協定檔案的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-169">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-170">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_2'
+    name: 'getRemoteLoginSettings(string, string, ComputeNodeGetRemoteLoginSettingsOptionalParams, ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, options: ComputeNodeGetRemoteLoginSettingsOptionalParams, callback: ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-171">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-171">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-172">要取得遠端登入設定計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-172">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+          description: <span data-ttu-id="114ea-173">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+          description: |
+            <span data-ttu-id="114ea-174">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings'
+    name: 'getRemoteLoginSettings(string, string, Models.ComputeNodeGetRemoteLoginSettingsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="114ea-175">您可以透過遠端模式之前登入到節點，使用 遠端登入設定，您必須在節點上建立使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="114ea-175">Before you can remotely login to a node using the remote login settings, you must create a user account on the node.</span></span> <span data-ttu-id="114ea-176">此 API 可以只在集區中建立虛擬機器的組態屬性上叫用。</span><span class="sxs-lookup"><span data-stu-id="114ea-176">This API can be invoked only on pools created with the virtual machine configuration property.</span></span> <span data-ttu-id="114ea-177">對於使用雲端服務設定建立集區，請參閱 GetRemoteDesktop API。</span><span class="sxs-lookup"><span data-stu-id="114ea-177">For pools created with a cloud service configuration, see the GetRemoteDesktop API.</span></span>'
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, options?: Models.ComputeNodeGetRemoteLoginSettingsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-178">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-178">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-179">要取得遠端登入設定計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-179">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetRemoteLoginSettingsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_1'
+    name: 'getRemoteLoginSettings(string, string, ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, callback: ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-180">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-180">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-181">要取得遠端登入設定計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-181">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+          description: |
+            <span data-ttu-id="114ea-182">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list_2'
+    name: 'list(string, ComputeNodeListOptionalParams, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, options: ComputeNodeListOptionalParams, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-183">您希望清單節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-183">The ID of the pool from which you want to list nodes.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeListOptionalParams'
+          description: <span data-ttu-id="114ea-184">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-184">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="114ea-185">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list'
+    name: 'list(string, Models.ComputeNodeListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, options?: Models.ComputeNodeListOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-186">您希望清單節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-186">The ID of the pool from which you want to list nodes.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list_1'
+    name: 'list(string, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-187">您希望清單節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-187">The ID of the pool from which you want to list nodes.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="114ea-188">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext_2'
+    name: 'listNext(string, ComputeNodeListNextOptionalParams, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: ComputeNodeListNextOptionalParams, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="114ea-189">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="114ea-189">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeListNextOptionalParams'
+          description: <span data-ttu-id="114ea-190">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-190">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="114ea-191">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-191">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext'
+    name: 'listNext(string, Models.ComputeNodeListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.ComputeNodeListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="114ea-192">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="114ea-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext_1'
+    name: 'listNext(string, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="114ea-193">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="114ea-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="114ea-194">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot_2'
+    name: 'reboot(string, string, ComputeNodeRebootOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, options: ComputeNodeRebootOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-195">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-195">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-196">您想要重新啟動計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-196">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeRebootOptionalParams'
+          description: <span data-ttu-id="114ea-197">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-198">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot'
+    name: 'reboot(string, string, Models.ComputeNodeRebootOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="114ea-199">只有當它是在閒置或執行的狀態，您可以重新啟動節點。</span><span class="sxs-lookup"><span data-stu-id="114ea-199">You can restart a node only if it is in an idle or running state.</span></span>
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, options?: Models.ComputeNodeRebootOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-200">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-200">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-201">您想要重新啟動計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-201">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeRebootOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot_1'
+    name: 'reboot(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-202">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-202">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-203">您想要重新啟動計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-203">The ID of the compute node that you want to restart.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-204">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-204">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage_2'
+    name: 'reimage(string, string, ComputeNodeReimageOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, options: ComputeNodeReimageOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-205">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-205">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-206">您想要重新啟動計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-206">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeReimageOptionalParams'
+          description: <span data-ttu-id="114ea-207">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-207">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-208">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-208">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage'
+    name: 'reimage(string, string, Models.ComputeNodeReimageOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="114ea-209">您可以重新安裝作業系統的節點上處於閒置或執行狀態時才。</span><span class="sxs-lookup"><span data-stu-id="114ea-209">You can reinstall the operating system on a node only if it is in an idle or running state.</span></span> <span data-ttu-id="114ea-210">此 API 可以只在集區建立雲端服務的組態屬性上叫用。</span><span class="sxs-lookup"><span data-stu-id="114ea-210">This API can be invoked only on pools created with the cloud service configuration property.</span></span>
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, options?: Models.ComputeNodeReimageOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-211">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-211">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-212">您想要重新啟動計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-212">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeReimageOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage_1'
+    name: 'reimage(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-213">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-213">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-214">您想要重新啟動計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-214">The ID of the compute node that you want to restart.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-215">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser_2'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, ComputeNodeUpdateUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, options: ComputeNodeUpdateUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-216">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-216">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-217">您想要更新的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-217">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="114ea-218">要更新的使用者帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="114ea-218">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="114ea-219">要求的參數。</span><span class="sxs-lookup"><span data-stu-id="114ea-219">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+          description: <span data-ttu-id="114ea-220">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-220">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-221">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-221">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, Models.ComputeNodeUpdateUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="114ea-222">這項作業會取代之帳戶的所有可更新的屬性。</span><span class="sxs-lookup"><span data-stu-id="114ea-222">This operation replaces of all the updatable properties of the account.</span></span> <span data-ttu-id="114ea-223">比方說，如果未指定 expiryTime 項目，目前的值將會取代預設值，不向左未經修改。</span><span class="sxs-lookup"><span data-stu-id="114ea-223">For example, if the expiryTime element is not specified, the current value is replaced with the default value, not left unmodified.</span></span> <span data-ttu-id="114ea-224">只有當它在閒置或執行狀態時，您可以更新節點上的使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="114ea-224">You can update a user account on a node only when it is in the idle or running state.</span></span>'
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, options?: Models.ComputeNodeUpdateUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-225">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-225">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-226">您想要更新的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-226">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="114ea-227">要更新的使用者帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="114ea-227">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="114ea-228">要求的參數。</span><span class="sxs-lookup"><span data-stu-id="114ea-228">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeUpdateUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser_1'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-229">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-229">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-230">您想要更新的使用者帳戶所在的電腦識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-230">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="114ea-231">要更新的使用者帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="114ea-231">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="114ea-232">要求的參數。</span><span class="sxs-lookup"><span data-stu-id="114ea-232">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="114ea-233">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-233">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_2'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, ComputeNodeUploadBatchServiceLogsOptionalParams, ServiceCallback<UploadBatchServiceLogsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, options: ComputeNodeUploadBatchServiceLogsOptionalParams, callback: ServiceCallback<UploadBatchServiceLogsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-234">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-234">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-235">您要上傳 Azure Batch 服務記錄檔的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-235">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="114ea-236">Azure Batch 服務記錄檔上傳組態。</span><span class="sxs-lookup"><span data-stu-id="114ea-236">The Azure Batch service log files upload configuration.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'
+          description: <span data-ttu-id="114ea-237">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="114ea-237">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+          description: |
+            <span data-ttu-id="114ea-238">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-238">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, Models.ComputeNodeUploadBatchServiceLogsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="114ea-239">這是從節點收集 Azure Batch 服務記錄檔，以自動化方式，如果您遇到錯誤，而且想要提升為 Azure 的支援。</span><span class="sxs-lookup"><span data-stu-id="114ea-239">This is for gathering Azure Batch service log files in an automated fashion from nodes if you are experiencing an error and wish to escalate to Azure support.</span></span> <span data-ttu-id="114ea-240">Azure Batch 服務記錄檔應該共用與 Azure 支援人員以協助偵錯與 Batch 服務的問題。</span><span class="sxs-lookup"><span data-stu-id="114ea-240">The Azure Batch service log files should be shared with Azure support to aid in debugging issues with the Batch service.</span></span>
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, options?: Models.ComputeNodeUploadBatchServiceLogsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-241">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-241">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-242">您要上傳 Azure Batch 服務記錄檔的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-242">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="114ea-243">Azure Batch 服務記錄檔上傳組態。</span><span class="sxs-lookup"><span data-stu-id="114ea-243">The Azure Batch service log files upload configuration.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeUploadBatchServiceLogsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_1'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, ServiceCallback<UploadBatchServiceLogsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, callback: ServiceCallback<UploadBatchServiceLogsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-244">包含在計算節點的集區的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-244">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="114ea-245">您要上傳 Azure Batch 服務記錄檔的計算節點的識別碼。</span><span class="sxs-lookup"><span data-stu-id="114ea-245">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="114ea-246">Azure Batch 服務記錄檔上傳組態。</span><span class="sxs-lookup"><span data-stu-id="114ea-246">The Azure Batch service log files upload configuration.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+          description: |
+            <span data-ttu-id="114ea-247">回呼</span><span class="sxs-lookup"><span data-stu-id="114ea-247">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.ComputeNodeUser'
+    name: ComputeNodeUser
+    spec.typeScript:
+      - name: ComputeNodeUser
+        fullName: ComputeNodeUser
+        uid: '@azure/batch.ComputeNodeUser'
+  - uid: '@azure/batch.ComputeNodeAddUserOptionalParams'
+    name: ComputeNodeAddUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeAddUserOptionalParams
+        fullName: ComputeNodeAddUserOptionalParams
+        uid: '@azure/batch.ComputeNodeAddUserOptionalParams'
+  - uid: '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+    name: ComputeNodeDeleteUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeDeleteUserOptionalParams
+        fullName: ComputeNodeDeleteUserOptionalParams
+        uid: '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+  - uid: '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+    name: ComputeNodeDisableSchedulingOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeDisableSchedulingOptionalParams
+        fullName: ComputeNodeDisableSchedulingOptionalParams
+        uid: '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+  - uid: '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+    name: ComputeNodeEnableSchedulingOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeEnableSchedulingOptionalParams
+        fullName: ComputeNodeEnableSchedulingOptionalParams
+        uid: '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNode>
+    name: ComputeNode>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNode
+        fullName: ComputeNode
+        uid: '@azure/batch.ComputeNode'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeGetOptionalParams'
+    name: ComputeNodeGetOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetOptionalParams
+        fullName: ComputeNodeGetOptionalParams
+        uid: '@azure/batch.ComputeNodeGetOptionalParams'
+  - uid: '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+    name: ComputeNodeGetRemoteDesktopOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetRemoteDesktopOptionalParams
+        fullName: ComputeNodeGetRemoteDesktopOptionalParams
+        uid: '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+    name: ComputeNodeGetRemoteLoginSettingsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNodeGetRemoteLoginSettingsResult
+        fullName: ComputeNodeGetRemoteLoginSettingsResult
+        uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+    name: ComputeNodeGetRemoteLoginSettingsOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetRemoteLoginSettingsOptionalParams
+        fullName: ComputeNodeGetRemoteLoginSettingsOptionalParams
+        uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNodeListResult>
+    name: ComputeNodeListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNodeListResult
+        fullName: ComputeNodeListResult
+        uid: '@azure/batch.ComputeNodeListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeListOptionalParams'
+    name: ComputeNodeListOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeListOptionalParams
+        fullName: ComputeNodeListOptionalParams
+        uid: '@azure/batch.ComputeNodeListOptionalParams'
+  - uid: '@azure/batch.ComputeNodeListNextOptionalParams'
+    name: ComputeNodeListNextOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeListNextOptionalParams
+        fullName: ComputeNodeListNextOptionalParams
+        uid: '@azure/batch.ComputeNodeListNextOptionalParams'
+  - uid: '@azure/batch.ComputeNodeRebootOptionalParams'
+    name: ComputeNodeRebootOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeRebootOptionalParams
+        fullName: ComputeNodeRebootOptionalParams
+        uid: '@azure/batch.ComputeNodeRebootOptionalParams'
+  - uid: '@azure/batch.ComputeNodeReimageOptionalParams'
+    name: ComputeNodeReimageOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeReimageOptionalParams
+        fullName: ComputeNodeReimageOptionalParams
+        uid: '@azure/batch.ComputeNodeReimageOptionalParams'
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    spec.typeScript:
+      - name: NodeUpdateUserParameter
+        fullName: NodeUpdateUserParameter
+        uid: '@azure/batch.NodeUpdateUserParameter'
+  - uid: '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+    name: ComputeNodeUpdateUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeUpdateUserOptionalParams
+        fullName: ComputeNodeUpdateUserOptionalParams
+        uid: '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    spec.typeScript:
+      - name: UploadBatchServiceLogsConfiguration
+        fullName: UploadBatchServiceLogsConfiguration
+        uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+  - uid: ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+    name: UploadBatchServiceLogsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: UploadBatchServiceLogsResult
+        fullName: UploadBatchServiceLogsResult
+        uid: '@azure/batch.UploadBatchServiceLogsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'
+    name: ComputeNodeUploadBatchServiceLogsOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeUploadBatchServiceLogsOptionalParams
+        fullName: ComputeNodeUploadBatchServiceLogsOptionalParams
+        uid: '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'

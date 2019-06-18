@@ -1,0 +1,428 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-servicebus.SBQueue'
+    name: SBQueue
+    fullName: SBQueue
+    children:
+      - '@azure/arm-servicebus.SBQueue.accessedAt'
+      - '@azure/arm-servicebus.SBQueue.autoDeleteOnIdle'
+      - '@azure/arm-servicebus.SBQueue.countDetails'
+      - '@azure/arm-servicebus.SBQueue.createdAt'
+      - '@azure/arm-servicebus.SBQueue.deadLetteringOnMessageExpiration'
+      - '@azure/arm-servicebus.SBQueue.defaultMessageTimeToLive'
+      - '@azure/arm-servicebus.SBQueue.duplicateDetectionHistoryTimeWindow'
+      - '@azure/arm-servicebus.SBQueue.enableBatchedOperations'
+      - '@azure/arm-servicebus.SBQueue.enableExpress'
+      - '@azure/arm-servicebus.SBQueue.enablePartitioning'
+      - '@azure/arm-servicebus.SBQueue.forwardDeadLetteredMessagesTo'
+      - '@azure/arm-servicebus.SBQueue.forwardTo'
+      - '@azure/arm-servicebus.SBQueue.id'
+      - '@azure/arm-servicebus.SBQueue.lockDuration'
+      - '@azure/arm-servicebus.SBQueue.maxDeliveryCount'
+      - '@azure/arm-servicebus.SBQueue.maxSizeInMegabytes'
+      - '@azure/arm-servicebus.SBQueue.messageCount'
+      - '@azure/arm-servicebus.SBQueue.name'
+      - '@azure/arm-servicebus.SBQueue.requiresDuplicateDetection'
+      - '@azure/arm-servicebus.SBQueue.requiresSession'
+      - '@azure/arm-servicebus.SBQueue.sizeInBytes'
+      - '@azure/arm-servicebus.SBQueue.status'
+      - '@azure/arm-servicebus.SBQueue.type'
+      - '@azure/arm-servicebus.SBQueue.updatedAt'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="9d671-101">佇列資源的描述。</span><span class="sxs-lookup"><span data-stu-id="9d671-101">Description of queue Resource.</span></span>
+    extends:
+      name: '@azure/arm-servicebus.Resource'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.accessedAt'
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d671-102">上次傳送一則訊息或最後一次發生此佇列接收要求。</span><span class="sxs-lookup"><span data-stu-id="9d671-102">Last time a message was sent, or the last time there was a receive request to this queue.</span></span>
+      <span data-ttu-id="9d671-103">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.autoDeleteOnIdle'
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-104">ISO 8061 timeSpan 閒置間隔過後自動刪除佇列。</span><span class="sxs-lookup"><span data-stu-id="9d671-104">ISO 8061 timeSpan idle interval after which the queue is automatically deleted.</span></span> <span data-ttu-id="9d671-105">最小持續期間為 5 分鐘。</span><span class="sxs-lookup"><span data-stu-id="9d671-105">The minimum duration is 5 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.countDetails'
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d671-106">訊息計數詳細資料。</span><span class="sxs-lookup"><span data-stu-id="9d671-106">Message Count Details.</span></span>
+      <span data-ttu-id="9d671-107">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - '@azure/arm-servicebus.MessageCountDetails'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.createdAt'
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d671-108">建立訊息的確切時間。</span><span class="sxs-lookup"><span data-stu-id="9d671-108">The exact time the message was created.</span></span>
+      <span data-ttu-id="9d671-109">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.deadLetteringOnMessageExpiration'
+    name: deadLetteringOnMessageExpiration
+    fullName: deadLetteringOnMessageExpiration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-110">值，指出訊息過期時，此佇列是否有寄不出信件的支援。</span><span class="sxs-lookup"><span data-stu-id="9d671-110">A value that indicates whether this queue has dead letter support when a message expires.</span></span>
+    optional: true
+    syntax:
+      content: 'deadLetteringOnMessageExpiration?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.defaultMessageTimeToLive'
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d671-111">ISO 8601 即時值的預設訊息時間範圍。</span><span class="sxs-lookup"><span data-stu-id="9d671-111">ISO 8601 default message timespan to live value.</span></span> <span data-ttu-id="9d671-112">這是訊息到期之前，從服務匯流排傳送此訊息的持續時間。</span><span class="sxs-lookup"><span data-stu-id="9d671-112">This is the duration after which the message expires, starting from when the message is sent to Service Bus.</span></span> <span data-ttu-id="9d671-113">這是當訊息本身未設定 TimeToLive 時所使用的預設值。</span><span class="sxs-lookup"><span data-stu-id="9d671-113">This is the default value used when TimeToLive is not set on a message itself.</span></span>'
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.duplicateDetectionHistoryTimeWindow'
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-114">定義重複偵測記錄的持續時間的 ISO 8601 時間範圍結構。</span><span class="sxs-lookup"><span data-stu-id="9d671-114">ISO 8601 timeSpan structure that defines the duration of the duplicate detection history.</span></span> <span data-ttu-id="9d671-115">預設值是 10 分鐘。</span><span class="sxs-lookup"><span data-stu-id="9d671-115">The default value is 10 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.enableBatchedOperations'
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-116">值，指出是否啟用伺服器端批次的作業。</span><span class="sxs-lookup"><span data-stu-id="9d671-116">Value that indicates whether server-side batched operations are enabled.</span></span>
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.enableExpress'
+    name: enableExpress
+    fullName: enableExpress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-117">值，指出是否啟用 Express 的實體。</span><span class="sxs-lookup"><span data-stu-id="9d671-117">A value that indicates whether Express Entities are enabled.</span></span> <span data-ttu-id="9d671-118">快速佇列會保留寫入永續性儲存體之前，暫時在記憶體中的訊息。</span><span class="sxs-lookup"><span data-stu-id="9d671-118">An express queue holds a message in memory temporarily before writing it to persistent storage.</span></span>
+    optional: true
+    syntax:
+      content: 'enableExpress?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.enablePartitioning'
+    name: enablePartitioning
+    fullName: enablePartitioning
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-119">值，指出佇列是否為分割到多個訊息代理人。</span><span class="sxs-lookup"><span data-stu-id="9d671-119">A value that indicates whether the queue is to be partitioned across multiple message brokers.</span></span>
+    optional: true
+    syntax:
+      content: 'enablePartitioning?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.forwardDeadLetteredMessagesTo'
+    name: forwardDeadLetteredMessagesTo
+    fullName: forwardDeadLetteredMessagesTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-120">訊息轉送目的寄不出信件佇列/主題名稱</span><span class="sxs-lookup"><span data-stu-id="9d671-120">Queue/Topic name to forward the Dead Letter message</span></span>
+    optional: true
+    syntax:
+      content: 'forwardDeadLetteredMessagesTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.forwardTo'
+    name: forwardTo
+    fullName: forwardTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-121">若要將訊息轉送的佇列/主題名稱</span><span class="sxs-lookup"><span data-stu-id="9d671-121">Queue/Topic name to forward the messages</span></span>
+    optional: true
+    syntax:
+      content: 'forwardTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d671-122">資源識別碼**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-122">Resource Id **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.lockDuration'
+    name: lockDuration
+    fullName: lockDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d671-123">查看鎖定; 的 ISO 8601 時間範圍持續時間也就是針對其他接收者鎖定訊息的時間長度。</span><span class="sxs-lookup"><span data-stu-id="9d671-123">ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers.</span></span> <span data-ttu-id="9d671-124">使用者能夠為 LockDuration 的最大值為 5 分鐘;預設值為 1 分鐘。</span><span class="sxs-lookup"><span data-stu-id="9d671-124">The maximum value for LockDuration is 5 minutes; the default value is 1 minute.</span></span>'
+    optional: true
+    syntax:
+      content: 'lockDuration?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.maxDeliveryCount'
+    name: maxDeliveryCount
+    fullName: maxDeliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-125">最大傳遞計數。</span><span class="sxs-lookup"><span data-stu-id="9d671-125">The maximum delivery count.</span></span> <span data-ttu-id="9d671-126">訊息會在這個傳遞次數後自動寄不出。</span><span class="sxs-lookup"><span data-stu-id="9d671-126">A message is automatically deadlettered after this number of deliveries.</span></span> <span data-ttu-id="9d671-127">預設值為 10。</span><span class="sxs-lookup"><span data-stu-id="9d671-127">default value is 10.</span></span>
+    optional: true
+    syntax:
+      content: 'maxDeliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.maxSizeInMegabytes'
+    name: maxSizeInMegabytes
+    fullName: maxSizeInMegabytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d671-128">這是針對佇列而配置的記憶體大小以 mb 為單位，佇列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="9d671-128">The maximum size of the queue in megabytes, which is the size of memory allocated for the queue.</span></span> <span data-ttu-id="9d671-129">預設值為 1024年。</span><span class="sxs-lookup"><span data-stu-id="9d671-129">Default is 1024.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxSizeInMegabytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.messageCount'
+    name: messageCount
+    fullName: messageCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d671-130">在佇列中的訊息數目。</span><span class="sxs-lookup"><span data-stu-id="9d671-130">The number of messages in the queue.</span></span>
+      <span data-ttu-id="9d671-131">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-131">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'messageCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d671-132">資源名稱**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-132">Resource name **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.requiresDuplicateDetection'
+    name: requiresDuplicateDetection
+    fullName: requiresDuplicateDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-133">值，指出此佇列是否需要重複偵測。</span><span class="sxs-lookup"><span data-stu-id="9d671-133">A value indicating if this queue requires duplicate detection.</span></span>
+    optional: true
+    syntax:
+      content: 'requiresDuplicateDetection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.requiresSession'
+    name: requiresSession
+    fullName: requiresSession
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d671-134">值，指出佇列是否支援工作階段的概念。</span><span class="sxs-lookup"><span data-stu-id="9d671-134">A value that indicates whether the queue supports the concept of sessions.</span></span>
+    optional: true
+    syntax:
+      content: 'requiresSession?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.sizeInBytes'
+    name: sizeInBytes
+    fullName: sizeInBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d671-135">佇列，以位元組為單位的大小。</span><span class="sxs-lookup"><span data-stu-id="9d671-135">The size of the queue, in bytes.</span></span>
+      <span data-ttu-id="9d671-136">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-136">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'sizeInBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d671-137">列舉可能的值為訊息實體的狀態。</span><span class="sxs-lookup"><span data-stu-id="9d671-137">Enumerates the possible values for the status of a messaging entity.</span></span> <span data-ttu-id="9d671-138">可能的值包括：''Active''、 '' Disabled''，''還原''、 ''SendDisabled''，''ReceiveDisabled''，''建立''，''刪除''、 ''重新命名''、 ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="9d671-138">Possible values include: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: EntityStatus'
+      return:
+        type:
+          - '@azure/arm-servicebus.EntityStatus'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d671-139">資源類型**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-139">Resource type **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.updatedAt'
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d671-140">更新訊息的確切時間。</span><span class="sxs-lookup"><span data-stu-id="9d671-140">The exact time the message was updated.</span></span>
+      <span data-ttu-id="9d671-141">**附註：這個屬性不會序列化。它可以才會填入伺服器中。**</span><span class="sxs-lookup"><span data-stu-id="9d671-141">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+references:
+  - uid: '@azure/arm-servicebus.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-servicebus.Resource'
+  - uid: '@azure/arm-servicebus.MessageCountDetails'
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: '@azure/arm-servicebus.MessageCountDetails'
+  - uid: '@azure/arm-servicebus.EntityStatus'
+    name: EntityStatus
+    spec.typeScript:
+      - name: EntityStatus
+        fullName: EntityStatus
+        uid: '@azure/arm-servicebus.EntityStatus'
