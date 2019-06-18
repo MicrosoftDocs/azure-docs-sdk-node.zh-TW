@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.Restriction'
+    name: Restriction
+    fullName: Restriction
+    children:
+      - '@azure/arm-storage.Restriction.reasonCode'
+      - '@azure/arm-storage.Restriction.type'
+      - '@azure/arm-storage.Restriction.values'
+    langs:
+      - typeScript
+    type: interface
+    summary: 導致無法使用 SKU 的限制。
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.reasonCode'
+    name: reasonCode
+    fullName: reasonCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 限制的原因。 截至目前為止，這可以是 「 QuotaId"或"NotAvailableForSubscription 」。 SKU 會有 requiredQuotas 參數，因為訂用帳戶不屬於該配額時，會設定配額識別碼。 "NotAvailableForSubscription 」 被與 DC 的容量。 可能的值包括：' QuotaId'，'NotAvailableForSubscription'
+    optional: true
+    syntax:
+      content: 'reasonCode?: ReasonCode'
+      return:
+        type:
+          - '@azure/arm-storage.ReasonCode'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      限制型別。 截至目前為止只可以設定的值會是位置。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.values'
+    name: values
+    fullName: values
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      限制值。 如果限制類型設定為位置。 這會是 SKU 的受限制的不同位置。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'values?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.ReasonCode'
+    name: ReasonCode
+    spec.typeScript:
+      - name: ReasonCode
+        fullName: ReasonCode
+        uid: '@azure/arm-storage.ReasonCode'

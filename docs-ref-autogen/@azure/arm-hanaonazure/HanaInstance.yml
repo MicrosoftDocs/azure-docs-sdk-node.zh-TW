@@ -12,7 +12,9 @@ items:
       - '@azure/arm-hanaonazure.HanaInstance.name'
       - '@azure/arm-hanaonazure.HanaInstance.networkProfile'
       - '@azure/arm-hanaonazure.HanaInstance.osProfile'
+      - '@azure/arm-hanaonazure.HanaInstance.partnerNodeId'
       - '@azure/arm-hanaonazure.HanaInstance.powerState'
+      - '@azure/arm-hanaonazure.HanaInstance.provisioningState'
       - '@azure/arm-hanaonazure.HanaInstance.proximityPlacementGroup'
       - '@azure/arm-hanaonazure.HanaInstance.storageProfile'
       - '@azure/arm-hanaonazure.HanaInstance.tags'
@@ -146,6 +148,21 @@ items:
         type:
           - '@azure/arm-hanaonazure.OSProfile'
     package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstance.partnerNodeId'
+    name: partnerNodeId
+    fullName: partnerNodeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 會將網路分享此 HanaInstance 的另一個 HanaInstance ARM 識別碼**附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'partnerNodeId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstance.powerState'
     name: powerState
     fullName: powerState
@@ -160,6 +177,21 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstancePowerStateEnum'
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstance.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HanaInstance 佈建狀態。 可能的值包括：'接受'，'建立'，「 更新 」，「 失敗 」，「 成功 」、 「 刪除中 」、 '移轉'**附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'provisioningState?: HanaProvisioningStatesEnum'
+      return:
+        type:
+          - '@azure/arm-hanaonazure.HanaProvisioningStatesEnum'
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstance.proximityPlacementGroup'
     name: proximityPlacementGroup
@@ -252,6 +284,12 @@ references:
       - name: HanaInstancePowerStateEnum
         fullName: HanaInstancePowerStateEnum
         uid: '@azure/arm-hanaonazure.HanaInstancePowerStateEnum'
+  - uid: '@azure/arm-hanaonazure.HanaProvisioningStatesEnum'
+    name: HanaProvisioningStatesEnum
+    spec.typeScript:
+      - name: HanaProvisioningStatesEnum
+        fullName: HanaProvisioningStatesEnum
+        uid: '@azure/arm-hanaonazure.HanaProvisioningStatesEnum'
   - uid: '@azure/arm-hanaonazure.StorageProfile'
     name: StorageProfile
     spec.typeScript:
