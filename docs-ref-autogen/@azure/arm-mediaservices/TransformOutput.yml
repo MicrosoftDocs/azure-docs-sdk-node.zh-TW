@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.TransformOutput'
+    name: TransformOutput
+    fullName: TransformOutput
+    children:
+      - '@azure/arm-mediaservices.TransformOutput.onError'
+      - '@azure/arm-mediaservices.TransformOutput.preset'
+      - '@azure/arm-mediaservices.TransformOutput.relativePriority'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述 TransformOutput，也就是產生所需的輸出時要套用規則的屬性。
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.onError'
+    name: onError
+    fullName: onError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      轉換可以定義多個輸出。 這個屬性會定義服務應該做什麼時一個輸出就會失敗-繼續產生其他輸出，或停止其他輸出。
+      整體的作業狀態將不會反映輸出所指定的 'ContinueJob' 的失敗。 預設值為 'StopProcessingJob'。 可能的值包括：'StopProcessingJob', 'ContinueJob'
+    optional: true
+    syntax:
+      content: 'onError?: OnErrorType'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OnErrorType'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.preset'
+    name: preset
+    fullName: preset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 描述將用來修改，轉碼，或從原始程式檔，以產生輸出中擷取深入解析作業的預設值。
+    syntax:
+      content: 'preset: PresetUnion'
+      return:
+        type:
+          - '@azure/arm-mediaservices.PresetUnion'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.relativePriority'
+    name: relativePriority
+    fullName: relativePriority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      設定是在轉換內 TransformOutputs 的相對優先權。 這會將服務用於處理 TransformOutputs 的優先順序。 預設優先權為 Normal。
+      可能的值包括：'Low'、 'Normal'、 'High'
+    optional: true
+    syntax:
+      content: 'relativePriority?: Priority'
+      return:
+        type:
+          - '@azure/arm-mediaservices.Priority'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OnErrorType'
+    name: OnErrorType
+    spec.typeScript:
+      - name: OnErrorType
+        fullName: OnErrorType
+        uid: '@azure/arm-mediaservices.OnErrorType'
+  - uid: '@azure/arm-mediaservices.PresetUnion'
+    name: PresetUnion
+    spec.typeScript:
+      - name: PresetUnion
+        fullName: PresetUnion
+        uid: '@azure/arm-mediaservices.PresetUnion'
+  - uid: '@azure/arm-mediaservices.Priority'
+    name: Priority
+    spec.typeScript:
+      - name: Priority
+        fullName: Priority
+        uid: '@azure/arm-mediaservices.Priority'

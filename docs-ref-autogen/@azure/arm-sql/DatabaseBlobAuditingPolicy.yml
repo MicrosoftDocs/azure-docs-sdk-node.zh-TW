@@ -1,0 +1,257 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy'
+    name: DatabaseBlobAuditingPolicy
+    fullName: DatabaseBlobAuditingPolicy
+    children:
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.auditActionsAndGroups'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.id'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.isAzureMonitorTargetEnabled'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.isStorageSecondaryKeyInUse'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.kind'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.name'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.retentionDays'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.state'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.storageAccountAccessKey'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.storageAccountSubscriptionId'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.storageEndpoint'
+      - '@azure/arm-sql.DatabaseBlobAuditingPolicy.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: 資料庫 blob 稽核原則。
+    extends:
+      name: '@azure/arm-sql.ProxyResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.auditActionsAndGroups'
+    name: auditActionsAndGroups
+    fullName: auditActionsAndGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      指定要稽核的動作群組和動作。
+      下列組合是一組建議的動作群組，以使用-這將會稽核所有查詢和資料庫，以及成功和失敗的登入執行的預存程序：
+
+      BATCH_COMPLETED_GROUP，SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP，FAILED_DATABASE_AUTHENTICATION_GROUP。
+
+      這上面組合也是預設會啟用稽核從 Azure 入口網站時設定的集合。
+
+      若要稽核的支援的動作群組 (請注意： 選擇涵蓋稽核需求的特定群組。 使用不必要的群組可能會導致非常大量的稽核記錄）：
+
+      APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP
+
+      這種群組需涵蓋所有的 sql 陳述式和預存程序針對資料庫執行，而且不應搭配其他群組，這會導致重複的稽核記錄檔。
+
+      如需詳細資訊，請參閱 <<c0> [ 資料庫層級稽核動作群組](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups)。
+
+      資料庫稽核原則，針對特定的動作也可以是指定 （請注意，不能指定伺服器稽核原則的動作）。 若要稽核的支援的動作是：選取更新插入刪除執行接收參考
+
+      一般的形式來定義要稽核的動作是: {action} ON {物件} 由 {主體}
+
+      請注意，<object>上述的格式可以參考的物件，例如資料表、 檢視或預存程序，或整個資料庫或結構描述。 後者的情況下，資料庫的形式:: {db_name} 和結構描述:: {schema_name} 可分別用。
+
+      例如: 選取上 dbo.myTable 公用，來選取在 DATABASE::myDatabase SCHEMA::mySchema 大眾的公用 SELECT
+
+      如需詳細資訊，請參閱[資料庫層級稽核動作](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
+    optional: true
+    syntax:
+      content: 'auditActionsAndGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源識別碼。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.isAzureMonitorTargetEnabled'
+    name: isAzureMonitorTargetEnabled
+    fullName: isAzureMonitorTargetEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      指定是否要將稽核事件傳送至 Azure 監視器。
+      若要將事件傳送至 Azure 監視器中，指定 'State' 為 'Enabled' 和 'IsAzureMonitorTargetEnabled' 為 true。
+      當使用 REST API 設定稽核，應該也建立與 'SQLSecurityAuditEvents' 在資料庫上的診斷記錄類別的診斷設定。
+      請注意，伺服器層級稽核，您應該使用為 {databaseName} 的 'master' 資料庫。
+
+      診斷設定的 URI 格式：PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+      如需詳細資訊，請參閱 <<c0> [ 診斷設定 REST API](https://go.microsoft.com/fwlink/?linkid=2033207)或[診斷設定 PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
+    optional: true
+    syntax:
+      content: 'isAzureMonitorTargetEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.isStorageSecondaryKeyInUse'
+    name: isStorageSecondaryKeyInUse
+    fullName: isStorageSecondaryKeyInUse
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定 storageAccountAccessKey 值是否為儲存體的次要金鑰。
+    optional: true
+    syntax:
+      content: 'isStorageSecondaryKeyInUse?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源種類。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'kind?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源名稱。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.retentionDays'
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定儲存體帳戶中會記錄在稽核中保留的天數。
+    optional: true
+    syntax:
+      content: 'retentionDays?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定原則的狀態。 如果已啟用狀態，不需要 storageEndpoint 或 isAzureMonitorTargetEnabled。 可能的值包括：' Enabled'，'Disabled'
+    syntax:
+      content: 'state: BlobAuditingPolicyState'
+      return:
+        type:
+          - '@azure/arm-sql.BlobAuditingPolicyState'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.storageAccountAccessKey'
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的稽核儲存體帳戶的識別碼索引鍵。 如果已啟用狀態和 storageEndpoint，storageAccountAccessKey 需要。
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.storageAccountSubscriptionId'
+    name: storageAccountSubscriptionId
+    fullName: storageAccountSubscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定 blob 儲存體訂用帳戶識別碼。
+    optional: true
+    syntax:
+      content: 'storageAccountSubscriptionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.storageEndpoint'
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定 blob 儲存體端點 (例如https://MyAccount.blob.core.windows.net)。 如果已啟用狀態，storageEndpoint 是必要的。'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseBlobAuditingPolicy.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      資源類型。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ProxyResource'
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: '@azure/arm-sql.ProxyResource'
+  - uid: '@azure/arm-sql.BlobAuditingPolicyState'
+    name: BlobAuditingPolicyState
+    spec.typeScript:
+      - name: BlobAuditingPolicyState
+        fullName: BlobAuditingPolicyState
+        uid: '@azure/arm-sql.BlobAuditingPolicyState'

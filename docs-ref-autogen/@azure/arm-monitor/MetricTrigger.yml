@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.MetricTrigger'
+    name: MetricTrigger
+    fullName: MetricTrigger
+    children:
+      - '@azure/arm-monitor.MetricTrigger.metricName'
+      - '@azure/arm-monitor.MetricTrigger.metricResourceUri'
+      - '@azure/arm-monitor.MetricTrigger.operator'
+      - '@azure/arm-monitor.MetricTrigger.statistic'
+      - '@azure/arm-monitor.MetricTrigger.threshold'
+      - '@azure/arm-monitor.MetricTrigger.timeAggregation'
+      - '@azure/arm-monitor.MetricTrigger.timeGrain'
+      - '@azure/arm-monitor.MetricTrigger.timeWindow'
+    langs:
+      - typeScript
+    type: interface
+    summary: 觸發程序會導致調整動作。
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.metricName'
+    name: metricName
+    fullName: metricName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 定義規則所監視的度量名稱。
+    syntax:
+      content: 'metricName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.metricResourceUri'
+    name: metricResourceUri
+    fullName: metricResourceUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 監視資源的規則的資源識別碼。
+    syntax:
+      content: 'metricResourceUri: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.operator'
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用來比較計量資料和臨界值的運算子。 可能的值包括：' Equals'，'NotEquals'、 'GreaterThan'、 'GreaterThanOrEqual'、 'LessThan'、 'LessThanOrEqual'
+    syntax:
+      content: 'operator: ComparisonOperationType'
+      return:
+        type:
+          - '@azure/arm-monitor.ComparisonOperationType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.statistic'
+    name: statistic
+    fullName: statistic
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 計量的統計資料型別。 如何結合來自多個執行個體的度量。 可能的值包括：' 平均 '，'Min'、 'Max'，'Sum'
+    syntax:
+      content: 'statistic: MetricStatisticType'
+      return:
+        type:
+          - '@azure/arm-monitor.MetricStatisticType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.threshold'
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 觸發調整動作的度量臨界值。
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.timeAggregation'
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '時間彙總類型。 收集的資料應如何隨著時間結合。 預設值為 Average。 可能的值包括：「 平均 」、 [最低]、 ''Maximum''、 ''Total''、 ''Count''、 ''Last'''
+    syntax:
+      content: 'timeAggregation: TimeAggregationType'
+      return:
+        type:
+          - '@azure/arm-monitor.TimeAggregationType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.timeGrain'
+    name: timeGrain
+    fullName: timeGrain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 監視的計量規則的資料粒度。 必須是其中一個預先定義的值從傳回計量的計量定義。 必須介於 12 小時與 1 分鐘之間。
+    syntax:
+      content: 'timeGrain: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.timeWindow'
+    name: timeWindow
+    fullName: timeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在哪一個執行個體中收集資料的時間範圍。 此值必須大於異資源加入資源的度量集合中的延遲。 必須介於 12 小時與 5 分鐘之間。
+    syntax:
+      content: 'timeWindow: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ComparisonOperationType'
+    name: ComparisonOperationType
+    spec.typeScript:
+      - name: ComparisonOperationType
+        fullName: ComparisonOperationType
+        uid: '@azure/arm-monitor.ComparisonOperationType'
+  - uid: '@azure/arm-monitor.MetricStatisticType'
+    name: MetricStatisticType
+    spec.typeScript:
+      - name: MetricStatisticType
+        fullName: MetricStatisticType
+        uid: '@azure/arm-monitor.MetricStatisticType'
+  - uid: '@azure/arm-monitor.TimeAggregationType'
+    name: TimeAggregationType
+    spec.typeScript:
+      - name: TimeAggregationType
+        fullName: TimeAggregationType
+        uid: '@azure/arm-monitor.TimeAggregationType'

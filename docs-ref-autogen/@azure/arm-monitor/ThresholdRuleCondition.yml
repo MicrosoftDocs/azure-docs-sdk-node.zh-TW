@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition'
+    name: ThresholdRuleCondition
+    fullName: ThresholdRuleCondition
+    children:
+      - '@azure/arm-monitor.ThresholdRuleCondition.dataSource'
+      - '@azure/arm-monitor.ThresholdRuleCondition.odatatype'
+      - '@azure/arm-monitor.ThresholdRuleCondition.operator'
+      - '@azure/arm-monitor.ThresholdRuleCondition.threshold'
+      - '@azure/arm-monitor.ThresholdRuleCondition.timeAggregation'
+      - '@azure/arm-monitor.ThresholdRuleCondition.windowSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: 規則條件，根據超出閾值的度量。
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.dataSource'
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 從中此規則會收集其資料資源。 此類型的型別 RuleMetricDataSource 一律為資料來源。
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSourceUnion'
+      return:
+        type:
+          - '@azure/arm-monitor.RuleDataSourceUnion'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'odatatype: "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition"'
+      return:
+        type:
+          - '"Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition"'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.operator'
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用來比較資料與臨界值的運算子。 可能的值包括：'GreaterThan'、 'GreaterThanOrEqual'、 'LessThan'、 'LessThanOrEqual'
+    syntax:
+      content: 'operator: ConditionOperator'
+      return:
+        type:
+          - '@azure/arm-monitor.ConditionOperator'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.threshold'
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 啟動警示臨界值。
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.timeAggregation'
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      時間彙總運算子中。 如何收集的資料應該隨著時間結合。
+      預設值是標準的 PrimaryAggregationType。 可能的值包括：'Average'、 'Minimum'、 'Maximum'，' Total'，'Last'
+    optional: true
+    syntax:
+      content: 'timeAggregation?: TimeAggregationOperator'
+      return:
+        type:
+          - '@azure/arm-monitor.TimeAggregationOperator'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.windowSize'
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這段期間 （以 ISO 8601 持續時間格式），用來監視警示活動，根據臨界值。 如果指定，則它必須是介於 5 分鐘到 1 天。
+    optional: true
+    syntax:
+      content: 'windowSize?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.RuleDataSourceUnion'
+    name: RuleDataSourceUnion
+    spec.typeScript:
+      - name: RuleDataSourceUnion
+        fullName: RuleDataSourceUnion
+        uid: '@azure/arm-monitor.RuleDataSourceUnion'
+  - uid: '@azure/arm-monitor.ConditionOperator'
+    name: ConditionOperator
+    spec.typeScript:
+      - name: ConditionOperator
+        fullName: ConditionOperator
+        uid: '@azure/arm-monitor.ConditionOperator'
+  - uid: '@azure/arm-monitor.TimeAggregationOperator'
+    name: TimeAggregationOperator
+    spec.typeScript:
+      - name: TimeAggregationOperator
+        fullName: TimeAggregationOperator
+        uid: '@azure/arm-monitor.TimeAggregationOperator'
