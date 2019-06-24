@@ -6,8 +6,8 @@ items:
     children:
       - '@azure/arm-containerregistry.RegistryUpdateParameters.adminUserEnabled'
       - '@azure/arm-containerregistry.RegistryUpdateParameters.networkRuleSet'
+      - '@azure/arm-containerregistry.RegistryUpdateParameters.policies'
       - '@azure/arm-containerregistry.RegistryUpdateParameters.sku'
-      - '@azure/arm-containerregistry.RegistryUpdateParameters.storageAccount'
       - '@azure/arm-containerregistry.RegistryUpdateParameters.tags'
     langs:
       - typeScript
@@ -44,6 +44,21 @@ items:
         type:
           - '@azure/arm-containerregistry.NetworkRuleSet'
     package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.policies'
+    name: policies
+    fullName: policies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 容器登錄的原則。
+    optional: true
+    syntax:
+      content: 'policies?: Policies'
+      return:
+        type:
+          - '@azure/arm-containerregistry.Policies'
+    package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.sku'
     name: sku
     fullName: sku
@@ -58,21 +73,6 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Sku'
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.storageAccount'
-    name: storageAccount
-    fullName: storageAccount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 容器登錄的儲存體帳戶的參數。 僅適用於傳統的 SKU。 如果指定，儲存體帳戶必須位於相同的實體位置，作為容器登錄中。
-    optional: true
-    syntax:
-      content: 'storageAccount?: StorageAccountProperties'
-      return:
-        type:
-          - '@azure/arm-containerregistry.StorageAccountProperties'
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.tags'
     name: tags
@@ -96,15 +96,15 @@ references:
       - name: NetworkRuleSet
         fullName: NetworkRuleSet
         uid: '@azure/arm-containerregistry.NetworkRuleSet'
+  - uid: '@azure/arm-containerregistry.Policies'
+    name: Policies
+    spec.typeScript:
+      - name: Policies
+        fullName: Policies
+        uid: '@azure/arm-containerregistry.Policies'
   - uid: '@azure/arm-containerregistry.Sku'
     name: Sku
     spec.typeScript:
       - name: Sku
         fullName: Sku
         uid: '@azure/arm-containerregistry.Sku'
-  - uid: '@azure/arm-containerregistry.StorageAccountProperties'
-    name: StorageAccountProperties
-    spec.typeScript:
-      - name: StorageAccountProperties
-        fullName: StorageAccountProperties
-        uid: '@azure/arm-containerregistry.StorageAccountProperties'
