@@ -6,11 +6,12 @@ items:
     children:
       - '@azure/arm-mariadb.StorageProfile.backupRetentionDays'
       - '@azure/arm-mariadb.StorageProfile.geoRedundantBackup'
+      - '@azure/arm-mariadb.StorageProfile.storageAutogrow'
       - '@azure/arm-mariadb.StorageProfile.storageMB'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="1b847-101">伺服器的儲存體設定檔內容</span><span class="sxs-lookup"><span data-stu-id="1b847-101">Storage Profile properties of a server</span></span>
+    summary: <span data-ttu-id="dbdbe-101">伺服器的儲存體設定檔內容</span><span class="sxs-lookup"><span data-stu-id="dbdbe-101">Storage Profile properties of a server</span></span>
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.StorageProfile.backupRetentionDays'
     name: backupRetentionDays
@@ -19,7 +20,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1b847-102">伺服器備份的保留天數。</span><span class="sxs-lookup"><span data-stu-id="1b847-102">Backup retention days for the server.</span></span>
+    summary: <span data-ttu-id="dbdbe-102">伺服器備份的保留天數。</span><span class="sxs-lookup"><span data-stu-id="dbdbe-102">Backup retention days for the server.</span></span>
     optional: true
     syntax:
       content: 'backupRetentionDays?: undefined | number'
@@ -34,13 +35,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="1b847-103">啟用異地備援或不適用於伺服器備份。</span><span class="sxs-lookup"><span data-stu-id="1b847-103">Enable Geo-redundant or not for server backup.</span></span> <span data-ttu-id="1b847-104">可能的值包括：'' Enabled''，''Disabled''</span><span class="sxs-lookup"><span data-stu-id="1b847-104">Possible values include: ''Enabled'', ''Disabled''</span></span>'
+    summary: '<span data-ttu-id="dbdbe-103">啟用異地備援或不適用於伺服器備份。</span><span class="sxs-lookup"><span data-stu-id="dbdbe-103">Enable Geo-redundant or not for server backup.</span></span> <span data-ttu-id="dbdbe-104">可能的值包括：'' Enabled''，''Disabled''</span><span class="sxs-lookup"><span data-stu-id="dbdbe-104">Possible values include: ''Enabled'', ''Disabled''</span></span>'
     optional: true
     syntax:
       content: 'geoRedundantBackup?: GeoRedundantBackup'
       return:
         type:
           - '@azure/arm-mariadb.GeoRedundantBackup'
+    package: '@azure/arm-mariadb'
+  - uid: '@azure/arm-mariadb.StorageProfile.storageAutogrow'
+    name: storageAutogrow
+    fullName: storageAutogrow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dbdbe-105">啟用儲存體自動成長。</span><span class="sxs-lookup"><span data-stu-id="dbdbe-105">Enable Storage Auto Grow.</span></span> <span data-ttu-id="dbdbe-106">可能的值包括：'' Enabled''，''Disabled''</span><span class="sxs-lookup"><span data-stu-id="dbdbe-106">Possible values include: ''Enabled'', ''Disabled''</span></span>'
+    optional: true
+    syntax:
+      content: 'storageAutogrow?: StorageAutogrow'
+      return:
+        type:
+          - '@azure/arm-mariadb.StorageAutogrow'
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.StorageProfile.storageMB'
     name: storageMB
@@ -49,7 +65,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1b847-105">伺服器所允許的最大儲存體。</span><span class="sxs-lookup"><span data-stu-id="1b847-105">Max storage allowed for a server.</span></span>
+    summary: <span data-ttu-id="dbdbe-107">伺服器所允許的最大儲存體。</span><span class="sxs-lookup"><span data-stu-id="dbdbe-107">Max storage allowed for a server.</span></span>
     optional: true
     syntax:
       content: 'storageMB?: undefined | number'
@@ -64,3 +80,9 @@ references:
       - name: GeoRedundantBackup
         fullName: GeoRedundantBackup
         uid: '@azure/arm-mariadb.GeoRedundantBackup'
+  - uid: '@azure/arm-mariadb.StorageAutogrow'
+    name: StorageAutogrow
+    spec.typeScript:
+      - name: StorageAutogrow
+        fullName: StorageAutogrow
+        uid: '@azure/arm-mariadb.StorageAutogrow'
