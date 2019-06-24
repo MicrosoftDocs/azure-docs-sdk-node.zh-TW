@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    fullName: PoolInformation
+    children:
+      - azure-batch.PoolInformation.autoPoolSpecification
+      - azure-batch.PoolInformation.poolId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolInformation.autoPoolSpecification
+    name: autoPoolSpecification
+    fullName: autoPoolSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果自動集區建立失敗，Batch 服務會將工作移至已完成的狀態和作業的排程錯誤屬性中設定集區建立錯誤。 Batch 服務會管理存留期 (用於建立和指定 keepAlive，除非刪除) 的自動集區。 作業處於作用中時，會影響自動集區的存留期的任何使用者動作將會導致非預期的行為。 您必須指定集區識別碼或自動集區規格，但非兩者。
+    optional: true
+    syntax:
+      content: 'autoPoolSpecification?: AutoPoolSpecification'
+      return:
+        type:
+          - azure-batch.AutoPoolSpecification
+    package: azure-batch
+  - uid: azure-batch.PoolInformation.poolId
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 您必須確定此屬性所參考的集區存在。 如果集區不存在於批次服務會嘗試排程作業的時間，直到您建立集區具有該識別碼將會不執行任何作業的工作。請注意，Batch 服務會拒絕作業的要求;它只是不會執行工作直到集區存在。 您必須指定集區識別碼或自動集區規格，但非兩者。
+    optional: true
+    syntax:
+      content: 'poolId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.AutoPoolSpecification
+    name: AutoPoolSpecification
+    spec.typeScript:
+      - name: AutoPoolSpecification
+        fullName: AutoPoolSpecification
+        uid: azure-batch.AutoPoolSpecification

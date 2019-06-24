@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromUrlOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromUrlOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromUrlOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromUrlOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromUrlOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromUrlOptionalParams.targetFace'
@@ -47,6 +48,21 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromUrlOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '偵測模型的名稱。 偵測模型用來偵測已送出的映像中的臉孔。 偵測模型名稱可供執行臉部-時偵測到或 （大型） FaceList-新增臉部或 （大型） PersonGroup-新增臉部。 如果需要另一個模型，請明確指定，預設值是 ''detection_01，''。 可能的值包括: ''detection_01''，''detection_02''。 預設值: ''detection_01''。'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromUrlOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -123,3 +139,10 @@ items:
         type:
           - undefined | string
     package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'

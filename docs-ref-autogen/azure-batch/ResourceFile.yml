@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ResourceFile
+    name: ResourceFile
+    fullName: ResourceFile
+    children:
+      - azure-batch.ResourceFile.autoStorageContainerName
+      - azure-batch.ResourceFile.blobPrefix
+      - azure-batch.ResourceFile.fileMode
+      - azure-batch.ResourceFile.filePath
+      - azure-batch.ResourceFile.httpUrl
+      - azure-batch.ResourceFile.storageContainerUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ResourceFile.autoStorageContainerName
+    name: autoStorageContainerName
+    fullName: autoStorageContainerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: AutoStorageContainerName、 storageContainerUrl 和 httpUrl 屬性互斥，且必須指定其中一個。
+    optional: true
+    syntax:
+      content: 'autoStorageContainerName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ResourceFile.blobPrefix
+    name: blobPrefix
+    fullName: blobPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 使用 autoStorageContainerName 或 storageContainerUrl 時才有效屬性。 部分檔案名稱或子目錄，可以使用此前置詞。 如果未指定前置詞，將會下載容器中的所有檔案。
+    optional: true
+    syntax:
+      content: 'blobPrefix?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ResourceFile.fileMode
+    name: fileMode
+    fullName: fileMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這個屬性僅適用於檔案下載到 Linux 計算節點。 如果您指定了如 resourceFile 會下載至 Windows 計算節點，將會忽略它。 如果在 Linux 計算節點未指定此屬性，則預設值是 0770年會套用至檔案。
+    optional: true
+    syntax:
+      content: 'fileMode?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ResourceFile.filePath
+    name: filePath
+    fullName: filePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定 httpUrl 屬性，如果檔案路徑是必要，並描述檔案將會被下載，包括檔名的路徑。 否則，指定 autoStorageContainerName 或 storageContainerUrl 屬性，如果檔案路徑是選擇性的要下載之檔案的目錄。 萬一其中檔案路徑做為目錄，將完整保留和附加至指定的檔案路徑的目錄已輸入的資料與相關聯的任何目錄結構。 指定的相對路徑無法中斷工作的工作目錄 (例如藉由使用 '..')。
+    optional: true
+    syntax:
+      content: 'filePath?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ResourceFile.httpUrl
+    name: httpUrl
+    fullName: httpUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: AutoStorageContainerName、 storageContainerUrl 和 httpUrl 屬性互斥，且必須指定其中一個。 如果 URL 指向 Azure Blob 儲存體，它必須是可讀取使用匿名存取;也就是說，批次服務沒有任何認證下載 blob 時。 有兩種方式可取得這類 URL 在 Azure 儲存體 blob： 包含共用存取簽章 (SAS) 授與 blob 的讀取權限，或設定針對 blob 或其容器的 ACL 以允許公用存取。
+    optional: true
+    syntax:
+      content: 'httpUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ResourceFile.storageContainerUrl
+    name: storageContainerUrl
+    fullName: storageContainerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: AutoStorageContainerName、 storageContainerUrl 和 httpUrl 屬性互斥，且必須指定其中一個。 此 URL 必須可讀取且 listable 使用匿名存取;也就是說，Batch 服務不具有任何認證，從容器下載 blob 時。 有兩種方式可取得這類 URL 在 Azure 儲存體容器： 包含共用存取簽章 (SAS) 授與容器的讀取和清單權限或設定容器 ACL，以允許公用存取。
+    optional: true
+    syntax:
+      content: 'storageContainerUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

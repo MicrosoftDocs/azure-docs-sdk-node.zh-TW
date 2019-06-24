@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - azure-batch.JobNetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobNetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      虛擬網路必須位於相同的區域和訂用帳戶與 Azure Batch 帳戶。 指定的子網路必須有足夠可用的 IP 位址，以容納會從作業中執行工作的計算節點數目。 這可達的集區中的計算節點數目。 'MicrosoftAzureBatch' 服務主體必須具有 「 傳統虛擬機器參與者 」 角色型存取控制 (RBAC) 角色，針對指定的 VNet，以便 Azure Batch 服務可以排定在節點上的工作。 這可以藉由檢查指定的 VNet 有任何相關聯網路安全性群組 (NSG) 來驗證。 如果 NSG 拒絕對指定的子網路中的節點通訊，則 Batch 服務會以無法使用設定計算節點的狀態。 這是表單 /subscriptions/ {subscription} /resourceGroups/ {群組} /providers/ {provider} /virtualNetworks/ {network} /subnets/ {子網路}。
+      如果指定的 VNet 有任何相關聯網路安全性群組 (NSG)，幾個保留的系統連接埠必須啟用從 Azure Batch 服務的輸入通訊。 使用虛擬機器設定所建立的集區，啟用連接埠 29876 和 29877，以及 Windows 的連接埠 22 適用於 Linux 和連接埠 3389。 連接埠 443，也需要開啟輸出連線至 Azure 儲存體的通訊。 如需詳細資訊，請參閱： https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: azure-batch

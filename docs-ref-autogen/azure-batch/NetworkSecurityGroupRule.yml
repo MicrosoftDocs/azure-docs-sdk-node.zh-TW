@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkSecurityGroupRule
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - azure-batch.NetworkSecurityGroupRule.access
+      - azure-batch.NetworkSecurityGroupRule.priority
+      - azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+      - azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.access
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '可能的值包括: ''allow''、 ''拒絕'''
+    syntax:
+      content: 'access: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      集區中的優先順序必須是唯一的而且會依照優先順序進行評估。
+      編號愈低，優先順序就愈高。 例如，規則可以指定 150、 250 和 350 的順序編號。 150 個訂單號碼的規則優先於順序為 250 的規則。 允許的優先順序是 150 到 3500。 如果要求失敗，HTTP 狀態碼 400 提供任何保留或重複的值。
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 有效值為單一 IP 位址 (亦即 10.10.10.10)、ip)、 IP 子網路 (也就是 192.168.1.0/24)、 預設標籤，或 * （用於所有位址）。  如果任何其他值會提供要求失敗，HTTP 狀態碼 400。
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    name: sourcePortRanges
+    fullName: sourcePortRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 有效值為 '*' (所有連接埠 0-65535)、 特定的通訊埠 (也就是 22)，或連接埠範圍 (也就是 100-200)。連接埠必須是 0 到 65535 的範圍內。在此集合中的每個項目不得重疊任何其他項目 （一個範圍或個別的連接埠）。如果任何其他值會提供要求失敗，HTTP 狀態碼 400。預設值是 '*'。
+    optional: true
+    syntax:
+      content: 'sourcePortRanges?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch

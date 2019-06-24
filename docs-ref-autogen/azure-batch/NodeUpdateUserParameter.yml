@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NodeUpdateUserParameter
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - azure-batch.NodeUpdateUserParameter.expiryTime
+      - azure-batch.NodeUpdateUserParameter.password
+      - azure-batch.NodeUpdateUserParameter.sshPublicKey
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.expiryTime
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果省略，預設值是 1 天，從目前的時間。 若為 Linux 計算節點，expiryTime 會具有最多一天的位數。
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.password
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 需要 Windows 計算節點 （其與 'cloudServiceConfiguration'，或使用 'virtualMachineConfiguration' 使用的 Windows 映像參考建立） 密碼。 若為 Linux 計算節點，密碼可以選擇性地指定和 sshPublicKey 屬性。 如果省略，則會移除任何現有的密碼。
+    optional: true
+    syntax:
+      content: 'password?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.sshPublicKey
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 公用金鑰應該與 OpenSSH 的編碼方式相容，而且應該 base 64 編碼。 這個屬性可以指定僅針對 Linux 計算節點。 如果指定此參數，針對 Windows 計算節點，然後 Batch 服務會拒絕要求;如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。 如果省略，則會移除任何現有的 SSH 公開金鑰。
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

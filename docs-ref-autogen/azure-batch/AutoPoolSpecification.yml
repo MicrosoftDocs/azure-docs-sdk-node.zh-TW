@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.AutoPoolSpecification
+    name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    children:
+      - azure-batch.AutoPoolSpecification.autoPoolIdPrefix
+      - azure-batch.AutoPoolSpecification.keepAlive
+      - azure-batch.AutoPoolSpecification.pool
+      - azure-batch.AutoPoolSpecification.poolLifetimeOption
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.autoPoolIdPrefix
+    name: autoPoolIdPrefix
+    fullName: autoPoolIdPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 批次服務會指派每個自動集區上建立的唯一識別碼。 若要區別針對不同用途建立的集區，您可以指定這個項目，將前置詞新增至指派的識別碼。 前置詞可以最多 20 個字元。
+    optional: true
+    syntax:
+      content: 'autoPoolIdPrefix?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.keepAlive
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果為 false，Batch 服務之後 （如而且 poolLifetimeOption 設定所決定），其存留期間過期; 刪除集區也就是作業排程的作業完成時。 如果為 true，Batch 服務不會自動刪除集區。 它最多會使用這個選項建立要刪除自動集區的使用者。
+    optional: true
+    syntax:
+      content: 'keepAlive?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.pool
+    name: pool
+    fullName: pool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'pool?: PoolSpecification'
+      return:
+        type:
+          - azure-batch.PoolSpecification
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.poolLifetimeOption
+    name: poolLifetimeOption
+    fullName: poolLifetimeOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '可能的值包括: ''jobSchedule''，''作業'''
+    syntax:
+      content: 'poolLifetimeOption: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolSpecification
+    name: PoolSpecification
+    spec.typeScript:
+      - name: PoolSpecification
+        fullName: PoolSpecification
+        uid: azure-batch.PoolSpecification

@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTask
+    name: StartTask
+    fullName: StartTask
+    children:
+      - azure-batch.StartTask.commandLine
+      - azure-batch.StartTask.containerSettings
+      - azure-batch.StartTask.environmentSettings
+      - azure-batch.StartTask.maxTaskRetryCount
+      - azure-batch.StartTask.resourceFiles
+      - azure-batch.StartTask.userIdentity
+      - azure-batch.StartTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: '在節點上觸發復原作業時，批次會重試工作。 復原作業的範例包括 （但不限於） 時的狀況不良的節點已重新啟動，或因為主機失敗而消失的計算節點。 因為復原作業在獨立的而且不會納入 maxTaskRetryCount 會重試。 即使 maxTaskRetryCount 為 0，因為復原作業內部重試可能會發生。 因為這個緣故，所有工作都應該具有等冪性。 這表示工作需要容許正在中斷並重新啟動而不會造成任何損毀或重複的資料。 最佳做法長時間執行的工作是使用某種形式的檢查點。 在某些情況下啟動工作可能會重新執行即使 [計算] 節點已不需要重新開機。 特別應該小心，避免在啟動工作建立 breakaway 處理或安裝啟動服務，從 開始工作工作目錄，因為這將會封鎖批次無法重新執行啟動工作。'
+    package: azure-batch
+  - uid: azure-batch.StartTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '命令列不會在殼層中執行，因此無法利用 shell 功能，例如環境變數擴充。 如果您想要利用這類功能，您應該叫用命令列中的殼層並不會使用"cmd /c MyCommand"在 Windows 或 「 / bin/sh-c MyCommand 」 在 Linux 中。 如果命令列參考檔案路徑，它應該使用相對路徑 （相對於工作工作目錄），或使用批次提供的環境變數 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 時指定此參數，AZ_BATCH_NODE_ROOT_DIR （在節點上的 Azure Batch 根目錄） 下方的所有目錄以遞迴方式都對應至容器，所有的工作環境變數會都對應至容器，且工作命令列在容器中執行。 產生外 AZ_BATCH_NODE_ROOT_DIR 容器中的檔案可能不會反映到主機的磁碟，這表示批次檔的 Api 不能存取這些檔案。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.StartTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果它的結束代碼不是零，Batch 服務重試工作。 請注意，這個值會特別控制重試次數。 Batch 服務會嘗試工作一次，然後再重試直到達此限制。 例如，如果最大重試計數為 3，Batch 可嘗試工作最多 4 次 （一首次嘗試和重試 3 次）。 如果最大重試計數為 0，Batch 服務不會重試工作。 如果重試次數上限為-1，Batch 服務會重試無限制的工作。
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這個項目底下所列的檔案位於工作的工作目錄。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果省略，則工作可唯一的非系統管理使用者身分執行工作。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.StartTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '如果為 true，並開始工作失敗的節點上，Batch 服務會重試啟動工作到其最大重試計數 (maxTaskRetryCount)。 如果工作已仍不會順利完成之後所有的重試，則 Batch 服務商標的節點無法使用，,，且它不會排定工作。 可以偵測到此狀況，以透過計算節點的狀態和失敗資訊詳細資料。 如果為 false，批次服務將不會等候開始工作完成。 在此情況下，其他工作可以啟動時啟動工作仍在執行中，[計算] 節點上執行而且即使開始工作失敗時，新的工作將會繼續計算節點上排程。 預設值為 false。'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

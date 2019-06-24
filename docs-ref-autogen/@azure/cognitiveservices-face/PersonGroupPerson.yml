@@ -46,7 +46,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 加入人員，以識別具代表性的臉部。 輸入所面臨的被指定為 targetFace 矩形的映像。
+    summary: |-
+      加入個人的臉部到臉部辨識或驗證的人員群組。 若要處理映像包含多個臉部，可以指定輸入的臉部為 targetFace 矩形的映像。 它會傳回代表已新增的臉部 persistedFaceId。 會不儲存任何映像。
+      只擷取的臉部功能將會儲存在之前的伺服器上[PersonGroup PersonFace-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e)， [PersonGroup 人員-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d)或是[PersonGroup-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)呼叫。
+      <br /> 請注意 persistedFaceId 是不同於所產生的 faceId[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      *   較高的臉部影像品質表示辨識較佳的精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      *   每個人員的項目可以保存多達 248 臉部。
+      *   JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。 允許的影像檔案大小是 1KB 從 6 MB。
+      *   「 targetFace"矩形應該包含一個面。 零個或多個臉部將會被視為錯誤。 如果提供的 「 targetFace"矩形不會傳回從[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，偵測並已成功新增表面不保證。
+      *   可偵測的臉部大小 (36 36 4096 x 4096 個像素 x)，從大型的頭部姿勢，或大型 occlusions 會導致失敗。
+      *   新增/刪除從同一個人的臉部循序處理。 新增/刪除的臉部，從不同的人員會以平行方式處理。
+      * 最小可偵測的臉部大小為 36 x 36 像素，不能大於 1920 x 1080 像素映像中。
+      維度高於 1920 x 1080 像素的影像必須按比例較大的最小的臉部大小。
+      * 您可以提供不同的 'detectionModel' 值。 若要使用，並比較不同的偵測模型，請參閱[如何指定偵測模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建議使用-case(s) |
+      | ---------- | -------- |
+      | ' detection_01': | 預設值偵測模型，針對 [PersonGroup 人-新增
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b). 建議的人臉正面偵測附近。 使用特別大型的角度 （頭部姿勢） 臉部、 occluded 臉部或錯誤的影像方向的情況下，可能無法偵測的臉部在此情況下。 | |'detection_02': |使用改善的精確度，特別是在小型、 部分和模糊的表面上可能會在 2019年中發行的偵測模型。 |
     syntax:
       content: 'function addFaceFromStream(personGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.PersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
@@ -143,7 +159,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 加入人員，以識別具代表性的臉部。 輸入所面臨的被指定為 targetFace 矩形的映像。
+    summary: |-
+      加入個人的臉部到臉部辨識或驗證的人員群組。 若要處理映像包含多個臉部，可以指定輸入的臉部為 targetFace 矩形的映像。 它會傳回代表已新增的臉部 persistedFaceId。 會不儲存任何映像。
+      只擷取的臉部功能將會儲存在之前的伺服器上[PersonGroup PersonFace-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e)， [PersonGroup 人員-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d)或是[PersonGroup-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)呼叫。
+      <br /> 請注意 persistedFaceId 是不同於所產生的 faceId[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      *   較高的臉部影像品質表示辨識較佳的精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      *   每個人員的項目可以保存多達 248 臉部。
+      *   JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。 允許的影像檔案大小是 1KB 從 6 MB。
+      *   「 targetFace"矩形應該包含一個面。 零個或多個臉部將會被視為錯誤。 如果提供的 「 targetFace"矩形不會傳回從[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，偵測並已成功新增表面不保證。
+      *   可偵測的臉部大小 (36 36 4096 x 4096 個像素 x)，從大型的頭部姿勢，或大型 occlusions 會導致失敗。
+      *   新增/刪除從同一個人的臉部循序處理。 新增/刪除的臉部，從不同的人員會以平行方式處理。
+      * 最小可偵測的臉部大小為 36 x 36 像素，不能大於 1920 x 1080 像素映像中。
+      維度高於 1920 x 1080 像素的影像必須按比例較大的最小的臉部大小。
+      * 您可以提供不同的 'detectionModel' 值。 若要使用，並比較不同的偵測模型，請參閱[如何指定偵測模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建議使用-case(s) |
+      | ---------- | -------- |
+      | ' detection_01': | 預設值偵測模型，針對 [PersonGroup 人-新增
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b). 建議的人臉正面偵測附近。 使用特別大型的角度 （頭部姿勢） 臉部、 occluded 臉部或錯誤的影像方向的情況下，可能無法偵測的臉部在此情況下。 | |'detection_02': |使用改善的精確度，特別是在小型、 部分和模糊的表面上可能會在 2019年中發行的偵測模型。 |
     syntax:
       content: 'function addFaceFromUrl(personGroupId: string, personId: string, url: string, options?: Models.PersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
@@ -313,7 +345,10 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 刪除個人的臉部。 也會刪除相對所面臨的持續性功能。
+    summary: |-
+      指定的 personGroupId、 personId 和 persistedFaceId 員 群組中的人員從刪除臉部。
+      <br /> 新增/刪除從同一個人的臉部循序處理。
+      新增/刪除的臉部，從不同的人員會以平行方式處理。
     syntax:
       content: 'function deleteFace(personGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -410,7 +445,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 从人员组中删除现有人员。 所有儲存個人資料和人員項目中的臉部功能將會被刪除。
+    summary: 从人员组中删除现有人员。 PersistedFaceId、 保留使用者資料，個人項目中的人員名稱和臉部功能將會刪除所有。
     syntax:
       content: 'function deleteMethod(personGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -851,7 +886,16 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 更新人員保存臉部的 userData 欄位。
+    summary: |-
+      加入個人的臉部到臉部辨識或驗證的人員群組。 若要處理映像包含多個臉部，可以指定輸入的臉部為 targetFace 矩形的映像。 它會傳回代表已新增的臉部 persistedFaceId。 會不儲存任何映像。
+      只擷取的臉部功能將會儲存在之前的伺服器上[PersonGroup PersonFace-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e)， [PersonGroup 人員-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d)或是[PersonGroup-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)呼叫。
+      <br /> 請注意 persistedFaceId 是不同於所產生的 faceId[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      * 較高的臉部影像品質表示辨識較佳的精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      * 每個人員的項目可以保存多達 248 臉部。
+      * JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。 允許的影像檔案大小是 1KB 從 6 MB。
+      * 「 targetFace"矩形應該包含一個面。 零個或多個臉部將會被視為錯誤。 如果提供的 「 targetFace"矩形不會傳回從[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，偵測並已成功新增表面不保證。
+      * 可偵測的臉部大小 (36 36 4096 x 4096 個像素 x)，從大型的頭部姿勢，或大型 occlusions 會導致失敗。
+      * 新增/刪除從同一個人的臉部循序處理。 新增/刪除的臉部，從不同的人員會以平行方式處理。
     syntax:
       content: 'function updateFace(personGroupId: string, personId: string, persistedFaceId: string, options?: Models.PersonGroupPersonUpdateFaceOptionalParams)'
       parameters:

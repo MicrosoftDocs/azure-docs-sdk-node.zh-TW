@@ -72,8 +72,21 @@ items:
     langs:
       - typeScript
     summary: |-
-      將臉部 」 清單中的臉部。 輸入所面臨的被指定為 targetFace 矩形的映像。
-      它會傳回代表已新增的臉部，persistedFaceId 和 persistedFaceId 將不會到期。
+      将最多 1,000 张人脸添加到指定的人脸列表。
+      <br /> 若要處理映像包含多個臉部，可以指定輸入的臉部為 targetFace 矩形的映像。 它會傳回代表已新增的臉部 persistedFaceId。 會不儲存任何映像。 只擷取的臉部功能將會儲存在之前的伺服器上[FaceList-刪除臉部](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251)或是[FaceList-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f)呼叫。
+      <br /> 請注意 persistedFaceId 是不同於所產生的 faceId[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      * 較高的臉部影像品質表示較佳的偵測和辨識的精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      * JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。 允許的影像檔案大小是 1KB 從 6 MB。
+      * 「 targetFace"矩形應該包含一個面。 零個或多個臉部將會被視為錯誤。 如果提供的 「 targetFace"矩形不會傳回從[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，偵測並已成功新增表面不保證。
+      * 可偵測的臉部大小 (36 36 4096 x 4096 個像素 x)，從大型的頭部姿勢，或大型 occlusions 會導致失敗。
+      * 新增/刪除的臉部，從相同的 「 臉部 」 清單會依序處理，並從不同的臉部清單是以平行方式。
+      * 最小可偵測的臉部大小為 36 x 36 像素，不能大於 1920 x 1080 像素映像中。
+      維度高於 1920 x 1080 像素的影像必須按比例較大的最小的臉部大小。
+      * 您可以提供不同的 'detectionModel' 值。 若要使用，並比較不同的偵測模型，請參閱[如何指定偵測模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建議使用-case(s) |
+      | ---------- | -------- |
+      | ' detection_01': | 預設值偵測模型，針對 [FaceList-新增
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)。 建議的人臉正面偵測附近。 使用特別大型的角度 （頭部姿勢） 臉部、 occluded 臉部或錯誤的影像方向的情況下，可能無法偵測的臉部在此情況下。 | |'detection_02': |使用改善的精確度，特別是在小型、 部分和模糊的表面上可能會在 2019年中發行的偵測模型。 |
     syntax:
       content: 'function addFaceFromStream(faceListId: string, image: msRest.HttpRequestBody, options?: Models.FaceListAddFaceFromStreamOptionalParams)'
       parameters:
@@ -159,8 +172,21 @@ items:
     langs:
       - typeScript
     summary: |-
-      將臉部 」 清單中的臉部。 輸入所面臨的被指定為 targetFace 矩形的映像。
-      它會傳回代表已新增的臉部，persistedFaceId 和 persistedFaceId 將不會到期。
+      将最多 1,000 张人脸添加到指定的人脸列表。
+      <br /> 若要處理映像包含多個臉部，可以指定輸入的臉部為 targetFace 矩形的映像。 它會傳回代表已新增的臉部 persistedFaceId。 會不儲存任何映像。 只擷取的臉部功能將會儲存在之前的伺服器上[FaceList-刪除臉部](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251)或是[FaceList-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f)呼叫。
+      <br /> 請注意 persistedFaceId 是不同於所產生的 faceId[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      * 較高的臉部影像品質表示較佳的偵測和辨識的精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      * JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。 允許的影像檔案大小是 1KB 從 6 MB。
+      * 「 targetFace"矩形應該包含一個面。 零個或多個臉部將會被視為錯誤。 如果提供的 「 targetFace"矩形不會傳回從[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，偵測並已成功新增表面不保證。
+      * 可偵測的臉部大小 (36 36 4096 x 4096 個像素 x)，從大型的頭部姿勢，或大型 occlusions 會導致失敗。
+      * 新增/刪除的臉部，從相同的 「 臉部 」 清單會依序處理，並從不同的臉部清單是以平行方式。
+      * 最小可偵測的臉部大小為 36 x 36 像素，不能大於 1920 x 1080 像素映像中。
+      維度高於 1920 x 1080 像素的影像必須按比例較大的最小的臉部大小。
+      * 您可以提供不同的 'detectionModel' 值。 若要使用，並比較不同的偵測模型，請參閱[如何指定偵測模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建議使用-case(s) |
+      | ---------- | -------- |
+      | ' detection_01': | 預設值偵測模型，針對 [FaceList-新增
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)。 建議的人臉正面偵測附近。 使用特別大型的角度 （頭部姿勢） 臉部、 occluded 臉部或錯誤的影像方向的情況下，可能無法偵測的臉部在此情況下。 | |'detection_02': |使用改善的精確度，特別是在小型、 部分和模糊的表面上可能會在 2019年中發行的偵測模型。 |
     syntax:
       content: 'function addFaceFromUrl(faceListId: string, url: string, options?: Models.FaceListAddFaceFromUrlOptionalParams)'
       parameters:
@@ -244,10 +270,13 @@ items:
     summary: |-
       使用使用者指定 faceListId、 名稱、 選用的 userData 和 recognitionModel 中建立空的臉部清單。 最多 64 臉部一個訂用帳戶中允許清單。
       <br /> 臉部清單是一份的表面，最多 1000 個的表面，並用[臉部-尋找相似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。
-      <br /> 在建立之後，使用者應該使用[FaceList-新增臉部](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)匯入表面。 之前的伺服器上儲存的臉部[FaceList-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f)呼叫。
+      <br /> 在建立之後，使用者應該使用[FaceList-新增臉部](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)匯入表面。 會不儲存任何映像。 之前的伺服器上儲存只有擷取的臉部特徵[FaceList-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f)呼叫。
       <br /> 尋找類似用於尋找類似名人的表面，篩選的類似臉部的情形，或為光線方式臉部識別碼。 但如果是識別人員實際使用，請使用[PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
       [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)並[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。
-      <br /> 請考慮[LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)臉部數目很大時。 它可以支援最多 1,000,000 的臉部。 'recognitionModel' 應指定要與此臉部清單產生關聯。 'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。 新的表面會新增到現有的臉部清單會使用已與集合相關聯的辨識模型。 臉部清單中的現有臉部功能無法更新擷取的辨識模型的另一個版本的功能。
+      <br /> 請考慮[LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)臉部數目很大時。 它可以支援最多 1,000,000 的臉部。
+      <br />'recognitionModel' 應指定要與此臉部清單產生關聯。 'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。 新的表面會新增到現有的臉部清單會使用已與集合相關聯的辨識模型。 臉部清單中的現有臉部功能無法更新擷取的辨識模型的另一個版本的功能。
+      * ' recognition_01':預設辨識模型[FaceList-建立](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b)。 所有在 2019 年 3 月之前建立這些臉部清單會與此辨識模型連結。
+      * ' recognition_02':辨識於 2019 年 3 月發行的模型。 建議 'recognition_02'，因為其整體的精確度提升比 'recognition_01'。
     syntax:
       content: 'function create(faceListId: string, options?: Models.FaceListCreateOptionalParams)'
       parameters:
@@ -294,8 +323,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      從臉部清單 （根據 persistedFaceId 和 faceListId） 中刪除現有的臉部。
-      也會刪除保存相關的圖示的影像。
+      刪除指定的 faceListId 和 persistedFaceId 臉部清單臉部。
+      <br /> 新增/刪除的臉部，從相同的 「 臉部 」 清單會依序處理，並從不同的臉部清單是以平行方式。
     syntax:
       content: 'function deleteFace(faceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -380,7 +409,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 刪除現有的臉部清單根據 faceListId。 保存的正面的臉部 」 清單中的映像也會一併刪除。
+    summary: 删除指定的人脸列表。
     syntax:
       content: 'function deleteMethod(faceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:

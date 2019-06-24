@@ -7,6 +7,8 @@ items:
       - '@azure/event-hubs.ClientOptions.dataTransformer'
       - '@azure/event-hubs.ClientOptions.tokenProvider'
       - '@azure/event-hubs.ClientOptions.userAgent'
+      - '@azure/event-hubs.ClientOptions.webSocket'
+      - '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
     langs:
       - typeScript
     type: interface
@@ -56,10 +58,45 @@ items:
     summary: '{string}[userAgent]使用者代理程式需要附加至內建的使用者代理字串。'
     optional: true
     syntax:
-      content: 'userAgent?: string'
+      content: 'userAgent?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      WebSocket 建構函式用來建立透過 WebSocket 的 AMQP 連線。
+      這個選項應該提供以下案例
+      - 是事件中樞的 AMQP 連線所使用的 TCP 連接埠 5671 會封鎖您的環境。
+      - 您的應用程式需要執行 proxy 伺服器後方
+      - 您的應用程式必須瀏覽器中執行，且您想要提供您自己選擇的 Websocket 實作，而不是內建的 WebSocket 瀏覽器中。
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{webSocketConstructorOptions}-選項傳遞至 WebSocket 建構函式'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
     package: '@azure/event-hubs'
 references:
   - uid: '@azure/event-hubs.ClientOptionsBase'

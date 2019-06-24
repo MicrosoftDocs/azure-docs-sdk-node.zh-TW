@@ -39,16 +39,16 @@ items:
       - typeScript
     summary: |-
       使用指定的 personGroupId、 名稱、 使用者提供的 userData 和 recognitionModel 建立新的人員群組。
-      <br /> 人員群組是容器的上傳的個人資料，包括臉部影像和臉部辨識功能。
+      <br /> 人員群組是容器的上傳的個人資料，包括臉部辨識功能。
       <br /> 在建立之後，使用[PersonGroup 人員-建立](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c)來將人員新增到群組，然後呼叫[PersonGroup-訓練](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249)以取得此群組供[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。
-      <br /> 個人的臉部、 影像和保留使用者資料會儲存在伺服器上 [PersonGroup 人員之前
-      - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) 或[PersonGroup-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)呼叫。
-      <br />
+      <br /> 會不儲存任何映像。 只有該人員的擷取臉部功能，並保留使用者資料會儲存在之前的伺服器上[PersonGroup 人員-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d)或[PersonGroup-刪除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)呼叫。
+      <br/>'recognitionModel' 應指定要與此人員群組產生關聯。 'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。 新的表面會新增至現有的人員群組會使用已與集合相關聯的辨識模型。 無法更新現有人員群組中的臉部功能辨識模型的另一個版本所擷取的功能。
+      * ' recognition_01':預設辨識模型[PersonGroup-建立](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244)。 所有在 2019 年 3 月之前建立這些人員群組是與此辨識模型連結。
+      * ' recognition_02':辨識於 2019 年 3 月發行的模型。 建議 'recognition_02'，因為其整體的精確度提升比 'recognition_01'。
+      人員群組配額：
       * 免費層訂用帳戶配額：1000 個人員群組。 每個會保留最多 1,000 人。
       * S0 層訂用帳戶配額：1,000,000 的人員群組。 每個會保留最多 10,000 個的人員。
       * 若要處理更大的小數位數臉部識別問題，請考慮使用[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)。
-      <br />
-      'recognitionModel' 應指定要與此人員群組產生關聯。 'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。 新的表面會新增至現有的人員群組會使用已與集合相關聯的辨識模型。 無法更新現有人員群組中的臉部功能辨識模型的另一個版本所擷取的功能。
     syntax:
       content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
       parameters:

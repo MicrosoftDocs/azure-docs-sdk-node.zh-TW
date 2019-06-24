@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.Schedule
+    name: Schedule
+    fullName: Schedule
+    children:
+      - azure-batch.Schedule.doNotRunAfter
+      - azure-batch.Schedule.doNotRunUntil
+      - azure-batch.Schedule.recurrenceInterval
+      - azure-batch.Schedule.startWindow
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.Schedule.doNotRunAfter
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果您未指定 doNotRunAfter 時間，而且您要建立週期性工作排程，作業排程會保持作用中，直到您明確地結束。
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.Schedule.doNotRunUntil
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果您未指定 doNotRunUntil 時間，排程會成為準備好立即建立作業。
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.Schedule.recurrenceInterval
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '因為作業排程可以在任何時候，有最多一個作用中的作業，如果就可以開始建立新的工作，在 作業排程，但先前的作業仍在執行中，Batch 服務不會建立新的工作先前的工作完成為止。 如果先前的作業無法完成新 recurrenceInterval 的 startWindow 期間內，將會對於該間隔不排程任何新的工作。 適用於週期性工作，您通常應該指定 jobManagerTask jobSpecification 中。 如果您不要使用 jobManagerTask，您將需要外部處理序來監視作業建立時，將工作加入作業，並終止工作準備好進行下一個循環。 預設值是，排程不會再發生： 一項作業建立 doNotRunUntil 時間之後, startWindow 內以及該工作完成時立即排程已完成。 最小值為 1 分鐘。 如果您指定較低的值時，Batch 服務會拒絕並產生錯誤; 排程如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。'
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.Schedule.startWindow
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果 startWindow 間隔內，不會建立一個作業，則 '機會' 是遺失;會不建立任何作業，直到下一個週期的排程。 如果週期性的排程，，而且超過循環間隔的 startWindow，則這就相當於無限的 startWindow，因為 '由於' 一個 recurrenceInterval 中相關的作業不被轉送到下一個循環間隔。 預設為無限。 最小值為 1 分鐘。 如果您指定較低的值時，Batch 服務會拒絕並產生錯誤; 排程如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。
+    optional: true
+    syntax:
+      content: 'startWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

@@ -1,0 +1,640 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.CloudPool
+    name: CloudPool
+    fullName: CloudPool
+    children:
+      - azure-batch.CloudPool.allocationState
+      - azure-batch.CloudPool.allocationStateTransitionTime
+      - azure-batch.CloudPool.applicationLicenses
+      - azure-batch.CloudPool.applicationPackageReferences
+      - azure-batch.CloudPool.autoScaleEvaluationInterval
+      - azure-batch.CloudPool.autoScaleFormula
+      - azure-batch.CloudPool.autoScaleRun
+      - azure-batch.CloudPool.certificateReferences
+      - azure-batch.CloudPool.cloudServiceConfiguration
+      - azure-batch.CloudPool.creationTime
+      - azure-batch.CloudPool.currentDedicatedNodes
+      - azure-batch.CloudPool.currentLowPriorityNodes
+      - azure-batch.CloudPool.displayName
+      - azure-batch.CloudPool.enableAutoScale
+      - azure-batch.CloudPool.enableInterNodeCommunication
+      - azure-batch.CloudPool.eTag
+      - azure-batch.CloudPool.id
+      - azure-batch.CloudPool.lastModified
+      - azure-batch.CloudPool.maxTasksPerNode
+      - azure-batch.CloudPool.metadata
+      - azure-batch.CloudPool.networkConfiguration
+      - azure-batch.CloudPool.resizeErrors
+      - azure-batch.CloudPool.resizeTimeout
+      - azure-batch.CloudPool.startTask
+      - azure-batch.CloudPool.state
+      - azure-batch.CloudPool.stateTransitionTime
+      - azure-batch.CloudPool.stats
+      - azure-batch.CloudPool.targetDedicatedNodes
+      - azure-batch.CloudPool.targetLowPriorityNodes
+      - azure-batch.CloudPool.taskSchedulingPolicy
+      - azure-batch.CloudPool.url
+      - azure-batch.CloudPool.userAccounts
+      - azure-batch.CloudPool.virtualMachineConfiguration
+      - azure-batch.CloudPool.vmSize
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.CloudPool.allocationState
+    name: allocationState
+    fullName: allocationState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '可能的值包括: ''穩定''，''因為重新調整''、 ''stopping'''
+    optional: true
+    syntax:
+      content: 'allocationState?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudPool.allocationStateTransitionTime
+    name: allocationStateTransitionTime
+    fullName: allocationStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'allocationStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.CloudPool.applicationLicenses
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 應用程式授權份必須是可用的批次服務應用程式授權的子集。 如果這不支援要求授權時，建立集區將會失敗。
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch
+  - uid: azure-batch.CloudPool.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 套件參考的變更會影響所有的新節點加入集區，但不是會影響集區中已經有，直到重新啟動或重新安裝映像的計算節點。 沒有最大為 10 的套件參考，在任何指定的集區上。
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.CloudPool.autoScaleEvaluationInterval
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 只有在集區會自動調整，也就是 enableAutoScale，則為 true，則會設定這個屬性。
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.CloudPool.autoScaleFormula
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 只有在集區會自動調整，也就是 enableAutoScale，則為 true，則會設定這個屬性。
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudPool.autoScaleRun
+    name: autoScaleRun
+    fullName: autoScaleRun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 只有在集區會自動調整，也就是 enableAutoScale，則為 true，則會設定這個屬性。
+    optional: true
+    syntax:
+      content: 'autoScaleRun?: AutoScaleRun'
+      return:
+        type:
+          - azure-batch.AutoScaleRun
+    package: azure-batch
+  - uid: azure-batch.CloudPool.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '對於 Windows 節點，Batch 服務會安裝至指定的憑證存放區和位置的憑證。 若為 Linux 計算節點，憑證會儲存在目錄內的工作目錄和 AZ_BATCH_CERTIFICATES_DIR 提供給此位置的查詢工作的環境變數的工作。 與 ''remoteUser'' 的可見性的憑證，建立 ''certs'' 目錄中使用者的主目錄 (例如，/home/ {使用者-名稱} / certs) 和憑證會放在該目錄。'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.CloudPool.cloudServiceConfiguration
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此屬性和 virtualMachineConfiguration 互斥，且必須指定其中一個屬性。 這個屬性不能指定是否使用其 poolAllocationMode; 屬性設定為 「 UserSubscription 」 建立 Batch 帳戶。
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - azure-batch.CloudServiceConfiguration
+    package: azure-batch
+  - uid: azure-batch.CloudPool.creationTime
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.CloudPool.currentDedicatedNodes
+    name: currentDedicatedNodes
+    fullName: currentDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'currentDedicatedNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.CloudPool.currentLowPriorityNodes
+    name: currentLowPriorityNodes
+    fullName: currentLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這個計數包含低優先順序計算節點被優先佔用。
+    optional: true
+    syntax:
+      content: 'currentLowPriorityNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.CloudPool.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 不需要是唯一的顯示名稱，並可包含任何 Unicode 字元，最大長度為 1024年。
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudPool.enableAutoScale
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果為 false，至少一個 targetDedicateNodes 和 targetLowPriorityNodes 必須指定。 如果為 true，autoScaleFormula 屬性就是必要，並根據公式自動調整集區大小。 預設值為 False。
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.CloudPool.enableInterNodeCommunication
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      這會在其計算節點可以指派給集區的限制。
+      指定這個值可以減少集區中配置所要求的計算節點數目的機會。
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.CloudPool.eTag
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這是不透明的字串。 您可以使用它來偵測要求之間是否有變更集區。 特別是，您可以會傳遞 ETag 時更新集區，以指定您的變更應該沒有其他人已經在同時修改集區時，才會生效。
+    optional: true
+    syntax:
+      content: 'eTag?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudPool.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 識別碼可包含英數字元，包括連字號及底線的任意組合，而且不能包含超過 64 個字元。 識別碼是保留大小寫和區分大小寫 （也就是說，您可能沒有在帳戶內兩個只有大小寫不同的識別碼）。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudPool.lastModified
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這是的上次的集區層級資料，例如 targetDedicatedNodes 或 enableAutoscale 設定變更。 它不會不會考量在節點層級的變更，例如計算節點的變更狀態。
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.CloudPool.maxTasksPerNode
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 預設值為 1。 最大值是較小的 4 倍的核心數目的集區的 vmSize 或 256。
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.CloudPool.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.CloudPool.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - azure-batch.NetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.CloudPool.resizeErrors
+    name: resizeErrors
+    fullName: resizeErrors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 只有當最後一個集區調整大小期間發生一或多個錯誤和集區的 allocationState 為穩定時，才設定這個屬性。
+    optional: true
+    syntax:
+      content: 'resizeErrors?: ResizeError[]'
+      return:
+        type:
+          - 'azure-batch.ResizeError[]'
+    package: azure-batch
+  - uid: azure-batch.CloudPool.resizeTimeout
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 這是最新的調整大小作業的逾時。 （在建立集區時的初始大小視為一次調整大小。）預設值為 15 分鐘。
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.CloudPool.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+  - uid: azure-batch.CloudPool.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '可能的值包括: 「 作用中 」、 「 刪除中 」'
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudPool.stateTransitionTime
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.CloudPool.stats
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CloudPool 擷取包括 'stats' 屬性，則 expand 子句時，才會填入這個屬性否則，它是 null。 統計資料可能無法立即使用。 Batch 服務會執行定期彙總的統計資料。 典型的延遲是大約 30 分鐘的時間。
+    optional: true
+    syntax:
+      content: 'stats?: PoolStatistics'
+      return:
+        type:
+          - azure-batch.PoolStatistics
+    package: azure-batch
+  - uid: azure-batch.CloudPool.targetDedicatedNodes
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.CloudPool.targetLowPriorityNodes
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.CloudPool.taskSchedulingPolicy
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果未指定，預設值將會分配。
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - azure-batch.TaskSchedulingPolicy
+    package: azure-batch
+  - uid: azure-batch.CloudPool.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'url?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudPool.userAccounts
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - 'azure-batch.UserAccount[]'
+    package: azure-batch
+  - uid: azure-batch.CloudPool.virtualMachineConfiguration
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此屬性和 cloudServiceConfiguration 互斥，且必須指定其中一個屬性。
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - azure-batch.VirtualMachineConfiguration
+    package: azure-batch
+  - uid: azure-batch.CloudPool.vmSize
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '集區中的虛擬機器可用大小的相關資訊，請參閱 Azure Batch 集區中的計算節點選擇 VM 大小 (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes)。'
+    optional: true
+    syntax:
+      content: 'vmSize?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.AutoScaleRun
+    name: AutoScaleRun
+    spec.typeScript:
+      - name: AutoScaleRun
+        fullName: AutoScaleRun
+        uid: azure-batch.AutoScaleRun
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.CloudServiceConfiguration
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: azure-batch.CloudServiceConfiguration
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: azure-batch.NetworkConfiguration
+  - uid: 'azure-batch.ResizeError[]'
+    name: 'ResizeError[]'
+    spec.typeScript:
+      - name: ResizeError
+        fullName: ResizeError
+        uid: azure-batch.ResizeError
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask
+  - uid: azure-batch.PoolStatistics
+    name: PoolStatistics
+    spec.typeScript:
+      - name: PoolStatistics
+        fullName: PoolStatistics
+        uid: azure-batch.PoolStatistics
+  - uid: azure-batch.TaskSchedulingPolicy
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: azure-batch.TaskSchedulingPolicy
+  - uid: 'azure-batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: azure-batch.UserAccount
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.VirtualMachineConfiguration
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: azure-batch.VirtualMachineConfiguration

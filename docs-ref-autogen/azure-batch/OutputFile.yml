@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.OutputFile
+    name: OutputFile
+    fullName: OutputFile
+    children:
+      - azure-batch.OutputFile.destination
+      - azure-batch.OutputFile.filePattern
+      - azure-batch.OutputFile.uploadOptions
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.OutputFile.destination
+    name: destination
+    fullName: destination
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'destination: OutputFileDestination'
+      return:
+        type:
+          - azure-batch.OutputFileDestination
+    package: azure-batch
+  - uid: azure-batch.OutputFile.filePattern
+    name: filePattern
+    fullName: filePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      支援相對與絕對路徑。 相對路徑會相對於工作工作目錄。 支援下列萬用字元: * 符合 0 或多個字元 （如範例模式 abc * 會比對 abc 或 abcdef），* * 符合任何目錄中，嗎？
+      比對任何單一字元，在方括號中，[abc] 比對一個字元和範圍中的 [a-c] 比對一個字元。 方括號可以包含比對未指定任何字元的否定運算 (例如 [！ abc] 比對任何字元，但 a、 b 或 c)。 如果檔案名稱的開頭"。"它依預設會忽略，但可能會符合藉由明確指定它 (例如 *.gif 不符。 a.gif，但。*。gif 會）。 簡單的範例: **\*.txt 比對任何檔案，不會在啟動 '。 '，並結束.txt 工作工作目錄或任何子目錄中。如果檔案名稱包含萬用字元，則可以逸出使用方括號 (例如 abc [*] 會比對名為 abc * 的檔案)。 請注意，兩者 \ 和 Windows，但僅限於目錄分隔符號會被視為 / Linux 上。 環境變數 （var %在 Windows 上） 或在 Linux 上的 $var 會展開之前套用的模式。
+    syntax:
+      content: 'filePattern: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.OutputFile.uploadOptions
+    name: uploadOptions
+    fullName: uploadOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'uploadOptions: OutputFileUploadOptions'
+      return:
+        type:
+          - azure-batch.OutputFileUploadOptions
+    package: azure-batch
+references:
+  - uid: azure-batch.OutputFileDestination
+    name: OutputFileDestination
+    spec.typeScript:
+      - name: OutputFileDestination
+        fullName: OutputFileDestination
+        uid: azure-batch.OutputFileDestination
+  - uid: azure-batch.OutputFileUploadOptions
+    name: OutputFileUploadOptions
+    spec.typeScript:
+      - name: OutputFileUploadOptions
+        fullName: OutputFileUploadOptions
+        uid: azure-batch.OutputFileUploadOptions

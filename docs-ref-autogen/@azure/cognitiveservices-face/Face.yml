@@ -64,7 +64,28 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 在映像，並傳回臉部位置，以及選擇性地 faceIds、 地標，與屬性，請偵測人臉。
+    summary: |-
+      检测图像中的人脸，返回人脸矩形以及可选的 faceId、地标和属性。<br />
+      * 會不儲存任何映像。 只擷取的臉部功能將會儲存在伺服器上。 FaceId 是臉部功能識別碼，而且會用於[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[面臨-驗證](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [臉部
+      - 尋找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。
+      預存的臉部功能將會過期，並刪除原始的偵測呼叫之後的 24 小時。
+      * 選擇性參數包含 faceId、 地標和屬性。 屬性包含年齡、 性別、 headPose、 微笑、 facialHair、 眼鏡、 表情、 線、 結構、 阻擋、 附屬應用程式、 模糊、 曝光度和雜訊。 某些特定的屬性傳回的結果可能無法精確。
+      * JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。 允許的影像檔案大小是 1KB 從 6 MB。
+      * 最多 100 臉部可以傳回映像。 臉部會從大到小的臉部矩形大小的項目。
+      * 為獲得最佳結果查詢時[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[面臨-驗證](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [臉部
+      - 尋找的 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) （'returnFaceId' 為 true），請使用 [面： 正面、 清楚且最小大小為 200 x 200 像素為單位 （100 像素的眼睛之間）。
+      * 最小可偵測的臉部大小為 36 x 36 像素，不能大於 1920 x 1080 像素映像中。
+      維度高於 1920 x 1080 像素的影像必須按比例較大的最小的臉部大小。
+      * 您可以提供不同的 'detectionModel' 值。 若要使用，並比較不同的偵測模型，請參閱[如何指定偵測模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建議使用-case(s) |
+      | ---------- | -------- |
+      | ' detection_01': | [臉部-預設偵測模型
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。 建議的人臉正面偵測附近。 使用特別大型的角度 （頭部姿勢） 臉部、 occluded 臉部或錯誤的影像方向的情況下，可能無法偵測的臉部在此情況下。 | |'detection_02': |使用改善的精確度，特別是在小型、 部分和模糊的表面上可能會在 2019年中發行的偵測模型。 |
+      * 會提供不同的 'recognitionModel' 值。 如果後續追蹤的作業，例如驗證]，[身分識別，尋找類似您需要，請使用 'recognitionModel' 參數指定辨識模型。 'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。 一旦指定，偵測到的 faceIds 會與指定的辨識模型相關聯。 更多的詳細資訊，請參閱[如何指定辨識模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | 模型 | 建議使用-case(s) |
+      | ---------- | -------- |
+      | ' recognition_01': | [臉部-預設辨識模型
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。 所有在 2019 年 3 月之前建立這些 faceIds 會聯結與此辨識模型。 | |'recognition_02': |辨識於 2019 年 3 月發行的模型。 建議 'recognition_02'，因為其整體的精確度提升比 'recognition_01'。 |
     syntax:
       content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
       parameters:
@@ -139,16 +160,26 @@ items:
       - typeScript
     summary: |-
       检测图像中的人脸，返回人脸矩形以及可选的 faceId、地标和属性。<br />
-      * 選擇性的參數，包括 faceId、 地標和屬性。 屬性包含年齡、 性別、 headPose、 微笑、 facialHair、 眼鏡、 表情、 線、 結構、 阻擋、 附屬應用程式、 模糊、 曝光度和雜訊。
-      * 已解壓縮的臉部功能，而不是實際的映像，將會儲存在伺服器上。 FaceId 是臉部功能識別碼，而且會用於[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[面臨-驗證](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [臉部
-      - 尋找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。 它會將偵測呼叫之後的 24 小時後過期。
-      * 較高的臉部影像品質表示較佳的偵測和辨識的精確度。 請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。
+      * 會不儲存任何映像。 只擷取的臉部功能將會儲存在伺服器上。 FaceId 是臉部功能識別碼，而且會用於[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[面臨-驗證](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [臉部
+      - 尋找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。
+      預存的臉部功能將會過期，並刪除原始的偵測呼叫之後的 24 小時。
+      * 選擇性參數包含 faceId、 地標和屬性。 屬性包含年齡、 性別、 headPose、 微笑、 facialHair、 眼鏡、 表情、 線、 結構、 阻擋、 附屬應用程式、 模糊、 曝光度和雜訊。 某些特定的屬性傳回的結果可能無法精確。
       * JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。 允許的影像檔案大小是 1KB 從 6 MB。
-      * 其大小為 36 x 36 至 4096x4096 像素時，可偵測的臉部。 如果需要偵測的非常小，但清除臉孔，請嘗試輸入的影像看放大圖。
-      * 最多 64 臉部可以傳回映像。 臉部會從大到小的臉部矩形大小的項目。
-      * 臉部偵測器偏好正面和接近正面的臉部。 有一些臉部可能無法偵測到，例如非常大的臉部角度 （頭部姿勢） 或被阻擋，或錯誤的影像方向的情況。
-      * 屬性 （年齡、 性別、 headPose、 笑臉、 facialHair、 眼鏡、 表情、 線、 結構、 阻擋、 附屬應用程式、 模糊、 風險和雜訊） 可能不完全正確。 HeadPose 的字幅值會是保留的欄位，且一律會傳回 0。
+      * 最多 100 臉部可以傳回映像。 臉部會從大到小的臉部矩形大小的項目。
+      * 為獲得最佳結果查詢時[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[面臨-驗證](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [臉部
+      - 尋找的 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) （'returnFaceId' 為 true），請使用 [面： 正面、 清楚且最小大小為 200 x 200 像素為單位 （100 像素的眼睛之間）。
+      * 最小可偵測的臉部大小為 36 x 36 像素，不能大於 1920 x 1080 像素映像中。
+      維度高於 1920 x 1080 像素的影像必須按比例較大的最小的臉部大小。
+      * 您可以提供不同的 'detectionModel' 值。 若要使用，並比較不同的偵測模型，請參閱[如何指定偵測模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建議使用-case(s) |
+      | ---------- | -------- |
+      | ' detection_01': | [臉部-預設偵測模型
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。 建議的人臉正面偵測附近。 使用特別大型的角度 （頭部姿勢） 臉部、 occluded 臉部或錯誤的影像方向的情況下，可能無法偵測的臉部在此情況下。 | |'detection_02': |使用改善的精確度，特別是在小型、 部分和模糊的表面上可能會在 2019年中發行的偵測模型。 |
       * 會提供不同的 'recognitionModel' 值。 如果後續追蹤的作業，例如驗證]，[身分識別，尋找類似您需要，請使用 'recognitionModel' 參數指定辨識模型。 'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。 一旦指定，偵測到的 faceIds 會與指定的辨識模型相關聯。 更多的詳細資訊，請參閱[如何指定辨識模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | 模型 | 建議使用-case(s) |
+      | ---------- | -------- |
+      | ' recognition_01': | [臉部-預設辨識模型
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。 所有在 2019 年 3 月之前建立這些 faceIds 會聯結與此辨識模型。 | |'recognition_02': |辨識於 2019 年 3 月發行的模型。 建議 'recognition_02'，因為其整體的精確度提升比 'recognition_01'。 |
     syntax:
       content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
       parameters:
