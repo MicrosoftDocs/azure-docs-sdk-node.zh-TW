@@ -1,0 +1,393 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolSpecification
+    name: PoolSpecification
+    fullName: PoolSpecification
+    children:
+      - azure-batch.PoolSpecification.applicationLicenses
+      - azure-batch.PoolSpecification.applicationPackageReferences
+      - azure-batch.PoolSpecification.autoScaleEvaluationInterval
+      - azure-batch.PoolSpecification.autoScaleFormula
+      - azure-batch.PoolSpecification.certificateReferences
+      - azure-batch.PoolSpecification.cloudServiceConfiguration
+      - azure-batch.PoolSpecification.displayName
+      - azure-batch.PoolSpecification.enableAutoScale
+      - azure-batch.PoolSpecification.enableInterNodeCommunication
+      - azure-batch.PoolSpecification.maxTasksPerNode
+      - azure-batch.PoolSpecification.metadata
+      - azure-batch.PoolSpecification.networkConfiguration
+      - azure-batch.PoolSpecification.resizeTimeout
+      - azure-batch.PoolSpecification.startTask
+      - azure-batch.PoolSpecification.targetDedicatedNodes
+      - azure-batch.PoolSpecification.targetLowPriorityNodes
+      - azure-batch.PoolSpecification.taskSchedulingPolicy
+      - azure-batch.PoolSpecification.userAccounts
+      - azure-batch.PoolSpecification.virtualMachineConfiguration
+      - azure-batch.PoolSpecification.vmSize
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.applicationLicenses
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-101">應用程式授權份必須是可用的批次服務應用程式授權的子集。</span><span class="sxs-lookup"><span data-stu-id="a01ad-101">The list of application licenses must be a subset of available Batch service application licenses.</span></span> <span data-ttu-id="a01ad-102">如果這不支援要求授權時，建立集區將會失敗。</span><span class="sxs-lookup"><span data-stu-id="a01ad-102">If a license is requested which is not supported, Pool creation will fail.</span></span> <span data-ttu-id="a01ad-103">在集區上可用的允許的授權是 ''maya''、 ''vray''、 ''3dsmax''、 ''arnold''。</span><span class="sxs-lookup"><span data-stu-id="a01ad-103">The permitted licenses available on the Pool are ''maya'', ''vray'', ''3dsmax'', ''arnold''.</span></span> <span data-ttu-id="a01ad-104">額外的費用適用於加入集區的每個應用程式授權。</span><span class="sxs-lookup"><span data-stu-id="a01ad-104">An additional charge applies for each application license added to the Pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-105">套件參考的變更會影響所有的新節點加入集區，但不是會影響集區中已經有，直到重新啟動或重新安裝映像的計算節點。</span><span class="sxs-lookup"><span data-stu-id="a01ad-105">Changes to Package references affect all new Nodes joining the Pool, but do not affect Compute Nodes that are already in the Pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="a01ad-106">沒有最大為 10 的套件參考，在任何指定的集區上。</span><span class="sxs-lookup"><span data-stu-id="a01ad-106">There is a maximum of 10 Package references on any given Pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.autoScaleEvaluationInterval
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-107">預設值為 15 分鐘。</span><span class="sxs-lookup"><span data-stu-id="a01ad-107">The default value is 15 minutes.</span></span> <span data-ttu-id="a01ad-108">最小和最大值會分別為 5 分鐘和 168 小時。</span><span class="sxs-lookup"><span data-stu-id="a01ad-108">The minimum and maximum value are 5 minutes and 168 hours respectively.</span></span> <span data-ttu-id="a01ad-109">如果您指定的值超過 5 分鐘或更高 168 小時，Batch 服務會拒絕具有無效的屬性值錯誤; 要求如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。</span><span class="sxs-lookup"><span data-stu-id="a01ad-109">If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.autoScaleFormula
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-110">這個屬性不能指定是否 enableAutoScale 設定為 false。</span><span class="sxs-lookup"><span data-stu-id="a01ad-110">This property must not be specified if enableAutoScale is set to false.</span></span> <span data-ttu-id="a01ad-111">它是必要的如果 enableAutoScale 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="a01ad-111">It is required if enableAutoScale is set to true.</span></span> <span data-ttu-id="a01ad-112">建立集區之前，公式會檢查有效性。</span><span class="sxs-lookup"><span data-stu-id="a01ad-112">The formula is checked for validity before the Pool is created.</span></span> <span data-ttu-id="a01ad-113">如果公式無效，Batch 服務會拒絕要求，並詳細的錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="a01ad-113">If the formula is not valid, the Batch service rejects the request with detailed error information.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-114">對於 Windows 節點，Batch 服務會安裝至指定的憑證存放區和位置的憑證。</span><span class="sxs-lookup"><span data-stu-id="a01ad-114">For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location.</span></span> <span data-ttu-id="a01ad-115">若為 Linux 計算節點，憑證會儲存在目錄內的工作目錄和 AZ_BATCH_CERTIFICATES_DIR 提供給此位置的查詢工作的環境變數的工作。</span><span class="sxs-lookup"><span data-stu-id="a01ad-115">For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the Task to query for this location.</span></span> <span data-ttu-id="a01ad-116">與 ''remoteUser'' 的可見性的憑證，建立 ''certs'' 目錄中使用者的主目錄 (例如，/home/ {使用者-名稱} / certs) 和憑證會放在該目錄。</span><span class="sxs-lookup"><span data-stu-id="a01ad-116">For Certificates with visibility of ''remoteUser'', a ''certs'' directory is created in the user''s home directory (e.g., /home/{user-name}/certs) and Certificates are placed in that directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.cloudServiceConfiguration
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-117">這個屬性必須是指定的集區需要具有 Azure PaaS Vm 建立。</span><span class="sxs-lookup"><span data-stu-id="a01ad-117">This property must be specified if the Pool needs to be created with Azure PaaS VMs.</span></span> <span data-ttu-id="a01ad-118">此屬性和 virtualMachineConfiguration 互斥，且必須指定其中一個屬性。</span><span class="sxs-lookup"><span data-stu-id="a01ad-118">This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified.</span></span> <span data-ttu-id="a01ad-119">如果都未指定批次服務傳回錯誤;如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。</span><span class="sxs-lookup"><span data-stu-id="a01ad-119">If neither is specified then the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="a01ad-120">這個屬性不能指定是否使用其 poolAllocationMode; 屬性設定為 「 UserSubscription 」 建立 Batch 帳戶。</span><span class="sxs-lookup"><span data-stu-id="a01ad-120">This property cannot be specified if the Batch Account was created with its poolAllocationMode property set to ''UserSubscription''.</span></span>'
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - azure-batch.CloudServiceConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a01ad-121">不需要是唯一的顯示名稱，並可包含任何 Unicode 字元，最大長度為 1024年。</span><span class="sxs-lookup"><span data-stu-id="a01ad-121">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.enableAutoScale
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-122">如果為 false，至少一個 targetDedicateNodes 和 targetLowPriorityNodes 必須指定。</span><span class="sxs-lookup"><span data-stu-id="a01ad-122">If false, at least one of targetDedicateNodes and targetLowPriorityNodes must be specified.</span></span> <span data-ttu-id="a01ad-123">如果為 true，autoScaleFormula 元素是必要的。</span><span class="sxs-lookup"><span data-stu-id="a01ad-123">If true, the autoScaleFormula element is required.</span></span> <span data-ttu-id="a01ad-124">根據公式自動調整集區大小。</span><span class="sxs-lookup"><span data-stu-id="a01ad-124">The Pool automatically resizes according to the formula.</span></span> <span data-ttu-id="a01ad-125">預設值為 False。</span><span class="sxs-lookup"><span data-stu-id="a01ad-125">The default value is false.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.enableInterNodeCommunication
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a01ad-126">啟用節點間通訊會限制由於部署限制集區的計算節點上的集區的大小上限。</span><span class="sxs-lookup"><span data-stu-id="a01ad-126">Enabling inter-node communication limits the maximum size of the Pool due to deployment restrictions on the Compute Nodes of the Pool.</span></span> <span data-ttu-id="a01ad-127">這可能會導致無法達到其所需的大小的集區。</span><span class="sxs-lookup"><span data-stu-id="a01ad-127">This may result in the Pool not reaching its desired size.</span></span> <span data-ttu-id="a01ad-128">預設值為 False。</span><span class="sxs-lookup"><span data-stu-id="a01ad-128">The default value is false.</span></span>
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.maxTasksPerNode
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a01ad-129">預設值為 1。</span><span class="sxs-lookup"><span data-stu-id="a01ad-129">The default value is 1.</span></span> <span data-ttu-id="a01ad-130">最大值是較小的 4 倍的核心數目的集區的 vmSize 或 256。</span><span class="sxs-lookup"><span data-stu-id="a01ad-130">The maximum value is the smaller of 4 times the number of cores of the vmSize of the Pool or 256.</span></span>
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a01ad-131">Batch 服務不會將任何意義指派給中繼資料;它只是使用使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="a01ad-131">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - azure-batch.NetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.resizeTimeout
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-132">此逾時只適用於手動調整;它沒有任何作用時 enableAutoScale 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="a01ad-132">This timeout applies only to manual scaling; it has no effect when enableAutoScale is set to true.</span></span> <span data-ttu-id="a01ad-133">預設值為 15 分鐘。</span><span class="sxs-lookup"><span data-stu-id="a01ad-133">The default value is 15 minutes.</span></span> <span data-ttu-id="a01ad-134">最小值為 5 分鐘。</span><span class="sxs-lookup"><span data-stu-id="a01ad-134">The minimum value is 5 minutes.</span></span> <span data-ttu-id="a01ad-135">如果您指定的值少於 5 分鐘時，Batch 服務會拒絕並產生錯誤; 要求如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。</span><span class="sxs-lookup"><span data-stu-id="a01ad-135">If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.targetDedicatedNodes
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-136">這個屬性不能指定是否 enableAutoScale 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="a01ad-136">This property must not be specified if enableAutoScale is set to true.</span></span> <span data-ttu-id="a01ad-137">如果 enableAutoScale 設定為 false，則您必須設定 targetDedicatedNodes、 targetLowPriorityNodes，或兩者。</span><span class="sxs-lookup"><span data-stu-id="a01ad-137">If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.targetLowPriorityNodes
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-138">這個屬性不能指定是否 enableAutoScale 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="a01ad-138">This property must not be specified if enableAutoScale is set to true.</span></span> <span data-ttu-id="a01ad-139">如果 enableAutoScale 設定為 false，則您必須設定 targetDedicatedNodes、 targetLowPriorityNodes，或兩者。</span><span class="sxs-lookup"><span data-stu-id="a01ad-139">If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.taskSchedulingPolicy
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-140">如果未指定，預設值將會分配。</span><span class="sxs-lookup"><span data-stu-id="a01ad-140">If not specified, the default is spread.</span></span>'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - azure-batch.TaskSchedulingPolicy
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.userAccounts
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - 'azure-batch.UserAccount[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.virtualMachineConfiguration
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-141">這個屬性必須是指定的集區是否需要建立與 Azure IaaS Vm。</span><span class="sxs-lookup"><span data-stu-id="a01ad-141">This property must be specified if the Pool needs to be created with Azure IaaS VMs.</span></span> <span data-ttu-id="a01ad-142">此屬性和 cloudServiceConfiguration 互斥，且必須指定其中一個屬性。</span><span class="sxs-lookup"><span data-stu-id="a01ad-142">This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.</span></span> <span data-ttu-id="a01ad-143">如果都未指定批次服務傳回錯誤;如果您直接呼叫 REST API，HTTP 狀態碼為 400 （不正確的要求）。</span><span class="sxs-lookup"><span data-stu-id="a01ad-143">If neither is specified then the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - azure-batch.VirtualMachineConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.vmSize
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a01ad-144">集區中的虛擬機器可用大小的相關資訊，請參閱 Azure Batch 集區中的計算節點選擇 VM 大小 (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes)。</span><span class="sxs-lookup"><span data-stu-id="a01ad-144">For information about available sizes of virtual machines in Pools, see Choose a VM size for Compute Nodes in an Azure Batch Pool (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).</span></span>'
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.CloudServiceConfiguration
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: azure-batch.CloudServiceConfiguration
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: azure-batch.NetworkConfiguration
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask
+  - uid: azure-batch.TaskSchedulingPolicy
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: azure-batch.TaskSchedulingPolicy
+  - uid: 'azure-batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: azure-batch.UserAccount
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.VirtualMachineConfiguration
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: azure-batch.VirtualMachineConfiguration

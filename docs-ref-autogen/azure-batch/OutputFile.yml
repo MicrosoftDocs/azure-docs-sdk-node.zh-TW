@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.OutputFile
+    name: OutputFile
+    fullName: OutputFile
+    children:
+      - azure-batch.OutputFile.destination
+      - azure-batch.OutputFile.filePattern
+      - azure-batch.OutputFile.uploadOptions
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.OutputFile.destination
+    name: destination
+    fullName: destination
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'destination: OutputFileDestination'
+      return:
+        type:
+          - azure-batch.OutputFileDestination
+    package: azure-batch
+  - uid: azure-batch.OutputFile.filePattern
+    name: filePattern
+    fullName: filePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="faba0-101">支援相對與絕對路徑。</span><span class="sxs-lookup"><span data-stu-id="faba0-101">Both relative and absolute paths are supported.</span></span> <span data-ttu-id="faba0-102">相對路徑會相對於工作工作目錄。</span><span class="sxs-lookup"><span data-stu-id="faba0-102">Relative paths are relative to the Task working directory.</span></span> <span data-ttu-id="faba0-103">支援下列萬用字元: \* 符合 0 或多個字元 （如範例模式 abc \* 會比對 abc 或 abcdef），\* \* 符合任何目錄中，嗎？</span><span class="sxs-lookup"><span data-stu-id="faba0-103">The following wildcards are supported: \* matches 0 or more characters (for example pattern abc\* would match abc or abcdef), \*\* matches any directory, ?</span></span>
+      <span data-ttu-id="faba0-104">比對任何單一字元，在方括號中，[abc] 比對一個字元和範圍中的 [a-c] 比對一個字元。</span><span class="sxs-lookup"><span data-stu-id="faba0-104">matches any single character, [abc] matches one character in the brackets, and [a-c] matches one character in the range.</span></span> <span data-ttu-id="faba0-105">方括號可以包含比對未指定任何字元的否定運算 (例如 [！ abc] 比對任何字元，但 a、 b 或 c)。</span><span class="sxs-lookup"><span data-stu-id="faba0-105">Brackets can include a negation to match any character not specified (for example [!abc] matches any character but a, b, or c).</span></span> <span data-ttu-id="faba0-106">如果檔案名稱的開頭"。"它依預設會忽略，但可能會符合藉由明確指定它 (例如 *.gif 不符。 a.gif，但。*。gif 會）。</span><span class="sxs-lookup"><span data-stu-id="faba0-106">If a file name starts with "." it is ignored by default but may be matched by specifying it explicitly (for example *.gif will not match .a.gif, but .*.gif will).</span></span> <span data-ttu-id="faba0-107">簡單的範例: \**\*.txt 比對任何檔案，不會在啟動 '。 '，並結束.txt 工作工作目錄或任何子目錄中。如果檔案名稱包含萬用字元，則可以逸出使用方括號 (例如 abc [*] 會比對名為 abc \* 的檔案)。</span><span class="sxs-lookup"><span data-stu-id="faba0-107">A simple example: \**\*.txt matches any file that does not start in '.' and ends with .txt in the Task working directory or any subdirectory. If the filename contains a wildcard character it can be escaped using brackets (for example abc[*] would match a file named abc\*).</span></span> <span data-ttu-id="faba0-108">請注意，兩者 \ 和 Windows，但僅限於目錄分隔符號會被視為 / Linux 上。</span><span class="sxs-lookup"><span data-stu-id="faba0-108">Note that both \ and / are treated as directory separators on Windows, but only / is on Linux.</span></span> <span data-ttu-id="faba0-109">環境變數 （var %在 Windows 上） 或在 Linux 上的 $var 會展開之前套用的模式。</span><span class="sxs-lookup"><span data-stu-id="faba0-109">Environment variables (%var% on Windows or $var on Linux) are expanded prior to the pattern being applied.</span></span>
+    syntax:
+      content: 'filePattern: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.OutputFile.uploadOptions
+    name: uploadOptions
+    fullName: uploadOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'uploadOptions: OutputFileUploadOptions'
+      return:
+        type:
+          - azure-batch.OutputFileUploadOptions
+    package: azure-batch
+references:
+  - uid: azure-batch.OutputFileDestination
+    name: OutputFileDestination
+    spec.typeScript:
+      - name: OutputFileDestination
+        fullName: OutputFileDestination
+        uid: azure-batch.OutputFileDestination
+  - uid: azure-batch.OutputFileUploadOptions
+    name: OutputFileUploadOptions
+    spec.typeScript:
+      - name: OutputFileUploadOptions
+        fullName: OutputFileUploadOptions
+        uid: azure-batch.OutputFileUploadOptions

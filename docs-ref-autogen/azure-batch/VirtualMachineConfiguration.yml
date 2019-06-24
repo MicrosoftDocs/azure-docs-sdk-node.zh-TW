@@ -1,0 +1,136 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.VirtualMachineConfiguration
+    name: VirtualMachineConfiguration
+    fullName: VirtualMachineConfiguration
+    children:
+      - azure-batch.VirtualMachineConfiguration.containerConfiguration
+      - azure-batch.VirtualMachineConfiguration.dataDisks
+      - azure-batch.VirtualMachineConfiguration.imageReference
+      - azure-batch.VirtualMachineConfiguration.licenseType
+      - azure-batch.VirtualMachineConfiguration.nodeAgentSKUId
+      - azure-batch.VirtualMachineConfiguration.windowsConfiguration
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.containerConfiguration
+    name: containerConfiguration
+    fullName: containerConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0ffd9-101">如果指定，以允許在容器中執行的工作集區每個計算節點上執行安裝程式。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-101">If specified, setup is performed on each Compute Node in the Pool to allow Tasks to run in containers.</span></span> <span data-ttu-id="0ffd9-102">所有一般工作和此集區上執行的作業管理員工作必須指定 containerSettings 屬性中，而且所有其他工作可能指定它。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-102">All regular Tasks and Job manager Tasks run on this Pool must specify the containerSettings property, and all other Tasks may specify it.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerConfiguration?: ContainerConfiguration'
+      return:
+        type:
+          - azure-batch.ContainerConfiguration
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.dataDisks
+    name: dataDisks
+    fullName: dataDisks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0ffd9-103">這個屬性必須指定是否計算節點集區中必須有空白的資料磁碟附加到它們。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-103">This property must be specified if the Compute Nodes in the Pool need to have empty data disks attached to them.</span></span> <span data-ttu-id="0ffd9-104">無法更新。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-104">This cannot be updated.</span></span> <span data-ttu-id="0ffd9-105">每個計算節點會取得自己的磁碟 （磁碟不是檔案共用）。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-105">Each Compute Node gets its own disk (the disk is not a file share).</span></span> <span data-ttu-id="0ffd9-106">無法連接現有的磁碟，每個附加的磁碟是空的。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-106">Existing disks cannot be attached, each attached disk is empty.</span></span> <span data-ttu-id="0ffd9-107">當 [計算] 節點從集區移除時的磁碟和所有與其相關聯的資料也會刪除。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-107">When the Compute Node is removed from the Pool, the disk and all data associated with it is also deleted.</span></span> <span data-ttu-id="0ffd9-108">磁碟的格式不正進行附加之後，您必須將其格式化之前，請使用-如需詳細資訊，請參閱https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/attach-disk#initialize-a-new-data-disk-in-linux和https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-disk-ps#add-an-empty-data-disk-to-a-virtual-machine。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-108">The disk is not formatted after being attached, it must be formatted before use - for more information see https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/attach-disk#initialize-a-new-data-disk-in-linux and https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-disk-ps#add-an-empty-data-disk-to-a-virtual-machine.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataDisks?: DataDisk[]'
+      return:
+        type:
+          - 'azure-batch.DataDisk[]'
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.imageReference
+    name: imageReference
+    fullName: imageReference
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'imageReference: ImageReference'
+      return:
+        type:
+          - azure-batch.ImageReference
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.licenseType
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0ffd9-109">這只適用於包含 Windows 作業系統中，且應該僅用於當您將部署到計算節點的內部有效授權的映像。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-109">This only applies to Images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the Compute Nodes which will be deployed.</span></span> <span data-ttu-id="0ffd9-110">如果不省略，就會有任何內部部署授權折扣會套用。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-110">If omitted, no on-premises licensing discount is applied.</span></span> <span data-ttu-id="0ffd9-111">值為：</span><span class="sxs-lookup"><span data-stu-id="0ffd9-111">Values are:</span></span>
+
+      <span data-ttu-id="0ffd9-112">Windows_Server-適用於 Windows Server 是在內部部署授權。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-112">Windows_Server - The on-premises license is for Windows Server.</span></span>
+      <span data-ttu-id="0ffd9-113">Windows_Client-Windows 用戶端是在內部部署授權。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-113">Windows_Client - The on-premises license is for Windows Client.</span></span>
+    optional: true
+    syntax:
+      content: 'licenseType?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.nodeAgentSKUId
+    name: nodeAgentSKUId
+    fullName: nodeAgentSKUId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0ffd9-114">Batch 計算節點代理程式是在集區中，每個計算節點上執行，並提供 [計算] 節點與 Batch 服務之間的命令和控制介面的程式。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-114">The Batch Compute Node agent is a program that runs on each Compute Node in the Pool, and provides the command-and-control interface between the Compute Node and the Batch service.</span></span> <span data-ttu-id="0ffd9-115">有不同的實作，稱為 Sku，請對不同作業系統的計算節點代理程式。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-115">There are different implementations of the Compute Node agent, known as SKUs, for different operating systems.</span></span> <span data-ttu-id="0ffd9-116">您必須指定的計算節點代理程式用來比對所選的映像參考 SKU。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-116">You must specify a Compute Node agent SKU which matches the selected Image reference.</span></span> <span data-ttu-id="0ffd9-117">若要取得支援計算節點的代理程式 Sku 以及他們的已驗證的影像參考清單的清單，請參閱 ''清單支援的計算節點代理程式 Sku'' 的作業。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-117">To get the list of supported Compute Node agent SKUs along with their list of verified Image references, see the ''List supported Compute Node agent SKUs'' operation.</span></span>'
+    syntax:
+      content: 'nodeAgentSKUId: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.windowsConfiguration
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0ffd9-118">這個屬性不能指定是否 imageReference 屬性會指定 Linux OS 映像。</span><span class="sxs-lookup"><span data-stu-id="0ffd9-118">This property must not be specified if the imageReference property specifies a Linux OS Image.</span></span>
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - azure-batch.WindowsConfiguration
+    package: azure-batch
+references:
+  - uid: azure-batch.ContainerConfiguration
+    name: ContainerConfiguration
+    spec.typeScript:
+      - name: ContainerConfiguration
+        fullName: ContainerConfiguration
+        uid: azure-batch.ContainerConfiguration
+  - uid: 'azure-batch.DataDisk[]'
+    name: 'DataDisk[]'
+    spec.typeScript:
+      - name: DataDisk
+        fullName: DataDisk
+        uid: azure-batch.DataDisk
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.ImageReference
+    name: ImageReference
+    spec.typeScript:
+      - name: ImageReference
+        fullName: ImageReference
+        uid: azure-batch.ImageReference
+  - uid: azure-batch.WindowsConfiguration
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: azure-batch.WindowsConfiguration

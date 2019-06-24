@@ -1,0 +1,460 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.CloudJob
+    name: CloudJob
+    fullName: CloudJob
+    children:
+      - azure-batch.CloudJob.commonEnvironmentSettings
+      - azure-batch.CloudJob.constraints
+      - azure-batch.CloudJob.creationTime
+      - azure-batch.CloudJob.displayName
+      - azure-batch.CloudJob.eTag
+      - azure-batch.CloudJob.executionInfo
+      - azure-batch.CloudJob.id
+      - azure-batch.CloudJob.jobManagerTask
+      - azure-batch.CloudJob.jobPreparationTask
+      - azure-batch.CloudJob.jobReleaseTask
+      - azure-batch.CloudJob.lastModified
+      - azure-batch.CloudJob.metadata
+      - azure-batch.CloudJob.networkConfiguration
+      - azure-batch.CloudJob.onAllTasksComplete
+      - azure-batch.CloudJob.onTaskFailure
+      - azure-batch.CloudJob.poolInfo
+      - azure-batch.CloudJob.previousState
+      - azure-batch.CloudJob.previousStateTransitionTime
+      - azure-batch.CloudJob.priority
+      - azure-batch.CloudJob.state
+      - azure-batch.CloudJob.stateTransitionTime
+      - azure-batch.CloudJob.stats
+      - azure-batch.CloudJob.url
+      - azure-batch.CloudJob.usesTaskDependencies
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.CloudJob.commonEnvironmentSettings
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3d5b-101">個別的工作，可以覆寫這裡指定使用不同的值指定相同的設定名稱的環境設定。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-101">Individual Tasks can override an environment setting specified here by specifying the same setting name with a different value.</span></span>
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.CloudJob.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.CloudJob.creationTime
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.CloudJob.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudJob.eTag
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3d5b-102">這是不透明的字串。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-102">This is an opaque string.</span></span> <span data-ttu-id="b3d5b-103">您可以使用它來偵測工作是否已變更，要求之間。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-103">You can use it to detect whether the Job has changed between requests.</span></span> <span data-ttu-id="b3d5b-104">特別是，您可以是 etag，當更新作業，以指定您的變更應該沒有其他人已經在同時修改作業時，才會生效。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-104">In particular, you can be pass the ETag when updating a Job to specify that your changes should take effect only if nobody else has modified the Job in the meantime.</span></span>'
+    optional: true
+    syntax:
+      content: 'eTag?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudJob.executionInfo
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'executionInfo?: JobExecutionInformation'
+      return:
+        type:
+          - azure-batch.JobExecutionInformation
+    package: azure-batch
+  - uid: azure-batch.CloudJob.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3d5b-105">識別碼是保留大小寫和區分大小寫 （也就是說，您可能沒有在帳戶內兩個只有大小寫不同的識別碼）。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-105">The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an Account that differ only by case).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudJob.jobManagerTask
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - azure-batch.JobManagerTask
+    package: azure-batch
+  - uid: azure-batch.CloudJob.jobPreparationTask
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3d5b-106">作業準備工作是特殊作業的任何其他工作之前的每個計算節點上執行的工作。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-106">The Job Preparation Task is a special Task run on each Compute Node before any other Task of the Job.</span></span>
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - azure-batch.JobPreparationTask
+    package: azure-batch
+  - uid: azure-batch.CloudJob.jobReleaseTask
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3d5b-107">作業解除工作會在結束時執行作業的每個已執行之作業的任何其他工作的計算節點上的特殊工作。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-107">The Job Release Task is a special Task run at the end of the Job on each Compute Node that has run any other Task of the Job.</span></span>
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - azure-batch.JobReleaseTask
+    package: azure-batch
+  - uid: azure-batch.CloudJob.lastModified
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3d5b-108">這是最後一次的變更作業層級資料，例如工作狀態或優先順序。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-108">This is the last time at which the Job level data, such as the Job state or priority, changed.</span></span> <span data-ttu-id="b3d5b-109">它不會不納入工作層級的變更，例如新增新的工作或工作變更狀態。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-109">It does not factor in task-level changes such as adding new Tasks or Tasks changing state.</span></span>'
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.CloudJob.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3d5b-110">Batch 服務不會將任何意義指派給中繼資料;它只是使用使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-110">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.CloudJob.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - azure-batch.JobNetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.CloudJob.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3d5b-111">預設值為 noaction。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-111">The default is noaction.</span></span> <span data-ttu-id="b3d5b-112">可能的值包括: ''noAction''，''terminateJob''</span><span class="sxs-lookup"><span data-stu-id="b3d5b-112">Possible values include: ''noAction'', ''terminateJob''</span></span>'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudJob.onTaskFailure
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3d5b-113">工作會被視為已失敗，如果包含 failureInfo。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-113">A Task is considered to have failed if has a failureInfo.</span></span> <span data-ttu-id="b3d5b-114">如果在工作完成之後耗盡重試計數，以非零結束代碼，則設定 failureInfo 或如果啟動工作時發生錯誤，例如由於資源檔案下載錯誤。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-114">A failureInfo is set if the Task completes with a non-zero exit code after exhausting its retry count, or if there was an error starting the Task, for example due to a resource file download error.</span></span> <span data-ttu-id="b3d5b-115">預設值為 noaction。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-115">The default is noaction.</span></span> <span data-ttu-id="b3d5b-116">可能的值包括: ''noAction''，''performExitOptionsJobAction''</span><span class="sxs-lookup"><span data-stu-id="b3d5b-116">Possible values include: ''noAction'', ''performExitOptionsJobAction''</span></span>'
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudJob.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.CloudJob.previousState
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3d5b-117">未設定這個屬性，如果工作處於其初始作用中狀態。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-117">This property is not set if the Job is in its initial Active state.</span></span> <span data-ttu-id="b3d5b-118">可能的值包括: ''active''、 ''停用''，''disabled''，''啟用''，''終止，'' ''已完成，「 刪除中 」</span><span class="sxs-lookup"><span data-stu-id="b3d5b-118">Possible values include: ''active'', ''disabling'', ''disabled'', ''enabling'', ''terminating'', ''completed'', ''deleting''</span></span>'
+    optional: true
+    syntax:
+      content: 'previousState?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudJob.previousStateTransitionTime
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3d5b-119">未設定這個屬性，如果工作處於其初始作用中狀態。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-119">This property is not set if the Job is in its initial Active state.</span></span>
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.CloudJob.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3d5b-120">優先順序值的範圍可以從-1000年到 1000，-1000年表示最低優先順序，1000年表示最高的優先順序。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-120">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="b3d5b-121">預設值為 0。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-121">The default value is 0.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.CloudJob.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3d5b-122">可能的值包括: ''active''、 ''停用''，''disabled''，''啟用''，''終止，'' ''已完成，「 刪除中 」</span><span class="sxs-lookup"><span data-stu-id="b3d5b-122">Possible values include: ''active'', ''disabling'', ''disabled'', ''enabling'', ''terminating'', ''completed'', ''deleting''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudJob.stateTransitionTime
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.CloudJob.stats
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3d5b-123">CloudJob 擷取包括 'stats' 屬性，則 expand 子句時，才會填入這個屬性否則，它是 null。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-123">This property is populated only if the CloudJob was retrieved with an expand clause including the 'stats' attribute; otherwise it is null.</span></span> <span data-ttu-id="b3d5b-124">統計資料可能無法立即使用。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-124">The statistics may not be immediately available.</span></span> <span data-ttu-id="b3d5b-125">Batch 服務會執行定期彙總的統計資料。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-125">The Batch service performs periodic roll-up of statistics.</span></span> <span data-ttu-id="b3d5b-126">典型的延遲是大約 30 分鐘的時間。</span><span class="sxs-lookup"><span data-stu-id="b3d5b-126">The typical delay is about 30 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'stats?: JobStatistics'
+      return:
+        type:
+          - azure-batch.JobStatistics
+    package: azure-batch
+  - uid: azure-batch.CloudJob.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'url?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CloudJob.usesTaskDependencies
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: azure-batch.JobExecutionInformation
+    name: JobExecutionInformation
+    spec.typeScript:
+      - name: JobExecutionInformation
+        fullName: JobExecutionInformation
+        uid: azure-batch.JobExecutionInformation
+  - uid: azure-batch.JobManagerTask
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: azure-batch.JobManagerTask
+  - uid: azure-batch.JobPreparationTask
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: azure-batch.JobPreparationTask
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: azure-batch.JobReleaseTask
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: azure-batch.JobNetworkConfiguration
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation
+  - uid: azure-batch.JobStatistics
+    name: JobStatistics
+    spec.typeScript:
+      - name: JobStatistics
+        fullName: JobStatistics
+        uid: azure-batch.JobStatistics

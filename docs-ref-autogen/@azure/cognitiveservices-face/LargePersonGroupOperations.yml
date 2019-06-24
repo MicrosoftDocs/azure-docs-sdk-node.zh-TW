@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="08d0b-101">此類別代表 LargePersonGroupOperations。</span><span class="sxs-lookup"><span data-stu-id="08d0b-101">Class representing a LargePersonGroupOperations.</span></span>
+    summary: <span data-ttu-id="d97bb-101">此類別代表 LargePersonGroupOperations。</span><span class="sxs-lookup"><span data-stu-id="d97bb-101">Class representing a LargePersonGroupOperations.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.create_2'
     name: 'create(string, LargePersonGroupCreateOptionalParams, ServiceCallback<void>)'
@@ -44,16 +44,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-102">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-102">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-102">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-102">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupCreateOptionalParams'
-          description: <span data-ttu-id="08d0b-103">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="08d0b-103">The optional parameters</span></span>
+          description: <span data-ttu-id="d97bb-103">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d97bb-103">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="08d0b-104">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-104">The callback</span></span>
+            <span data-ttu-id="d97bb-104">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-104">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -64,24 +64,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: |-
-      <span data-ttu-id="08d0b-105">建立新的大型的人員群組與使用者指定 largePersonGroupId、 名稱、 選用的 userData 和 recognitionModel。</span><span class="sxs-lookup"><span data-stu-id="08d0b-105">Create a new large person group with user-specified largePersonGroupId, name, an optional userData and recognitionModel.</span></span>
-      <br /> <span data-ttu-id="08d0b-106">大型的人員群組是容器的上傳的個人資料，包括臉部影像和臉部辨識功能，以及到 1,000,000 的人員。</span><span class="sxs-lookup"><span data-stu-id="08d0b-106">A large person group is the container of the uploaded person data, including face images and face recognition feature, and up to 1,000,000 people.</span></span>
-      <br /> <span data-ttu-id="08d0b-107">在建立之後，使用[LargePersonGroup 人員-建立](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40)將人員新增至群組，並呼叫[LargePersonGroup-訓練](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4)以取得此群組供[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。</span><span class="sxs-lookup"><span data-stu-id="08d0b-107">After creation, use [LargePersonGroup Person - Create](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) to add person into the group, and call [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) to get this group ready for [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>
-      <br /> <span data-ttu-id="08d0b-108">將之前的伺服器上儲存個人的臉部、 影像和 userData [LargePersonGroup 人員-刪除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)或[LargePersonGroup-刪除](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)呼叫。</span><span class="sxs-lookup"><span data-stu-id="08d0b-108">The person face, image, and userData will be stored on server until [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>
-      <br />
-      * <span data-ttu-id="08d0b-109">免費層訂用帳戶配額：1000 個大型的人員群組。</span><span class="sxs-lookup"><span data-stu-id="08d0b-109">Free-tier subscription quota: 1,000 large person groups.</span></span>
-      * <span data-ttu-id="08d0b-110">S0 層訂用帳戶配額：1,000,000 的大型的人員群組。</span><span class="sxs-lookup"><span data-stu-id="08d0b-110">S0-tier subscription quota: 1,000,000 large person groups.</span></span>
-      <br />
-      <span data-ttu-id="08d0b-111">'recognitionModel' 應指定要與這個大型的人員群組產生關聯。</span><span class="sxs-lookup"><span data-stu-id="08d0b-111">'recognitionModel' should be specified to associate with this large person group.</span></span> <span data-ttu-id="08d0b-112">'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。</span><span class="sxs-lookup"><span data-stu-id="08d0b-112">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="08d0b-113">新的表面會新增至現有的大型的人員群組會使用已與集合相關聯的辨識模型。</span><span class="sxs-lookup"><span data-stu-id="08d0b-113">New faces that are added to an existing large person group will use the recognition model that's already associated with the collection.</span></span>
-      <span data-ttu-id="08d0b-114">大型的人員群組中的現有臉部功能無法更新擷取的辨識模型的另一個版本的功能。</span><span class="sxs-lookup"><span data-stu-id="08d0b-114">Existing face features in a large person group can't be updated to features extracted by another version of recognition model.</span></span>
+    summary: "<span data-ttu-id=\"d97bb-105\">建立新的大型的人員群組與使用者指定 largePersonGroupId、 名稱、 選用的 userData 和 recognitionModel。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-105\">Create a new large person group with user-specified largePersonGroupId, name, an optional userData and recognitionModel.</span></span>\n<br /> <span data-ttu-id=\"d97bb-106\">大型的人員群組是容器的上傳的個人資料，包括臉部辨識功能，以及到 1,000,000 的人員。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-106\">A large person group is the container of the uploaded person data, including face recognition feature, and up to 1,000,000 people.</span></span>\n<br /> <span data-ttu-id=\"d97bb-107\">在建立之後，使用[LargePersonGroup 人員-建立](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40)將人員新增至群組，並呼叫[LargePersonGroup-訓練](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4)以取得此群組供[面臨-識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-107\">After creation, use [LargePersonGroup Person - Create](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) to add person into the group, and call [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) to get this group ready for [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br /> <span data-ttu-id=\"d97bb-108\">會不儲存任何映像。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-108\">No image will be stored.</span></span> <span data-ttu-id=\"d97bb-109\">只有該人員的擷取臉部功能，並保留使用者資料會儲存在之前的伺服器上[LargePersonGroup 人員-刪除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)或[LargePersonGroup-刪除](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)呼叫。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-109\">Only the person's extracted face features and userData will be stored on server until [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>\n<br/><span data-ttu-id=\"d97bb-110\">'recognitionModel' 應指定要與這個大型的人員群組產生關聯。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-110\">'recognitionModel' should be specified to associate with this large person group.</span></span> <span data-ttu-id=\"d97bb-111\">'RecognitionModel' 的預設值會是 'recognition_01'，如果最新的模型有需要請明確指定的模型，您需要此參數中。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-111\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"d97bb-112\">新的表面會新增至現有的大型的人員群組會使用已與集合相關聯的辨識模型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-112\">New faces that are added to an existing large person group will use the recognition model that's already associated with the collection.</span></span>\n<span data-ttu-id=\"d97bb-113\">大型的人員群組中的現有臉部功能無法更新擷取的辨識模型的另一個版本的功能。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-113\">Existing face features in a large person group can't be updated to features extracted by another version of recognition model.</span></span>\n* <span data-ttu-id=\"d97bb-114\">' recognition_01':預設辨識模型[LargePersonGroup-建立](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-114\">'recognition_01': The default recognition model for [LargePersonGroup - Create](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span></span> <span data-ttu-id=\"d97bb-115\">所有在 2019 年 3 月之前建立這些大型的人員群組是與此辨識模型連結。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-115\">All those large person groups created before 2019 March are bonded with this recognition model.</span></span>\n* <span data-ttu-id=\"d97bb-116\">' recognition_02':辨識於 2019 年 3 月發行的模型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-116\">'recognition_02': Recognition model released in 2019 March.</span></span> <span data-ttu-id=\"d97bb-117\">建議 'recognition_02'，因為其整體的精確度提升比 'recognition_01'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-117\">'recognition_02' is recommended since its\_overall accuracy is improved compared with 'recognition_01'.</span></span>\n<span data-ttu-id=\"d97bb-118\">大型的人員群組配額：</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-118\">Large person group quota:</span></span>\n* <span data-ttu-id=\"d97bb-119\">免費層訂用帳戶配額：1000 個大型的人員群組。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-119\">Free-tier subscription quota: 1,000 large person groups.</span></span>\n* <span data-ttu-id=\"d97bb-120\">S0 層訂用帳戶配額：1,000,000 的大型的人員群組。</span><span class=\"sxs-lookup\"><span data-stu-id=\"d97bb-120\">S0-tier subscription quota: 1,000,000 large person groups.</span></span>"
     syntax:
       content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupCreateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-115">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-115">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-121">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-121">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupCreateOptionalParams
@@ -104,12 +94,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-116">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-116">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-122">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-122">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="08d0b-117">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-117">The callback</span></span>
+            <span data-ttu-id="d97bb-123">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-123">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -120,14 +110,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="08d0b-118">刪除現有的大型的人員群組。</span><span class="sxs-lookup"><span data-stu-id="08d0b-118">Delete an existing large person group.</span></span> <span data-ttu-id="08d0b-119">保存大型的人員群組中的所有人的功能也將一併刪除的臉部。</span><span class="sxs-lookup"><span data-stu-id="08d0b-119">Persisted face features of all people in the large person group will also be deleted.</span></span>
+    summary: <span data-ttu-id="d97bb-124">刪除現有的大型的人員群組。</span><span class="sxs-lookup"><span data-stu-id="d97bb-124">Delete an existing large person group.</span></span> <span data-ttu-id="d97bb-125">保存大型的人員群組中的所有人的功能也將一併刪除的臉部。</span><span class="sxs-lookup"><span data-stu-id="d97bb-125">Persisted face features of all people in the large person group will also be deleted.</span></span>
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-120">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-120">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-126">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-126">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -150,16 +140,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-121">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-121">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-127">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-127">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="08d0b-122">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="08d0b-122">The optional parameters</span></span>
+          description: <span data-ttu-id="d97bb-128">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d97bb-128">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="08d0b-123">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-123">The callback</span></span>
+            <span data-ttu-id="d97bb-129">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-129">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -177,12 +167,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-124">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-124">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-130">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-130">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="08d0b-125">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-125">The callback</span></span>
+            <span data-ttu-id="d97bb-131">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-131">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -200,16 +190,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-126">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-126">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-132">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-132">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupGetOptionalParams'
-          description: <span data-ttu-id="08d0b-127">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="08d0b-127">The optional parameters</span></span>
+          description: <span data-ttu-id="d97bb-133">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d97bb-133">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup>
           description: |
-            <span data-ttu-id="08d0b-128">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-128">The callback</span></span>
+            <span data-ttu-id="d97bb-134">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-134">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupGetResponse>
@@ -220,14 +210,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="08d0b-129">擷取大型的人員群組，包括其名稱、 保留使用者資料和 recognitionModel 的資訊。</span><span class="sxs-lookup"><span data-stu-id="08d0b-129">Retrieve the information of a large person group, including its name, userData and recognitionModel.</span></span> <span data-ttu-id="08d0b-130">此 API 只會傳回大型的人員群組資訊，請使用[LargePersonGroup 個人清單](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1)改為擷取大型的人員群組下的個人資訊。</span><span class="sxs-lookup"><span data-stu-id="08d0b-130">This API returns large person group information only, use [LargePersonGroup Person - List](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1) instead to retrieve person information under the large person group.</span></span>'
+    summary: '<span data-ttu-id="d97bb-135">擷取大型的人員群組，包括其名稱、 保留使用者資料和 recognitionModel 的資訊。</span><span class="sxs-lookup"><span data-stu-id="d97bb-135">Retrieve the information of a large person group, including its name, userData and recognitionModel.</span></span> <span data-ttu-id="d97bb-136">此 API 只會傳回大型的人員群組資訊，請使用[LargePersonGroup 個人清單](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1)改為擷取大型的人員群組下的個人資訊。</span><span class="sxs-lookup"><span data-stu-id="d97bb-136">This API returns large person group information only, use [LargePersonGroup Person - List](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1) instead to retrieve person information under the large person group.</span></span>'
     syntax:
       content: 'function get(largePersonGroupId: string, options?: Models.LargePersonGroupGetOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-131">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-131">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-137">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-137">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupGetOptionalParams
@@ -250,12 +240,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-132">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-132">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-138">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-138">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup>
           description: |
-            <span data-ttu-id="08d0b-133">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-133">The callback</span></span>
+            <span data-ttu-id="d97bb-139">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-139">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupGetResponse>
@@ -266,14 +256,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="08d0b-134">擷取訓練的狀態 （已完成或進行中） 的大型的人員群組。</span><span class="sxs-lookup"><span data-stu-id="08d0b-134">Retrieve the training status of a large person group (completed or ongoing).</span></span>
+    summary: <span data-ttu-id="d97bb-140">擷取訓練的狀態 （已完成或進行中） 的大型的人員群組。</span><span class="sxs-lookup"><span data-stu-id="d97bb-140">Retrieve the training status of a large person group (completed or ongoing).</span></span>
     syntax:
       content: 'function getTrainingStatus(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-135">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-135">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-141">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-141">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -296,16 +286,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-136">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-136">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-142">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-142">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="08d0b-137">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="08d0b-137">The optional parameters</span></span>
+          description: <span data-ttu-id="d97bb-143">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d97bb-143">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="08d0b-138">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-138">The callback</span></span>
+            <span data-ttu-id="d97bb-144">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-144">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupGetTrainingStatusResponse>
@@ -323,12 +313,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-139">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-139">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-145">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-145">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="08d0b-140">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-140">The callback</span></span>
+            <span data-ttu-id="d97bb-146">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-146">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupGetTrainingStatusResponse>
@@ -339,7 +329,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="08d0b-141">建立 LargePersonGroupOperations。</span><span class="sxs-lookup"><span data-stu-id="08d0b-141">Create a LargePersonGroupOperations.</span></span>
+    summary: <span data-ttu-id="d97bb-147">建立 LargePersonGroupOperations。</span><span class="sxs-lookup"><span data-stu-id="d97bb-147">Create a LargePersonGroupOperations.</span></span>
     syntax:
       content: 'new LargePersonGroupOperations(client: FaceClientContext)'
       parameters:
@@ -347,7 +337,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="08d0b-142">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="08d0b-142">Reference to the service client.</span></span>
+            <span data-ttu-id="d97bb-148">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="d97bb-148">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.list_2'
     name: 'list(LargePersonGroupListOptionalParams, ServiceCallback<LargePersonGroup[]>)'
@@ -362,12 +352,12 @@ items:
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupListOptionalParams'
-          description: <span data-ttu-id="08d0b-143">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="08d0b-143">The optional parameters</span></span>
+          description: <span data-ttu-id="d97bb-149">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d97bb-149">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup[]>'
           description: |
-            <span data-ttu-id="08d0b-144">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-144">The callback</span></span>
+            <span data-ttu-id="d97bb-150">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-150">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupListResponse>
@@ -379,15 +369,15 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="08d0b-145">列出所有現有大型的人員群組 largePersonGroupId、 名稱、 保留使用者資料和 recognitionModel。</span><span class="sxs-lookup"><span data-stu-id="08d0b-145">List all existing large person groups’ largePersonGroupId, name, userData and recognitionModel.</span></span><br />
-      * <span data-ttu-id="08d0b-146">大型的人員群組會儲存在 largePersonGroupId 的字母順序。</span><span class="sxs-lookup"><span data-stu-id="08d0b-146">Large person groups are stored in alphabetical order of largePersonGroupId.</span></span>
-      * <span data-ttu-id="08d0b-147">使用者提供 largePersonGroupId 傳回之值的項目具有較大的識別碼字串比較結果為"start"的參數 （字串，選擇性）。</span><span class="sxs-lookup"><span data-stu-id="08d0b-147">"start" parameter (string, optional) is a user-provided largePersonGroupId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id="08d0b-148">[啟動] 設定為空的表示從第一個項目傳回。</span><span class="sxs-lookup"><span data-stu-id="08d0b-148">"start" set to empty to indicate return from the first item.</span></span>
-      * <span data-ttu-id="08d0b-149">"top"參數 (int，選擇性) 指定要傳回的項目數。</span><span class="sxs-lookup"><span data-stu-id="08d0b-149">"top" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id="08d0b-150">一次呼叫中可傳回 1000年個項目的最大值。</span><span class="sxs-lookup"><span data-stu-id="08d0b-150">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id="08d0b-151">若要擷取更多，您可以指定"start"的目前呼叫的最後一個傳回項目識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-151">To fetch more, you can specify "start" with the last returned entry’s Id of the current call.</span></span>
+      <span data-ttu-id="d97bb-151">列出所有現有大型的人員群組 largePersonGroupId、 名稱、 保留使用者資料和 recognitionModel。</span><span class="sxs-lookup"><span data-stu-id="d97bb-151">List all existing large person groups’ largePersonGroupId, name, userData and recognitionModel.</span></span><br />
+      * <span data-ttu-id="d97bb-152">大型的人員群組會儲存在 largePersonGroupId 的字母順序。</span><span class="sxs-lookup"><span data-stu-id="d97bb-152">Large person groups are stored in alphabetical order of largePersonGroupId.</span></span>
+      * <span data-ttu-id="d97bb-153">使用者提供 largePersonGroupId 傳回之值的項目具有較大的識別碼字串比較結果為"start"的參數 （字串，選擇性）。</span><span class="sxs-lookup"><span data-stu-id="d97bb-153">"start" parameter (string, optional) is a user-provided largePersonGroupId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id="d97bb-154">[啟動] 設定為空的表示從第一個項目傳回。</span><span class="sxs-lookup"><span data-stu-id="d97bb-154">"start" set to empty to indicate return from the first item.</span></span>
+      * <span data-ttu-id="d97bb-155">"top"參數 (int，選擇性) 指定要傳回的項目數。</span><span class="sxs-lookup"><span data-stu-id="d97bb-155">"top" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id="d97bb-156">一次呼叫中可傳回 1000年個項目的最大值。</span><span class="sxs-lookup"><span data-stu-id="d97bb-156">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id="d97bb-157">若要擷取更多，您可以指定"start"的目前呼叫的最後一個傳回項目識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-157">To fetch more, you can specify "start" with the last returned entry’s Id of the current call.</span></span>
       <br />
-      <span data-ttu-id="08d0b-152">例如，總計 5 大的人員群組:"group1"，...，"群組 5 」。</span><span class="sxs-lookup"><span data-stu-id="08d0b-152">For example, total 5 large person groups: "group1", ..., "group5".</span></span>
-      <br /> <span data-ttu-id="08d0b-153">「 啟動 = & 前 ="將會傳回 5 的所有群組。</span><span class="sxs-lookup"><span data-stu-id="08d0b-153">"start=&top=" will return all 5 groups.</span></span>
-      <br /> <span data-ttu-id="08d0b-154">「 啟動 = & 前 = 2 」 會傳回"group1"，"group2"。</span><span class="sxs-lookup"><span data-stu-id="08d0b-154">"start=&top=2" will return "group1", "group2".</span></span>
-      <br /> <span data-ttu-id="08d0b-155">「 啟動 = group2 (& t) = 3"會傳回 「 群組 3 」、 「 群組 4"、"群組 5 」。</span><span class="sxs-lookup"><span data-stu-id="08d0b-155">"start=group2&top=3" will return "group3", "group4", "group5".</span></span>
+      <span data-ttu-id="d97bb-158">例如，總計 5 大的人員群組:"group1"，...，"群組 5 」。</span><span class="sxs-lookup"><span data-stu-id="d97bb-158">For example, total 5 large person groups: "group1", ..., "group5".</span></span>
+      <br /> <span data-ttu-id="d97bb-159">「 啟動 = & 前 ="將會傳回 5 的所有群組。</span><span class="sxs-lookup"><span data-stu-id="d97bb-159">"start=&top=" will return all 5 groups.</span></span>
+      <br /> <span data-ttu-id="d97bb-160">「 啟動 = & 前 = 2 」 會傳回"group1"，"group2"。</span><span class="sxs-lookup"><span data-stu-id="d97bb-160">"start=&top=2" will return "group1", "group2".</span></span>
+      <br /> <span data-ttu-id="d97bb-161">「 啟動 = group2 (& t) = 3"會傳回 「 群組 3 」、 「 群組 4"、"群組 5 」。</span><span class="sxs-lookup"><span data-stu-id="d97bb-161">"start=group2&top=3" will return "group3", "group4", "group5".</span></span>
     syntax:
       content: 'function list(options?: Models.LargePersonGroupListOptionalParams)'
       parameters:
@@ -414,7 +404,7 @@ items:
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup[]>'
           description: |
-            <span data-ttu-id="08d0b-156">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-156">The callback</span></span>
+            <span data-ttu-id="d97bb-162">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-162">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupListResponse>
@@ -425,14 +415,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="08d0b-157">大型的人員群組訓練工作排入佇列，訓練工作可能無法立即啟動。</span><span class="sxs-lookup"><span data-stu-id="08d0b-157">Queue a large person group training task, the training task may not be started immediately.</span></span>'
+    summary: '<span data-ttu-id="d97bb-163">大型的人員群組訓練工作排入佇列，訓練工作可能無法立即啟動。</span><span class="sxs-lookup"><span data-stu-id="d97bb-163">Queue a large person group training task, the training task may not be started immediately.</span></span>'
     syntax:
       content: 'function train(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-158">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-158">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-164">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-164">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -455,16 +445,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-159">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-159">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-165">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-165">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="08d0b-160">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="08d0b-160">The optional parameters</span></span>
+          description: <span data-ttu-id="d97bb-166">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d97bb-166">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="08d0b-161">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-161">The callback</span></span>
+            <span data-ttu-id="d97bb-167">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-167">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -482,12 +472,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-162">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-162">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-168">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-168">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="08d0b-163">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-163">The callback</span></span>
+            <span data-ttu-id="d97bb-169">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-169">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -505,16 +495,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-164">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-164">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-170">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-170">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupUpdateOptionalParams'
-          description: <span data-ttu-id="08d0b-165">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="08d0b-165">The optional parameters</span></span>
+          description: <span data-ttu-id="d97bb-171">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="d97bb-171">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="08d0b-166">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-166">The callback</span></span>
+            <span data-ttu-id="d97bb-172">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-172">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -525,14 +515,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="08d0b-167">更新現有的大型使用者群組的顯示名稱] 和 [userData。</span><span class="sxs-lookup"><span data-stu-id="08d0b-167">Update an existing large person group''s display name and userData.</span></span> <span data-ttu-id="08d0b-168">將不會更新未出現在要求主體的屬性。</span><span class="sxs-lookup"><span data-stu-id="08d0b-168">The properties which does not appear in request body will not be updated.</span></span>'
+    summary: '<span data-ttu-id="d97bb-173">更新現有的大型使用者群組的顯示名稱] 和 [userData。</span><span class="sxs-lookup"><span data-stu-id="d97bb-173">Update an existing large person group''s display name and userData.</span></span> <span data-ttu-id="d97bb-174">將不會更新未出現在要求主體的屬性。</span><span class="sxs-lookup"><span data-stu-id="d97bb-174">The properties which does not appear in request body will not be updated.</span></span>'
     syntax:
       content: 'function update(largePersonGroupId: string, options?: Models.LargePersonGroupUpdateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-169">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-169">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-175">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-175">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupUpdateOptionalParams
@@ -555,12 +545,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="08d0b-170">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="08d0b-170">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d97bb-176">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d97bb-176">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="08d0b-171">回呼</span><span class="sxs-lookup"><span data-stu-id="08d0b-171">The callback</span></span>
+            <span data-ttu-id="d97bb-177">回呼</span><span class="sxs-lookup"><span data-stu-id="d97bb-177">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>

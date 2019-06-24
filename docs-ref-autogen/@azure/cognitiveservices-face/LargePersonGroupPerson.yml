@@ -38,7 +38,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="e9f7c-101">此類別代表 LargePersonGroupPerson。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-101">Class representing a LargePersonGroupPerson.</span></span>
+    summary: <span data-ttu-id="f3a83-101">此類別代表 LargePersonGroupPerson。</span><span class="sxs-lookup"><span data-stu-id="f3a83-101">Class representing a LargePersonGroupPerson.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupPerson.addFaceFromStream_2'
     name: 'addFaceFromStream(string, string, msRest.HttpRequestBody, LargePersonGroupPersonAddFaceFromStreamOptionalParams, ServiceCallback<PersistedFace>)'
@@ -53,24 +53,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-102">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-102">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-102">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-102">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-103">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-103">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-103">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-103">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="e9f7c-104">影像資料流。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-104">An image stream.</span></span>
+          description: <span data-ttu-id="f3a83-104">影像資料流。</span><span class="sxs-lookup"><span data-stu-id="f3a83-104">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams'
-          description: <span data-ttu-id="e9f7c-105">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-105">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-105">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-105">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="e9f7c-106">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-106">The callback</span></span>
+            <span data-ttu-id="f3a83-106">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-106">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromStreamResponse>
@@ -81,22 +81,37 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="e9f7c-107">加入人員，以識別具代表性的臉部。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-107">Add a representative face to a person for identification.</span></span> <span data-ttu-id="e9f7c-108">輸入所面臨的被指定為 targetFace 矩形的映像。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-108">The input face is specified as an image with a targetFace rectangle.</span></span>
+    summary: |-
+      <span data-ttu-id="f3a83-107">加入個人的臉部到臉部辨識或驗證的大型的人員群組。</span><span class="sxs-lookup"><span data-stu-id="f3a83-107">Add a face to a person into a large person group for face identification or verification.</span></span> <span data-ttu-id="f3a83-108">若要處理映像包含多個臉部，可以指定輸入的臉部為 targetFace 矩形的映像。</span><span class="sxs-lookup"><span data-stu-id="f3a83-108">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="f3a83-109">它會傳回代表已新增的臉部 persistedFaceId。</span><span class="sxs-lookup"><span data-stu-id="f3a83-109">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="f3a83-110">會不儲存任何映像。</span><span class="sxs-lookup"><span data-stu-id="f3a83-110">No image will be stored.</span></span> <span data-ttu-id="f3a83-111">只擷取的臉部功能將會儲存在之前的伺服器上[LargePersonGroup PersonFace-刪除](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3)， [LargePersonGroup 人員-刪除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)或[LargePersonGroup-Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)呼叫。</span><span class="sxs-lookup"><span data-stu-id="f3a83-111">Only the extracted face feature will be stored on server until [LargePersonGroup PersonFace - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>
+      <br /> <span data-ttu-id="f3a83-112">請注意 persistedFaceId 是不同於所產生的 faceId[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。</span><span class="sxs-lookup"><span data-stu-id="f3a83-112">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="f3a83-113">較高的臉部影像品質表示辨識較佳的精確度。</span><span class="sxs-lookup"><span data-stu-id="f3a83-113">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id="f3a83-114">請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。</span><span class="sxs-lookup"><span data-stu-id="f3a83-114">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="f3a83-115">每個人員的項目可以保存多達 248 臉部。</span><span class="sxs-lookup"><span data-stu-id="f3a83-115">Each person entry can hold up to 248 faces.</span></span>
+      * <span data-ttu-id="f3a83-116">JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。</span><span class="sxs-lookup"><span data-stu-id="f3a83-116">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="f3a83-117">允許的影像檔案大小是 1KB 從 6 MB。</span><span class="sxs-lookup"><span data-stu-id="f3a83-117">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="f3a83-118">「 targetFace"矩形應該包含一個面。</span><span class="sxs-lookup"><span data-stu-id="f3a83-118">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="f3a83-119">零個或多個臉部將會被視為錯誤。</span><span class="sxs-lookup"><span data-stu-id="f3a83-119">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="f3a83-120">如果提供的 「 targetFace"矩形不會傳回從[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，偵測並已成功新增表面不保證。</span><span class="sxs-lookup"><span data-stu-id="f3a83-120">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="f3a83-121">可偵測的臉部大小 (36 36 4096 x 4096 個像素 x)，從大型的頭部姿勢，或大型 occlusions 會導致失敗。</span><span class="sxs-lookup"><span data-stu-id="f3a83-121">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="f3a83-122">新增/刪除從同一個人的臉部循序處理。</span><span class="sxs-lookup"><span data-stu-id="f3a83-122">Adding/deleting faces to/from a same person will be processed sequentially.</span></span> <span data-ttu-id="f3a83-123">新增/刪除的臉部，從不同的人員會以平行方式處理。</span><span class="sxs-lookup"><span data-stu-id="f3a83-123">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
+      * <span data-ttu-id="f3a83-124">最小可偵測的臉部大小為 36 x 36 像素，不能大於 1920 x 1080 像素映像中。</span><span class="sxs-lookup"><span data-stu-id="f3a83-124">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="f3a83-125">維度高於 1920 x 1080 像素的影像必須按比例較大的最小的臉部大小。</span><span class="sxs-lookup"><span data-stu-id="f3a83-125">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="f3a83-126">您可以提供不同的 'detectionModel' 值。</span><span class="sxs-lookup"><span data-stu-id="f3a83-126">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="f3a83-127">若要使用，並比較不同的偵測模型，請參閱[如何指定偵測模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="f3a83-127">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="f3a83-128">模型</span><span class="sxs-lookup"><span data-stu-id="f3a83-128">Model</span></span> | <span data-ttu-id="f3a83-129">建議使用-case(s)</span><span class="sxs-lookup"><span data-stu-id="f3a83-129">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="f3a83-130">' detection_01':</span><span class="sxs-lookup"><span data-stu-id="f3a83-130">'detection_01':</span></span> | <span data-ttu-id="f3a83-131">預設值偵測模型，針對 [LargePersonGroup 人-新增</span><span class="sxs-lookup"><span data-stu-id="f3a83-131">The default detection model for [LargePersonGroup Person - Add</span></span>
+      <span data-ttu-id="f3a83-132">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42).</span><span class="sxs-lookup"><span data-stu-id="f3a83-132">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42).</span></span> <span data-ttu-id="f3a83-133">建議的人臉正面偵測附近。</span><span class="sxs-lookup"><span data-stu-id="f3a83-133">Recommend for near frontal face detection.</span></span> <span data-ttu-id="f3a83-134">使用特別大型的角度 （頭部姿勢） 臉部、 occluded 臉部或錯誤的影像方向的情況下，可能無法偵測的臉部在此情況下。</span><span class="sxs-lookup"><span data-stu-id="f3a83-134">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="f3a83-135">| |'detection_02': |使用改善的精確度，特別是在小型、 部分和模糊的表面上可能會在 2019年中發行的偵測模型。</span><span class="sxs-lookup"><span data-stu-id="f3a83-135">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromStream(largePersonGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-109">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-109">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-136">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-136">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-110">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-110">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-137">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-137">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="e9f7c-111">影像資料流。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-111">An image stream.</span></span>
+          description: <span data-ttu-id="f3a83-138">影像資料流。</span><span class="sxs-lookup"><span data-stu-id="f3a83-138">An image stream.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams
@@ -119,20 +134,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-112">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-112">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-139">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-139">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-113">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-113">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-140">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-140">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="e9f7c-114">影像資料流。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-114">An image stream.</span></span>
+          description: <span data-ttu-id="f3a83-141">影像資料流。</span><span class="sxs-lookup"><span data-stu-id="f3a83-141">An image stream.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="e9f7c-115">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-115">The callback</span></span>
+            <span data-ttu-id="f3a83-142">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-142">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromStreamResponse>
@@ -150,24 +165,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-116">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-116">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-143">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-143">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-117">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-117">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-144">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-144">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="e9f7c-118">可公開觸達之影像的 URL</span><span class="sxs-lookup"><span data-stu-id="e9f7c-118">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="f3a83-145">可公開觸達之影像的 URL</span><span class="sxs-lookup"><span data-stu-id="f3a83-145">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromUrlOptionalParams'
-          description: <span data-ttu-id="e9f7c-119">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-119">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-146">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-146">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="e9f7c-120">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-120">The callback</span></span>
+            <span data-ttu-id="f3a83-147">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-147">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromUrlResponse>
@@ -178,22 +193,37 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="e9f7c-121">加入人員，以識別具代表性的臉部。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-121">Add a representative face to a person for identification.</span></span> <span data-ttu-id="e9f7c-122">輸入所面臨的被指定為 targetFace 矩形的映像。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-122">The input face is specified as an image with a targetFace rectangle.</span></span>
+    summary: |-
+      <span data-ttu-id="f3a83-148">加入個人的臉部到臉部辨識或驗證的大型的人員群組。</span><span class="sxs-lookup"><span data-stu-id="f3a83-148">Add a face to a person into a large person group for face identification or verification.</span></span> <span data-ttu-id="f3a83-149">若要處理映像包含多個臉部，可以指定輸入的臉部為 targetFace 矩形的映像。</span><span class="sxs-lookup"><span data-stu-id="f3a83-149">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="f3a83-150">它會傳回代表已新增的臉部 persistedFaceId。</span><span class="sxs-lookup"><span data-stu-id="f3a83-150">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="f3a83-151">會不儲存任何映像。</span><span class="sxs-lookup"><span data-stu-id="f3a83-151">No image will be stored.</span></span> <span data-ttu-id="f3a83-152">只擷取的臉部功能將會儲存在之前的伺服器上[LargePersonGroup PersonFace-刪除](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3)， [LargePersonGroup 人員-刪除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)或[LargePersonGroup-Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)呼叫。</span><span class="sxs-lookup"><span data-stu-id="f3a83-152">Only the extracted face feature will be stored on server until [LargePersonGroup PersonFace - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>
+      <br /> <span data-ttu-id="f3a83-153">請注意 persistedFaceId 是不同於所產生的 faceId[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。</span><span class="sxs-lookup"><span data-stu-id="f3a83-153">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="f3a83-154">較高的臉部影像品質表示辨識較佳的精確度。</span><span class="sxs-lookup"><span data-stu-id="f3a83-154">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id="f3a83-155">請考慮高品質的臉部： 正面、 clear 和臉部大小為 200 x 200 像素為單位 （100 像素之間眼睛） 或越大。</span><span class="sxs-lookup"><span data-stu-id="f3a83-155">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="f3a83-156">每個人員的項目可以保存多達 248 臉部。</span><span class="sxs-lookup"><span data-stu-id="f3a83-156">Each person entry can hold up to 248 faces.</span></span>
+      * <span data-ttu-id="f3a83-157">JPEG、 PNG、 GIF （第一個框架） 和 BMP 格式支援。</span><span class="sxs-lookup"><span data-stu-id="f3a83-157">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="f3a83-158">允許的影像檔案大小是 1KB 從 6 MB。</span><span class="sxs-lookup"><span data-stu-id="f3a83-158">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="f3a83-159">「 targetFace"矩形應該包含一個面。</span><span class="sxs-lookup"><span data-stu-id="f3a83-159">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="f3a83-160">零個或多個臉部將會被視為錯誤。</span><span class="sxs-lookup"><span data-stu-id="f3a83-160">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="f3a83-161">如果提供的 「 targetFace"矩形不會傳回從[面臨-偵測](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，偵測並已成功新增表面不保證。</span><span class="sxs-lookup"><span data-stu-id="f3a83-161">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="f3a83-162">可偵測的臉部大小 (36 36 4096 x 4096 個像素 x)，從大型的頭部姿勢，或大型 occlusions 會導致失敗。</span><span class="sxs-lookup"><span data-stu-id="f3a83-162">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="f3a83-163">新增/刪除從同一個人的臉部循序處理。</span><span class="sxs-lookup"><span data-stu-id="f3a83-163">Adding/deleting faces to/from a same person will be processed sequentially.</span></span> <span data-ttu-id="f3a83-164">新增/刪除的臉部，從不同的人員會以平行方式處理。</span><span class="sxs-lookup"><span data-stu-id="f3a83-164">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
+      * <span data-ttu-id="f3a83-165">最小可偵測的臉部大小為 36 x 36 像素，不能大於 1920 x 1080 像素映像中。</span><span class="sxs-lookup"><span data-stu-id="f3a83-165">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="f3a83-166">維度高於 1920 x 1080 像素的影像必須按比例較大的最小的臉部大小。</span><span class="sxs-lookup"><span data-stu-id="f3a83-166">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="f3a83-167">您可以提供不同的 'detectionModel' 值。</span><span class="sxs-lookup"><span data-stu-id="f3a83-167">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="f3a83-168">若要使用，並比較不同的偵測模型，請參閱[如何指定偵測模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="f3a83-168">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="f3a83-169">模型</span><span class="sxs-lookup"><span data-stu-id="f3a83-169">Model</span></span> | <span data-ttu-id="f3a83-170">建議使用-case(s)</span><span class="sxs-lookup"><span data-stu-id="f3a83-170">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="f3a83-171">' detection_01':</span><span class="sxs-lookup"><span data-stu-id="f3a83-171">'detection_01':</span></span> | <span data-ttu-id="f3a83-172">預設值偵測模型，針對 [LargePersonGroup 人-新增</span><span class="sxs-lookup"><span data-stu-id="f3a83-172">The default detection model for [LargePersonGroup Person - Add</span></span>
+      <span data-ttu-id="f3a83-173">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42).</span><span class="sxs-lookup"><span data-stu-id="f3a83-173">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42).</span></span> <span data-ttu-id="f3a83-174">建議的人臉正面偵測附近。</span><span class="sxs-lookup"><span data-stu-id="f3a83-174">Recommend for near frontal face detection.</span></span> <span data-ttu-id="f3a83-175">使用特別大型的角度 （頭部姿勢） 臉部、 occluded 臉部或錯誤的影像方向的情況下，可能無法偵測的臉部在此情況下。</span><span class="sxs-lookup"><span data-stu-id="f3a83-175">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="f3a83-176">| |'detection_02': |使用改善的精確度，特別是在小型、 部分和模糊的表面上可能會在 2019年中發行的偵測模型。</span><span class="sxs-lookup"><span data-stu-id="f3a83-176">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromUrl(largePersonGroupId: string, personId: string, url: string, options?: Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-123">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-123">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-177">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-177">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-124">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-124">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-178">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-178">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="e9f7c-125">可公開觸達之影像的 URL</span><span class="sxs-lookup"><span data-stu-id="e9f7c-125">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="f3a83-179">可公開觸達之影像的 URL</span><span class="sxs-lookup"><span data-stu-id="f3a83-179">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams
@@ -216,20 +246,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-126">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-126">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-180">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-180">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-127">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-127">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-181">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-181">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="e9f7c-128">可公開觸達之影像的 URL</span><span class="sxs-lookup"><span data-stu-id="e9f7c-128">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="f3a83-182">可公開觸達之影像的 URL</span><span class="sxs-lookup"><span data-stu-id="f3a83-182">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="e9f7c-129">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-129">The callback</span></span>
+            <span data-ttu-id="f3a83-183">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-183">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromUrlResponse>
@@ -247,16 +277,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-130">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-130">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-184">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-184">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonCreateOptionalParams'
-          description: <span data-ttu-id="e9f7c-131">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-131">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-185">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-185">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="e9f7c-132">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-132">The callback</span></span>
+            <span data-ttu-id="f3a83-186">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-186">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonCreateResponse>
@@ -267,14 +297,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="e9f7c-133">在指定的大型人员组中创建新用户。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-133">Create a new person in a specified large person group.</span></span>
+    summary: <span data-ttu-id="f3a83-187">在指定的大型人员组中创建新用户。</span><span class="sxs-lookup"><span data-stu-id="f3a83-187">Create a new person in a specified large person group.</span></span>
     syntax:
       content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupPersonCreateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-134">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-134">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-188">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-188">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonCreateOptionalParams
@@ -297,12 +327,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-135">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-135">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-189">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-189">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="e9f7c-136">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-136">The callback</span></span>
+            <span data-ttu-id="f3a83-190">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-190">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonCreateResponse>
@@ -313,22 +343,25 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="e9f7c-137">刪除個人的臉部。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-137">Delete a face from a person.</span></span> <span data-ttu-id="e9f7c-138">也會刪除相對所面臨的持續性功能。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-138">Relative feature for the persisted face will also be deleted.</span></span>
+    summary: |-
+      <span data-ttu-id="f3a83-191">指定的 largePersonGroupId、 personId 和 persistedFaceId 從人員在大型的人員群組中刪除臉部。</span><span class="sxs-lookup"><span data-stu-id="f3a83-191">Delete a face from a person in a large person group by specified largePersonGroupId, personId and persistedFaceId.</span></span>
+      <br /> <span data-ttu-id="f3a83-192">新增/刪除從同一個人的臉部循序處理。</span><span class="sxs-lookup"><span data-stu-id="f3a83-192">Adding/deleting faces to/from a same person will be processed sequentially.</span></span>
+      <span data-ttu-id="f3a83-193">新增/刪除的臉部，從不同的人員會以平行方式處理。</span><span class="sxs-lookup"><span data-stu-id="f3a83-193">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
     syntax:
       content: 'function deleteFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-139">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-139">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-194">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-194">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-140">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-140">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-195">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-195">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-141">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-141">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-196">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-196">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -351,24 +384,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-142">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-142">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-197">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-197">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-143">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-143">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-198">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-198">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-144">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-144">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-199">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-199">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="e9f7c-145">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-145">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-200">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-200">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="e9f7c-146">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-146">The callback</span></span>
+            <span data-ttu-id="f3a83-201">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-201">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -386,20 +419,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-147">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-147">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-202">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-202">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-148">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-148">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-203">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-203">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-149">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-149">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-204">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-204">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="e9f7c-150">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-150">The callback</span></span>
+            <span data-ttu-id="f3a83-205">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-205">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -410,18 +443,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="e9f7c-151">从大型人员组中删除现有人员。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-151">Delete an existing person from a large person group.</span></span> <span data-ttu-id="e9f7c-152">所有儲存個人資料和人員項目中的臉部功能將會被刪除。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-152">All stored person data, and face features in the person entry will be deleted.</span></span>'
+    summary: '<span data-ttu-id="f3a83-206">从大型人员组中删除现有人员。</span><span class="sxs-lookup"><span data-stu-id="f3a83-206">Delete an existing person from a large person group.</span></span> <span data-ttu-id="f3a83-207">PersistedFaceId、 保留使用者資料，個人項目中的人員名稱和臉部功能將會刪除所有。</span><span class="sxs-lookup"><span data-stu-id="f3a83-207">The persistedFaceId, userData, person name and face feature in the person entry will all be deleted.</span></span>'
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-153">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-153">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-208">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-208">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-154">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-154">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-209">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-209">Id referencing a particular person.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -444,20 +477,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-155">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-155">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-210">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-210">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-156">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-156">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-211">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-211">Id referencing a particular person.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="e9f7c-157">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-157">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-212">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-212">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="e9f7c-158">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-158">The callback</span></span>
+            <span data-ttu-id="f3a83-213">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-213">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -475,16 +508,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-159">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-159">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-214">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-214">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-160">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-160">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-215">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-215">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="e9f7c-161">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-161">The callback</span></span>
+            <span data-ttu-id="f3a83-216">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-216">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -495,18 +528,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="e9f7c-162">擷取人員的資訊，包括已註冊存留的臉部數目、 名稱和保留使用者資料。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-162">Retrieve a person''s information, including registered persisted faces, name and userData.</span></span>'
+    summary: '<span data-ttu-id="f3a83-217">擷取連絡人的名稱和保留使用者資料，以及保存的 faceIds 代表已註冊的人臉功能。</span><span class="sxs-lookup"><span data-stu-id="f3a83-217">Retrieve a person''s name and userData, and the persisted faceIds representing the registered person face feature.</span></span>'
     syntax:
       content: 'function get(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-163">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-163">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-218">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-218">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-164">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-164">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-219">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-219">Id referencing a particular person.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -529,20 +562,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-165">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-165">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-220">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-220">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-166">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-166">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-221">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-221">Id referencing a particular person.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="e9f7c-167">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-167">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-222">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-222">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="e9f7c-168">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-168">The callback</span></span>
+            <span data-ttu-id="f3a83-223">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-223">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetResponse>
@@ -560,16 +593,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-169">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-169">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-224">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-224">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-170">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-170">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-225">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-225">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="e9f7c-171">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-171">The callback</span></span>
+            <span data-ttu-id="f3a83-226">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-226">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetResponse>
@@ -580,22 +613,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="e9f7c-172">擷取保存的臉部 （persistedFaceId personId，其屬於 largePersonGroupId 所指定） 的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-172">Retrieve information about a persisted face (specified by persistedFaceId, personId and its belonging largePersonGroupId).</span></span>'
+    summary: '<span data-ttu-id="f3a83-227">擷取保存的臉部 （persistedFaceId personId，其屬於 largePersonGroupId 所指定） 的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="f3a83-227">Retrieve information about a persisted face (specified by persistedFaceId, personId and its belonging largePersonGroupId).</span></span>'
     syntax:
       content: 'function getFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-173">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-173">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-228">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-228">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-174">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-174">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-229">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-229">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-175">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-175">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-230">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-230">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -618,24 +651,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-176">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-176">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-231">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-231">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-177">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-177">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-232">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-232">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-178">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-178">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-233">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-233">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="e9f7c-179">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-179">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-234">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="e9f7c-180">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-180">The callback</span></span>
+            <span data-ttu-id="f3a83-235">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-235">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetFaceResponse>
@@ -653,20 +686,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-181">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-181">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-236">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-236">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-182">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-182">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-237">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-237">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-183">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-183">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-238">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-238">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="e9f7c-184">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-184">The callback</span></span>
+            <span data-ttu-id="f3a83-239">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-239">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetFaceResponse>
@@ -677,7 +710,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="e9f7c-185">建立 LargePersonGroupPerson。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-185">Create a LargePersonGroupPerson.</span></span>
+    summary: <span data-ttu-id="f3a83-240">建立 LargePersonGroupPerson。</span><span class="sxs-lookup"><span data-stu-id="f3a83-240">Create a LargePersonGroupPerson.</span></span>
     syntax:
       content: 'new LargePersonGroupPerson(client: FaceClientContext)'
       parameters:
@@ -685,7 +718,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="e9f7c-186">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-186">Reference to the service client.</span></span>
+            <span data-ttu-id="f3a83-241">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="f3a83-241">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupPerson.list_2'
     name: 'list(string, LargePersonGroupPersonListOptionalParams, ServiceCallback<Person[]>)'
@@ -700,16 +733,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-187">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-187">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-242">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-242">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonListOptionalParams'
-          description: <span data-ttu-id="e9f7c-188">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-188">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-243">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-243">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.Person[]>'
           description: |
-            <span data-ttu-id="e9f7c-189">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-189">The callback</span></span>
+            <span data-ttu-id="f3a83-244">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-244">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonListResponse>
@@ -720,14 +753,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="e9f7c-190">列出所有的人員在大型的人員群組中，和擷取個人資訊 （包括 personId、 名稱、 保留使用者資料和 persistedFaceIds 的已註冊的臉部的人員）。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-190">List all persons in a large person group, and retrieve person information (including personId, name, userData and persistedFaceIds of registered faces of the person).</span></span>'
+    summary: '<span data-ttu-id="f3a83-245">列出所有的人員在大型的人員群組中，和擷取個人資訊 （包括 personId、 名稱、 保留使用者資料和 persistedFaceIds 的已註冊的臉部的人員）。</span><span class="sxs-lookup"><span data-stu-id="f3a83-245">List all persons in a large person group, and retrieve person information (including personId, name, userData and persistedFaceIds of registered faces of the person).</span></span>'
     syntax:
       content: 'function list(largePersonGroupId: string, options?: Models.LargePersonGroupPersonListOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-191">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-191">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-246">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-246">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonListOptionalParams
@@ -750,12 +783,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-192">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-192">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-247">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-247">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.Person[]>'
           description: |
-            <span data-ttu-id="e9f7c-193">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-193">The callback</span></span>
+            <span data-ttu-id="f3a83-248">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-248">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonListResponse>
@@ -773,20 +806,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-194">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-194">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-249">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-249">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-195">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-195">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-250">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-250">Id referencing a particular person.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonUpdateOptionalParams'
-          description: <span data-ttu-id="e9f7c-196">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-196">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-251">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-251">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="e9f7c-197">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-197">The callback</span></span>
+            <span data-ttu-id="f3a83-252">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-252">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -797,18 +830,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="e9f7c-198">更新某个人员的姓名或 userData。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-198">Update name or userData of a person.</span></span>
+    summary: <span data-ttu-id="f3a83-253">更新某个人员的姓名或 userData。</span><span class="sxs-lookup"><span data-stu-id="f3a83-253">Update name or userData of a person.</span></span>
     syntax:
       content: 'function update(largePersonGroupId: string, personId: string, options?: Models.LargePersonGroupPersonUpdateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-199">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-199">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-254">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-254">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-200">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-200">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-255">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-255">Id referencing a particular person.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonUpdateOptionalParams
@@ -831,16 +864,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-201">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-201">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-256">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-256">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-202">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-202">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-257">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-257">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="e9f7c-203">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-203">The callback</span></span>
+            <span data-ttu-id="f3a83-258">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-258">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -858,24 +891,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-204">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-204">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-259">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-259">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-205">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-205">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-260">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-260">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-206">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-206">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-261">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-261">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonUpdateFaceOptionalParams'
-          description: <span data-ttu-id="e9f7c-207">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9f7c-207">The optional parameters</span></span>
+          description: <span data-ttu-id="f3a83-262">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="f3a83-262">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="e9f7c-208">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-208">The callback</span></span>
+            <span data-ttu-id="f3a83-263">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-263">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -886,22 +919,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="e9f7c-209">更新人員保存臉部的 userData 欄位。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-209">Update a person persisted face's userData field.</span></span>
+    summary: <span data-ttu-id="f3a83-264">更新人員保存臉部的 userData 欄位。</span><span class="sxs-lookup"><span data-stu-id="f3a83-264">Update a person persisted face's userData field.</span></span>
     syntax:
       content: 'function updateFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: Models.LargePersonGroupPersonUpdateFaceOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-210">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-210">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-265">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-265">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-211">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-211">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-266">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-266">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-212">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-212">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-267">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-267">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonUpdateFaceOptionalParams
@@ -924,20 +957,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-213">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-213">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="f3a83-268">參考特定的大型使用者群組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-268">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-214">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-214">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="f3a83-269">參考特定人員的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-269">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="e9f7c-215">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9f7c-215">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3a83-270">參考現有的臉部特定 persistedFaceId 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f3a83-270">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="e9f7c-216">回呼</span><span class="sxs-lookup"><span data-stu-id="e9f7c-216">The callback</span></span>
+            <span data-ttu-id="f3a83-271">回呼</span><span class="sxs-lookup"><span data-stu-id="f3a83-271">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>

@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolPatchParameter
+    name: PoolPatchParameter
+    fullName: PoolPatchParameter
+    children:
+      - azure-batch.PoolPatchParameter.applicationPackageReferences
+      - azure-batch.PoolPatchParameter.certificateReferences
+      - azure-batch.PoolPatchParameter.metadata
+      - azure-batch.PoolPatchParameter.startTask
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolPatchParameter.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e9759-101">套件參考的變更會影響所有的新節點加入集區，但不是會影響集區中已經有，直到重新啟動或重新安裝映像的計算節點。</span><span class="sxs-lookup"><span data-stu-id="e9759-101">Changes to Package references affect all new Nodes joining the Pool, but do not affect Compute Nodes that are already in the Pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="e9759-102">如果這個項目存在，它會取代任何現有的套件參考。</span><span class="sxs-lookup"><span data-stu-id="e9759-102">If this element is present, it replaces any existing Package references.</span></span> <span data-ttu-id="e9759-103">如果您指定空集合，則會移除所有的套件參考從集區。</span><span class="sxs-lookup"><span data-stu-id="e9759-103">If you specify an empty collection, then all Package references are removed from the Pool.</span></span> <span data-ttu-id="e9759-104">如果省略，則任何現有的封裝參考會保留不變。</span><span class="sxs-lookup"><span data-stu-id="e9759-104">If omitted, any existing Package references are left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolPatchParameter.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e9759-105">如果這個項目存在，它會取代設定集區上任何現有的憑證參考。</span><span class="sxs-lookup"><span data-stu-id="e9759-105">If this element is present, it replaces any existing Certificate references configured on the Pool.</span></span> <span data-ttu-id="e9759-106">如果省略，則參考會保留任何現有的憑證不變。</span><span class="sxs-lookup"><span data-stu-id="e9759-106">If omitted, any existing Certificate references are left unchanged.</span></span>
+      <span data-ttu-id="e9759-107">對於 Windows 節點，Batch 服務會安裝至指定的憑證存放區和位置的憑證。</span><span class="sxs-lookup"><span data-stu-id="e9759-107">For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location.</span></span> <span data-ttu-id="e9759-108">若為 Linux 計算節點，憑證會儲存在目錄內的工作目錄和 AZ_BATCH_CERTIFICATES_DIR 提供給此位置的查詢工作的環境變數的工作。</span><span class="sxs-lookup"><span data-stu-id="e9759-108">For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the Task to query for this location.</span></span> <span data-ttu-id="e9759-109">與 'remoteUser' 的可見性的憑證，建立 'certs' 目錄中使用者的主目錄 (例如，/home/ {使用者-名稱} / certs) 和憑證會放在該目錄。</span><span class="sxs-lookup"><span data-stu-id="e9759-109">For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and Certificates are placed in that directory.</span></span>
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolPatchParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e9759-110">如果這個項目存在，它會取代設定集區上任何現有中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e9759-110">If this element is present, it replaces any existing metadata configured on the Pool.</span></span> <span data-ttu-id="e9759-111">如果您指定空集合時，會移除任何中繼資料，從集區。</span><span class="sxs-lookup"><span data-stu-id="e9759-111">If you specify an empty collection, any metadata is removed from the Pool.</span></span> <span data-ttu-id="e9759-112">如果省略，任何現有的中繼資料會保持不變。</span><span class="sxs-lookup"><span data-stu-id="e9759-112">If omitted, any existing metadata is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.PoolPatchParameter.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e9759-113">如果這個項目存在，它會覆寫任何現有的啟動工作。</span><span class="sxs-lookup"><span data-stu-id="e9759-113">If this element is present, it overwrites any existing start Task.</span></span> <span data-ttu-id="e9759-114">如果省略，則任何現有的啟動工作會保留不變。</span><span class="sxs-lookup"><span data-stu-id="e9759-114">If omitted, any existing start Task is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask

@@ -7,10 +7,12 @@ items:
       - '@azure/event-hubs.ClientOptions.dataTransformer'
       - '@azure/event-hubs.ClientOptions.tokenProvider'
       - '@azure/event-hubs.ClientOptions.userAgent'
+      - '@azure/event-hubs.ClientOptions.webSocket'
+      - '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="cace1-101">描述可供建立事件中樞用戶端時的選項。</span><span class="sxs-lookup"><span data-stu-id="cace1-101">Describes the options that can be provided while creating the EventHub Client.</span></span>
+    summary: <span data-ttu-id="0d634-101">描述可供建立事件中樞用戶端時的選項。</span><span class="sxs-lookup"><span data-stu-id="0d634-101">Describes the options that can be provided while creating the EventHub Client.</span></span>
     extends:
       name: '@azure/event-hubs.ClientOptionsBase'
     package: '@azure/event-hubs'
@@ -21,7 +23,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cace1-102">{DataTransformer}[dataTransformer]將用來編碼和解碼已傳送和接收的訊息分別資料轉換程式。</span><span class="sxs-lookup"><span data-stu-id="cace1-102">{DataTransformer} [dataTransformer] The data transformer that will be used to encode and decode the sent and received messages respectively.</span></span> <span data-ttu-id="cace1-103">如果未提供，則我們將使用 DefaultDataTransformer。</span><span class="sxs-lookup"><span data-stu-id="cace1-103">If not provided then we will use the DefaultDataTransformer.</span></span> <span data-ttu-id="cace1-104">預設轉換程式應該處理大部分的情況。</span><span class="sxs-lookup"><span data-stu-id="cace1-104">The default transformer should handle majority of the cases.</span></span> <span data-ttu-id="cace1-105">此選項必須僅用於特殊情況。</span><span class="sxs-lookup"><span data-stu-id="cace1-105">This option needs to be used only for specialized scenarios.</span></span>'
+    summary: '<span data-ttu-id="0d634-102">{DataTransformer}[dataTransformer]將用來編碼和解碼已傳送和接收的訊息分別資料轉換程式。</span><span class="sxs-lookup"><span data-stu-id="0d634-102">{DataTransformer} [dataTransformer] The data transformer that will be used to encode and decode the sent and received messages respectively.</span></span> <span data-ttu-id="0d634-103">如果未提供，則我們將使用 DefaultDataTransformer。</span><span class="sxs-lookup"><span data-stu-id="0d634-103">If not provided then we will use the DefaultDataTransformer.</span></span> <span data-ttu-id="0d634-104">預設轉換程式應該處理大部分的情況。</span><span class="sxs-lookup"><span data-stu-id="0d634-104">The default transformer should handle majority of the cases.</span></span> <span data-ttu-id="0d634-105">此選項必須僅用於特殊情況。</span><span class="sxs-lookup"><span data-stu-id="0d634-105">This option needs to be used only for specialized scenarios.</span></span>'
     optional: true
     syntax:
       content: 'dataTransformer?: DataTransformer'
@@ -37,8 +39,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cace1-106">{TokenProvider}[tokenProvider]-提供此權杖進行驗證的權杖提供者。</span><span class="sxs-lookup"><span data-stu-id="cace1-106">{TokenProvider} [tokenProvider] - The token provider that provides the token for authentication.</span></span>
-      <span data-ttu-id="cace1-107">預設值：SasTokenProvider。</span><span class="sxs-lookup"><span data-stu-id="cace1-107">Default value: SasTokenProvider.</span></span>
+      <span data-ttu-id="0d634-106">{TokenProvider}[tokenProvider]-提供此權杖進行驗證的權杖提供者。</span><span class="sxs-lookup"><span data-stu-id="0d634-106">{TokenProvider} [tokenProvider] - The token provider that provides the token for authentication.</span></span>
+      <span data-ttu-id="0d634-107">預設值：SasTokenProvider。</span><span class="sxs-lookup"><span data-stu-id="0d634-107">Default value: SasTokenProvider.</span></span>
     optional: true
     syntax:
       content: 'tokenProvider?: TokenProvider'
@@ -53,13 +55,48 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cace1-108">{string}[userAgent]使用者代理程式需要附加至內建的使用者代理字串。</span><span class="sxs-lookup"><span data-stu-id="cace1-108">{string} [userAgent] The user agent that needs to be appended to the built in user agent string.</span></span>'
+    summary: '<span data-ttu-id="0d634-108">{string}[userAgent]使用者代理程式需要附加至內建的使用者代理字串。</span><span class="sxs-lookup"><span data-stu-id="0d634-108">{string} [userAgent] The user agent that needs to be appended to the built in user agent string.</span></span>'
     optional: true
     syntax:
-      content: 'userAgent?: string'
+      content: 'userAgent?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0d634-109">WebSocket 建構函式用來建立透過 WebSocket 的 AMQP 連線。</span><span class="sxs-lookup"><span data-stu-id="0d634-109">The WebSocket constructor used to create an AMQP connection over a WebSocket.</span></span>
+      <span data-ttu-id="0d634-110">這個選項應該提供以下案例</span><span class="sxs-lookup"><span data-stu-id="0d634-110">This option should be provided in the below scenarios</span></span>
+      - <span data-ttu-id="0d634-111">是事件中樞的 AMQP 連線所使用的 TCP 連接埠 5671 會封鎖您的環境。</span><span class="sxs-lookup"><span data-stu-id="0d634-111">The TCP port 5671 which is what is used by the AMQP connection to Event Hubs is blocked in your environment.</span></span>
+      - <span data-ttu-id="0d634-112">您的應用程式需要執行 proxy 伺服器後方</span><span class="sxs-lookup"><span data-stu-id="0d634-112">Your application needs to be run behind a proxy server</span></span>
+      - <span data-ttu-id="0d634-113">您的應用程式必須瀏覽器中執行，且您想要提供您自己選擇的 Websocket 實作，而不是內建的 WebSocket 瀏覽器中。</span><span class="sxs-lookup"><span data-stu-id="0d634-113">Your application needs to run in the browser and you want to provide your own choice of Websocket implementation instead of the built-in WebSocket in the browser.</span></span>
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d634-114">{webSocketConstructorOptions}-選項傳遞至 WebSocket 建構函式</span><span class="sxs-lookup"><span data-stu-id="0d634-114">{webSocketConstructorOptions} - Options to be passed to the WebSocket constructor</span></span>'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
     package: '@azure/event-hubs'
 references:
   - uid: '@azure/event-hubs.ClientOptionsBase'

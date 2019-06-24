@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - azure-batch.JobReleaseTask.commandLine
+      - azure-batch.JobReleaseTask.containerSettings
+      - azure-batch.JobReleaseTask.environmentSettings
+      - azure-batch.JobReleaseTask.id
+      - azure-batch.JobReleaseTask.maxWallClockTime
+      - azure-batch.JobReleaseTask.resourceFiles
+      - azure-batch.JobReleaseTask.retentionTime
+      - azure-batch.JobReleaseTask.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="65d8d-101">因為下列其中一項作業結束時，就會執行作業釋放工作：在使用者呼叫終止作業 API 或刪除作業 API 時作業仍在作用中、 達到工作的最大的牆上的時鐘時間條件約束時，作業就仍然有效，或作業的作業管理員工作完成，且作業已終止時工作管理er 完成。</span><span class="sxs-lookup"><span data-stu-id="65d8d-101">The Job Release Task runs when the Job ends, because of one of the following: The user calls the Terminate Job API, or the Delete Job API while the Job is still active, the Job's maximum wall clock time constraint is reached, and the Job is still active, or the Job's Job Manager Task completed, and the Job is configured to terminate when the Job Manager completes.</span></span>
+      <span data-ttu-id="65d8d-102">作業解除工作會在其中執行作業的工作和作業準備工作執行，並完成每一個節點上執行。</span><span class="sxs-lookup"><span data-stu-id="65d8d-102">The Job Release Task runs on each Node where Tasks of the Job have run and the Job Preparation Task ran and completed.</span></span> <span data-ttu-id="65d8d-103">如果您重新安裝映像節點後執行作業準備工作，和作業結束，不需任何進一步的工作，該節點上執行的作業 （並因此作業準備工作不會重新執行），則不會在該計算節點上執行作業解除工作。</span><span class="sxs-lookup"><span data-stu-id="65d8d-103">If you reimage a Node after it has run the Job Preparation Task, and the Job ends without any further Tasks of the Job running on that Node (and hence the Job Preparation Task does not re-run), then the Job Release Task does not run on that Compute Node.</span></span>
+      <span data-ttu-id="65d8d-104">如果節點重新開機作業解除工作仍在執行時，[計算] 節點啟動時，會再次執行作業解除工作。</span><span class="sxs-lookup"><span data-stu-id="65d8d-104">If a Node reboots while the Job Release Task is still running, the Job Release Task runs again when the Compute Node starts up.</span></span> <span data-ttu-id="65d8d-105">作業不會標示為完成，直到完成所有作業解除工作。</span><span class="sxs-lookup"><span data-stu-id="65d8d-105">The Job is not marked as complete until all Job Release Tasks have completed.</span></span> <span data-ttu-id="65d8d-106">在背景執行作業解除工作。</span><span class="sxs-lookup"><span data-stu-id="65d8d-106">The Job Release Task runs in the background.</span></span> <span data-ttu-id="65d8d-107">它不會佔用排程的位置;也就是說，它不會計入集區上指定的 maxTasksPerNode 限制。</span><span class="sxs-lookup"><span data-stu-id="65d8d-107">It does not occupy a scheduling slot; that is, it does not count towards the maxTasksPerNode limit specified on the Pool.</span></span>
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="65d8d-108">命令列不會在殼層中執行，因此無法利用 shell 功能，例如環境變數擴充。</span><span class="sxs-lookup"><span data-stu-id="65d8d-108">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="65d8d-109">如果您想要利用這類功能，您應該叫用命令列中的殼層並不會使用"cmd /c MyCommand"在 Windows 或 「 / bin/sh-c MyCommand 」 在 Linux 中。</span><span class="sxs-lookup"><span data-stu-id="65d8d-109">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="65d8d-110">如果命令列參考檔案路徑，它應該使用相對路徑 （相對於工作工作目錄），或使用批次提供的環境變數 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。</span><span class="sxs-lookup"><span data-stu-id="65d8d-110">If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="65d8d-111">時指定此參數，AZ_BATCH_NODE_ROOT_DIR （在節點上的 Azure Batch 根目錄） 下方的所有目錄以遞迴方式都對應至容器，所有的工作環境變數會都對應至容器，且工作命令列在容器中執行。</span><span class="sxs-lookup"><span data-stu-id="65d8d-111">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all Task environment variables are mapped into the container, and the Task command line is executed in the container.</span></span> <span data-ttu-id="65d8d-112">產生外 AZ_BATCH_NODE_ROOT_DIR 容器中的檔案可能不會反映到主機的磁碟，這表示批次檔的 Api 不能存取這些檔案。</span><span class="sxs-lookup"><span data-stu-id="65d8d-112">Files produced in the container outside of AZ_BATCH_NODE_ROOT_DIR might not be reflected to the host disk, meaning that Batch file APIs will not be able to access those files.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="65d8d-113">識別碼可包含英數字元，包括連字號及底線的任意組合，而且不能包含超過 64 個字元。</span><span class="sxs-lookup"><span data-stu-id="65d8d-113">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span> <span data-ttu-id="65d8d-114">如果您未指定此屬性，Batch 服務會指派預設值是 ''jobrelease''。</span><span class="sxs-lookup"><span data-stu-id="65d8d-114">If you do not specify this property, the Batch service assigns a default value of ''jobrelease''.</span></span> <span data-ttu-id="65d8d-115">在作業中的沒有其他工作可以有作業解除工作相同的識別碼。</span><span class="sxs-lookup"><span data-stu-id="65d8d-115">No other Task in the Job can have the same ID as the Job Release Task.</span></span> <span data-ttu-id="65d8d-116">如果您嘗試提交具有相同識別碼的工作，Batch 服務會拒絕要求，錯誤碼為 TaskIdSameAsJobReleaseTask;如果您直接呼叫 REST API，HTTP 狀態碼為 409 （衝突）。</span><span class="sxs-lookup"><span data-stu-id="65d8d-116">If you try to submit a Task with the same id, the Batch service rejects the request with error code TaskIdSameAsJobReleaseTask; if you are calling the REST API directly, the HTTP status code is 409 (Conflict).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="65d8d-117">這個項目底下所列的檔案位於工作的工作目錄。</span><span class="sxs-lookup"><span data-stu-id="65d8d-117">Files listed under this element are located in the Task's working directory.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="65d8d-118">預設值為 7 天、 工作目錄也就是會保留 7 天，除非移除計算節點，或刪除作業。</span><span class="sxs-lookup"><span data-stu-id="65d8d-118">The default is 7 days, i.e. the Task directory will be retained for 7 days unless the Compute Node is removed or the Job is deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="65d8d-119">如果省略，則工作可唯一的非系統管理使用者身分執行工作。</span><span class="sxs-lookup"><span data-stu-id="65d8d-119">If omitted, the Task runs as a non-administrative user unique to the Task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

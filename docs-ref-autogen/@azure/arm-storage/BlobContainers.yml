@@ -32,9 +32,12 @@ items:
       - '@azure/arm-storage.BlobContainers.lease_2'
       - '@azure/arm-storage.BlobContainers.lease'
       - '@azure/arm-storage.BlobContainers.lease_1'
-      - '@azure/arm-storage.BlobContainers.list'
       - '@azure/arm-storage.BlobContainers.list_2'
+      - '@azure/arm-storage.BlobContainers.list'
       - '@azure/arm-storage.BlobContainers.list_1'
+      - '@azure/arm-storage.BlobContainers.listNext'
+      - '@azure/arm-storage.BlobContainers.listNext_2'
+      - '@azure/arm-storage.BlobContainers.listNext_1'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_2'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_1'
@@ -47,7 +50,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="13bd9-101">此類別代表 BlobContainers。</span><span class="sxs-lookup"><span data-stu-id="13bd9-101">Class representing a BlobContainers.</span></span>
+    summary: <span data-ttu-id="0b1de-101">此類別代表 BlobContainers。</span><span class="sxs-lookup"><span data-stu-id="0b1de-101">Class representing a BlobContainers.</span></span>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.constructor'
     name: BlobContainers(StorageManagementClientContext)
@@ -55,7 +58,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-102">建立 BlobContainers。</span><span class="sxs-lookup"><span data-stu-id="13bd9-102">Create a BlobContainers.</span></span>
+    summary: <span data-ttu-id="0b1de-102">建立 BlobContainers。</span><span class="sxs-lookup"><span data-stu-id="0b1de-102">Create a BlobContainers.</span></span>
     syntax:
       content: 'new BlobContainers(client: StorageManagementClientContext)'
       parameters:
@@ -63,7 +66,7 @@ items:
           type:
             - '@azure/arm-storage.StorageManagementClientContext'
           description: |
-            <span data-ttu-id="13bd9-103">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="13bd9-103">Reference to the service client.</span></span>
+            <span data-ttu-id="0b1de-103">服務用戶端的參考。</span><span class="sxs-lookup"><span data-stu-id="0b1de-103">Reference to the service client.</span></span>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.clearLegalHold'
     name: 'clearLegalHold(string, string, string, string[], msRest.RequestOptionsBase)'
@@ -71,26 +74,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-104">清除法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="13bd9-104">Clears legal hold tags.</span></span> <span data-ttu-id="13bd9-105">清除相同或不存在的標記會導致等冪作業。</span><span class="sxs-lookup"><span data-stu-id="13bd9-105">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="13bd9-106">ClearLegalHold 清除只在要求中指定標記。</span><span class="sxs-lookup"><span data-stu-id="13bd9-106">ClearLegalHold clears out only the specified tags in the request.</span></span>
+    summary: <span data-ttu-id="0b1de-104">清除法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="0b1de-104">Clears legal hold tags.</span></span> <span data-ttu-id="0b1de-105">清除相同或不存在的標記會導致等冪作業。</span><span class="sxs-lookup"><span data-stu-id="0b1de-105">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="0b1de-106">ClearLegalHold 清除只在要求中指定標記。</span><span class="sxs-lookup"><span data-stu-id="0b1de-106">ClearLegalHold clears out only the specified tags in the request.</span></span>
     syntax:
       content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-107">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-107">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-108">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-108">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-107">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-107">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-108">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-108">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-109">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-109">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-110">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-110">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-109">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-109">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-110">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-110">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-111">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-111">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-112">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-112">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-113">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-113">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-111">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-111">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-112">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-112">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-113">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-113">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="13bd9-114">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="13bd9-114">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="0b1de-114">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="0b1de-114">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -113,28 +116,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-115">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-115">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-116">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-116">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-115">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-115">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-116">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-116">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-117">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-117">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-118">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-118">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-117">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-117">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-118">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-118">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-119">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-119">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-120">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-120">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-121">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-121">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-119">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-119">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-120">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-120">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-121">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-121">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="13bd9-122">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="13bd9-122">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="0b1de-122">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="0b1de-122">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="13bd9-123">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-123">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-123">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-123">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LegalHold>
           description: |
-            <span data-ttu-id="13bd9-124">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-124">The callback</span></span>
+            <span data-ttu-id="0b1de-124">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-124">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersClearLegalHoldResponse>
@@ -152,24 +155,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-125">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-125">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-126">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-126">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-125">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-125">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-126">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-126">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-127">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-127">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-128">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-128">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-127">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-127">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-128">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-128">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-129">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-129">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-130">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-130">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-131">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-131">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-129">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-129">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-130">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-130">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-131">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-131">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="13bd9-132">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="13bd9-132">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="0b1de-132">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="0b1de-132">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LegalHold>
           description: |
-            <span data-ttu-id="13bd9-133">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-133">The callback</span></span>
+            <span data-ttu-id="0b1de-133">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-133">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersClearLegalHoldResponse>
@@ -187,24 +190,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-134">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-134">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-135">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-135">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-134">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-134">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-135">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-135">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-136">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-136">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-137">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-137">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-136">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-136">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-137">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-137">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-138">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-138">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-139">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-139">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-140">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-140">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-138">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-138">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-139">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-139">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-140">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-140">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersCreateOptionalParams'
-          description: <span data-ttu-id="13bd9-141">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-141">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-141">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-141">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="13bd9-142">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-142">The callback</span></span>
+            <span data-ttu-id="0b1de-142">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-142">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersCreateResponse>
@@ -215,22 +218,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-143">要求本文所述，請建立新的容器，指定帳戶下。</span><span class="sxs-lookup"><span data-stu-id="13bd9-143">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="13bd9-144">容器資源包含中繼資料和容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="13bd9-144">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="13bd9-145">它不包含容器的 blob 清單。</span><span class="sxs-lookup"><span data-stu-id="13bd9-145">It does not include a list of the blobs contained by the container.</span></span>
+    summary: <span data-ttu-id="0b1de-143">要求本文所述，請建立新的容器，指定帳戶下。</span><span class="sxs-lookup"><span data-stu-id="0b1de-143">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="0b1de-144">容器資源包含中繼資料和容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="0b1de-144">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="0b1de-145">它不包含容器的 blob 清單。</span><span class="sxs-lookup"><span data-stu-id="0b1de-145">It does not include a list of the blobs contained by the container.</span></span>
     syntax:
       content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersCreateOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-146">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-146">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-147">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-147">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-146">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-146">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-147">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-147">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-148">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-148">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-149">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-149">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-148">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-148">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-149">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-149">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-150">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-150">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-151">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-151">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-152">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-152">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-150">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-150">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-151">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-151">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-152">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-152">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - Models.BlobContainersCreateOptionalParams
@@ -253,20 +256,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-153">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-153">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-154">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-154">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-153">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-153">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-154">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-154">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-155">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-155">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-156">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-156">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-155">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-155">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-156">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-156">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-157">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-157">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-158">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-158">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-159">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-159">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-157">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-157">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-158">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-158">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-159">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-159">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="13bd9-160">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-160">The callback</span></span>
+            <span data-ttu-id="0b1de-160">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-160">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersCreateResponse>
@@ -284,28 +287,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-161">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-162">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-162">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-161">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-162">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-162">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-163">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-163">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-164">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-164">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-163">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-163">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-164">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-164">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-165">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-165">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-166">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-166">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-167">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-167">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-165">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-165">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-166">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-166">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-167">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-167">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="13bd9-168">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="13bd9-168">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="0b1de-168">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="0b1de-168">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams'
-          description: <span data-ttu-id="13bd9-169">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-169">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-169">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-169">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-170">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-170">The callback</span></span>
+            <span data-ttu-id="0b1de-170">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-170">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersCreateOrUpdateImmutabilityPolicyResponse>
@@ -316,26 +319,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-171">建立或更新的解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="13bd9-171">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="13bd9-172">如果指定，但不是需要這項作業，會接受 ETag 的 If-match。</span><span class="sxs-lookup"><span data-stu-id="13bd9-172">ETag in If-Match is honored if given but not required for this operation.</span></span>
+    summary: <span data-ttu-id="0b1de-171">建立或更新的解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="0b1de-171">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="0b1de-172">如果指定，但不是需要這項作業，會接受 ETag 的 If-match。</span><span class="sxs-lookup"><span data-stu-id="0b1de-172">ETag in If-Match is honored if given but not required for this operation.</span></span>
     syntax:
       content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Models.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-173">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-173">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-174">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-174">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-173">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-173">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-174">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-174">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-175">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-175">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-176">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-176">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-175">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-175">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-176">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-176">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-177">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-177">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-178">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-178">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-179">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-179">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-177">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-177">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-178">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-178">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-179">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-179">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="13bd9-180">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="13bd9-180">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="0b1de-180">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="0b1de-180">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: options
           type:
             - Models.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams
@@ -358,24 +361,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-181">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-181">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-182">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-182">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-181">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-181">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-182">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-182">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-183">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-183">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-184">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-184">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-183">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-183">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-184">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-184">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-185">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-185">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-186">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-186">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-187">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-187">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-185">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-185">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-186">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-186">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-187">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-187">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="13bd9-188">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="13bd9-188">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="0b1de-188">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="0b1de-188">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-189">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-189">The callback</span></span>
+            <span data-ttu-id="0b1de-189">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-189">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersCreateOrUpdateImmutabilityPolicyResponse>
@@ -387,27 +390,27 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="13bd9-190">中止解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="13bd9-190">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="13bd9-191">刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。</span><span class="sxs-lookup"><span data-stu-id="13bd9-191">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="13bd9-192">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="13bd9-192">ETag in If-Match is required for this operation.</span></span>
-      <span data-ttu-id="13bd9-193">刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。</span><span class="sxs-lookup"><span data-stu-id="13bd9-193">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>
+      <span data-ttu-id="0b1de-190">中止解除鎖定的不變性原則。</span><span class="sxs-lookup"><span data-stu-id="0b1de-190">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="0b1de-191">刪除回應有 immutabilityPeriodSinceCreationInDays 設為 0。</span><span class="sxs-lookup"><span data-stu-id="0b1de-191">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="0b1de-192">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="0b1de-192">ETag in If-Match is required for this operation.</span></span>
+      <span data-ttu-id="0b1de-193">刪除鎖定的不變性原則不允許，唯一方法是在刪除在容器內的所有 blob 之後刪除容器。</span><span class="sxs-lookup"><span data-stu-id="0b1de-193">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>
     syntax:
       content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-194">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-194">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-195">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-195">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-194">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-194">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-195">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-195">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-196">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-196">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-197">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-197">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-196">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-196">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-197">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-197">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-198">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-198">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-199">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-199">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-200">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-200">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-198">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-198">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-199">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-199">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-200">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-200">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-201">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-201">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-202">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-202">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-203">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-203">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-201">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-201">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-202">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-202">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-203">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-203">If omitted, this operation will always be applied.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -430,28 +433,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-204">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-204">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-205">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-205">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-204">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-204">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-205">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-205">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-206">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-206">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-207">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-207">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-206">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-206">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-207">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-207">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-208">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-208">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-209">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-209">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-210">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-210">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-208">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-208">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-209">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-209">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-210">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-210">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-211">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-211">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-212">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-212">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-213">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-213">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-211">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-211">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-212">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-212">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-213">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-213">If omitted, this operation will always be applied.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="13bd9-214">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-214">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-214">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-214">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-215">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-215">The callback</span></span>
+            <span data-ttu-id="0b1de-215">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-215">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersDeleteImmutabilityPolicyResponse>
@@ -469,24 +472,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-216">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-216">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-217">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-217">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-216">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-216">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-217">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-217">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-218">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-218">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-219">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-219">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-218">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-218">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-219">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-219">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-220">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-220">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-221">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-221">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-222">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-222">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-220">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-220">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-221">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-221">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-222">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-222">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-223">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-223">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-224">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-224">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-225">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-225">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-223">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-223">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-224">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-224">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-225">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-225">If omitted, this operation will always be applied.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-226">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-226">The callback</span></span>
+            <span data-ttu-id="0b1de-226">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-226">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersDeleteImmutabilityPolicyResponse>
@@ -497,22 +500,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-227">刪除指定的容器，其帳戶下。</span><span class="sxs-lookup"><span data-stu-id="13bd9-227">Deletes specified container under its account.</span></span>
+    summary: <span data-ttu-id="0b1de-227">刪除指定的容器，其帳戶下。</span><span class="sxs-lookup"><span data-stu-id="0b1de-227">Deletes specified container under its account.</span></span>
     syntax:
       content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-228">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-228">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-229">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-229">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-228">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-228">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-229">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-229">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-230">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-230">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-231">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-231">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-230">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-230">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-231">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-231">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-232">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-232">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-233">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-233">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-234">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-234">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-232">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-232">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-233">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-233">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-234">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-234">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -535,24 +538,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-235">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-235">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-236">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-236">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-235">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-235">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-236">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-236">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-237">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-237">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-238">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-238">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-237">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-237">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-238">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-238">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-239">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-239">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-240">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-240">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-241">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-241">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-239">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-239">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-240">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-240">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-241">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-241">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="13bd9-242">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-242">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-242">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-242">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="13bd9-243">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-243">The callback</span></span>
+            <span data-ttu-id="0b1de-243">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-243">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -570,20 +573,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-244">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-244">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-245">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-245">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-244">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-244">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-245">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-245">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-246">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-246">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-247">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-247">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-246">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-246">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-247">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-247">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-248">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-248">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-249">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-249">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-250">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-250">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-248">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-248">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-249">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-249">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-250">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-250">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="13bd9-251">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-251">The callback</span></span>
+            <span data-ttu-id="0b1de-251">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-251">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -594,30 +597,30 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-252">延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。</span><span class="sxs-lookup"><span data-stu-id="13bd9-252">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="13bd9-253">唯一允許的鎖定原則的動作將會此動作。</span><span class="sxs-lookup"><span data-stu-id="13bd9-253">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="13bd9-254">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="13bd9-254">ETag in If-Match is required for this operation.</span></span>
+    summary: <span data-ttu-id="0b1de-252">延伸鎖定 immutabilitypolicy 的上限的 immutabilityPeriodSinceCreationInDays。</span><span class="sxs-lookup"><span data-stu-id="0b1de-252">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="0b1de-253">唯一允許的鎖定原則的動作將會此動作。</span><span class="sxs-lookup"><span data-stu-id="0b1de-253">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="0b1de-254">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="0b1de-254">ETag in If-Match is required for this operation.</span></span>
     syntax:
       content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-255">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-255">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-256">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-256">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-255">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-255">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-256">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-256">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-257">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-257">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-258">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-258">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-257">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-257">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-258">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-258">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-259">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-259">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-260">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-260">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-261">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-261">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-259">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-259">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-260">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-260">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-261">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-261">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-262">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-262">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-263">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-263">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-264">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-264">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-262">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-262">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-263">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-263">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-264">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-264">If omitted, this operation will always be applied.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="13bd9-265">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="13bd9-265">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="0b1de-265">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="0b1de-265">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -640,32 +643,32 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-266">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-266">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-267">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-267">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-266">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-266">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-267">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-267">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-268">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-268">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-269">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-269">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-268">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-268">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-269">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-269">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-270">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-270">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-271">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-271">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-272">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-272">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-270">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-270">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-271">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-271">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-272">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-272">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-273">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-273">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-274">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-274">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-275">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-275">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-273">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-273">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-274">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-274">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-275">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-275">If omitted, this operation will always be applied.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="13bd9-276">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="13bd9-276">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="0b1de-276">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="0b1de-276">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="13bd9-277">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-277">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-277">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-277">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-278">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-278">The callback</span></span>
+            <span data-ttu-id="0b1de-278">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-278">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersExtendImmutabilityPolicyResponse>
@@ -683,28 +686,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-279">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-279">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-280">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-280">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-279">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-279">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-280">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-280">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-281">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-281">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-282">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-282">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-281">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-281">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-282">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-282">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-283">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-283">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-284">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-284">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-285">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-285">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-283">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-283">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-284">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-284">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-285">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-285">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-286">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-286">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-287">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-287">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-288">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-288">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-286">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-286">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-287">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-287">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-288">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-288">If omitted, this operation will always be applied.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="13bd9-289">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="13bd9-289">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="0b1de-289">不變性的期間之後建立原則之後，以天為單位的容器中的 blob。</span><span class="sxs-lookup"><span data-stu-id="0b1de-289">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-290">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-290">The callback</span></span>
+            <span data-ttu-id="0b1de-290">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-290">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersExtendImmutabilityPolicyResponse>
@@ -715,22 +718,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-291">取得指定容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="13bd9-291">Gets properties of a specified container.</span></span>
+    summary: <span data-ttu-id="0b1de-291">取得指定容器的屬性。</span><span class="sxs-lookup"><span data-stu-id="0b1de-291">Gets properties of a specified container.</span></span>
     syntax:
       content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-292">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-292">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-293">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-293">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-292">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-292">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-293">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-293">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-294">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-294">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-295">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-295">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-294">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-294">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-295">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-295">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-296">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-296">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-297">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-297">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-298">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-298">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-296">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-296">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-297">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-297">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-298">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-298">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -753,24 +756,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-299">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-299">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-300">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-300">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-299">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-299">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-300">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-300">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-301">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-301">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-302">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-302">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-301">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-301">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-302">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-302">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-303">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-303">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-304">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-304">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-305">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-305">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-303">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-303">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-304">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-304">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-305">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-305">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="13bd9-306">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-306">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-306">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-306">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="13bd9-307">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-307">The callback</span></span>
+            <span data-ttu-id="0b1de-307">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-307">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersGetResponse>
@@ -788,20 +791,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-308">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-308">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-309">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-309">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-308">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-308">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-309">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-309">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-310">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-310">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-311">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-311">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-310">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-310">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-311">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-311">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-312">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-312">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-313">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-313">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-314">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-314">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-312">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-312">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-313">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-313">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-314">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-314">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="13bd9-315">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-315">The callback</span></span>
+            <span data-ttu-id="0b1de-315">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-315">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersGetResponse>
@@ -819,24 +822,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-316">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-316">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-317">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-317">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-316">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-316">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-317">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-317">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-318">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-318">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-319">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-319">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-318">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-318">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-319">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-319">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-320">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-320">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-321">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-321">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-322">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-322">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-320">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-320">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-321">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-321">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-322">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-322">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersGetImmutabilityPolicyOptionalParams'
-          description: <span data-ttu-id="13bd9-323">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-323">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-323">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-323">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-324">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-324">The callback</span></span>
+            <span data-ttu-id="0b1de-324">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-324">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersGetImmutabilityPolicyResponse>
@@ -847,22 +850,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-325">取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。</span><span class="sxs-lookup"><span data-stu-id="13bd9-325">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>
+    summary: <span data-ttu-id="0b1de-325">取得現有的不變性原則，以及對應的 ETag 回應標頭和本文中。</span><span class="sxs-lookup"><span data-stu-id="0b1de-325">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>
     syntax:
       content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersGetImmutabilityPolicyOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-326">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-326">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-327">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-327">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-326">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-326">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-327">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-327">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-328">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-328">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-329">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-329">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-328">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-328">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-329">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-329">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-330">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-330">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-331">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-331">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-332">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-332">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-330">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-330">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-331">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-331">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-332">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-332">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - Models.BlobContainersGetImmutabilityPolicyOptionalParams
@@ -885,20 +888,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-333">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-333">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-334">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-334">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-333">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-333">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-334">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-334">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-335">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-335">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-336">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-336">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-335">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-335">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-336">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-336">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-337">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-337">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-338">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-338">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-339">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-339">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-337">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-337">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-338">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-338">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-339">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-339">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-340">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-340">The callback</span></span>
+            <span data-ttu-id="0b1de-340">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-340">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersGetImmutabilityPolicyResponse>
@@ -916,24 +919,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-341">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-341">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-342">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-342">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-341">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-341">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-342">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-342">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-343">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-343">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-344">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-344">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-343">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-343">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-344">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-344">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-345">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-345">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-346">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-346">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-347">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-347">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-345">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-345">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-346">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-346">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-347">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-347">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersLeaseOptionalParams'
-          description: <span data-ttu-id="13bd9-348">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-348">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-348">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-348">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LeaseContainerResponse>
           description: |
-            <span data-ttu-id="13bd9-349">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-349">The callback</span></span>
+            <span data-ttu-id="0b1de-349">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-349">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersLeaseResponse>
@@ -944,22 +947,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="13bd9-350">租用容器 」 作業會建立和管理的容器刪除作業的鎖定。</span><span class="sxs-lookup"><span data-stu-id="13bd9-350">The Lease Container operation establishes and manages a lock on a container for delete operations.</span></span> <span data-ttu-id="13bd9-351">鎖定持續時間的範圍是 15 到 60 秒，也可以設為無限。</span><span class="sxs-lookup"><span data-stu-id="13bd9-351">The lock duration can be 15 to 60 seconds, or can be infinite.</span></span>'
+    summary: '<span data-ttu-id="0b1de-350">租用容器 」 作業會建立和管理的容器刪除作業的鎖定。</span><span class="sxs-lookup"><span data-stu-id="0b1de-350">The Lease Container operation establishes and manages a lock on a container for delete operations.</span></span> <span data-ttu-id="0b1de-351">鎖定持續時間的範圍是 15 到 60 秒，也可以設為無限。</span><span class="sxs-lookup"><span data-stu-id="0b1de-351">The lock duration can be 15 to 60 seconds, or can be infinite.</span></span>'
     syntax:
       content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersLeaseOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-352">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-352">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-353">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-353">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-352">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-352">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-353">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-353">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-354">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-354">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-355">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-355">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-354">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-354">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-355">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-355">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-356">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-356">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-357">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-357">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-358">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-358">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-356">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-356">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-357">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-357">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-358">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-358">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - Models.BlobContainersLeaseOptionalParams
@@ -982,78 +985,78 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-359">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-359">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-360">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-360">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-359">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-359">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-360">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-360">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-361">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-361">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-362">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-362">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-361">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-361">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-362">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-362">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-363">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-363">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-364">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-364">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-365">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-365">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-363">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-363">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-364">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-364">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-365">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-365">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LeaseContainerResponse>
           description: |
-            <span data-ttu-id="13bd9-366">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-366">The callback</span></span>
+            <span data-ttu-id="0b1de-366">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-366">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersLeaseResponse>
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainers.list'
-    name: 'list(string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="13bd9-367">列出所有容器，並不支援的前置詞，例如資料平面。</span><span class="sxs-lookup"><span data-stu-id="13bd9-367">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="13bd9-368">也 SRP 今天不會傳回接續 token。</span><span class="sxs-lookup"><span data-stu-id="13bd9-368">Also SRP today does not return continuation token.</span></span>
-    syntax:
-      content: 'function list(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: <span data-ttu-id="13bd9-369">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-369">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-370">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-370">The name is case insensitive.</span></span>
-        - id: accountName
-          type:
-            - string
-          description: <span data-ttu-id="13bd9-371">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-371">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-372">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-372">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.BlobContainersListResponse>
-    package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.list_2'
-    name: 'list(string, string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    name: 'list(string, string, BlobContainersListOptionalParams, ServiceCallback<ListContainerItems>)'
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function list(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      content: 'function list(resourceGroupName: string, accountName: string, options: BlobContainersListOptionalParams, callback: ServiceCallback<ListContainerItems>)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-373">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-373">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-374">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-374">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-367">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-367">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-368">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-368">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-375">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-375">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-376">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-376">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-369">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-369">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-370">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-370">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: options
           type:
-            - RequestOptionsBase
-          description: <span data-ttu-id="13bd9-377">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-377">The optional parameters</span></span>
+            - '@azure/arm-storage.BlobContainersListOptionalParams'
+          description: <span data-ttu-id="0b1de-371">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-371">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ListContainerItems>
           description: |
-            <span data-ttu-id="13bd9-378">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-378">The callback</span></span>
+            <span data-ttu-id="0b1de-372">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-372">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.list'
+    name: 'list(string, string, Models.BlobContainersListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0b1de-373">列出所有容器，並不支援的前置詞，例如資料平面。</span><span class="sxs-lookup"><span data-stu-id="0b1de-373">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="0b1de-374">也 SRP 今天不會傳回接續 token。</span><span class="sxs-lookup"><span data-stu-id="0b1de-374">Also SRP today does not return continuation token.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options?: Models.BlobContainersListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0b1de-375">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-375">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-376">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-376">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="0b1de-377">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-377">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-378">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-378">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - Models.BlobContainersListOptionalParams
+          description: ''
+          optional: true
       return:
         type:
           - Promise<Models.BlobContainersListResponse>
@@ -1071,19 +1074,92 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-379">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-379">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-380">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-380">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-379">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-379">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-380">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-380">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-381">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-381">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-382">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-382">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-381">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-381">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-382">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-382">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ListContainerItems>
           description: |
-            <span data-ttu-id="13bd9-383">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-383">The callback</span></span>
+            <span data-ttu-id="0b1de-383">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-383">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0b1de-384">列出所有容器，並不支援的前置詞，例如資料平面。</span><span class="sxs-lookup"><span data-stu-id="0b1de-384">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="0b1de-385">也 SRP 今天不會傳回接續 token。</span><span class="sxs-lookup"><span data-stu-id="0b1de-385">Also SRP today does not return continuation token.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0b1de-386">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="0b1de-386">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0b1de-387">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="0b1de-387">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0b1de-388">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-388">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            <span data-ttu-id="0b1de-389">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-389">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext_1'
+    name: 'listNext(string, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0b1de-390">從清單作業前一次成功呼叫 NextLink。</span><span class="sxs-lookup"><span data-stu-id="0b1de-390">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            <span data-ttu-id="0b1de-391">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-391">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
     name: 'lockImmutabilityPolicy(string, string, string, string, msRest.RequestOptionsBase)'
@@ -1091,26 +1167,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-384">將不變性原則設定已鎖定狀態。</span><span class="sxs-lookup"><span data-stu-id="13bd9-384">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="13bd9-385">唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。</span><span class="sxs-lookup"><span data-stu-id="13bd9-385">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="13bd9-386">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="13bd9-386">ETag in If-Match is required for this operation.</span></span>
+    summary: <span data-ttu-id="0b1de-392">將不變性原則設定已鎖定狀態。</span><span class="sxs-lookup"><span data-stu-id="0b1de-392">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="0b1de-393">唯一允許的鎖定原則的動作是 ExtendImmutabilityPolicy 動作。</span><span class="sxs-lookup"><span data-stu-id="0b1de-393">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="0b1de-394">如果比對中的 ETag 是需要這項作業。</span><span class="sxs-lookup"><span data-stu-id="0b1de-394">ETag in If-Match is required for this operation.</span></span>
     syntax:
       content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-387">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-387">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-388">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-388">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-395">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-395">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-396">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-396">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-389">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-389">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-390">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-390">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-397">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-397">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-398">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-398">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-391">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-391">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-392">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-392">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-393">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-393">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-399">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-399">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-400">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-400">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-401">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-401">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-394">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-394">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-395">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-395">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-396">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-396">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-402">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-402">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-403">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-403">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-404">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-404">If omitted, this operation will always be applied.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1133,28 +1209,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-397">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-397">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-398">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-398">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-405">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-405">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-406">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-406">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-399">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-399">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-400">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-400">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-407">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-407">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-408">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-408">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-401">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-401">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-402">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-402">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-403">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-403">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-409">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-409">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-410">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-410">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-411">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-411">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-404">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-404">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-405">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-405">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-406">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-406">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-412">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-412">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-413">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-413">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-414">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-414">If omitted, this operation will always be applied.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="13bd9-407">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-407">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-415">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-415">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-408">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-408">The callback</span></span>
+            <span data-ttu-id="0b1de-416">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-416">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersLockImmutabilityPolicyResponse>
@@ -1172,24 +1248,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-409">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-409">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-410">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-410">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-417">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-417">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-418">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-418">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-411">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-411">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-412">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-412">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-419">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-419">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-420">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-420">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-413">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-413">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-414">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-414">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-415">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-415">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-421">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-421">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-422">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-422">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-423">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-423">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="13bd9-416">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="13bd9-416">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="13bd9-417">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="13bd9-417">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="13bd9-418">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="13bd9-418">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="0b1de-424">不是變性原則更新的實體狀態 (ETag) 版本。</span><span class="sxs-lookup"><span data-stu-id="0b1de-424">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="0b1de-425">值為"\*"可用來套用作業，只有當不變性原則已經存在。</span><span class="sxs-lookup"><span data-stu-id="0b1de-425">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="0b1de-426">如果省略，則這項作業會一律套用。</span><span class="sxs-lookup"><span data-stu-id="0b1de-426">If omitted, this operation will always be applied.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="13bd9-419">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-419">The callback</span></span>
+            <span data-ttu-id="0b1de-427">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-427">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersLockImmutabilityPolicyResponse>
@@ -1200,26 +1276,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-420">集的法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="13bd9-420">Sets legal hold tags.</span></span> <span data-ttu-id="13bd9-421">等冪作業中設定相同的標記結果。</span><span class="sxs-lookup"><span data-stu-id="13bd9-421">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="13bd9-422">SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。</span><span class="sxs-lookup"><span data-stu-id="13bd9-422">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+    summary: <span data-ttu-id="0b1de-428">集的法律保留標記。</span><span class="sxs-lookup"><span data-stu-id="0b1de-428">Sets legal hold tags.</span></span> <span data-ttu-id="0b1de-429">等冪作業中設定相同的標記結果。</span><span class="sxs-lookup"><span data-stu-id="0b1de-429">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="0b1de-430">SetLegalHold 遵循附加模式，並清除不出的要求中未指定的現有標籤。</span><span class="sxs-lookup"><span data-stu-id="0b1de-430">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
     syntax:
       content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-423">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-423">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-424">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-424">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-431">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-431">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-432">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-432">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-425">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-425">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-426">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-426">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-433">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-433">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-434">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-434">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-427">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-427">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-428">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-428">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-429">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-429">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-435">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-435">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-436">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-436">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-437">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-437">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="13bd9-430">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="13bd9-430">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="0b1de-438">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="0b1de-438">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1242,28 +1318,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-431">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-431">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-432">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-432">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-439">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-439">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-440">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-440">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-433">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-433">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-434">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-434">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-441">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-441">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-442">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-442">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-435">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-435">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-436">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-436">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-437">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-437">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-443">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-443">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-444">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-444">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-445">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-445">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="13bd9-438">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="13bd9-438">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="0b1de-446">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="0b1de-446">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="13bd9-439">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-439">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-447">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-447">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LegalHold>
           description: |
-            <span data-ttu-id="13bd9-440">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-440">The callback</span></span>
+            <span data-ttu-id="0b1de-448">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-448">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersSetLegalHoldResponse>
@@ -1281,24 +1357,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-441">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-441">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-442">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-442">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-449">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-449">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-450">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-450">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-443">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-443">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-444">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-444">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-451">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-451">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-452">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-452">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-445">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-445">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-446">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-446">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-447">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-447">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-453">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-453">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-454">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-454">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-455">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-455">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="13bd9-448">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="13bd9-448">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="0b1de-456">每個標記應該是 3 到 23 個英數字元，而且會正規化為較低的情況下，於 SRP。</span><span class="sxs-lookup"><span data-stu-id="0b1de-456">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LegalHold>
           description: |
-            <span data-ttu-id="13bd9-449">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-449">The callback</span></span>
+            <span data-ttu-id="0b1de-457">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-457">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersSetLegalHoldResponse>
@@ -1316,24 +1392,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-450">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-450">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-451">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-451">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-458">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-458">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-459">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-459">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-452">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-452">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-453">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-453">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-460">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-460">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-461">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-461">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-454">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-454">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-455">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-455">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-456">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-456">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-462">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-462">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-463">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-463">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-464">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-464">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersUpdateOptionalParams'
-          description: <span data-ttu-id="13bd9-457">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="13bd9-457">The optional parameters</span></span>
+          description: <span data-ttu-id="0b1de-465">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="0b1de-465">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="13bd9-458">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-458">The callback</span></span>
+            <span data-ttu-id="0b1de-466">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-466">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersUpdateResponse>
@@ -1344,22 +1420,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="13bd9-459">要求本文中所指定的更新容器屬性。</span><span class="sxs-lookup"><span data-stu-id="13bd9-459">Updates container properties as specified in request body.</span></span> <span data-ttu-id="13bd9-460">在要求中未提及的屬性將會維持不變。</span><span class="sxs-lookup"><span data-stu-id="13bd9-460">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="13bd9-461">如果指定的容器不存在，更新將會失敗。</span><span class="sxs-lookup"><span data-stu-id="13bd9-461">Update fails if the specified container doesn't already exist.</span></span>
+    summary: <span data-ttu-id="0b1de-467">要求本文中所指定的更新容器屬性。</span><span class="sxs-lookup"><span data-stu-id="0b1de-467">Updates container properties as specified in request body.</span></span> <span data-ttu-id="0b1de-468">在要求中未提及的屬性將會維持不變。</span><span class="sxs-lookup"><span data-stu-id="0b1de-468">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="0b1de-469">如果指定的容器不存在，更新將會失敗。</span><span class="sxs-lookup"><span data-stu-id="0b1de-469">Update fails if the specified container doesn't already exist.</span></span>
     syntax:
       content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersUpdateOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-462">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-462">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-463">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-463">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-470">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-470">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-471">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-471">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-464">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-464">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-465">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-465">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-472">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-472">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-473">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-473">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-466">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-466">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-467">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-467">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-468">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-468">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-474">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-474">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-475">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-475">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-476">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-476">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - Models.BlobContainersUpdateOptionalParams
@@ -1382,20 +1458,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="13bd9-469">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-469">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="13bd9-470">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="13bd9-470">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="0b1de-477">使用者的訂用帳戶內的資源群組名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-477">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="0b1de-478">名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="0b1de-478">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="13bd9-471">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-471">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="13bd9-472">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="13bd9-472">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="0b1de-479">指定的資源群組內的儲存體帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-479">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="0b1de-480">儲存體帳戶名稱必須介於 3 到 24 個字元的長度，而且只能使用數字和小寫字母。</span><span class="sxs-lookup"><span data-stu-id="0b1de-480">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="13bd9-473">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="13bd9-473">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="13bd9-474">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="13bd9-474">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="13bd9-475">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="13bd9-475">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="0b1de-481">指定的儲存體帳戶內的 blob 容器名稱。</span><span class="sxs-lookup"><span data-stu-id="0b1de-481">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="0b1de-482">Blob 容器名稱必須介於 3 到 63 個字元的長度，並使用數字、 小寫字母及破折號 （-） 只。</span><span class="sxs-lookup"><span data-stu-id="0b1de-482">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="0b1de-483">每個虛線 （-） 字元必須立即前面和後面接著字母或數字。</span><span class="sxs-lookup"><span data-stu-id="0b1de-483">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="13bd9-476">回呼</span><span class="sxs-lookup"><span data-stu-id="13bd9-476">The callback</span></span>
+            <span data-ttu-id="0b1de-484">回呼</span><span class="sxs-lookup"><span data-stu-id="0b1de-484">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersUpdateResponse>
@@ -1481,6 +1557,12 @@ references:
         uid: '@azure/arm-storage.ListContainerItems'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-storage.BlobContainersListOptionalParams'
+    name: BlobContainersListOptionalParams
+    spec.typeScript:
+      - name: BlobContainersListOptionalParams
+        fullName: BlobContainersListOptionalParams
+        uid: '@azure/arm-storage.BlobContainersListOptionalParams'
   - uid: '@azure/arm-storage.BlobContainersUpdateOptionalParams'
     name: BlobContainersUpdateOptionalParams
     spec.typeScript:

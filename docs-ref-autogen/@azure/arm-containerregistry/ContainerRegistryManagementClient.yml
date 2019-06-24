@@ -14,12 +14,14 @@ items:
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.replications'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.restoreLROPoller'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.runs'
+      - '@azure/arm-containerregistry.ContainerRegistryManagementClient.scopeMaps'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendLongRunningRequest'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendLRORequest'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendOperationRequest'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendRequest'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.subscriptionId'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.tasks'
+      - '@azure/arm-containerregistry.ContainerRegistryManagementClient.tokens'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.webhooks'
     langs:
       - typeScript
@@ -48,14 +50,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="370b1-101">（長時間執行作業） LRO 初始要求傳送，會提供方法來輪詢 LRO 及檢查是否已完成 LRO HttpLongRunningOperationResponse。</span><span class="sxs-lookup"><span data-stu-id="370b1-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="1ac5a-101">（長時間執行作業） LRO 初始要求傳送，會提供方法來輪詢 LRO 及檢查是否已完成 LRO HttpLongRunningOperationResponse。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="370b1-102">要求物件</span><span class="sxs-lookup"><span data-stu-id="370b1-102">The request object</span></span>
+          description: <span data-ttu-id="1ac5a-102">要求物件</span><span class="sxs-lookup"><span data-stu-id="1ac5a-102">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -71,18 +73,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="370b1-103">初始化 ContainerRegistryManagementClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="370b1-103">Initializes a new instance of the ContainerRegistryManagementClient class.</span></span>
+    summary: <span data-ttu-id="1ac5a-103">初始化 ContainerRegistryManagementClient 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-103">Initializes a new instance of the ContainerRegistryManagementClient class.</span></span>
     syntax:
       content: 'new ContainerRegistryManagementClient(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.ContainerRegistryManagementClientOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: <span data-ttu-id="370b1-104">用戶端連線至 Azure 所需的認證。</span><span class="sxs-lookup"><span data-stu-id="370b1-104">Credentials needed for the client to connect to Azure.</span></span>
+          description: <span data-ttu-id="1ac5a-104">用戶端連線至 Azure 所需的認證。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-104">Credentials needed for the client to connect to Azure.</span></span>
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="370b1-105">Microsoft Azure 訂用帳戶識別碼。</span><span class="sxs-lookup"><span data-stu-id="370b1-105">The Microsoft Azure subscription ID.</span></span>
+          description: <span data-ttu-id="1ac5a-105">Microsoft Azure 訂用帳戶識別碼。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-105">The Microsoft Azure subscription ID.</span></span>
         - id: options
           type:
             - Models.ContainerRegistryManagementClientOptions
@@ -110,7 +112,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="370b1-106">重試逾時秒數長時間執行作業。</span><span class="sxs-lookup"><span data-stu-id="370b1-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="370b1-107">預設值為 30。</span><span class="sxs-lookup"><span data-stu-id="370b1-107">Default value is 30.</span></span>
+    summary: <span data-ttu-id="1ac5a-106">重試逾時秒數長時間執行作業。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="1ac5a-107">預設值為 30。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-107">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -166,7 +168,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="370b1-108">從提供的 LROPollState 還原 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="370b1-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="370b1-109">這個方法可用來重新建立在不同的處理序或機器 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="370b1-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="1ac5a-108">從提供的 LROPollState 還原 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="1ac5a-109">這個方法可用來重新建立在不同的處理序或機器 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -192,20 +194,34 @@ items:
         type:
           - '@azure/arm-containerregistry.Runs'
     package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClient.scopeMaps'
+    name: scopeMaps
+    fullName: scopeMaps
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'scopeMaps: ScopeMaps'
+      return:
+        type:
+          - '@azure/arm-containerregistry.ScopeMaps'
+    package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendLongRunningRequest'
     name: 'sendLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="370b1-110">提供一個機制來提出要求，會輪詢，並提供最終的結果。</span><span class="sxs-lookup"><span data-stu-id="370b1-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    summary: <span data-ttu-id="1ac5a-110">提供一個機制來提出要求，會輪詢，並提供最終的結果。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="370b1-111">要求物件</span><span class="sxs-lookup"><span data-stu-id="370b1-111">The request object</span></span>
+          description: <span data-ttu-id="1ac5a-111">要求物件</span><span class="sxs-lookup"><span data-stu-id="1ac5a-111">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -221,22 +237,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="370b1-112">（長時間執行作業） LRO 初始要求傳送，會提供方法來輪詢 LRO 及檢查是否已完成 LRO LROPoller。</span><span class="sxs-lookup"><span data-stu-id="370b1-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="1ac5a-112">（長時間執行作業） LRO 初始要求傳送，會提供方法來輪詢 LRO 及檢查是否已完成 LRO LROPoller。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="370b1-113">作業的引數。</span><span class="sxs-lookup"><span data-stu-id="370b1-113">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="1ac5a-113">作業的引數。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-113">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="370b1-114">作業規格。</span><span class="sxs-lookup"><span data-stu-id="370b1-114">The specification for the operation.</span></span>
+          description: <span data-ttu-id="1ac5a-114">作業規格。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-114">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="370b1-115">提出要求時傳送的其他選項。</span><span class="sxs-lookup"><span data-stu-id="370b1-115">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="1ac5a-115">提出要求時傳送的其他選項。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-115">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -248,23 +264,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="370b1-116">傳送 HTTP 要求使用提供的 OperationSpec 填入。</span><span class="sxs-lookup"><span data-stu-id="370b1-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    summary: <span data-ttu-id="1ac5a-116">傳送 HTTP 要求使用提供的 OperationSpec 填入。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="370b1-117">HTTP 要求的樣板化的值就會填入從引數。</span><span class="sxs-lookup"><span data-stu-id="370b1-117">The arguments that the HTTP request's templated values will be populated from.</span></span>
+          description: <span data-ttu-id="1ac5a-117">HTTP 要求的樣板化的值就會填入從引數。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-117">The arguments that the HTTP request's templated values will be populated from.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="370b1-118">要用來填入 httpRequest OperationSpec。</span><span class="sxs-lookup"><span data-stu-id="370b1-118">The OperationSpec to use to populate the httpRequest.</span></span>
+          description: <span data-ttu-id="1ac5a-118">要用來填入 httpRequest OperationSpec。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-118">The OperationSpec to use to populate the httpRequest.</span></span>
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="370b1-119">要在收到回應時呼叫的回呼。</span><span class="sxs-lookup"><span data-stu-id="370b1-119">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="1ac5a-119">要在收到回應時呼叫的回呼。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-119">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -276,7 +292,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="370b1-120">傳送提供的 httpRequest。</span><span class="sxs-lookup"><span data-stu-id="370b1-120">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="1ac5a-120">傳送提供的 httpRequest。</span><span class="sxs-lookup"><span data-stu-id="1ac5a-120">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:
@@ -315,6 +331,20 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Tasks'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClient.tokens'
+    name: tokens
+    fullName: tokens
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'tokens: Tokens'
+      return:
+        type:
+          - '@azure/arm-containerregistry.Tokens'
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClient.webhooks'
     name: webhooks
@@ -361,12 +391,24 @@ references:
       - name: Runs
         fullName: Runs
         uid: '@azure/arm-containerregistry.Runs'
+  - uid: '@azure/arm-containerregistry.ScopeMaps'
+    name: ScopeMaps
+    spec.typeScript:
+      - name: ScopeMaps
+        fullName: ScopeMaps
+        uid: '@azure/arm-containerregistry.ScopeMaps'
   - uid: '@azure/arm-containerregistry.Tasks'
     name: Tasks
     spec.typeScript:
       - name: Tasks
         fullName: Tasks
         uid: '@azure/arm-containerregistry.Tasks'
+  - uid: '@azure/arm-containerregistry.Tokens'
+    name: Tokens
+    spec.typeScript:
+      - name: Tokens
+        fullName: Tokens
+        uid: '@azure/arm-containerregistry.Tokens'
   - uid: '@azure/arm-containerregistry.Webhooks'
     name: Webhooks
     spec.typeScript:

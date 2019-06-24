@@ -5,8 +5,8 @@ items:
     fullName: StorageAccountCreateParameters
     children:
       - '@azure/arm-storage.StorageAccountCreateParameters.accessTier'
+      - '@azure/arm-storage.StorageAccountCreateParameters.azureFilesIdentityBasedAuthentication'
       - '@azure/arm-storage.StorageAccountCreateParameters.customDomain'
-      - '@azure/arm-storage.StorageAccountCreateParameters.enableAzureFilesAadIntegration'
       - '@azure/arm-storage.StorageAccountCreateParameters.enableHttpsTrafficOnly'
       - '@azure/arm-storage.StorageAccountCreateParameters.encryption'
       - '@azure/arm-storage.StorageAccountCreateParameters.identity'
@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="5b36c-101">建立儲存體帳戶時使用的參數。</span><span class="sxs-lookup"><span data-stu-id="5b36c-101">The parameters used when creating a storage account.</span></span>
+    summary: <span data-ttu-id="31628-101">建立儲存體帳戶時使用的參數。</span><span class="sxs-lookup"><span data-stu-id="31628-101">The parameters used when creating a storage account.</span></span>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountCreateParameters.accessTier'
     name: accessTier
@@ -29,14 +29,29 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="5b36c-102">所需的儲存體帳戶，其中類型 = BlobStorage。</span><span class="sxs-lookup"><span data-stu-id="5b36c-102">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id="5b36c-103">存取層，用於計費。</span><span class="sxs-lookup"><span data-stu-id="5b36c-103">The access tier used for billing.</span></span>
-      <span data-ttu-id="5b36c-104">可能的值包括：「 熱 」，' 非經常性存取 '</span><span class="sxs-lookup"><span data-stu-id="5b36c-104">Possible values include: 'Hot', 'Cool'</span></span>
+      <span data-ttu-id="31628-102">所需的儲存體帳戶，其中類型 = BlobStorage。</span><span class="sxs-lookup"><span data-stu-id="31628-102">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id="31628-103">存取層，用於計費。</span><span class="sxs-lookup"><span data-stu-id="31628-103">The access tier used for billing.</span></span>
+      <span data-ttu-id="31628-104">可能的值包括：「 熱 」，' 非經常性存取 '</span><span class="sxs-lookup"><span data-stu-id="31628-104">Possible values include: 'Hot', 'Cool'</span></span>
     optional: true
     syntax:
       content: 'accessTier?: AccessTier'
       return:
         type:
           - '@azure/arm-storage.AccessTier'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountCreateParameters.azureFilesIdentityBasedAuthentication'
+    name: azureFilesIdentityBasedAuthentication
+    fullName: azureFilesIdentityBasedAuthentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="31628-105">提供 Azure 檔案的身分識別驗證設定。</span><span class="sxs-lookup"><span data-stu-id="31628-105">Provides the identity based authentication settings for Azure Files.</span></span>
+    optional: true
+    syntax:
+      content: 'azureFilesIdentityBasedAuthentication?: AzureFilesIdentityBasedAuthentication'
+      return:
+        type:
+          - '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountCreateParameters.customDomain'
     name: customDomain
@@ -45,28 +60,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="5b36c-105">指派給儲存體帳戶的使用者網域。</span><span class="sxs-lookup"><span data-stu-id="5b36c-105">User domain assigned to the storage account.</span></span> <span data-ttu-id="5b36c-106">CNAME 來源名稱。</span><span class="sxs-lookup"><span data-stu-id="5b36c-106">Name is the CNAME source.</span></span> <span data-ttu-id="5b36c-107">只有一個自訂網域目前支援每個儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="5b36c-107">Only one custom domain is supported per storage account at this time.</span></span> <span data-ttu-id="5b36c-108">若要清除現有的自訂網域，請針對自訂網域名稱屬性使用空字串。</span><span class="sxs-lookup"><span data-stu-id="5b36c-108">To clear the existing custom domain, use an empty string for the custom domain name property.</span></span>'
+    summary: '<span data-ttu-id="31628-106">指派給儲存體帳戶的使用者網域。</span><span class="sxs-lookup"><span data-stu-id="31628-106">User domain assigned to the storage account.</span></span> <span data-ttu-id="31628-107">CNAME 來源名稱。</span><span class="sxs-lookup"><span data-stu-id="31628-107">Name is the CNAME source.</span></span> <span data-ttu-id="31628-108">只有一個自訂網域目前支援每個儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="31628-108">Only one custom domain is supported per storage account at this time.</span></span> <span data-ttu-id="31628-109">若要清除現有的自訂網域，請針對自訂網域名稱屬性使用空字串。</span><span class="sxs-lookup"><span data-stu-id="31628-109">To clear the existing custom domain, use an empty string for the custom domain name property.</span></span>'
     optional: true
     syntax:
       content: 'customDomain?: CustomDomain'
       return:
         type:
           - '@azure/arm-storage.CustomDomain'
-    package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.StorageAccountCreateParameters.enableAzureFilesAadIntegration'
-    name: enableAzureFilesAadIntegration
-    fullName: enableAzureFilesAadIntegration
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: <span data-ttu-id="5b36c-109">如果 Azure 檔案 AAD 整合讓 SMB 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="5b36c-109">Enables Azure Files AAD Integration for SMB if sets to true.</span></span>
-    optional: true
-    syntax:
-      content: 'enableAzureFilesAadIntegration?: undefined | false | true'
-      return:
-        type:
-          - undefined | false | true
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountCreateParameters.enableHttpsTrafficOnly'
     name: enableHttpsTrafficOnly
@@ -75,7 +75,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5b36c-110">如果允許 https 流量只能連到儲存體服務設定為 true。</span><span class="sxs-lookup"><span data-stu-id="5b36c-110">Allows https traffic only to storage service if sets to true.</span></span>
+    summary: <span data-ttu-id="31628-110">如果允許 https 流量只能連到儲存體服務設定為 true。</span><span class="sxs-lookup"><span data-stu-id="31628-110">Allows https traffic only to storage service if sets to true.</span></span> <span data-ttu-id="31628-111">自 API 版本 2019年-04-01，預設值為 true。</span><span class="sxs-lookup"><span data-stu-id="31628-111">The default value is true since API version 2019-04-01.</span></span>
     optional: true
     syntax:
       content: 'enableHttpsTrafficOnly?: undefined | false | true'
@@ -90,7 +90,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5b36c-111">帳戶上提供的加密設定。</span><span class="sxs-lookup"><span data-stu-id="5b36c-111">Provides the encryption settings on the account.</span></span> <span data-ttu-id="5b36c-112">如果沒有指定的帳戶的加密設定將維持不變。</span><span class="sxs-lookup"><span data-stu-id="5b36c-112">If left unspecified the account encryption settings will remain the same.</span></span> <span data-ttu-id="5b36c-113">預設設定是未加密。</span><span class="sxs-lookup"><span data-stu-id="5b36c-113">The default setting is unencrypted.</span></span>
+    summary: <span data-ttu-id="31628-112">帳戶上提供的加密設定。</span><span class="sxs-lookup"><span data-stu-id="31628-112">Provides the encryption settings on the account.</span></span> <span data-ttu-id="31628-113">如果沒有指定的帳戶的加密設定將維持不變。</span><span class="sxs-lookup"><span data-stu-id="31628-113">If left unspecified the account encryption settings will remain the same.</span></span> <span data-ttu-id="31628-114">預設設定是未加密。</span><span class="sxs-lookup"><span data-stu-id="31628-114">The default setting is unencrypted.</span></span>
     optional: true
     syntax:
       content: 'encryption?: Encryption'
@@ -105,7 +105,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5b36c-114">資源的身分識別。</span><span class="sxs-lookup"><span data-stu-id="5b36c-114">The identity of the resource.</span></span>
+    summary: <span data-ttu-id="31628-115">資源的身分識別。</span><span class="sxs-lookup"><span data-stu-id="31628-115">The identity of the resource.</span></span>
     optional: true
     syntax:
       content: 'identity?: Identity'
@@ -120,7 +120,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5b36c-115">如果已啟用的帳戶 HierarchicalNamespace 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="5b36c-115">Account HierarchicalNamespace enabled if sets to true.</span></span>
+    summary: <span data-ttu-id="31628-116">如果已啟用的帳戶 HierarchicalNamespace 設定為 true。</span><span class="sxs-lookup"><span data-stu-id="31628-116">Account HierarchicalNamespace enabled if sets to true.</span></span>
     optional: true
     syntax:
       content: 'isHnsEnabled?: undefined | false | true'
@@ -135,7 +135,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="5b36c-116">必要。</span><span class="sxs-lookup"><span data-stu-id="5b36c-116">Required.</span></span> <span data-ttu-id="5b36c-117">表示儲存體帳戶類型。</span><span class="sxs-lookup"><span data-stu-id="5b36c-117">Indicates the type of storage account.</span></span> <span data-ttu-id="5b36c-118">可能的值包括：''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span><span class="sxs-lookup"><span data-stu-id="5b36c-118">Possible values include: ''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span></span>'
+    summary: '<span data-ttu-id="31628-117">必要。</span><span class="sxs-lookup"><span data-stu-id="31628-117">Required.</span></span> <span data-ttu-id="31628-118">表示儲存體帳戶類型。</span><span class="sxs-lookup"><span data-stu-id="31628-118">Indicates the type of storage account.</span></span> <span data-ttu-id="31628-119">可能的值包括：''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span><span class="sxs-lookup"><span data-stu-id="31628-119">Possible values include: ''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span></span>'
     syntax:
       content: 'kind: Kind'
       return:
@@ -149,7 +149,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="5b36c-119">必要。</span><span class="sxs-lookup"><span data-stu-id="5b36c-119">Required.</span></span> <span data-ttu-id="5b36c-120">取得或設定資源的位置。</span><span class="sxs-lookup"><span data-stu-id="5b36c-120">Gets or sets the location of the resource.</span></span> <span data-ttu-id="5b36c-121">這會是一種支援的其中一個，並已註冊的 Azure 地理區域 （例如美國西部、 美國東部、 東南亞等）。</span><span class="sxs-lookup"><span data-stu-id="5b36c-121">This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.).</span></span> <span data-ttu-id="5b36c-122">一旦建立，但如果在更新指定的相同地理區域，則要求將會成功，則無法變更資源的地理區域。</span><span class="sxs-lookup"><span data-stu-id="5b36c-122">The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.</span></span>'
+    summary: '<span data-ttu-id="31628-120">必要。</span><span class="sxs-lookup"><span data-stu-id="31628-120">Required.</span></span> <span data-ttu-id="31628-121">取得或設定資源的位置。</span><span class="sxs-lookup"><span data-stu-id="31628-121">Gets or sets the location of the resource.</span></span> <span data-ttu-id="31628-122">這會是一種支援的其中一個，並已註冊的 Azure 地理區域 （例如美國西部、 美國東部、 東南亞等）。</span><span class="sxs-lookup"><span data-stu-id="31628-122">This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.).</span></span> <span data-ttu-id="31628-123">一旦建立，但如果在更新指定的相同地理區域，則要求將會成功，則無法變更資源的地理區域。</span><span class="sxs-lookup"><span data-stu-id="31628-123">The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.</span></span>'
     syntax:
       content: 'location: string'
       return:
@@ -163,7 +163,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5b36c-123">網路規則集</span><span class="sxs-lookup"><span data-stu-id="5b36c-123">Network rule set</span></span>
+    summary: <span data-ttu-id="31628-124">網路規則集</span><span class="sxs-lookup"><span data-stu-id="31628-124">Network rule set</span></span>
     optional: true
     syntax:
       content: 'networkRuleSet?: NetworkRuleSet'
@@ -178,7 +178,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5b36c-124">必要。</span><span class="sxs-lookup"><span data-stu-id="5b36c-124">Required.</span></span> <span data-ttu-id="5b36c-125">取得或設定 SKU 名稱。</span><span class="sxs-lookup"><span data-stu-id="5b36c-125">Gets or sets the SKU name.</span></span>
+    summary: <span data-ttu-id="31628-125">必要。</span><span class="sxs-lookup"><span data-stu-id="31628-125">Required.</span></span> <span data-ttu-id="31628-126">取得或設定 SKU 名稱。</span><span class="sxs-lookup"><span data-stu-id="31628-126">Gets or sets the SKU name.</span></span>
     syntax:
       content: 'sku: Sku'
       return:
@@ -192,7 +192,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5b36c-126">取得或設定描述資源的機碼值組的清單。</span><span class="sxs-lookup"><span data-stu-id="5b36c-126">Gets or sets a list of key value pairs that describe the resource.</span></span> <span data-ttu-id="5b36c-127">這些標記可用於檢視和群組 （跨資源群組） 的這項資源。</span><span class="sxs-lookup"><span data-stu-id="5b36c-127">These tags can be used for viewing and grouping this resource (across resource groups).</span></span> <span data-ttu-id="5b36c-128">資源可以提供最多 15 個標記。</span><span class="sxs-lookup"><span data-stu-id="5b36c-128">A maximum of 15 tags can be provided for a resource.</span></span> <span data-ttu-id="5b36c-129">長度不超過 128 個字元的索引鍵和值長度不超過 256 個字元，必須使用每個標記。</span><span class="sxs-lookup"><span data-stu-id="5b36c-129">Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.</span></span>
+    summary: <span data-ttu-id="31628-127">取得或設定描述資源的機碼值組的清單。</span><span class="sxs-lookup"><span data-stu-id="31628-127">Gets or sets a list of key value pairs that describe the resource.</span></span> <span data-ttu-id="31628-128">這些標記可用於檢視和群組 （跨資源群組） 的這項資源。</span><span class="sxs-lookup"><span data-stu-id="31628-128">These tags can be used for viewing and grouping this resource (across resource groups).</span></span> <span data-ttu-id="31628-129">資源可以提供最多 15 個標記。</span><span class="sxs-lookup"><span data-stu-id="31628-129">A maximum of 15 tags can be provided for a resource.</span></span> <span data-ttu-id="31628-130">長度不超過 128 個字元的索引鍵和值長度不超過 256 個字元，必須使用每個標記。</span><span class="sxs-lookup"><span data-stu-id="31628-130">Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -207,6 +207,12 @@ references:
       - name: AccessTier
         fullName: AccessTier
         uid: '@azure/arm-storage.AccessTier'
+  - uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
+    name: AzureFilesIdentityBasedAuthentication
+    spec.typeScript:
+      - name: AzureFilesIdentityBasedAuthentication
+        fullName: AzureFilesIdentityBasedAuthentication
+        uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
   - uid: '@azure/arm-storage.CustomDomain'
     name: CustomDomain
     spec.typeScript:

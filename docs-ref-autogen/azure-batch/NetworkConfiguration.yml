@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="7deee-101">集區網路組態。</span><span class="sxs-lookup"><span data-stu-id="7deee-101">The network configuration for a Pool.</span></span>
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7deee-102">可能的值包括: ''none''、 ''作業''</span><span class="sxs-lookup"><span data-stu-id="7deee-102">Possible values include: ''none'', ''job''</span></span>'
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="7deee-103">在集區上才支援集區端點設定使用 virtualMachineConfiguration 屬性。</span><span class="sxs-lookup"><span data-stu-id="7deee-103">Pool endpoint configuration is only supported on Pools with the virtualMachineConfiguration property.</span></span>
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7deee-104">虛擬網路必須位於相同的區域和訂用帳戶與 Azure Batch 帳戶。</span><span class="sxs-lookup"><span data-stu-id="7deee-104">The virtual network must be in the same region and subscription as the Azure Batch Account.</span></span> <span data-ttu-id="7deee-105">指定的子網路必須有足夠可用的 IP 位址，以配合集區中的計算節點數目。</span><span class="sxs-lookup"><span data-stu-id="7deee-105">The specified subnet should have enough free IP addresses to accommodate the number of Compute Nodes in the Pool.</span></span> <span data-ttu-id="7deee-106">如果子網路沒有足夠可用的 IP 位址，集區將部分配置節點，並調整大小錯誤會發生。</span><span class="sxs-lookup"><span data-stu-id="7deee-106">If the subnet doesn''t have enough free IP addresses, the Pool will partially allocate Nodes, and a resize error will occur.</span></span> <span data-ttu-id="7deee-107">''MicrosoftAzureBatch'' 服務主體必須具有 「 傳統虛擬機器參與者 」 角色型存取控制 (RBAC) 角色，針對指定的 VNet。</span><span class="sxs-lookup"><span data-stu-id="7deee-107">The ''MicrosoftAzureBatch'' service principal must have the ''Classic Virtual Machine Contributor'' Role-Based Access Control (RBAC) role for the specified VNet.</span></span> <span data-ttu-id="7deee-108">指定的子網路必須允許來自 Azure Batch 服務能夠在節點上排程工作的通訊。</span><span class="sxs-lookup"><span data-stu-id="7deee-108">The specified subnet must allow communication from the Azure Batch service to be able to schedule Tasks on the Nodes.</span></span> <span data-ttu-id="7deee-109">這可以藉由檢查指定的 VNet 有任何相關聯網路安全性群組 (NSG) 來驗證。</span><span class="sxs-lookup"><span data-stu-id="7deee-109">This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG).</span></span> <span data-ttu-id="7deee-110">如果 NSG 拒絕對指定的子網路中的節點通訊，則 Batch 服務會以無法使用設定計算節點的狀態。</span><span class="sxs-lookup"><span data-stu-id="7deee-110">If communication to the Nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the Compute Nodes to unusable.</span></span> <span data-ttu-id="7deee-111">使用 virtualMachineConfiguration 建立的集區支援的只有 ARM 虛擬網路 ('' microsoft.network/virtualnetworks'')，但使用 cloudServiceConfiguration 建立的 ARM 和傳統虛擬網路支援。</span><span class="sxs-lookup"><span data-stu-id="7deee-111">For Pools created with virtualMachineConfiguration only ARM virtual networks (''Microsoft.Network/virtualNetworks'') are supported, but for Pools created with cloudServiceConfiguration both ARM and classic virtual networks are supported.</span></span> <span data-ttu-id="7deee-112">如果指定的 VNet 有任何相關聯的網路安全性群組 (NSG)，則必須啟用幾個已保留的系統連接埠以供進行輸入通訊。</span><span class="sxs-lookup"><span data-stu-id="7deee-112">If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication.</span></span> <span data-ttu-id="7deee-113">使用虛擬機器設定所建立的集區，啟用連接埠 29876 和 29877，以及 Windows 的連接埠 22 適用於 Linux 和連接埠 3389。</span><span class="sxs-lookup"><span data-stu-id="7deee-113">For Pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows.</span></span> <span data-ttu-id="7deee-114">建立的集區與雲端服務組態，啟用連接埠 10100、 20100 和 30100。</span><span class="sxs-lookup"><span data-stu-id="7deee-114">For Pools created with a cloud service configuration, enable ports 10100, 20100, and 30100.</span></span> <span data-ttu-id="7deee-115">也啟用連接埠 443 上的 Azure 儲存體的輸出連線。</span><span class="sxs-lookup"><span data-stu-id="7deee-115">Also enable outbound connections to Azure Storage on port 443.</span></span> <span data-ttu-id="7deee-116">如需詳細資訊，請參閱： https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="7deee-116">For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>'
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration
