@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+    name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定義比對的準則，以判斷是否應該包含部署的應用程式，在叢集健全狀況區塊中的子系部署的服務套件。
+      只有符合篩選，叢集健全狀況區塊查詢描述中指定的父實體時，才會傳回已部署的服務套件。 父代已部署應用程式和其父系應用程式必須包含在叢集健全狀況區塊。
+      一個篩選條件可以比對零、 一或多個已部署服務套件，其屬性而定。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      已部署的服務封裝健全狀況狀態之篩選條件。 它可讓選取部署服務封裝，如果它們符合所需的健全狀況狀態。
+      可能的值為其中一個下列的健全狀況狀態的整數值。 只會傳回符合篩選條件的已部署服務套件。 所有已部署的服務封裝都會用來評估的父代已部署應用程式彙總健全狀況狀態。
+      如果未指定，預設值會是 None，除非指定已部署的服務封裝識別碼。
+      如果篩選器有預設值，指定已部署的服務封裝識別碼，則會傳回符合的已部署的服務套件。
+      狀態值是以旗標為基礎的列舉，因此值可以是使用位元 'OR' 運算子取得的這些值的組合。
+      比方說，如果提供的值為 6，它會符合已部署的服務封裝 HealthState 值為 OK (2) 和 Warning (4)。
+      - Default-預設值。 符合任何 HealthState。 值為零。
+      - None-不符合任何 HealthState 值的篩選。 用來在指定狀態集合沒有任何結果時傳回。 值為 1。
+      - Ok-符合輸入含 HealthState 值 Ok 的篩選條件。 值為 2。
+      - 警告-篩選符合輸入含 HealthState 值 Warning。 值為 4。
+      - Error-符合輸入含 HealthState 值 Error 的篩選條件。 值為 8。
+      - All-符合輸入含任何 HealthState 值的篩選條件。 值為 65535。 預設值：0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+    name: serviceManifestNameFilter
+    fullName: serviceManifestNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      服務資訊清單可識別已部署的服務封裝符合篩選的名稱。
+      如果指定，便套用篩選才能指定已部署的服務封裝中，如果有的話。
+      如果沒有具有指定資訊清單名稱的已部署的服務套件存在，則不會傳回此篩選器為基礎之叢集健全狀況區塊中。
+      如果任何已部署的服務套件存在，它們會包含在叢集健康狀態區塊如果它採用的其他篩選屬性。
+      如果沒有指定，所有已部署的服務封裝 （如果有的話），符合父篩選條件會納入考量，並比對其他篩選成員，例如健康情況狀態篩選。
+    optional: true
+    syntax:
+      content: 'serviceManifestNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    name: servicePackageActivationIdFilter
+    fullName: servicePackageActivationIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      符合篩選條件的已部署的服務套件啟用識別碼。
+      如果未指定，篩選條件套用到所有已部署的服務封裝符合其他參數。
+      如果指定，篩選會比對只具有指定的啟用識別碼所部署的服務套件
+    optional: true
+    syntax:
+      content: 'servicePackageActivationIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

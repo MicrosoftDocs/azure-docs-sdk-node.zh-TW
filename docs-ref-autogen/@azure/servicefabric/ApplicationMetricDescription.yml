@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription'
+    name: ApplicationMetricDescription
+    fullName: ApplicationMetricDescription
+    children:
+      - '@azure/servicefabric.ApplicationMetricDescription.maximumCapacity'
+      - '@azure/servicefabric.ApplicationMetricDescription.name'
+      - '@azure/servicefabric.ApplicationMetricDescription.reservationCapacity'
+      - '@azure/servicefabric.ApplicationMetricDescription.totalApplicationCapacity'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述自訂資源平衡計量的容量資訊。 這可以用來限制此計量的總耗用量的此應用程式的服務。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.maximumCapacity'
+    name: maximumCapacity
+    fullName: maximumCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Service Fabric 應用程式的最大節點容量。
+      這是在單一節點上的此應用程式的執行個體的負載上限。 即使節點的容量大於此值，則 Service Fabric 會限制服務內的每個節點上的應用程式，此值的總負載。
+      如果設定為零，此計量的容量是無限制每個節點上。
+      當使用定義的應用程式容量中建立新的應用程式，MaximumNodes 和此值的乘積必須一律小於或等於 TotalApplicationCapacity 為。
+      在更新現有的應用程式與應用程式容量時，則 MaximumNodes 和此值的乘積必須一律會小於或等於 TotalApplicationCapacity 為。
+    optional: true
+    syntax:
+      content: 'maximumCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 計量的名稱。
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.reservationCapacity'
+    name: reservationCapacity
+    fullName: reservationCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Service Fabric 應用程式的節點保留容量。
+      這是負載的具有此應用程式的執行個體的節點上，這負載的保留數量。
+      如果指定 MinimumNodes，這些值的乘積會是保留的叢集中的應用程式的容量。
+      如果設定為零，不會保留容量，此度量。
+      設定應用程式容量時，或在更新應用程式容量;此值必須小於或等於每個度量 MaximumCapacity。
+    optional: true
+    syntax:
+      content: 'reservationCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.totalApplicationCapacity'
+    name: totalApplicationCapacity
+    fullName: totalApplicationCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Service Fabric 應用程式的計量容量總計。
+      這是在叢集中的此應用程式計量容量總計。 Service Fabric 會嘗試限制的服務，這個值在應用程式中載入的總和。
+      當使用定義的應用程式容量中建立新的應用程式，MaximumNodes 和 MaximumCapacity 產品都必須小於或等於這個值。
+    optional: true
+    syntax:
+      content: 'totalApplicationCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

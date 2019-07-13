@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy'
+    name: ApplicationHealthPolicy
+    fullName: ApplicationHealthPolicy
+    children:
+      - '@azure/servicefabric.ApplicationHealthPolicy.considerWarningAsError'
+      - '@azure/servicefabric.ApplicationHealthPolicy.defaultServiceTypeHealthPolicy'
+      - '@azure/servicefabric.ApplicationHealthPolicy.maxPercentUnhealthyDeployedApplications'
+      - '@azure/servicefabric.ApplicationHealthPolicy.serviceTypeHealthPolicyMap'
+    langs:
+      - typeScript
+    type: interface
+    summary: 定義用來評估應用程式或其中一個子系實體的健全狀況的健全狀況原則。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可指示是否將具有相同嚴重性的警告視為錯誤。 預設值： false。
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.defaultServiceTypeHealthPolicy'
+    name: defaultServiceTypeHealthPolicy
+    fullName: defaultServiceTypeHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用來評估服務類型健康情況預設健全狀況原則。
+    optional: true
+    syntax:
+      content: 'defaultServiceTypeHealthPolicy?: ServiceTypeHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceTypeHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.maxPercentUnhealthyDeployedApplications'
+    name: maxPercentUnhealthyDeployedApplications
+    fullName: maxPercentUnhealthyDeployedApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      允許的狀況不良已部署應用程式百分比上限。 允許的值是從 0 到 100 的位元組值。
+      百分比表示已部署的應用程式狀況不良之前，應用程式會被視為錯誤的最大容許的百分比。
+      此計算是狀況不良已部署的應用程式數目除以其中應用程式目前部署在叢集中的節點數目。
+      針對較少的節點數目，計算會四捨五入以容許一個失敗。 預設百分比是零。 預設值：0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyDeployedApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.serviceTypeHealthPolicyMap'
+    name: serviceTypeHealthPolicyMap
+    fullName: serviceTypeHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 每個服務類型名稱的服務類型健康原則對應。 對應預設是空的。
+    optional: true
+    syntax:
+      content: 'serviceTypeHealthPolicyMap?: ServiceTypeHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceTypeHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+    name: ServiceTypeHealthPolicy
+    spec.typeScript:
+      - name: ServiceTypeHealthPolicy
+        fullName: ServiceTypeHealthPolicy
+        uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicyMapItem[]'
+    name: 'ServiceTypeHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ServiceTypeHealthPolicyMapItem
+        fullName: ServiceTypeHealthPolicyMapItem
+        uid: '@azure/servicefabric.ServiceTypeHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'

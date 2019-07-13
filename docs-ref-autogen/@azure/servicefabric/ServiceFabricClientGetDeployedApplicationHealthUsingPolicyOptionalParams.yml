@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 選擇性參數。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -43,7 +43,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      描述用來評估應用程式或其中一個子系的健全狀況的健全狀況原則。
+      如果不存在，健全狀況評估會使用健全狀況原則，從應用程式資訊清單 或 預設健全狀況原則。
     optional: true
     syntax:
       content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
@@ -73,7 +75,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      允許根據健康情況狀態，篩選已部署應用程式健康情況查詢結果中所傳回的已部署服務套件健康情況狀態物件。
+      此參數的可能值包括下列其中一個健康情況狀態的整數值。
+      只會傳回符合篩選條件的已部署服務套件。 所有已部署服務套件都會用來評估已部署應用程式的彙總健康情況狀態。
+      如果未指定，則會傳回所有項目。
+      狀態值是以旗標為基礎的列舉，因而此值可以是使用位元 'OR' 運算子所取得這些值的組合。
+      例如，如果提供的值為 6，則會傳回 HealthState 值為 OK (2) 和 Warning (4) 的服務套件健康情況狀態。
+      - Default-預設值。 符合任何 HealthState。 值為零。
+      - None-不符合任何 HealthState 值的篩選。 用來在指定狀態集合沒有任何結果時傳回。 值為 1。
+      - Ok-符合輸入含 HealthState 值 Ok 的篩選條件。 值為 2。
+      - 警告-篩選符合輸入含 HealthState 值 Warning。 值為 4。
+      - Error-符合輸入含 HealthState 值 Error 的篩選條件。 值為 8。
+      - All-符合輸入含任何 HealthState 值的篩選條件。 值為 65535。 預設值：0.
     optional: true
     syntax:
       content: 'deployedServicePackagesHealthStateFilter?: undefined | number'
@@ -88,7 +102,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      可根據健康情況狀態來篩選所傳回的 HealthEvent 物件集合。
+      此參數的可能值包括下列其中一個健康情況狀態的整數值。
+      只會傳回符合篩選條件的事件。 所有事件都會用來評估彙總的健康情況狀態。
+      如果未指定，則會傳回所有項目。 狀態值是以旗標為基礎的列舉，因而此值可以是使用位元 'OR' 運算子所取得這些值的組合。
+      例如，如果提供的值為 6，則會傳回 HealthState 值為 OK (2) 和 Warning (4) 的所有事件。
+      - Default-預設值。 符合任何 HealthState。 值為零。
+      - None-不符合任何 HealthState 值的篩選。 用來在指定狀態集合沒有任何結果時傳回。 值為 1。
+      - Ok-符合輸入含 HealthState 值 Ok 的篩選條件。 值為 2。
+      - 警告-篩選符合輸入含 HealthState 值 Warning。 值為 4。
+      - Error-符合輸入含 HealthState 值 Error 的篩選條件。 值為 8。
+      - All-符合輸入含任何 HealthState 值的篩選條件。 值為 65535。 預設值：0.
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -103,7 +128,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      指出是否應該在查詢結果中一併傳回健康情況統計資料。 預設為 False。
+      統計資料會顯示健康情況狀態為 Ok、Warning 及 Error 的子實體數目。
+      預設值： false。
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -163,7 +191,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 執行作業，以秒為單位的伺服器逾時。 此逾時指定用戶端願意等待完成要求的作業的持續時間。 此參數的預設值為 60 秒。 預設值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

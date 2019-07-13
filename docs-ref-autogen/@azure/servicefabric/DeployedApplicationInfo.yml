@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationInfo'
+    name: DeployedApplicationInfo
+    fullName: DeployedApplicationInfo
+    children:
+      - '@azure/servicefabric.DeployedApplicationInfo.healthState'
+      - '@azure/servicefabric.DeployedApplicationInfo.id'
+      - '@azure/servicefabric.DeployedApplicationInfo.logDirectory'
+      - '@azure/servicefabric.DeployedApplicationInfo.name'
+      - '@azure/servicefabric.DeployedApplicationInfo.status'
+      - '@azure/servicefabric.DeployedApplicationInfo.tempDirectory'
+      - '@azure/servicefabric.DeployedApplicationInfo.typeName'
+      - '@azure/servicefabric.DeployedApplicationInfo.workDirectory'
+    langs:
+      - typeScript
+    type: interface
+    summary: 節點上所部署的應用程式的相關資訊。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      應用程式的身分識別。 這是應用程式名稱的編碼表示法。
+      這是 REST Api 中用來識別應用程式資源。
+      從 6.0 版開始，階層的名稱會以 「\~"字元。 比方說，如果應用程式名稱是"fabric: / myapp/app1"，應用程式身分識別會是"myapp\~app1 」 在 6.0 + 和"myapp/app1"在舊版中。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.logDirectory'
+    name: logDirectory
+    fullName: logDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在節點上的應用程式記錄檔目錄。 記錄檔目錄可以用來儲存應用程式記錄檔中。
+    optional: true
+    syntax:
+      content: 'logDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '應用程式名稱包括 '' fabric:''URI 配置的完整應用程式名稱。'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      在節點上部署的應用程式的狀態。 以下是可能的值。
+      可能的值包括：' Invalid'、 '下載'、 '啟動'、 'Active'、 '升級'、 '停用'
+    optional: true
+    syntax:
+      content: 'status?: DeployedApplicationStatus'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.tempDirectory'
+    name: tempDirectory
+    fullName: tempDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在節點上的應用程式的暫存目錄。 屬於應用程式的程式碼封裝會分叉中對此目錄設定為其暫存目錄。
+    optional: true
+    syntax:
+      content: 'tempDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 應用程式類型名稱的應用程式資訊清單中所定義。
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.workDirectory'
+    name: workDirectory
+    fullName: workDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在節點上的應用程式的工作目錄。 工作目錄可用來儲存應用程式資料。
+    optional: true
+    syntax:
+      content: 'workDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.DeployedApplicationStatus'
+    name: DeployedApplicationStatus
+    spec.typeScript:
+      - name: DeployedApplicationStatus
+        fullName: DeployedApplicationStatus
+        uid: '@azure/servicefabric.DeployedApplicationStatus'

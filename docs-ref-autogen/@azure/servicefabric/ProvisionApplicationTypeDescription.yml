@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription'
+    name: ProvisionApplicationTypeDescription
+    fullName: ProvisionApplicationTypeDescription
+    children:
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.async'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.kind'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述要註冊或佈建應用程式類型，使用應用程式封裝上傳到 Service Fabric 映像存放區的作業。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy'
+    name: applicationPackageCleanupPolicy
+    fullName: applicationPackageCleanupPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 不需要採取來清除應用程式封裝成功佈建後的動作種類。 可能的值包括：'Invalid'、 'Default'、 'Automatic'、 'Manual'
+    optional: true
+    syntax:
+      content: 'applicationPackageCleanupPolicy?: ApplicationPackageCleanupPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationPackageCleanupPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath'
+    name: applicationTypeBuildPath
+    fullName: applicationTypeBuildPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 先前上傳作業期間所指定映像存放區中的應用程式套件相對路徑。
+    syntax:
+      content: 'applicationTypeBuildPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.async'
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 表示佈建是否應該以非同步方式發生。 設為 true 時，如果系統接受要求，佈建作業就會回歸，且佈建作業會繼續而沒有任何逾時限制。 預設值為 False。 針對大型應用程式套件，建議您將此值設定為 true。
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'kind: "ImageStorePath"'
+      return:
+        type:
+          - '"ImageStorePath"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationPackageCleanupPolicy'
+    name: ApplicationPackageCleanupPolicy
+    spec.typeScript:
+      - name: ApplicationPackageCleanupPolicy
+        fullName: ApplicationPackageCleanupPolicy
+        uid: '@azure/servicefabric.ApplicationPackageCleanupPolicy'

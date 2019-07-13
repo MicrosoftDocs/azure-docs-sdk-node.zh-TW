@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription'
+    name: RestartDeployedCodePackageDescription
+    fullName: RestartDeployedCodePackageDescription
+    children:
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageName'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.serviceManifestName'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 定義以重新啟動 Service Fabric 節點上已部署的程式碼封裝的描述。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId'
+    name: codePackageInstanceId
+    fullName: codePackageInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      針對目前執行的進入點執行個體識別碼。 第一個點 （如果有指定） 執行的程式碼封裝設定項目，並啟動之後完成主要進入點。
+      每次進入點可執行檔執行時，將會變更其執行個體識別碼。 如果傳入 0 做為程式碼封裝的執行個體識別碼，API 會重新啟動目前正在執行任何執行個體識別碼的程式碼套件。
+      如果執行個體識別碼其他非 0 會傳入，API 會重新啟動的程式碼套件只有當目前的執行個體識別碼符合傳入的執行個體識別碼。
+      請注意，傳入的確切的執行個體識別碼 (不是 0) 的 API 中較為安全，因為如果可確保最多重新啟動一次的程式碼套件。
+    syntax:
+      content: 'codePackageInstanceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageName'
+    name: codePackageName
+    fullName: codePackageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務資訊清單中定義的程式碼封裝的名稱。
+    syntax:
+      content: 'codePackageName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.serviceManifestName'
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定此程式碼封裝的服務資訊清單的名稱。
+    syntax:
+      content: 'serviceManifestName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId'
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 已部署之服務套件的 ActivationId。 如果在建立服務時指定的 ServicePackageActivationMode 'SharedProcess' （或如果未指定，在此情況下則預設為 'SharedProcess'），然後值 ServicePackageActivationId 的一律是空字串。
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

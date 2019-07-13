@@ -1,0 +1,138 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+    name: ApplicationHealthStateFilter
+    fullName: ApplicationHealthStateFilter
+    children:
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定義比對準則，來判斷應用程式是否應該包含叢集健全狀況區塊中。
+      一個篩選條件可以比對零、 一或多個應用程式，這將根據其屬性。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+    name: applicationNameFilter
+    fullName: applicationNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      符合篩選條件，為網狀架構 uri 的應用程式名稱。 篩選條件只套用至指定的應用程式，若有的話。
+      如果應用程式不存在，此篩選器為基礎的叢集健全狀況區塊會傳回沒有任何應用程式。
+      如果應用程式存在，就會包含在叢集健全狀況區塊如果它採用的其他篩選屬性。
+      如果未指定，則所有應用程式，將比對其他篩選成員，例如健康情況狀態篩選。
+    optional: true
+    syntax:
+      content: 'applicationNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+    name: applicationTypeNameFilter
+    fullName: applicationTypeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      符合篩選條件的應用程式類型名稱。
+      如果指定，篩選會套用只到選取的應用程式類型的應用程式，如果有的話。
+      如果沒有指定的應用程式類型的應用程式存在，此篩選器為基礎的叢集健全狀況區塊會傳回沒有任何應用程式。
+      指定的應用程式類型的每個應用程式包含在叢集健全狀況區塊中，如果它採用的其他篩選屬性。
+      如果未指定，則所有應用程式，將比對其他篩選成員，例如健康情況狀態篩選。
+    optional: true
+    syntax:
+      content: 'applicationTypeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+    name: deployedApplicationFilters
+    fullName: deployedApplicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      定義篩選條件，指定要包含在傳回的叢集健全狀況已部署應用程式區塊做為應用程式的子系清單。 如果父系應用程式符合篩選條件，就會傳回已部署的應用程式。
+      如果清單是空的則會不傳回任何已部署的應用程式。 所有已部署的應用程式都會用來評估父代的應用程式彙總健全狀況狀態，不論輸入篩選器。
+      應用程式篩選條件可以指定多個部署的應用程式篩選器。
+      比方說，它可以指定篩選器，以傳回所有已部署的應用程式的健全狀況狀態錯誤和永遠包含指定的節點上部署的應用程式的另一個篩選條件。
+    optional: true
+    syntax:
+      content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      適用於應用程式的健全狀況狀態之篩選條件。 它可讓選取的應用程式，如果兩者相符的所需的健全狀況狀態。
+      可能的值為其中一個下列的健全狀況狀態的整數值。 只會傳回符合篩選條件的應用程式。 所有應用程式用來評估彙總的叢集健康情況狀態。
+      如果未指定，預設值會是 None，除非指定的應用程式名稱或應用程式類型名稱。 如果篩選器有預設值，指定應用程式名稱，則會傳回相符的應用程式。
+      狀態值是以旗標為基礎的列舉，因此值可以是使用位元 'OR' 運算子取得的這些值的組合。
+      例如，如果提供的值為 6，它會符合含 HealthState 值為 OK (2) 和 Warning (4) 的應用程式。
+      - Default-預設值。 符合任何 HealthState。 值為零。
+      - None-不符合任何 HealthState 值的篩選。 用來在指定狀態集合沒有任何結果時傳回。 值為 1。
+      - Ok-符合輸入含 HealthState 值 Ok 的篩選條件。 值為 2。
+      - 警告-篩選符合輸入含 HealthState 值 Warning。 值為 4。
+      - Error-符合輸入含 HealthState 值 Error 的篩選條件。 值為 8。
+      - All-符合輸入含任何 HealthState 值的篩選條件。 值為 65535。 預設值：0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    name: serviceFilters
+    fullName: serviceFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      定義篩選條件，指定要包含在傳回的叢集健康狀態中的哪些服務區塊做為應用程式的子系清單。 只有當父應用程式符合篩選條件，則會傳回服務。
+      如果清單是空的則會不傳回任何服務。 所有的服務用來評估父代的應用程式彙總健全狀況狀態，不論輸入篩選器。
+      應用程式篩選條件可以指定多個服務篩選條件。
+      比方說，它可以指定篩選器，以傳回所有服務的健全狀況狀態錯誤和永遠包含服務名稱來識別服務的另一個篩選條件。
+    optional: true
+    syntax:
+      content: 'serviceFilters?: ServiceHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    name: 'DeployedApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateFilter
+        fullName: DeployedApplicationHealthStateFilter
+        uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter[]'
+    name: 'ServiceHealthStateFilter[]'
+    spec.typeScript:
+      - name: ServiceHealthStateFilter
+        fullName: ServiceHealthStateFilter
+        uid: '@azure/servicefabric.ServiceHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

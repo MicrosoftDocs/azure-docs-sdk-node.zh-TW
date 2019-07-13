@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList'
+    name: PagedApplicationTypeInfoList
+    fullName: PagedApplicationTypeInfoList
+    children:
+      - '@azure/servicefabric.PagedApplicationTypeInfoList.continuationToken'
+      - '@azure/servicefabric.PagedApplicationTypeInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: 應用程式的清單類型，會佈建，或在叢集中佈建。 清單被分頁時的所有結果無法放入單一訊息。 下一步 的結果集可以取得執行相同的查詢使用這份清單中所提供的接續 token。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      接續權杖參數可用來取得下一組結果。 接續權杖會隨附在 API 的回應中時，系統的結果無法放入單一回應。 當此值傳遞至下一個 API 呼叫時，API 會傳回下一組結果。
+      如果不有任何進一步的結果，然後接續 token 不包含在回應中。
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 應用程式類型資訊的清單。
+    optional: true
+    syntax:
+      content: 'items?: ApplicationTypeInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationTypeInfo[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationTypeInfo[]'
+    name: 'ApplicationTypeInfo[]'
+    spec.typeScript:
+      - name: ApplicationTypeInfo
+        fullName: ApplicationTypeInfo
+        uid: '@azure/servicefabric.ApplicationTypeInfo'
+      - name: '[]'
+        fullName: '[]'

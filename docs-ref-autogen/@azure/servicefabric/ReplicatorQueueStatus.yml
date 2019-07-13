@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus'
+    name: ReplicatorQueueStatus
+    fullName: ReplicatorQueueStatus
+    children:
+      - '@azure/servicefabric.ReplicatorQueueStatus.committedSequenceNumber'
+      - '@azure/servicefabric.ReplicatorQueueStatus.completedSequenceNumber'
+      - '@azure/servicefabric.ReplicatorQueueStatus.firstSequenceNumber'
+      - '@azure/servicefabric.ReplicatorQueueStatus.lastSequenceNumber'
+      - '@azure/servicefabric.ReplicatorQueueStatus.queueMemorySize'
+      - '@azure/servicefabric.ReplicatorQueueStatus.queueUtilizationPercentage'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      提供用於 service fabric 複寫器佇列的各種統計資料。
+      包含 service fabric 複寫器，例如複寫/複製佇列使用量、 上次收到的認可時間戳記等相關資訊。根據複寫器的角色，在這種類型的屬性會代表不同的意義。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus.committedSequenceNumber'
+    name: committedSequenceNumber
+    fullName: committedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      在主要複寫器中，這是語意序號最高的次要複本寫入仲裁已傳送通知的作業。
+      在次要複寫器中，這是語意收到來自主要排序作業的最高的序號。
+    optional: true
+    syntax:
+      content: 'committedSequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus.completedSequenceNumber'
+    name: completedSequenceNumber
+    fullName: completedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      在主要複寫器中，這是語意上的所有作業的次要複本已傳送通知的最高序號。
+      在次要複寫器中，這是語意已套用至永續性狀態的最高的序號。
+    optional: true
+    syntax:
+      content: 'completedSequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus.firstSequenceNumber'
+    name: firstSequenceNumber
+    fullName: firstSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      在主要複寫器中，這是語意上的所有作業的次要複本已傳送通知的序號。
+      在次要複寫器中，這是出現在佇列中作業的最小序號。
+    optional: true
+    syntax:
+      content: 'firstSequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus.lastSequenceNumber'
+    name: lastSequenceNumber
+    fullName: lastSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 代表作業佇列中可用的最新的序號。
+    optional: true
+    syntax:
+      content: 'lastSequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus.queueMemorySize'
+    name: queueMemorySize
+    fullName: queueMemorySize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 代表以位元組為單位佇列所取用的虛擬記憶體。
+    optional: true
+    syntax:
+      content: 'queueMemorySize?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus.queueUtilizationPercentage'
+    name: queueUtilizationPercentage
+    fullName: queueUtilizationPercentage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 代表佇列的使用量。 值為 0 表示佇列是空的和 100 的值，指出佇列已滿。
+    optional: true
+    syntax:
+      content: 'queueUtilizationPercentage?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

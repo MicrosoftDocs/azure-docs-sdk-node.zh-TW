@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 選擇性參數。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -56,7 +56,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 其宣告的工作應該包含在清單中的修復執行程式名稱。
     optional: true
     syntax:
       content: 'executorFilter?: undefined | string'
@@ -101,7 +101,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      下列值的位元 OR，指定結果清單中應該包含哪些工作狀態。
+      - 1 - 已建立
+      - 2-宣告
+      - 4-準備
+      - 8-核准
+      - 16-執行
+      - 32-還原
+      - 64 - 已完成
     optional: true
     syntax:
       content: 'stateFilter?: undefined | number'
@@ -116,7 +124,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 要比對的修復工作識別碼前置詞。
     optional: true
     syntax:
       content: 'taskIdFilter?: undefined | string'

@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosTargetFilter'
+    name: ChaosTargetFilter
+    fullName: ChaosTargetFilter
+    children:
+      - '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+      - '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定義所有篩選器目標混亂錯誤，例如，只有特定節點類型的錯誤或特定應用程式。
+      如果未使用 ChaosTargetFilter，混亂會針對所有叢集實體引發錯誤。 如果使用 ChaosTargetFilter，則混亂只會針對符合 ChaosTargetFilter 規格的實體引發錯誤。 NodeTypeInclusionList 和 ApplicationInclusionList 只允許集合聯集語意。
+      您不能指定 NodeTypeInclusionList 和 ApplicationInclusionList 的交集。 例如，您不能指定「只有在此應用程式位於該節點類型上時才對它引發錯誤」。
+      若 NodeTypeInclusionList 或 ApplicationInclusionList 中包含某個實體，則該實體就不能使用 ChaosTargetFilter 排除。 即使 applicationX 並未出現在 ApplicationInclusionList 中，但在某些混亂反覆項目中也能對 applicationX 引發錯誤，因為它正好位於包括在 NodeTypeInclusionList 中的 nodeTypeY 的節點上。 如果 NodeTypeInclusionList 和 ApplicationInclusionList 都是 Null 或空白，則會擲回 ArgumentException。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+    name: applicationInclusionList
+    fullName: applicationInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要包含在混亂錯誤中的應用程式 URI 清單。
+      屬於這些應用程式之服務的所有複本，都適用於由混亂所引發的複本錯誤 (重新啟動複本、移除複本、移動主要複本和移動次要複本)。
+      只有在程式碼封裝只裝載這些應用程式的複本時，混亂才可以將程式碼封裝重新啟動。
+      如果某個應用程式未出現在此清單中，系統仍然可能在某些混亂反覆項目中針對它引發錯誤，前提是該應用程式位於某個包含在 NodeTypeInclusionList 中之節點類型的節點上。
+      不過，如果 applicationX 會繫結至 nodeTypeY，放置條件約束和對 applicationx 引發不存在 ApplicationInclusionList，而且 nodeTypeY 缺少 nodetypeinclusionlist 中，然後對 applicationx 引發將永遠不會發生錯誤。
+      您最多可在此清單中包含 1000 個應用程式名稱，若要增加此數目，則必須針對 MaxNumberOfApplicationsInChaosEntityFilter 設定進行設定升級。
+    optional: true
+    syntax:
+      content: 'applicationInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    name: nodeTypeInclusionList
+    fullName: nodeTypeInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要包含在混亂錯誤中的節點類型清單。
+      針對這些節點類型的節點，會啟用所有錯誤類型 (重新啟動節點、重新啟動程式碼封裝、移除複本、重新啟動複本、移動主要複本，以及移動次要複本)。
+      如果節點型別 （假設為 NodeTypeX） 未未出現在 NodeTypeInclusionList 中，則永遠不會啟用的節點，節點層級錯誤 （例如 NodeRestart)，但程式碼封裝和複本錯誤可以仍針對 NodeTypeX 啟用，如果在應用程式ApplicationInclusionList。
+      剛好位於 NodeTypeX 的節點。
+      您最多可在此清單中包含 100 個節點類型名稱，若要增加此數目，則必須針對 MaxNumberOfNodeTypesInChaosEntityFilter 設定進行設定升級。
+    optional: true
+    syntax:
+      content: 'nodeTypeInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'
