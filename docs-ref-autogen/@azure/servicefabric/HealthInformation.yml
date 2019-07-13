@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.HealthInformation'
+    name: HealthInformation
+    fullName: HealthInformation
+    children:
+      - '@azure/servicefabric.HealthInformation.description'
+      - '@azure/servicefabric.HealthInformation.healthState'
+      - '@azure/servicefabric.HealthInformation.property'
+      - '@azure/servicefabric.HealthInformation.removeWhenExpired'
+      - '@azure/servicefabric.HealthInformation.sequenceNumber'
+      - '@azure/servicefabric.HealthInformation.sourceId'
+      - '@azure/servicefabric.HealthInformation.timeToLiveInMilliSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="aadd9-101">表示一般的健全狀況報表資訊。</span><span class="sxs-lookup"><span data-stu-id="aadd9-101">Represents common health report information.</span></span> <span data-ttu-id="aadd9-102">包含所有傳送至健康狀態存放區的健康情況報告中和所有健康情況查詢所傳回的健全狀況事件。</span><span class="sxs-lookup"><span data-stu-id="aadd9-102">It is included in all health reports sent to health store and in all health events returned by health queries.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="aadd9-103">健康情況資訊的描述。</span><span class="sxs-lookup"><span data-stu-id="aadd9-103">The description of the health information.</span></span> <span data-ttu-id="aadd9-104">這代表任意格式的文字，可用來新增人類可讀的報告相關資訊。</span><span class="sxs-lookup"><span data-stu-id="aadd9-104">It represents free text used to add human readable information about the report.</span></span>
+      <span data-ttu-id="aadd9-105">描述的字串長度上限為 4096 個字元。</span><span class="sxs-lookup"><span data-stu-id="aadd9-105">The maximum string length for the description is 4096 characters.</span></span>
+      <span data-ttu-id="aadd9-106">如果提供的字串超出此長度，將會自動截斷。</span><span class="sxs-lookup"><span data-stu-id="aadd9-106">If the provided string is longer, it will be automatically truncated.</span></span>
+      <span data-ttu-id="aadd9-107">截斷時，描述的最後字元會包含 "[已截斷]" 標記，而總字串大小會是 4096 個字元。</span><span class="sxs-lookup"><span data-stu-id="aadd9-107">When truncated, the last characters of the description contain a marker "[Truncated]", and total string size is 4096 characters.</span></span>
+      <span data-ttu-id="aadd9-108">此標記的存在可向使用者指出已發生截斷情況。</span><span class="sxs-lookup"><span data-stu-id="aadd9-108">The presence of the marker indicates to users that truncation occurred.</span></span>
+      <span data-ttu-id="aadd9-109">請注意，截斷時，描述的字元數會少於來自原始字串的 4096 個字元。</span><span class="sxs-lookup"><span data-stu-id="aadd9-109">Note that when truncated, the description has less than 4096 characters from the original string.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aadd9-110">Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：''Invalid''、 ''Ok''、 ''Warning''、 ''Error''、 ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="aadd9-110">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    syntax:
+      content: 'healthState: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.property'
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="aadd9-111">健康情況資訊的屬性。</span><span class="sxs-lookup"><span data-stu-id="aadd9-111">The property of the health information.</span></span> <span data-ttu-id="aadd9-112">實體可以有不同屬性的健康情況報告。</span><span class="sxs-lookup"><span data-stu-id="aadd9-112">An entity can have health reports for different properties.</span></span>
+      <span data-ttu-id="aadd9-113">屬性是一個字串而不是固定的列舉，以便讓報告程式在分類觸發報告的狀態條件時較有彈性。</span><span class="sxs-lookup"><span data-stu-id="aadd9-113">The property is a string and not a fixed enumeration to allow the reporter flexibility to categorize the state condition that triggers the report.</span></span>
+      <span data-ttu-id="aadd9-114">例如，SourceId 為 "LocalWatchdog" 的報告程式可以監視節點上可用磁碟的狀態，因此可以針對該節點回報 "AvailableDisk" 屬性。</span><span class="sxs-lookup"><span data-stu-id="aadd9-114">For example, a reporter with SourceId "LocalWatchdog" can monitor the state of the available disk on a node, so it can report "AvailableDisk" property on that node.</span></span>
+      <span data-ttu-id="aadd9-115">該相同報告程式還可以監視節點連線能力，因此可以針對該相同節點回報 "Connectivity" 屬性。</span><span class="sxs-lookup"><span data-stu-id="aadd9-115">The same reporter can monitor the node connectivity, so it can report a property "Connectivity" on the same node.</span></span>
+      <span data-ttu-id="aadd9-116">在健康狀態資料存放區中，會將這些報告視為所指定節點的個別健康情況事件。</span><span class="sxs-lookup"><span data-stu-id="aadd9-116">In the health store, these reports are treated as separate health events for the specified node.</span></span>
+      <span data-ttu-id="aadd9-117">與 SourceId 搭配使用時，此屬性可唯一識別健康情況資訊。</span><span class="sxs-lookup"><span data-stu-id="aadd9-117">Together with the SourceId, the property uniquely identifies the health information.</span></span>
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.removeWhenExpired'
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="aadd9-118">指出是否要在報告到期時將報告自健康狀態資料存放區中移除的值。</span><span class="sxs-lookup"><span data-stu-id="aadd9-118">Value that indicates whether the report is removed from health store when it expires.</span></span>
+      <span data-ttu-id="aadd9-119">如果設定為 true，就會在報告到期後，將報告自健康狀態資料存放區中移除。</span><span class="sxs-lookup"><span data-stu-id="aadd9-119">If set to true, the report is removed from the health store after it expires.</span></span>
+      <span data-ttu-id="aadd9-120">如果設定為 false，則會在報告到期後，將報告視為錯誤。</span><span class="sxs-lookup"><span data-stu-id="aadd9-120">If set to false, the report is treated as an error when expired.</span></span> <span data-ttu-id="aadd9-121">此屬性的值預設為 false。</span><span class="sxs-lookup"><span data-stu-id="aadd9-121">The value of this property is false by default.</span></span>
+      <span data-ttu-id="aadd9-122">當用戶端會定期回報時，應該將 RemoveWhenExpired 設定為 false (預設值)。</span><span class="sxs-lookup"><span data-stu-id="aadd9-122">When clients report periodically, they should set RemoveWhenExpired false (default).</span></span>
+      <span data-ttu-id="aadd9-123">如此一來，如果報告程式有問題 （例如死結），而且無法回報，實體會在評估錯誤健康情況報告過期時。</span><span class="sxs-lookup"><span data-stu-id="aadd9-123">This way, if the reporter has issues (e.g. deadlock) and can't report, the entity is evaluated at error when the health report expires.</span></span>
+      <span data-ttu-id="aadd9-124">這會將實體標幟為處於「錯誤」健康情況狀態。</span><span class="sxs-lookup"><span data-stu-id="aadd9-124">This flags the entity as being in Error health state.</span></span>
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="aadd9-125">此健康情況報告的序號 (以數值字串表示)。</span><span class="sxs-lookup"><span data-stu-id="aadd9-125">The sequence number for this health report as a numeric string.</span></span>
+      <span data-ttu-id="aadd9-126">健康狀態資料存放區會使用報告序號來偵測過時的報告。</span><span class="sxs-lookup"><span data-stu-id="aadd9-126">The report sequence number is used by the health store to detect stale reports.</span></span>
+      <span data-ttu-id="aadd9-127">如果未指定，就會在新增報告時，由健康情況用戶端自動產生序號。</span><span class="sxs-lookup"><span data-stu-id="aadd9-127">If not specified, a sequence number is auto-generated by the health client when a report is added.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.sourceId'
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="aadd9-128">針對產生健康情況資訊的用戶端/看門狗/系統元件，用來識別的來源名稱。</span><span class="sxs-lookup"><span data-stu-id="aadd9-128">The source name that identifies the client/watchdog/system component that generated the health information.</span></span>
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.timeToLiveInMilliSeconds'
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="aadd9-129">此健康情況報告的有效持續時間。</span><span class="sxs-lookup"><span data-stu-id="aadd9-129">The duration for which this health report is valid.</span></span> <span data-ttu-id="aadd9-130">此欄位使用 ISO8601 格式指定持續時間。</span><span class="sxs-lookup"><span data-stu-id="aadd9-130">This field uses ISO8601 format for specifying the duration.</span></span>
+      <span data-ttu-id="aadd9-131">當用戶端會定期回報時，其傳送報告的頻率應該高於存留時間。</span><span class="sxs-lookup"><span data-stu-id="aadd9-131">When clients report periodically, they should send reports with higher frequency than time to live.</span></span>
+      <span data-ttu-id="aadd9-132">如果用戶端會針對轉換進行回報，則可以將存留時間設定為無限。</span><span class="sxs-lookup"><span data-stu-id="aadd9-132">If clients report on transition, they can set the time to live to infinite.</span></span>
+      <span data-ttu-id="aadd9-133">如果 RemoveWhenExpired 為 true，當存留時間到期時，系統會將包含健康情況資訊的健康情況事件自健康狀態資料存放區中移除，如果 RemoveWhenExpired 為 false，則會將該事件評估為錯誤。</span><span class="sxs-lookup"><span data-stu-id="aadd9-133">When time to live expires, the health event that contains the health information is either removed from health store, if RemoveWhenExpired is true, or evaluated at error, if RemoveWhenExpired false.</span></span>
+      <span data-ttu-id="aadd9-134">如果未指定，存留時間會預設為 infinite 值。</span><span class="sxs-lookup"><span data-stu-id="aadd9-134">If not specified, time to live defaults to infinite value.</span></span>
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

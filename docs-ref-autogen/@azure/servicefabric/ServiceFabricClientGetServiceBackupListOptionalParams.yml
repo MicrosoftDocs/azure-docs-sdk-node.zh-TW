@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="cd085-101">選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="cd085-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0c54e-101">這可以用來中止要求訊號。</span><span class="sxs-lookup"><span data-stu-id="0c54e-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="cd085-102">這可以用來中止要求訊號。</span><span class="sxs-lookup"><span data-stu-id="cd085-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -44,7 +44,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="cd085-103">接續權杖參數可用來取得下一組結果。</span><span class="sxs-lookup"><span data-stu-id="cd085-103">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id="cd085-104">當來自系統的結果無法放入單一回應中時，API 的回應中會包含具有非空白值的接續權杖。</span><span class="sxs-lookup"><span data-stu-id="cd085-104">A continuation token with a non-empty value is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id="cd085-105">當此值傳遞至下一個 API 呼叫時，API 會傳回下一組結果。</span><span class="sxs-lookup"><span data-stu-id="cd085-105">When this value is passed to the next API call, the API returns next set of results.</span></span> <span data-ttu-id="cd085-106">如果沒有任何進一步的結果，接續權杖就不會包含值。</span><span class="sxs-lookup"><span data-stu-id="cd085-106">If there are no further results, then the continuation token does not contain a value.</span></span> <span data-ttu-id="cd085-107">此參數的值不能經過 URL 編碼。</span><span class="sxs-lookup"><span data-stu-id="cd085-107">The value of this parameter should not be URL encoded.</span></span>'
     optional: true
     syntax:
       content: 'continuationToken?: undefined | string'
@@ -59,7 +59,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="0c54e-102">{物件}[customHeaders]使用者定義將在傳送要求之前套用的自訂要求標頭。</span><span class="sxs-lookup"><span data-stu-id="0c54e-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="cd085-108">{物件}[customHeaders]使用者定義將在傳送要求之前套用的自訂要求標頭。</span><span class="sxs-lookup"><span data-stu-id="cd085-108">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -74,7 +74,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="cd085-109">指定結束日期時間的列舉中的日期時間格式的備份。</span><span class="sxs-lookup"><span data-stu-id="cd085-109">Specify the end date time till which to enumerate backups, in datetime format.</span></span> <span data-ttu-id="cd085-110">必須指定日期時間 ISO8601 格式。</span><span class="sxs-lookup"><span data-stu-id="cd085-110">The date time must be specified in ISO8601 format.</span></span> <span data-ttu-id="cd085-111">這是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="cd085-111">This is an optional parameter.</span></span> <span data-ttu-id="cd085-112">如果未指定，會完成列舉到最新的備份。</span><span class="sxs-lookup"><span data-stu-id="cd085-112">If not specified, enumeration is done till the most recent backup.</span></span>'
     optional: true
     syntax:
       content: 'endDateTimeFilter?: Date'
@@ -89,7 +89,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="cd085-113">指定是否要取得指定的時間範圍的資料分割只有最新可用的備份。</span><span class="sxs-lookup"><span data-stu-id="cd085-113">Specifies whether to get only the most recent backup available for a partition for the specified time range.</span></span> <span data-ttu-id="cd085-114">預設值： false。</span><span class="sxs-lookup"><span data-stu-id="cd085-114">Default value: false.</span></span>'
     optional: true
     syntax:
       content: 'latest?: undefined | false | true'
@@ -104,7 +104,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="cd085-115">分頁式查詢時傳回的最大結果數目。</span><span class="sxs-lookup"><span data-stu-id="cd085-115">The maximum number of results to be returned as part of the paged queries.</span></span> <span data-ttu-id="cd085-116">此參數定義傳回結果數目的上限。</span><span class="sxs-lookup"><span data-stu-id="cd085-116">This parameter defines the upper bound on the number of results returned.</span></span> <span data-ttu-id="cd085-117">根據設定中所定義的訊息大小限制上限，如果所傳回的結果無法放入訊息中，則它們可以小於指定的結果上限。</span><span class="sxs-lookup"><span data-stu-id="cd085-117">The results returned can be less than the specified maximum results if they do not fit in the message as per the max message size restrictions defined in the configuration.</span></span> <span data-ttu-id="cd085-118">如果此參數為零或未指定，則分頁式查詢會在傳回訊息中盡可能包含較多結果。</span><span class="sxs-lookup"><span data-stu-id="cd085-118">If this parameter is zero or not specified, the paged query includes as many results as possible that fit in the return message.</span></span> <span data-ttu-id="cd085-119">預設值：0.</span><span class="sxs-lookup"><span data-stu-id="cd085-119">Default value: 0.</span></span>'
     optional: true
     syntax:
       content: 'maxResults?: undefined | number'
@@ -119,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0c54e-103">下載進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="0c54e-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="cd085-120">下載進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="cd085-120">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -134,7 +134,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0c54e-104">在上傳進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="0c54e-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="cd085-121">在上傳進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="cd085-121">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -149,7 +149,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="cd085-122">指定開始日期時間要列舉的日期時間格式的備份。</span><span class="sxs-lookup"><span data-stu-id="cd085-122">Specify the start date time from which to enumerate backups, in datetime format.</span></span> <span data-ttu-id="cd085-123">必須指定日期時間 ISO8601 格式。</span><span class="sxs-lookup"><span data-stu-id="cd085-123">The date time must be specified in ISO8601 format.</span></span> <span data-ttu-id="cd085-124">這是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="cd085-124">This is an optional parameter.</span></span> <span data-ttu-id="cd085-125">如果未指定，會列舉從一開始的所有備份。</span><span class="sxs-lookup"><span data-stu-id="cd085-125">If not specified, all backups from the beginning are enumerated.</span></span>'
     optional: true
     syntax:
       content: 'startDateTimeFilter?: Date'
@@ -164,7 +164,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0c54e-105">要求可能需要之前自動終止的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="0c54e-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="cd085-126">要求可能需要之前自動終止的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="cd085-126">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -179,7 +179,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="cd085-127">執行作業，以秒為單位的伺服器逾時。</span><span class="sxs-lookup"><span data-stu-id="cd085-127">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="cd085-128">此逾時指定用戶端願意等待完成要求的作業的持續時間。</span><span class="sxs-lookup"><span data-stu-id="cd085-128">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="cd085-129">此參數的預設值為 60 秒。</span><span class="sxs-lookup"><span data-stu-id="cd085-129">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="cd085-130">預設值：60.</span><span class="sxs-lookup"><span data-stu-id="cd085-130">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo'
+    name: StatelessServiceInstanceInfo
+    fullName: StatelessServiceInstanceInfo
+    children:
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.address'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.healthState'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.instanceId'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.lastInBuildDurationInSeconds'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.nodeName'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.replicaStatus'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="c54e3-101">代表無狀態服務執行個體。</span><span class="sxs-lookup"><span data-stu-id="c54e3-101">Represents a stateless service instance.</span></span> <span data-ttu-id="c54e3-102">這包括識別、 狀態、 健康情況、 節點名稱、 執行時間，以及執行個體的其他詳細資料的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="c54e3-102">This includes information about the identity, status, health, node name, uptime, and other details about the instance.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.address'
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c54e3-103">正在接聽位址的複本。</span><span class="sxs-lookup"><span data-stu-id="c54e3-103">The address the replica is listening on.</span></span>
+    optional: true
+    syntax:
+      content: 'address?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c54e3-104">Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：''Invalid''、 ''Ok''、 ''Warning''、 ''Error''、 ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="c54e3-104">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.instanceId'
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c54e3-105">無狀態服務執行個體的識別碼。</span><span class="sxs-lookup"><span data-stu-id="c54e3-105">Id of a stateless service instance.</span></span> <span data-ttu-id="c54e3-106">Service Fabric 會使用 InstanceId 來唯一識別的無狀態服務分割區的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c54e3-106">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="c54e3-107">它是資料分割內唯一的並不會變更執行個體的存留期。</span><span class="sxs-lookup"><span data-stu-id="c54e3-107">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="c54e3-108">如果在相同或不同的節點上，執行個體已容錯移轉，它會取得不同值的執行個體識別碼。</span><span class="sxs-lookup"><span data-stu-id="c54e3-108">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>'
+    optional: true
+    syntax:
+      content: 'instanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.lastInBuildDurationInSeconds'
+    name: lastInBuildDurationInSeconds
+    fullName: lastInBuildDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c54e3-109">以秒為單位的建置期間的複本最後一個。</span><span class="sxs-lookup"><span data-stu-id="c54e3-109">The last in build duration of the replica in seconds.</span></span>
+    optional: true
+    syntax:
+      content: 'lastInBuildDurationInSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c54e3-110">Service Fabric 節點的名稱。</span><span class="sxs-lookup"><span data-stu-id="c54e3-110">The name of a Service Fabric node.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.replicaStatus'
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c54e3-111">服務的複本狀態。</span><span class="sxs-lookup"><span data-stu-id="c54e3-111">The status of a replica of a service.</span></span> <span data-ttu-id="c54e3-112">可能的值包括：'' Invalid''、 ''InBuild''，''待命 」，「 就緒 」，''下''、 ''卸除''</span><span class="sxs-lookup"><span data-stu-id="c54e3-112">Possible values include: ''Invalid'', ''InBuild'', ''Standby'', ''Ready'', ''Down'', ''Dropped''</span></span>'
+    optional: true
+    syntax:
+      content: 'replicaStatus?: ReplicaStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c54e3-113">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="c54e3-113">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ReplicaStatus'
+    name: ReplicaStatus
+    spec.typeScript:
+      - name: ReplicaStatus
+        fullName: ReplicaStatus
+        uid: '@azure/servicefabric.ReplicaStatus'

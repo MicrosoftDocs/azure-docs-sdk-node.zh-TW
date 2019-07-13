@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.NodeHealthEvaluation'
+    name: NodeHealthEvaluation
+    fullName: NodeHealthEvaluation
+    children:
+      - '@azure/servicefabric.NodeHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.NodeHealthEvaluation.description'
+      - '@azure/servicefabric.NodeHealthEvaluation.kind'
+      - '@azure/servicefabric.NodeHealthEvaluation.nodeName'
+      - '@azure/servicefabric.NodeHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="598dd-101">表示包含資料和健康狀態存放區用來評估健康情況的演算法資訊的節點的健全狀況評估。</span><span class="sxs-lookup"><span data-stu-id="598dd-101">Represents health evaluation for a node, containing information about the data and the algorithm used by health store to evaluate health.</span></span> <span data-ttu-id="598dd-102">評估的彙總健全狀況狀態是錯誤或警告時，才傳回。</span><span class="sxs-lookup"><span data-stu-id="598dd-102">The evaluation is returned only when the aggregated health state is either Error or Warning.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="598dd-103">Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：''Invalid''、 ''Ok''、 ''Warning''、 ''Error''、 ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="598dd-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="598dd-104">健康情況評估，這代表評估程序的摘要描述。</span><span class="sxs-lookup"><span data-stu-id="598dd-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="598dd-105">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="598dd-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Node"'
+      return:
+        type:
+          - '"Node"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="598dd-106">Service Fabric 節點的名稱。</span><span class="sxs-lookup"><span data-stu-id="598dd-106">The name of a Service Fabric node.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="598dd-107">狀況不良的評估，導致目前的節點的彙總的健全狀態的清單。</span><span class="sxs-lookup"><span data-stu-id="598dd-107">List of unhealthy evaluations that led to the current aggregated health state of the node.</span></span> <span data-ttu-id="598dd-108">狀況不良的評估的類型可以是 EventHealthEvaluation。</span><span class="sxs-lookup"><span data-stu-id="598dd-108">The types of the unhealthy evaluations can be EventHealthEvaluation.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

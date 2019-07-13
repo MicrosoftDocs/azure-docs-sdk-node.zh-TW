@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="9ee6c-101">選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -26,7 +26,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="11472-101">這可以用來中止要求訊號。</span><span class="sxs-lookup"><span data-stu-id="11472-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="9ee6c-102">這可以用來中止要求訊號。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -41,7 +41,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="9ee6c-103">描述用來評估應用程式或其中一個子系的健全狀況的健全狀況原則。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-103">Describes the health policies used to evaluate the health of an application or one of its children.</span></span>
+      <span data-ttu-id="9ee6c-104">如果不存在，健全狀況評估會使用健全狀況原則，從應用程式資訊清單 或 預設健全狀況原則。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-104">If not present, the health evaluation uses the health policy from application manifest or the default health policy.</span></span>
     optional: true
     syntax:
       content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
@@ -56,7 +58,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="11472-102">{物件}[customHeaders]使用者定義將在傳送要求之前套用的自訂要求標頭。</span><span class="sxs-lookup"><span data-stu-id="11472-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="9ee6c-105">{物件}[customHeaders]使用者定義將在傳送要求之前套用的自訂要求標頭。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-105">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -71,7 +73,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="9ee6c-106">可根據健康情況狀態來篩選所傳回的 HealthEvent 物件集合。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-106">Allows filtering the collection of HealthEvent objects returned based on health state.</span></span>
+      <span data-ttu-id="9ee6c-107">此參數的可能值包括下列其中一個健康情況狀態的整數值。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-107">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="9ee6c-108">只會傳回符合篩選條件的事件。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-108">Only events that match the filter are returned.</span></span> <span data-ttu-id="9ee6c-109">所有事件都會用來評估彙總的健康情況狀態。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-109">All events are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="9ee6c-110">如果未指定，則會傳回所有項目。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-110">If not specified, all entries are returned.</span></span> <span data-ttu-id="9ee6c-111">狀態值是以旗標為基礎的列舉，因而此值可以是使用位元 'OR' 運算子所取得這些值的組合。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-111">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using the bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="9ee6c-112">例如，如果提供的值為 6，則會傳回 HealthState 值為 OK (2) 和 Warning (4) 的所有事件。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-112">For example, If the provided value is 6 then all of the events with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="9ee6c-113">Default-預設值。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-113">Default - Default value.</span></span> <span data-ttu-id="9ee6c-114">符合任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-114">Matches any HealthState.</span></span> <span data-ttu-id="9ee6c-115">值為零。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-115">The value is zero.</span></span>
+      - <span data-ttu-id="9ee6c-116">None-不符合任何 HealthState 值的篩選。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="9ee6c-117">用來在指定狀態集合沒有任何結果時傳回。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="9ee6c-118">值為 1。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-118">The value is 1.</span></span>
+      - <span data-ttu-id="9ee6c-119">Ok-符合輸入含 HealthState 值 Ok 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="9ee6c-120">值為 2。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-120">The value is 2.</span></span>
+      - <span data-ttu-id="9ee6c-121">警告-篩選符合輸入含 HealthState 值 Warning。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="9ee6c-122">值為 4。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-122">The value is 4.</span></span>
+      - <span data-ttu-id="9ee6c-123">Error-符合輸入含 HealthState 值 Error 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="9ee6c-124">值為 8。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-124">The value is 8.</span></span>
+      - <span data-ttu-id="9ee6c-125">All-符合輸入含任何 HealthState 值的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="9ee6c-126">值為 65535。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-126">The value is 65535.</span></span> <span data-ttu-id="9ee6c-127">預設值：0.</span><span class="sxs-lookup"><span data-stu-id="9ee6c-127">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -86,7 +99,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="11472-103">下載進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="11472-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="9ee6c-128">下載進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-128">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -101,7 +114,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="11472-104">在上傳進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="11472-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="9ee6c-129">在上傳進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-129">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -116,7 +129,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="11472-105">要求可能需要之前自動終止的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="11472-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="9ee6c-130">要求可能需要之前自動終止的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-130">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -131,7 +144,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="9ee6c-131">執行作業，以秒為單位的伺服器逾時。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-131">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="9ee6c-132">此逾時指定用戶端願意等待完成要求的作業的持續時間。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-132">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="9ee6c-133">此參數的預設值為 60 秒。</span><span class="sxs-lookup"><span data-stu-id="9ee6c-133">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="9ee6c-134">預設值：60.</span><span class="sxs-lookup"><span data-stu-id="9ee6c-134">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

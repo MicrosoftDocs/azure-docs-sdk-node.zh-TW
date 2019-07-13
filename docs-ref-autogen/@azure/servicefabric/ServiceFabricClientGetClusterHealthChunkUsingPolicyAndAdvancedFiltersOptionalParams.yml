@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="cb661-101">選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="cb661-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -25,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0a36a-101">這可以用來中止要求訊號。</span><span class="sxs-lookup"><span data-stu-id="0a36a-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="cb661-102">這可以用來中止要求訊號。</span><span class="sxs-lookup"><span data-stu-id="cb661-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="cb661-103">描述用來評估叢集健康情況和篩選器以選取要傳回哪些叢集實體叢集和應用程式健全狀況原則。</span><span class="sxs-lookup"><span data-stu-id="cb661-103">Describes the cluster and application health policies used to evaluate the cluster health and the filters to select which cluster entities to be returned.</span></span>
+      <span data-ttu-id="cb661-104">如果叢集健康狀態原則存在，它用來評估叢集事件與叢集節點。</span><span class="sxs-lookup"><span data-stu-id="cb661-104">If the cluster health policy is present, it is used to evaluate the cluster events and the cluster nodes.</span></span> <span data-ttu-id="cb661-105">如果不存在的話，叢集健全狀況原則定義叢集資訊清單或預設叢集健康狀態原則中的健全狀況評估用途。</span><span class="sxs-lookup"><span data-stu-id="cb661-105">If not present, the health evaluation uses the cluster health policy defined in the cluster manifest or the default cluster health policy.</span></span>
+      <span data-ttu-id="cb661-106">根據預設，每個應用程式使用，如果資訊清單中未不定義任何原則，在應用程式資訊清單或預設的健全狀況原則，定義的特定應用程式健全狀況原則評估。</span><span class="sxs-lookup"><span data-stu-id="cb661-106">By default, each application is evaluated using its specific application health policy, defined in the application manifest, or the default health policy, if no policy is defined in manifest.</span></span>
+      <span data-ttu-id="cb661-107">如果指定應用程式健康狀態原則對應，而且有應用程式的項目，指定的應用程式健全狀況原則用來評估應用程式健全狀況。</span><span class="sxs-lookup"><span data-stu-id="cb661-107">If the application health policy map is specified, and it has an entry for an application, the specified application health policy is used to evaluate the application health.</span></span>
+      <span data-ttu-id="cb661-108">使用者可以指定極具彈性篩選器，以選取要包含在回應中的叢集實體。</span><span class="sxs-lookup"><span data-stu-id="cb661-108">Users can specify very flexible filters to select which cluster entities to include in response.</span></span> <span data-ttu-id="cb661-109">選取項目可以取決於 實體健全狀況狀態，並根據階層中。</span><span class="sxs-lookup"><span data-stu-id="cb661-109">The selection can be done based on the entities health state and based on the hierarchy.</span></span>
+      <span data-ttu-id="cb661-110">查詢可以傳回根據指定的篩選條件之實體的多層級的子系。</span><span class="sxs-lookup"><span data-stu-id="cb661-110">The query can return multi-level children of the entities based on the specified filters.</span></span> <span data-ttu-id="cb661-111">比方說，它可以傳回具有指定的名稱，並為此應用程式的一個應用程式，會傳回錯誤或警告，以及所有資料分割和複本的其中一個服務中的服務。</span><span class="sxs-lookup"><span data-stu-id="cb661-111">For example, it can return one application with a specified name, and for this application, return only services that are in Error or Warning, and all partitions and replicas for one of these services.</span></span>
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -55,7 +61,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="0a36a-102">{物件}[customHeaders]使用者定義將在傳送要求之前套用的自訂要求標頭。</span><span class="sxs-lookup"><span data-stu-id="0a36a-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="cb661-112">{物件}[customHeaders]使用者定義將在傳送要求之前套用的自訂要求標頭。</span><span class="sxs-lookup"><span data-stu-id="cb661-112">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -70,7 +76,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0a36a-103">下載進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="0a36a-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="cb661-113">下載進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="cb661-113">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +91,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0a36a-104">在上傳進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="0a36a-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="cb661-114">在上傳進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="cb661-114">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -100,7 +106,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0a36a-105">要求可能需要之前自動終止的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="0a36a-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="cb661-115">要求可能需要之前自動終止的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="cb661-115">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="cb661-116">執行作業，以秒為單位的伺服器逾時。</span><span class="sxs-lookup"><span data-stu-id="cb661-116">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="cb661-117">此逾時指定用戶端願意等待完成要求的作業的持續時間。</span><span class="sxs-lookup"><span data-stu-id="cb661-117">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="cb661-118">此參數的預設值為 60 秒。</span><span class="sxs-lookup"><span data-stu-id="cb661-118">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="cb661-119">預設值：60.</span><span class="sxs-lookup"><span data-stu-id="cb661-119">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

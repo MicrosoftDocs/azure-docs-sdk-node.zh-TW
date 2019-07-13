@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="ba531-101">選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="ba531-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -25,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="534fb-101">這可以用來中止要求訊號。</span><span class="sxs-lookup"><span data-stu-id="534fb-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="ba531-102">這可以用來中止要求訊號。</span><span class="sxs-lookup"><span data-stu-id="ba531-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,7 +40,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="534fb-102">{物件}[customHeaders]使用者定義將在傳送要求之前套用的自訂要求標頭。</span><span class="sxs-lookup"><span data-stu-id="534fb-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="ba531-103">{物件}[customHeaders]使用者定義將在傳送要求之前套用的自訂要求標頭。</span><span class="sxs-lookup"><span data-stu-id="ba531-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -55,7 +55,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="ba531-104">包含實體的健康情況狀態。</span><span class="sxs-lookup"><span data-stu-id="ba531-104">Include the health state of an entity.</span></span>
+      <span data-ttu-id="ba531-105">如果此參數為 false 或未指定，則傳回的健康情況狀態會是 "Unknown"。</span><span class="sxs-lookup"><span data-stu-id="ba531-105">If this parameter is false or not specified, then the health state returned is "Unknown".</span></span>
+      <span data-ttu-id="ba531-106">設定為 true 時，會先將查詢以平行方式傳送到節點和健康情況系統服務，然後再合併結果。</span><span class="sxs-lookup"><span data-stu-id="ba531-106">When set to true, the query goes in parallel to the node and the health system service before the results are merged.</span></span>
+      <span data-ttu-id="ba531-107">因此，查詢會較耗費資源且可能花費較長的時間。</span><span class="sxs-lookup"><span data-stu-id="ba531-107">As a result, the query is more expensive and may take a longer time.</span></span> <span data-ttu-id="ba531-108">預設值： false。</span><span class="sxs-lookup"><span data-stu-id="ba531-108">Default value: false.</span></span>
     optional: true
     syntax:
       content: 'includeHealthState?: undefined | false | true'
@@ -70,7 +74,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="534fb-103">下載進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="534fb-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="ba531-109">下載進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="ba531-109">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +89,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="534fb-104">在上傳進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="534fb-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="ba531-110">在上傳進度時，就會引發的回呼。</span><span class="sxs-lookup"><span data-stu-id="ba531-110">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -100,7 +104,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="534fb-105">要求可能需要之前自動終止的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="534fb-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="ba531-111">要求可能需要之前自動終止的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="ba531-111">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="ba531-112">執行作業，以秒為單位的伺服器逾時。</span><span class="sxs-lookup"><span data-stu-id="ba531-112">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="ba531-113">此逾時指定用戶端願意等待完成要求的作業的持續時間。</span><span class="sxs-lookup"><span data-stu-id="ba531-113">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="ba531-114">此參數的預設值為 60 秒。</span><span class="sxs-lookup"><span data-stu-id="ba531-114">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="ba531-115">預設值：60.</span><span class="sxs-lookup"><span data-stu-id="ba531-115">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,193 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo'
+    name: DeployedStatelessServiceInstanceInfo
+    fullName: DeployedStatelessServiceInstanceInfo
+    children:
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.address'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.codePackageName'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.hostProcessId'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.instanceId'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.partitionId'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.replicaStatus'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.serviceKind'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.serviceManifestName'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.serviceName'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.servicePackageActivationId'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.serviceTypeName'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="b58e2-101">節點上所部署的無狀態服務執行個體的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="b58e2-101">Information about a stateless service instance deployed on a node.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.address'
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b58e2-102">在 開啟 或 ChangeRole 複本傳回的最後一個位址。</span><span class="sxs-lookup"><span data-stu-id="b58e2-102">The last address returned by the replica in Open or ChangeRole.</span></span>
+    optional: true
+    syntax:
+      content: 'address?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.codePackageName'
+    name: codePackageName
+    fullName: codePackageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b58e2-103">裝載此複本的程式碼封裝的名稱。</span><span class="sxs-lookup"><span data-stu-id="b58e2-103">The name of the code package that hosts this replica.</span></span>
+    optional: true
+    syntax:
+      content: 'codePackageName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.hostProcessId'
+    name: hostProcessId
+    fullName: hostProcessId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b58e2-104">裝載複本的處理序主機處理序識別碼。</span><span class="sxs-lookup"><span data-stu-id="b58e2-104">Host process ID of the process that is hosting the replica.</span></span> <span data-ttu-id="b58e2-105">如果複本已關閉，這會是零。</span><span class="sxs-lookup"><span data-stu-id="b58e2-105">This will be zero if the replica is down.</span></span> <span data-ttu-id="b58e2-106">Hyper-v 容器在此主機處理序識別碼將會從不同的核心。</span><span class="sxs-lookup"><span data-stu-id="b58e2-106">In hyper-v containers this host process ID will be from different kernel.</span></span>
+    optional: true
+    syntax:
+      content: 'hostProcessId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.instanceId'
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b58e2-107">無狀態服務執行個體的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b58e2-107">Id of a stateless service instance.</span></span> <span data-ttu-id="b58e2-108">Service Fabric 會使用 InstanceId 來唯一識別的無狀態服務分割區的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b58e2-108">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="b58e2-109">它是資料分割內唯一的並不會變更執行個體的存留期。</span><span class="sxs-lookup"><span data-stu-id="b58e2-109">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="b58e2-110">如果在相同或不同的節點上，執行個體已容錯移轉，它會取得不同值的執行個體識別碼。</span><span class="sxs-lookup"><span data-stu-id="b58e2-110">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>'
+    optional: true
+    syntax:
+      content: 'instanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b58e2-111">Service Fabric 用來唯一識別資料分割的內部識別碼。</span><span class="sxs-lookup"><span data-stu-id="b58e2-111">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="b58e2-112">建立服務時，這會是隨機產生的 GUID。</span><span class="sxs-lookup"><span data-stu-id="b58e2-112">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="b58e2-113">分割區識別碼是唯一的而且不會變更服務的存留期。</span><span class="sxs-lookup"><span data-stu-id="b58e2-113">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="b58e2-114">如果相同的服務已刪除，並重新建立資料分割識別碼會相同。</span><span class="sxs-lookup"><span data-stu-id="b58e2-114">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.replicaStatus'
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b58e2-115">服務的複本狀態。</span><span class="sxs-lookup"><span data-stu-id="b58e2-115">The status of a replica of a service.</span></span> <span data-ttu-id="b58e2-116">可能的值包括：'' Invalid''、 ''InBuild''，''待命 」，「 就緒 」，''下''、 ''卸除''</span><span class="sxs-lookup"><span data-stu-id="b58e2-116">Possible values include: ''Invalid'', ''InBuild'', ''Standby'', ''Ready'', ''Down'', ''Dropped''</span></span>'
+    optional: true
+    syntax:
+      content: 'replicaStatus?: ReplicaStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b58e2-117">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="b58e2-117">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.serviceManifestName'
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b58e2-118">此服務類型定義所在的服務資訊清單名稱。</span><span class="sxs-lookup"><span data-stu-id="b58e2-118">The name of the service manifest in which this service type is defined.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b58e2-119">使用服務的完整名稱 '' fabric:''URI 配置的完整應用程式名稱。</span><span class="sxs-lookup"><span data-stu-id="b58e2-119">The full name of the service with ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.servicePackageActivationId'
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b58e2-120">已部署之服務套件的 ActivationId。</span><span class="sxs-lookup"><span data-stu-id="b58e2-120">The ActivationId of a deployed service package.</span></span> <span data-ttu-id="b58e2-121">如果在建立服務時指定的 ServicePackageActivationMode ''SharedProcess'' （或如果未指定，在此情況下則預設為 ''SharedProcess''），然後值 ServicePackageActivationId 的一律是空字串。</span><span class="sxs-lookup"><span data-stu-id="b58e2-121">If ServicePackageActivationMode specified at the time of creating the service is ''SharedProcess'' (or if it is not specified, in which case it defaults to ''SharedProcess''), then value of ServicePackageActivationId is always an empty string.</span></span>'
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo.serviceTypeName'
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b58e2-122">服務資訊清單中所指定的服務類型的名稱。</span><span class="sxs-lookup"><span data-stu-id="b58e2-122">Name of the service type as specified in the service manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceTypeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicaStatus'
+    name: ReplicaStatus
+    spec.typeScript:
+      - name: ReplicaStatus
+        fullName: ReplicaStatus
+        uid: '@azure/servicefabric.ReplicaStatus'

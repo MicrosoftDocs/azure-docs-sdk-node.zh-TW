@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription'
+    name: BasicRetentionPolicyDescription
+    fullName: BasicRetentionPolicyDescription
+    children:
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups'
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.retentionDuration'
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.retentionPolicyType'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="c7516-101">描述基本的保留原則。</span><span class="sxs-lookup"><span data-stu-id="c7516-101">Describes basic retention policy.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups'
+    name: minimumNumberOfBackups
+    fullName: minimumNumberOfBackups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c7516-102">它是保留在任何時間點備份的最小數目。</span><span class="sxs-lookup"><span data-stu-id="c7516-102">It is the minimum number of backups to be retained at any point of time.</span></span> <span data-ttu-id="c7516-103">如果指定非零值，備份將不會刪除即使備份已經超過保留期限，並具有備份數目小於或等於它。</span><span class="sxs-lookup"><span data-stu-id="c7516-103">If specified with a non zero value, backups will not be deleted even if the backups have gone past retention duration and have number of backups less than or equal to it.</span></span>'
+    optional: true
+    syntax:
+      content: 'minimumNumberOfBackups?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.retentionDuration'
+    name: retentionDuration
+    fullName: retentionDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c7516-104">它是最小持續期間，備份建立，將仍然會儲存在儲存體，且之後的時間長度是時間可能會刪除。</span><span class="sxs-lookup"><span data-stu-id="c7516-104">It is the minimum duration for which a backup created, will remain stored in the storage and might get deleted after that span of time.</span></span> <span data-ttu-id="c7516-105">它應該指定 ISO8601 格式。</span><span class="sxs-lookup"><span data-stu-id="c7516-105">It should be specified in ISO8601 format.</span></span>'
+    syntax:
+      content: 'retentionDuration: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.retentionPolicyType'
+    name: retentionPolicyType
+    fullName: retentionPolicyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c7516-106">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="c7516-106">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'retentionPolicyType: "Basic"'
+      return:
+        type:
+          - '"Basic"'
+    package: '@azure/servicefabric'
