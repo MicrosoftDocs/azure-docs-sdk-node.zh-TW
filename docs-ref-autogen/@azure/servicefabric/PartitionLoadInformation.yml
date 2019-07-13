@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionLoadInformation'
+    name: PartitionLoadInformation
+    fullName: PartitionLoadInformation
+    children:
+      - '@azure/servicefabric.PartitionLoadInformation.partitionId'
+      - '@azure/servicefabric.PartitionLoadInformation.primaryLoadMetricReports'
+      - '@azure/servicefabric.PartitionLoadInformation.secondaryLoadMetricReports'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="b8ce5-101">代表載入資料分割，其中包含的主要和次要的報告的負載計量的資訊。</span><span class="sxs-lookup"><span data-stu-id="b8ce5-101">Represents load information for a partition, which contains the primary and secondary reported load metrics.</span></span>
+      <span data-ttu-id="b8ce5-102">如果沒有報告負載，PartitionLoadInformation 會包含服務的資料分割的預設負載。</span><span class="sxs-lookup"><span data-stu-id="b8ce5-102">In case there is no load reported, PartitionLoadInformation will contain the default load for the service of the partition.</span></span>
+      <span data-ttu-id="b8ce5-103">預設負載 LoadMetricReport 的 LastReportedUtc 設為 0。</span><span class="sxs-lookup"><span data-stu-id="b8ce5-103">For default loads, LoadMetricReport's LastReportedUtc is set to 0.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b8ce5-104">資料分割的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b8ce5-104">Id of the partition.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.primaryLoadMetricReports'
+    name: primaryLoadMetricReports
+    fullName: primaryLoadMetricReports
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b8ce5-105">從這個資料分割的主要複本的負載報告的陣列。</span><span class="sxs-lookup"><span data-stu-id="b8ce5-105">Array of load reports from the primary replica for this partition.</span></span>
+    optional: true
+    syntax:
+      content: 'primaryLoadMetricReports?: LoadMetricReport[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReport[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.secondaryLoadMetricReports'
+    name: secondaryLoadMetricReports
+    fullName: secondaryLoadMetricReports
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b8ce5-106">從所有的次要複本，此資料分割的彙總的負載報告的陣列。</span><span class="sxs-lookup"><span data-stu-id="b8ce5-106">Array of aggregated load reports from all secondary replicas for this partition.</span></span>
+      <span data-ttu-id="b8ce5-107">陣列只包含最新每個度量報告的負載。</span><span class="sxs-lookup"><span data-stu-id="b8ce5-107">Array only contains the latest reported load for each metric.</span></span>
+    optional: true
+    syntax:
+      content: 'secondaryLoadMetricReports?: LoadMetricReport[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReport[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.LoadMetricReport[]'
+    name: 'LoadMetricReport[]'
+    spec.typeScript:
+      - name: LoadMetricReport
+        fullName: LoadMetricReport
+        uid: '@azure/servicefabric.LoadMetricReport'
+      - name: '[]'
+        fullName: '[]'

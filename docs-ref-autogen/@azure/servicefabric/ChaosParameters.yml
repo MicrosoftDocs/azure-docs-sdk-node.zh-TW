@@ -1,0 +1,192 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosParameters'
+    name: ChaosParameters
+    fullName: ChaosParameters
+    children:
+      - '@azure/servicefabric.ChaosParameters.chaosTargetFilter'
+      - '@azure/servicefabric.ChaosParameters.clusterHealthPolicy'
+      - '@azure/servicefabric.ChaosParameters.context'
+      - '@azure/servicefabric.ChaosParameters.enableMoveReplicaFaults'
+      - '@azure/servicefabric.ChaosParameters.maxClusterStabilizationTimeoutInSeconds'
+      - '@azure/servicefabric.ChaosParameters.maxConcurrentFaults'
+      - '@azure/servicefabric.ChaosParameters.timeToRunInSeconds'
+      - '@azure/servicefabric.ChaosParameters.waitTimeBetweenFaultsInSeconds'
+      - '@azure/servicefabric.ChaosParameters.waitTimeBetweenIterationsInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="af192-101">定義設定混亂執行的所有參數。</span><span class="sxs-lookup"><span data-stu-id="af192-101">Defines all the parameters to configure a Chaos run.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.chaosTargetFilter'
+    name: chaosTargetFilter
+    fullName: chaosTargetFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af192-102">叢集實體為目標的混亂錯誤的清單。</span><span class="sxs-lookup"><span data-stu-id="af192-102">List of cluster entities to target for Chaos faults.</span></span>
+      <span data-ttu-id="af192-103">此篩選可用來將混亂錯誤的目標設定為僅針對特定節點類型或特定應用程式執行個體。</span><span class="sxs-lookup"><span data-stu-id="af192-103">This filter can be used to target Chaos faults only to certain node types or only to certain application instances.</span></span> <span data-ttu-id="af192-104">如果未使用 ChaosTargetFilter，混亂會針對所有叢集實體引發錯誤。</span><span class="sxs-lookup"><span data-stu-id="af192-104">If ChaosTargetFilter is not used, Chaos faults all cluster entities.</span></span>
+      <span data-ttu-id="af192-105">如果使用 ChaosTargetFilter，則混亂只會針對符合 ChaosTargetFilter 規格的實體引發錯誤。</span><span class="sxs-lookup"><span data-stu-id="af192-105">If ChaosTargetFilter is used, Chaos faults only the entities that meet the ChaosTargetFilter specification.</span></span>
+    optional: true
+    syntax:
+      content: 'chaosTargetFilter?: ChaosTargetFilter'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosTargetFilter'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af192-106">傳入的叢集健康狀態原則用來驗證混亂反覆運算之間的叢集健康情況。</span><span class="sxs-lookup"><span data-stu-id="af192-106">Passed-in cluster health policy is used to validate health of the cluster in between Chaos iterations.</span></span> <span data-ttu-id="af192-107">如果叢集健康狀態發生錯誤，或發生未預期的例外狀況錯誤執行-期間若要讓叢集有時間復原，混亂會等候 30 分鐘，再下一個健康情況檢查。</span><span class="sxs-lookup"><span data-stu-id="af192-107">If the cluster health is in error or if an unexpected exception happens during fault execution--to provide the cluster with some time to recuperate--Chaos will wait for 30 minutes before the next health-check.</span></span>
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.context'
+    name: context
+    fullName: context
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af192-108">描述一個對應，也就是 （字串，字串） 的集合類型索引鍵-值組。</span><span class="sxs-lookup"><span data-stu-id="af192-108">Describes a map, which is a collection of (string, string) type key-value pairs.</span></span> <span data-ttu-id="af192-109">此對應可用於記錄混亂執行的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="af192-109">The map can be used to record information about the Chaos run.</span></span> <span data-ttu-id="af192-110">此類組合不能超過 100 個，且每個字串 (索引鍵或值) 最多為 4095 個字元長。</span><span class="sxs-lookup"><span data-stu-id="af192-110">There cannot be more than 100 such pairs and each string (key or value) can be at most 4095 characters long.</span></span>
+      <span data-ttu-id="af192-111">此對應由混亂執行的起始者設定，以選擇性地儲存特定執行的相關內容。</span><span class="sxs-lookup"><span data-stu-id="af192-111">This map is set by the starter of the Chaos run to optionally store the context about the specific run.</span></span>
+    optional: true
+    syntax:
+      content: 'context?: ChaosContext'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosContext'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.enableMoveReplicaFaults'
+    name: enableMoveReplicaFaults
+    fullName: enableMoveReplicaFaults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af192-112">啟用或停用移動主要和移動次要錯誤。</span><span class="sxs-lookup"><span data-stu-id="af192-112">Enables or disables the move primary and move secondary faults.</span></span> <span data-ttu-id="af192-113">預設值： true。</span><span class="sxs-lookup"><span data-stu-id="af192-113">Default value: true.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableMoveReplicaFaults?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.maxClusterStabilizationTimeoutInSeconds'
+    name: maxClusterStabilizationTimeoutInSeconds
+    fullName: maxClusterStabilizationTimeoutInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af192-114">等待所有叢集實體變成穩定且狀況良好的時間長度上限。</span><span class="sxs-lookup"><span data-stu-id="af192-114">The maximum amount of time to wait for all cluster entities to become stable and healthy.</span></span>
+      <span data-ttu-id="af192-115">Chaos 會在反覆項目中執行，並且在每個反覆項目開始時它會驗證叢集實體的健康情況。</span><span class="sxs-lookup"><span data-stu-id="af192-115">Chaos executes in iterations and at the start of each iteration it validates the health of cluster entities.</span></span>
+      <span data-ttu-id="af192-116">在驗證期間，如果叢集實體在 MaxClusterStabilizationTimeoutInSeconds 內不穩定且狀況不良，Chaos 就會產生驗證失敗事件。</span><span class="sxs-lookup"><span data-stu-id="af192-116">During validation if a cluster entity is not stable and healthy within MaxClusterStabilizationTimeoutInSeconds, Chaos generates a validation failed event.</span></span> <span data-ttu-id="af192-117">預設值：60.</span><span class="sxs-lookup"><span data-stu-id="af192-117">Default value: 60.</span></span>
+    optional: true
+    syntax:
+      content: 'maxClusterStabilizationTimeoutInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.maxConcurrentFaults'
+    name: maxConcurrentFaults
+    fullName: maxConcurrentFaults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af192-118">MaxConcurrentFaults 是每個反覆運算引發的並行錯誤的最大數目。</span><span class="sxs-lookup"><span data-stu-id="af192-118">MaxConcurrentFaults is the maximum number of concurrent faults induced per iteration.</span></span>
+      <span data-ttu-id="af192-119">Chaos 會在反覆項目中執行，而兩個連續的反覆項目之間會以驗證階段分隔。</span><span class="sxs-lookup"><span data-stu-id="af192-119">Chaos executes in iterations and two consecutive iterations are separated by a validation phase.</span></span>
+      <span data-ttu-id="af192-120">並行越高，越積極錯誤，導致引發更複雜的狀態系列以發現錯誤的插入。</span><span class="sxs-lookup"><span data-stu-id="af192-120">The higher the concurrency, the more aggressive the injection of faults, leading to inducing more complex series of states to uncover bugs.</span></span>
+      <span data-ttu-id="af192-121">建議從值為 2 或 3 開始，上調此值時請小心謹慎。</span><span class="sxs-lookup"><span data-stu-id="af192-121">The recommendation is to start with a value of 2 or 3 and to exercise caution while moving up.</span></span>
+      <span data-ttu-id="af192-122">預設值：1.</span><span class="sxs-lookup"><span data-stu-id="af192-122">Default value: 1.</span></span>
+    optional: true
+    syntax:
+      content: 'maxConcurrentFaults?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.timeToRunInSeconds'
+    name: timeToRunInSeconds
+    fullName: timeToRunInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af192-123">Chaos 在自動停止之前，將執行的總時間 (秒)。</span><span class="sxs-lookup"><span data-stu-id="af192-123">Total time (in seconds) for which Chaos will run before automatically stopping.</span></span> <span data-ttu-id="af192-124">可允許的最大值為 4,294,967,295 (System.UInt32.MaxValue)。</span><span class="sxs-lookup"><span data-stu-id="af192-124">The maximum allowed value is 4,294,967,295 (System.UInt32.MaxValue).</span></span> <span data-ttu-id="af192-125">預設值：''4294967295''.</span><span class="sxs-lookup"><span data-stu-id="af192-125">Default value: ''4294967295''.</span></span>'
+    optional: true
+    syntax:
+      content: 'timeToRunInSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.waitTimeBetweenFaultsInSeconds'
+    name: waitTimeBetweenFaultsInSeconds
+    fullName: waitTimeBetweenFaultsInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af192-126">單一反覆項目內連續錯誤之間的等候時間 (秒)。</span><span class="sxs-lookup"><span data-stu-id="af192-126">Wait time (in seconds) between consecutive faults within a single iteration.</span></span>
+      <span data-ttu-id="af192-127">值越大，錯誤之間的重疊越低，且叢集歷經的狀態轉換順序會越簡單。</span><span class="sxs-lookup"><span data-stu-id="af192-127">The larger the value, the lower the overlapping between faults and the simpler the sequence of state transitions that the cluster goes through.</span></span>
+      <span data-ttu-id="af192-128">建議從 1 到 5 之間的值來開始，上調此值時請小心謹慎。</span><span class="sxs-lookup"><span data-stu-id="af192-128">The recommendation is to start with a value between 1 and 5 and exercise caution while moving up.</span></span> <span data-ttu-id="af192-129">預設值：20.</span><span class="sxs-lookup"><span data-stu-id="af192-129">Default value: 20.</span></span>
+    optional: true
+    syntax:
+      content: 'waitTimeBetweenFaultsInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.waitTimeBetweenIterationsInSeconds'
+    name: waitTimeBetweenIterationsInSeconds
+    fullName: waitTimeBetweenIterationsInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af192-130">Chaos 的兩個連續反覆項目之間的時間區隔 (秒)。</span><span class="sxs-lookup"><span data-stu-id="af192-130">Time-separation (in seconds) between two consecutive iterations of Chaos.</span></span>
+      <span data-ttu-id="af192-131">值越大，錯誤插入率越低。</span><span class="sxs-lookup"><span data-stu-id="af192-131">The larger the value, the lower the fault injection rate.</span></span> <span data-ttu-id="af192-132">預設值：30.</span><span class="sxs-lookup"><span data-stu-id="af192-132">Default value: 30.</span></span>
+    optional: true
+    syntax:
+      content: 'waitTimeBetweenIterationsInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ChaosTargetFilter'
+    name: ChaosTargetFilter
+    spec.typeScript:
+      - name: ChaosTargetFilter
+        fullName: ChaosTargetFilter
+        uid: '@azure/servicefabric.ChaosTargetFilter'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'
+  - uid: '@azure/servicefabric.ChaosContext'
+    name: ChaosContext
+    spec.typeScript:
+      - name: ChaosContext
+        fullName: ChaosContext
+        uid: '@azure/servicefabric.ChaosContext'

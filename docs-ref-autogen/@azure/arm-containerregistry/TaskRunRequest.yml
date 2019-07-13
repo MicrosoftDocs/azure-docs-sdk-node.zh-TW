@@ -5,13 +5,13 @@ items:
     fullName: TaskRunRequest
     children:
       - '@azure/arm-containerregistry.TaskRunRequest.isArchiveEnabled'
-      - '@azure/arm-containerregistry.TaskRunRequest.taskName'
+      - '@azure/arm-containerregistry.TaskRunRequest.overrideTaskStepProperties'
+      - '@azure/arm-containerregistry.TaskRunRequest.taskId'
       - '@azure/arm-containerregistry.TaskRunRequest.type'
-      - '@azure/arm-containerregistry.TaskRunRequest.values'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="c1184-101">工作執行要求的參數。</span><span class="sxs-lookup"><span data-stu-id="c1184-101">The parameters for a task run request.</span></span>
+    summary: <span data-ttu-id="da2e3-101">工作執行要求的參數。</span><span class="sxs-lookup"><span data-stu-id="da2e3-101">The parameters for a task run request.</span></span>
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.TaskRunRequest.isArchiveEnabled'
     name: isArchiveEnabled
@@ -20,7 +20,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c1184-102">值，指出是否封存是否已啟用的執行。</span><span class="sxs-lookup"><span data-stu-id="c1184-102">The value that indicates whether archiving is enabled for the run or not.</span></span> <span data-ttu-id="c1184-103">預設值： false。</span><span class="sxs-lookup"><span data-stu-id="c1184-103">Default value: false.</span></span>'
+    summary: '<span data-ttu-id="da2e3-102">值，指出是否封存是否已啟用的執行。</span><span class="sxs-lookup"><span data-stu-id="da2e3-102">The value that indicates whether archiving is enabled for the run or not.</span></span> <span data-ttu-id="da2e3-103">預設值： false。</span><span class="sxs-lookup"><span data-stu-id="da2e3-103">Default value: false.</span></span>'
     optional: true
     syntax:
       content: 'isArchiveEnabled?: undefined | false | true'
@@ -28,16 +28,31 @@ items:
         type:
           - undefined | false | true
     package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.TaskRunRequest.taskName'
-    name: taskName
-    fullName: taskName
+  - uid: '@azure/arm-containerregistry.TaskRunRequest.overrideTaskStepProperties'
+    name: overrideTaskStepProperties
+    fullName: overrideTaskStepProperties
     children: []
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c1184-104">針對執行工作的名稱已排入佇列。</span><span class="sxs-lookup"><span data-stu-id="c1184-104">The name of task against which run has to be queued.</span></span>
+    summary: <span data-ttu-id="da2e3-104">可以在執行工作時傳遞的可覆寫參數的集合。</span><span class="sxs-lookup"><span data-stu-id="da2e3-104">Set of overridable parameters that can be passed when running a Task.</span></span>
+    optional: true
     syntax:
-      content: 'taskName: string'
+      content: 'overrideTaskStepProperties?: OverrideTaskStepProperties'
+      return:
+        type:
+          - '@azure/arm-containerregistry.OverrideTaskStepProperties'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.TaskRunRequest.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="da2e3-105">已排入佇列的工作執行的資源識別碼。</span><span class="sxs-lookup"><span data-stu-id="da2e3-105">The resource ID of task against which run has to be queued.</span></span>
+    syntax:
+      content: 'taskId: string'
       return:
         type:
           - string
@@ -49,34 +64,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c1184-105">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="c1184-105">Polymorphic Discriminator</span></span>
+    summary: <span data-ttu-id="da2e3-106">多型的鑑別子</span><span class="sxs-lookup"><span data-stu-id="da2e3-106">Polymorphic Discriminator</span></span>
     syntax:
       content: 'type: "TaskRunRequest"'
       return:
         type:
           - '"TaskRunRequest"'
     package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.TaskRunRequest.values'
-    name: values
-    fullName: values
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: <span data-ttu-id="c1184-106">可以在執行工作時傳遞的可覆寫值的集合。</span><span class="sxs-lookup"><span data-stu-id="c1184-106">The collection of overridable values that can be passed when running a task.</span></span>
-    optional: true
-    syntax:
-      content: 'values?: SetValue[]'
-      return:
-        type:
-          - '@azure/arm-containerregistry.SetValue[]'
-    package: '@azure/arm-containerregistry'
 references:
-  - uid: '@azure/arm-containerregistry.SetValue[]'
-    name: 'SetValue[]'
+  - uid: '@azure/arm-containerregistry.OverrideTaskStepProperties'
+    name: OverrideTaskStepProperties
     spec.typeScript:
-      - name: SetValue
-        fullName: SetValue
-        uid: '@azure/arm-containerregistry.SetValue'
-      - name: '[]'
-        fullName: '[]'
+      - name: OverrideTaskStepProperties
+        fullName: OverrideTaskStepProperties
+        uid: '@azure/arm-containerregistry.OverrideTaskStepProperties'

@@ -1,0 +1,138 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+    name: ApplicationHealthStateFilter
+    fullName: ApplicationHealthStateFilter
+    children:
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="1a561-101">定義比對準則，來判斷應用程式是否應該包含叢集健全狀況區塊中。</span><span class="sxs-lookup"><span data-stu-id="1a561-101">Defines matching criteria to determine whether a application should be included in the cluster health chunk.</span></span>
+      <span data-ttu-id="1a561-102">一個篩選條件可以比對零、 一或多個應用程式，這將根據其屬性。</span><span class="sxs-lookup"><span data-stu-id="1a561-102">One filter can match zero, one or multiple applications, depending on its properties.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+    name: applicationNameFilter
+    fullName: applicationNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="1a561-103">符合篩選條件，為網狀架構 uri 的應用程式名稱。</span><span class="sxs-lookup"><span data-stu-id="1a561-103">The name of the application that matches the filter, as a fabric uri.</span></span> <span data-ttu-id="1a561-104">篩選條件只套用至指定的應用程式，若有的話。</span><span class="sxs-lookup"><span data-stu-id="1a561-104">The filter is applied only to the specified application, if it exists.</span></span>
+      <span data-ttu-id="1a561-105">如果應用程式不存在，此篩選器為基礎的叢集健全狀況區塊會傳回沒有任何應用程式。</span><span class="sxs-lookup"><span data-stu-id="1a561-105">If the application doesn't exist, no application is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="1a561-106">如果應用程式存在，就會包含在叢集健全狀況區塊如果它採用的其他篩選屬性。</span><span class="sxs-lookup"><span data-stu-id="1a561-106">If the application exists, it is included in the cluster health chunk if it respects the other filter properties.</span></span>
+      <span data-ttu-id="1a561-107">如果未指定，則所有應用程式，將比對其他篩選成員，例如健康情況狀態篩選。</span><span class="sxs-lookup"><span data-stu-id="1a561-107">If not specified, all applications are matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+    name: applicationTypeNameFilter
+    fullName: applicationTypeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="1a561-108">符合篩選條件的應用程式類型名稱。</span><span class="sxs-lookup"><span data-stu-id="1a561-108">The name of the application type that matches the filter.</span></span>
+      <span data-ttu-id="1a561-109">如果指定，篩選會套用只到選取的應用程式類型的應用程式，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="1a561-109">If specified, the filter is applied only to applications of the selected application type, if any exists.</span></span>
+      <span data-ttu-id="1a561-110">如果沒有指定的應用程式類型的應用程式存在，此篩選器為基礎的叢集健全狀況區塊會傳回沒有任何應用程式。</span><span class="sxs-lookup"><span data-stu-id="1a561-110">If no applications of the specified application type exists, no application is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="1a561-111">指定的應用程式類型的每個應用程式包含在叢集健全狀況區塊中，如果它採用的其他篩選屬性。</span><span class="sxs-lookup"><span data-stu-id="1a561-111">Each application of the specified application type is included in the cluster health chunk if it respects the other filter properties.</span></span>
+      <span data-ttu-id="1a561-112">如果未指定，則所有應用程式，將比對其他篩選成員，例如健康情況狀態篩選。</span><span class="sxs-lookup"><span data-stu-id="1a561-112">If not specified, all applications are matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationTypeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+    name: deployedApplicationFilters
+    fullName: deployedApplicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="1a561-113">定義篩選條件，指定要包含在傳回的叢集健全狀況已部署應用程式區塊做為應用程式的子系清單。</span><span class="sxs-lookup"><span data-stu-id="1a561-113">Defines a list of filters that specify which deployed applications to be included in the returned cluster health chunk as children of the application.</span></span> <span data-ttu-id="1a561-114">如果父系應用程式符合篩選條件，就會傳回已部署的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1a561-114">The deployed applications are returned only if the parent application matches a filter.</span></span>
+      <span data-ttu-id="1a561-115">如果清單是空的則會不傳回任何已部署的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1a561-115">If the list is empty, no deployed applications are returned.</span></span> <span data-ttu-id="1a561-116">所有已部署的應用程式都會用來評估父代的應用程式彙總健全狀況狀態，不論輸入篩選器。</span><span class="sxs-lookup"><span data-stu-id="1a561-116">All the deployed applications are used to evaluate the parent application aggregated health state, regardless of the input filters.</span></span>
+      <span data-ttu-id="1a561-117">應用程式篩選條件可以指定多個部署的應用程式篩選器。</span><span class="sxs-lookup"><span data-stu-id="1a561-117">The application filter may specify multiple deployed application filters.</span></span>
+      <span data-ttu-id="1a561-118">比方說，它可以指定篩選器，以傳回所有已部署的應用程式的健全狀況狀態錯誤和永遠包含指定的節點上部署的應用程式的另一個篩選條件。</span><span class="sxs-lookup"><span data-stu-id="1a561-118">For example, it can specify a filter to return all deployed applications with health state Error and another filter to always include a deployed application on a specified node.</span></span>
+    optional: true
+    syntax:
+      content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="1a561-119">適用於應用程式的健全狀況狀態之篩選條件。</span><span class="sxs-lookup"><span data-stu-id="1a561-119">The filter for the health state of the applications.</span></span> <span data-ttu-id="1a561-120">它可讓選取的應用程式，如果兩者相符的所需的健全狀況狀態。</span><span class="sxs-lookup"><span data-stu-id="1a561-120">It allows selecting applications if they match the desired health states.</span></span>
+      <span data-ttu-id="1a561-121">可能的值為其中一個下列的健全狀況狀態的整數值。</span><span class="sxs-lookup"><span data-stu-id="1a561-121">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="1a561-122">只會傳回符合篩選條件的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1a561-122">Only applications that match the filter are returned.</span></span> <span data-ttu-id="1a561-123">所有應用程式用來評估彙總的叢集健康情況狀態。</span><span class="sxs-lookup"><span data-stu-id="1a561-123">All applications are used to evaluate the cluster aggregated health state.</span></span>
+      <span data-ttu-id="1a561-124">如果未指定，預設值會是 None，除非指定的應用程式名稱或應用程式類型名稱。</span><span class="sxs-lookup"><span data-stu-id="1a561-124">If not specified, default value is None, unless the application name or the application type name are specified.</span></span> <span data-ttu-id="1a561-125">如果篩選器有預設值，指定應用程式名稱，則會傳回相符的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1a561-125">If the filter has default value and application name is specified, the matching application is returned.</span></span>
+      <span data-ttu-id="1a561-126">狀態值是以旗標為基礎的列舉，因此值可以是使用位元 'OR' 運算子取得的這些值的組合。</span><span class="sxs-lookup"><span data-stu-id="1a561-126">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="1a561-127">例如，如果提供的值為 6，它會符合含 HealthState 值為 OK (2) 和 Warning (4) 的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1a561-127">For example, if the provided value is 6, it matches applications with HealthState value of OK (2) and Warning (4).</span></span>
+      - <span data-ttu-id="1a561-128">Default-預設值。</span><span class="sxs-lookup"><span data-stu-id="1a561-128">Default - Default value.</span></span> <span data-ttu-id="1a561-129">符合任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="1a561-129">Matches any HealthState.</span></span> <span data-ttu-id="1a561-130">值為零。</span><span class="sxs-lookup"><span data-stu-id="1a561-130">The value is zero.</span></span>
+      - <span data-ttu-id="1a561-131">None-不符合任何 HealthState 值的篩選。</span><span class="sxs-lookup"><span data-stu-id="1a561-131">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="1a561-132">用來在指定狀態集合沒有任何結果時傳回。</span><span class="sxs-lookup"><span data-stu-id="1a561-132">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="1a561-133">值為 1。</span><span class="sxs-lookup"><span data-stu-id="1a561-133">The value is 1.</span></span>
+      - <span data-ttu-id="1a561-134">Ok-符合輸入含 HealthState 值 Ok 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="1a561-134">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="1a561-135">值為 2。</span><span class="sxs-lookup"><span data-stu-id="1a561-135">The value is 2.</span></span>
+      - <span data-ttu-id="1a561-136">警告-篩選符合輸入含 HealthState 值 Warning。</span><span class="sxs-lookup"><span data-stu-id="1a561-136">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="1a561-137">值為 4。</span><span class="sxs-lookup"><span data-stu-id="1a561-137">The value is 4.</span></span>
+      - <span data-ttu-id="1a561-138">Error-符合輸入含 HealthState 值 Error 的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="1a561-138">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="1a561-139">值為 8。</span><span class="sxs-lookup"><span data-stu-id="1a561-139">The value is 8.</span></span>
+      - <span data-ttu-id="1a561-140">All-符合輸入含任何 HealthState 值的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="1a561-140">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="1a561-141">值為 65535。</span><span class="sxs-lookup"><span data-stu-id="1a561-141">The value is 65535.</span></span> <span data-ttu-id="1a561-142">預設值：0.</span><span class="sxs-lookup"><span data-stu-id="1a561-142">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    name: serviceFilters
+    fullName: serviceFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="1a561-143">定義篩選條件，指定要包含在傳回的叢集健康狀態中的哪些服務區塊做為應用程式的子系清單。</span><span class="sxs-lookup"><span data-stu-id="1a561-143">Defines a list of filters that specify which services to be included in the returned cluster health chunk as children of the application.</span></span> <span data-ttu-id="1a561-144">只有當父應用程式符合篩選條件，則會傳回服務。</span><span class="sxs-lookup"><span data-stu-id="1a561-144">The services are returned only if the parent application matches a filter.</span></span>
+      <span data-ttu-id="1a561-145">如果清單是空的則會不傳回任何服務。</span><span class="sxs-lookup"><span data-stu-id="1a561-145">If the list is empty, no services are returned.</span></span> <span data-ttu-id="1a561-146">所有的服務用來評估父代的應用程式彙總健全狀況狀態，不論輸入篩選器。</span><span class="sxs-lookup"><span data-stu-id="1a561-146">All the services are used to evaluate the parent application aggregated health state, regardless of the input filters.</span></span>
+      <span data-ttu-id="1a561-147">應用程式篩選條件可以指定多個服務篩選條件。</span><span class="sxs-lookup"><span data-stu-id="1a561-147">The application filter may specify multiple service filters.</span></span>
+      <span data-ttu-id="1a561-148">比方說，它可以指定篩選器，以傳回所有服務的健全狀況狀態錯誤和永遠包含服務名稱來識別服務的另一個篩選條件。</span><span class="sxs-lookup"><span data-stu-id="1a561-148">For example, it can specify a filter to return all services with health state Error and another filter to always include a service identified by its service name.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceFilters?: ServiceHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    name: 'DeployedApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateFilter
+        fullName: DeployedApplicationHealthStateFilter
+        uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter[]'
+    name: 'ServiceHealthStateFilter[]'
+    spec.typeScript:
+      - name: ServiceHealthStateFilter
+        fullName: ServiceHealthStateFilter
+        uid: '@azure/servicefabric.ServiceHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

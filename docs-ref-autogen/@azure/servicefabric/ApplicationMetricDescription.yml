@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription'
+    name: ApplicationMetricDescription
+    fullName: ApplicationMetricDescription
+    children:
+      - '@azure/servicefabric.ApplicationMetricDescription.maximumCapacity'
+      - '@azure/servicefabric.ApplicationMetricDescription.name'
+      - '@azure/servicefabric.ApplicationMetricDescription.reservationCapacity'
+      - '@azure/servicefabric.ApplicationMetricDescription.totalApplicationCapacity'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="9116a-101">描述自訂資源平衡計量的容量資訊。</span><span class="sxs-lookup"><span data-stu-id="9116a-101">Describes capacity information for a custom resource balancing metric.</span></span> <span data-ttu-id="9116a-102">這可以用來限制此計量的總耗用量的此應用程式的服務。</span><span class="sxs-lookup"><span data-stu-id="9116a-102">This can be used to limit the total consumption of this metric by the services of this application.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.maximumCapacity'
+    name: maximumCapacity
+    fullName: maximumCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9116a-103">Service Fabric 應用程式的最大節點容量。</span><span class="sxs-lookup"><span data-stu-id="9116a-103">The maximum node capacity for Service Fabric application.</span></span>
+      <span data-ttu-id="9116a-104">這是在單一節點上的此應用程式的執行個體的負載上限。</span><span class="sxs-lookup"><span data-stu-id="9116a-104">This is the maximum Load for an instance of this application on a single node.</span></span> <span data-ttu-id="9116a-105">即使節點的容量大於此值，則 Service Fabric 會限制服務內的每個節點上的應用程式，此值的總負載。</span><span class="sxs-lookup"><span data-stu-id="9116a-105">Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.</span></span>
+      <span data-ttu-id="9116a-106">如果設定為零，此計量的容量是無限制每個節點上。</span><span class="sxs-lookup"><span data-stu-id="9116a-106">If set to zero, capacity for this metric is unlimited on each node.</span></span>
+      <span data-ttu-id="9116a-107">當使用定義的應用程式容量中建立新的應用程式，MaximumNodes 和此值的乘積必須一律小於或等於 TotalApplicationCapacity 為。</span><span class="sxs-lookup"><span data-stu-id="9116a-107">When creating a new application with application capacity defined, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.</span></span>
+      <span data-ttu-id="9116a-108">在更新現有的應用程式與應用程式容量時，則 MaximumNodes 和此值的乘積必須一律會小於或等於 TotalApplicationCapacity 為。</span><span class="sxs-lookup"><span data-stu-id="9116a-108">When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.</span></span>
+    optional: true
+    syntax:
+      content: 'maximumCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9116a-109">計量的名稱。</span><span class="sxs-lookup"><span data-stu-id="9116a-109">The name of the metric.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.reservationCapacity'
+    name: reservationCapacity
+    fullName: reservationCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9116a-110">Service Fabric 應用程式的節點保留容量。</span><span class="sxs-lookup"><span data-stu-id="9116a-110">The node reservation capacity for Service Fabric application.</span></span>
+      <span data-ttu-id="9116a-111">這是負載的具有此應用程式的執行個體的節點上，這負載的保留數量。</span><span class="sxs-lookup"><span data-stu-id="9116a-111">This is the amount of load which is reserved on nodes which have instances of this application.</span></span>
+      <span data-ttu-id="9116a-112">如果指定 MinimumNodes，這些值的乘積會是保留的叢集中的應用程式的容量。</span><span class="sxs-lookup"><span data-stu-id="9116a-112">If MinimumNodes is specified, then the product of these values will be the capacity reserved in the cluster for the application.</span></span>
+      <span data-ttu-id="9116a-113">如果設定為零，不會保留容量，此度量。</span><span class="sxs-lookup"><span data-stu-id="9116a-113">If set to zero, no capacity is reserved for this metric.</span></span>
+      <span data-ttu-id="9116a-114">設定應用程式容量時，或在更新應用程式容量;此值必須小於或等於每個度量 MaximumCapacity。</span><span class="sxs-lookup"><span data-stu-id="9116a-114">When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.</span></span>
+    optional: true
+    syntax:
+      content: 'reservationCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.totalApplicationCapacity'
+    name: totalApplicationCapacity
+    fullName: totalApplicationCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9116a-115">Service Fabric 應用程式的計量容量總計。</span><span class="sxs-lookup"><span data-stu-id="9116a-115">The total metric capacity for Service Fabric application.</span></span>
+      <span data-ttu-id="9116a-116">這是在叢集中的此應用程式計量容量總計。</span><span class="sxs-lookup"><span data-stu-id="9116a-116">This is the total metric capacity for this application in the cluster.</span></span> <span data-ttu-id="9116a-117">Service Fabric 會嘗試限制的服務，這個值在應用程式中載入的總和。</span><span class="sxs-lookup"><span data-stu-id="9116a-117">Service Fabric will try to limit the sum of loads of services within the application to this value.</span></span>
+      <span data-ttu-id="9116a-118">當使用定義的應用程式容量中建立新的應用程式，MaximumNodes 和 MaximumCapacity 產品都必須小於或等於這個值。</span><span class="sxs-lookup"><span data-stu-id="9116a-118">When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.</span></span>
+    optional: true
+    syntax:
+      content: 'totalApplicationCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
