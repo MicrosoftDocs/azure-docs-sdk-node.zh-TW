@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.NodeHealthEvaluation'
+    name: NodeHealthEvaluation
+    fullName: NodeHealthEvaluation
+    children:
+      - '@azure/servicefabric.NodeHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.NodeHealthEvaluation.description'
+      - '@azure/servicefabric.NodeHealthEvaluation.kind'
+      - '@azure/servicefabric.NodeHealthEvaluation.nodeName'
+      - '@azure/servicefabric.NodeHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示包含資料和健康狀態存放區用來評估健康情況的演算法資訊的節點的健全狀況評估。 評估的彙總健全狀況狀態是錯誤或警告時，才傳回。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 健康情況評估，這代表評估程序的摘要描述。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'kind: "Node"'
+      return:
+        type:
+          - '"Node"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 節點的名稱。
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 狀況不良的評估，導致目前的節點的彙總的健全狀態的清單。 狀況不良的評估的類型可以是 EventHealthEvaluation。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

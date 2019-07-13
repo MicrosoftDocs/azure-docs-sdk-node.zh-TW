@@ -1,0 +1,417 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceDescription'
+    name: StatefulServiceDescription
+    fullName: StatefulServiceDescription
+    children:
+      - '@azure/servicefabric.StatefulServiceDescription.applicationName'
+      - '@azure/servicefabric.StatefulServiceDescription.correlationScheme'
+      - '@azure/servicefabric.StatefulServiceDescription.defaultMoveCost'
+      - '@azure/servicefabric.StatefulServiceDescription.flags'
+      - '@azure/servicefabric.StatefulServiceDescription.hasPersistedState'
+      - '@azure/servicefabric.StatefulServiceDescription.initializationData'
+      - '@azure/servicefabric.StatefulServiceDescription.isDefaultMoveCostSpecified'
+      - '@azure/servicefabric.StatefulServiceDescription.minReplicaSetSize'
+      - '@azure/servicefabric.StatefulServiceDescription.partitionDescription'
+      - '@azure/servicefabric.StatefulServiceDescription.placementConstraints'
+      - '@azure/servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.scalingPolicies'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceDnsName'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceKind'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceLoadMetrics'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceName'
+      - '@azure/servicefabric.StatefulServiceDescription.servicePackageActivationMode'
+      - '@azure/servicefabric.StatefulServiceDescription.servicePlacementPolicies'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceTypeName'
+      - '@azure/servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.targetReplicaSetSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: 說明具狀態服務。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '應用程式名稱包括 '' fabric:''URI 配置的完整應用程式名稱。'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.correlationScheme'
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 相互關聯配置。
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceCorrelationDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.defaultMoveCost'
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務移動成本。 可能的值包括：'Zero'、 'Low'、 'Medium'、 'High'
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: MoveCost'
+      return:
+        type:
+          - '@azure/servicefabric.MoveCost'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.flags'
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      旗標，指出是否已設定其他屬性。 每個相關聯的屬性對應至下面指定的旗標，如果設定，指出屬性是否有指定。
+      這個屬性可以是使用位元 'OR' 運算子取得的這些旗標的組合。
+      比方說，如果提供的值為 6 則 QuorumLossWaitDuration (2) 和 StandByReplicaKeepDuration(4) 旗標是設定。
+      - None-不會指出設定任何其他屬性。 值為零。
+      - ReplicaRestartWaitDuration-表示屬性設定的 ReplicaRestartWaitDuration。 值為 1。
+      - QuorumLossWaitDuration-表示屬性設定的 QuorumLossWaitDuration。 值是
+      2.
+      - StandByReplicaKeepDuration-表示屬性設定的 StandByReplicaKeepDuration。 值為 4。
+    optional: true
+    syntax:
+      content: 'flags?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.hasPersistedState'
+    name: hasPersistedState
+    fullName: hasPersistedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      旗標，指出這是否為本機磁碟儲存狀態的持續性服務。
+      如果這個屬性的值則為 true，否則為 false。
+    syntax:
+      content: 'hasPersistedState: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.initializationData'
+    name: initializationData
+    fullName: initializationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 初始化資料，做為位元組陣列。 在建立時，初始化資料會傳遞至服務執行個體或複本。
+    optional: true
+    syntax:
+      content: 'initializationData?: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.isDefaultMoveCostSpecified'
+    name: isDefaultMoveCostSpecified
+    fullName: isDefaultMoveCostSpecified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 表示是否指定 DefaultMoveCost 屬性。
+    optional: true
+    syntax:
+      content: 'isDefaultMoveCostSpecified?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.minReplicaSetSize'
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 以數字表示的最小複本集大小。
+    syntax:
+      content: 'minReplicaSetSize: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.partitionDescription'
+    name: partitionDescription
+    fullName: partitionDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 分割區說明，做為物件。
+    syntax:
+      content: 'partitionDescription: PartitionSchemeDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.placementConstraints'
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 以字串表示的放置限制式。 放置條件約束是節點屬性上的布林運算式，可允許根據服務需求將服務限制在特定節點。 比方說，若要放置 NodeType 為 blue 的節點上以服務指定下列："NodeColor == blue)"。
+    optional: true
+    syntax:
+      content: 'placementConstraints?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds'
+    name: quorumLossWaitDurationSeconds
+    fullName: quorumLossWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 允許分割區處於仲裁遺失狀態的持續時間上限 (秒)。
+    optional: true
+    syntax:
+      content: 'quorumLossWaitDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds'
+    name: replicaRestartWaitDurationSeconds
+    fullName: replicaRestartWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 關閉複本與建立新複本之間的持續時間 (秒)。
+    optional: true
+    syntax:
+      content: 'replicaRestartWaitDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.scalingPolicies'
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此服務的調整原則。
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ScalingPolicyDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceDnsName'
+    name: serviceDnsName
+    fullName: serviceDnsName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務的 DNS 名稱。 它需要啟用 Service Fabric 叢集中的 DNS 系統服務。
+    optional: true
+    syntax:
+      content: 'serviceDnsName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceLoadMetrics'
+    name: serviceLoadMetrics
+    fullName: serviceLoadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務負載度量。
+    optional: true
+    syntax:
+      content: 'serviceLoadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '使用服務的完整名稱 '' fabric:''URI 配置的完整應用程式名稱。'
+    syntax:
+      content: 'serviceName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.servicePackageActivationMode'
+    name: servicePackageActivationMode
+    fullName: servicePackageActivationMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '要用於服務的服務套件的啟動模式。 可能的值包括：''SharedProcess'', ''ExclusiveProcess'''
+    optional: true
+    syntax:
+      content: 'servicePackageActivationMode?: ServicePackageActivationMode'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePackageActivationMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.servicePlacementPolicies'
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務放置原則。
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescriptionUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceTypeName'
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服務資訊清單中所指定的服務類型的名稱。
+    syntax:
+      content: 'serviceTypeName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds'
+    name: standByReplicaKeepDurationSeconds
+    fullName: standByReplicaKeepDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在待命複本應該多久維護之前要移除定義。
+    optional: true
+    syntax:
+      content: 'standByReplicaKeepDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.targetReplicaSetSize'
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 以數字表示的目標複本集大小。
+    syntax:
+      content: 'targetReplicaSetSize: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: '@azure/servicefabric.ServiceCorrelationDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.MoveCost'
+    name: MoveCost
+    spec.typeScript:
+      - name: MoveCost
+        fullName: MoveCost
+        uid: '@azure/servicefabric.MoveCost'
+  - uid: '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+    name: PartitionSchemeDescriptionUnion
+    spec.typeScript:
+      - name: PartitionSchemeDescriptionUnion
+        fullName: PartitionSchemeDescriptionUnion
+        uid: '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+  - uid: '@azure/servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: '@azure/servicefabric.ScalingPolicyDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: '@azure/servicefabric.ServiceLoadMetricDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServicePackageActivationMode'
+    name: ServicePackageActivationMode
+    spec.typeScript:
+      - name: ServicePackageActivationMode
+        fullName: ServicePackageActivationMode
+        uid: '@azure/servicefabric.ServicePackageActivationMode'
+  - uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    name: 'ServicePlacementPolicyDescriptionUnion[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescriptionUnion
+        fullName: ServicePlacementPolicyDescriptionUnion
+        uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion'
+      - name: '[]'
+        fullName: '[]'

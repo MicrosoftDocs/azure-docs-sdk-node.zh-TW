@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 選擇性參數。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -43,7 +43,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 應用程式類型的版本。
     optional: true
     syntax:
       content: 'applicationTypeVersion?: undefined | string'
@@ -58,7 +58,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 接續權杖參數可用來取得下一組結果。 當來自系統的結果無法放入單一回應中時，API 的回應中會包含具有非空白值的接續權杖。 當此值傳遞至下一個 API 呼叫時，API 會傳回下一組結果。 如果沒有任何進一步的結果，接續權杖就不會包含值。 此參數的值不能經過 URL 編碼。
     optional: true
     syntax:
       content: 'continuationToken?: undefined | string'
@@ -88,7 +88,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      指定是否將從結果中排除應用程式參數的旗標。
+      預設值： false。
     optional: true
     syntax:
       content: 'excludeApplicationParameters?: undefined | false | true'
@@ -103,7 +105,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 分頁式查詢時傳回的最大結果數目。 此參數定義傳回結果數目的上限。 根據設定中所定義的訊息大小限制上限，如果所傳回的結果無法放入訊息中，則它們可以小於指定的結果上限。 如果此參數為零或未指定，則分頁式查詢會在傳回訊息中盡可能包含較多結果。 預設值：0.
     optional: true
     syntax:
       content: 'maxResults?: undefined | number'
@@ -163,7 +165,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 執行作業，以秒為單位的伺服器逾時。 此逾時指定用戶端願意等待完成要求的作業的持續時間。 此參數的預設值為 60 秒。 預設值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

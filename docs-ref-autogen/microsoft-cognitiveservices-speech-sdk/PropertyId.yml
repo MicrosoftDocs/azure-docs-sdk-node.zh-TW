@@ -41,7 +41,7 @@ items:
       - typeScript
     summary: |-
       認知服務語音服務訂用帳戶金鑰。 如果您使用的意圖辨識器，您需要指定用來指定特定 LUIS 應用程式的 LUIS 端點索引鍵。 在正常情況下，您應該不必直接使用這個屬性。
-      請改用@seeSpeechConfig.fromSubscription。
+      相反地，使用 [[SpeechConfig.fromSubscription]]。
     type: field
     numericValue: 0
     package: microsoft-cognitiveservices-speech-sdk
@@ -52,8 +52,8 @@ items:
       - typeScript
     summary: |-
       認知服務語音服務端點 (url)。 在正常情況下，您應該不必直接使用這個屬性。
-      請改用@seeSpeechConfig.fromEndpoint。
-      注意:此端點不是用來取得存取權杖的端點相同。
+      相反地，使用 [[SpeechConfig.fromEndpoint]]。
+      注意：此端點不是用來取得存取權杖的端點相同。
     type: field
     numericValue: 1
     package: microsoft-cognitiveservices-speech-sdk
@@ -64,7 +64,7 @@ items:
       - typeScript
     summary: |-
       認知服務語音服務區域中。 在正常情況下，您應該不必直接使用這個屬性。
-      請改用@seeSpeechConfig.fromSubscription， @see SpeechConfig.fromEndpoint， @see SpeechConfig.fromAuthorizationToken。
+      相反地，使用 [[SpeechConfig.fromSubscription]] [[SpeechConfig.fromEndpoint]] [[SpeechConfig.fromAuthorizationToken]]。
     type: field
     numericValue: 2
     package: microsoft-cognitiveservices-speech-sdk
@@ -75,7 +75,7 @@ items:
       - typeScript
     summary: |-
       認知服務語音服務授權權杖 （也稱為存取權杖）。 在正常情況下，您應該不必直接使用這個屬性。
-      請改用@seeSpeechConfig.fromAuthorizationToken，
+      相反地，使用 [[SpeechConfig.fromAuthorizationToken]] [[SpeechRecognizer.authorizationToken]] [[IntentRecognizer.authorizationToken]] [[TranslationRecognizer.authorizationToken]]。
     type: field
     numericValue: 3
     package: microsoft-cognitiveservices-speech-sdk
@@ -95,8 +95,8 @@ items:
       - typeScript
     summary: |-
       認知服務語音服務端點識別碼。在正常情況下，您應該不必直接使用這個屬性。
-      請改用@seeSpeechConfig.setEndpointId。
-      注意:使用語音入口網站中，端點詳細資料底下所列的結束點 id。
+      相反地，使用 [[SpeechConfig.endpointId]]。
+      注意：使用語音入口網站中，端點詳細資料底下所列的結束點 id。
     type: field
     numericValue: 5
     package: microsoft-cognitiveservices-speech-sdk
@@ -107,7 +107,7 @@ items:
       - typeScript
     summary: |-
       的逗號分隔清單做為目標的翻譯語言的語言 （BCP-47 格式）。 在正常情況下，您應該不必直接使用這個屬性。
-      改為使用@seeSpeechTranslationConfig.addTargetLanguage，
+      改為使用 [[SpeechTranslationConfig.addTargetLanguage]] [[SpeechTranslationConfig.targetLanguages]] [[TranslationRecognizer.targetLanguages]]。
     type: field
     numericValue: 6
     package: microsoft-cognitiveservices-speech-sdk
@@ -118,8 +118,8 @@ items:
       - typeScript
     summary: |-
       認知服務文字轉換語音服務語音的名稱。 在正常情況下，您應該不必直接使用這個屬性。
-      請改用@seeSpeechTranslationConfig.setVoiceName。
-      注意:有效的語音的名稱可以找到<a href="https://aka.ms/csspeech/voicenames">此處</a>。
+      相反地，使用 [[SpeechTranslationConfig.voiceName]]。
+      注意：有效的語音的名稱可以找到<a href="https://aka.ms/csspeech/voicenames">此處</a>。
     type: field
     numericValue: 7
     package: microsoft-cognitiveservices-speech-sdk
@@ -139,7 +139,7 @@ items:
       - typeScript
     summary: |-
       Language Understanding 服務區域。 在正常情況下，您應該不必直接使用這個屬性。
-      請改用@seeLanguageUnderstandingModel。
+      相反地，使用 [[LanguageUnderstandingModel]]。
     type: field
     numericValue: 9
     package: microsoft-cognitiveservices-speech-sdk
@@ -213,7 +213,7 @@ items:
       - typeScript
     summary: |-
       若要能夠辨識 （格式為 BCP-47） 口說的語言。 在正常情況下，您應該不必直接使用這個屬性。
-      請改用@seeSpeechConfig.setSpeechRecognitionLanguage。
+      相反地，使用 [[SpeechConfig.speechRecognitionLanguage]]。
     type: field
     numericValue: 15
     package: microsoft-cognitiveservices-speech-sdk
@@ -224,7 +224,7 @@ items:
       - typeScript
     summary: |-
       工作階段識別碼。此識別碼是代表特定的繫結，音訊的輸入資料流和基礎繫結至的語音辨識執行個體的全域唯一識別碼 (也稱為 UUID)。 在正常情況下，您應該不必直接使用這個屬性。
-      改為使用@seeSessionEventArgs.sessionId。
+      相反地，請使用 [[SessionEventArgs.sessionId]]。
     type: field
     numericValue: 16
     package: microsoft-cognitiveservices-speech-sdk
@@ -235,7 +235,7 @@ items:
       - typeScript
     summary: |-
       所要求的認知服務語音服務回應的輸出格式 （簡單或詳細）。 在正常情況下，您應該不必直接使用這個屬性。
-      改為使用@seeSpeechConfig.setOutputFormat。
+      相反地，請使用 [[SpeechConfig.outputFormat]]。
     type: field
     numericValue: 17
     package: microsoft-cognitiveservices-speech-sdk
@@ -262,7 +262,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: 認知服務語音服務錯誤的詳細資料 （以 JSON 格式）。 在正常情況下，您應該不必直接使用這個屬性。 改為使用@seeCancellationDetails.getErrorDetails。
+    summary: '認知服務語音服務錯誤的詳細資料 （以 JSON 格式）。 在正常情況下，您應該不必直接使用這個屬性。 相反地，請使用 [[CancellationDetails.errorDetails]]。'
     type: field
     numericValue: 20
     package: microsoft-cognitiveservices-speech-sdk
@@ -298,7 +298,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: Language Understanding Service 回應中的輸出 （JSON 格式）。 可透過@seeIntentRecognitionResult.Properties。
+    summary: 'Language Understanding Service 回應中的輸出 （JSON 格式）。 可透過 [[IntentRecognitionResult]]'
     type: field
     numericValue: 24
     package: microsoft-cognitiveservices-speech-sdk

@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 選擇性參數。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      指出是否應該立即傳送報告的旗標。
+      健康情況報告會傳送給 Service Fabric 閘道應用程式，再由其轉送給健康狀態資料存放區。
+      如果將 Immediate 設定為 true，則不論「HTTP 閘道應用程式」使用什麼網狀架構用戶端設定，都會從「HTTP 閘道」立即將報告傳送給健康狀態資料存放區。
+      這對於應該儘快傳送的重要報告來說，相當有用。
+      視時機和其他條件而定，傳送報告時仍可能失敗，例如在「HTTP 閘道」關閉或訊息未觸達閘道的情況下。
+      如果將 Immediate 設定為 false，就會根據來自「HTTP 閘道」的健康情況用戶端設定來傳送報告。 因此，會根據 HealthReportSendInterval 設定進行批次處理。
+      這是建議的設定，因為這除了可讓健康情況用戶端將健康情況報告處理最佳化之外，也可將傳送給健康狀態資料存放區的健康情況報告訊息最佳化。
+      預設不會立即傳送報告。 預設值： false。
     optional: true
     syntax:
       content: 'immediate?: undefined | false | true'
@@ -115,7 +123,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 執行作業，以秒為單位的伺服器逾時。 此逾時指定用戶端願意等待完成要求的作業的持續時間。 此參數的預設值為 60 秒。 預設值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

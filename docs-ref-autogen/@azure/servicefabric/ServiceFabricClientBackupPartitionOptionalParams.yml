@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 選擇性參數。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -41,7 +41,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 描述要立即備份此磁碟分割的參數。 如果不存在，備份作業會使用與此資料分割相關聯的預設參數從目前的備份原則。
     optional: true
     syntax:
       content: 'backupPartitionDescription?: BackupPartitionDescription'
@@ -56,7 +56,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 指定最大時間量，以分鐘為單位，等候備份作業完成。 Post 作業，完成逾時錯誤。 不過，在某些極端的案例中可能是，雖然作業傳回後逾時，備份實際上會通過。 如果發生逾時錯誤，其建議的叫用此作業一次使用更高的逾時值。 相同的預設值為 10 分鐘。 預設值：10.
     optional: true
     syntax:
       content: 'backupTimeout?: undefined | number'
@@ -131,7 +131,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 執行作業，以秒為單位的伺服器逾時。 此逾時指定用戶端願意等待完成要求的作業的持續時間。 此參數的預設值為 60 秒。 預設值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

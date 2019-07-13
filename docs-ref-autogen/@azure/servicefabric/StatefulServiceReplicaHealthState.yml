@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState'
+    name: StatefulServiceReplicaHealthState
+    fullName: StatefulServiceReplicaHealthState
+    children:
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.partitionId'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.replicaId'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示包含複本識別碼和彙總健全狀況狀態的具狀態服務複本的健全狀況狀態。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 實體，例如叢集、 節點、 應用程式、 服務、 資料分割、 複本等等的健全狀況狀態。可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此複本所屬的資料分割識別碼。
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 具狀態服務複本的識別碼。 Service Fabric 會使用 ReplicaId 來唯一識別資料分割的複本。 它是資料分割內唯一的並不會變更複本的存留期。 如果複本卸除相同資料分割在相同節點上建立另一個複本，它會取得不同值的識別碼。有時候無狀態服務執行個體的識別碼也稱為複本識別碼。
+    optional: true
+    syntax:
+      content: 'replicaId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

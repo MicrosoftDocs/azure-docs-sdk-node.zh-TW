@@ -181,6 +181,9 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.getClusterHealthUsingPolicy'
       - '@azure/servicefabric.ServiceFabricClient.getClusterHealthUsingPolicy_1'
       - '@azure/servicefabric.ServiceFabricClient.getClusterHealthUsingPolicy_2'
+      - '@azure/servicefabric.ServiceFabricClient.getClusterLoad'
+      - '@azure/servicefabric.ServiceFabricClient.getClusterLoad_1'
+      - '@azure/servicefabric.ServiceFabricClient.getClusterLoad_2'
       - '@azure/servicefabric.ServiceFabricClient.getClusterManifest'
       - '@azure/servicefabric.ServiceFabricClient.getClusterManifest_1'
       - '@azure/servicefabric.ServiceFabricClient.getClusterManifest_2'
@@ -259,9 +262,15 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreContent'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreContent_1'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreContent_2'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize_1'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize_2'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootContent'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootContent_1'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootContent_2'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize_1'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize_2'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreUploadSessionById'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreUploadSessionById_1'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreUploadSessionById_2'
@@ -409,6 +418,9 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.getSubNameInfoList'
       - '@azure/servicefabric.ServiceFabricClient.getSubNameInfoList_1'
       - '@azure/servicefabric.ServiceFabricClient.getSubNameInfoList_2'
+      - '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation'
+      - '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation_1'
+      - '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation_2'
       - '@azure/servicefabric.ServiceFabricClient.getUpgradeOrchestrationServiceState'
       - '@azure/servicefabric.ServiceFabricClient.getUpgradeOrchestrationServiceState_1'
       - '@azure/servicefabric.ServiceFabricClient.getUpgradeOrchestrationServiceState_2'
@@ -430,6 +442,12 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.meshService'
       - '@azure/servicefabric.ServiceFabricClient.meshServiceReplica'
       - '@azure/servicefabric.ServiceFabricClient.meshVolume'
+      - '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica'
+      - '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica_1'
+      - '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica_2'
+      - '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica'
+      - '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica_1'
+      - '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica_2'
       - '@azure/servicefabric.ServiceFabricClient.postChaosSchedule'
       - '@azure/servicefabric.ServiceFabricClient.postChaosSchedule_1'
       - '@azure/servicefabric.ServiceFabricClient.postChaosSchedule_2'
@@ -577,6 +595,9 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.suspendServiceBackup'
       - '@azure/servicefabric.ServiceFabricClient.suspendServiceBackup_1'
       - '@azure/servicefabric.ServiceFabricClient.suspendServiceBackup_2'
+      - '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting'
+      - '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting_1'
+      - '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting_2'
       - '@azure/servicefabric.ServiceFabricClient.unprovisionApplicationType'
       - '@azure/servicefabric.ServiceFabricClient.unprovisionApplicationType_1'
       - '@azure/servicefabric.ServiceFabricClient.unprovisionApplicationType_2'
@@ -5152,6 +5173,67 @@ items:
         type:
           - Promise<Models.GetClusterHealthUsingPolicyResponse>
     package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getClusterLoad'
+    name: getClusterLoad(Models.ServiceFabricClientGetClusterLoadOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 擷取 Service Fabric 叢集已定義負載或容量的所有計量的負載資訊。
+    syntax:
+      content: 'function getClusterLoad(options?: Models.ServiceFabricClientGetClusterLoadOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.ServiceFabricClientGetClusterLoadOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GetClusterLoadResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getClusterLoad_1'
+    name: getClusterLoad(ServiceCallback<ClusterLoadInfo>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getClusterLoad(callback: ServiceCallback<ClusterLoadInfo>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.ClusterLoadInfo>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.GetClusterLoadResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getClusterLoad_2'
+    name: 'getClusterLoad(ServiceFabricClientGetClusterLoadOptionalParams, ServiceCallback<ClusterLoadInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getClusterLoad(options: ServiceFabricClientGetClusterLoadOptionalParams, callback: ServiceCallback<ClusterLoadInfo>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientGetClusterLoadOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.ClusterLoadInfo>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.GetClusterLoadResponse>
+    package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.getClusterManifest'
     name: getClusterManifest(Models.ServiceFabricClientGetClusterManifestOptionalParams)
     children: []
@@ -7470,6 +7552,79 @@ items:
         type:
           - Promise<Models.GetImageStoreContentResponse>
     package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize'
+    name: 'getImageStoreFolderSize(string, Models.ServiceFabricClientGetImageStoreFolderSizeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 取得指定 contentPath 的映像存放區資料夾下，檔案的大小總計。 contentPath 是相對於映像存放區根目錄的路徑。
+    syntax:
+      content: 'function getImageStoreFolderSize(contentPath: string, options?: Models.ServiceFabricClientGetImageStoreFolderSizeOptionalParams)'
+      parameters:
+        - id: contentPath
+          type:
+            - string
+          description: 映像存放區中檔案或資料夾與其根的相對路徑。
+        - id: options
+          type:
+            - Models.ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GetImageStoreFolderSizeResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize_1'
+    name: 'getImageStoreFolderSize(string, ServiceCallback<FolderSizeInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImageStoreFolderSize(contentPath: string, callback: ServiceCallback<FolderSizeInfo>)'
+      parameters:
+        - id: contentPath
+          type:
+            - string
+          description: 映像存放區中檔案或資料夾與其根的相對路徑。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.GetImageStoreFolderSizeResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize_2'
+    name: 'getImageStoreFolderSize(string, ServiceFabricClientGetImageStoreFolderSizeOptionalParams, ServiceCallback<FolderSizeInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImageStoreFolderSize(contentPath: string, options: ServiceFabricClientGetImageStoreFolderSizeOptionalParams, callback: ServiceCallback<FolderSizeInfo>)'
+      parameters:
+        - id: contentPath
+          type:
+            - string
+          description: 映像存放區中檔案或資料夾與其根的相對路徑。
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientGetImageStoreFolderSizeOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.GetImageStoreFolderSizeResponse>
+    package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreRootContent'
     name: getImageStoreRootContent(Models.ServiceFabricClientGetImageStoreRootContentOptionalParams)
     children: []
@@ -7530,6 +7685,67 @@ items:
       return:
         type:
           - Promise<Models.GetImageStoreRootContentResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize'
+    name: getImageStoreRootFolderSize(Models.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 傳回資料夾的根和子系的檔案大小總計，映像存放區中。
+    syntax:
+      content: 'function getImageStoreRootFolderSize(options?: Models.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GetImageStoreRootFolderSizeResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize_1'
+    name: getImageStoreRootFolderSize(ServiceCallback<FolderSizeInfo>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImageStoreRootFolderSize(callback: ServiceCallback<FolderSizeInfo>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.GetImageStoreRootFolderSizeResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize_2'
+    name: 'getImageStoreRootFolderSize(ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams, ServiceCallback<FolderSizeInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImageStoreRootFolderSize(options: ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams, callback: ServiceCallback<FolderSizeInfo>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.GetImageStoreRootFolderSizeResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreUploadSessionById'
     name: 'getImageStoreUploadSessionById(string, Models.ServiceFabricClientGetImageStoreUploadSessionByIdOptionalParams)'
@@ -11549,6 +11765,92 @@ items:
         type:
           - Promise<Models.GetSubNameInfoListResponse>
     package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation'
+    name: 'getUnplacedReplicaInformation(string, Models.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      傳回未放置的複本的相關資訊的服務。
+      如果指定 PartitionId，則結果會包含未放置的複本，該資料分割的相關資訊。
+      如果未指定 PartitionId，結果會包含該服務的所有資料分割未放置的複本相關資訊。
+      如果 OnlyQueryPrimaries 設為 true，則結果將會包含主要複本的相關資訊，並忽略未放置的次要複本。
+    syntax:
+      content: 'function getUnplacedReplicaInformation(serviceId: string, options?: Models.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams)'
+      parameters:
+        - id: serviceId
+          type:
+            - string
+          description: |-
+            服務的身分識別。 此識別碼通常是完整名稱的服務沒有 ' fabric:'URI 配置的完整應用程式名稱。
+            從 6.0 版開始，階層的名稱會以 "~" 字元分隔。
+            比方說，如果服務名稱是"fabric: / myapp/app1/svc1"，服務識別會是"myapp ~ app1 ~ svc1"在 6.0 + 和"myapp/app1/svc1"在舊版中。
+        - id: options
+          type:
+            - Models.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GetUnplacedReplicaInformationResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation_1'
+    name: 'getUnplacedReplicaInformation(string, ServiceCallback<UnplacedReplicaInformation>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getUnplacedReplicaInformation(serviceId: string, callback: ServiceCallback<UnplacedReplicaInformation>)'
+      parameters:
+        - id: serviceId
+          type:
+            - string
+          description: |-
+            服務的身分識別。 此識別碼通常是完整名稱的服務沒有 ' fabric:'URI 配置的完整應用程式名稱。
+            從 6.0 版開始，階層的名稱會以 "~" 字元分隔。
+            比方說，如果服務名稱是"fabric: / myapp/app1/svc1"，服務識別會是"myapp ~ app1 ~ svc1"在 6.0 + 和"myapp/app1/svc1"在舊版中。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.UnplacedReplicaInformation>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.GetUnplacedReplicaInformationResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation_2'
+    name: 'getUnplacedReplicaInformation(string, ServiceFabricClientGetUnplacedReplicaInformationOptionalParams, ServiceCallback<UnplacedReplicaInformation>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getUnplacedReplicaInformation(serviceId: string, options: ServiceFabricClientGetUnplacedReplicaInformationOptionalParams, callback: ServiceCallback<UnplacedReplicaInformation>)'
+      parameters:
+        - id: serviceId
+          type:
+            - string
+          description: |-
+            服務的身分識別。 此識別碼通常是完整名稱的服務沒有 ' fabric:'URI 配置的完整應用程式名稱。
+            從 6.0 版開始，階層的名稱會以 "~" 字元分隔。
+            比方說，如果服務名稱是"fabric: / myapp/app1/svc1"，服務識別會是"myapp ~ app1 ~ svc1"在 6.0 + 和"myapp/app1/svc1"在舊版中。
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.UnplacedReplicaInformation>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<Models.GetUnplacedReplicaInformationResponse>
+    package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.getUpgradeOrchestrationServiceState'
     name: getUpgradeOrchestrationServiceState(Models.ServiceFabricClientGetUpgradeOrchestrationServiceStateOptionalParams)
     children: []
@@ -12031,6 +12333,172 @@ items:
       return:
         type:
           - '@azure/servicefabric.MeshVolume'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica'
+    name: 'movePrimaryReplica(string, Models.ServiceFabricClientMovePrimaryReplicaOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      此命令會將資料分割的具狀態服務，遵守所有條件約束的主要複本。
+      如果 NodeName 參數會指定主要將移至指定的節點 （如果條件約束允許時）。
+      如果未指定節點名稱參數，主要複本將會移至叢集中隨機節點。
+      如果您指定並設定為 true，則主要 IgnoreConstraints 參數將會移無論條件約束。
+    syntax:
+      content: 'function movePrimaryReplica(partitionId: string, options?: Models.ServiceFabricClientMovePrimaryReplicaOptionalParams)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: 分割區的識別。
+        - id: options
+          type:
+            - Models.ServiceFabricClientMovePrimaryReplicaOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica_1'
+    name: 'movePrimaryReplica(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function movePrimaryReplica(partitionId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: 分割區的識別。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica_2'
+    name: 'movePrimaryReplica(string, ServiceFabricClientMovePrimaryReplicaOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function movePrimaryReplica(partitionId: string, options: ServiceFabricClientMovePrimaryReplicaOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: 分割區的識別。
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientMovePrimaryReplicaOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica'
+    name: 'moveSecondaryReplica(string, string, Models.ServiceFabricClientMoveSecondaryReplicaOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      此命令會將次要複本的資料分割的具狀態服務，遵守所有條件約束。
+      必須指定目前節點的主機參數，以識別移動的複本。
+      必須指定來源節點名稱，但可以省略新的節點名稱，並在此情況下將複本移至隨機節點。
+      如果您指定並設定為 true，則次要 IgnoreConstraints 參數將會移無論條件約束。
+    syntax:
+      content: 'function moveSecondaryReplica(partitionId: string, currentNodeName: string, options?: Models.ServiceFabricClientMoveSecondaryReplicaOptionalParams)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: 分割區的識別。
+        - id: currentNodeName
+          type:
+            - string
+          description: 移動次要複本的來源節點的名稱。
+        - id: options
+          type:
+            - Models.ServiceFabricClientMoveSecondaryReplicaOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica_1'
+    name: 'moveSecondaryReplica(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function moveSecondaryReplica(partitionId: string, currentNodeName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: 分割區的識別。
+        - id: currentNodeName
+          type:
+            - string
+          description: 移動次要複本的來源節點的名稱。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica_2'
+    name: 'moveSecondaryReplica(string, string, ServiceFabricClientMoveSecondaryReplicaOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function moveSecondaryReplica(partitionId: string, currentNodeName: string, options: ServiceFabricClientMoveSecondaryReplicaOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: 分割區的識別。
+        - id: currentNodeName
+          type:
+            - string
+          description: 移動次要複本的來源節點的名稱。
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientMoveSecondaryReplicaOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.postChaosSchedule'
     name: 'postChaosSchedule(ChaosScheduleDescription, Models.ServiceFabricClientPostChaosScheduleOptionalParams)'
@@ -12699,7 +13167,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 這意謂著無法復原該節點的永續性狀態。 通常如果已將硬碟抹除乾淨或硬碟損毀，就會發生這種情況。 節點必須停止運作，此作業才能成功。 此作業可讓 Service Fabric 知道該節點上的複本已不存在，而 Service Fabric 應該停止等候這些複本恢復運作。 如果節點上的狀態尚未移除，而節點能夠在其狀態保持不變的情況下恢復運作，則請勿執行此 Cmdlet。
+    summary: '這意謂著無法復原該節點的永續性狀態。 通常如果已將硬碟抹除乾淨或硬碟損毀，就會發生這種情況。 節點必須停止運作，此作業才能成功。 此作業可讓 Service Fabric 知道該節點上的複本已不存在，而 Service Fabric 應該停止等候這些複本恢復運作。 如果節點上的狀態尚未移除，而節點能夠在其狀態保持不變的情況下恢復運作，則請勿執行此 Cmdlet。 從 Service Fabric 6.5，才能使用此 API 對於種子節點，請將種子節點變更為一般 （非種子） 節點，然後叫用這個 API，以移除節點狀態。 如果叢集在 Azure 上執行之後種子節點發生故障，Service Fabric 會嘗試自動將它變更為非種子節點。 若要這會發生，請確定主要節點類型中的非種子節點數目不是小於下種子節點的數目。 如有必要，請在主要節點類型，以達到此目的新增更多節點。 針對獨立叢集，如果不應該向下種子節點恢復運作與其保持不變的狀態，請從叢集移除節點，請參閱 https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-windows-server-add-remove-nodes'
     syntax:
       content: 'function removeNodeState(nodeName: string, options?: Models.ServiceFabricClientRemoveNodeStateOptionalParams)'
       parameters:
@@ -13467,7 +13935,7 @@ items:
       例如，健康狀態資料存放區可能會因為參數無效 (例如序號過時) 而拒絕此報告。
       若要查看報表是否已套用健康狀態存放區中，執行 GetReplicaHealth 並檢查報表會顯示 HealthEvents 一節。
     syntax:
-      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, replicaHealthReportServiceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, options?: Models.ServiceFabricClientReportReplicaHealthOptionalParams)'
+      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, serviceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, options?: Models.ServiceFabricClientReportReplicaHealthOptionalParams)'
       parameters:
         - id: partitionId
           type:
@@ -13477,7 +13945,7 @@ items:
           type:
             - string
           description: 複本的識別碼。
-        - id: replicaHealthReportServiceKind
+        - id: serviceKind
           type:
             - Models.ReplicaHealthReportServiceKind
           description: 服務複本種類 （無狀態或具狀態），報告健康情況。 以下是可能的值。 可能的值包括：'無狀態'、 '具狀態'
@@ -13502,7 +13970,7 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, replicaHealthReportServiceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, callback: ServiceCallback<void>)'
+      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, serviceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, callback: ServiceCallback<void>)'
       parameters:
         - id: partitionId
           type:
@@ -13512,7 +13980,7 @@ items:
           type:
             - string
           description: 複本的識別碼。
-        - id: replicaHealthReportServiceKind
+        - id: serviceKind
           type:
             - Models.ReplicaHealthReportServiceKind
           description: 服務複本種類 （無狀態或具狀態），報告健康情況。 以下是可能的值。 可能的值包括：'無狀態'、 '具狀態'
@@ -13537,7 +14005,7 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, replicaHealthReportServiceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, options: ServiceFabricClientReportReplicaHealthOptionalParams, callback: ServiceCallback<void>)'
+      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, serviceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, options: ServiceFabricClientReportReplicaHealthOptionalParams, callback: ServiceCallback<void>)'
       parameters:
         - id: partitionId
           type:
@@ -13547,7 +14015,7 @@ items:
           type:
             - string
           description: 複本的識別碼。
-        - id: replicaHealthReportServiceKind
+        - id: serviceKind
           type:
             - Models.ReplicaHealthReportServiceKind
           description: 服務複本種類 （無狀態或具狀態），報告健康情況。 以下是可能的值。 可能的值包括：'無狀態'、 '具狀態'
@@ -15296,7 +15764,7 @@ items:
 
       不建議使用系統服務作為目標來呼叫此 API。
 
-      注意：一旦呼叫此 API，即無法回復。 呼叫 CancelOperation 只會停止執行並清除內部系統狀態。
+      注意:一旦呼叫此 API，即無法回復。 呼叫 CancelOperation 只會停止執行並清除內部系統狀態。
       如果命令已進展到足以造成資料遺失的地步，則它將不會還原資料。
 
       您可以使用相同的 OperationId 來呼叫 GetDataLossProgress API，以傳回使用此 API 所啟動作業的相關資訊。
@@ -16241,6 +16709,81 @@ items:
         - id: options
           type:
             - '@azure/servicefabric.ServiceFabricClientSuspendServiceBackupOptionalParams'
+          description: 選擇性參數
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting'
+    name: 'toggleVerboseServicePlacementHealthReporting(boolean, Models.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      如果詳細資訊設為 true，則無法放置或卸除複本時，便會產生詳細的健康狀態報告。
+      如果詳細資訊設為 false，則無法放置或卸除複本時，將會不產生任何健康情況報告。
+    syntax:
+      content: 'function toggleVerboseServicePlacementHealthReporting(enabled: boolean, options?: Models.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams)'
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: 服務位置健康情況報告的詳細資訊。
+        - id: options
+          type:
+            - Models.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting_1'
+    name: 'toggleVerboseServicePlacementHealthReporting(boolean, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function toggleVerboseServicePlacementHealthReporting(enabled: boolean, callback: ServiceCallback<void>)'
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: 服務位置健康情況報告的詳細資訊。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回呼
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting_2'
+    name: 'toggleVerboseServicePlacementHealthReporting(boolean, ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function toggleVerboseServicePlacementHealthReporting(enabled: boolean, options: ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: 服務位置健康情況報告的詳細資訊。
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams'
           description: 選擇性參數
         - id: callback
           type:
@@ -17770,6 +18313,22 @@ references:
       - name: ServiceFabricClientGetClusterHealthUsingPolicyOptionalParams
         fullName: ServiceFabricClientGetClusterHealthUsingPolicyOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientGetClusterHealthUsingPolicyOptionalParams'
+  - uid: ServiceCallback<@azure/servicefabric.ClusterLoadInfo>
+    name: ClusterLoadInfo>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ClusterLoadInfo
+        fullName: ClusterLoadInfo
+        uid: '@azure/servicefabric.ClusterLoadInfo'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/servicefabric.ServiceFabricClientGetClusterLoadOptionalParams'
+    name: ServiceFabricClientGetClusterLoadOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientGetClusterLoadOptionalParams
+        fullName: ServiceFabricClientGetClusterLoadOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientGetClusterLoadOptionalParams'
   - uid: ServiceCallback<@azure/servicefabric.ClusterManifest>
     name: ClusterManifest>
     spec.typeScript:
@@ -18106,12 +18665,34 @@ references:
       - name: ServiceFabricClientGetImageStoreContentOptionalParams
         fullName: ServiceFabricClientGetImageStoreContentOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreContentOptionalParams'
+  - uid: ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+    name: FolderSizeInfo>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FolderSizeInfo
+        fullName: FolderSizeInfo
+        uid: '@azure/servicefabric.FolderSizeInfo'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreFolderSizeOptionalParams'
+    name: ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+        fullName: ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreFolderSizeOptionalParams'
   - uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreRootContentOptionalParams'
     name: ServiceFabricClientGetImageStoreRootContentOptionalParams
     spec.typeScript:
       - name: ServiceFabricClientGetImageStoreRootContentOptionalParams
         fullName: ServiceFabricClientGetImageStoreRootContentOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreRootContentOptionalParams'
+  - uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams'
+    name: ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+        fullName: ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams'
   - uid: ServiceCallback<@azure/servicefabric.UploadSession>
     name: UploadSession>
     spec.typeScript:
@@ -18676,6 +19257,22 @@ references:
       - name: ServiceFabricClientGetSubNameInfoListOptionalParams
         fullName: ServiceFabricClientGetSubNameInfoListOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientGetSubNameInfoListOptionalParams'
+  - uid: ServiceCallback<@azure/servicefabric.UnplacedReplicaInformation>
+    name: UnplacedReplicaInformation>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: UnplacedReplicaInformation
+        fullName: UnplacedReplicaInformation
+        uid: '@azure/servicefabric.UnplacedReplicaInformation'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/servicefabric.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams'
+    name: ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+        fullName: ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams'
   - uid: ServiceCallback<@azure/servicefabric.UpgradeOrchestrationServiceState>
     name: UpgradeOrchestrationServiceState>
     spec.typeScript:
@@ -18726,6 +19323,18 @@ references:
       - name: ServiceFabricClientInvokeInfrastructureQueryOptionalParams
         fullName: ServiceFabricClientInvokeInfrastructureQueryOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientInvokeInfrastructureQueryOptionalParams'
+  - uid: '@azure/servicefabric.ServiceFabricClientMovePrimaryReplicaOptionalParams'
+    name: ServiceFabricClientMovePrimaryReplicaOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientMovePrimaryReplicaOptionalParams
+        fullName: ServiceFabricClientMovePrimaryReplicaOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientMovePrimaryReplicaOptionalParams'
+  - uid: '@azure/servicefabric.ServiceFabricClientMoveSecondaryReplicaOptionalParams'
+    name: ServiceFabricClientMoveSecondaryReplicaOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientMoveSecondaryReplicaOptionalParams
+        fullName: ServiceFabricClientMoveSecondaryReplicaOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientMoveSecondaryReplicaOptionalParams'
   - uid: '@azure/servicefabric.ChaosScheduleDescription'
     name: ChaosScheduleDescription
     spec.typeScript:
@@ -19130,6 +19739,12 @@ references:
       - name: ServiceFabricClientSuspendServiceBackupOptionalParams
         fullName: ServiceFabricClientSuspendServiceBackupOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientSuspendServiceBackupOptionalParams'
+  - uid: '@azure/servicefabric.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams'
+    name: ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+        fullName: ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams'
   - uid: '@azure/servicefabric.UnprovisionApplicationTypeDescriptionInfo'
     name: UnprovisionApplicationTypeDescriptionInfo
     spec.typeScript:

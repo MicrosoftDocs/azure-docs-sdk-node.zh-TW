@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthChunk'
+    name: ClusterHealthChunk
+    fullName: ClusterHealthChunk
+    children:
+      - '@azure/servicefabric.ClusterHealthChunk.applicationHealthStateChunks'
+      - '@azure/servicefabric.ClusterHealthChunk.healthState'
+      - '@azure/servicefabric.ClusterHealthChunk.nodeHealthStateChunks'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      代表叢集的健全狀況區塊。
+      包含彙總的叢集健全狀況狀態，以及採用輸入篩選條件的叢集實體。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunk.applicationHealthStateChunks'
+    name: applicationHealthStateChunks
+    fullName: applicationHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 清單中的應用程式健康狀態區塊採用篩選器中的叢集健全狀況區塊查詢描述叢集中。
+    optional: true
+    syntax:
+      content: 'applicationHealthStateChunks?: ApplicationHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthStateChunkList'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      表示彙總健全狀況狀態的叢集計算健全狀況管理員所 HealthState。
+      實體的健康狀態評估會反映報告上的實體和其子系 （如果有的話） 的所有事件。
+      彙總，即可套用所需的叢集健全狀況原則和應用程式健全狀況原則。 可能的值包括：'Invalid'、 'Ok'、 'Warning'、 'Error'、 'Unknown'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunk.nodeHealthStateChunks'
+    name: nodeHealthStateChunks
+    fullName: nodeHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 採用篩選器中的叢集健全狀況區塊查詢描述叢集中，區塊節點健全狀況狀態的清單。
+    optional: true
+    syntax:
+      content: 'nodeHealthStateChunks?: NodeHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.NodeHealthStateChunkList'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunkList'
+    name: ApplicationHealthStateChunkList
+    spec.typeScript:
+      - name: ApplicationHealthStateChunkList
+        fullName: ApplicationHealthStateChunkList
+        uid: '@azure/servicefabric.ApplicationHealthStateChunkList'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.NodeHealthStateChunkList'
+    name: NodeHealthStateChunkList
+    spec.typeScript:
+      - name: NodeHealthStateChunkList
+        fullName: NodeHealthStateChunkList
+        uid: '@azure/servicefabric.NodeHealthStateChunkList'

@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 選擇性參數。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      描述用來評估叢集健康情況和篩選器以選取要傳回哪些叢集實體叢集和應用程式健全狀況原則。
+      如果叢集健康狀態原則存在，它用來評估叢集事件與叢集節點。 如果不存在的話，叢集健全狀況原則定義叢集資訊清單或預設叢集健康狀態原則中的健全狀況評估用途。
+      根據預設，每個應用程式使用，如果資訊清單中未不定義任何原則，在應用程式資訊清單或預設的健全狀況原則，定義的特定應用程式健全狀況原則評估。
+      如果指定應用程式健康狀態原則對應，而且有應用程式的項目，指定的應用程式健全狀況原則用來評估應用程式健全狀況。
+      使用者可以指定極具彈性篩選器，以選取要包含在回應中的叢集實體。 選取項目可以取決於 實體健全狀況狀態，並根據階層中。
+      查詢可以傳回根據指定的篩選條件之實體的多層級的子系。 比方說，它可以傳回具有指定的名稱，並為此應用程式的一個應用程式，會傳回錯誤或警告，以及所有資料分割和複本的其中一個服務中的服務。
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 執行作業，以秒為單位的伺服器逾時。 此逾時指定用戶端願意等待完成要求的作業的持續時間。 此參數的預設值為 60 秒。 預設值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

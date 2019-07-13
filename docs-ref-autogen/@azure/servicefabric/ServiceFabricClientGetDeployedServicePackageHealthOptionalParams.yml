@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 選擇性參數。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      可根據健康情況狀態來篩選所傳回的 HealthEvent 物件集合。
+      此參數的可能值包括下列其中一個健康情況狀態的整數值。
+      只會傳回符合篩選條件的事件。 所有事件都會用來評估彙總的健康情況狀態。
+      如果未指定，則會傳回所有項目。 狀態值是以旗標為基礎的列舉，因而此值可以是使用位元 'OR' 運算子所取得這些值的組合。
+      例如，如果提供的值為 6，則會傳回 HealthState 值為 OK (2) 和 Warning (4) 的所有事件。
+      - Default-預設值。 符合任何 HealthState。 值為零。
+      - None-不符合任何 HealthState 值的篩選。 用來在指定狀態集合沒有任何結果時傳回。 值為 1。
+      - Ok-符合輸入含 HealthState 值 Ok 的篩選條件。 值為 2。
+      - 警告-篩選符合輸入含 HealthState 值 Warning。 值為 4。
+      - Error-符合輸入含 HealthState 值 Error 的篩選條件。 值為 8。
+      - All-符合輸入含任何 HealthState 值的篩選條件。 值為 65535。 預設值：0.
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -115,7 +126,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 執行作業，以秒為單位的伺服器逾時。 此逾時指定用戶端願意等待完成要求的作業的持續時間。 此參數的預設值為 60 秒。 預設值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,242 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties'
+    name: AmlComputeProperties
+    fullName: AmlComputeProperties
+    children:
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.allocationState'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.allocationStateTransitionTime'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.currentNodeCount'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.errors'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.nodeStateCounts'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.scaleSettings'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.subnet'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.targetNodeCount'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.userAccountCredentials'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.vmPriority'
+      - '@azure/arm-machinelearningservices.AmlComputeProperties.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: AML 計算的屬性
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.allocationState'
+    name: allocationState
+    fullName: allocationState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 配置狀態。 配置狀態的計算。 可能的值為： steady-指出計算不會調整大小。 沒有任何變更，以在進行中計算的計算節點數目。 計算會進入此狀態，以及變更計算節點數目的計算上執行任何作業時建立。 調整大小-指出，正在重新調整大小計算。也就是計算節點正在加入或移除與計算。 可能的值包括：'穩定'，'調整大小'**附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'allocationState?: AllocationState'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.AllocationState'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.allocationStateTransitionTime'
+    name: allocationStateTransitionTime
+    fullName: allocationStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      配置狀態轉換時間。 計算進入其目前的配置狀態的時間。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'allocationStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.currentNodeCount'
+    name: currentNodeCount
+    fullName: currentNodeCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      目前的節點計數。 目前指派給計算的計算節點數目。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'currentNodeCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.errors'
+    name: errors
+    fullName: errors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      錯誤。 節點安裝期間遇到的各種不同的計算節點的錯誤集合。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'errors?: MachineLearningServiceError[]'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.MachineLearningServiceError[]'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.nodeStateCounts'
+    name: nodeStateCounts
+    fullName: nodeStateCounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      節點狀態計數。 在計算的各種節點狀態的計數。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'nodeStateCounts?: NodeStateCounts'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.NodeStateCounts'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.scaleSettings'
+    name: scaleSettings
+    fullName: scaleSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 調整規模設定 AML 計算
+    optional: true
+    syntax:
+      content: 'scaleSettings?: ScaleSettings'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.ScaleSettings'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.subnet'
+    name: subnet
+    fullName: subnet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 子網路。 計算節點所屬的虛擬網路子網路的資源識別碼。
+    optional: true
+    syntax:
+      content: 'subnet?: ResourceId'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.ResourceId'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.targetNodeCount'
+    name: targetNodeCount
+    fullName: targetNodeCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      目標節點計數。 計算的計算節點目標數目。 如果，allocationState 會調整大小，這個屬性會表示在進行中的調整大小作業的目標節點計數。 如果穩定，allocationState，這個屬性會代表上一個調整大小作業的目標節點計數。
+      **附註：這個屬性不會序列化。它可以才會填入伺服器中。**
+    optional: true
+    syntax:
+      content: 'targetNodeCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.userAccountCredentials'
+    name: userAccountCredentials
+    fullName: userAccountCredentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 使用者帳戶認證。 將每個計算節點建立系統管理員使用者帳戶的認證。
+    optional: true
+    syntax:
+      content: 'userAccountCredentials?: UserAccountCredentials'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.UserAccountCredentials'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.vmPriority'
+    name: vmPriority
+    fullName: vmPriority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '虛擬機器優先順序。 可能的值包括：[專用]，''LowPriority'''
+    optional: true
+    syntax:
+      content: 'vmPriority?: VmPriority'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.VmPriority'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AmlComputeProperties.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 虛擬機器大小
+    optional: true
+    syntax:
+      content: 'vmSize?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-machinelearningservices'
+references:
+  - uid: '@azure/arm-machinelearningservices.AllocationState'
+    name: AllocationState
+    spec.typeScript:
+      - name: AllocationState
+        fullName: AllocationState
+        uid: '@azure/arm-machinelearningservices.AllocationState'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningServiceError[]'
+    name: 'MachineLearningServiceError[]'
+    spec.typeScript:
+      - name: MachineLearningServiceError
+        fullName: MachineLearningServiceError
+        uid: '@azure/arm-machinelearningservices.MachineLearningServiceError'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-machinelearningservices.NodeStateCounts'
+    name: NodeStateCounts
+    spec.typeScript:
+      - name: NodeStateCounts
+        fullName: NodeStateCounts
+        uid: '@azure/arm-machinelearningservices.NodeStateCounts'
+  - uid: '@azure/arm-machinelearningservices.ScaleSettings'
+    name: ScaleSettings
+    spec.typeScript:
+      - name: ScaleSettings
+        fullName: ScaleSettings
+        uid: '@azure/arm-machinelearningservices.ScaleSettings'
+  - uid: '@azure/arm-machinelearningservices.ResourceId'
+    name: ResourceId
+    spec.typeScript:
+      - name: ResourceId
+        fullName: ResourceId
+        uid: '@azure/arm-machinelearningservices.ResourceId'
+  - uid: '@azure/arm-machinelearningservices.UserAccountCredentials'
+    name: UserAccountCredentials
+    spec.typeScript:
+      - name: UserAccountCredentials
+        fullName: UserAccountCredentials
+        uid: '@azure/arm-machinelearningservices.UserAccountCredentials'
+  - uid: '@azure/arm-machinelearningservices.VmPriority'
+    name: VmPriority
+    spec.typeScript:
+      - name: VmPriority
+        fullName: VmPriority
+        uid: '@azure/arm-machinelearningservices.VmPriority'

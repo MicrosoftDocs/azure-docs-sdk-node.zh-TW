@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.TestErrorChaosEvent'
+    name: TestErrorChaosEvent
+    fullName: TestErrorChaosEvent
+    children:
+      - '@azure/servicefabric.TestErrorChaosEvent.kind'
+      - '@azure/servicefabric.TestErrorChaosEvent.reason'
+      - '@azure/servicefabric.TestErrorChaosEvent.timeStampUtc'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      描述當混亂引擎就會發生未預期的事件時產生的混亂事件。
+      比方說，同時錯誤實體不一致，叢集中的快照集，因為混亂找到的實體已發生錯誤，就可能發生非預期的事件。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TestErrorChaosEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多型的鑑別子
+    syntax:
+      content: 'kind: "TestError"'
+      return:
+        type:
+          - '"TestError"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TestErrorChaosEvent.reason'
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 描述為何產生 TestErrorChaosEvent。 比方說，混亂會嘗試容錯的資料分割，但會尋找資料分割不會再提供容錯功能，則產生 TestErrorEvent 原因指出分割區不具有容錯功能。
+    optional: true
+    syntax:
+      content: 'reason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TestErrorChaosEvent.timeStampUtc'
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: UTC 時間戳記時產生這個混亂事件。
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'

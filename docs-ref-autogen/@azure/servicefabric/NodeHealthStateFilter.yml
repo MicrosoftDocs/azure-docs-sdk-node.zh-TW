@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.NodeHealthStateFilter'
+    name: NodeHealthStateFilter
+    fullName: NodeHealthStateFilter
+    children:
+      - '@azure/servicefabric.NodeHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.NodeHealthStateFilter.nodeNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定義比對準則，以判斷是否應包含一個節點傳回的叢集健全狀況區塊中。
+      一個篩選條件可以比對零、 一或多個節點，根據其屬性。
+      可以指定在叢集健全狀況區塊查詢描述。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      篩選節點的健全狀況狀態。 它可讓選取的節點，如果兩者相符的所需的健全狀況狀態。
+      可能的值為其中一個下列的健全狀況狀態的整數值。 只會傳回符合篩選條件的節點。 所有節點都會都用來評估彙總的叢集健全狀況狀態。
+      如果未指定，預設值會是 None，除非指定節點名稱。 如果篩選器有預設值，指定節點名稱時，會傳回相符的節點。
+      狀態值是以旗標為基礎的列舉，因此值可以是使用位元 'OR' 運算子取得的這些值的組合。
+      例如，如果提供的值為 6，它會符合 HealthState 值為 OK (2) 和 Warning (4) 的節點。
+      - Default-預設值。 符合任何 HealthState。 值為零。
+      - None-不符合任何 HealthState 值的篩選。 用來在指定狀態集合沒有任何結果時傳回。 值為 1。
+      - Ok-符合輸入含 HealthState 值 Ok 的篩選條件。 值為 2。
+      - 警告-篩選符合輸入含 HealthState 值 Warning。 值為 4。
+      - Error-符合輸入含 HealthState 值 Error 的篩選條件。 值為 8。
+      - All-符合輸入含任何 HealthState 值的篩選條件。 值為 65535。 預設值：0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter.nodeNameFilter'
+    name: nodeNameFilter
+    fullName: nodeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      符合篩選條件的節點名稱。 篩選為只套用至指定的節點，若有的話。
+      如果節點不存在，此篩選器為基礎的叢集健全狀況區塊會不傳回任何節點。
+      如果節點存在，就會包含在叢集健康狀態區塊如果健全狀況狀態相符的篩選屬性。
+      如果未指定，符合父篩選 （如果有的話） 的所有節點會納入考量，並比對其他篩選成員，例如健康情況狀態篩選。
+    optional: true
+    syntax:
+      content: 'nodeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

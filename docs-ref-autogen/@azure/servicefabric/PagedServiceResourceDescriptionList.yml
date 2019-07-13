@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedServiceResourceDescriptionList'
+    name: PagedServiceResourceDescriptionList
+    fullName: PagedServiceResourceDescriptionList
+    children:
+      - '@azure/servicefabric.PagedServiceResourceDescriptionList.continuationToken'
+      - '@azure/servicefabric.PagedServiceResourceDescriptionList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: 服務資源的清單。 清單被分頁時的所有結果無法放入單一訊息。 下一步 的結果集可以取得執行相同的查詢使用這份清單中所提供的接續 token。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServiceResourceDescriptionList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      接續權杖參數可用來取得下一組結果。 接續權杖會隨附在 API 的回應中時，系統的結果無法放入單一回應。 當此值傳遞至下一個 API 呼叫時，API 會傳回下一組結果。
+      如果不有任何進一步的結果，然後接續 token 不包含在回應中。
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServiceResourceDescriptionList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一頁的清單。
+    optional: true
+    syntax:
+      content: 'items?: ServiceResourceDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceResourceDescription[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceResourceDescription[]'
+    name: 'ServiceResourceDescription[]'
+    spec.typeScript:
+      - name: ServiceResourceDescription
+        fullName: ServiceResourceDescription
+        uid: '@azure/servicefabric.ServiceResourceDescription'
+      - name: '[]'
+        fullName: '[]'

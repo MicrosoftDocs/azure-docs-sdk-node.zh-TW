@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 選擇性參數。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -87,7 +87,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      資料分割的索引鍵類型。 如果服務的分割區配置是 Int64Range 或 Named，就必須設定此參數。 可能的值如下。
+      - None (1)-指出 PartitionKeyValue 參數未指定。 這適用於分割區配置為 Singleton 的分割區。 這是預設值。 值為 1。
+      - Int64Range (2)-指出 PartitionKeyValue 參數是 int64 資料分割索引鍵。
+      這適用於分割區配置為 Int64Range 的分割區。 值為 2。
+      - 名為 (3)-指出 PartitionKeyValue 參數是資料分割的名稱。 這適用於分割區配置為 Named 的分割區。 值為 3。
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +107,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      資料分割索引鍵。 如果服務的分割區配置是 Int64Range 或 Named，就必須設定此項目。
+      這不是分割區識別碼，而是整數金鑰值或分割區識別碼的名稱。
+      例如，如果您的服務使用從 0 到 10 的定界分割，它們的 PartitionKeyValue 就會是該範圍內的整數。 請查詢服務描述以查看範圍或名稱。
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '先前所收到回應中 [版本] 欄位的值。 如果使用者知道先前取得的結果已過時，就必須設定此項目。'
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -147,7 +155,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 執行作業，以秒為單位的伺服器逾時。 此逾時指定用戶端願意等待完成要求的作業的持續時間。 此參數的預設值為 60 秒。 預設值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

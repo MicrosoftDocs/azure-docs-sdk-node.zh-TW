@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReconfigurationInformation'
+    name: ReconfigurationInformation
+    fullName: ReconfigurationInformation
+    children:
+      - '@azure/servicefabric.ReconfigurationInformation.previousConfigurationRole'
+      - '@azure/servicefabric.ReconfigurationInformation.reconfigurationPhase'
+      - '@azure/servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc'
+      - '@azure/servicefabric.ReconfigurationInformation.reconfigurationType'
+    langs:
+      - typeScript
+    type: interface
+    summary: 目前的重新設定，例如階段、 類型、 先前的設定角色的複本和重新設定的相關資訊的開始日期時間。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReconfigurationInformation.previousConfigurationRole'
+    name: previousConfigurationRole
+    fullName: previousConfigurationRole
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '重新設定啟動之前的複本角色。 可能的值包括：''Unknown'', ''None'', ''Primary'', ''IdleSecondary'', ''ActiveSecondary'''
+    optional: true
+    syntax:
+      content: 'previousConfigurationRole?: ReplicaRole'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaRole'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReconfigurationInformation.reconfigurationPhase'
+    name: reconfigurationPhase
+    fullName: reconfigurationPhase
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 目前正在進行重新設定階段。 如果正在進行任何重新設定，則這個值會是 「 無 」。 可能的值包括：'Unknown'，'None'、 '0'，'階段 1'，'階段 2'、 'Phase3'、 '階段 4'、 'AbortPhaseZero'
+    optional: true
+    syntax:
+      content: 'reconfigurationPhase?: ReconfigurationPhase'
+      return:
+        type:
+          - '@azure/servicefabric.ReconfigurationPhase'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc'
+    name: reconfigurationStartTimeUtc
+    fullName: reconfigurationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 開始時間 （UTC) 的進行中的重新設定。 如果不進行任何重新設定這個值會是零的日期時間。
+    optional: true
+    syntax:
+      content: 'reconfigurationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReconfigurationInformation.reconfigurationType'
+    name: reconfigurationType
+    fullName: reconfigurationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 目前正在進行重新設定的類型。 如果正在進行任何重新設定，則這個值會是 「 無 」。 可能的值包括：'Unknown'，'SwapPrimary'，'容錯移轉，其他
+    optional: true
+    syntax:
+      content: 'reconfigurationType?: ReconfigurationType'
+      return:
+        type:
+          - '@azure/servicefabric.ReconfigurationType'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicaRole'
+    name: ReplicaRole
+    spec.typeScript:
+      - name: ReplicaRole
+        fullName: ReplicaRole
+        uid: '@azure/servicefabric.ReplicaRole'
+  - uid: '@azure/servicefabric.ReconfigurationPhase'
+    name: ReconfigurationPhase
+    spec.typeScript:
+      - name: ReconfigurationPhase
+        fullName: ReconfigurationPhase
+        uid: '@azure/servicefabric.ReconfigurationPhase'
+  - uid: '@azure/servicefabric.ReconfigurationType'
+    name: ReconfigurationType
+    spec.typeScript:
+      - name: ReconfigurationType
+        fullName: ReconfigurationType
+        uid: '@azure/servicefabric.ReconfigurationType'
